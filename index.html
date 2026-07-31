@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oaken Cursos — Formação técnica profissional</title>
 <meta name="description" content="Catálogo de cursos técnico-profissionalizantes Oaken, com exame por módulo e certificado verificável.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,10 +22,10 @@
 
 <header class="banner" id="banner" style="background-image:url('oil/img/hero-plataforma-offshore.jpg')">
   <div class="banner-inner">
-    <span class="banner-badge" id="bannerBadge">Offshore</span>
-    <h1 id="bannerTitle">Oaken Oil</h1>
-    <div class="banner-tagline" id="bannerTagline">Técnico de Segurança e Operações Offshore</div>
-    <p class="banner-desc" id="bannerDesc">Formação técnico-profissionalizante completa para quem quer trabalhar em plataformas offshore: segurança, sobrevivência no mar, procedimentos de emergência e operações da indústria petrolífera.</p>
+    <span class="banner-badge" id="bannerBadge">Indústria e Energia</span>
+    <h1 id="bannerTitle">Técnico de Segurança e Operações Offshore</h1>
+    <div class="banner-tagline" id="bannerTagline">Oaken Oil · curso disponível</div>
+    <p class="banner-desc" id="bannerDesc">Segurança, sobrevivência no mar, procedimentos de emergência e operações da indústria petrolífera, para quem quer trabalhar em plataformas.</p>
     <div class="banner-stats" id="bannerStats"></div>
     <div class="banner-actions">
       <a class="btn-hero primary" id="bannerCta" href="oil/index.html">▶ Começar curso</a>
@@ -34,14 +35,23 @@
 </header>
 
 <main class="catalog" id="catalogo">
-  <div class="catalog-row">
-    <h2 class="row-title">Cursos disponíveis</h2>
-    <div class="row-track" id="trackAvailable"></div>
+  <div class="catalog-intro">
+    <h2>Catálogo de cursos</h2>
+    <p>Oito cursos técnico-profissionalizantes organizados por área. Dois estão disponíveis hoje; os restantes estão em desenvolvimento e serão anunciados quando abrirem inscrições.</p>
   </div>
-  <div class="catalog-row">
-    <h2 class="row-title">Em preparação</h2>
-    <div class="row-track" id="trackSoon"></div>
+
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot available"></span> Disponível — pode começar hoje</div>
+    <div class="legend-item"><span class="legend-dot building"></span> Em desenvolvimento — conteúdo produzido, página a caminho</div>
+    <div class="legend-item"><span class="legend-dot planned"></span> Em breve — anunciado, ainda sem conteúdo</div>
   </div>
+
+  <div id="areas"></div>
+
+  <section class="criteria">
+    <h3>Porque é que estes cursos funcionam 100% online</h3>
+    <p>Os cursos que escolhemos desenvolver são profissões cujo valor está no <strong>conhecimento, no critério e na documentação</strong> — não na habilidade manual. Legislação, cálculo, normas, procedimentos e registos aprendem-se e avaliam-se por escrito, com o mesmo rigor à distância. É por isso que não encontra aqui soldadura ou AVAC: essas exigem prática presencial e não seria honesto ensiná-las só por ecrã.</p>
+  </section>
 </main>
 
 <footer class="footer">
@@ -51,65 +61,131 @@
 
 <script src="courses.js"></script>
 <script>
-function fmtStats(s) {
-  return [
-    { v: s.modules, l: 'Módulos' },
-    { v: s.lessons, l: 'Aulas' },
-    { v: s.hours + 'h', l: 'Conteúdo' },
-    { v: s.questions, l: 'Questões' },
-  ];
-}
+(function () {
+  'use strict';
 
-function renderBanner(course) {
-  document.getElementById('bannerBadge').textContent = course.badge;
-  document.getElementById('bannerTitle').textContent = course.title;
-  document.getElementById('bannerTagline').textContent = course.tagline;
-  document.getElementById('bannerDesc').textContent = course.description;
-  document.getElementById('bannerCta').href = course.url;
-  document.getElementById('banner').style.backgroundImage = `url('${course.backdrop}')`;
+  var STATUS_LABEL = {
+    available: 'Disponível',
+    building: 'Em desenvolvimento',
+    planned: 'Em breve'
+  };
 
-  const statsEl = document.getElementById('bannerStats');
-  statsEl.innerHTML = fmtStats(course.stats).map(st => `
-    <div><div class="banner-stat-val">${st.v}</div><div class="banner-stat-lbl">${st.l}</div></div>
-  `).join('');
-}
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
 
-function courseCard(course) {
-  return `
-    <a class="course-card" href="${course.url}">
-      <img class="course-card-img" src="${course.poster}" alt="${course.title}">
-      <div class="course-card-body">
-        <span class="course-card-badge">${course.badge}</span>
-        <h3>${course.title}</h3>
-        <p>${course.tagline}</p>
-        <div class="course-card-meta">
-          <span>${course.stats.modules} módulos</span>
-          <span>${course.stats.hours}h</span>
-        </div>
-      </div>
-    </a>
-  `;
-}
+  function areaOf(key) {
+    for (var i = 0; i < AREAS.length; i++) {
+      if (AREAS[i].key === key) return AREAS[i];
+    }
+    return { key: key, accent: '#FF6B00', name: 'Outros', note: '' };
+  }
 
-function soonCard(name) {
-  return `
-    <div class="course-card card-soon">
-      <div class="course-card-img" style="display:flex;align-items:center;justify-content:center;">
-        <span style="font-size:32px;">🎓</span>
-      </div>
-      <div class="course-card-body">
-        <span class="soon-tag">Em breve</span>
-        <h3>${name}</h3>
-      </div>
-    </div>
-  `;
-}
+  /* ---------- Banner de destaque ---------- */
+  function renderBanner(course) {
+    var area = areaOf(course.area);
+    document.getElementById('bannerBadge').textContent = area.name;
+    document.getElementById('bannerTitle').textContent = course.title;
+    document.getElementById('bannerTagline').textContent =
+      (course.brand ? course.brand + ' · ' : '') + 'curso disponível';
+    document.getElementById('bannerDesc').textContent = course.description;
+    document.getElementById('bannerCta').href = course.url;
+    document.getElementById('banner').style.backgroundImage = "url('" + course.backdrop + "')";
 
-const featured = COURSES.find(c => c.featured) || COURSES[0];
-if (featured) renderBanner(featured);
+    var s = course.stats || {};
+    var items = [
+      { v: s.modules, l: 'Módulos' },
+      { v: s.lessons, l: 'Aulas' },
+      { v: s.hours ? s.hours + 'h' : null, l: 'Conteúdo' },
+      { v: s.questions, l: 'Questões' }
+    ].filter(function (it) { return it.v; });
 
-document.getElementById('trackAvailable').innerHTML = COURSES.map(courseCard).join('');
-document.getElementById('trackSoon').innerHTML = soonCard('Próximo curso');
+    document.getElementById('bannerStats').innerHTML = items.map(function (it) {
+      return '<div><div class="banner-stat-val">' + esc(it.v) + '</div>' +
+             '<div class="banner-stat-lbl">' + esc(it.l) + '</div></div>';
+    }).join('');
+  }
+
+  /* ---------- Cartões ---------- */
+  function cardMedia(course) {
+    if (course.status === 'available' && course.poster) {
+      return '<img class="course-card-img" src="' + esc(course.poster) +
+             '" alt="' + esc(course.title) + '" loading="lazy">';
+    }
+    return '<div class="course-card-icon"><i class="' + esc(course.icon) + '"></i></div>';
+  }
+
+  function cardMeta(course) {
+    var out = [];
+    if (course.stats && course.stats.modules) {
+      out.push('<span><i class="fa-solid fa-layer-group"></i>' + esc(course.stats.modules) + ' módulos</span>');
+    }
+    if (course.stats && course.stats.hours) {
+      out.push('<span><i class="fa-regular fa-clock"></i>' + esc(course.stats.hours) + 'h</span>');
+    }
+    if (course.status === 'available') {
+      out.push('<span><i class="fa-solid fa-arrow-right"></i>Entrar no curso</span>');
+    } else {
+      out.push('<span><i class="fa-regular fa-calendar"></i>Sem data de abertura</span>');
+    }
+    return '<div class="course-card-meta">' + out.join('') + '</div>';
+  }
+
+  function cardInner(course) {
+    var html = '';
+    html += '<span class="status-tag ' + course.status + '">' + esc(STATUS_LABEL[course.status]) + '</span>';
+    html += cardMedia(course);
+    html += '<div class="course-card-body">';
+    if (course.brand) html += '<div class="course-card-brand">' + esc(course.brand) + '</div>';
+    html += '<h3>' + esc(course.title) + '</h3>';
+    html += '<p>' + esc(course.description) + '</p>';
+    if (course.pitch) html += '<div class="course-card-pitch">' + esc(course.pitch) + '</div>';
+    html += cardMeta(course);
+    html += '</div>';
+    return html;
+  }
+
+  function courseCard(course, accent) {
+    var style = 'style="--area:' + esc(accent) + '"';
+    // Só cursos disponíveis são clicáveis. Os outros não têm link nenhum.
+    if (course.status === 'available' && course.url) {
+      return '<a class="course-card is-available" ' + style + ' href="' + esc(course.url) + '">' +
+             cardInner(course) + '</a>';
+    }
+    return '<div class="course-card is-soon" ' + style + ' aria-disabled="true">' +
+           cardInner(course) + '</div>';
+  }
+
+  /* ---------- Grelha por área ---------- */
+  function renderAreas() {
+    var html = AREAS.map(function (area) {
+      var list = COURSES.filter(function (c) { return c.area === area.key; });
+      if (!list.length) return '';
+      var open = list.filter(function (c) { return c.status === 'available'; }).length;
+      var count = open ? open + ' de ' + list.length + (open > 1 ? ' disponíveis' : ' disponível')
+                       : list.length + (list.length > 1 ? ' cursos em preparação' : ' curso em preparação');
+      return '' +
+        '<section class="area-block" style="--area:' + esc(area.accent) + '">' +
+          '<div class="area-head">' +
+            '<div class="area-title">' + esc(area.name) +
+              '<span class="area-count">' + esc(count) + '</span></div>' +
+            '<div class="area-note">' + esc(area.note) + '</div>' +
+          '</div>' +
+          '<div class="course-grid">' +
+            list.map(function (c) { return courseCard(c, area.accent); }).join('') +
+          '</div>' +
+        '</section>';
+    }).join('');
+    document.getElementById('areas').innerHTML = html;
+  }
+
+  var featured = COURSES.filter(function (c) { return c.featured; })[0] ||
+                 COURSES.filter(function (c) { return c.status === 'available'; })[0];
+  if (featured) renderBanner(featured);
+  renderAreas();
+})();
 </script>
 </body>
 </html>
