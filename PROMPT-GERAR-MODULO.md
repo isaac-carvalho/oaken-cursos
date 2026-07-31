@@ -1,10 +1,19 @@
 # Prompt para gerar módulos — Oaken Electrical / Oaken Oil
 
-Copia o bloco abaixo inteiro. Antes de colar, substitui as **três linhas marcadas com `>>>`** no fim (número do módulo, título e âmbito).
+Copia o bloco abaixo inteiro. Antes de colar, substitui as **duas linhas marcadas com `>>>`** perto do fim (módulo e âmbito).
 
-Se a resposta for cortada a meio, responde só: `continue a partir da aula X, sem repetir o que já entregaste`.
+## Como correr — o módulo inteiro numa conversa
 
-**Pede 3 a 4 aulas de cada vez.** Nunca peças as 11 de uma vez — o modelo corta e entrega aulas encolhidas. É exactamente esse o erro que queremos evitar.
+1. Cola o prompt → ele devolve **só a lista dos 11 títulos**
+2. Responde `ok` → começa a escrever as aulas
+3. Quando parar com `>>> PAREI NA AULA X.Y`, responde `continue`
+4. Repete até aparecer `>>> MÓDULO X COMPLETO — 11 de 11 aulas entregues`
+5. Copia **tudo** (todas as respostas seguidas) para `_import/modXX.txt`
+6. Diz-me o número do módulo — eu junto, valido e insiro no site
+
+**Porque é em pedaços:** 11 aulas × 1.800 palavras ≈ 19.800 palavras. Não cabe numa resposta de nenhum modelo. Se pedires tudo de uma vez sem protocolo, ele não avisa — encolhe as aulas para caber. O `continue` é o que garante que cada aula sai com a profundidade real.
+
+**O que eu verifico quando me mandares o ficheiro:** contagem de aulas (têm de ser 11), as 8 secções em cada uma, classes CSS válidas contra o site, aritmética dos cálculos e das opções do quiz, e `<span class="hi">` fora do sítio.
 
 ---
 
@@ -139,14 +148,70 @@ Só cite um artigo, secção ou número de norma se tiver a certeza de que exist
 O mesmo vale para valores: prefira faixas realistas e verificáveis a números falsamente precisos.
 
 ═══════════════════════════════════════
-TAREFA
+REGRAS DE CÁLCULO — ERROS JÁ DETECTADOS
+═══════════════════════════════════════
+
+Estes erros apareceram em material anterior e foram corrigidos. Não os repita.
+
+1. QUEDA DE TENSÃO CONTA IDA E VOLTA.
+A corrente percorre o condutor de ida e o de retorno. O comprimento a usar no cálculo é o DOBRO da distância física do percurso:
+
+   Monofásico:  ΔU = 2 × ρ × L × I / S
+   Trifásico:   ΔU = √3 × ρ × L × I / S
+
+Onde L é a distância do quadro até à carga (não o comprimento total de cabo).
+Usar só L num circuito monofásico subestima a queda para metade — é assim que se acaba com cabo subdimensionado numa instalação real. Sempre que calcular queda de tensão, escreva explicitamente o factor (2× ou √3×) na fórmula.
+
+2. VERIFIQUE A ARITMÉTICA DAS OPÇÕES DO QUIZ ANTES DE MARCAR A CERTA.
+Antes de escrever as quatro alíneas, calcule o resultado real passo a passo. Depois:
+   - Confirme que a opção que vai marcar com cq(this,true) contém EXACTAMENTE esse resultado.
+   - Confirme que nenhuma das opções erradas está mais próxima do valor real do que a certa.
+Num material anterior, a resposta marcada como correcta estava 5,7× acima do valor real, e a opção mais próxima da verdade estava marcada como errada. Um aluno que estude por aí aprende a calcular mal.
+
+3. MOSTRE O CÁLCULO QUE FEZ.
+Em cada exemplo numérico, escreva a substituição dos valores na fórmula, não só o resultado. Isso permite conferência e apanha erros de conta.
+
+═══════════════════════════════════════
+CUIDADOS DE FORMATAÇÃO JÁ DETECTADOS
+═══════════════════════════════════════
+
+- .hi é SEMPRE <div class="hi">, NUNCA <span class="hi">. Tem padding e border-left; num span o layout parte.
+- O mesmo vale para .cb, .ib, .wb, .fbox, .lawbox, .dg, .tl, .quiz — todos são <div>, nunca <span>.
+- Não ponha <rect> de fundo a cobrir todo o viewBox do SVG. O contentor .dg já tem fundo próprio.
+- Não use markdown em lado nenhum: sem #, sem ##, sem ``` a delimitar o HTML. Entregue o HTML directamente.
+
+═══════════════════════════════════════
+TAREFA E PROTOCOLO DE ENTREGA
 ═══════════════════════════════════════
 
 >>> MÓDULO: [NÚMERO E TÍTULO DO MÓDULO]
 >>> ÂMBITO: [COLE AQUI O ÂMBITO DO MÓDULO]
->>> ENTREGAR AGORA: aulas 1 a 4 (das 11 do módulo)
 
-Primeiro, proponha a lista das 11 aulas do módulo (só os títulos, numerados). Depois desenvolva integralmente as aulas pedidas, na ordem, sem pular nenhuma e sem resumir.
+Quero o MÓDULO COMPLETO: as 11 aulas, todas com as 8 secções e com o Desenvolvimento Técnico acima de 1.800 palavras cada.
+
+PASSO 1 — Antes de escrever qualquer aula, entregue apenas a lista dos 11 títulos, numerados 1.1 a 1.11 (ajuste o número do módulo), cobrindo todo o âmbito acima. Pare aí e aguarde o meu "ok".
+
+PASSO 2 — Depois do meu "ok", desenvolva as aulas na ordem, sem parar por sua iniciativa.
+
+REGRA DE CONTINUAÇÃO (importante):
+O módulo completo não cabe numa resposta. NÃO tente encolher as aulas para caber — é o erro mais grave que pode cometer aqui. Em vez disso:
+- Escreva as aulas com profundidade total até estar perto do limite da resposta.
+- UMA AULA COMPLETA POR RESPOSTA É O IDEAL. Prefiro receber 11 respostas com uma aula profunda cada, do que 3 respostas com aulas encolhidas. Nunca sacrifique profundidade para entregar mais aulas de uma vez.
+- PARE no fim de uma aula COMPLETA (nunca a meio).
+- Termine a resposta com exactamente esta linha, sem mais nada depois:
+  >>> PAREI NA AULA X.Y — escreva "continue" para as seguintes
+- Quando eu escrever "continue", retome na aula seguinte, sem repetir nada do que já entregou e sem resumir o que falta.
+
+Repita até entregar as 11 aulas. Na última, termine com:
+  >>> MÓDULO X COMPLETO — 11 de 11 aulas entregues
+
+CHECKLIST ANTES DE CADA RESPOSTA (faça mentalmente, não escreva):
+[ ] Cada aula tem as 8 secções, nenhuma omitida?
+[ ] O Desenvolvimento Técnico tem mais de 1.800 palavras?
+[ ] Todas as quedas de tensão usam 2× (monofásico) ou √3× (trifásico)?
+[ ] A opção do quiz marcada com cq(this,true) bate com o cálculo real?
+[ ] Todos os blocos são <div>, nenhum <span class="hi">?
+[ ] Zero markdown, zero ```?
 ```
 
 ---
