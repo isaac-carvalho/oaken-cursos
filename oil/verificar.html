@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verificação de Certificado — Oaken Oil</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .verify-bg { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px;
+      background: radial-gradient(circle at 20% 20%, rgba(255,107,0,.06) 0%, transparent 45%),
+                  radial-gradient(circle at 80% 80%, rgba(11,31,58,.08) 0%, transparent 45%),
+                  linear-gradient(135deg, #E8ECF3 0%, #DCE3ED 100%); }
+    .verify-card { max-width: 520px; width: 100%; background: #FFFCF5; border-radius: 14px; padding: 44px 36px;
+      box-shadow: 0 30px 80px rgba(11,31,58,.28); text-align: center; border: 1.5px solid #C9A227; }
+    .verify-badge { width: 84px; height: 84px; margin: 0 auto 16px; }
+    .verify-status { font-size: 13px; font-weight: 800; letter-spacing: 2px; color: #16A34A; text-transform: uppercase; margin-bottom: 4px; }
+    .verify-title { font-family: Georgia, serif; font-size: 24px; font-weight: 700; color: #0B1F3A; margin-bottom: 24px; }
+    .verify-name { font-family: Georgia, serif; font-style: italic; font-size: 30px; font-weight: 700; color: #9C7C1A; margin: 8px 0 20px; }
+    .verify-rows { text-align: left; border-top: 1px solid #E5E7EB; margin-top: 8px; }
+    .verify-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #E5E7EB; font-size: 14px; }
+    .verify-row span:first-child { color: #64748B; }
+    .verify-row span:last-child { color: #0B1F3A; font-weight: 700; text-align: right; }
+    .verify-code { margin-top: 24px; font-size: 12px; color: #94A3B8; letter-spacing: 1px; }
+    .verify-code strong { font-family: 'Courier New', monospace; color: #64748B; }
+    .verify-footer-brand { margin-top: 28px; font-size: 12px; color: #94A3B8; letter-spacing: 3px; text-transform: uppercase; }
+    .verify-footer-brand strong { color: #C9A227; }
+  </style>
+</head>
+<body>
+<div style="background:#111827;padding:8px 24px;text-align:center;font-size:12px;"><a href="../index.html" style="color:#FF8C3A;text-decoration:none;font-weight:700;letter-spacing:.5px;">&larr; OAKEN CURSOS</a></div>
+<div class="verify-bg">
+  <div class="verify-card">
+    <svg class="verify-badge" viewBox="0 0 100 100">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4ADE80"/><stop offset="100%" stop-color="#16A34A"/></linearGradient></defs>
+      <circle cx="50" cy="50" r="42" fill="url(#g)"/>
+      <path d="M30 52 L44 66 L72 34" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="verify-status">✔ Certificado Autêntico</div>
+    <div class="verify-title">Verificação Oaken Oil</div>
+
+    <div style="font-size:14px;color:#64748B;">Este certificado foi emitido para</div>
+    <div class="verify-name" id="vNome">—</div>
+
+    <div class="verify-rows">
+      <div class="verify-row"><span>Curso</span><span>Técnico de Segurança e Operações Offshore</span></div>
+      <div class="verify-row"><span>Carga horária</span><span id="vHoras">—</span></div>
+      <div class="verify-row"><span>Módulos</span><span id="vModulos">—</span></div>
+      <div class="verify-row"><span>Aproveitamento médio</span><span id="vNota">—</span></div>
+      <div class="verify-row"><span>Módulos aprovados</span><span id="vAcertos">—</span></div>
+      <div class="verify-row"><span>Data de emissão</span><span id="vData">—</span></div>
+    </div>
+
+    <div class="verify-code">Código de verificação: <strong id="vCodigo">—</strong></div>
+    <div class="verify-footer-brand">OAKEN<strong>OIL</strong> · Centro de Formação Técnica Profissional</div>
+  </div>
+</div>
+
+<script>
+const p = new URLSearchParams(window.location.search);
+if (!p.get('codigo')) {
+  document.querySelector('.verify-status').textContent = 'Verificação de Certificado';
+  document.querySelector('.verify-status').style.color = '#64748B';
+  document.querySelector('.verify-badge circle').setAttribute('fill', '#CBD5E1');
+  document.querySelector('.verify-title').textContent = 'Nenhum certificado para verificar';
+  document.querySelector('.verify-name').previousElementSibling.textContent =
+    'Para verificar um certificado, digitalize o código QR impresso no próprio certificado.';
+}
+document.getElementById('vNome').textContent = p.get('nome') || '—';
+document.getElementById('vNota').textContent = (p.get('nota') || '—') + '%';
+document.getElementById('vAcertos').textContent = (p.get('acertos') || '—') + ' / ' + (p.get('total') || '—');
+document.getElementById('vData').textContent = p.get('data') || '—';
+document.getElementById('vCodigo').textContent = p.get('codigo') || '—';
+document.getElementById('vHoras').textContent = p.get('horas') ? p.get('horas') + ' horas' : '—';
+document.getElementById('vModulos').textContent = p.get('modulos') || '—';
+</script>
+</body>
+</html>

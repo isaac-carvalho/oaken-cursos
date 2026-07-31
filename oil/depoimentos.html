@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Depoimentos – Oaken Oil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* CSS base – igual ao das outras páginas – manter consistência */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Segoe UI',Roboto,sans-serif; background:#f8fafc; color:#0B1F3A; line-height:1.6; }
+        a { text-decoration:none; color:inherit; }
+        .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+        :root { --primary:#0B1F3A; --secondary:#FF6B00; --light:#f0f4f8; --gray:#64748B; }
+
+        header { background:var(--primary); color:#fff; padding:15px 0; position:sticky; top:0; z-index:1000; box-shadow:0 4px 20px rgba(0,0,0,0.3); }
+        .header-flex { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+        .logo { font-size:28px; font-weight:700; letter-spacing:2px; }
+        .logo span { color:var(--secondary); }
+        .nav { display:flex; gap:25px; font-weight:500; align-items:center; flex-wrap:wrap; }
+        .nav a { color:#fff; transition:color .3s; font-size:15px; }
+        .nav a:hover { color:var(--secondary); }
+        .nav a.active { color:var(--secondary); border-bottom:2px solid var(--secondary); padding-bottom:4px; }
+        .cta-top { background:var(--secondary); padding:8px 22px; border-radius:30px; font-weight:600; transition:transform .2s; }
+        .cta-top:hover { transform:scale(1.05); }
+
+        .page-hero { background:linear-gradient(135deg,var(--primary),#1a365d); color:#fff; padding:50px 0 60px; text-align:center; }
+        .page-hero h1 { font-size:40px; font-weight:800; }
+        .page-hero h1 span { color:var(--secondary); }
+        .page-hero p { max-width:700px; margin:10px auto 0; opacity:.8; font-size:18px; }
+
+        .testimonials-page { padding:60px 0; background:#fff; }
+        .testi-card { background:var(--light); border-radius:20px; padding:30px; margin-bottom:30px; border-bottom:5px solid var(--secondary); box-shadow:0 4px 12px rgba(0,0,0,0.02); transition:.3s; }
+        .testi-card:hover { transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,0.05); }
+        .testi-card .stars { color:#f59e0b; font-size:18px; margin-bottom:10px; }
+        .testi-card p { font-style:italic; font-size:17px; color:#1a202c; margin-bottom:12px; }
+        .testi-card .author { font-weight:700; font-size:18px; color:var(--primary); }
+        .testi-card .position { color:var(--gray); font-size:15px; }
+
+        /* footer – igual */
+        footer { background:var(--primary); color:#bbb; padding:40px 0 20px; margin-top:40px; }
+        .footer-flex { display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; }
+        .footer-col { flex:1; min-width:180px; }
+        .footer-col h5 { color:#fff; margin-bottom:15px; font-size:18px; }
+        .footer-col p,.footer-col a { color:#a0aec0; line-height:1.8; }
+        .footer-col a:hover { color:var(--secondary); }
+        .social-links a { display:inline-block; margin-right:15px; font-size:22px; color:#a0aec0; transition:.3s; }
+        .social-links a:hover { color:var(--secondary); }
+        .footer-bottom { border-top:1px solid #2d3748; margin-top:30px; padding-top:20px; text-align:center; font-size:14px; }
+
+        @media (max-width:768px) {
+            .header-flex { flex-direction:column; align-items:center; }
+            .nav { justify-content:center; gap:15px; margin-top:8px; }
+            .page-hero h1 { font-size:28px; }
+        }
+    </style>
+</head>
+<body>
+<div style="background:#111827;padding:8px 24px;text-align:center;font-size:12px;"><a href="../index.html" style="color:#FF8C3A;text-decoration:none;font-weight:700;letter-spacing:.5px;">&larr; OAKEN CURSOS</a></div>
+
+<header>
+    <div class="container header-flex">
+        <div class="logo">OAKEN<span>OIL</span></div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="modulos.html">Módulos</a>
+            <a href="diferenciais.html">Diferenciais</a>
+            <a href="depoimentos.html" class="active">Depoimentos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="exame.html">Área do Aluno</a>
+            <a href="https://wa.me/351913388794" class="cta-top"><i class="fas fa-whatsapp"></i> Inscrever-me</a>
+        </nav>
+    </div>
+</header>
+
+<section class="page-hero">
+    <div class="container">
+        <h1>O que os nossos <span>alunos dizem</span></h1>
+        <p>Histórias reais de profissionais que transformaram as suas carreiras com o curso Oaken Oil.</p>
+    </div>
+</section>
+
+<section class="testimonials-page">
+    <div class="container">
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"O curso Oaken Oil é completo e muito prático. Aprendi desde as operações de convés até à manutenção de sistemas. Recomendo a todos os que querem entrar no offshore."</p>
+            <div class="author">João M.</div>
+            <div class="position">Roustabout, FPSO Girassol (TotalEnergies)</div>
+        </div>
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Graças ao Oaken Oil, consegui passar de Roustabout para Roughneck. Os módulos de segurança e operações são excelentes, com exemplos reais de Angola."</p>
+            <div class="author">Maria L.</div>
+            <div class="position">Roughneck, Bloco 17 (Chevron)</div>
+        </div>
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"O módulo de pintura e proteção anticorrosiva deu‑me a base para obter a certificação NACE/AMPP. O curso é uma referência em Angola."</p>
+            <div class="author">Pedro A.</div>
+            <div class="position">Inspetor de Revestimentos, Sonangol</div>
+        </div>
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Nunca tinha trabalhado no offshore, mas o curso deu‑me a confiança e os conhecimentos necessários. Já estou a trabalhar numa FPSO em Cabinda."</p>
+            <div class="author">Carlos F.</div>
+            <div class="position">Técnico de Manutenção, Bloco 0</div>
+        </div>
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"A parte de automação e Indústria 4.0 abriu‑me os olhos para o futuro do setor. Recomendo vivamente a quem quer evoluir na carreira."</p>
+            <div class="author">Ana S.</div>
+            <div class="position">Engenheira de Automação, ExxonMobil</div>
+        </div>
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"O suporte dos instrutores é fantástico. Tirei todas as minhas dúvidas sobre o exame final e consegui aprovar com 85% de classificação."</p>
+            <div class="author">Paulo R.</div>
+            <div class="position">Rigger, FPSO Dalia</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-flex">
+            <div class="footer-col">
+                <h5>OAKEN OIL</h5>
+                <p>Formação técnica de excelência para a indústria offshore, com foco no mercado angolano e padrões internacionais.</p>
+                <div class="social-links" style="margin-top:15px;">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Contacto</h5>
+                <p><i class="fas fa-whatsapp" style="color:#FF6B00;"></i> <a href="https://wa.me/351913388794">+351 913 388 794</a></p>
+                <p><i class="fas fa-envelope"></i> info@oakenoil.ao</p>
+                <p><i class="fas fa-map-marker-alt"></i> Talatona, Luanda, Angola</p>
+            </div>
+            <div class="footer-col">
+                <h5>Links Rápidos</h5>
+                <p><a href="modulos.html">Módulos</a></p>
+                <p><a href="diferenciais.html">Diferenciais</a></p>
+                <p><a href="depoimentos.html">Depoimentos</a></p>
+                <p><a href="faq.html">FAQ</a></p>
+                <p><a href="https://wa.me/351913388794">Inscrever-me</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Oaken Oil. Todos os direitos reservados. | Desenvolvido com <i class="fas fa-heart" style="color:#FF6B00;"></i> para o futuro do offshore em Angola.
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
+

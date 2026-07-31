@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oaken Oil - Técnico de Segurança e Operações Offshore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset e Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f8fafc;
+            color: #0B1F3A;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Cores */
+        :root {
+            --primary: #0B1F3A;
+            --secondary: #FF6B00;
+            --accent: #00A3A1;
+            --light: #f0f4f8;
+            --gray: #64748B;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .logo span {
+            color: var(--secondary);
+        }
+        .nav {
+            display: flex;
+            gap: 30px;
+            font-weight: 500;
+            align-items: center;
+        }
+        .nav a {
+            color: #fff;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+        .nav a:hover {
+            color: var(--secondary);
+        }
+        .cta-top {
+            background: var(--secondary);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        .cta-top:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a365d 100%);
+            color: white;
+            padding: 60px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            right: -100px;
+            top: -100px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,107,0,0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .hero-flex {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+        }
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        .hero-content h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+        .hero-content h1 span {
+            color: var(--secondary);
+        }
+        .hero-content .sub-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .hero-content p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            max-width: 600px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 20px 0 30px;
+            background: rgba(255,255,255,0.05);
+            padding: 20px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(5px);
+        }
+        .hero-stats .stat-item {
+            text-align: center;
+        }
+        .hero-stats .stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--secondary);
+            display: block;
+        }
+        .hero-stats .stat-label {
+            font-size: 14px;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .hero-badges {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .hero-badges span {
+            background: rgba(255,255,255,0.08);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .hero-badges i {
+            color: var(--secondary);
+            margin-right: 6px;
+        }
+        .cta-hero {
+            background: var(--secondary);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 22px;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 8px 30px rgba(255,107,0,0.4);
+        }
+        .cta-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255,107,0,0.6);
+        }
+        .cta-hero i {
+            margin-right: 10px;
+        }
+        .hero-image {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border: 3px solid rgba(255,255,255,0.1);
+        }
+        .disclaimer-box {
+            background: rgba(255,200,0,0.12);
+            border-left: 4px solid #f59e0b;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.85;
+        }
+        .disclaimer-box i {
+            color: #f59e0b;
+            margin-right: 10px;
+        }
+        .floating-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            border: 1px solid rgba(255,255,255,0.15);
+            margin-bottom: 15px;
+        }
+
+        /* Seção Módulos */
+        .modules {
+            padding: 80px 0;
+            background: white;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .section-title span {
+            color: var(--secondary);
+        }
+        .section-sub {
+            text-align: center;
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .module-card {
+            background: var(--light);
+            padding: 25px 20px;
+            border-radius: 16px;
+            transition: all 0.3s;
+            border-left: 5px solid var(--secondary);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+        .module-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .module-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+        .module-card p {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        .module-card .mod-num {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Seção de Estatísticas Rápidas */
+        .quick-stats {
+            padding: 50px 0;
+            background: var(--light);
+        }
+        .quick-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .quick-stat-item {
+            background: white;
+            padding: 25px 15px;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--secondary);
+        }
+        .quick-stat-item .number {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+        }
+        .quick-stat-item .label {
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        /* Diferenciais */
+        .differentials {
+            padding: 80px 0;
+            background: white;
+        }
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .diff-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--light);
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            transition: 0.3s;
+        }
+        .diff-item:hover {
+            transform: scale(1.02);
+        }
+        .diff-item i {
+            font-size: 45px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        .diff-item h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .diff-item p {
+            color: var(--gray);
+            font-size: 15px;
+        }
+
+        /* Depoimentos */
+        .testimonials {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .testimonial-item {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            border-bottom: 4px solid var(--secondary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+        .testimonial-item p {
+            font-style: italic;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .testimonial-item .author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .testimonial-item .position {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        .stars {
+            color: #f59e0b;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        /* Preço */
+        .pricing {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(11,31,58,.92) 0%, rgba(26,54,93,.92) 100%), url('img/cta-trabalhadores-offshore.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        .pricing-box {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            padding: 50px 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .pricing-box .old-price {
+            font-size: 20px;
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        .pricing-box .new-price {
+            font-size: 52px;
+            font-weight: 800;
+            color: var(--secondary);
+            display: block;
+            margin: 10px 0 20px;
+        }
+        .pricing-box .price-detail {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        .pricing-box .cta-hero {
+            margin-top: 20px;
+        }
+        .pricing-box .guarantee {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        .countdown {
+            display: inline-block;
+            background: rgba(255,107,0,0.2);
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,107,0,0.3);
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background: white;
+        }
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+        }
+        .faq-item h4 {
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        .faq-item h4 i {
+            transition: 0.3s;
+        }
+        .faq-item .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+            color: var(--gray);
+        }
+        .faq-item.active .answer {
+            max-height: 200px;
+            padding-top: 10px;
+        }
+        .faq-item.active h4 i {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #bbb;
+            padding: 40px 0 20px;
+        }
+        .footer-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 180px;
+        }
+        .footer-col h5 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .footer-col p, .footer-col a {
+            color: #a0aec0;
+            line-height: 1.8;
+        }
+        .footer-col a:hover {
+            color: var(--secondary);
+        }
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 22px;
+            color: #a0aec0;
+            transition: 0.3s;
+        }
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+        .footer-bottom {
+            border-top: 1px solid #2d3748;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 30px;
+            }
+            .hero-stats {
+                gap: 20px;
+                padding: 15px 20px;
+            }
+            .hero-stats .stat-number {
+                font-size: 24px;
+            }
+            .nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            .header-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content p {
+                margin: 0 auto 20px;
+            }
+            .hero-badges {
+                justify-content: center;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .pricing-box {
+                padding: 30px 20px;
+            }
+            .pricing-box .new-price {
+                font-size: 38px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div style="background:#111827;padding:8px 24px;text-align:center;font-size:12px;"><a href="../index.html" style="color:#FF8C3A;text-decoration:none;font-weight:700;letter-spacing:.5px;">&larr; OAKEN CURSOS</a></div>
+
+<!-- HEADER -->
+<header>
+    <div class="container header-flex">
+        <div class="logo">OAKEN<span>OIL</span></div>
+        <nav class="nav">
+            <a href="#modules">Módulos</a>
+            <a href="#differentials">Diferenciais</a>
+            <a href="#testimonials">Depoimentos</a>
+            <a href="#faq">FAQ</a>
+            <a href="exame.html">Área do Aluno</a>
+            <a href="#pricing" class="cta-top"><i class="fas fa-whatsapp"></i> Inscrever-me</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-flex">
+        <div class="hero-content">
+            <div class="floating-badge"><i class="fas fa-shield-alt"></i> Formação Técnica Profissionalizante</div>
+            <h1><span>Técnico de Segurança</span> e Operações Offshore</h1>
+            <div class="sub-title">Curso Oaken Oil</div>
+            <p>Curso técnico-profissionalizante completo, com conteúdo aprofundado em <strong>segurança, operações, processamento, automação, geologia, logística e energias renováveis</strong>. Estude os módulos, complete os exames e receba o seu certificado.</p>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">17</span>
+                    <span class="stat-label">Módulos Especializados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">340</span>
+                    <span class="stat-label">Aulas Detalhadas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">153</span>
+                    <span class="stat-label">Horas Completas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">17</span>
+                    <span class="stat-label">Exames de Módulo</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">70%</span>
+                    <span class="stat-label">Mínimo Aprovação</span>
+                </div>
+            </div>
+
+            <div class="hero-badges">
+                <span><i class="fas fa-check-circle"></i> HSE / QHSE</span>
+                <span><i class="fas fa-check-circle"></i> Primeiros Socorros</span>
+                <span><i class="fas fa-check-circle"></i> Combate a Incêndio</span>
+                <span><i class="fas fa-check-circle"></i> HST</span>
+            </div>
+
+            <a href="https://wa.me/351913388794" class="cta-hero" target="_blank">
+                <i class="fab fa-whatsapp"></i> Garantir a minha vaga
+            </a>
+
+            <div class="disclaimer-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>⚠️ Curso 100% teórico.</strong> Para certificação prática homologada (ex: extintor real, HUET, STCW), procure um centro credenciado após concluir a base teórica aqui.
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="img/hero-plataforma-offshore.jpg" alt="Plataforma offshore moderna" style="background:#0B1F3A;padding:10px;border-radius:20px;width:100%;height:auto;object-fit:cover;">
+            <p style="font-size:12px;margin-top:10px;opacity:0.5;">*Imagem ilustrativa de uma plataforma offshore</p>
+        </div>
+    </div>
+</section>
+
+<!-- QUICK STATS (reforço visual) -->
+<section class="quick-stats">
+    <div class="container">
+        <div class="quick-stats-grid">
+            <div class="quick-stat-item">
+                <span class="number">17</span>
+                <span class="label">Módulos Especializados</span>
+            </div>
+            <div class="quick-stat-item">
+                <span class="number">340</span>
+                <span class="label">Aulas Detalhadas</span>
+            </div>
+            <div class="quick-stat-item">
+                <span class="number">153</span>
+                <span class="label">Horas Completas</span>
+            </div>
+            <div class="quick-stat-item">
+                <span class="number">17</span>
+                <span class="label">Exames de Módulo</span>
+            </div>
+            <div class="quick-stat-item">
+                <span class="number">70%</span>
+                <span class="label">Mínimo Aprovação</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MÓDULOS -->
+<section class="modules" id="modules">
+    <div class="container">
+        <h2 class="section-title">O que você vai aprender <span>no curso</span></h2>
+        <p class="section-sub">17 módulos completos, com 340 aulas técnicas e práticas, desenvolvidas por especialistas com experiência em Angola.</p>
+        <div class="modules-grid">
+            <div class="module-card"><span class="mod-num">Módulo 1</span><h3>Fundamentos da Indústria do Petróleo e Gás</h3><p>Geologia, exploração, história em Angola, bacias, operadoras e economia do petróleo.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 2</span><h3>Plataformas, Embarcações e Estruturas Offshore</h3><p>FPSOs, semi-submersíveis, SPAR, TLP, drillships, ancoragem, risers e sistemas de apoio.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 3</span><h3>Segurança Offshore (BOSIET / HUET / HSE)</h3><p>Cultura de segurança, EPI, combate a incêndios, abandono, sobrevivência no mar e gestão de gases.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 4</span><h3>Primeiros Socorros e Emergências Médicas</h3><p>Protocolo DRSABCD, SBV, hemorragias, queimaduras, hipotermia, H₂S e evacuação médica.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 5</span><h3>Sistemas Mecânicos (Motores, Bombas, Compressores)</h3><p>Motores Diesel, bombas centrífugas, compressores, turbinas, lubrificação e manutenção preditiva.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 6</span><h3>Sistemas Elétricos, Instrumentação e Controlo</h3><p>Geração de energia, PLC, SCADA, redes industriais, sensores, DCS e segurança elétrica.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 7</span><h3>Operações Submarinas e Completação de Poços</h3><p>BOP, árvores de natal, manifolds, risers, perfuração, cimentação, ROVs e intervenção.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 8</span><h3>Manutenção, Confiabilidade e Análise de Falhas</h3><p>MTBF, MTTR, RCA, FMEA, NDT, termografia, vibração e gestão de ativos.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 9</span><h3>Soft Skills, Comunicação e Fatores Humanos</h3><p>Comunicação em emergências, SBAR, liderança, gestão de conflitos e inteligência emocional.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 10</span><h3>Legislação, Gestão Ambiental e Empregabilidade</h3><p>Lei do Trabalho, IRS, INSS, OPITO, MARPOL, licenciamento, RSE e plano de carreira.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 11</span><h3>Processamento de Hidrocarbonetos</h3><p>Separação trifásica, tratamento de óleo, compressão de gás, GNL, simulação e eficiência energética.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 12</span><h3>Automação Industrial e Indústria 4.0</h3><p>PLC, SCADA, IoT, Big Data, IA, gêmeos digitais, cibersegurança e robótica offshore.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 13</span><h3>Geologia e Engenharia de Poços</h3><p>Petrofísica, reservatórios, PVT, simulação, EOR, geomecânica e geosteering.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 14</span><h3>Logística e Cadeia de Suprimentos</h3><p>Bases de apoio, navios PSV/AHTS, gestão de cargas, transporte aéreo e desafios logísticos em Angola.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 15</span><h3>Energias Renováveis e Transição Energética</h3><p>Eólica offshore, hidrogénio verde, CCS, eletrificação, baterias e financiamento verde.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 16</span><h3>Roustabout – Operações de Convés</h3><p>Papel do Roustabout, hierarquia, EPI, rigging, sinalização, manuseio de cargas e progressão de carreira.</p></div>
+            <div class="module-card"><span class="mod-num">Módulo 17</span><h3>Pintura Industrial e Proteção Anticorrosiva</h3><p>Corrosão marinha, preparação de superfície, jateamento, revestimentos, inspeção NACE/AMPP.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="differentials" id="differentials">
+    <div class="container">
+        <h2 class="section-title">Por que escolher o <span>Oaken Oil</span>?</h2>
+        <p class="section-sub">Um curso desenhado para formar profissionais completos, com certificação internacional e foco no mercado angolano.</p>
+        <div class="diff-grid">
+            <div class="diff-item">
+                <i class="fas fa-certificate"></i>
+                <h4>Certificação Reconhecida</h4>
+                <p>Alinhado com as normas OPITO, IMO, SOLAS e NACE/AMPP, valorizado pelas operadoras em Angola.</p>
+            </div>
+            <div class="diff-item">
+                <i class="fas fa-infinity"></i>
+                <h4>Acesso Vitalício</h4>
+                <p>Pague uma vez e tenha acesso a todas as atualizações futuras do curso sem custos adicionais.</p>
+            </div>
+            <div class="diff-item">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h4>Conteúdo Prático e Local</h4>
+                <p>Exemplos reais de campos angolanos (Girassol, Dalia, Kaombo) e casos práticos do dia a dia offshore.</p>
+            </div>
+            <div class="diff-item">
+                <i class="fas fa-headset"></i>
+                <h4>Suporte Especializado</h4>
+                <p>Tire dúvidas com instrutores experientes e tenha acompanhamento personalizado durante toda a formação.</p>
+            </div>
+            <div class="diff-item">
+                <i class="fas fa-bolt"></i>
+                <h4>Preparação para o Mercado</h4>
+                <p>Curso que cobre desde as operações de convés até à transição energética, preparando-o para os desafios futuros.</p>
+            </div>
+            <div class="diff-item">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h4>Investimento Acessível</h4>
+                <p>Preço promocional por tempo limitado, com condições especiais para pagamento em moeda local.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2 class="section-title">O que os nossos <span>alunos dizem</span></h2>
+        <p class="section-sub">Centenas de profissionais já transformaram as suas carreiras com o Oaken Oil.</p>
+        <div class="testimonial-grid">
+            <div class="testimonial-item">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"O curso Oaken Oil é completo e muito prático. Aprendi desde as operações de convés até à manutenção de sistemas. Recomendo a todos os que querem entrar no offshore."</p>
+                <div class="author">João M.</div>
+                <div class="position">Roustabout, FPSO Girassol</div>
+            </div>
+            <div class="testimonial-item">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Graças ao Oaken Oil, consegui passar de Roustabout para Roughneck. Os módulos de segurança e operações são excelentes, com exemplos reais de Angola."</p>
+                <div class="author">Maria L.</div>
+                <div class="position">Roughneck, Bloco 17</div>
+            </div>
+            <div class="testimonial-item">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"O módulo de pintura e proteção anticorrosiva deu‑me a base para obter a certificação NACE/AMPP. O curso é uma referência em Angola."</p>
+                <div class="author">Pedro A.</div>
+                <div class="position">Inspetor de Revestimentos, Sonangol</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PREÇO -->
+<section class="pricing" id="pricing">
+    <div class="container">
+        <div class="pricing-box">
+            <div class="countdown"><i class="fas fa-clock"></i> Oferta especial por tempo limitado</div>
+            <h2 style="font-size:28px;">Invista no seu futuro profissional</h2>
+            <span class="old-price">Antes 750.000 Kz</span>
+            <span class="new-price">597.000 Kz</span>
+            <span class="price-detail">ou 12x de 49.750 Kz</span>
+            <p style="margin:20px 0;font-size:16px;opacity:0.9;"><i class="fas fa-check-circle" style="color:var(--secondary);"></i> Certificado de conclusão incluído</p>
+            <p style="margin:10px 0;font-size:16px;opacity:0.9;"><i class="fas fa-check-circle" style="color:var(--secondary);"></i> Bónus: E‑book "Guia de Sobrevivência Offshore"</p>
+            <a href="https://wa.me/351913388794" class="cta-hero" target="_blank">
+                <i class="fab fa-whatsapp"></i> Garantir a minha vaga
+            </a>
+            <div class="guarantee"><i class="fas fa-shield-alt"></i> Garantia de satisfação de 30 dias ou devolução do valor</div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+    <div class="container">
+        <h2 class="section-title">Perguntas <span>Frequentes</span></h2>
+        <p class="section-sub">Tire as suas dúvidas sobre o curso Oaken Oil.</p>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>O curso é reconhecido pelas operadoras em Angola? <i class="fas fa-chevron-down"></i></h4>
+                <div class="answer">Sim, o conteúdo está alinhado com as normas OPITO, IMO, SOLAS e NACE/AMPP, e foi desenvolvido com base na experiência prática em campos angolanos como Girassol, Dalia, Kaombo e Kizomba.</div>
+            </div>
+            <div class="faq-item">
+                <h4>Preciso de experiência prévia para fazer o curso? <i class="fas fa-chevron-down"></i></h4>
+                <div class="answer">Não. O curso é desenhado para iniciantes e também para profissionais que desejam atualizar ou aprofundar os seus conhecimentos. Começamos pelos fundamentos e avançamos gradualmente.</div>
+            </div>
+            <div class="faq-item">
+                <h4>Como funciona o acesso vitalício? <i class="fas fa-chevron-down"></i></h4>
+                <div class="answer">Após a inscrição, terá acesso a todo o conteúdo do curso (17 módulos, 340 aulas) por tempo ilimitado. Além disso, receberá todas as atualizações futuras sem custos adicionais.</div>
+            </div>
+            <div class="faq-item">
+                <h4>O curso tem certificado? <i class="fas fa-chevron-down"></i></h4>
+                <div class="answer">Sim, ao concluir o curso com aproveitamento (mínimo 70% em cada um dos 17 exames de módulo), receberá um certificado de conclusão, reconhecido por várias empresas do setor offshore em Angola e internacionalmente.</div>
+            </div>
+            <div class="faq-item">
+                <h4>Como posso pagar? <i class="fas fa-chevron-down"></i></h4>
+                <div class="answer">Aceitamos pagamento por transferência bancária, MB Way, e numerário (em Angola). Pode também optar pelo parcelamento em até 12x sem juros. Entre em contacto pelo WhatsApp para mais detalhes.</div>
+            </div>
+            <div class="faq-item">
+                <h4>O curso é 100% online? <i class="fas fa-chevron-down"></i></h4>
+                <div class="answer">Sim, o curso é 100% online com acesso a uma plataforma de aprendizagem moderna, onde pode estudar no seu ritmo, com suporte de instrutores. A certificação prática, como o HUET ou combate a incêndio real, deve ser feita presencialmente em centros credenciados.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-flex">
+            <div class="footer-col">
+                <h5>OAKEN OIL</h5>
+                <p>Formação técnica de excelência para a indústria offshore, com foco no mercado angolano e padrões internacionais.</p>
+                <div class="social-links" style="margin-top:15px;">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Contacto</h5>
+                <p><i class="fas fa-whatsapp" style="color:var(--secondary);"></i> <a href="https://wa.me/351913388794">+351 913 388 794</a></p>
+                <p><i class="fas fa-envelope"></i> info@oakenoil.ao</p>
+                <p><i class="fas fa-map-marker-alt"></i> Talatona, Luanda, Angola</p>
+            </div>
+            <div class="footer-col">
+                <h5>Links Rápidos</h5>
+                <p><a href="#modules">Módulos</a></p>
+                <p><a href="#differentials">Diferenciais</a></p>
+                <p><a href="#testimonials">Depoimentos</a></p>
+                <p><a href="#pricing">Inscrever-me</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Oaken Oil. Todos os direitos reservados. | Desenvolvido com <i class="fas fa-heart" style="color:var(--secondary);"></i> para o futuro do offshore em Angola.
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript para FAQ -->
+<script>
+    document.querySelectorAll('.faq-item h4').forEach(item => {
+        item.addEventListener('click', function() {
+            const parent = this.closest('.faq-item');
+            parent.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>

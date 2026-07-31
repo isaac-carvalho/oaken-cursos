@@ -1,0 +1,879 @@
+AULA 17.1 — Introdução à Manutenção Industrial em Angola: Conceitos e Importância
+
+1. OBJETIVOS DE APRENDIZAGEM
+Definir manutenção industrial e a sua importância para a continuidade da produção.
+Identificar os custos da falta de manutenção (paragens, avarias, substituições).
+Compreender o impacto da manutenção na segurança, na qualidade e na produtividade.
+Descrever a evolução da manutenção em Angola e os desafios específicos do contexto angolano.
+
+2. CENÁRIO REAL DE INSTALAÇÃO ELÉCTRICA EM ANGOLA
+Em 2024, uma fábrica de produção de água mineral em Viana sofreu uma paragem de 48 horas devido à avaria de um motor de 45 kW. A causa foi a falta de lubrificação dos rolamentos, que não estava prevista no plano de manutenção. O prejuízo foi estimado em 8 milhões AOA (perda de produção, horas extras para reparação e substituição do motor). Após o incidente, a fábrica implementou um plano de manutenção preventiva rigoroso, com inspecções semanais e lubrificação programada.
+
+3. DESENVOLVIMENTO TÉCNICO COMPLETO
+
+3.1. O que é Manutenção Industrial?
+Manutenção industrial é o conjunto de actividades técnicas e de gestão que têm como objectivo manter ou restaurar um equipamento, uma máquina ou uma instalação eléctrica em condições de funcionamento seguro e eficiente.
+Objectivos da manutenção:
+Garantir a disponibilidade dos equipamentos: Reduzir as paragens não programadas.
+Aumentar a vida útil: Prolongar a vida dos activos.
+Melhorar a segurança: Evitar acidentes e danos.
+Reduzir custos: Minimizar os custos de reparação e de perda de produção.
+
+3.2. Tipos de Manutenção
+Manutenção Correctiva (ou de avaria): Intervenção após a falha. É a mais cara e imprevisível.
+Manutenção Preventiva: Intervenção programada para evitar falhas (ex: lubrificação, substituição de peças desgastadas).
+Manutenção Preditiva: Monitorização do estado do equipamento para prever falhas (ex: termografia, análise de vibrações).
+Manutenção Proactiva: Análise da causa raiz das falhas para eliminá-las definitivamente.
+
+3.3. Custos da Falta de Manutenção
+Custo directo: Substituição de peças e equipamentos.
+Custo indirecto: Perda de produção, horas extras, multas, perda de clientes.
+Custo de segurança: Acidentes, lesões, mortes.
+Exemplo: Uma paragem de 1 hora numa fábrica de produção contínua pode custar milhões de Kwanzas.
+
+3.4. Desafios da Manutenção em Angola
+Disponibilidade de peças: A importação de peças pode demorar semanas.
+Formação de técnicos: Falta de mão-de-obra qualificada.
+Condições ambientais: Poeira, calor e humidade aceleram o desgaste.
+Instabilidade da rede eléctrica: Flutuações de tensão e interrupções danificam equipamentos.
+
+3.5. O Papel do Técnico Electricista na Manutenção
+O técnico electricista é o profissional responsável por:
+Inspeccionar e diagnosticar avarias em equipamentos eléctricos.
+Realizar a manutenção preventiva (limpeza, aperto, medições).
+Executar reparações (substituição de peças, cablagem).
+Registar as intervenções e propor melhorias.
+Garantir a segurança durante os trabalhos (LOTO, EPI).
+
+4. ELEMENTO VISUAL OBRIGATÓRIO — Diagrama SVG: Ciclo da Manutenção Industrial
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Ciclo da Manutenção Industrial</text>
+  <circle cx="325" cy="200" r="100" fill="#e1f0f2" stroke="#0072b0" stroke-width="3"/>
+  <rect x="50" y="50" width="100" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="100" y="75" text-anchor="middle" fill="white" font-size="9" font-weight="bold">1. Inspecção</text>
+  <line x1="150" y1="70" x2="225" y2="150" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="50" y="250" width="100" height="40" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="5"/>
+  <text x="100" y="275" text-anchor="middle" fill="white" font-size="9" font-weight="bold">4. Melhoria</text>
+  <line x1="150" y1="270" x2="225" y2="240" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="500" y="50" width="100" height="40" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="5"/>
+  <text x="550" y="75" text-anchor="middle" fill="white" font-size="9" font-weight="bold">2. Diagnóstico</text>
+  <line x1="425" y1="150" x2="500" y2="70" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="500" y="250" width="100" height="40" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="5"/>
+  <text x="550" y="275" text-anchor="middle" fill="white" font-size="9" font-weight="bold">3. Intervenção</text>
+  <line x1="425" y1="240" x2="500" y2="270" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="325" y="190" text-anchor="middle" font-size="12" font-weight="bold" fill="#0072b0">Manutenção</text>
+  <text x="325" y="205" text-anchor="middle" font-size="10" fill="#0072b0">Industrial</text>
+  <text x="50" y="400" font-size="9" fill="#333">1. Inspecção: Identificar anomalias.</text>
+  <text x="50" y="415" font-size="9" fill="#333">2. Diagnóstico: Determinar a causa.</text>
+  <text x="50" y="430" font-size="9" fill="#333">3. Intervenção: Reparar ou substituir.</text>
+  <text x="50" y="445" font-size="9" fill="#333">4. Melhoria: Corrigir a causa raiz.</text>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#333"/></marker></defs>
+</svg>
+
+5. PROCEDIMENTO PRÁTICO
+Passo 1: Avaliar a Situação Actual — Identificar os equipamentos que têm avarias frequentes.
+Passo 2: Definir um Plano de Manutenção — Estabelecer a periodicidade das inspecções e intervenções.
+Passo 3: Treinar a Equipa — Garantir que os técnicos têm as competências necessárias.
+Passo 4: Registar as Intervenções — Manter um histórico de manutenção.
+
+6. ERRO COMUM DE INSTALAÇÃO E SUA CONSEQUÊNCIA REAL
+Caso Real (Luanda, 2023): Uma fábrica de lacticínios não tinha um plano de manutenção preventiva. Quando um motor de 37 kW queimou, a fábrica ficou parada durante 3 dias, perdendo 15 milhões AOA.
+Como evitar: Implementar um plano de manutenção preventiva, com inspecções regulares e substituição programada de peças desgastadas.
+
+7. NORMAS E REFERÊNCIAS REGULATÓRIAS APLICÁVEIS
+ISO 9001: Gestão da qualidade (inclui manutenção).
+ISO 14224: Colecta de dados de manutenção.
+RTIEBT – Parte 6: Ensaios e verificações.
+
+8. PERGUNTA DE VERIFICAÇÃO DE RACIOCÍNIO
+Cenário: Uma fábrica de bebidas tem motores de 22 kW que avariam a cada 6 meses.
+a) Qual o custo aproximado de uma paragem de 1 hora (considere produção de 10 milhões AOA/dia)?
+b) O que é a manutenção preventiva?
+c) Como o técnico pode reduzir as avarias dos motores?
+d) Quais os principais desafios da manutenção em Angola?
+
+====================================================================
+
+AULA 17.2 — Manutenção Preventiva vs. Correctiva: Planeamento e Estratégias
+
+1. OBJETIVOS DE APRENDIZAGEM
+Distinguir manutenção preventiva de manutenção correctiva, com exemplos práticos.
+Planejar um programa de manutenção preventiva (periodicidade, tarefas).
+Calcular os custos e o retorno do investimento em manutenção preventiva.
+Seleccionar a estratégia mais adequada para cada equipamento.
+
+2. CENÁRIO REAL DE INSTALAÇÃO ELÉCTRICA EM ANGOLA
+Em 2024, uma fábrica de processamento de pescado no Lobito optou por um programa de manutenção preventiva para os seus 10 motores de esteiras (7,5 kW cada). O custo anual do programa foi de 500.000 AOA. Em comparação, o ano anterior (apenas manutenção correctiva) tinha custado 2,2 milhões AOA em reparações e perda de produção. A poupança foi de 1,7 milhões AOA.
+
+3. DESENVOLVIMENTO TÉCNICO COMPLETO
+
+3.1. Manutenção Correctiva (por Avaria)
+Definição: Intervenção após a ocorrência de uma falha.
+Vantagem: Não há custos com manutenção enquanto o equipamento funciona.
+Desvantagens: Paragens não programadas. Custos elevados (reparação urgente, horas extras). Maior risco de danos graves (substituição do equipamento). Incerteza no planeamento da produção.
+
+3.2. Manutenção Preventiva
+Definição: Intervenções programadas (ex: mensais, anuais) para prevenir falhas.
+Vantagens: Redução de paragens não programadas. Maior vida útil dos equipamentos. Custos previsíveis. Maior segurança.
+Desvantagem: Custo inicial, necessidade de planeamento.
+
+3.3. Planeamento da Manutenção Preventiva
+Quadro eléctrico — Inspecção visual, aperto de terminais — Mensal
+Motores — Lubrificação, medição de isolamento — Trimestral
+Contactores — Limpeza, verificação de contactos — Semestral
+VFDs — Limpeza, verificação de ventilação — Trimestral
+Cabos — Inspecção visual, medição de isolamento — Anual
+
+3.4. Cálculo do Custo Anual (Manutenção Preventiva)
+Mão-de-obra: Horas de trabalho × custo/hora.
+Peças: Substituição de peças desgastadas (ex: rolamentos).
+Material: Lubrificantes, produtos de limpeza.
+Exemplo: 10 motores × 4 intervenções/ano × 2h × 5.000 AOA/h = 400.000 AOA + peças (100.000 AOA) = 500.000 AOA.
+
+3.5. Análise de Retorno do Investimento
+Custo da manutenção preventiva: 500.000 AOA/ano.
+Custo da manutenção correctiva (antes): 2.200.000 AOA/ano.
+Poupança: 1.700.000 AOA/ano.
+Retorno: Imediato (poupança no primeiro ano).
+
+3.6. Estratégias de Manutenção
+Equipamentos críticos: Manutenção preventiva intensiva.
+Equipamentos redundantes: Manutenção correctiva (há reserva).
+Equipamentos de baixo custo: Manutenção correctiva (substituir é mais barato que prevenir).
+
+4. ELEMENTO VISUAL OBRIGATÓRIO — Tabela HTML: Comparação entre Manutenção Preventiva e Correctiva
+<table border="1" cellpadding="5" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; background-color: #f8f9fa;">
+  <thead><tr style="background-color: #0072b0; color: white;"><th>Característica</th><th>Manutenção Preventiva</th><th>Manutenção Correctiva</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Definição</strong></td><td>Intervenção programada</td><td>Intervenção após avaria</td></tr>
+    <tr><td><strong>Planeamento</strong></td><td>Sim</td><td>Não</td></tr>
+    <tr><td><strong>Paragens</strong></td><td>Programadas (menor impacto)</td><td>Não programadas (maior impacto)</td></tr>
+    <tr><td><strong>Custo</strong></td><td>Previsível (moderado)</td><td>Imprevisível (elevado)</td></tr>
+    <tr><td><strong>Vida útil do equipamento</strong></td><td>Prolongada</td><td>Reduzida</td></tr>
+    <tr><td><strong>Segurança</strong></td><td>Maior</td><td>Menor (risco de acidentes)</td></tr>
+  </tbody>
+</table>
+
+5. PROCEDIMENTO PRÁTICO
+Passo 1: Identificar os Equipamentos Críticos — Aqueles cuja avaria para a produção.
+Passo 2: Definir as Tarefas e Periodicidades — Lubrificação, inspecção, substituição de peças.
+Passo 3: Estimar os Custos — Mão-de-obra, peças, materiais.
+Passo 4: Comparar com os Custos de Avaria — Calcular a poupança e o retorno do investimento.
+
+6. ERRO COMUM DE INSTALAÇÃO E SUA CONSEQUÊNCIA REAL
+Caso Real (Luanda, 2024): Uma fábrica de produção de plásticos investiu em manutenção preventiva, mas não treinou os técnicos. As inspecções eram mal feitas, e as avarias continuaram.
+Como evitar: Treinar a equipa de manutenção e verificar a qualidade das inspecções.
+
+7. NORMAS E REFERÊNCIAS REGULATÓRIAS APLICÁVEIS
+ISO 9001: Gestão da manutenção.
+RTIEBT – Parte 6: Ensaios e verificações.
+
+8. PERGUNTA DE VERIFICAÇÃO DE RACIOCÍNIO
+Cenário: Uma fábrica tem 5 motores de 30 kW. O custo da manutenção correctiva anual é de 1,5 milhões AOA. O custo da manutenção preventiva é estimado em 400.000 AOA.
+a) Qual a poupança com a manutenção preventiva?
+b) Que tarefas devem ser incluídas no plano de manutenção preventiva?
+c) Qual a periodicidade recomendada para a lubrificação dos motores?
+d) O que é mais importante: prevenir ou corrigir? Justifique.
+
+====================================================================
+
+AULA 17.3 — Inspecção e Manutenção de Quadros Eléctricos Industriais
+
+1. OBJETIVOS DE APRENDIZAGEM
+Realizar a inspecção visual e funcional de um quadro eléctrico industrial.
+Verificar o aperto de terminais, a integridade dos cabos e o estado dos componentes.
+Limpar e manter os quadros eléctricos.
+Identificar sinais de sobreaquecimento e corrosão.
+
+2. CENÁRIO REAL DE INSTALAÇÃO ELÉCTRICA EM ANGOLA
+Em 2024, um técnico de manutenção realizou uma inspecção no quadro geral de uma fábrica de bebidas em Luanda. Detectou um ponto quente (85°C) na ligação do barramento de fase. Desligou o quadro, apertou a ligação com chave de binário, e limpou os barramentos. O ponto quente desapareceu.
+
+3. DESENVOLVIMENTO TÉCNICO COMPLETO
+
+3.1. Inspecção Visual
+Limpeza: Acumulação de poeira pode causar fugas e sobreaquecimento.
+Corrosão: Em terminais e barramentos (especialmente em zonas costeiras).
+Sinais de sobreaquecimento: Descoloração, cheiro a queimado, deformação de plásticos.
+Cabos: Isolamento ressequido ou danificado.
+Etiquetas: Verificar se estão legíveis.
+
+3.2. Verificação do Aperto de Terminais
+Chave de binário: Apertar os terminais com o binário correcto (ex: 2,5 Nm para 16 mm²).
+Termografia: Usar câmara térmica para detectar pontos quentes (ver aula 17.4).
+
+3.3. Limpeza dos Quadros
+Ar comprimido: Remover poeira dos componentes.
+Pano seco: Limpar barramentos e isoladores.
+Limpeza de contactos: Usar spray de contacto para remover oxidação.
+
+3.4. Manutenção de Disjuntores e DRs
+Teste do DR: Pressionar o botão de teste.
+Funcionamento mecânico: Verificar se os disjuntores ligam/desligam correctamente.
+Substituição: Disjuntores com sinais de desgaste devem ser substituídos.
+
+3.5. Inspecção de Barramentos
+Barramentos: Verificar se não estão oxidados ou com marcas de aquecimento.
+Isoladores: Verificar se estão rachados ou partidos.
+
+3.6. Periodicidade da Inspecção
+Visual: Mensal. Aperto de terminais: Anual. Limpeza geral: Semestral. Termografia: Anual (ou semestral em instalações críticas).
+
+4. ELEMENTO VISUAL OBRIGATÓRIO — Checklist HTML: Inspecção de Quadro Eléctrico Industrial
+<ul style="font-family: Arial, sans-serif; background-color: #f8f9fa; padding: 15px; border-radius: 5px;">
+  <li><strong>Checklist de Inspecção de Quadro</strong></li>
+  <li><input type="checkbox"> 1. Verificar limpeza do quadro (poeira).</li>
+  <li><input type="checkbox"> 2. Inspeccionar cabos (isolamento, secção).</li>
+  <li><input type="checkbox"> 3. Verificar aperto dos terminais (chave de binário).</li>
+  <li><input type="checkbox"> 4. Inspeccionar barramentos (corrosão, sobreaquecimento).</li>
+  <li><input type="checkbox"> 5. Verificar disjuntores (funcionamento, estado).</li>
+  <li><input type="checkbox"> 6. Testar DRs (botão de teste).</li>
+  <li><input type="checkbox"> 7. Verificar etiquetas (legibilidade).</li>
+  <li><input type="checkbox"> 8. Verificar portas e fechos.</li>
+  <li><input type="checkbox"> 9. Medir temperatura com termómetro infravermelho.</li>
+  <li><input type="checkbox"> 10. Registar anomalias e acções correctivas.</li>
+</ul>
+
+5. PROCEDIMENTO PRÁTICO
+Passo 1: Desligar a Energia — Seguir os procedimentos de LOTO.
+Passo 2: Realizar a Inspecção Visual — Verificar limpeza, cabos, terminais.
+Passo 3: Apertar os Terminais — Usar chave de binário.
+Passo 4: Limpar o Quadro — Remover poeira com ar comprimido.
+Passo 5: Testar os Componentes — Verificar disjuntores e DRs.
+
+6. ERRO COMUM DE INSTALAÇÃO E SUA CONSEQUÊNCIA REAL
+Caso Real (Luanda, 2024): Um técnico não apertou correctamente os terminais após a inspecção. O mau contacto causou um arco eléctrico, queimando o quadro.
+Como evitar: Usar chave de binário e verificar o aperto com a ferramenta adequada.
+
+7. NORMAS E REFERÊNCIAS REGULATÓRIAS APLICÁVEIS
+RTIEBT – Parte 6: Ensaios e verificações.
+IEC 61439: Quadros de baixa tensão.
+
+8. PERGUNTA DE VERIFICAÇÃO DE RACIOCÍNIO
+Cenário: Durante a inspecção de um quadro, o técnico detecta um ponto quente (90°C) num barramento.
+a) Qual a acção imediata?
+b) Como deve ser feito o aperto dos terminais?
+c) O que pode causar o sobreaquecimento?
+d) Qual a periodicidade recomendada para a termografia?
+
+====================================================================
+
+AULA 17.4 — Termografia Básica para Detecção de Pontos Quentes
+
+1. OBJETIVOS DE APRENDIZAGEM
+Compreender o princípio da termografia e a sua aplicação na manutenção eléctrica.
+Utilizar uma câmara térmica para inspeccionar quadros e equipamentos.
+Interpretar imagens termográficas e identificar pontos quentes.
+Classificar as anomalias por gravidade e priorizar as acções correctivas.
+
+2. CENÁRIO REAL DE INSTALAÇÃO ELÉCTRICA EM ANGOLA
+Em 2024, um técnico realizou uma inspecção termográfica num quadro de distribuição de um centro comercial no Talatona. Detectou uma ligação a 95°C (ponto quente crítico) num disjuntor de 400A. Desligou o quadro, substituiu o disjuntor e apertou as ligações. A temperatura voltou ao normal (55°C).
+
+3. DESENVOLVIMENTO TÉCNICO COMPLETO
+
+3.1. O que é Termografia?
+A termografia é uma técnica que utiliza uma câmara térmica para medir a temperatura superficial dos equipamentos, sem contacto. Detecta pontos quentes que indicam: maus contactos (ligações soltas ou oxidadas), sobrecarga (corrente excessiva), desequilíbrio de fases (corrente desequilibrada), isolamento degradado (perdas de energia).
+
+3.2. Funcionamento da Câmara Térmica
+A câmara térmica capta a radiação infravermelha emitida pelos objectos e converte-a numa imagem (termograma), onde as temperaturas são representadas por cores (ex: vermelho = quente, azul = frio).
+
+3.3. Como Realizar uma Inspecção Termográfica
+Preparação: O quadro deve estar em carga (funcionando) para que os pontos quentes sejam visíveis.
+Fotografar: Capturar imagens de todos os componentes: disjuntores, barramentos, ligações.
+Analisar: Comparar as temperaturas com os valores normais.
+Registar: Anotar as temperaturas e os pontos quentes.
+
+3.4. Interpretação dos Resultados
+Ambiente + 10°C — Normal — Monitorizar
+Ambiente + 10-30°C — Anomalia leve — Investigar
+Ambiente + 30-60°C — Anomalia grave — Intervir em breve
+> Ambiente + 60°C — Crítico — Intervir imediatamente
+
+3.5. Exemplo de Interpretação
+Barramento L1: 55°C (normal). Barramento L2: 85°C (anomalia grave) → ligação solta. Barramento L3: 50°C (normal).
+
+3.6. Periodicidade da Termografia
+Quadros gerais: Anual. Quadros de máquinas críticas: Semestral. Após uma avaria: Imediatamente.
+
+4. ELEMENTO VISUAL OBRIGATÓRIO — Diagrama SVG: Exemplo de Imagem Termográfica
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Exemplo de Imagem Termográfica</text>
+  <rect x="100" y="60" width="450" height="200" fill="white" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="150" y="90" width="80" height="30" fill="#0000ff" stroke="#333" stroke-width="1"/>
+  <text x="190" y="110" text-anchor="middle" fill="white" font-size="8">L1 (45°C)</text>
+  <rect x="250" y="90" width="80" height="30" fill="#ff0000" stroke="#333" stroke-width="1"/>
+  <text x="290" y="110" text-anchor="middle" fill="white" font-size="8">L2 (95°C)</text>
+  <rect x="350" y="90" width="80" height="30" fill="#0000ff" stroke="#333" stroke-width="1"/>
+  <text x="390" y="110" text-anchor="middle" fill="white" font-size="8">L3 (50°C)</text>
+  <rect x="150" y="150" width="80" height="40" fill="#0000ff" stroke="#333" stroke-width="1"/>
+  <text x="190" y="175" text-anchor="middle" fill="white" font-size="8">16A (40°C)</text>
+  <rect x="250" y="150" width="80" height="40" fill="#ffa500" stroke="#333" stroke-width="1"/>
+  <text x="290" y="175" text-anchor="middle" fill="white" font-size="8">32A (75°C)</text>
+  <rect x="350" y="150" width="80" height="40" fill="#0000ff" stroke="#333" stroke-width="1"/>
+  <text x="390" y="175" text-anchor="middle" fill="white" font-size="8">16A (42°C)</text>
+  <rect x="50" y="330" width="15" height="15" fill="#0000ff"/><text x="75" y="342" font-size="9" fill="#333">Normal (40-50°C)</text>
+  <rect x="200" y="330" width="15" height="15" fill="#ffa500"/><text x="225" y="342" font-size="9" fill="#333">Anomalia (75°C)</text>
+  <rect x="350" y="330" width="15" height="15" fill="#ff0000"/><text x="375" y="342" font-size="9" fill="#333">Crítico (95°C)</text>
+</svg>
+
+5. PROCEDIMENTO PRÁTICO
+Passo 1: Ligar a Câmara Térmica — Ajustar a emissividade (0,95 para equipamentos eléctricos).
+Passo 2: Fotografar o Quadro — Capturar imagens de todos os componentes.
+Passo 3: Analisar as Imagens — Identificar os pontos quentes (temperaturas anormais).
+Passo 4: Classificar as Anomalias — Leve, grave ou crítica.
+Passo 5: Tomar Acções Correctivas — Apertar ligações, substituir componentes, etc.
+
+6. ERRO COMUM DE INSTALAÇÃO E SUA CONSEQUÊNCIA REAL
+Caso Real (Luanda, 2024): Um técnico fez a termografia, mas não classificou correctamente as anomalias. Ignorou um ponto quente de 85°C, que evoluiu para um incêndio no quadro.
+Como evitar: Classificar as anomalias por gravidade e intervir rapidamente nos casos críticos.
+
+7. NORMAS E REFERÊNCIAS REGULATÓRIAS APLICÁVEIS
+ISO 18434: Termografia para manutenção.
+RTIEBT – Parte 6: Ensaios e verificações.
+
+8. PERGUNTA DE VERIFICAÇÃO DE RACIOCÍNIO
+Cenário: A termografia de um quadro revela uma ligação a 85°C (ambiente 35°C).
+a) A temperatura é normal, anómala ou crítica?
+b) Qual a acção correctiva?
+c) Como deve ser feita a termografia?
+d) Qual a periodicidade recomendada?
+
+====================================================================
+
+AULA 17.5 — Medição de Isolamento e Continuidade em Instalações Industriais
+
+1. OBJETIVOS DE APRENDIZAGEM
+Medir a resistência de isolamento com megaohmímetro (500V ou 1000V).
+Medir a continuidade dos condutores de protecção (PE) e dos circuitos.
+Interpretar os resultados das medições.
+Identificar as causas de baixa resistência de isolamento (humidade, degradação).
+
+2. CENÁRIO REAL DE INSTALAÇÃO ELÉCTRICA EM ANGOLA
+Em 2024, um técnico de manutenção mediu a resistência de isolamento de um motor de 30 kW, obtendo 0,5 MΩ (valor baixo). Diagnosticou humidade nos enrolamentos. Secou o motor com ar quente e repetiu a medição, obtendo 2 MΩ (aceitável).
+
+3. DESENVOLVIMENTO TÉCNICO COMPLETO
+
+3.1. Medição da Resistência de Isolamento (Megger)
+Instrumento: Megaohmímetro (500V para 220/380V, 1000V para motores de maior tensão).
+Procedimento: Desligar o equipamento. Medir entre fase e terra, fase e neutro, e entre fases.
+Valores mínimos: Instalações novas: ≥ 1 MΩ. Instalações em serviço: ≥ 0,5 MΩ. Motores: ≥ 1 MΩ (ou conforme fabricante).
+
+3.2. Causas de Baixa Isolamento
+Humidade: Entrada de água em cabos ou motores.
+Degradação do isolamento: Envelhecimento, calor excessivo.
+Sujidade: Poeira condutora (ex: carbono).
+Danos mecânicos: Cabos esmagados ou com cortes.
+
+3.3. Medição da Continuidade
+Instrumento: Multímetro (escala de resistência).
+Procedimento: Medir a resistência entre o barramento PE e a carcaça do motor (ou outros equipamentos).
+Valor máximo: ≤ 0,5 Ω (para garantir a continuidade da ligação de terra).
+
+3.4. Interpretação dos Resultados
+Isolamento > 1 MΩ — Bom — Monitorizar
+Isolamento 0,5–1 MΩ — Marginal — Investigar (humidade?)
+Isolamento < 0,5 MΩ — Mau — Intervir (secar, substituir)
+Continuidade < 0,5 Ω — Bom — OK
+Continuidade > 0,5 Ω — Mau — Verificar ligações
+
+3.5. Procedimento de Secagem (Motores)
+Desmontar: Remover a tampa do motor.
+Secar com ar quente: Usar um aquecedor ou lâmpada.
+Medir novamente: Repetir a medição de isolamento.
+Repetir: Até o valor ser ≥ 1 MΩ.
+
+4. ELEMENTO VISUAL OBRIGATÓRIO — Diagrama SVG: Medição de Isolamento (Megger)
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Medição de Isolamento (Megger)</text>
+  <rect x="50" y="80" width="120" height="80" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="110" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Megger</text>
+  <text x="110" y="130" text-anchor="middle" fill="white" font-size="8">500V / 1000V</text>
+  <text x="110" y="150" text-anchor="middle" fill="white" font-size="8">2,5 MΩ</text>
+  <circle cx="400" cy="120" r="40" fill="#5cb85c" stroke="#4cae4c" stroke-width="2"/>
+  <text x="400" y="120" text-anchor="middle" fill="white" font-size="12" font-weight="bold">M</text>
+  <line x1="170" y1="120" x2="360" y2="120" stroke="#333" stroke-width="2"/>
+  <text x="265" y="115" text-anchor="middle" font-size="8" fill="#333">Fase</text>
+  <line x1="110" y1="160" x2="110" y2="240" stroke="#333" stroke-width="2"/>
+  <line x1="110" y1="240" x2="400" y2="240" stroke="#333" stroke-width="2"/>
+  <text x="255" y="255" text-anchor="middle" font-size="8" fill="#333">Terra (PE)</text>
+  <circle cx="400" cy="240" r="10" fill="#5cb85c" stroke="#4cae4c" stroke-width="2"/>
+  <text x="50" y="360" font-size="9" fill="#333">Megger aplica 500V entre fase e terra.</text>
+  <text x="50" y="375" font-size="9" fill="#333">A resistência de isolamento é medida em MΩ.</text>
+</svg>
+
+5. PROCEDIMENTO PRÁTICO
+Passo 1: Desligar o Equipamento — Isolar o motor ou cabo a testar.
+Passo 2: Medir o Isolamento — Ligar o megger entre fase e terra, e entre fases.
+Passo 3: Registar os Valores — Anotar os valores obtidos.
+Passo 4: Interpretar e Agir — Se < 0,5 MΩ, intervir (secar, substituir).
+
+6. ERRO COMUM DE INSTALAÇÃO E SUA CONSEQUÊNCIA REAL
+Caso Real (Luanda, 2024): Um técnico mediu o isolamento de um motor com o megger a 500V, mas o motor estava ligado a um VFD. A alta tensão danificou o VFD.
+Como evitar: Desligar o VFD antes de medir o isolamento do motor.
+
+7. NORMAS E REFERÊNCIAS REGULATÓRIAS APLICÁVEIS
+IEC 60364-6: Ensaios de isolamento.
+RTIEBT – Parte 6: Medição de isolamento.
+
+8. PERGUNTA DE VERIFICAÇÃO DE RACIOCÍNIO
+Cenário: Um motor de 15 kW tem uma resistência de isolamento de 0,3 MΩ.
+a) O valor é aceitável?
+b) Qual a causa mais provável?
+c) Como secar o motor?
+d) O que pode acontecer se o motor for ligado com baixa resistência de isolamento?
+
+====================================================================
+
+AULA 17.6 — Manutenção de Motores Eléctricos: Procedimentos e Ensaios
+
+1. OBJETIVOS DE APRENDIZAGEM
+Realizar a manutenção preventiva de motores eléctricos (limpeza, lubrificação, inspecção).
+Medir a corrente de carga e o equilíbrio das fases.
+Medir a resistência de isolamento e a continuidade.
+Diagnosticar avarias comuns (rolamentos gastos, desequilíbrio de fases, sobrecarga).
+
+2. CENÁRIO REAL DE INSTALAÇÃO ELÉCTRICA EM ANGOLA
+Em 2024, um técnico realizou a manutenção preventiva de 5 motores de 22 kW numa fábrica de processamento de alimentos. Substituiu os rolamentos de um motor (ruído anormal), lubrificou os outros, e mediu a corrente de carga (dentro dos valores nominais). O plano de manutenção reduziu as avarias em 80%.
+
+3. DESENVOLVIMENTO TÉCNICO COMPLETO
+
+3.1. Manutenção Preventiva de Motores
+Limpeza: Remover poeira e sujidade da carcaça e das aletas de ventilação.
+Lubrificação: Lubrificar os rolamentos conforme as recomendações do fabricante (ex: a cada 2000 horas).
+Inspecção visual: Verificar cabos, carcaça, ventilação, ruídos.
+Medição de isolamento: Anual. Medição de corrente: Trimestral.
+
+3.2. Medição da Corrente de Carga
+Alicate amperímetro: Medir a corrente em cada fase.
+Equilíbrio: A diferença entre as fases não deve exceder 10%.
+Sobrecarga: Se a corrente for > 10% acima da nominal, há sobrecarga.
+
+3.3. Diagnóstico de Avarias
+Ruído anormal — Rolamentos gastos
+Corrente elevada — Sobrecarga, baixa tensão
+Corrente desequilibrada — Desequilíbrio de tensão, contacto defeituoso
+Motor não arranca — Falta de fase, avaria no contactor
+Motor sobreaquece — Ventilação obstruída, sobrecarga
+
+3.4. Procedimento de Substituição de Rolamentos
+Desmontar o motor. Remover os rolamentos antigos (com extractor). Limpar o veio e a carcaça. Montar os novos rolamentos (com prensa ou martelo de borracha). Lubrificar e montar o motor.
+
+4. ELEMENTO VISUAL OBRIGATÓRIO — Tabela HTML: Manutenção de Motores – Periodicidade e Tarefas
+<table border="1" cellpadding="5" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; background-color: #f8f9fa;">
+  <thead><tr style="background-color: #0072b0; color: white;"><th>Tarefa</th><th>Frequência</th><th>Ferramenta</th><th>Critério de Aceitação</th></tr></thead>
+  <tbody>
+    <tr><td>Limpeza</td><td>Mensal</td><td>Ar comprimido, pano</td><td>Sem poeira ou sujidade</td></tr>
+    <tr><td>Inspecção visual</td><td>Mensal</td><td>Olho nu</td><td>Sem danos, ruídos ou vibrações</td></tr>
+    <tr><td>Lubrificação</td><td>Conforme fabricante</td><td>Lubrificador</td><td>Quantidade correcta de lubrificante</td></tr>
+    <tr><td>Medição de corrente</td><td>Trimestral</td><td>Alicate amperímetro</td><td>Desequilíbrio < 10%</td></tr>
+    <tr><td>Medição de isolamento</td><td>Anual</td><td>Megger</td><td>≥ 1 MΩ</td></tr>
+  </tbody>
+</table>
+
+5. PROCEDIMENTO PRÁTICO
+Passo 1: Desligar o Motor — Aplicar LOTO.
+Passo 2: Limpar e Inspeccionar — Remover poeira, verificar cabos e rolamentos.
+Passo 3: Lubrificar — Aplicar a quantidade correcta de lubrificante.
+Passo 4: Medir Corrente e Isolamento — Registar os valores.
+
+6. ERRO COMUM DE INSTALAÇÃO E SUA CONSEQUÊNCIA REAL
+Caso Real (Luanda, 2024): Um técnico lubrificou em demasia um motor, causando o sobreaquecimento e a queima dos rolamentos.
+Como evitar: Seguir as recomendações do fabricante quanto à quantidade e periodicidade da lubrificação.
+
+7. NORMAS E REFERÊNCIAS REGULATÓRIAS APLICÁVEIS
+IEC 60034: Motores eléctricos.
+RTIEBT – Parte 6: Ensaios de verificação.
+
+8. PERGUNTA DE VERIFICAÇÃO DE RACIOCÍNIO
+Cenário: Um motor de 30 kW tem um desequilíbrio de corrente de 15% (fase A: 55A, fase B: 48A, fase C: 50A).
+a) O desequilíbrio é aceitável (≤ 10%)?
+b) Qual a causa mais provável?
+c) Como corrigir o problema?
+d) O que acontece se o desequilíbrio continuar?
+
+====================================================================
+
+AULA 17.7 — Manutenção de Contactores, Relés e Componentes de Comando
+
+1. OBJETIVOS DE APRENDIZAGEM
+Inspeccionar e manter contactores, relés e botões de comando.
+Limpar e substituir contactos oxidados ou desgastados.
+Verificar o funcionamento das bobinas e do mecanismo de abertura.
+Diagnosticar avarias em circuitos de comando.
+
+2. CENÁRIO REAL DE INSTALAÇÃO ELÉCTRICA EM ANGOLA
+Em 2024, um técnico diagnosticou uma avaria num contactor de 65A que não ligava. Mediu a resistência da bobina (infinito) e concluiu que estava queimada. Substituiu a bobina e o contactor voltou a funcionar.
+
+3. DESENVOLVIMENTO TÉCNICO COMPLETO
+
+3.1. Contactores – Manutenção Preventiva
+Inspecção visual: Verificar contactos principais e auxiliares (oxidação, desgaste).
+Limpeza: Usar lixa fina ou spray de contacto para limpar os contactos.
+Verificação da bobina: Medir a resistência da bobina (deve ter um valor baixo, ex: 100-200 Ω).
+Verificação do mecanismo: Accionar o contactor manualmente para verificar a abertura/fecho.
+
+3.2. Relés Térmicos – Manutenção
+Verificação do ajuste: Confirmar que o relé está ajustado para a corrente nominal do motor.
+Teste de disparo: Simular uma sobrecarga (com um amperímetro) para verificar o disparo.
+Substituição: Relés com histórico de disparos frequentes devem ser substituídos.
+
+3.3. Botões e Sinalização
+Botões de marcha/paragem: Verificar o funcionamento e o estado dos contactos.
+Lâmpadas piloto: Substituir as lâmpadas queimadas.
+Etiquetas: Verificar se estão legíveis.
+
+3.4. Diagnóstico de Avaria (Contactor não liga)
+Bobina queimada — Medir resistência da bobina
+Falta de tensão na bobina — Medir tensão nos terminais
+Relé térmico disparado — Verificar e rearmar
+Botão de paragem acionado — Verificar o botão
+Contacto auxiliar defeituoso — Verificar o circuito de comando
+
+4. ELEMENTO VISUAL OBRIGATÓRIO — Diagrama SVG: Inspecção de Contactor
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Inspecção de Contactor</text>
+  <rect x="200" y="80" width="120" height="100" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="5"/>
+  <text x="260" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Contactor</text>
+  <rect x="230" y="120" width="60" height="30" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="260" y="140" text-anchor="middle" fill="white" font-size="8">Bobina</text>
+  <rect x="230" y="160" width="60" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="3"/>
+  <text x="260" y="180" text-anchor="middle" fill="white" font-size="8">Contactos</text>
+  <text x="50" y="360" font-size="9" fill="#333">Verificar bobina: medir resistência.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Verificar contactos: limpeza e desgaste.</text>
+</svg>
+
+5. PROCEDIMENTO PRÁTICO
+Passo 1: Desligar a Energia — Aplicar LOTO.
+Passo 2: Inspeccionar o Contactor — Verificar bobina, contactos, mecanismo.
+Passo 3: Limpar os Contactos — Usar lixa fina ou spray de contacto.
+Passo 4: Testar o Funcionamento — Aplicar tensão e verificar a actuação.
+
+6. ERRO COMUM DE INSTALAÇÃO E SUA CONSEQUÊNCIA REAL
+Caso Real (Luanda, 2024): Um técnico não verificou os contactos auxiliares de um contactor. O contacto de selo estava oxidado, impedindo a retenção do motor.
+Como evitar: Verificar todos os contactos (principais e auxiliares) durante a manutenção.
+
+7. NORMAS E REFERÊNCIAS REGULATÓRIAS APLICÁVEIS
+IEC 60947-4-1: Contactores e relés.
+RTIEBT – Parte 5, Secção 5.3: Componentes de comando.
+
+8. PERGUNTA DE VERIFICAÇÃO DE RACIOCÍNIO
+Cenário: Um contactor não liga. O técnico mede a tensão na bobina e obtém 220V (normal). A resistência da bobina é infinita.
+a) Qual a avaria?
+b) Como substituir a bobina?
+c) O que mais pode causar a não actuação do contactor?
+d) Como testar os contactos do contactor?
+
+====================================================================
+
+AULA 17.8 — Manutenção de VFDs e Soft-Starters: Diagnóstico e Reparação
+
+1. OBJETIVOS DE APRENDIZAGEM
+Realizar a manutenção preventiva de VFDs e soft-starters (limpeza, ventilação).
+Interpretar códigos de avaria e mensagens de erro.
+Diagnosticar avarias comuns (sobreaquecimento, sobretensão, IGBT avariado).
+Substituir componentes (ventoinhas, capacitores, IGBTs).
+
+2. CENÁRIO REAL DE INSTALAÇÃO ELÉCTRICA EM ANGOLA
+Em 2024, um VFD de 30 kW apresentou o erro "OH" (overheat). O técnico verificou a ventoinha e constatou que estava avariada. Substituiu a ventoinha e limpou os dissipadores, e o VFD voltou a funcionar.
+
+3. DESENVOLVIMENTO TÉCNICO COMPLETO
+
+3.1. Manutenção Preventiva de VFDs
+Limpeza: Remover poeira dos dissipadores e ventoinhas (com ar comprimido).
+Verificação da ventilação: As ventoinhas devem estar a funcionar correctamente.
+Capacitores: Inspeccionar visualmente (inchados, fuga de electrólito).
+Ligações: Verificar o aperto dos terminais.
+
+3.2. Códigos de Avaria (VFD)
+OC (Overcurrent) — Sobrecorrente — Verificar motor, cabos
+OV (Overvoltage) — Sobretensão — Verificar tensão da rede
+UV (Undervoltage) — Subtensão — Verificar tensão da rede
+OH (Overheat) — Sobreaquecimento — Limpar ventoinha/dissipadores
+OL (Overload) — Sobrecarga — Reduzir carga do motor
+
+3.3. Diagnóstico de VFD
+Medir a tensão de entrada: Deve estar dentro dos limites (380V ± 6%).
+Medir a tensão do barramento CC: Deve ser ≈ 1,35 × V_CA (≈ 513V para 380V).
+Medir a corrente de saída: Comparar com a corrente nominal do motor.
+
+3.4. Substituição de Componentes (VFD)
+Ventoinhas: Substituir a cada 3-5 anos (ou quando avariadas).
+Capacitores: Substituir a cada 5-7 anos (ou quando inchados).
+IGBTs: Substituir se avariados (curto-circuito).
+
+3.5. Soft-Starters – Manutenção
+Limpeza: Similar ao VFD.
+Verificação dos tirístores: Medir a queda de tensão.
+Substituição: Tirístores avariados devem ser substituídos.
+
+4. ELEMENTO VISUAL OBRIGATÓRIO — Tabela HTML: Manutenção de VFDs – Periodicidade
+<table border="1" cellpadding="5" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; background-color: #f8f9fa;">
+  <thead><tr style="background-color: #0072b0; color: white;"><th>Tarefa</th><th>Frequência</th><th>Instrumento</th><th>Critério de Aceitação</th></tr></thead>
+  <tbody>
+    <tr><td>Limpeza (dissipadores)</td><td>Trimestral</td><td>Ar comprimido</td><td>Sem poeira</td></tr>
+    <tr><td>Verificação da ventoinha</td><td>Trimestral</td><td>Olho nu</td><td>Funciona correctamente</td></tr>
+    <tr><td>Medição de tensão</td><td>Anual</td><td>Multímetro</td><td>380V ± 6%</td></tr>
+    <tr><td>Inspecção de capacitores</td><td>Anual</td><td>Olho nu</td><td>Sem inchaço ou fuga</td></tr>
+    <tr><td>Aperto de terminais</td><td>Anual</td><td>Chave de binário</td><td>Torque correcto</td></tr>
+  </tbody>
+</table>
+
+5. PROCEDIMENTO PRÁTICO
+Passo 1: Desligar o VFD — Aplicar LOTO e descarregar os capacitores.
+Passo 2: Limpar o VFD — Remover poeira com ar comprimido.
+Passo 3: Inspeccionar Componentes — Ventoinhas, capacitores, terminais.
+Passo 4: Substituir Componentes — Se necessário, substituir ventoinhas ou capacitores.
+
+6. ERRO COMUM DE INSTALAÇÃO E SUA CONSEQUÊNCIA REAL
+Caso Real (Luanda, 2024): Um técnico não descarregou os capacitores de um VFD antes de intervir, levando um choque eléctrico.
+Como evitar: Descarregar os capacitores com uma resistência de descarga (ex: 10 kΩ, 5W) antes de manusear o VFD.
+
+7. NORMAS E REFERÊNCIAS REGULATÓRIAS APLICÁVEIS
+IEC 61800: VFDs.
+Manual do fabricante: Códigos de avaria.
+
+8. PERGUNTA DE VERIFICAÇÃO DE RACIOCÍNIO
+Cenário: Um VFD apresenta o erro "OH" (overheat).
+a) O que significa este erro?
+b) Como verificar a ventoinha?
+c) O que mais pode causar o sobreaquecimento?
+d) Como descarregar os capacitores do VFD?
+
+====================================================================
+
+AULA 17.9 — Plano de Manutenção Preventiva para Instalações Industriais
+
+1. OBJETIVOS DE APRENDIZAGEM
+Estruturar um plano de manutenção preventiva para uma instalação industrial.
+Definir a periodicidade das tarefas (diária, semanal, mensal, anual).
+Atribuir responsabilidades e recursos.
+Implementar o plano e monitorizar os resultados.
+
+2. CENÁRIO REAL DE INSTALAÇÃO ELÉCTRICA EM ANGOLA
+Em 2024, uma fábrica de produção de plásticos implementou um plano de manutenção preventiva baseado nas recomendações do fabricante dos equipamentos. O plano incluía inspecções diárias (temperaturas, ruídos), inspecções semanais (limpeza), e inspecções mensais (medições de isolamento). As avarias reduziram-se em 60% no primeiro ano.
+
+3. DESENVOLVIMENTO TÉCNICO COMPLETO
+
+3.1. Estrutura do Plano de Manutenção
+Diária — Verificar temperaturas (termómetro), ruídos, vibrações.
+Semanal — Inspecção visual de quadros, cabos, motores.
+Mensal — Limpeza de quadros, verificação de DRs.
+Trimestral — Medição de corrente de motores, lubrificação.
+Semestral — Limpeza de VFDs, aperto de terminais.
+Anual — Medição de isolamento (megger), termografia.
+
+3.2. Atribuição de Responsabilidades
+Técnico electricista: Responsável pelas tarefas eléctricas (medições, inspecções).
+Técnico mecânico: Responsável pela lubrificação, rolamentos.
+Supervisor: Responsável pela supervisão e registo.
+
+3.3. Recursos Necessários
+Ferramentas: Megger, câmara térmica, multímetro, chave de binário.
+Peças sobresselentes: Rolamentos, fusíveis, contactores.
+Material: Lubrificantes, spray de contacto, etiquetas.
+
+3.4. Monitorização dos Resultados
+Registo de avarias: Número de avarias por mês.
+Tempo médio entre avarias (MTBF): Indicador de fiabilidade.
+Tempo médio de reparação (MTTR): Indicador de eficiência da manutenção.
+
+3.5. Exemplo de Plano (Fábrica de Plásticos)
+Quadros eléctricos — Inspecção visual, limpeza — Mensal — Electricista
+Motores (10 unidades) — Lubrificação, medição de corrente — Trimestral — Mecânico
+VFDs (5 unidades) — Limpeza, verificação de ventoinhas — Semestral — Electricista
+Contactores — Inspecção de contactos — Semestral — Electricista
+
+4. ELEMENTO VISUAL OBRIGATÓRIO — Tabela HTML: Plano de Manutenção Preventiva (Exemplo)
+<table border="1" cellpadding="5" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; background-color: #f8f9fa;">
+  <thead><tr style="background-color: #0072b0; color: white;"><th>Frequência</th><th>Equipamento</th><th>Tarefa</th><th>Responsável</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Diária</strong></td><td>Motores, VFDs</td><td>Verificar temperatura, ruído</td><td>Operador</td></tr>
+    <tr><td><strong>Semanal</strong></td><td>Quadros, cabos</td><td>Inspecção visual</td><td>Electricista</td></tr>
+    <tr><td><strong>Mensal</strong></td><td>Quadros, DRs</td><td>Limpeza, teste de DR</td><td>Electricista</td></tr>
+    <tr><td><strong>Trimestral</strong></td><td>Motores</td><td>Lubrificação, medição de corrente</td><td>Mecânico</td></tr>
+    <tr><td><strong>Semestral</strong></td><td>VFDs, contactores</td><td>Limpeza, aperto de terminais</td><td>Electricista</td></tr>
+    <tr><td><strong>Anual</strong></td><td>Todos os equipamentos</td><td>Megger, termografia</td><td>Electricista</td></tr>
+  </tbody>
+</table>
+
+5. PROCEDIMENTO PRÁTICO
+Passo 1: Listar os Equipamentos — Identificar todos os equipamentos críticos.
+Passo 2: Definir as Tarefas — Para cada equipamento, definir as tarefas de manutenção.
+Passo 3: Estabelecer a Periodicidade — Diária, semanal, mensal, etc.
+Passo 4: Atribuir Responsabilidades — Definir quem faz o quê.
+Passo 5: Monitorizar os Resultados — Registar as intervenções e as avarias.
+
+6. ERRO COMUM DE INSTALAÇÃO E SUA CONSEQUÊNCIA REAL
+Caso Real (Luanda, 2024): Uma fábrica implementou um plano de manutenção, mas não o monitorizou. As avarias continuaram porque as tarefas não estavam a ser cumpridas.
+Como evitar: Monitorizar a execução do plano e ajustá-lo conforme necessário.
+
+7. NORMAS E REFERÊNCIAS REGULATÓRIAS APLICÁVEIS
+ISO 9001: Gestão da manutenção.
+ISO 14224: Colecta de dados de manutenção.
+
+8. PERGUNTA DE VERIFICAÇÃO DE RACIOCÍNIO
+Cenário: Uma fábrica tem 20 motores, 5 VFDs e 10 quadros eléctricos.
+a) Que tarefas devem ser incluídas no plano de manutenção?
+b) Qual a periodicidade recomendada para a lubrificação dos motores?
+c) Quem deve ser responsável pelas inspecções diárias?
+d) Como medir a eficácia do plano?
+
+====================================================================
+
+AULA 17.10 — Registo de Intervenções e Gestão de Manutenção
+
+1. OBJETIVOS DE APRENDIZAGEM
+Registar todas as intervenções de manutenção (preventiva e correctiva).
+Manter um histórico de avarias e reparações.
+Utilizar os dados de manutenção para melhorar a fiabilidade dos equipamentos.
+Cumprir as normas de registo (ISO 9001, RTIEBT).
+
+2. CENÁRIO REAL DE INSTALAÇÃO ELÉCTRICA EM ANGOLA
+Em 2024, um técnico de manutenção começou a registar todas as intervenções num livro de registos. Após 6 meses, analisou os dados e identificou que o motor da esteira 3 avariava a cada 3 meses (rolamentos). Substituiu os rolamentos por um modelo de maior qualidade, e a avaria deixou de ocorrer.
+
+3. DESENVOLVIMENTO TÉCNICO COMPLETO
+
+3.1. Importância do Registo
+Histórico: Permite identificar padrões de avaria.
+Planeamento: Ajuda a prever a necessidade de peças sobresselentes.
+Melhoria contínua: Identifica a causa raiz das avarias.
+Conformidade: Exigido por normas (ISO 9001) e pela ENDE.
+
+3.2. O que Registar?
+Data e hora, equipamento (identificação), tipo de intervenção (preventiva/correctiva), tarefa realizada, resultados (valores medidos), observações (causa, recomendações), técnico responsável.
+
+3.3. Indicadores de Manutenção
+MTBF (Mean Time Between Failures): Tempo médio entre avarias. Quanto maior, melhor.
+MTTR (Mean Time To Repair): Tempo médio de reparação. Quanto menor, melhor.
+Disponibilidade: % de tempo em que o equipamento está operacional.
+
+3.4. Ferramentas de Registo
+Livro de registos: Simples, mas eficaz.
+Software de gestão de manutenção (CMMS): Mais avançado (ex: ManWin, SAP).
+Planilhas Excel: Para pequenas instalações.
+
+3.5. Exemplo de Registo (Motor)
+15/01/2024 — Motor M3 — Preventiva — Lubrificação — OK — João
+20/02/2024 — Motor M3 — Correctiva — Substituição de rolamentos — OK — Maria
+15/03/2024 — Motor M3 — Preventiva — Medição de isolamento — 2 MΩ — João
+
+4. ELEMENTO VISUAL OBRIGATÓRIO — Tabela HTML: Exemplo de Registo de Manutenção
+<table border="1" cellpadding="5" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; background-color: #f8f9fa;">
+  <thead><tr style="background-color: #0072b0; color: white;"><th>Data</th><th>Equipamento</th><th>Tipo</th><th>Tarefa</th><th>Resultado</th><th>Técnico</th></tr></thead>
+  <tbody>
+    <tr><td>15/01/2024</td><td>Motor M3 (Esteira)</td><td>Preventiva</td><td>Lubrificação</td><td>OK</td><td>João</td></tr>
+    <tr><td>20/02/2024</td><td>Motor M3 (Esteira)</td><td>Correctiva</td><td>Substituição de rolamentos</td><td>OK</td><td>Maria</td></tr>
+    <tr><td>15/03/2024</td><td>Motor M3 (Esteira)</td><td>Preventiva</td><td>Medição de isolamento</td><td>2 MΩ</td><td>João</td></tr>
+    <tr><td>10/04/2024</td><td>Quadro Geral</td><td>Preventiva</td><td>Limpeza, aperto de terminais</td><td>OK</td><td>Carlos</td></tr>
+  </tbody>
+</table>
+
+5. PROCEDIMENTO PRÁTICO
+Passo 1: Criar um Registo — Iniciar um livro de registos ou usar uma planilha.
+Passo 2: Registar Todas as Intervenções — Incluir data, equipamento, tarefa, resultados.
+Passo 3: Analisar os Dados — Identificar padrões de avaria.
+Passo 4: Tomar Acções — Substituir peças ou ajustar o plano de manutenção.
+
+6. ERRO COMUM DE INSTALAÇÃO E SUA CONSEQUÊNCIA REAL
+Caso Real (Luanda, 2024): Uma fábrica não registava as intervenções. Quando um motor avariou, o técnico não sabia quando tinha sido a última lubrificação.
+Como evitar: Manter sempre um registo actualizado de todas as intervenções.
+
+7. NORMAS E REFERÊNCIAS REGULATÓRIAS APLICÁVEIS
+ISO 9001: Gestão da qualidade.
+RTIEBT – Parte 6: Ensaios e verificações.
+
+8. PERGUNTA DE VERIFICAÇÃO DE RACIOCÍNIO
+Cenário: Um técnico registou as intervenções de um motor durante 1 ano. O motor avariou 3 vezes.
+a) Qual o MTBF (tempo médio entre avarias)?
+b) Qual a acção recomendada?
+c) O que é o MTTR?
+d) Como os registos podem melhorar a manutenção?
+
+====================================================================
+
+AULA 17.11 — Aplicação Prática: Plano de Manutenção para uma Fábrica em Angola
+
+1. OBJETIVOS DE APRENDIZAGEM
+Aplicar todos os conceitos do módulo a um projecto real: uma fábrica de processamento de alimentos.
+Desenvolver um plano de manutenção preventiva completo.
+Definir as tarefas, periodicidades e responsabilidades.
+Apresentar o plano à direcção da fábrica.
+
+2. CENÁRIO REAL DE INSTALAÇÃO ELÉCTRICA EM ANGOLA
+Em 2024, um técnico foi contratado para desenvolver um plano de manutenção para uma fábrica de processamento de alimentos em Viana. A fábrica tinha 15 motores (5,5 a 30 kW), 4 VFDs, 3 quadros eléctricos, e uma linha de produção contínua. O técnico elaborou um plano detalhado, que foi aprovado pela direcção e implementado com sucesso.
+
+3. DESENVOLVIMENTO TÉCNICO COMPLETO
+
+3.1. Dados da Fábrica
+Motores: 15 unidades (5,5 kW a 30 kW). VFDs: 4 unidades (15 kW a 37 kW). Quadros eléctricos: 3 quadros (principal, secundário, comando). Contactores e relés: 20 conjuntos. Linha de produção: Contínua (24h/dia, 6 dias/semana).
+
+3.2. Plano de Manutenção (Proposto)
+Motores — Lubrificação — Trimestral — Mecânico
+Motores — Medição de corrente — Trimestral — Electricista
+Motores — Medição de isolamento — Anual — Electricista
+VFDs — Limpeza — Semestral — Electricista
+VFDs — Verificação de ventoinhas — Semestral — Electricista
+Quadros — Inspecção visual — Mensal — Electricista
+Quadros — Limpeza, aperto de terminais — Semestral — Electricista
+Contactores — Inspecção de contactos — Semestral — Electricista
+DRs — Teste de disparo — Mensal — Electricista
+
+3.3. Orçamento
+Mão-de-obra: 4 técnicos × 20h/mês × 5.000 AOA/h = 400.000 AOA/mês.
+Peças e materiais: 100.000 AOA/mês.
+Total: 500.000 AOA/mês (6.000.000 AOA/ano).
+
+3.4. Benefícios Esperados
+Redução de avarias: 50%. Aumento da disponibilidade: 20%. Poupança anual: 4 milhões AOA (em paragens e reparações).
+
+4. ELEMENTO VISUAL OBRIGATÓRIO — Diagrama SVG: Plano de Manutenção – Fábrica de Alimentos
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Plano de Manutenção – Fábrica de Alimentos</text>
+  <rect x="50" y="60" width="150" height="80" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="5"/>
+  <text x="125" y="85" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Motores</text>
+  <text x="125" y="105" text-anchor="middle" fill="white" font-size="8">Lubrificação (Trimestral)</text>
+  <text x="125" y="120" text-anchor="middle" fill="white" font-size="8">Megger (Anual)</text>
+  <rect x="250" y="60" width="150" height="80" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="5"/>
+  <text x="325" y="85" text-anchor="middle" fill="white" font-size="10" font-weight="bold">VFDs</text>
+  <text x="325" y="105" text-anchor="middle" fill="white" font-size="8">Limpeza (Semestral)</text>
+  <text x="325" y="120" text-anchor="middle" fill="white" font-size="8">Ventoinhas (Semestral)</text>
+  <rect x="450" y="60" width="150" height="80" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="5"/>
+  <text x="525" y="85" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Quadros</text>
+  <text x="525" y="105" text-anchor="middle" fill="white" font-size="8">Inspecção (Mensal)</text>
+  <text x="525" y="120" text-anchor="middle" fill="white" font-size="8">Aperto (Semestral)</text>
+  <rect x="150" y="200" width="150" height="80" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="225" y="225" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Contactores</text>
+  <text x="225" y="245" text-anchor="middle" fill="white" font-size="8">Inspecção (Semestral)</text>
+  <text x="225" y="260" text-anchor="middle" fill="white" font-size="8">Limpeza (Semestral)</text>
+  <rect x="350" y="200" width="150" height="80" fill="#6c6c6c" stroke="#4a4a4a" stroke-width="2" rx="5"/>
+  <text x="425" y="225" text-anchor="middle" fill="white" font-size="10" font-weight="bold">DRs</text>
+  <text x="425" y="245" text-anchor="middle" fill="white" font-size="8">Teste (Mensal)</text>
+  <text x="50" y="360" font-size="9" fill="#333">Plano de manutenção preventiva para fábrica de alimentos.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Objectivo: reduzir avarias em 50%.</text>
+</svg>
+
+5. PROCEDIMENTO PRÁTICO (Sumário)
+Identificar os equipamentos e as tarefas de manutenção.
+Definir a periodicidade de cada tarefa.
+Atribuir responsabilidades aos técnicos.
+Calcular o orçamento (mão-de-obra e materiais).
+Apresentar o plano à direcção da fábrica.
+
+6. ERRO COMUM DE INSTALAÇÃO E SUA CONSEQUÊNCIA REAL
+Caso Real (Luanda, 2024): O plano de manutenção foi aprovado, mas não foi alocado orçamento suficiente. A manutenção não foi realizada, e as avarias continuaram.
+Como evitar: Incluir o orçamento de manutenção no plano anual da fábrica.
+
+7. NORMAS E REFERÊNCIAS REGULATÓRIAS APLICÁVEIS
+ISO 9001: Gestão da manutenção.
+RTIEBT – Parte 6: Ensaios e verificações.
+
+8. PERGUNTA DE VERIFICAÇÃO DE RACIOCÍNIO
+Cenário: O plano de manutenção da fábrica de alimentos foi implementado.
+a) Como medir a eficácia do plano?
+b) O que fazer se as avarias continuarem?
+c) Qual a importância do registo de intervenções?
+d) Como justificar o investimento em manutenção preventiva?

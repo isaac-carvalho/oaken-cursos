@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oaken Cursos — Formação técnica profissional</title>
+<meta name="description" content="Catálogo de cursos técnico-profissionalizantes Oaken, com exame por módulo e certificado verificável.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="logo" href="index.html">
+    <span class="logo-name">OAKEN</span>
+    <span class="logo-sub">CURSOS<br>FORMAÇÃO TÉCNICA</span>
+  </a>
+  <div class="nav-links">
+    <a href="#catalogo" class="active">Catálogo</a>
+  </div>
+</nav>
+
+<header class="banner" id="banner" style="background-image:url('oil/img/hero-plataforma-offshore.jpg')">
+  <div class="banner-inner">
+    <span class="banner-badge" id="bannerBadge">Offshore</span>
+    <h1 id="bannerTitle">Oaken Oil</h1>
+    <div class="banner-tagline" id="bannerTagline">Técnico de Segurança e Operações Offshore</div>
+    <p class="banner-desc" id="bannerDesc">Formação técnico-profissionalizante completa para quem quer trabalhar em plataformas offshore: segurança, sobrevivência no mar, procedimentos de emergência e operações da indústria petrolífera.</p>
+    <div class="banner-stats" id="bannerStats"></div>
+    <div class="banner-actions">
+      <a class="btn-hero primary" id="bannerCta" href="oil/index.html">▶ Começar curso</a>
+      <a class="btn-hero ghost" href="#catalogo">Ver catálogo</a>
+    </div>
+  </div>
+</header>
+
+<main class="catalog" id="catalogo">
+  <div class="catalog-row">
+    <h2 class="row-title">Cursos disponíveis</h2>
+    <div class="row-track" id="trackAvailable"></div>
+  </div>
+  <div class="catalog-row">
+    <h2 class="row-title">Em preparação</h2>
+    <div class="row-track" id="trackSoon"></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="foot-brand">OAKEN CURSOS</div>
+  <div class="foot-sub">Centro de Formação Técnica Profissional · Luanda, Angola</div>
+</footer>
+
+<script src="courses.js"></script>
+<script>
+function fmtStats(s) {
+  return [
+    { v: s.modules, l: 'Módulos' },
+    { v: s.lessons, l: 'Aulas' },
+    { v: s.hours + 'h', l: 'Conteúdo' },
+    { v: s.questions, l: 'Questões' },
+  ];
+}
+
+function renderBanner(course) {
+  document.getElementById('bannerBadge').textContent = course.badge;
+  document.getElementById('bannerTitle').textContent = course.title;
+  document.getElementById('bannerTagline').textContent = course.tagline;
+  document.getElementById('bannerDesc').textContent = course.description;
+  document.getElementById('bannerCta').href = course.url;
+  document.getElementById('banner').style.backgroundImage = `url('${course.backdrop}')`;
+
+  const statsEl = document.getElementById('bannerStats');
+  statsEl.innerHTML = fmtStats(course.stats).map(st => `
+    <div><div class="banner-stat-val">${st.v}</div><div class="banner-stat-lbl">${st.l}</div></div>
+  `).join('');
+}
+
+function courseCard(course) {
+  return `
+    <a class="course-card" href="${course.url}">
+      <img class="course-card-img" src="${course.poster}" alt="${course.title}">
+      <div class="course-card-body">
+        <span class="course-card-badge">${course.badge}</span>
+        <h3>${course.title}</h3>
+        <p>${course.tagline}</p>
+        <div class="course-card-meta">
+          <span>${course.stats.modules} módulos</span>
+          <span>${course.stats.hours}h</span>
+        </div>
+      </div>
+    </a>
+  `;
+}
+
+function soonCard(name) {
+  return `
+    <div class="course-card card-soon">
+      <div class="course-card-img" style="display:flex;align-items:center;justify-content:center;">
+        <span style="font-size:32px;">🎓</span>
+      </div>
+      <div class="course-card-body">
+        <span class="soon-tag">Em breve</span>
+        <h3>${name}</h3>
+      </div>
+    </div>
+  `;
+}
+
+const featured = COURSES.find(c => c.featured) || COURSES[0];
+if (featured) renderBanner(featured);
+
+document.getElementById('trackAvailable').innerHTML = COURSES.map(courseCard).join('');
+document.getElementById('trackSoon').innerHTML = soonCard('Próximo curso');
+</script>
+</body>
+</html>
