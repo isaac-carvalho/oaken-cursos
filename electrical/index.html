@@ -427,6 +427,9 @@ const SVG_CURVAS = `<svg viewBox="0 0 660 250" xmlns="http://www.w3.org/2000/svg
 
 const SVG_REDE = `<svg viewBox="0 0 660 250" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="20" width="120" height="55" rx="10" fill="#0B1F3A"/><text x="70" y="44" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">PRODUÇÃO</text><text x="70" y="61" text-anchor="middle" font-size="10" fill="#FF6B00">Capanda · Laúca</text><line x1="130" y1="47" x2="168" y2="47" stroke="#64748B" stroke-width="2"/><polygon points="164,42 174,47 164,52" fill="#64748B"/><rect x="176" y="20" width="120" height="55" rx="10" fill="#1a365d"/><text x="236" y="44" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">RNT-EP</text><text x="236" y="61" text-anchor="middle" font-size="10" fill="#FF6B00">60–400 kV</text><line x1="296" y1="47" x2="334" y2="47" stroke="#64748B" stroke-width="2"/><polygon points="330,42 340,47 330,52" fill="#64748B"/><rect x="342" y="20" width="120" height="55" rx="10" fill="#FF6B00"/><text x="402" y="44" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">REDE MT</text><text x="402" y="61" text-anchor="middle" font-size="10" fill="#fff">15 / 30 kV</text><line x1="462" y1="47" x2="500" y2="47" stroke="#64748B" stroke-width="2"/><polygon points="496,42 506,47 496,52" fill="#64748B"/><rect x="508" y="20" width="140" height="55" rx="10" fill="#00A3A1"/><text x="578" y="44" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">POSTO TRANSF.</text><text x="578" y="61" text-anchor="middle" font-size="10" fill="#fff">MT → 220/380 V</text><line x1="578" y1="75" x2="578" y2="105" stroke="#64748B" stroke-width="2"/><polygon points="573,101 578,111 583,101" fill="#64748B"/><rect x="180" y="113" width="400" height="52" rx="10" fill="#16a34a"/><text x="380" y="137" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">REDE DE BAIXA TENSÃO — ENDE</text><text x="380" y="155" text-anchor="middle" font-size="11" fill="rgba(255,255,255,.9)">220 V fase-neutro · 380 V entre fases · 50 Hz</text><line x1="380" y1="165" x2="380" y2="190" stroke="#64748B" stroke-width="2"/><rect x="60" y="195" width="150" height="46" rx="8" fill="#f0f4f8" stroke="#0B1F3A" stroke-width="2"/><text x="135" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="#0B1F3A">RESIDENCIAL</text><text x="135" y="231" text-anchor="middle" font-size="10" fill="#FF6B00">220 V monofásico</text><rect x="255" y="195" width="150" height="46" rx="8" fill="#f0f4f8" stroke="#0B1F3A" stroke-width="2"/><text x="330" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="#0B1F3A">COMERCIAL</text><text x="330" y="231" text-anchor="middle" font-size="10" fill="#FF6B00">220 / 380 V</text><rect x="450" y="195" width="150" height="46" rx="8" fill="#f0f4f8" stroke="#0B1F3A" stroke-width="2"/><text x="525" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="#0B1F3A">INDUSTRIAL</text><text x="525" y="231" text-anchor="middle" font-size="10" fill="#FF6B00">380 V trifásico</text><line x1="380" y1="190" x2="135" y2="195" stroke="#cbd5e1" stroke-width="1.5"/><line x1="380" y1="190" x2="330" y2="195" stroke="#cbd5e1" stroke-width="1.5"/><line x1="380" y1="190" x2="525" y2="195" stroke="#cbd5e1" stroke-width="1.5"/></svg>`;
 
+/* Gerador compacto para aulas de conteúdo padrão */
+const A = (t,sw,blocks,quiz) => ({t,sw,html:blocks.join('')+(quiz||'')});
+
 /* ═══════════════ MÓDULOS 1 A 6 — FASE 1: FUNDAMENTOS E RESIDENCIAL ═══════════════ */
 
 const M1 = {n:1,fase:1,soft:'EWS',img:IMG.quadro,
@@ -533,7 +536,7 @@ OL(['Somar as resistências em série dentro de cada grupo',
 'Calcular a corrente total (I=V/R_eq)',
 'Desfazer a redução para encontrar correntes e tensões em cada parte']))+
 P('<strong>Exemplo:</strong> R1=10Ω em série com (R2=20Ω ‖ R3=30Ω) em série com R4=5Ω, a 220V. R_p=(20×30)/(20+30)=12Ω → R_total=10+12+5=27Ω → I_total=220/27=<strong>8,15A</strong>. V1=81,5V, V_p=97,8V, V4=40,75V. Em R_p: I2=4,89A, I3=3,26A.')+
-IB('<strong>Bobinas em paralelo, em série com contacto defeituoso:</strong> 3 bobinas de 100Ω em paralelo (R=33,33Ω) em série com contacto de 20Ω → R_total=53,33Ω → I=4,125A → tensão nas bobinas=137,5V, insuficiente para accionar contactores (exigem ≥85% da nominal, ou seja ≥187V).'))+
+IB('<strong>Bobinas em paralelo, em série com contacto defeituoso:</strong> 3 bobinas de 100Ω em paralelo (R=33,33Ω) em série com contacto de 20Ω → R_total=53,33Ω → I=4,125A → tensão nas bobinas=137,5V, insuficiente para accionar contactores (exigem ≥85% da nominal, ou seja ≥187V).')+
 WB('<strong>Caso real (Lubango, 2023):</strong> um no-break alimentava cargas com cosφ diferentes através de um circuito misto; o cabo de 4mm² (50m) era insuficiente para os 30A resultantes, com queda de 8V (3,6%) que colocava o no-break em modo de bateria frequentemente. <strong>Como evitar:</strong> calcular a corrente em cada secção (série e paralelo) e dimensionar o cabo comum para a corrente total.')+
 IB('<strong>Normas aplicáveis:</strong> RTIEBT — Secção 5.2.3 · IEC 60364-5-52 · Lei n.º 27/15, Art. 22.º (equilíbrio de fases).')],
 QZ('Num circuito misto R1(10Ω) em série com (R2‖R3=12Ω) em série com R4(5Ω), a 220V, qual a corrente total?',['8,15A — I=220/27Ω','22A','4,4A','27A'],0)),
@@ -971,9 +974,6 @@ IB('<strong>No exame e no exame do MINEA:</strong> estes cinco números são per
 QZ('Associe correctamente: qual diploma define os DIREITOS E DEVERES do técnico de instalação eléctrica?',['Lei nº 27/15','Decreto nº 40/04','Decreto nº 39-04','RTIEBT'],2)}
 ]};
 
-/* Gerador compacto para aulas de conteúdo padrão */
-const A = (t,sw,blocks,quiz) => ({t,sw,html:blocks.join('')+(quiz||'')});
-
 const M3 = {n:3,fase:1,soft:'EWS',img:IMG.quadro2,
 titulo:'RTIEBT — Partes 1 e 2',
 desc:'Âmbito e princípios da RTIEBT, definições normalizadas, condições gerais de instalação, graus IP, categorias de tensão, protecção contra choques eléctricos e os esquemas de ligação à terra TT, TN e IT.',
@@ -1170,7 +1170,7 @@ TB(['Nível','Protecção','Corrente de disparo magnético'],[
 ['Quadro geral','Disjuntor 125A curva C','630-1.250A'],
 ['Quadro de piso','Disjuntor 63A curva C','315-630A'],
 ['Circuito de tomadas','Disjuntor 16A curva C','80-160A']])+
-IB('<strong>Verificação:</strong> um curto-circuito de 500A no circuito de tomadas dispara o disjuntor de 16A (500&gt;80) mas não o de 63A (500&lt;315) — selectividade garantida. Os fabricantes (ABB, Siemens, Schneider) fornecem tabelas de selectividade prontas.'))+
+IB('<strong>Verificação:</strong> um curto-circuito de 500A no circuito de tomadas dispara o disjuntor de 16A (500&gt;80) mas não o de 63A (500&lt;315) — selectividade garantida. Os fabricantes (ABB, Siemens, Schneider) fornecem tabelas de selectividade prontas.')+
 WB('<strong>Caso real (Luanda, 2023):</strong> num hospital, DRs de 30mA em motores de bombagem disparavam a cada arranque. A troca por DRs selectivos (tipo S) manteve o problema, pois a sensibilidade continuava 30mA. <strong>Como evitar:</strong> para motores, usar DR "super-imune" (SI) de 30mA para pessoas, ou confiar no relé térmico e ligação à terra muito baixa (&lt;2Ω), reservando o DR de 300mA para protecção contra incêndio.')+
 IB('<strong>Normas aplicáveis:</strong> RTIEBT — Parte 4.2.5 · IEC 60364-4-43 · tabelas de selectividade dos fabricantes.')],
 QZ('Um curto-circuito de 400A ocorre num circuito com disjuntor B (32A, curva C, disparo magnético 160-320A). O disjuntor geral A (100A) tem disparo magnético a partir de 500A. Qual dispara?',['Apenas o disjuntor A','Apenas o disjuntor B — há selectividade','Ambos disparam simultaneamente','Nenhum, porque 400A é insuficiente'],1)),
@@ -1200,7 +1200,7 @@ TB(['Circuito','Secção','Disjuntor','DR'],[
 ['C7 — Bomba de água','2,5 mm²','16A curva D','25A/30mA (tipo SI)'],
 ['C8 — Chuveiro eléctrico','6 mm²','32A curva C','40A/30mA']])+
 P('<strong>Verificação de queda de tensão</strong> (circuito de AC, L=30m, I=9A, 2,5mm²): ΔU=(2×30×9×0,01724)/2,5≈3,72V (1,7% — aceitável, limite 7%).')+
-IB('<strong>Aterramento:</strong> eléctrodo de cobre de 2,4m, R_T≤10Ω, PE ligado a todas as massas, N sempre separado do PE (sistema TT).'))+
+IB('<strong>Aterramento:</strong> eléctrodo de cobre de 2,4m, R_T≤10Ω, PE ligado a todas as massas, N sempre separado do PE (sistema TT).')+
 WB('<strong>Caso real (Luanda, 2023):</strong> uma residência sem circuitos separados agrupou cozinha e AC num único circuito de 4mm²/25A. No Natal, com placa+forno+2 AC ligados simultaneamente, o disjuntor disparou e a casa ficou sem energia. <strong>Como evitar:</strong> circuitos separados para cada carga &gt;2 kW, cada um com o seu disjuntor e DR.')+
 IB('<strong>Normas aplicáveis:</strong> RTIEBT — Partes 1 a 5 · procedimentos de ligação e vistoria da ENDE.')],
 QZ('Uma residência de luxo tem 40 kW de potência instalada (k_s=0,6). Qual a potência de cálculo e a corrente aproximada (220V monofásico)?',['24 kW e 109A','24 kW e 63A','16 kW e 73A','40 kW e 182A'],0)),
@@ -1574,7 +1574,7 @@ TB(['DR','Sensibilidade','Função'],[
 ['Protecção de pessoas','30mA (ou 10mA em locais especiais)','Dispara em &lt;0,3s — todos os circuitos de tomadas, cozinha, banheiros, AC'],
 ['Protecção contra incêndio','300mA selectivo (tipo S)','Retardo 0,1-0,2s — quadro geral, a montante dos DRs de 30mA']])+
 P('<strong>Coordenação:</strong> uma fuga de 50mA dispara só o DR de 30mA (rápido); o de 300mA (retardado) não actua — mesmo para fugas de 200mA. Só fugas ≥300mA sem DR de 30mA a jusante activariam o DR geral.')+
-IB('Complementar: cabos LSZH (baixo fumo), protecção mecânica dos cabos, disjuntores com curvas adequadas, inspecção termográfica periódica.'))+
+IB('Complementar: cabos LSZH (baixo fumo), protecção mecânica dos cabos, disjuntores com curvas adequadas, inspecção termográfica periódica.')+
 WB('<strong>Caso real (Luanda, 2023):</strong> um DR de 300mA instalado num supermercado não era do tipo selectivo (S) — numa fuga de 50mA, disparou junto com o DR de 30mA, deixando o supermercado inteiro sem energia. <strong>Como evitar:</strong> confirmar sempre no catálogo do fabricante que o DR de 300mA é do tipo "S" ou "Selective".')+
 IB('<strong>Normas aplicáveis:</strong> RTIEBT — Parte 4.1.2.3 e 4.1.2.4 · IEC 61008-1.')],
 QZ('Um restaurante tem DR geral 300mA (tipo S) e DR de 30mA na cozinha. Ocorre uma fuga de 200mA na cozinha. O que acontece?',['Ambos disparam simultaneamente','Apenas o DR de 30mA dispara — o de 300mA tem retardo e a fuga é inferior a 300mA','Apenas o DR de 300mA dispara','Nenhum dispara, 200mA é insuficiente'],1)),
