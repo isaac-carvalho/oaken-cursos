@@ -1,0 +1,906 @@
+<!-- ===== AULA 14.1: Introdução aos Comandos Eléctricos: Conceitos e Aplicações Industriais ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Definir o que são comandos eléctricos e a sua importância na automação industrial.</li><li>Distinguir entre circuito de força (potência) e circuito de comando (controlo).</li><li>Identificar os principais componentes de um sistema de comando: contactores, relés, botões, sinalização.</li><li>Compreender a aplicação de comandos eléctricos em Angola (bombagem, ventilação, transporte).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico electricista foi contratado para modernizar o sistema de comando de uma bomba de água num prédio de escritórios no Talatona. O sistema antigo usava um interruptor manual. O técnico instalou um quadro de comando com contactor, relé térmico, botões de marcha/paragem, e um flutuador para controlo automático do nível de água. O novo sistema permite o accionamento automático da bomba, com protecção contra sobrecarga.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. O que são Comandos Eléctricos?</p>
+<p>Os comandos eléctricos são sistemas que permitem controlar o funcionamento de motores, máquinas e equipamentos eléctricos, de forma manual, automática ou remota. São a "inteligência" que liga e desliga os equipamentos, protege-os contra avarias e permite a automação de processos.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Circuito de Força vs. Circuito de Comando</p>
+<p>Um sistema de comando eléctrico divide-se em duas partes principais:</p>
+<p>Circuito de Força (ou Potência): É o circuito que transporta a energia eléctrica para o motor ou carga. Opera em alta corrente (ex: 380V, 50A). Inclui condutores de fase, disjuntores, contactores (parte de potência), e o motor.</p>
+<p>Circuito de Comando (ou Controlo): É o circuito que controla o circuito de força, geralmente em baixa tensão (ex: 24V, 110V, 220V) e baixa corrente (ex: &lt; 5A). Inclui botões (marcha, paragem), relés, contactores (bobina), temporizadores, sensores (flutuadores, pressostatos), e sinalização (lâmpadas).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Principais Componentes de um Sistema de Comando</p>
+<p>Botões (Push Buttons): Para comando manual (marcha, paragem, emergência).</p>
+<p>Contactores: Interruptores electromagnéticos que ligam/desligam o circuito de força.</p>
+<p>Relés: Dispositivos que amplificam sinais de comando.</p>
+<p>Relés Térmicos (Relés de Sobrecarga): Protegem o motor contra sobrecarga.</p>
+<p>Temporizadores: Para atrasos (ex: arranque estrela-triângulo).</p>
+<p>Sensores: Flutuadores (nível), pressostatos (pressão), termostatos (temperatura).</p>
+<p>Sinalização: Lâmpadas piloto (indicam estado: ligado, avaria).</p>
+<p>Fusíveis: Protegem o circuito de comando.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Tipos de Comandos</p>
+<p>Manual: Operado por um humano (botões, chaves).</p>
+<p>Automático: Operado por sensores (ex: flutuador, pressostato).</p>
+<p>Remoto: Operado a distância (ex: através de um PLC ou sistema de supervisão).</p>
+<p>Sequencial: Uma operação segue a outra (ex: arranque estrela-triângulo).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Aplicações em Angola</p>
+<p>Bombagem: Controlo automático de bombas de água (prédios, irrigação) com flutuadores e pressostatos.</p>
+<p>Ventilação: Controlo de ventiladores e exaustores em fábricas e sistemas de climatização.</p>
+<p>Transportadores: Comando de esteiras em fábricas de processamento (pescado, alimentos).</p>
+<p>Compressores: Arranque e paragem automática por pressostato.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Normas e Segurança</p>
+<p>RTIEBT – Parte 4: Protecção de pessoas e equipamentos.</p>
+<p>IEC 60204-1: Segurança de máquinas – Equipamento eléctrico.</p>
+<p>Decreto n.º 40/04: Exigências de licenciamento para instalações com comandos.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Circuito de Força vs. Circuito de Comando</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Circuito de Força vs. Circuito de Comando</text>
+
+  <!-- Circuito de Força -->
+  <rect x="50" y="60" width="250" height="250" fill="white" stroke="#d9534f" stroke-width="2" rx="5"/>
+  <text x="175" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#d9534f">Circuito de Força</text>
+
+  <!-- Fonte 380V -->
+  <rect x="80" y="110" width="80" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="120" y="135" text-anchor="middle" fill="white" font-size="9">380V</text>
+
+  <!-- Contactor (força) -->
+  <rect x="190" y="110" width="80" height="40" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="230" y="135" text-anchor="middle" fill="white" font-size="9">Contactor</text>
+
+  <!-- Motor -->
+  <circle cx="175" cy="220" r="25" fill="#5cb85c" stroke="#4cae4c" stroke-width="2"/>
+  <text x="175" y="220" text-anchor="middle" fill="white" font-size="12" font-weight="bold">M</text>
+
+  <!-- Linhas de força -->
+  <line x1="160" y1="130" x2="190" y2="130" stroke="#333" stroke-width="2"/>
+  <line x1="230" y1="150" x2="175" y2="195" stroke="#333" stroke-width="2"/>
+
+  <!-- Circuito de Comando -->
+  <rect x="350" y="60" width="250" height="250" fill="white" stroke="#5bc0de" stroke-width="2" rx="5"/>
+  <text x="475" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#5bc0de">Circuito de Comando</text>
+
+  <!-- Fonte 220V -->
+  <rect x="380" y="110" width="80" height="40" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="420" y="135" text-anchor="middle" fill="white" font-size="9">220V</text>
+
+  <!-- Botões -->
+  <rect x="490" y="110" width="80" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="3"/>
+  <text x="530" y="130" text-anchor="middle" fill="white" font-size="8">Botões</text>
+
+  <!-- Bobina do contactor -->
+  <rect x="490" y="160" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="530" y="180" text-anchor="middle" fill="white" font-size="8">Bobina</text>
+
+  <!-- Sinalização -->
+  <rect x="490" y="210" width="80" height="30" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="530" y="230" text-anchor="middle" fill="white" font-size="8">Sinalização</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">Circuito de Força: alta corrente, alimenta o motor.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Circuito de Comando: baixa corrente, controla o motor.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar a Aplicação</h4><p>Bomba, ventilador, compressor, etc.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Definir os Modos de Comando</h4><p>Manual, automático, remoto.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Seleccionar os Componentes</h4><p>Contactores, relés, sensores, botões.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Desenhar o Esquema de Comando</h4><p>Com base na lógica de funcionamento.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num sistema de bombagem, o técnico não instalou um circuito de comando com intertravamento. A bomba ligava e desligava constantemente, causando desgaste prematuro.</p><div class="hi">Como evitar: Utilizar um flutuador com histerese (diferença entre ligar e desligar) para evitar ciclos curtos.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4: Protecção de pessoas.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60204</div><blockquote>1: Segurança de máquinas.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a projectar o comando de uma bomba de água.</p><ol type="a"><li>Que componentes são necessários no circuito de comando?</li><li>Qual a diferença entre circuito de força e circuito de comando?</li><li>Para que serve um relé térmico?</li><li>O que é um comando automático?</li></ol></div>
+<!-- ===== FIM AULA 14.1 ===== -->
+
+<!-- ===== AULA 14.2: Leitura de Esquemas de Comando e Força: Símbolos e Normas ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Identificar os símbolos normalizados (IEC) para componentes de comando e força.</li><li>Ler e interpretar esquemas de comando e força.</li><li>Distinguir entre diagramas de comando e diagramas de força.</li><li>Aplicar a leitura de esquemas na montagem e manutenção de quadros.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico electricista recebeu um esquema de comando de um sistema de bombagem para um prédio. O esquema incluía contactores, relés térmicos, botões de marcha/paragem, e um flutuador. O técnico leu o esquema, identificou todos os componentes, e montou o quadro de comando.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Símbolos Normalizados (IEC 60617)</p>
+<p>Os esquemas eléctricos utilizam símbolos normalizados para representar os componentes. Alguns dos mais comuns:</p>
+<p>Contactor (bobina): Rectângulo com uma linha diagonal.</p>
+<p>Contactor (contacto NA): Duas linhas paralelas (aberto).</p>
+<p>Contactor (contacto NF): Duas linhas paralelas com uma barra (fechado).</p>
+<p>Botão de marcha (NA): Botão com duas linhas.</p>
+<p>Botão de paragem (NF): Botão com duas linhas e uma barra.</p>
+<p>Relé térmico: Rectângulo com uma linha ondulada.</p>
+<p>Lâmpada piloto: Círculo com uma cruz.</p>
+<p>Temporizador: Rectângulo com a letra "T".</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Estrutura de um Esquema de Comando</p>
+<p>Um esquema de comando típico inclui:</p>
+<p>Alimentação do circuito de comando: Fase e neutro (220V ou 24V).</p>
+<p>Botão de paragem (NF): Em série com o circuito.</p>
+<p>Botão de marcha (NA): Em paralelo com o contacto de selo.</p>
+<p>Contacto de selo (do contactor): Mantém o circuito fechado após soltar o botão.</p>
+<p>Bobina do contactor: Acciona o contactor.</p>
+<p>Relé térmico (contacto NF): Protege contra sobrecarga.</p>
+<p>Sinalização: Lâmpadas para indicar estado (ligado, avaria).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Exemplo de Esquema de Comando (Arranque Directo)</p>
+<p>text</p>
+<p>Circuito de Comando (220V):</p>
+<p>Fase → Botão Paragem (NF) → Botão Marcha (NA) → Contacto Selo (NA) → Bobina Contactor → Relé Térmico (NF) → Neutro</p>
+<p>Circuito de Força (380V):</p>
+<p>Fase L1 → Contactor (força) → Relé Térmico (força) → Motor</p>
+<p>Fase L2 → Contactor (força) → Relé Térmico (força) → Motor</p>
+<p>Fase L3 → Contactor (força) → Relé Térmico (força) → Motor</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Diagramas vs. Esquemas</p>
+<p>Diagrama unifilar: Representação simplificada, uma linha para cada fase.</p>
+<p>Esquema multifilar: Mostra todos os condutores e ligações detalhadas.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Normas de Identificação</p>
+<p>Contactores: KM1, KM2, KM3.</p>
+<p>Relés: K1, K2.</p>
+<p>Botões: S1 (marcha), S2 (paragem).</p>
+<p>Lâmpadas: H1, H2.</p>
+<p>Temporizadores: KT1.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Símbolos de Comando (IEC)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Símbolos de Comando (IEC 60617)</text>
+
+  <!-- Contactor (bobina) -->
+  <rect x="50" y="60" width="80" height="40" fill="white" stroke="#333" stroke-width="2" rx="3"/>
+  <line x1="90" y1="60" x2="90" y2="100" stroke="#333" stroke-width="2"/>
+  <text x="90" y="120" text-anchor="middle" font-size="8" fill="#333">Bobina</text>
+
+  <!-- Contactor (NA) -->
+  <line x1="200" y1="70" x2="230" y2="70" stroke="#333" stroke-width="2"/>
+  <line x1="200" y1="90" x2="230" y2="90" stroke="#333" stroke-width="2"/>
+  <circle cx="200" cy="80" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="215" y="120" text-anchor="middle" font-size="8" fill="#333">NA</text>
+
+  <!-- Contactor (NF) -->
+  <line x1="330" y1="70" x2="360" y2="70" stroke="#333" stroke-width="2"/>
+  <line x1="330" y1="90" x2="360" y2="90" stroke="#333" stroke-width="2"/>
+  <circle cx="330" cy="80" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="330" y1="80" x2="345" y2="80" stroke="#333" stroke-width="2"/>
+  <text x="345" y="120" text-anchor="middle" font-size="8" fill="#333">NF</text>
+
+  <!-- Botão Marcha (NA) -->
+  <circle cx="120" cy="200" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="105" y1="200" x2="135" y2="200" stroke="#333" stroke-width="2"/>
+  <text x="120" y="235" text-anchor="middle" font-size="8" fill="#333">Marcha</text>
+
+  <!-- Botão Paragem (NF) -->
+  <circle cx="250" cy="200" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="235" y1="200" x2="265" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="245" y1="190" x2="255" y2="210" stroke="#333" stroke-width="2"/>
+  <text x="250" y="235" text-anchor="middle" font-size="8" fill="#333">Paragem</text>
+
+  <!-- Relé Térmico -->
+  <rect x="380" y="180" width="60" height="40" fill="white" stroke="#333" stroke-width="2" rx="3"/>
+  <path d="M 390 195 L 410 185 L 420 205 L 430 195" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="410" y="235" text-anchor="middle" font-size="8" fill="#333">Relé T.</text>
+
+  <!-- Lâmpada -->
+  <circle cx="130" cy="320" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="130" y1="305" x2="130" y2="335" stroke="#333" stroke-width="2"/>
+  <text x="130" y="355" text-anchor="middle" font-size="8" fill="#333">Lâmpada</text>
+
+  <!-- Temporizador -->
+  <rect x="260" y="305" width="60" height="30" fill="white" stroke="#333" stroke-width="2" rx="3"/>
+  <text x="290" y="325" text-anchor="middle" font-size="10" font-weight="bold">T</text>
+  <text x="290" y="355" text-anchor="middle" font-size="8" fill="#333">Temporizador</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar os Símbolos</h4><p>Reconhecer cada símbolo no esquema.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Seguir o Circuito de Comando</h4><p>Acompanhar a sequência: alimentação → botão paragem → botão marcha → selo → bobina → relé térmico → neutro.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Seguir o Circuito de Força</h4><p>Identificar as fases, o contactor, o relé térmico e o motor.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Interpretar a Lógica</h4><p>Compreender a função de cada componente.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico confundiu o símbolo de NA com NF num esquema. Ligou o botão de paragem como NA, e o motor não desligava.</p><div class="hi">Como evitar: Estudar os símbolos e verificar a lógica do circuito antes de montar.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60617</div><blockquote>Símbolos gráficos.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60204</div><blockquote>1: Diagramas de comando.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um esquema de comando tem um botão de marcha (NA), um botão de paragem (NF), e um contactor com selo.</p><ol type="a"><li>O que acontece quando o botão de marcha é pressionado?</li><li>O que acontece quando o botão de paragem é pressionado?</li><li>Para que serve o contacto de selo?</li><li>O que acontece se o relé térmico disparar?</li></ol></div>
+<!-- ===== FIM AULA 14.2 ===== -->
+
+<!-- ===== AULA 14.3: Contactores: Funcionamento, Tipos e Dimensionamento ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever o funcionamento de um contactor (electroíman, bobina, contactos).</li><li>Distinguir os tipos de contactores (AC-1, AC-3, AC-4) e as suas aplicações.</li><li>Dimensionar um contactor com base na corrente do motor e na categoria de emprego.</li><li>Seleccionar a bobina do contactor (tensão e frequência).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico dimensionou um contactor para um motor de 30 kW, 380V, In = 56A. Escolheu um contactor AC-3 de 65A, com bobina de 220V. O contactor foi instalado num quadro de comando e está a funcionar correctamente.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. O que é um Contactor?</p>
+<p>Um contactor é um interruptor electromagnético que permite ligar e desligar um circuito eléctrico (geralmente de força) a partir de um sinal de comando de baixa potência. É composto por:</p>
+<p>Bobina (electroíman): Quando energizada, gera um campo magnético.</p>
+<p>Núcleo fixo e móvel: O campo magnético atrai o núcleo móvel.</p>
+<p>Contactos de potência: Ligam/desligam o circuito de força (3 pólos para trifásico).</p>
+<p>Contactos auxiliares: NA e NF, usados no circuito de comando (selo, sinalização).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Funcionamento</p>
+<p>Bobina desenergizada: Os contactos de potência estão abertos (circuito desligado).</p>
+<p>Bobina energizada: O núcleo móvel é atraído, fechando os contactos de potência (circuito ligado). Os contactos auxiliares também comutam.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Categorias de Emprego (IEC 60947-4-1)</p>
+<p>As categorias definem o tipo de carga que o contactor pode comutar:</p>
+<p>AC-1: Cargas resistivas (aquecedores, iluminação incandescente).</p>
+<p>AC-2: Motores com rotor bobinado (arranque e paragem).</p>
+<p>AC-3: Motores de gaiola (arranque e paragem em funcionamento normal).</p>
+<p>AC-4: Motores de gaiola (arranque, paragem, inversão, plugging).</p>
+<p>A categoria mais comum para motores é AC-3.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Dimensionamento do Contactor</p>
+<p>Corrente nominal (In): Deve ser ≥ corrente do motor (In_motor) com margem (ex: 1,1 a 1,25 * In).</p>
+<p>Categoria de emprego: AC-3 para a maioria dos motores.</p>
+<p>Tensão da bobina: Deve ser compatível com o circuito de comando (220V, 24V, etc.).</p>
+<p>Tensão dos contactos: 380V.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Exemplo de Dimensionamento</p>
+<p>Dados: Motor 15 kW, 380V, In = 28A.</p>
+<p>Contactor: 32A (AC-3), bobina 220V.</p>
+<p>Contactos auxiliares: 1 NA (selo) e 1 NF (sinalização).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Contactos Auxiliares</p>
+<p>NA (Normalmente Aberto): Fecha quando a bobina é energizada. Usado para selo e sinalização de "ligado".</p>
+<p>NF (Normalmente Fechado): Abre quando a bobina é energizada. Usado para sinalização de "desligado" e intertravamentos.</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Potência Motor (kW)</th>
+      <th>Corrente Motor (A)</th>
+      <th>Contactor AC-3 (A)</th>
+      <th>Observação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5,5</td>
+      <td>11</td>
+      <td>16</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>7,5</td>
+      <td>15</td>
+      <td>20</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>22</td>
+      <td>32</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>28</td>
+      <td>32</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>18,5</td>
+      <td>35</td>
+      <td>40</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>42</td>
+      <td>50</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>56</td>
+      <td>65</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>70</td>
+      <td>80</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>85</td>
+      <td>100</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Calcular a Corrente do Motor (In)</h4><p>Usar os dados da placa.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Escolher a Categoria AC-3</h4><p>Para motores de gaiola.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Dimensionar o Contactor</h4><p>In_contactor ≥ In_motor.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Escolher a Bobina</h4><p>Tensão do circuito de comando (ex: 220V).</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num motor de 30 kW, o técnico usou um contactor AC-1 (carga resistiva) em vez de AC-3. Os contactos do contactor queimaram após alguns dias.</p><div class="hi">Como evitar: Usar sempre a categoria AC-3 para motores.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60947</div><blockquote>4-1: Contactores.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Contactores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um motor de 22 kW, 380V, In = 42A.</p><ol type="a"><li>Que contactor deve ser usado (categoria e corrente nominal)?</li><li>Qual a tensão da bobina (circuito de comando 220V)?</li><li>Quantos contactos auxiliares são necessários?</li><li>O contactor deve ser AC-3 ou AC-1?</li></ol></div>
+<!-- ===== FIM AULA 14.3 ===== -->
+
+<!-- ===== AULA 14.4: Relés Térmicos (Relés de Sobrecarga): Funcionamento e Ajuste ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever o funcionamento de um relé térmico (bimetálico) e a sua curva de disparo.</li><li>Ajustar o relé térmico para a corrente nominal do motor.</li><li>Compreender a classe de disparo (Classe 10, 20, 30) e a sua importância.</li><li>Integrar o relé térmico no circuito de comando (contacto NF).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico ajustou um relé térmico para um motor de 30 kW, In = 56A. Ajustou o relé para 56A (ou 1,05 * In = 59A). Durante uma sobrecarga (65A), o relé térmico disparou após 10 segundos, protegendo o motor.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. O que é um Relé Térmico?</p>
+<p>Um relé térmico (ou relé de sobrecarga) é um dispositivo de protecção que desliga o motor quando a corrente excede um valor ajustado, durante um determinado tempo. É baseado no aquecimento de uma lâmina bimetálica.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Funcionamento</p>
+<p>A corrente do motor passa através de elementos de aquecimento (resistências) no relé.</p>
+<p>O calor gerado aquece uma lâmina bimetálica (dois metais com diferentes coeficientes de dilatação).</p>
+<p>Quando a corrente excede o ajuste, a lâmina curva-se e acciona um contacto NF, que interrompe o circuito de comando.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Ajuste do Relé Térmico</p>
+<p>Ajuste: Deve ser igual à corrente nominal do motor (In) ou ligeiramente superior (1,05 a 1,15 * In).</p>
+<p>Exemplo: In = 56A → ajuste para 56A ou 60A.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Classes de Disparo</p>
+<p>Classe 10: Dispara em &lt; 10 segundos (para correntes de sobrecarga moderadas). A mais comum.</p>
+<p>Classe 20: Dispara em &lt; 20 segundos.</p>
+<p>Classe 30: Dispara em &lt; 30 segundos (para cargas com inércia elevada).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Integração no Circuito de Comando</p>
+<p>O contacto NF do relé térmico é colocado em série com a bobina do contactor. Se o relé disparar, o circuito de comando é interrompido, desligando o motor.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Exemplo de Ajuste</p>
+<p>Dados: Motor 15 kW, 380V, In = 28A.</p>
+<p>Relé térmico: Ajuste = 28A (ou 30A).</p>
+<p>Classe: 10.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Relé Térmico no Circuito de Comando</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Relé Térmico no Circuito de Comando</text>
+
+  <!-- Alimentação -->
+  <rect x="50" y="100" width="80" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="90" y="125" text-anchor="middle" fill="white" font-size="9">220V</text>
+
+  <!-- Botão Paragem -->
+  <circle cx="180" cy="120" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="165" y1="120" x2="195" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="175" y1="110" x2="185" y2="130" stroke="#333" stroke-width="2"/>
+  <text x="180" y="100" text-anchor="middle" font-size="8" fill="#333">Paragem</text>
+
+  <!-- Botão Marcha -->
+  <circle cx="250" cy="120" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="235" y1="120" x2="265" y2="120" stroke="#333" stroke-width="2"/>
+  <text x="250" y="100" text-anchor="middle" font-size="8" fill="#333">Marcha</text>
+
+  <!-- Bobina Contactor -->
+  <rect x="320" y="105" width="60" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="350" y="125" text-anchor="middle" fill="white" font-size="8">Bobina</text>
+
+  <!-- Relé Térmico (NF) -->
+  <circle cx="430" cy="120" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="415" y1="120" x2="445" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="425" y1="110" x2="435" y2="130" stroke="#333" stroke-width="2"/>
+  <text x="430" y="155" text-anchor="middle" font-size="8" fill="#333">Relé T.</text>
+
+  <!-- Neutro -->
+  <rect x="490" y="100" width="80" height="40" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="530" y="125" text-anchor="middle" fill="white" font-size="9">Neutro</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">O relé térmico (NF) interrompe o circuito de comando em caso de sobrecarga.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Ajuste: corrente nominal do motor (In).</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar a Corrente Nominal (In)</h4><p>Usar os dados da placa do motor.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Ajustar o Relé Térmico</h4><p>Girar o selector para a posição correspondente a In (ou 1,05 * In).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Verificar a Classe</h4><p>Escolher Classe 10 para a maioria dos motores.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Testar o Disparo</h4><p>Simular uma sobrecarga (ex: com um amperímetro) e verificar o disparo.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico ajustou o relé térmico para 40A (In = 56A). O motor sobrecarregou com 60A, mas o relé não disparou, e o motor queimou.</p><div class="hi">Como evitar: Ajustar sempre para In_motor (ou 1,05 * In). Nunca ajustar acima de 1,15 * In.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60947</div><blockquote>4-1: Relés térmicos.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4, Secção 4.2: Protecção de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um motor de 22 kW, 380V, In = 42A.</p><ol type="a"><li>Qual o ajuste do relé térmico?</li><li>Qual a classe de disparo recomendada?</li><li>Onde o contacto NF do relé é colocado?</li><li>O que acontece se o relé estiver mal ajustado?</li></ol></div>
+<!-- ===== FIM AULA 14.4 ===== -->
+
+<!-- ===== AULA 14.5: Relés Temporizadores: Funções e Aplicações em Arranques ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever o funcionamento de um relé temporizador (on-delay, off-delay).</li><li>Aplicar temporizadores em arranques estrela-triângulo (Y/Δ).</li><li>Dimensionar o tempo de arranque (3-5 segundos).</li><li>Interpretar os símbolos de temporizadores em esquemas de comando.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico instalou um temporizador (relé de tempo) num arranque estrela-triângulo para um motor de 30 kW. O temporizador foi ajustado para 5 segundos (tempo em estrela). Após 5 segundos, o contactor de estrela abriu e o contactor de triângulo fechou.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. O que é um Relé Temporizador?</p>
+<p>Um relé temporizador (ou temporizador) é um dispositivo que introduz um atraso no circuito de comando. É usado para sequenciar operações (ex: arranque estrela-triângulo).</p>
+<p>On-delay (atraso na ligação): O contacto fecha após um tempo determinado depois de energizado.</p>
+<p>Off-delay (atraso na desligação): O contacto abre após um tempo determinado depois de desenergizado.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Aplicação em Arranque Estrela-Triângulo (Y/Δ)</p>
+<p>Temporizador (KT) ajustado para 3-5 segundos.</p>
+<p>Energizar KT: Junto com o contactor de estrela (KM3).</p>
+<p>Após o tempo: O contacto NA do KT fecha, energizando o contactor de triângulo (KM2) e desenergizando o de estrela (KM3).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Dimensionamento do Tempo</p>
+<p>Tempo típico: 3 a 5 segundos (dependendo da inércia da carga).</p>
+<p>Ajuste: Deve ser suficiente para o motor atingir cerca de 80% da velocidade.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Símbolos do Temporizador</p>
+<p>Bobina: Rectângulo com a letra "T".</p>
+<p>Contacto NA (on-delay): Duas linhas com uma seta.</p>
+<p>Contacto NF (on-delay): Duas linhas com uma seta e uma barra.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Exemplo de Esquema (Y/Δ com Temporizador)</p>
+<p>text</p>
+<p>Circuito de Comando:</p>
+<p>Fase → Botão Paragem → Botão Marcha → Relé Térmico (NF) → Bobina KM1 (linha) → Neutro</p>
+<p>Bobina KM1 → Contacto NA KM1 (selo) → Neutro</p>
+<p>Bobina KM1 → Contacto NA KM1 → Bobina KT (temporizador) → Neutro</p>
+<p>Bobina KM3 (estrela) → Contacto NA KT (NF) → Neutro (KM3 energizado até KT disparar)</p>
+<p>Bobina KM2 (triângulo) → Contacto NA KT (NA) → Neutro (KM2 energizado após KT)</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Temporizador em Arranque Y/Δ</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Temporizador em Arranque Y/Δ</text>
+
+  <!-- Bobina KM1 -->
+  <rect x="50" y="80" width="80" height="40" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="90" y="105" text-anchor="middle" fill="white" font-size="9">KM1</text>
+  <text x="90" y="130" text-anchor="middle" font-size="8" fill="#333">Linha</text>
+
+  <!-- Bobina KT -->
+  <rect x="200" y="80" width="80" height="40" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="240" y="105" text-anchor="middle" fill="white" font-size="9">KT</text>
+  <text x="240" y="130" text-anchor="middle" font-size="8" fill="#333">Tempo</text>
+
+  <!-- Bobina KM3 (estrela) -->
+  <rect x="350" y="80" width="80" height="40" fill="#6c6c6c" stroke="#4a4a4a" stroke-width="2" rx="3"/>
+  <text x="390" y="105" text-anchor="middle" fill="white" font-size="9">KM3</text>
+  <text x="390" y="130" text-anchor="middle" font-size="8" fill="#333">Estrela</text>
+
+  <!-- Bobina KM2 (triângulo) -->
+  <rect x="500" y="80" width="80" height="40" fill="#0072b0" stroke="#005b8c" stroke-width="2" rx="3"/>
+  <text x="540" y="105" text-anchor="middle" fill="white" font-size="9">KM2</text>
+  <text x="540" y="130" text-anchor="middle" font-size="8" fill="#333">Triângulo</text>
+
+  <!-- Contactos -->
+  <line x1="130" y1="100" x2="200" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="280" y1="100" x2="350" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="430" y1="100" x2="500" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Tempo -->
+  <text x="240" y="160" text-anchor="middle" font-size="9" fill="#333">T = 3-5s</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">KT: Temporizador (on-delay).</text>
+  <text x="50" y="375" font-size="9" fill="#333">KM3 (estrela) é energizado no arranque.</text>
+  <text x="50" y="390" font-size="9" fill="#333">Após T, KM2 (triângulo) é energizado e KM3 é desenergizado.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar a Necessidade de Temporização</h4><p>Arranque Y/Δ, sequenciamento.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Escolher o Tipo de Temporizador</h4><p>On-delay (atraso na ligação).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Ajustar o Tempo</h4><p>3-5 segundos (ou conforme a inércia da carga).</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Integrar no Esquema</h4><p>Ligar o temporizador ao contactor de estrela e triângulo.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num arranque Y/Δ, o temporizador foi ajustado para 1 segundo. O motor não atingiu velocidade suficiente em estrela, e a comutação para triângulo causou um pico de corrente.</p><div class="hi">Como evitar: Ajustar o tempo para 3-5 segundos, dependendo da inércia da carga.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60947</div><blockquote>5-1: Relés temporizadores.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4, Secção 4.2: Arranque de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um motor de 45 kW arranca em Y/Δ.</p><ol type="a"><li>Qual a função do temporizador?</li><li>Qual o tempo típico de arranque?</li><li>O que acontece se o tempo for muito curto?</li><li>O que acontece se o temporizador falhar (não comutar)?</li></ol></div>
+<!-- ===== FIM AULA 14.5 ===== -->
+
+<!-- ===== AULA 14.6: Lógica de Comando: Circuito de Selo (Retenção) ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever o funcionamento de um circuito de selo (retenção).</li><li>Implementar um circuito de selo com um contactor (contacto auxiliar NA).</li><li>Compreender a lógica: botão de marcha momentâneo mantém o contactor ligado.</li><li>Aplicar o circuito de selo em comandos de motores.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico instalou um circuito de selo para uma bomba de água. O operador pressiona o botão de marcha (momentâneo), e a bomba continua a funcionar mesmo após soltar o botão. O selo é mantido pelo contacto auxiliar do contactor.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. O que é um Circuito de Selo?</p>
+<p>Um circuito de selo (ou retenção) é um circuito que mantém a bobina de um contactor energizada após a remoção do sinal de comando (ex: soltar o botão de marcha). É usado para que o motor continue a funcionar sem que o operador mantenha o botão pressionado.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Como Funciona?</p>
+<p>Botão de marcha (NA): Quando pressionado, a bobina do contactor é energizada.</p>
+<p>Contacto auxiliar NA do contactor: Fecha e mantém o circuito fechado, mesmo após o botão de marcha ser solto.</p>
+<p>Botão de paragem (NF): Quando pressionado, interrompe o circuito, desenergizando a bobina.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Esquema do Circuito de Selo</p>
+<p>text</p>
+<p>Fase → Botão Paragem (NF) → Botão Marcha (NA) → Bobina Contactor (KM) → Neutro</p>
+<p>↑</p>
+<p>└─ Contacto NA KM (selo) ─────┘</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Aplicações</p>
+<p>Bombas: Mantêm-se ligadas até serem desligadas manualmente.</p>
+<p>Ventiladores: Funcionam continuamente.</p>
+<p>Esteiras: Mantêm-se em movimento.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Variações</p>
+<p>Selo com botão de emergência: Botão de emergência (NF) em série com o circuito.</p>
+<p>Selo com relé auxiliar: Para comandos mais complexos.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Circuito de Selo (Retenção)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Circuito de Selo (Retenção)</text>
+
+  <!-- Alimentação -->
+  <rect x="50" y="100" width="80" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="90" y="125" text-anchor="middle" fill="white" font-size="9">220V</text>
+
+  <!-- Botão Paragem -->
+  <circle cx="180" cy="120" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="165" y1="120" x2="195" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="175" y1="110" x2="185" y2="130" stroke="#333" stroke-width="2"/>
+  <text x="180" y="100" text-anchor="middle" font-size="8" fill="#333">Paragem</text>
+
+  <!-- Botão Marcha -->
+  <circle cx="250" cy="120" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="235" y1="120" x2="265" y2="120" stroke="#333" stroke-width="2"/>
+  <text x="250" y="100" text-anchor="middle" font-size="8" fill="#333">Marcha</text>
+
+  <!-- Bobina KM -->
+  <rect x="320" y="105" width="60" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="350" y="125" text-anchor="middle" fill="white" font-size="8">KM</text>
+
+  <!-- Contacto Selo -->
+  <path d="M 250 150 L 320 150 L 320 135" fill="none" stroke="#5cb85c" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="285" y="165" text-anchor="middle" font-size="8" fill="#5cb85c">Selo (NA)</text>
+
+  <!-- Neutro -->
+  <rect x="430" y="100" width="80" height="40" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="470" y="125" text-anchor="middle" fill="white" font-size="9">Neutro</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">O botão de marcha (NA) fecha o circuito.</text>
+  <text x="50" y="375" font-size="9" fill="#333">O contacto de selo (NA) mantém o circuito fechado.</text>
+  <text x="50" y="390" font-size="9" fill="#333">O botão de paragem (NF) interrompe o circuito.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar os Botões</h4><p>Marcha (NA) e Paragem (NF).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Ligar o Contacto de Selo</h4><p>Contacto auxiliar NA do contactor em paralelo com o botão de marcha.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Testar o Circuito</h4><p>Pressionar marcha → motor liga. Soltar marcha → motor continua ligado. Pressionar paragem → motor desliga.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico não instalou o selo (esqueceu o contacto NA). O motor só funcionava enquanto o botão de marcha estava pressionado.</p><div class="hi">Como evitar: Sempre incluir o contacto de selo (NA) para manter o motor ligado.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Circuitos de comando.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um circuito de comando tem botão de marcha (NA), botão de paragem (NF), e contactor com selo (NA).</p><ol type="a"><li>O que acontece quando o botão de marcha é pressionado?</li><li>O que mantém o motor ligado após soltar o botão?</li><li>O que acontece quando o botão de paragem é pressionado?</li><li>Para que serve o contacto de selo?</li></ol></div>
+<!-- ===== FIM AULA 14.6 ===== -->
+
+<!-- ===== AULA 14.7: Intertravamento: Prevenção de Ligações Simultâneas ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever o conceito de intertravamento (prevenção de ligações simultâneas).</li><li>Implementar intertravamento entre dois contactores (ex: estrela vs. triângulo).</li><li>Utilizar contactos NF para intertravamento.</li><li>Aplicar intertravamento em circuitos de inversão de sentido e Y/Δ.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico instalou um intertravamento entre os contactores de estrela (KM3) e triângulo (KM2) num arranque Y/Δ. O intertravamento impede que ambos os contactores estejam ligados simultaneamente, o que causaria um curto-circuito.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. O que é Intertravamento?</p>
+<p>O intertravamento é uma técnica de segurança que impede que dois ou mais contactores (ou relés) sejam energizados ao mesmo tempo, evitando curto-circuitos e operações incorrectas.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Intertravamento com Contactos NF</p>
+<p>Contacto NF do contactor KM1 em série com a bobina de KM2.</p>
+<p>Contacto NF do contactor KM2 em série com a bobina de KM1.</p>
+<p>Assim, se KM1 estiver ligado, KM2 não pode ligar, e vice-versa.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Aplicações</p>
+<p>Arranque Y/Δ: Impede que KM2 (triângulo) e KM3 (estrela) estejam ligados ao mesmo tempo.</p>
+<p>Inversão de sentido: Impede que os contactores de "avançar" e "recuar" estejam ligados simultaneamente.</p>
+<p>Comando de duas velocidades: Impede que ambas as velocidades sejam seleccionadas ao mesmo tempo.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Esquema de Intertravamento (Y/Δ)</p>
+<p>text</p>
+<p>Bobina KM2 (triângulo):</p>
+<p>Fase → Contacto NF KM3 → Bobina KM2 → Neutro</p>
+<p>Bobina KM3 (estrela):</p>
+<p>Fase → Contacto NF KM2 → Bobina KM3 → Neutro</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Intertravamento Mecânico vs. Eléctrico</p>
+<p>Eléctrico: Usa contactos NF. É o mais comum.</p>
+<p>Mecânico: Usa uma barreira física entre os contactores (mais seguro, mas mais caro).</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Intertravamento Y/Δ</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Intertravamento – Y/Δ</text>
+
+  <!-- Bobina KM2 (Triângulo) -->
+  <rect x="50" y="80" width="80" height="40" fill="#0072b0" stroke="#005b8c" stroke-width="2" rx="3"/>
+  <text x="90" y="105" text-anchor="middle" fill="white" font-size="9">KM2</text>
+  <text x="90" y="130" text-anchor="middle" font-size="8" fill="#333">Triângulo</text>
+
+  <!-- Contacto NF KM3 -->
+  <circle cx="180" cy="100" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="165" y1="100" x2="195" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="175" y1="90" x2="185" y2="110" stroke="#333" stroke-width="2"/>
+  <text x="180" y="80" text-anchor="middle" font-size="8" fill="#333">NF KM3</text>
+
+  <!-- Linha KM2 -->
+  <line x1="130" y1="100" x2="165" y2="100" stroke="#333" stroke-width="1.5"/>
+  <line x1="195" y1="100" x2="250" y2="100" stroke="#333" stroke-width="1.5"/>
+  <text x="220" y="115" text-anchor="middle" font-size="8" fill="#333">Fase</text>
+
+  <!-- Bobina KM3 (Estrela) -->
+  <rect x="350" y="80" width="80" height="40" fill="#6c6c6c" stroke="#4a4a4a" stroke-width="2" rx="3"/>
+  <text x="390" y="105" text-anchor="middle" fill="white" font-size="9">KM3</text>
+  <text x="390" y="130" text-anchor="middle" font-size="8" fill="#333">Estrela</text>
+
+  <!-- Contacto NF KM2 -->
+  <circle cx="480" cy="100" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="465" y1="100" x2="495" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="475" y1="90" x2="485" y2="110" stroke="#333" stroke-width="2"/>
+  <text x="480" y="80" text-anchor="middle" font-size="8" fill="#333">NF KM2</text>
+
+  <!-- Linha KM3 -->
+  <line x1="430" y1="100" x2="465" y2="100" stroke="#333" stroke-width="1.5"/>
+  <line x1="495" y1="100" x2="550" y2="100" stroke="#333" stroke-width="1.5"/>
+  <text x="520" y="115" text-anchor="middle" font-size="8" fill="#333">Fase</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">KM2 (triângulo) não pode ligar se KM3 (estrela) estiver ligado.</text>
+  <text x="50" y="375" font-size="9" fill="#333">KM3 (estrela) não pode ligar se KM2 (triângulo) estiver ligado.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar os Contactores</h4><p>KM2 e KM3 no arranque Y/Δ.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Adicionar Contactos NF</h4><p>Colocar um contacto NF de KM2 em série com a bobina de KM3.</p>
+<p>Colocar um contacto NF de KM3 em série com a bobina de KM2.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Testar o Intertravamento</h4><p>Verificar que apenas um contactor pode estar ligado de cada vez.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num arranque Y/Δ, o técnico não instalou intertravamento. Os contactores de estrela e triângulo ligaram ao mesmo tempo, causando um curto-circuito.</p><div class="hi">Como evitar: Sempre instalar intertravamento (eléctrico ou mecânico) entre contactores que não podem operar simultaneamente.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Intertravamento.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um arranque Y/Δ tem contactores KM2 (triângulo) e KM3 (estrela).</p><ol type="a"><li>O que acontece se KM2 e KM3 ligarem ao mesmo tempo?</li><li>Como é feito o intertravamento?</li><li>O intertravamento pode ser feito apenas com contactos NF?</li><li>O que é intertravamento mecânico?</li></ol></div>
+<!-- ===== FIM AULA 14.7 ===== -->
+
+<!-- ===== AULA 14.8: Circuitos de Marcha e Paragem: Esquemas Básicos ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Desenhar circuitos de marcha e paragem com botões e contactor.</li><li>Integrar relé térmico, selo e sinalização.</li><li>Compreender a lógica de prioridade (paragem &gt; marcha).</li><li>Aplicar os circuitos em comandos de motores.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico montou um circuito de marcha/paragem para uma bomba de água. O circuito incluía botões de marcha e paragem, contactor com selo, relé térmico, e lâmpadas de sinalização (ligado e avaria).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Circuito Básico de Marcha/Paragem</p>
+<p>O circuito mais simples de comando de um motor consiste em:</p>
+<p>Botão de paragem (NF): Em série, interrompe o circuito.</p>
+<p>Botão de marcha (NA): Em paralelo com o selo.</p>
+<p>Bobina do contactor (KM): Acciona o motor.</p>
+<p>Contacto de selo (NA do KM): Mantém o circuito fechado.</p>
+<p>Relé térmico (NF): Protege contra sobrecarga.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Sinalização</p>
+<p>Lâmpada verde (ligado): Em paralelo com a bobina.</p>
+<p>Lâmpada vermelha (avaria): Em paralelo com o contacto NF do relé térmico.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Prioridade da Paragem</p>
+<p>O botão de paragem (NF) está em série com todo o circuito, garantindo que, ao ser pressionado, o motor desliga imediatamente (prioridade sobre a marcha).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Esquema Completo</p>
+<p>text</p>
+<p>Fase → Relé Térmico (NF) → Botão Paragem (NF) → Botão Marcha (NA) → Bobina KM → Neutro</p>
+<p>↑                    ↑</p>
+<p>└── Contacto Selo (NA) ───┘</p>
+<p>Lâmpada Verde: Em paralelo com Bobina KM.</p>
+<p>Lâmpada Vermelha: Em paralelo com Relé Térmico (NF) + Neutro.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Circuito de Marcha/Paragem Completo</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Circuito de Marcha/Paragem</text>
+
+  <!-- Fase -->
+  <rect x="50" y="80" width="60" height="30" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="80" y="100" text-anchor="middle" fill="white" font-size="8">Fase</text>
+
+  <!-- Relé Térmico -->
+  <circle cx="160" cy="95" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="145" y1="95" x2="175" y2="95" stroke="#333" stroke-width="2"/>
+  <line x1="155" y1="85" x2="165" y2="105" stroke="#333" stroke-width="2"/>
+  <text x="160" y="75" text-anchor="middle" font-size="7" fill="#333">Relé T.</text>
+
+  <!-- Botão Paragem -->
+  <circle cx="230" cy="95" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="215" y1="95" x2="245" y2="95" stroke="#333" stroke-width="2"/>
+  <line x1="225" y1="85" x2="235" y2="105" stroke="#333" stroke-width="2"/>
+  <text x="230" y="75" text-anchor="middle" font-size="7" fill="#333">Paragem</text>
+
+  <!-- Botão Marcha -->
+  <circle cx="300" cy="95" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="285" y1="95" x2="315" y2="95" stroke="#333" stroke-width="2"/>
+  <text x="300" y="75" text-anchor="middle" font-size="7" fill="#333">Marcha</text>
+
+  <!-- Bobina KM -->
+  <rect x="360" y="80" width="60" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="390" y="100" text-anchor="middle" fill="white" font-size="8">KM</text>
+
+  <!-- Neutro -->
+  <rect x="470" y="80" width="60" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="500" y="100" text-anchor="middle" fill="white" font-size="8">Neutro</text>
+
+  <!-- Selo -->
+  <line x1="300" y1="110" x2="390" y2="110" stroke="#5cb85c" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="345" y="125" text-anchor="middle" font-size="8" fill="#5cb85c">Selo (NA)</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">Relé Térmico (NF) e Botão Paragem (NF) em série.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Botão Marcha (NA) e Selo (NA) em paralelo.</text>
+  <text x="50" y="390" font-size="9" fill="#333">Sinalização: Lâmpada verde (ligado), vermelha (avaria).</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Ligar o Circuito de Comando</h4><p>Fase → Relé Térmico → Paragem → Marcha/Selo → Bobina → Neutro.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Adicionar Sinalização</h4><p>Lâmpada verde em paralelo com a bobina. Lâmpada vermelha em paralelo com o relé térmico.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Testar</h4><p>Marcha → motor liga. Paragem → motor desliga. Sobrecarga → relé térmico dispara.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico colocou o botão de paragem após o relé térmico, em vez de antes. O motor não desligava quando o relé térmico disparava.</p><div class="hi">Como evitar: Colocar o relé térmico (NF) em série com o botão de paragem, ambos a montante do botão de marcha.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Circuitos de comando.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um circuito de marcha/paragem tem relé térmico, paragem (NF), marcha (NA), selo, e bobina.</p><ol type="a"><li>O que acontece se o relé térmico disparar?</li><li>O que acontece se o botão de paragem for pressionado?</li><li>Para que serve o selo?</li><li>O que acontece se o botão de marcha for pressionado e solto?</li></ol></div>
+<!-- ===== FIM AULA 14.8 ===== -->
+
+<!-- ===== AULA 14.9: Montagem Prática de um Quadro de Comando Industrial ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Planear a montagem de um quadro de comando (layout, componentes, fiação).</li><li>Montar os componentes (contactores, relés, botões, sinalização) no quadro.</li><li>Realizar as ligações eléctricas (circuito de força e comando).</li><li>Verificar a montagem e testar o funcionamento.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico montou um quadro de comando para uma bomba de água. O quadro incluía contactor, relé térmico, botões de marcha/paragem, sinalização, e bornes de ligação. A montagem foi feita de forma organizada, com canaletas para os cabos.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Planeamento do Quadro</p>
+<p>Dimensões: 400x300x200 mm (ou conforme componentes).</p>
+<p>Componentes: Contactor, relé térmico, botões, lâmpadas, bornes.</p>
+<p>Layout: Dispor os componentes de forma lógica (entrada, saída, comando).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Montagem dos Componentes</p>
+<p>Fixar os componentes: Contactores, relés, bornes, e canaletas.</p>
+<p>Passar os cabos: Organizar os cabos nas canaletas.</p>
+<p>Ligar o circuito de força: Fases → contactor → relé térmico → saída (motor).</p>
+<p>Ligar o circuito de comando: Fase → relé térmico → paragem → marcha/selo → bobina → neutro.</p>
+<p>Ligar a sinalização: Lâmpadas.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Verificação da Montagem</p>
+<p>Continuidade: Verificar as ligações com multímetro.</p>
+<p>Isolamento: Medir a resistência de isolamento (≥ 1 MΩ).</p>
+<p>Teste funcional: Ligar o quadro e testar o motor.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Exemplo de Montagem (Bomba)</p>
+<p>Componente	Posição	Ligação</p>
+<p>Contactor (KM)	Centro	Força (L1, L2, L3) → Saída</p>
+<p>Relé Térmico (F)	Saída do contactor	Em série com o motor</p>
+<p>Botão Paragem (S1)	Painel	Em série com o comando</p>
+<p>Botão Marcha (S2)	Painel	Em paralelo com o selo</p>
+<p>Lâmpada Verde (H1)	Painel	Em paralelo com a bobina</p>
+<p>Lâmpada Vermelha (H2)	Painel	Em paralelo com o relé térmico</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Layout de um Quadro de Comando</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Layout de Quadro de Comando</text>
+
+  <!-- Painel do Quadro -->
+  <rect x="100" y="60" width="450" height="300" fill="white" stroke="#333" stroke-width="2" rx="5"/>
+
+  <!-- Canaletas -->
+  <rect x="120" y="80" width="20" height="260" fill="#e0e0e0" stroke="#ccc" stroke-width="1"/>
+  <rect x="510" y="80" width="20" height="260" fill="#e0e0e0" stroke="#ccc" stroke-width="1"/>
+  <rect x="120" y="300" width="410" height="20" fill="#e0e0e0" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Contactor KM -->
+  <rect x="180" y="100" width="100" height="60" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="5"/>
+  <text x="230" y="130" text-anchor="middle" fill="white" font-size="10" font-weight="bold">KM</text>
+  <text x="230" y="145" text-anchor="middle" fill="white" font-size="8">Contactor</text>
+
+  <!-- Relé Térmico -->
+  <rect x="350" y="100" width="100" height="60" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="5"/>
+  <text x="400" y="130" text-anchor="middle" fill="white" font-size="10" font-weight="bold">F</text>
+  <text x="400" y="145" text-anchor="middle" fill="white" font-size="8">Relé T.</text>
+
+  <!-- Bornes (entrada) -->
+  <rect x="180" y="200" width="100" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="230" y="225" text-anchor="middle" fill="white" font-size="9">Bornes</text>
+
+  <!-- Bornes (saída) -->
+  <rect x="350" y="200" width="100" height="40" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="3"/>
+  <text x="400" y="225" text-anchor="middle" fill="white" font-size="9">Bornes</text>
+
+  <!-- Sinalização -->
+  <rect x="140" y="270" width="60" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="3"/>
+  <text x="170" y="290" text-anchor="middle" fill="white" font-size="8">Verde</text>
+
+  <rect x="220" y="270" width="60" height="30" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="250" y="290" text-anchor="middle" fill="white" font-size="8">Vermelha</text>
+
+  <!-- Botões -->
+  <rect x="340" y="270" width="60" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="3"/>
+  <text x="370" y="290" text-anchor="middle" fill="white" font-size="8">Marcha</text>
+
+  <rect x="420" y="270" width="60" height="30" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="450" y="290" text-anchor="middle" fill="white" font-size="8">Paragem</text>
+
+  <!-- Legendas -->
+  <text x="50" y="400" font-size="9" fill="#333">KM: Contactor, F: Relé Térmico.</text>
+  <text x="50" y="415" font-size="9" fill="#333">Bornes: Entrada (força) e Saída (motor).</text>
+  <text x="50" y="430" font-size="9" fill="#333">Sinalização: Verde (ligado), Vermelha (avaria).</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Planear o Layout</h4><p>Desenhar o layout do quadro no papel.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Montar os Componentes</h4><p>Fixar os componentes e as canaletas.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Fazer as Ligações</h4><p>Ligar o circuito de força e comando.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Verificar e Testar</h4><p>Verificar as ligações, ligar a energia e testar.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico montou um quadro sem canaletas, com cabos soltos. Durante a manutenção, um cabo solto causou um curto-circuito.</p><div class="hi">Como evitar: Usar canaletas para organizar os cabos e evitar contactos acidentais.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.5: Montagem de quadros.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a montar um quadro de comando para um motor.</p><ol type="a"><li>Como devem ser organizados os componentes?</li><li>Para que servem as canaletas?</li><li>O que deve ser verificado após a montagem?</li><li>Que cores devem ser usadas para os cabos (fase, neutro)?</li></ol></div>
+<!-- ===== FIM AULA 14.9 ===== -->
+
+<!-- ===== AULA 14.10: Diagramas de Comando e Força para Arranque Directo e Y/Δ ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Desenhar diagramas de comando e força para arranque directo.</li><li>Desenhar diagramas de comando e força para arranque estrela-triângulo (Y/Δ).</li><li>Comparar os dois tipos de arranque em termos de componentes e lógica.</li><li>Interpretar os diagramas para montagem e manutenção.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico utilizou diagramas de comando e força para montar um quadro de arranque directo para um motor de 7,5 kW e um quadro de arranque Y/Δ para um motor de 30 kW. Os diagramas serviram de guia para a montagem e ligação dos componentes.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Diagrama de Força e Comando – Arranque Directo</p>
+<p>Circuito de Força:</p>
+<p>text</p>
+<p>Fase L1 → Contactor (KM) → Relé Térmico (F) → Motor (U1)</p>
+<p>Fase L2 → Contactor (KM) → Relé Térmico (F) → Motor (V1)</p>
+<p>Fase L3 → Contactor (KM) → Relé Térmico (F) → Motor (W1)</p>
+<p>Circuito de Comando:</p>
+<p>text</p>
+<p>Fase (220V) → Relé Térmico (NF) → Botão Paragem (NF) → Botão Marcha (NA) → Bobina KM → Neutro</p>
+<p>↑</p>
+<p>└── Contacto Selo KM (NA) ─────┘</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Diagrama de Força e Comando – Arranque Y/Δ</p>
+<p>Circuito de Força:</p>
+<p>text</p>
+<p>Fase L1 → Contator KM1 → Relé Térmico (F) → Motor (U1)</p>
+<p>Fase L2 → Contator KM1 → Relé Térmico (F) → Motor (V1)</p>
+<p>Fase L3 → Contator KM1 → Relé Térmico (F) → Motor (W1)</p>
+<p>KM2 (Triângulo): U1-W2, V1-U2, W1-V2</p>
+<p>KM3 (Estrela): U2, V2, W2 → Neutro</p>
+<p>Circuito de Comando (Y/Δ):</p>
+<p>text</p>
+<p>Fase → Relé Térmico (NF) → Botão Paragem (NF) → Botão Marcha (NA) → Bobina KM1 → Neutro</p>
+<p>↑</p>
+<p>└── Contacto Selo KM1 (NA) ─────┘</p>
+<p>Bobina KM1 → Contacto NA KM1 → Bobina KT (Temporizador) → Neutro</p>
+<p>Bobina KM1 → Contacto NA KM1 → Contacto NF KM2 → Bobina KM3 (Estrela) → Neutro</p>
+<p>Bobina KM1 → Contacto NA KM1 → Contacto NA KT → Contacto NF KM3 → Bobina KM2 (Triângulo) → Neutro</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Comparação</p>
+<p>Característica	Arranque Directo	Arranque Y/Δ</p>
+<p>Componentes	1 contactor, 1 relé térmico	3 contactores, 1 relé térmico, 1 temporizador</p>
+<p>Complexidade	Baixa	Média</p>
+<p>Corrente de arranque	Elevada (6-8 In)	Reduzida (2-3 In)</p>
+<p>Aplicação	Motores &lt; 10 kW	Motores &gt; 10 kW</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Comparação entre Arranque Directo e Y/Δ</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Arranque Directo vs. Y/Δ</text>
+
+  <!-- Arranque Directo -->
+  <rect x="50" y="60" width="250" height="300" fill="white" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="175" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#0072b0">Arranque Directo</text>
+
+  <!-- Componentes Directo -->
+  <rect x="100" y="110" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="140" y="130" text-anchor="middle" fill="white" font-size="8">KM1</text>
+  <text x="140" y="150" text-anchor="middle" font-size="8" fill="#333">1 Contactor</text>
+
+  <rect x="200" y="110" width="80" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="240" y="130" text-anchor="middle" fill="white" font-size="8">F1</text>
+  <text x="240" y="150" text-anchor="middle" font-size="8" fill="#333">1 Relé T.</text>
+
+  <text x="175" y="200" text-anchor="middle" font-size="9" fill="#333">Corrente de arranque:</text>
+  <text x="175" y="220" text-anchor="middle" font-size="10" font-weight="bold" fill="#d9534f">6-8 In</text>
+
+  <text x="175" y="260" text-anchor="middle" font-size="9" fill="#333">Aplicação:</text>
+  <text x="175" y="280" text-anchor="middle" font-size="9" fill="#333">Motores ≤ 10 kW</text>
+
+  <!-- Arranque Y/Δ -->
+  <rect x="350" y="60" width="250" height="300" fill="white" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="475" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#0072b0">Arranque Y/Δ</text>
+
+  <!-- Componentes Y/Δ -->
+  <rect x="400" y="110" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="440" y="130" text-anchor="middle" fill="white" font-size="8">KM1</text>
+  <text x="440" y="150" text-anchor="middle" font-size="8" fill="#333">Linha</text>
+
+  <rect x="500" y="110" width="80" height="30" fill="#0072b0" stroke="#005b8c" stroke-width="2" rx="3"/>
+  <text x="540" y="130" text-anchor="middle" fill="white" font-size="8">KM2</text>
+  <text x="540" y="150" text-anchor="middle" font-size="8" fill="#333">Triângulo</text>
+
+  <rect x="400" y="160" width="80" height="30" fill="#6c6c6c" stroke="#4a4a4a" stroke-width="2" rx="3"/>
+  <text x="440" y="180" text-anchor="middle" fill="white" font-size="8">KM3</text>
+  <text x="440" y="200" text-anchor="middle" font-size="8" fill="#333">Estrela</text>
+
+  <rect x="500" y="160" width="80" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="540" y="180" text-anchor="middle" fill="white" font-size="8">KT</text>
+  <text x="540" y="200" text-anchor="middle" font-size="8" fill="#333">Tempo</text>
+
+  <text x="475" y="250" text-anchor="middle" font-size="9" fill="#333">Corrente de arranque:</text>
+  <text x="475" y="270" text-anchor="middle" font-size="10" font-weight="bold" fill="#5cb85c">2-3 In</text>
+
+  <text x="475" y="310" text-anchor="middle" font-size="9" fill="#333">Aplicação:</text>
+  <text x="475" y="330" text-anchor="middle" font-size="9" fill="#333">Motores > 10 kW</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Desenhar o Diagrama de Força</h4><p>Ligar as fases, contactores, relé térmico e motor.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Desenhar o Diagrama de Comando</h4><p>Ligar os botões, contactores auxiliares, temporizador e bobinas.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Verificar a Lógica</h4><p>Simular o funcionamento mentalmente.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Montar o Quadro</h4><p>Com base nos diagramas.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num arranque Y/Δ, o técnico inverteu a ligação do contactor de estrela e triângulo no diagrama de força. O motor arrancou em triângulo, com corrente elevada.</p><div class="hi">Como evitar: Verificar cuidadosamente os diagramas de força e comando antes de montar.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Diagramas de comando.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um motor de 30 kW vai ser arrancado em Y/Δ.</p><ol type="a"><li>Quantos contactores são necessários?</li><li>Qual a função do temporizador?</li><li>O que acontece se o temporizador estiver avariado?</li><li>O que acontece se o intertravamento falhar?</li></ol></div>
+<!-- ===== FIM AULA 14.10 ===== -->
+
+<!-- ===== AULA 14.11: Aplicação Prática: Comando de uma Bomba de Água com Intertravamento ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Aplicar todos os conceitos do módulo a um projecto real: comando de uma bomba de água com intertravamento.</li><li>Dimensionar os componentes (contactores, relés, botões, sinalização).</li><li>Desenhar os diagramas de comando e força.</li><li>Montar o quadro e testar o funcionamento.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico projectou e montou o comando de duas bombas de água para um prédio de 10 andares. O sistema incluía duas bombas (principal e reserva), com intertravamento para que apenas uma bomba funcionasse de cada vez, e comando automático por flutuador.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Dados do Projecto</p>
+<p>Aplicação: Bomba de água (2 bombas, principal + reserva).</p>
+<p>Potência: 15 kW cada.</p>
+<p>Tensão: 380V, trifásico.</p>
+<p>Comando: Manual (botões) e automático (flutuador).</p>
+<p>Intertravamento: Apenas uma bomba pode funcionar de cada vez.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Componentes</p>
+<p>Contactores: KM1 (bomba 1), KM2 (bomba 2) – 32A, AC-3.</p>
+<p>Relés térmicos: F1, F2 – ajuste 28A.</p>
+<p>Botões: Marcha 1, Marcha 2, Paragem geral.</p>
+<p>Flutuador: NA (fecha quando nível baixo).</p>
+<p>Sinalização: Lâmpadas verde (ligado), vermelha (avaria).</p>
+<p>Intertravamento: Contactos NF KM1 e KM2.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Diagrama de Comando (Bomba 1 e 2)</p>
+<p>text</p>
+<p>Circuito de Comando (220V):</p>
+<p>Fase → Paragem Geral (NF) → Flutuador (NA) → Relé Térmico F1 (NF) → Bobina KM1 → Neutro</p>
+<p>↑</p>
+<p>└── Selo KM1 (NA) ─────┘</p>
+<p>Fase → Paragem Geral (NF) → Flutuador (NA) → Relé Térmico F2 (NF) → Bobina KM2 → Neutro</p>
+<p>↑</p>
+<p>└── Selo KM2 (NA) ─────┘</p>
+<p>Intertravamento:</p>
+<p>Bobina KM1 em série com NF KM2.</p>
+<p>Bobina KM2 em série com NF KM1.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Diagrama de Força</p>
+<p>text</p>
+<p>L1, L2, L3 → KM1 → F1 → Motor 1</p>
+<p>L1, L2, L3 → KM2 → F2 → Motor 2</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Montagem e Teste</p>
+<p>Montar o quadro com os componentes.</p>
+<p>Ligar os circuitos conforme os diagramas.</p>
+<p>Testar: Pressionar Marcha 1 → Bomba 1 liga. Tentar ligar Bomba 2 → Não liga (intertravamento). Pressionar Paragem Geral → Ambas desligam.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Comando de Duas Bombas com Intertravamento</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Comando de Duas Bombas (Intertravamento)</text>
+
+  <!-- Bomba 1 -->
+  <rect x="50" y="60" width="250" height="250" fill="white" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="175" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#0072b0">Bomba 1</text>
+
+  <!-- Componentes Bomba 1 -->
+  <rect x="100" y="110" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="140" y="130" text-anchor="middle" fill="white" font-size="8">KM1</text>
+  <rect x="200" y="110" width="80" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="240" y="130" text-anchor="middle" fill="white" font-size="8">F1</text>
+
+  <text x="175" y="180" text-anchor="middle" font-size="9" fill="#333">Marcha 1 / Paragem</text>
+  <text x="175" y="200" text-anchor="middle" font-size="9" fill="#333">Flutuador (automático)</text>
+
+  <!-- Intertravamento -->
+  <text x="175" y="240" text-anchor="middle" font-size="9" fill="#d9534f">NF KM2 em série</text>
+
+  <!-- Bomba 2 -->
+  <rect x="350" y="60" width="250" height="250" fill="white" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="475" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#0072b0">Bomba 2</text>
+
+  <!-- Componentes Bomba 2 -->
+  <rect x="400" y="110" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="440" y="130" text-anchor="middle" fill="white" font-size="8">KM2</text>
+  <rect x="500" y="110" width="80" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="540" y="130" text-anchor="middle" fill="white" font-size="8">F2</text>
+
+  <text x="475" y="180" text-anchor="middle" font-size="9" fill="#333">Marcha 2 / Paragem</text>
+  <text x="475" y="200" text-anchor="middle" font-size="9" fill="#333">Flutuador (automático)</text>
+
+  <!-- Intertravamento -->
+  <text x="475" y="240" text-anchor="middle" font-size="9" fill="#d9534f">NF KM1 em série</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">O intertravamento impede que ambas as bombas liguem ao mesmo tempo.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Flutuador: controlo automático (nível de água).</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><p>Identificar a aplicação: Duas bombas com intertravamento.</p>
+<p>Dimensionar os componentes: Contactores, relés, botões.</p>
+<p>Desenhar os diagramas: Força e comando.</p>
+<p>Montar o quadro: Fixar componentes e fazer ligações.</p>
+<p>Testar: Verificar o funcionamento e o intertravamento.</p></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): No comando de duas bombas, o técnico não instalou o intertravamento. Ambas as bombas ligaram simultaneamente, sobrecarregando a rede.</p><div class="hi">Como evitar: Sempre instalar intertravamento (eléctrico ou mecânico) entre contactores que não podem operar simultaneamente.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Partes 4 e 5: Protecção e dimensionamento.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60204</div><blockquote>1: Segurança de máquinas.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: O sistema de bombagem do exemplo tem duas bombas de 15 kW cada.</p>
+<p>FIM DO MÓDULO 14 – COMANDOS ELÉCTRICOS E DIAGRAMAS</p>
+<p>O Módulo 14 está completo! Com 11 aulas densas, cobrindo todos os aspectos dos comandos eléctricos e diagramas em Angola, com exemplos práticos, elementos visuais e perguntas de verificação.</p>
+<p>Agora, posso avançar para o Módulo 15 — Inversores de Frequência e Soft-Starters. Basta dar o comando.</p>
+<p>Ok</p>
+<p>O usuário confirmou "Ok" e pediu para continuar com o próximo módulo. Devo gerar o Módulo 15 — Inversores de Frequência e Soft-Starters, seguindo a mesma estrutura e padrão de qualidade, com 11 aulas completas. Vou garantir que o conteúdo seja técnico, com exemplos angolanos, cálculos, diagramas e cada aula tenha os 8 itens obrigatórios.</p>
+<p>Perfeito! Vou agora desenvolver o Módulo 15 — Inversores de Frequência e Soft-Starters, seguindo rigorosamente a mesma estrutura, com 11 aulas completas, densas e com exemplos práticos para Angola.</p>
+<p>MÓDULO 15 — INVERSORES DE FREQUÊNCIA E SOFT-STARTERS (COMPLETO)</p>
+<p>Lista de Aulas (15 aulas):</p>
+<p>15.1 — Introdução aos Inversores de Frequência e Soft-Starters em Angola</p>
+<p>15.2 — Princípio de Funcionamento do Inversor de Frequência (VFD)</p>
+<p>15.3 — Componentes de um Inversor de Frequência: Rectificador, Barramento CC, Inversor IGBT</p>
+<p>15.4 — Parametrização Básica de um Inversor de Frequência</p>
+<p>15.5 — Vantagens Energéticas e Mecânicas do VFD face ao Arranque Directo</p>
+<p>15.6 — Soft-Starters: Princípio de Funcionamento e Aplicações</p>
+<p>15.7 — Comparação entre VFD, Soft-Starter e Arranque Directo</p>
+<p>15.8 — Dimensionamento de Inversores e Soft-Starters para Motores</p>
+<p>15.9 — Aplicações Industriais Típicas em Angola: Bombas, Ventiladores, Esteiras</p>
+<p>15.10 — Manutenção e Diagnóstico de Inversores e Soft-Starters</p>
+<p>15.11 — Aplicação Prática: Dimensionamento e Parametrização de um VFD para uma Bomba de Água</p><ol type="a"><li>Para que serve o intertravamento?</li><li>O que acontece se o intertravamento falhar?</li><li>Como é feito o controlo automático (flutuador)?</li><li>O que deve ser verificado após a montagem?</li></ol></div>
+<!-- ===== FIM AULA 14.11 ===== -->

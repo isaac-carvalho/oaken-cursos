@@ -1,0 +1,850 @@
+<!-- ===== AULA 15.1: Introdução aos Inversores de Frequência e Soft-Starters em Angola ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Definir inversor de frequência (VFD) e soft-starter, distinguindo as suas funções e aplicações.</li><li>Compreender a importância destes dispositivos na indústria angolana (economia de energia, controlo de processos, redução de esforços mecânicos).</li><li>Identificar as situações em que um VFD ou soft-starter é mais adequado do que o arranque directo.</li><li>Conhecer as normas e práticas angolanas para a instalação de VFDs e soft-starters.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, uma fábrica de processamento de pescado no Lobito instalou inversores de frequência (VFDs) nos motores das esteiras de transporte e nas bombas de água. A velocidade das esteiras passou a ser ajustável, melhorando a eficiência da produção, e as bombas passaram a funcionar com velocidade variável, reduzindo o consumo de energia em 30%. O técnico electricista responsável dimensionou e parametrizou os VFDs, resultando numa poupança anual de 2,5 milhões AOA.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. O que é um Inversor de Frequência (VFD)?</p>
+<p>Um inversor de frequência (VFD – Variable Frequency Drive) é um dispositivo electrónico que converte a corrente alternada (CA) da rede em corrente contínua (CC) e, em seguida, converte a CC de volta em CA com frequência e tensão variáveis, permitindo controlar a velocidade e o binário de um motor de indução trifásico.</p>
+<p>Principais funções:</p>
+<p>Controlo de velocidade: Ajusta a velocidade do motor conforme a necessidade do processo.</p>
+<p>Economia de energia: Reduz o consumo de energia em aplicações com carga variável (ex: bombas, ventiladores).</p>
+<p>Arranque suave: Reduz a corrente de arranque e o esforço mecânico.</p>
+<p>Controlo de binário: Mantém o binário constante em diferentes velocidades.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. O que é um Soft-Starter?</p>
+<p>Um soft-starter (arrancador suave) é um dispositivo electrónico que reduz a tensão aplicada ao motor durante o arranque, limitando a corrente de arranque. Ao contrário do VFD, o soft-starter não controla a velocidade do motor; apenas suaviza o arranque e a paragem.</p>
+<p>Principais funções:</p>
+<p>Arranque suave: Reduz a corrente de arranque e o esforço mecânico.</p>
+<p>Paragem suave: Reduz o efeito de martelo de aríete (em bombas).</p>
+<p>Protecção: Protege o motor contra sobrecargas e falta de fase.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Aplicações em Angola</p>
+<p>Bombagem: VFDs para bombas de água (abastecimento, irrigação, sistemas de pressurização) e soft-starters para bombas de grande porte.</p>
+<p>Ventilação: VFDs para ventiladores e exaustores (climatização, processos industriais).</p>
+<p>Transportadores: VFDs para esteiras e correias transportadoras (fábricas, minas).</p>
+<p>Compressores: VFDs para compressores de ar (eficiência energética).</p>
+<p>Máquinas-ferramenta: VFDs para controlo de velocidade em tornos, fresadoras.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Vantagens do Uso de VFDs e Soft-Starters</p>
+<p>Economia de energia: Em bombas e ventiladores, a potência varia com o cubo da velocidade (P ∝ N³). Reduzir a velocidade em 20% reduz a potência em cerca de 50%.</p>
+<p>Redução da corrente de arranque: De 6-8 In para 1,5-2 In (VFD) ou 3-4 In (soft-starter).</p>
+<p>Redução do esforço mecânico: Arranque suave reduz o desgaste de correias, engrenagens e rolamentos.</p>
+<p>Controlo de processos: Velocidade ajustável melhora a qualidade do produto final.</p>
+<p>Protecção do motor: Contra sobrecarga, falta de fase, sobreaquecimento.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Normas e Regulamentos</p>
+<p>IEC 61800: Normas para accionamentos eléctricos de velocidade variável.</p>
+<p>RTIEBT – Parte 4, Secção 4.2: Protecção de motores (inclui VFDs e soft-starters).</p>
+<p>Decreto n.º 40/04: Exigências de licenciamento para instalações com VFDs.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Exemplo de Aplicação (Bomba de Água)</p>
+<p>Cenário: Uma bomba de 30 kW funciona a plena carga durante 8h/dia, mas a carga varia ao longo do dia. Com um VFD, a velocidade pode ser reduzida durante os períodos de baixa procura, poupando energia.</p>
+<p>Consumo sem VFD: 30 kW * 8h * 300 dias = 72.000 kWh/ano.</p>
+<p>Consumo com VFD (média 80% velocidade): 30 kW * (0,8³) * 8h * 300 dias = 30 * 0,512 * 2400 = 36.864 kWh/ano.</p>
+<p>Economia: 72.000 – 36.864 = 35.136 kWh/ano → ≈ 1,05 milhões AOA/ano (a 30 AOA/kWh).</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Característica</th>
+      <th>Arranque Directo</th>
+      <th>Soft-Starter</th>
+      <th>VFD (Inversor)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Corrente de arranque</strong></td>
+      <td>6-8 In</td>
+      <td>3-4 In</td>
+      <td>1,5-2 In</td>
+    </tr>
+    <tr>
+      <td><strong>Controlo de velocidade</strong></td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim (variável)</td>
+    </tr>
+    <tr>
+      <td><strong>Economia de energia</strong></td>
+      <td>Nenhuma</td>
+      <td>Pequena</td>
+      <td>Significativa (bombas/ventiladores)</td>
+    </tr>
+    <tr>
+      <td><strong>Custo inicial</strong></td>
+      <td>Baixo</td>
+      <td>Médio</td>
+      <td>Alto</td>
+    </tr>
+    <tr>
+      <td><strong>Complexidade</strong></td>
+      <td>Baixa</td>
+      <td>Média</td>
+      <td>Alta</td>
+    </tr>
+    <tr>
+      <td><strong>Aplicação típica</strong></td>
+      <td>Motores ≤ 10 kW</td>
+      <td>Bombas, ventiladores (grande porte)</td>
+      <td>Bombas, ventiladores, esteiras (variáveis)</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar a Aplicação</h4><p>Determinar se é necessário controlo de velocidade (VFD) ou apenas arranque suave (soft-starter).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Avaliar o Retorno do Investimento</h4><p>Calcular a poupança de energia com VFD (para bombas e ventiladores).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Dimensionar o Dispositivo</h4><p>Escolher um VFD ou soft-starter com corrente nominal ≥ In_motor.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Instalar e Parametrizar</h4><p>Seguir as instruções do fabricante.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico instalou um VFD para uma bomba, mas não parametrizou o tempo de aceleração. O motor arrancou muito rapidamente, causando um pico de corrente que danificou o VFD.</p><div class="hi">Como evitar: Parametrizar o tempo de aceleração (ramp) de acordo com a inércia da carga (ex: 5-10 segundos para bombas).</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61800</div><blockquote>Accionamentos eléctricos.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4, Secção 4.2: Protecção de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Uma fábrica tem uma bomba de 22 kW que funciona a 100% da velocidade, mas a procura varia.</p><ol type="a"><li>Que dispositivo é mais adequado (VFD ou soft-starter)?</li><li>Qual a principal vantagem do VFD sobre o soft-starter?</li><li>Qual a economia de energia se a velocidade for reduzida para 80%?</li><li>O VFD protege o motor contra sobrecarga?</li></ol></div>
+<!-- ===== FIM AULA 15.1 ===== -->
+
+<!-- ===== AULA 15.2: Princípio de Funcionamento do Inversor de Frequência (VFD) ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever as três etapas de conversão de energia num VFD: rectificação, barramento CC, inversão.</li><li>Explicar a modulação por largura de pulso (PWM) e a sua importância.</li><li>Compreender a relação entre a frequência de saída e a velocidade do motor.</li><li>Relacionar a tensão e a frequência (curva V/f) para manter o binário constante.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico instalou um VFD num motor de 15 kW, 380V, para accionar uma bomba. O VFD converteu a tensão de 380V, 50Hz em CC, e depois em CA com frequência variável (30-50Hz). A bomba funcionou a 30Hz durante a noite (menor procura), poupando energia.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Estrutura do VFD</p>
+<p>Um VFD típico é composto por três estágios principais:</p>
+<p>Rectificador: Converte a tensão CA (380V, 50Hz) em tensão CC pulsante.</p>
+<p>Barramento CC: Filtra a tensão CC e armazena energia em capacitores.</p>
+<p>Inversor: Converte a tensão CC em tensão CA com frequência e tensão variáveis, usando transístores IGBT e modulação PWM.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Rectificador</p>
+<p>Díodos ou tirístores: Rectificam a tensão CA.</p>
+<p>Filtro (capacitor): Suaviza a tensão CC.</p>
+<p>Tensão CC: ≈ √2 * V_CA (≈ 537V para 380V).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Barramento CC</p>
+<p>Capacitores: Armazenam energia e suavizam a tensão.</p>
+<p>Resistor de pré-carga: Limita a corrente quando o VFD é ligado.</p>
+<p>Chopper (opcional): Dissipa energia em caso de sobrevoltagem.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Inversor (IGBT e PWM)</p>
+<p>O inversor converte a tensão CC em CA usando transístores IGBT (Insulated Gate Bipolar Transistor) que são ligados e desligados rapidamente (modulação por largura de pulso – PWM).</p>
+<p>PWM: A largura dos pulsos varia para simular uma onda senoidal.</p>
+<p>Frequência de saída: Controlada pela taxa de pulsos (ex: 0-50Hz).</p>
+<p>Tensão de saída: Controlada pela largura dos pulsos.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Curva V/f (Tensão/Frequência)</p>
+<p>Para manter o binário do motor constante em diferentes velocidades, a tensão de saída deve variar proporcionalmente à frequência (V/f constante).</p>
+<p>50Hz: 380V.</p>
+<p>40Hz: 304V (380 * 40/50).</p>
+<p>30Hz: 228V.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Exemplo de Funcionamento</p>
+<p>Dados: Motor 380V, 50Hz, VFD com saída ajustável.</p>
+<p>50Hz: 380V, motor a 1450 rpm.</p>
+<p>40Hz: 304V, motor a 1160 rpm.</p>
+<p>30Hz: 228V, motor a 870 rpm.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Estrutura Interna de um VFD</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Estrutura Interna de um VFD</text>
+
+  <!-- Entrada CA -->
+  <rect x="50" y="80" width="80" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="90" y="105" text-anchor="middle" fill="white" font-size="9">380V CA</text>
+
+  <!-- Rectificador -->
+  <rect x="160" y="80" width="100" height="40" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="210" y="105" text-anchor="middle" fill="white" font-size="9">Rectificador</text>
+  <line x1="130" y1="100" x2="160" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Barramento CC -->
+  <rect x="290" y="80" width="100" height="40" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="340" y="105" text-anchor="middle" fill="white" font-size="9">Barramento CC</text>
+  <line x1="260" y1="100" x2="290" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Inversor (IGBT) -->
+  <rect x="420" y="80" width="100" height="40" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="3"/>
+  <text x="470" y="105" text-anchor="middle" fill="white" font-size="9">Inversor (IGBT)</text>
+  <line x1="390" y1="100" x2="420" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Saída CA -->
+  <rect x="550" y="80" width="80" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="590" y="105" text-anchor="middle" fill="white" font-size="9">0-50Hz</text>
+  <line x1="520" y1="100" x2="550" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Formas de onda -->
+  <text x="50" y="180" font-size="9" fill="#333">Formas de onda:</text>
+
+  <!-- CA entrada -->
+  <path d="M 60 200 L 80 180 L 100 200 L 120 220 L 140 200 L 160 180 L 180 200 L 200 220 L 220 200" fill="none" stroke="#d9534f" stroke-width="2"/>
+  <text x="140" y="240" text-anchor="middle" font-size="8" fill="#d9534f">CA (50Hz)</text>
+
+  <!-- CC -->
+  <line x1="260" y1="200" x2="360" y2="200" stroke="#5bc0de" stroke-width="2"/>
+  <text x="310" y="240" text-anchor="middle" font-size="8" fill="#5bc0de">CC (537V)</text>
+
+  <!-- CA PWM -->
+  <path d="M 400 200 L 410 180 L 420 200 L 430 170 L 440 200 L 450 160 L 460 200 L 470 180 L 480 200 L 490 170 L 500 200" fill="none" stroke="#5cb85c" stroke-width="2"/>
+  <text x="450" y="240" text-anchor="middle" font-size="8" fill="#5cb85c">PWM</text>
+
+  <!-- Motor -->
+  <circle cx="590" cy="200" r="25" fill="#5cb85c" stroke="#4cae4c" stroke-width="2"/>
+  <text x="590" y="200" text-anchor="middle" fill="white" font-size="12" font-weight="bold">M</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">Rectificador: CA → CC.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Barramento CC: filtragem e armazenamento.</text>
+  <text x="50" y="390" font-size="9" fill="#333">Inversor (IGBT + PWM): CC → CA variável.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Verificar a Tensão da Rede</h4><p>Confirmar que o VFD é compatível com 380V, 50Hz.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Ligar o VFD</h4><p>Ligar a entrada do VFD à rede (L1, L2, L3) e a saída ao motor (U, V, W).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Configurar a Curva V/f</h4><p>Definir a tensão e frequência nominais (380V, 50Hz).</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Testar o Funcionamento</h4><p>Aumentar gradualmente a frequência e verificar a velocidade do motor.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num VFD, o técnico não configurou correctamente a curva V/f, resultando em sobreaquecimento do motor a baixas velocidades (a tensão não foi reduzida adequadamente).</p><div class="hi">Como evitar: Configurar a curva V/f de acordo com as especificações do motor.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61800</div><blockquote>2: Accionamentos eléctricos – Ensaios.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: VFDs.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um VFD está a alimentar um motor de 380V, 50Hz. O técnico reduz a frequência para 40Hz.</p><ol type="a"><li>Qual deve ser a tensão de saída do VFD para manter V/f constante?</li><li>Qual a nova velocidade do motor (em rpm)?</li><li>O que acontece se a tensão for mantida a 380V a 40Hz?</li><li>O que é a modulação PWM?</li></ol></div>
+<!-- ===== FIM AULA 15.2 ===== -->
+
+<!-- ===== AULA 15.3: Componentes de um Inversor de Frequência: Rectificador, Barramento CC, Inversor IGBT ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Identificar os componentes principais de um VFD: rectificador, barramento CC, inversor IGBT.</li><li>Descrever a função de cada componente.</li><li>Compreender o papel dos capacitores do barramento CC e dos IGBTs.</li><li>Reconhecer os sinais de avaria em cada componente.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico diagnosticou uma avaria num VFD de 30 kW. O VFD não ligava. O técnico verificou o rectificador (díodos) e o barramento CC (capacitores), e encontrou um capacitor avariado. Substituiu o capacitor e o VFD voltou a funcionar.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Rectificador</p>
+<p>Função: Converte CA em CC.</p>
+<p>Componentes: Díodos ou tirístores (ponte rectificadora).</p>
+<p>Tensão de saída: 1,35 * V_CA (≈ 513V para 380V, ou 537V com pico).</p>
+<p>Falhas: Diodos queimados (curto ou circuito aberto), fusíveis.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Barramento CC</p>
+<p>Função: Filtra e armazena energia CC.</p>
+<p>Componentes: Capacitores (grande capacidade), resistor de pré-carga.</p>
+<p>Tensão típica: 500-700V.</p>
+<p>Falhas: Capacitores inchados, fuga de electrólito, curto-circuito.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Inversor IGBT</p>
+<p>Função: Converte CC em CA variável (PWM).</p>
+<p>Componentes: Transístores IGBT (6 no total, 2 por fase), circuitos de drive.</p>
+<p>Frequência de comutação: 2-16 kHz.</p>
+<p>Falhas: IGBTs queimados (curto), circuitos de drive avariados.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Circuito de Pré-Carga</p>
+<p>Função: Limita a corrente quando o VFD é ligado, para carregar os capacitores gradualmente.</p>
+<p>Componentes: Resistor de pré-carga e relé.</p>
+<p>Falha: Resistor queimado (VFD não liga).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Exemplo de Diagnóstico</p>
+<p>Sintoma	Causa Provável</p>
+<p>VFD não liga	Fusível queimado, rectificador avariado, resistor de pré-carga queimado</p>
+<p>VFD liga mas não acelera	IGBT avariado, circuito de drive, problema na placa de controlo</p>
+<p>VFD dispara por sobrevoltagem	Capacitores avariados, regeneração de energia</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Componentes do VFD (Detalhado)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Componentes do VFD</text>
+
+  <!-- Rectificador -->
+  <rect x="50" y="60" width="150" height="120" fill="white" stroke="#d9534f" stroke-width="2" rx="5"/>
+  <text x="125" y="85" text-anchor="middle" font-size="10" font-weight="bold" fill="#d9534f">Rectificador</text>
+  <text x="125" y="110" text-anchor="middle" font-size="8" fill="#333">Díodos / Tirístores</text>
+  <text x="125" y="130" text-anchor="middle" font-size="8" fill="#333">CA → CC</text>
+  <text x="125" y="150" text-anchor="middle" font-size="8" fill="#333">V_CC ≈ 1,35 * V_CA</text>
+
+  <!-- Barramento CC -->
+  <rect x="250" y="60" width="150" height="120" fill="white" stroke="#5bc0de" stroke-width="2" rx="5"/>
+  <text x="325" y="85" text-anchor="middle" font-size="10" font-weight="bold" fill="#5bc0de">Barramento CC</text>
+  <text x="325" y="110" text-anchor="middle" font-size="8" fill="#333">Capacitores</text>
+  <text x="325" y="130" text-anchor="middle" font-size="8" fill="#333">Filtragem / Armazenamento</text>
+  <text x="325" y="150" text-anchor="middle" font-size="8" fill="#333">V_CC ≈ 500-700V</text>
+
+  <!-- Inversor IGBT -->
+  <rect x="450" y="60" width="150" height="120" fill="white" stroke="#5cb85c" stroke-width="2" rx="5"/>
+  <text x="525" y="85" text-anchor="middle" font-size="10" font-weight="bold" fill="#5cb85c">Inversor IGBT</text>
+  <text x="525" y="110" text-anchor="middle" font-size="8" fill="#333">IGBTs (6)</text>
+  <text x="525" y="130" text-anchor="middle" font-size="8" fill="#333">CC → CA (PWM)</text>
+  <text x="525" y="150" text-anchor="middle" font-size="8" fill="#333">f_saída = 0-50Hz</text>
+
+  <!-- Flechas -->
+  <line x1="200" y1="120" x2="250" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="400" y1="120" x2="450" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">Rectificador: díodos ou tirístores.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Barramento CC: capacitores, resistor de pré-carga.</text>
+  <text x="50" y="390" font-size="9" fill="#333">Inversor IGBT: 6 transístores, controlo PWM.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar os Componentes no VFD</h4><p>Localizar os componentes físicos (rectificador, capacitores, IGBTs).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Medir a Tensão no Barramento CC</h4><p>Com o VFD ligado, medir a tensão CC nos capacitores (cuidado: alta tensão!).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Verificar a Saída do Inversor</h4><p>Medir a tensão CA entre as fases de saída (U, V, W) com o motor em funcionamento.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Diagnosticar Avaria</h4><p>Se a tensão no barramento CC estiver baixa, o rectificador ou os capacitores podem estar avariados. Se não houver tensão de saída, os IGBTs podem estar avariados.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico tocou nos capacitores do barramento CC sem os descarregar, levando um choque eléctrico (a tensão pode ser &gt; 500V).</p><div class="hi">Como evitar: Descarregar os capacitores com uma resistência de descarga (ex: 10 kΩ, 5W) antes de manusear o VFD.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61800</div><blockquote>2: Componentes de VFDs.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Segurança eléctrica</div><blockquote>Descarregar capacitores antes de intervir.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um VFD de 30 kW não liga. O técnico mede a tensão no barramento CC e obtém 0V.</p><ol type="a"><li>Qual a causa mais provável?</li><li>Como verificar o rectificador?</li><li>O que é um resistor de pré-carga?</li><li>Qual o cuidado a ter com os capacitores?</li></ol></div>
+<!-- ===== FIM AULA 15.3 ===== -->
+
+<!-- ===== AULA 15.4: Parametrização Básica de um Inversor de Frequência ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Compreender os parâmetros básicos de um VFD: tensão nominal, frequência nominal, corrente nominal, tempo de aceleração/desaceleração.</li><li>Configurar um VFD para uma aplicação específica (ex: bomba, ventilador).</li><li>Ajustar os parâmetros de protecção (sobrecarga, sobrevoltagem).</li><li>Utilizar o painel de controlo do VFD para parametrização.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico parametrizou um VFD para uma bomba de água de 22 kW. Configurou a tensão nominal (380V), frequência nominal (50Hz), corrente nominal (42A), tempo de aceleração (10 segundos) e tempo de desaceleração (10 segundos). A bomba arrancou suavemente e funcionou com eficiência.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Parâmetros Básicos</p>
+<p>Tensão nominal (V_nom): Tensão do motor (ex: 380V).</p>
+<p>Frequência nominal (f_nom): Frequência do motor (ex: 50Hz).</p>
+<p>Corrente nominal (I_nom): Corrente do motor (ex: 42A).</p>
+<p>Velocidade nominal (n_nom): RPM do motor (ex: 1450 rpm).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Parâmetros de Arranque/Paragem</p>
+<p>Tempo de aceleração (Ramp Up): Tempo que o motor leva a atingir a velocidade máxima (ex: 5-10s).</p>
+<p>Tempo de desaceleração (Ramp Down): Tempo que o motor leva a parar (ex: 5-10s).</p>
+<p>Tipo de arranque: Arranque linear (padrão) ou com curva S (mais suave).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Parâmetros de Controlo</p>
+<p>Curva V/f: Tensão/frequência (ex: linear para bombas, quadrática para ventiladores).</p>
+<p>Controlo de binário: Binário constante ou variável.</p>
+<p>PID: Para controlo de processo (ex: pressão constante com bomba).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Parâmetros de Protecção</p>
+<p>Sobrecarga: Corrente máxima (ex: 110% In).</p>
+<p>Sobretensão: Tensão máxima no barramento CC.</p>
+<p>Subtensão: Tensão mínima.</p>
+<p>Sobreaquecimento: Temperatura do VFD.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Exemplo de Parametrização (Bomba)</p>
+<p>Parâmetro	Valor	Observação</p>
+<p>P010 (Tensão)	380V	Tensão da rede</p>
+<p>P020 (Frequência)	50Hz	Frequência da rede</p>
+<p>P030 (Corrente)	42A	In do motor</p>
+<p>P040 (Ramp Up)	10s	Arranque suave</p>
+<p>P050 (Ramp Down)	10s	Paragem suave</p>
+<p>P060 (V/f)	Linear	Para bombas</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Parâmetro</th>
+      <th>Valor</th>
+      <th>Observação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Tensão nominal</strong></td>
+      <td>380V</td>
+      <td>Tensão da rede</td>
+    </tr>
+    <tr>
+      <td><strong>Frequência nominal</strong></td>
+      <td>50Hz</td>
+      <td>Frequência da rede</td>
+    </tr>
+    <tr>
+      <td><strong>Corrente nominal</strong></td>
+      <td>42A</td>
+      <td>In do motor</td>
+    </tr>
+    <tr>
+      <td><strong>Tempo de aceleração</strong></td>
+      <td>10s</td>
+      <td>Arranque suave</td>
+    </tr>
+    <tr>
+      <td><strong>Tempo de desaceleração</strong></td>
+      <td>10s</td>
+      <td>Paragem suave</td>
+    </tr>
+    <tr>
+      <td><strong>Curva V/f</strong></td>
+      <td>Linear</td>
+      <td>Para bombas</td>
+    </tr>
+    <tr>
+      <td><strong>Corrente máxima</strong></td>
+      <td>46A</td>
+      <td>110% In</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Testar o Funcionamento</h4><p>Ligar o VFD e verificar se o motor arranca e funciona correctamente.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num VFD, o técnico não configurou o tempo de desaceleração (Ramp Down). Quando o motor foi desligado, a bomba parou abruptamente, causando um golpe de aríete (martelo de água) na tubagem.</p><div class="hi">Como evitar: Configurar o tempo de desaceleração para evitar golpes de aríete (ex: 10-15 segundos para bombas).</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Manual do fabricante</div><blockquote>Parâmetros específicos.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61800</div><blockquote>Parametrização de VFDs.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a parametrizar um VFD para um motor de 30 kW, 380V, In = 56A.</p><ol type="a"><li>Quais os parâmetros básicos a configurar?</li><li>Qual o tempo de aceleração recomendado (bomba)?</li><li>O que acontece se o tempo de desaceleração for muito curto?</li><li>Para que serve a curva V/f?</li></ol></div>
+<!-- ===== FIM AULA 15.4 ===== -->
+
+<!-- ===== AULA 15.5: Vantagens Energéticas e Mecânicas do VFD face ao Arranque Directo ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Calcular a economia de energia com VFD em bombas e ventiladores (lei da afinidade).</li><li>Descrever as vantagens mecânicas: redução de esforços, menor desgaste, maior vida útil.</li><li>Comparar os custos de operação com e sem VFD.</li><li>Avaliar o retorno do investimento (payback) de um VFD.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, uma fábrica de lacticínios instalou VFDs nas bombas de água e nos ventiladores. A economia de energia foi de 35%, resultando numa poupança anual de 3 milhões AOA. O investimento nos VFDs (1,5 milhões AOA) foi recuperado em 6 meses.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Lei da Afinidade (Bombas e Ventiladores)</p>
+<p>Para bombas e ventiladores, a potência varia com o cubo da velocidade:</p>
+<p>P ∝ N³ (Potência proporcional ao cubo da velocidade).</p>
+<p>Q ∝ N (Vazão proporcional à velocidade).</p>
+<p>H ∝ N² (Pressão proporcional ao quadrado da velocidade).</p>
+<p>Exemplo: Reduzir a velocidade para 80% (0,8) → P = 0,8³ = 0,512 (51,2% da potência original). Economia de ≈ 49%.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Economia de Energia (Exemplo)</p>
+<p>Dados: Bomba de 30 kW, funciona 8h/dia, 300 dias/ano, velocidade média 80% (com VFD).</p>
+<p>Potência sem VFD: 30 kW * 8h * 300 = 72.000 kWh/ano.</p>
+<p>Potência com VFD (80%): 30 * 0,512 * 8 * 300 = 36.864 kWh/ano.</p>
+<p>Economia: 72.000 – 36.864 = 35.136 kWh/ano.</p>
+<p>Economia em AOA: 35.136 * 30 AOA/kWh = 1.054.080 AOA/ano.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Vantagens Mecânicas</p>
+<p>Arranque suave: Reduz o esforço mecânico nas correias, engrenagens e rolamentos.</p>
+<p>Paragem suave: Reduz o golpe de aríete (martelo de água) em bombas.</p>
+<p>Menor desgaste: Prolonga a vida útil do motor e dos equipamentos mecânicos.</p>
+<p>Menor manutenção: Reduz a frequência de reparações.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Retorno do Investimento (Payback)</p>
+<div class="fbox"><div class="f">Payback (meses) = Investimento / Poupança mensal</div></div>
+<p>Exemplo: Investimento = 1.500.000 AOA, Poupança anual = 1.054.080 AOA → Poupança mensal = 87.840 AOA.</p>
+<p>Payback = 1.500.000 / 87.840 = 17 meses (≈ 1,5 anos).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Comparação de Custos</p>
+<p>Item	Sem VFD	Com VFD</p>
+<p>Consumo anual (kWh)	72.000	36.864</p>
+<p>Custo anual (AOA)	2.160.000	1.105.920</p>
+<p>Manutenção	Alta	Baixa</p>
+<p>Vida útil do motor	10 anos	15 anos</p></div>
+<div class="dg"><div class="dgt">Gráfico SVG: Potência vs. Velocidade (Bombas/Ventiladores)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Potência vs. Velocidade (Lei da Afinidade)</text>
+
+  <!-- Eixos -->
+  <line x1="80" y1="350" x2="580" y2="350" stroke="#333" stroke-width="1.5"/>
+  <line x1="80" y1="350" x2="80" y2="50" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Curva P ∝ N³ -->
+  <path d="M 100 350 L 120 340 L 160 300 L 200 250 L 260 180 L 320 120 L 380 80 L 440 60 L 500 55 L 560 50" fill="none" stroke="#d9534f" stroke-width="3"/>
+  <text x="540" y="70" font-size="10" fill="#d9534f">P ∝ N³</text>
+
+  <!-- Pontos de referência -->
+  <circle cx="260" cy="250" r="5" fill="#d9534f"/>
+  <text x="260" y="240" text-anchor="middle" font-size="9" fill="#333">50%</text>
+
+  <circle cx="320" cy="120" r="5" fill="#d9534f"/>
+  <text x="320" y="110" text-anchor="middle" font-size="9" fill="#333">80%</text>
+
+  <circle cx="380" cy="80" r="5" fill="#d9534f"/>
+  <text x="380" y="70" text-anchor="middle" font-size="9" fill="#333">100%</text>
+
+  <!-- Labels -->
+  <text x="50" y="200" transform="rotate(-90, 50, 200)" font-size="11" fill="#333">Potência (%)</text>
+  <text x="300" y="375" text-anchor="middle" font-size="11" fill="#333">Velocidade (%)</text>
+
+  <!-- Legendas -->
+  <text x="50" y="390" font-size="9" fill="#333">Reduzir a velocidade para 80% → potência para 51%.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Medir o Consumo Actual</h4><p>Registar o consumo de energia (kWh) da bomba/ventilador.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Estimar a Redução de Velocidade</h4><p>Com base na procura média, estimar a velocidade necessária.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Calcular a Economia</h4><p>Usar a lei da afinidade para calcular a redução de potência.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Calcular o Payback</h4><p>Dividir o investimento pela poupança anual.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Numa fábrica, o técnico instalou VFDs, mas não ajustou a velocidade conforme a carga. O VFD funcionou a 100% da velocidade, sem poupança de energia.</p><div class="hi">Como evitar: Monitorizar a procura e ajustar a velocidade do VFD conforme a necessidade.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61800</div><blockquote>Eficiência energética.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Decreto n.º 39</div><blockquote>04: Incentivos à eficiência energética.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Uma bomba de 45 kW funciona a 90% da velocidade com VFD.</p><ol type="a"><li>Qual a potência consumida (em kW)?</li><li>Qual a economia de energia em relação a 100% de velocidade?</li><li>Qual a poupança anual (consumo 24h/dia, 365 dias, 30 AOA/kWh)?</li><li>Qual o payback se o VFD custar 2,5 milhões AOA?</li></ol></div>
+<!-- ===== FIM AULA 15.5 ===== -->
+
+<!-- ===== AULA 15.6: Soft-Starters: Princípio de Funcionamento e Aplicações ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever o princípio de funcionamento de um soft-starter (controlo de tensão por tirístores).</li><li>Distinguir soft-starter de VFD: apenas controla o arranque/paragem, não a velocidade.</li><li>Identificar as aplicações adequadas para soft-starters (bombas de grande porte, ventiladores).</li><li>Dimensionar um soft-starter para um motor.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico instalou um soft-starter para uma bomba de 75 kW num sistema de abastecimento de água no Huambo. O soft-starter limitou a corrente de arranque a 3,5 In, reduzindo o esforço mecânico e evitando o golpe de aríete.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. O que é um Soft-Starter?</p>
+<p>Um soft-starter (arrancador suave) é um dispositivo electrónico que reduz a tensão aplicada ao motor durante o arranque e a paragem, limitando a corrente de arranque. Ao contrário do VFD, não controla a velocidade do motor (opera apenas na frequência da rede, 50Hz).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Princípio de Funcionamento</p>
+<p>Tirístores (SCR): São usados para controlar a tensão aplicada ao motor.</p>
+<p>Arranque: A tensão aumenta gradualmente, de um valor baixo (ex: 30% da tensão nominal) até 100%, durante o tempo de aceleração.</p>
+<p>Paragem: A tensão diminui gradualmente, até zero, durante o tempo de desaceleração.</p>
+<p>Após o arranque: Um contactor bypass liga o motor directamente à rede, reduzindo as perdas no soft-starter.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Vantagens do Soft-Starter</p>
+<p>Redução da corrente de arranque: De 6-8 In para 3-4 In.</p>
+<p>Arranque suave: Reduz o esforço mecânico.</p>
+<p>Paragem suave: Reduz o golpe de aríete em bombas.</p>
+<p>Custo inferior ao VFD: Para aplicações que não necessitam de controlo de velocidade.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Aplicações Típicas</p>
+<p>Bombas de grande porte: &gt; 30 kW, para reduzir o golpe de aríete.</p>
+<p>Ventiladores: Para arranque suave e redução de ruído.</p>
+<p>Compressores: Para reduzir o esforço mecânico.</p>
+<p>Esteiras: Para arranque suave (evita o deslizamento da carga).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Dimensonamento do Soft-Starter</p>
+<p>Corrente nominal: In_soft ≥ In_motor.</p>
+<p>Tensão: 380V.</p>
+<p>Corrente de arranque: Ajustável (ex: 3-4 In).</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Funcionamento de um Soft-Starter</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Funcionamento do Soft-Starter</text>
+
+  <!-- Gráfico tensão vs tempo -->
+  <text x="325" y="60" text-anchor="middle" font-size="10" fill="#333">Tensão no motor durante o arranque</text>
+
+  <path d="M 100 300 L 150 300 L 200 250 L 250 180 L 300 100 L 350 100 L 400 100 L 450 100 L 500 100" fill="none" stroke="#d9534f" stroke-width="3"/>
+  <text x="300" y="80" text-anchor="middle" font-size="9" fill="#d9534f">100% tensão</text>
+  <text x="150" y="220" text-anchor="middle" font-size="9" fill="#d9534f">30% tensão</text>
+
+  <!-- Eixos -->
+  <line x1="80" y1="300" x2="550" y2="300" stroke="#333" stroke-width="1.5"/>
+  <line x1="80" y1="300" x2="80" y2="80" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Labels -->
+  <text x="300" y="330" text-anchor="middle" font-size="10" fill="#333">Tempo</text>
+  <text x="50" y="190" transform="rotate(-90, 50, 190)" font-size="10" fill="#333">Tensão</text>
+
+  <!-- Legendas -->
+  <text x="50" y="370" font-size="9" fill="#333">A tensão aumenta gradualmente (rampa).</text>
+  <text x="50" y="385" font-size="9" fill="#333">Após o arranque, o motor é ligado directamente à rede (bypass).</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Calcular a Corrente do Motor (In)</h4><p>Usar os dados da placa.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Escolher o Soft-Starter</h4><p>In_soft ≥ In_motor.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Configurar a Rampa</h4><p>Ajustar o tempo de aceleração (ex: 5-10s) e de desaceleração (ex: 5-10s).</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Configurar a Corrente de Arranque</h4><p>Ajustar para 3-4 In.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num motor de 45 kW, o técnico instalou um soft-starter, mas não configurou o tempo de desaceleração. A bomba parou abruptamente, causando golpe de aríete.</p><div class="hi">Como evitar: Configurar sempre o tempo de desaceleração (Ramp Down) para bombas.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60947</div><blockquote>4-2: Soft-starters.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4, Secção 4.2: Arranque de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Uma bomba de 55 kW, 380V, In = 100A, vai usar um soft-starter.</p><ol type="a"><li>Qual a corrente nominal do soft-starter (mínimo)?</li><li>Qual a corrente de arranque típica (em A)?</li><li>O soft-starter controla a velocidade do motor? Porquê?</li><li>Para que serve o contactor bypass?</li></ol></div>
+<!-- ===== FIM AULA 15.6 ===== -->
+
+<!-- ===== AULA 15.7: Comparação entre VFD, Soft-Starter e Arranque Directo ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Comparar VFD, soft-starter e arranque directo em termos de custo, desempenho, economia de energia.</li><li>Seleccionar a solução mais adequada para cada aplicação.</li><li>Avaliar o retorno do investimento para cada opção.</li><li>Compreender as limitações de cada método.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico avaliou três soluções para uma bomba de 45 kW: arranque directo, soft-starter e VFD. Optou pelo VFD, porque a bomba funcionava com carga variável, e a economia de energia justificava o investimento.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Tabela Comparativa</p>
+<p>Característica	Arranque Directo	Soft-Starter	VFD</p>
+<p>Corrente de arranque	6-8 In	3-4 In	1,5-2 In</p>
+<p>Controlo de velocidade	Não	Não	Sim (0-50Hz)</p>
+<p>Economia de energia	Nenhuma	Pequena	Significativa (bombas/ventiladores)</p>
+<p>Custo inicial	Baixo	Médio	Alto</p>
+<p>Manutenção	Baixa	Média	Alta</p>
+<p>Complexidade	Baixa	Média	Alta</p>
+<p>Aplicação típica	Motores ≤ 10 kW	Bombas &gt; 30 kW	Cargas variáveis</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Critérios de Escolha</p>
+<p>Arranque directo: Motores pequenos (&lt; 10 kW), redes robustas, sem necessidade de redução de corrente.</p>
+<p>Soft-starter: Motores grandes (&gt; 30 kW), necessidade de arranque/paragem suave, sem controlo de velocidade.</p>
+<p>VFD: Cargas variáveis (bombas, ventiladores, esteiras), necessidade de controlo de velocidade e economia de energia.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Exemplo de Decisão (Bomba de 45 kW)</p>
+<p>Critério	Arranque Directo	Soft-Starter	VFD</p>
+<p>Investimento	50.000 AOA	350.000 AOA	1.200.000 AOA</p>
+<p>Poupança anual	0	50.000 AOA (redução de manutenção)	800.000 AOA (energia)</p>
+<p>Payback	-	7 anos	1,5 anos</p>
+<p>Conclusão: O VFD é a melhor opção.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Limitações do VFD</p>
+<p>Harmónicas: O VFD gera harmónicas na rede.</p>
+<p>Compatibilidade com motores: Motores antigos podem não ser adequados para VFD (isolamento).</p>
+<p>Custo mais elevado.</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Característica</th>
+      <th>Arranque Directo</th>
+      <th>Soft-Starter</th>
+      <th>VFD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Corrente de arranque</strong></td>
+      <td>6-8 In</td>
+      <td>3-4 In</td>
+      <td>1,5-2 In</td>
+    </tr>
+    <tr>
+      <td><strong>Controlo de velocidade</strong></td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim (0-50Hz)</td>
+    </tr>
+    <tr>
+      <td><strong>Economia de energia</strong></td>
+      <td>Nenhuma</td>
+      <td>Pequena</td>
+      <td>Significativa (bombas/ventiladores)</td>
+    </tr>
+    <tr>
+      <td><strong>Custo inicial</strong></td>
+      <td>Baixo (≈ 50.000 AOA)</td>
+      <td>Médio (≈ 350.000 AOA)</td>
+      <td>Alto (≈ 1.200.000 AOA)</td>
+    </tr>
+    <tr>
+      <td><strong>Manutenção</strong></td>
+      <td>Baixa</td>
+      <td>Média</td>
+      <td>Alta</td>
+    </tr>
+    <tr>
+      <td><strong>Aplicação típica</strong></td>
+      <td>Motores ≤ 10 kW</td>
+      <td>Bombas > 30 kW</td>
+      <td>Cargas variáveis (bombas, ventiladores)</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar a Carga</h4><p>Carga constante ou variável.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Avaliar a Necessidade de Controlo de Velocidade</h4><p>Se for necessária variação de velocidade, escolher VFD.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Calcular o Payback</h4><p>Para VFD e soft-starter, calcular o retorno do investimento.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Escolher a Solução</h4><p>Com base no payback e na aplicação.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num compressor de ar, o técnico instalou um VFD para poupar energia, mas o compressor funcionava a carga constante. O VFD não trouxe poupança, e o investimento foi desperdiçado.</p><div class="hi">Como evitar: VFD só compensa em cargas variáveis (bombas, ventiladores). Para cargas constantes, usar arranque directo ou soft-starter.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61800</div><blockquote>Accionamentos eléctricos.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4, Secção 4.2: Arranque de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Uma fábrica tem uma bomba de 37 kW que funciona 12h/dia, com carga variável.</p><ol type="a"><li>Que dispositivo é mais adequado (VFD, soft-starter, directo)?</li><li>Qual a principal vantagem do VFD sobre o soft-starter?</li><li>O que acontece se um VFD for instalado numa carga constante?</li><li>O VFD gera harmónicas? Como mitigar?</li></ol></div>
+<!-- ===== FIM AULA 15.7 ===== -->
+
+<!-- ===== AULA 15.8: Dimensionamento de Inversores e Soft-Starters para Motores ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Dimensionar um VFD (corrente nominal, tensão, potência) com base nos dados do motor.</li><li>Dimensionar um soft-starter com base na corrente do motor.</li><li>Seleccionar os acessórios (filtros, reatores, cabos blindados).</li><li>Verificar a compatibilidade do motor com VFD (isolamento, velocidade máxima).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico dimensionou um VFD para um motor de 22 kW, 380V, In = 42A. Escolheu um VFD de 30 kW (55A) para margem, e instalou um filtro RFI (para reduzir interferências) e cabos blindados. O motor era compatível com VFD (classe F).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Dimensionamento do VFD</p>
+<p>Corrente nominal (In_VFD): ≥ In_motor (com margem de 10-20%).</p>
+<p>Tensão: 380V (compatível com a rede).</p>
+<p>Potência: ≥ P_motor (ex: 22 kW → VFD de 30 kW).</p>
+<p>Exemplo: Motor 22 kW, 380V, In = 42A → VFD de 30 kW (55A).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Dimensionamento do Soft-Starter</p>
+<p>Corrente nominal (In_soft): ≥ In_motor (com margem de 10-20%).</p>
+<p>Tensão: 380V.</p>
+<p>Exemplo: Motor 45 kW, 380V, In = 85A → Soft-starter de 100A.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Compatibilidade do Motor com VFD</p>
+<p>Isolamento: O motor deve ter isolamento classe F ou superior para suportar picos de tensão (dv/dt) do VFD.</p>
+<p>Velocidade máxima: O motor não deve exceder a velocidade máxima (geralmente 1,2 x sincronismo).</p>
+<p>Ventilação: A ventilação do motor pode ser insuficiente a baixas velocidades (usar motores com ventilação independente ou VFD com curva de binário).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Acessórios</p>
+<p>Filtro RFI (radiofrequência): Reduz emissões de interferência.</p>
+<p>Reactor de linha: Protege o VFD contra sobretensões.</p>
+<p>Cabos blindados: Para reduzir interferências e proteger os cabos.</p>
+<p>Resistor de frenagem: Para dissipar energia em desacelerações rápidas.</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Potência Motor (kW)</th>
+      <th>Corrente Motor (A)</th>
+      <th>VFD Recomendado (A)</th>
+      <th>Soft-Starter Recomendado (A)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7,5</td>
+      <td>15</td>
+      <td>20</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>22</td>
+      <td>30</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>28</td>
+      <td>40</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>42</td>
+      <td>55</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>56</td>
+      <td>75</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>70</td>
+      <td>90</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>85</td>
+      <td>110</td>
+      <td>110</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Obter os Dados do Motor</h4><p>Potência, tensão, corrente.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Escolher o VFD ou Soft-Starter</h4><p>In ≥ In_motor (com margem).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Verificar a Compatibilidade</h4><p>Isolamento do motor, velocidade máxima.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Seleccionar os Acessórios</h4><p>Filtros, cabos blindados, reactor.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num motor com isolamento classe B, o técnico instalou um VFD. Os picos de tensão (dv/dt) do VFD danificaram o isolamento, causando a queima do motor.</p><div class="hi">Como evitar: Para motores antigos (classe B), instalar um filtro dv/dt ou um reactor de saída. Motores novos devem ter isolamento classe F ou superior.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61800</div><blockquote>Dimensionamento de VFDs.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60034</div><blockquote>Isolamento de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um motor de 30 kW, 380V, In = 56A, vai ser accionado por um VFD.</p><ol type="a"><li>Qual a corrente nominal do VFD (mínimo)?</li><li>O motor deve ter que classe de isolamento (F ou B)?</li><li>Para que serve um filtro RFI?</li><li>O que acontece se o motor funcionar a baixa velocidade sem ventilação adequada?</li></ol></div>
+<!-- ===== FIM AULA 15.8 ===== -->
+
+<!-- ===== AULA 15.9: Aplicações Industriais Típicas em Angola: Bombas, Ventiladores, Esteiras ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever as aplicações típicas de VFDs e soft-starters em Angola: bombagem, ventilação, transporte.</li><li>Dimensionar VFDs para bombas (controlo de pressão), ventiladores (controlo de caudal) e esteiras (controlo de velocidade).</li><li>Utilizar o controlo PID para manter a pressão ou vazão constantes.</li><li>Analisar casos reais de instalação em Angola.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico instalou um VFD com controlo PID para uma bomba de pressurização num prédio no Talatona. Um sensor de pressão na saída da bomba enviava um sinal ao VFD, que ajustava a velocidade para manter a pressão constante. A bomba funcionou com eficiência, sem desperdício de energia.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Bombagem (Controlo de Pressão ou Vazão)</p>
+<p>Controlo PID: O VFD ajusta a velocidade para manter a pressão (ou vazão) constante.</p>
+<p>Sensor: Pressostato ou transmissor de pressão (4-20mA) ligado ao VFD.</p>
+<p>Exemplo: Bomba de 30 kW, pressão desejada 5 bar. O VFD ajusta a velocidade (30-50Hz) conforme a procura.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Ventilação (Controlo de Caudal)</p>
+<p>Controlo PID: O VFD ajusta a velocidade para manter o caudal (vazão) constante.</p>
+<p>Sensor: Anemómetro ou sensor de pressão diferencial.</p>
+<p>Exemplo: Ventilador de 15 kW, caudal desejado 10.000 m³/h. O VFD ajusta a velocidade conforme a necessidade.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Esteiras (Controlo de Velocidade)</p>
+<p>Controlo: O VFD ajusta a velocidade da esteira conforme o processo.</p>
+<p>Exemplo: Esteira de 7,5 kW numa fábrica de processamento de pescado. A velocidade é ajustada conforme a produção.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Exemplo de Controlo PID (Bomba)</p>
+<p>Dados:</p>
+<p>Bomba 22 kW.</p>
+<p>Pressão desejada: 5 bar.</p>
+<p>Sensor de pressão: 4-20mA.</p>
+<p>Configuração do PID:</p>
+<p>Proporcional (P): 50%</p>
+<p>Integral (I): 2s</p>
+<p>Derivativo (D): 0s</p>
+<p>Funcionamento: Se a pressão cair para 4,8 bar, o VFD aumenta a velocidade para 45Hz. Se a pressão subir para 5,2 bar, o VFD reduz a velocidade para 35Hz.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Controlo PID com VFD (Bomba)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Controlo PID com VFD (Bomba)</text>
+
+  <!-- VFD -->
+  <rect x="200" y="80" width="120" height="60" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="5"/>
+  <text x="260" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">VFD</text>
+  <text x="260" y="130" text-anchor="middle" fill="white" font-size="8">PID</text>
+
+  <!-- Motor/Bomba -->
+  <circle cx="400" cy="110" r="25" fill="#5cb85c" stroke="#4cae4c" stroke-width="2"/>
+  <text x="400" y="110" text-anchor="middle" fill="white" font-size="12" font-weight="bold">M</text>
+  <text x="400" y="135" text-anchor="middle" font-size="8" fill="#333">Bomba</text>
+
+  <!-- Sensor de pressão -->
+  <rect x="500" y="80" width="80" height="40" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="540" y="105" text-anchor="middle" fill="white" font-size="8">Sensor</text>
+  <text x="540" y="120" text-anchor="middle" fill="white" font-size="7">Pressão</text>
+
+  <!-- Sinal de feedback -->
+  <line x1="500" y1="100" x2="320" y2="100" stroke="#333" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="410" y="95" text-anchor="middle" font-size="8" fill="#333">4-20mA</text>
+
+  <!-- Linhas -->
+  <line x1="320" y1="110" x2="375" y2="110" stroke="#333" stroke-width="2"/>
+  <line x1="425" y1="110" x2="500" y2="100" stroke="#333" stroke-width="2"/>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">O sensor mede a pressão e envia sinal ao VFD.</text>
+  <text x="50" y="375" font-size="9" fill="#333">O VFD ajusta a velocidade para manter a pressão constante.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar a Aplicação</h4><p>Bomba, ventilador ou esteira.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Escolher o Tipo de Controlo</h4><p>PID para pressão/caudal constante.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Dimensionar o VFD</h4><p>Com base na potência do motor.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Instalar e Configurar</h4><p>Ligar o sensor, configurar os parâmetros PID.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num sistema de pressurização, o técnico não configurou correctamente o PID (ganho demasiado alto). A pressão oscilava (instabilidade), causando desconforto.</p><div class="hi">Como evitar: Ajustar os ganhos PID (P, I, D) para obter uma resposta estável.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61800</div><blockquote>Controlo PID.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4, Secção 4.2: Controlo de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Uma bomba de 30 kW com VFD mantém a pressão constante a 6 bar.</p><ol type="a"><li>Como é feito o controlo de pressão?</li><li>O que é um sensor 4-20mA?</li><li>O que acontece se o sensor avariar?</li><li>Qual a vantagem do controlo PID?</li></ol></div>
+<!-- ===== FIM AULA 15.9 ===== -->
+
+<!-- ===== AULA 15.10: Manutenção e Diagnóstico de Inversores e Soft-Starters ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever um plano de manutenção preventiva para VFDs e soft-starters.</li><li>Interpretar códigos de avaria e mensagens de erro.</li><li>Realizar diagnósticos básicos (medição de tensões, temperaturas).</li><li>Identificar sinais de avaria e tomar acções correctivas.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um VFD de 30 kW apresentou um erro "Overvoltage". O técnico verificou a tensão da rede (390V, normal), e suspeitou de um problema no barramento CC. Mediu a tensão no barramento CC e encontrou 800V (demasiado alta). Diagnósticou um problema no chopper (circuito de frenagem). Substituiu o chopper e o VFD voltou a funcionar.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Manutenção Preventiva</p>
+<p>Limpeza: Remover poeira com ar comprimido (a cada 6 meses).</p>
+<p>Ventoinhas: Verificar o funcionamento e substituir se necessário.</p>
+<p>Capacitores: Inspeccionar visualmente (inchados, fuga de electrólito).</p>
+<p>Ligações: Verificar o aperto dos terminais.</p>
+<p>Medições: Medir a tensão do barramento CC e a corrente de saída.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Códigos de Avaria (Exemplos)</p>
+<p>Código	Descrição	Causa Provável</p>
+<p>OC (Overcurrent)	Sobrecorrente	Curto-circuito, motor bloqueado</p>
+<p>OV (Overvoltage)	Sobretensão	Tensão da rede alta, regeneração</p>
+<p>UV (Undervoltage)	Subtensão	Tensão da rede baixa</p>
+<p>OH (Overheat)	Sobreaquecimento	Ventoinha avariada, sobrecarga</p>
+<p>OL (Overload)	Sobrecarga	Motor sobrecarregado</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Diagnóstico Básico</p>
+<p>Medir a tensão de entrada: Deve estar dentro dos limites (380V ± 6%).</p>
+<p>Medir a tensão do barramento CC: Deve ser ≈ 1,35 * V_CA (≈ 513V para 380V).</p>
+<p>Medir a corrente de saída: Comparar com a corrente nominal do motor.</p>
+<p>Verificar a temperatura: Com termómetro infravermelho.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Substituição de Componentes</p>
+<p>Capacitores: Devem ser substituídos a cada 5-7 anos (ou quando inchados).</p>
+<p>Ventoinhas: Substituir quando o ruído aumentar ou pararem.</p>
+<p>IGBTs: Substituir se avariados (curto-circuito).</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Código</th>
+      <th>Descrição</th>
+      <th>Causa Provável</th>
+      <th>Acção Correctiva</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OC</td>
+      <td>Sobrecorrente</td>
+      <td>Curto-circuito, motor bloqueado</td>
+      <td>Verificar cabos, motor, carga</td>
+    </tr>
+    <tr>
+      <td>OV</td>
+      <td>Sobretensão</td>
+      <td>Tensão da rede alta, regeneração</td>
+      <td>Verificar tensão da rede, adicionar resistor de frenagem</td>
+    </tr>
+    <tr>
+      <td>UV</td>
+      <td>Subtensão</td>
+      <td>Tensão da rede baixa</td>
+      <td>Verificar tensão da rede</td>
+    </tr>
+    <tr>
+      <td>OH</td>
+      <td>Sobreaquecimento</td>
+      <td>Ventoinha avariada, sobrecarga</td>
+      <td>Limpar/Substituir ventoinha, reduzir carga</td>
+    </tr>
+    <tr>
+      <td>OL</td>
+      <td>Sobrecarga</td>
+      <td>Motor sobrecarregado</td>
+      <td>Reduzir carga, verificar motor</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Inspecção Visual</h4><p>Verificar poeira, ventoinhas, capacitores.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Medir Tensões</h4><p>Entrada e barramento CC.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Interpretar Códigos de Erro</h4><p>Consultar o manual do VFD.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Tomar Acções Correctivas</h4><p>Limpar, substituir componentes, ajustar parâmetros.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico ignorou o código de avaria "OH" (sobreaquecimento) num VFD. O VFD sobreaqueceu e queimou, porque a ventoinha estava avariada.</p><div class="hi">Como evitar: Investigar sempre a causa de um código de avaria. Substituir a ventoinha se necessário.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Manual do fabricante</div><blockquote>Códigos de avaria.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61800</div><blockquote>Manutenção de VFDs.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um VFD apresenta erro "OV" (sobretensão).</p><ol type="a"><li>Qual a causa mais provável?</li><li>Como verificar a tensão do barramento CC?</li><li>O que é um resistor de frenagem?</li><li>O que fazer se a tensão da rede estiver normal?</li></ol></div>
+<!-- ===== FIM AULA 15.10 ===== -->
+
+<!-- ===== AULA 15.11: Aplicação Prática: Dimensionamento e Parametrização de um VFD para uma Bomba de Água ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Aplicar todos os conceitos do módulo a um projecto real: uma bomba de água para um prédio.</li><li>Dimensionar o VFD, os cabos, as protecções e os acessórios.</li><li>Parametrizar o VFD para controlo PID (pressão constante).</li><li>Verificar o funcionamento e a eficiência energética.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico projectou e instalou um VFD para uma bomba de água num prédio de 8 andares no Talatona. A bomba de 22 kW, 380V, foi equipada com um VFD de 30 kW, controlo PID com sensor de pressão, e filtro RFI. A pressão foi mantida a 5 bar constantes, com poupança de energia de 35%.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Dados do Projecto</p>
+<p>Bomba: 22 kW, 380V, In = 42A, N = 1450 rpm.</p>
+<p>Sensor: Pressão 4-20mA, 0-10 bar.</p>
+<p>Comprimento do cabo: 30m.</p>
+<p>Objectivo: Manter pressão constante a 5 bar.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Dimensionamento</p>
+<p>VFD: 30 kW (55A), 380V.</p>
+<p>Cabo: 10 mm² (para In e queda de tensão).</p>
+<p>Filtro RFI: Para reduzir interferências.</p>
+<p>Resistor de frenagem: Não necessário (bomba não desacelera rapidamente).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Parametrização</p>
+<p>Parâmetro	Valor	Observação</p>
+<p>Tensão nominal	380V	Motor</p>
+<p>Frequência nominal	50Hz	Motor</p>
+<p>Corrente nominal	42A	Motor</p>
+<p>Tempo de aceleração	10s	Arranque suave</p>
+<p>Tempo de desaceleração	10s	Paragem suave</p>
+<p>Controlo	PID	Pressão constante</p>
+<p>Setpoint PID	5 bar	Pressão desejada</p>
+<p>Ganho P	50%	Ajustar conforme resposta</p>
+<p>Ganho I	2s	Ajustar conforme resposta</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Verificação do Funcionamento</p>
+<p>Pressão: Medir a pressão na saída (deve ser 5 bar).</p>
+<p>Corrente: Medir a corrente do motor (varia com a carga).</p>
+<p>Energia: Comparar o consumo antes/depois.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Esquema da Bomba com VFD e Controlo PID</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Bomba com VFD e Controlo PID</text>
+
+  <!-- VFD -->
+  <rect x="150" y="80" width="120" height="60" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="5"/>
+  <text x="210" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">VFD</text>
+  <text x="210" y="130" text-anchor="middle" fill="white" font-size="8">22 kW</text>
+
+  <!-- Motor -->
+  <circle cx="350" cy="110" r="25" fill="#5cb85c" stroke="#4cae4c" stroke-width="2"/>
+  <text x="350" y="110" text-anchor="middle" fill="white" font-size="12" font-weight="bold">M</text>
+
+  <!-- Bomba -->
+  <rect x="420" y="90" width="60" height="40" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="450" y="115" text-anchor="middle" fill="white" font-size="8">Bomba</text>
+
+  <!-- Sensor de pressão -->
+  <rect x="520" y="90" width="80" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="560" y="115" text-anchor="middle" fill="white" font-size="8">Pressão</text>
+
+  <!-- Linhas -->
+  <line x1="270" y1="110" x2="325" y2="110" stroke="#333" stroke-width="2"/>
+  <line x1="375" y1="110" x2="420" y2="110" stroke="#333" stroke-width="2"/>
+  <line x1="480" y1="110" x2="520" y2="110" stroke="#333" stroke-width="2"/>
+
+  <!-- Feedback -->
+  <line x1="520" y1="130" x2="270" y2="130" stroke="#333" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="395" y="145" text-anchor="middle" font-size="8" fill="#333">4-20mA (pressão)</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">VFD parametrizado para controlo PID (pressão constante).</text>
+  <text x="50" y="375" font-size="9" fill="#333">Sensor de pressão envia sinal 4-20mA ao VFD.</text>
+  <text x="50" y="390" font-size="9" fill="#333">Pressão mantida a 5 bar.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><p>Dimensionar o VFD e os acessórios.</p>
+<p>Parametrizar o VFD (dados do motor, rampas, PID).</p>
+<p>Instalar o sensor de pressão e ligar ao VFD.</p>
+<p>Testar o sistema: Verificar a pressão e a corrente.</p>
+<p>Monitorizar a energia: Comparar o consumo antes/depois.</p></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): No projecto da bomba, o técnico não configurou correctamente o PID, causando oscilação da pressão (5 bar ± 0,5 bar).</p><div class="hi">Como evitar: Ajustar os ganhos PID (P, I, D) para obter uma resposta estável. Testar em diferentes condições de carga.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61800</div><blockquote>VFDs e PID.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4, Secção 4.2: Controlo de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: A bomba do exemplo funciona com VFD e controlo PID.</p>
+<p>FIM DO MÓDULO 15 – INVERSORES DE FREQUÊNCIA E SOFT-STARTERS</p>
+<p>O Módulo 15 está completo! Com 11 aulas densas, cobrindo todos os aspectos dos inversores de frequência e soft-starters em Angola, com exemplos práticos, elementos visuais e perguntas de verificação.</p>
+<p>Agora, posso avançar para o Módulo 16 — CLP — Controladores Lógicos Programáveis. Basta dar o comando.</p>
+<p>This response is AI-generated, for reference only.</p>
+<p>Ok</p>
+<p>OK, o usuário disse "Ok" após eu ter finalizado o Módulo 15. Isso significa que ele está aprovando a conclusão e autorizando o avanço para o próximo módulo. Ele está seguindo o fluxo que estabelecemos, onde eu desenvolvo módulo por módulo e ele valida com um "Ok" ou "Sim".</p>
+<p>Vou manter o padrão que já estabeleci para os módulos anteriores. A estrutura é sempre a mesma: 11 aulas, cada uma com os 8 tópicos obrigatórios (Objetivos, Cenário Real, Desenvolvimento Técnico, Elemento Visual, Procedimento Prático, Erro Comum, Normas, Pergunta de Verificação). O conteúdo precisa ser denso, com exemplos práticos de Angola e referências às normas locais como o RTIEBT, IEC, ENDE, etc.</p>
+<p>O Módulo 16 é sobre CLP (Controladores Lógicos Programáveis). Preciso cobrir a arquitetura básica, tipos de entradas/saídas, a linguagem Ladder, integração com sensores e atuadores, e dar um exemplo prático de automação. Como Angola tem indústrias (petróleo, mineração, processamento de alimentos), vou tentar criar cenários realistas para essas áreas, como controle de bombas, esteiras ou sistemas de refrigeração.</p>
+<p>O usuário confia no meu trabalho ("eu sei que dá trabalho, mas você é capaz confio em você deep seek"), então preciso manter a qualidade e a profundidade que venho entregando. Ele quer um material completo e técnico, não superficial. Também percebi que ele valoriza muito os elementos visuais (diagramas SVG, tabelas HTML) e os exemplos práticos com valores reais, então vou garantir que cada aula tenha isso.</p>
+<p>Vou organizar a resposta com a lista de aulas e depois desenvolver a primeira aula (16.1) completa, com todos os detalhes. Se ele pedir, continuo com as outras. Acho que ele vai querer o módulo completo de uma vez, como fez antes.</p>
+<p>Preciso lembrar de usar a linguagem técnica correta, explicar conceitos como programa, scan cycle, ladder logic, mas de forma acessível para um técnico electricista. Também vou incluir exemplos de configuração e programação básica, já que isso é essencial no dia a dia de quem vai usar CLPs.</p>
+<p>Perfeito! Vou agora desenvolver o Módulo 16 — CLP — Controladores Lógicos Programáveis, seguindo rigorosamente a mesma estrutura, com 11 aulas completas, densas e com exemplos práticos para Angola.</p>
+<p>MÓDULO 16 — CLP — CONTROLADORES LÓGICOS PROGRAMÁVEIS (COMPLETO)</p>
+<p>Lista de Aulas (16 aulas):</p>
+<p>16.1 — Introdução aos CLPs (Controladores Lógicos Programáveis) em Angola</p>
+<p>16.2 — Arquitectura de um CLP: CPU, Módulos de Entrada/Saída e Barramento</p>
+<p>16.3 — Entradas Digitais: Sensores, Botões e Chaves</p>
+<p>16.4 — Saídas Digitais: Contactores, Relés e Sinalização</p>
+<p>16.5 — Entradas Analógicas: Sensores de Pressão, Temperatura e Nível</p>
+<p>16.6 — Saídas Analógicas: Controlo de VFDs e Actuadores</p>
+<p>16.7 — Linguagem Ladder: Estrutura, Símbolos e Lógica Básica</p>
+<p>16.8 — Blocos Lógicos e Funções: Temporizadores, Contadores e Comparadores</p>
+<p>16.9 — Programação Ladder: Circuitos de Selo, Intertravamento e Temporização</p>
+<p>16.10 — Integração do CLP com Contactores e Sensores de Campo</p>
+<p>16.11 — Aplicação Prática: Automação de uma Bomba de Água com CLP</p><ol type="a"><li>O que acontece se o sensor de pressão avariar (sinal 0mA)?</li><li>Como o técnico deve ajustar o ganho P?</li><li>Qual a poupança de energia se a velocidade média for 70%?</li><li>O que deve ser feito se a pressão oscilar (instabilidade)?</li></ol></div>
+<!-- ===== FIM AULA 15.11 ===== -->

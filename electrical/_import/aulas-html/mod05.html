@@ -1,0 +1,1146 @@
+<!-- ===== AULA 5.1: Introdução ao Dimensionamento de Condutores: Critérios e Normas Aplicáveis ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Definir os critérios fundamentais para o dimensionamento de condutores: capacidade de corrente (Iz) e queda de tensão (ΔU).</li><li>Identificar as normas e regulamentos aplicáveis: RTIEBT, IEC 60364-5-52, e as tabelas de capacidade de corrente.</li><li>Descrever as consequências de um dimensionamento incorrecto (sobreaquecimento, perdas, riscos de incêndio).</li><li>Aplicar a metodologia de dimensionamento passo a passo para um circuito típico angolano.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em Janeiro de 2024, uma nova clínica privada no Talatona foi inaugurada com grande pompa. No entanto, duas semanas após a abertura, o ar condicionado central começou a desligar-se intermitentemente, e alguns equipamentos de diagnóstico (raios-X) apresentavam falhas. O técnico electricista chamado para diagnosticar o problema mediu a tensão na entrada do quadro principal: 218V (aceitável). Mas, ao medir a tensão na sala de raios-X, no terceiro piso, encontrou apenas 195V. A queda de tensão era de 23V, muito acima dos 5% (11V) permitidos para equipamentos sensíveis. A investigação revelou que o cabo de alimentação (35 mm²) tinha sido dimensionado apenas pela capacidade de corrente, sem considerar a queda de tensão ao longo dos 80 metros de percurso. O técnico teve que substituir o cabo por um de 70 mm², num custo adicional de 3 milhões AOA, e a clínica esteve parcialmente encerrada durante uma semana.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Por que Dimensionar Correctamente os Condutores?</p>
+<p>O dimensionamento correcto dos condutores é essencial para garantir:</p>
+<p>Segurança: Evitar o sobreaquecimento do cabo, que pode degradar o isolamento e causar incêndios.</p>
+<p>Funcionamento adequado dos equipamentos: Garantir que a tensão nos terminais dos equipamentos está dentro dos limites (queda de tensão ≤ 5% ou 7%).</p>
+<p>Eficiência energética: Reduzir as perdas por efeito Joule (P = I² * R), que representam desperdício de energia.</p>
+<p>Durabilidade: Evitar o envelhecimento prematuro do isolamento devido a temperaturas excessivas.</p>
+<p>Conformidade legal: Cumprir o RTIEBT e as normas da ENDE.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Os Dois Critérios Fundamentais</p>
+<p>O dimensionamento de um condutor deve satisfazer dois critérios principais:</p>
+<p>Capacidade de Corrente (Iz): A corrente máxima que o condutor pode transportar em regime permanente, sem que a temperatura do condutor ultrapasse a temperatura máxima do isolamento (70°C para PVC, 90°C para XLPE). O condutor deve ter Iz ≥ I_carga (corrente de cálculo do circuito).</p>
+<p>Queda de Tensão (ΔU): A perda de tensão ao longo do condutor, devido à sua resistência. A queda de tensão total, desde a origem da instalação até ao ponto de utilização, não deve exceder:</p>
+<p>5% para iluminação (11V em 220V).</p>
+<p>7% para outros usos (15,4V em 220V).</p>
+<p>Em Angola, a ENDE também exige que a queda de tensão no ramal de ligação (até ao contador) não exceda 1%.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Normas de Referência</p>
+<p>RTIEBT – Parte 5, Secção 5.1: Dimensionamento de condutores.</p>
+<p>IEC 60364-5-52: "Dimensionamento de Condutores" – a norma internacional que serve de base para o RTIEBT. Fornece as tabelas de capacidade de corrente (Iz) para diferentes secções, métodos de instalação e tipos de isolamento.</p>
+<p>IEC 60364-5-52 – Tabela A.52-1 a A.52-17: As tabelas específicas para o cálculo de Iz e queda de tensão.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Secções Normalizadas de Condutores em Angola</p>
+<p>As secções de condutores mais comuns em Angola (cobre) são (mm²): 1,5 – 2,5 – 4 – 6 – 10 – 16 – 25 – 35 – 50 – 70 – 95 – 120 – 150 – 185 – 240.</p>
+<p>A escolha da secção é feita por aproximação ao valor normalizado superior ao calculado.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Condutores de Cobre vs. Alumínio</p>
+<p>Em Angola, a grande maioria dos condutores utilizados em instalações eléctricas são de cobre, devido à sua alta condutividade, boa resistência à corrosão e facilidade de emenda. O alumínio é mais barato, mas tem menor condutividade (exige secções maiores) e maior coeficiente de dilatação térmica (problemas com ligações). É usado principalmente em linhas aéreas da ENDE (ex: cabos ACSR) e em algumas instalações industriais de grande porte. O técnico electricista angolano trabalha predominantemente com cobre.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Condutores e Isolamentos</p>
+<p>Condutores rígidos (H07V-U): Fio de cobre maciço, isolado em PVC. Usado em instalações fixas (embutidas).</p>
+<p>Condutores flexíveis (H07V-K): Fio de cobre encordoado, isolado em PVC. Usado em quadros e ligações flexíveis.</p>
+<p>Cabos com isolamento XLPE: Maior temperatura de serviço (90°C) e maior capacidade de corrente. Usados em instalações industriais e enterradas.</p>
+<p>Cabo unipolar: Um condutor + isolamento.</p>
+<p>Cabo multipolar: Vários condutores dentro da mesma bainha (ex: cabo de 3 fases + neutro + terra).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Metodologia de Dimensionamento Passo a Passo</p>
+<p>Calcular a corrente de carga (I_carga):</p>
+<p>Monofásico: I_carga = P / (V * cos φ)</p>
+<p>Trifásico: I_carga = P / (√3 * V * cos φ)</p>
+<p>Escolher o método de instalação: Embutido, em tubo, em calha, ao ar, etc.</p>
+<p>Consultar a tabela de capacidade de corrente (Iz): Para a secção candidata, obter Iz nas condições de referência (30°C, etc.).</p>
+<p>Aplicar os factores de correcção: Temperatura ambiente (k1), agrupamento (k2), outros (ex: correcção para cabos enterrados, k3). Obter Iz' = Iz * k1 * k2 * ...</p>
+<p>Verificar a condição Iz' ≥ I_carga: Se não for satisfeita, aumentar a secção.</p>
+<p>Calcular a queda de tensão (ΔU):</p>
+<p>Monofásico: ΔU = (2 * L * I_carga * ρ) / A</p>
+<p>Trifásico: ΔU = (√3 * L * I_carga * ρ) / A</p>
+<p>Onde L é o comprimento (m), ρ a resistividade do cobre (0,01724 Ω·mm²/m a 20°C, corrigir para a temperatura de serviço), e A a secção (mm²).</p>
+<p>Verificar a condição ΔU ≤ ΔU_admissível (5% ou 7%). Se não for satisfeita, aumentar a secção.</p>
+<p>Verificar a coordenação com a protecção: In_disjuntor ≤ Iz'.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.8. Exemplo de Dimensionamento (Residência em Luanda)</p>
+<p>Dados: Circuito de tomadas de uma cozinha, com potência total de 3.500W (incluindo pequenos electrodomésticos), monofásico 220V, comprimento 25m, cabos embutidos em parede (método A), temperatura ambiente 35°C, PVC.</p>
+<p>I_carga: 3500 / 220 = 15,9 A.</p>
+<p>Secção candidata: 2,5 mm².</p>
+<p>Iz (PVC, método A, 30°C): 21 A (tabela IEC 60364-5-52).</p>
+<p>Factor de correcção de temperatura (k1): Para 35°C, PVC (70°C), k1 = 0,94.</p>
+<p>Iz' = 21 * 0,94 = 19,7 A.</p>
+<p>Condição Iz' ≥ I_carga: 19,7 A ≥ 15,9 A → OK.</p>
+<p>Queda de tensão: ΔU = (2 * 25 * 15,9 * 0,01724) / 2,5 = (13,7) / 2,5 = 5,48 V (2,5%).</p>
+<p>Verificação: ΔU (5,48V) ≤ 7% de 220V (15,4V) → OK.</p>
+<p>Conclusão: Secção de 2,5 mm² é adequada.</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Secção (mm²)</th>
+      <th>Iz (A) – PVC, 30°C, Método A</th>
+      <th>Aplicação típica em Angola</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1,5</td>
+      <td>15</td>
+      <td>Iluminação (circuitos com poucas lâmpadas)</td>
+    </tr>
+    <tr>
+      <td>2,5</td>
+      <td>21</td>
+      <td>Tomadas de uso geral, ar condicionado (12.000 BTU)</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>28</td>
+      <td>Tomadas de cozinha, ar condicionado (18.000 BTU), fornos</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>36</td>
+      <td>Placa de indução, chuveiro eléctrico, ar condicionado central</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>50</td>
+      <td>Alimentação de quadros secundários, motores de pequeno porte</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>68</td>
+      <td>Entrada de residências (63A), alimentação de elevadores</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>89</td>
+      <td>Entrada de edifícios comerciais (100A), indústrias leves</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Calcular a Corrente de Carga</h4><p>Identificar a potência total do circuito e a tensão. Calcular I_carga.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Escolher a Secção Inicial</h4><p>Com base na experiência ou na tabela, escolher uma secção candidata.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Aplicar os Factores de Correcção</h4><p>Verificar a temperatura ambiente, o agrupamento e outros factores. Calcular Iz'.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Verificar a Capacidade de Corrente</h4><p>Se Iz' ≥ I_carga, passar ao passo seguinte. Se não, aumentar a secção e repetir.</p></div></div><div class="tli"><div class="tld">5</div><div class="tlc"><h4>Verificar a Queda de Tensão</h4><p>Calcular ΔU. Se ΔU ≤ ΔU_admissível, a secção está correcta. Se não, aumentar a secção.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Num apartamento no Kilamba, o técnico dimensionou um circuito de tomadas com cabo de 1,5 mm², pensando que "para tomadas, 1,5 mm² chega". A carga real era de 2.500W (≈11,4A). O cabo de 1,5 mm² tem Iz ≈ 15A (a 30°C), mas a 40°C (dentro da parede), Iz' ≈ 13A. O cabo sobreaqueceu, o isolamento derreteu, causando um curto-circuito e um princípio de incêndio.</p><div class="hi">Como evitar: Seguir as regras do RTIEBT: para tomadas de uso geral, usar secção mínima de 2,5 mm². Nunca subdimensionar com base em "achismos".</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1: Dimensionamento de condutores.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>5-52: Tabelas de capacidade de corrente.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Coordenação entre condutores e protecções.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a dimensionar o circuito de alimentação de um motor trifásico de 7,5 kW, 380V, cos φ = 0,85, rendimento = 0,9. O motor está a 45 metros do quadro. O cabo será de cobre, PVC, instalado em tubo embutido (método A), temperatura ambiente 30°C.</p><ol type="a"><li>Calcule a corrente nominal do motor.</li><li>Escolha a secção do cabo, usando a tabela de Iz para PVC, método A.</li><li>Calcule a queda de tensão para a secção escolhida.</li><li>A queda de tensão é aceitável (≤ 5%)? Se não, aumente a secção.</li></ol></div>
+<!-- ===== FIM AULA 5.1 ===== -->
+
+<!-- ===== AULA 5.2: Capacidade de Corrente (Iz): Tabelas e Factores de Correcção ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Localizar e interpretar as tabelas de capacidade de corrente (Iz) da IEC 60364-5-52, adaptadas ao RTIEBT.</li><li>Compreender os conceitos de "condições de referência" para as tabelas (30°C, etc.).</li><li>Aplicar os factores de correcção (temperatura, agrupamento, outros) para obter a capacidade de corrente real (Iz').</li><li>Utilizar as tabelas para dimensionar condutores em diferentes métodos de instalação.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico foi contratado para projectar a instalação eléctrica de um armazém no Zango. O armazém tinha um sistema de iluminação com 50 luminárias de LED de 150W cada (total 7.500W), distribuídas por três circuitos monofásicos. O técnico consultou a tabela de capacidade de corrente para condutores de cobre com isolamento PVC, método de instalação em calha (aparente). Ele escolheu a secção de 2,5 mm² para cada circuito, que tinha Iz = 24A (em calha). Aplicou o factor de correcção para temperatura (35°C) e agrupamento (3 circuitos na mesma calha), obtendo Iz' = 18,5A, suficiente para os 11,4A de cada circuito. O projecto foi aprovado e a instalação funciona bem.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. As Tabelas de Capacidade de Corrente (IEC 60364-5-52)</p>
+<p>A IEC 60364-5-52 contém várias tabelas (A.52-1 a A.52-17) que fornecem a capacidade de corrente (Iz) para diferentes tipos de cabos, isolamentos e métodos de instalação. As tabelas mais usadas em Angola são:</p>
+<p>Tabela A.52-3: Condutores de cobre, isolamento PVC (70°C), para diferentes métodos de instalação.</p>
+<p>Tabela A.52-4: Condutores de cobre, isolamento XLPE (90°C), para diferentes métodos de instalação.</p>
+<p>Tabela A.52-5: Correcção para temperatura ambiente (k1).</p>
+<p>Tabela A.52-6: Correcção para agrupamento de cabos (k2).</p>
+<p>Tabela A.52-9: Correcção para cabos enterrados no solo (k3).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Condições de Referência das Tabelas</p>
+<p>As tabelas de Iz são fornecidas para as seguintes condições de referência:</p>
+<p>Temperatura ambiente: 30°C para cabos ao ar ou em tubo; 20°C para cabos enterrados.</p>
+<p>Agrupamento: Um único cabo (ou circuito) sem outros cabos próximos.</p>
+<p>Método de instalação: Especificado na tabela (ex: método A, B, C, D, etc.).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Métodos de Instalação (Referências)</p>
+<p>A IEC 60364-5-52 define métodos de instalação com letras (A, B, C, D, etc.). Os mais comuns:</p>
+<p>Método A: Cabo em tubo embutido em parede termicamente isolante (ex: alvenaria).</p>
+<p>Método B: Cabo em tubo ou calha sobre a parede (aparente).</p>
+<p>Método C: Cabo ao ar (fixado na parede ou em bandeja perfurada).</p>
+<p>Método D: Cabo enterrado no solo (directamente ou em tubo).</p>
+<p>Cada método tem uma capacidade de corrente diferente (o método C permite maior corrente, pois o cabo dissipa melhor o calor).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Interpretação da Tabela A.52-3 (Exemplo)</p>
+<p>Para cabo de cobre, PVC, 2 condutores carregados (monofásico), método A (embutido):</p>
+<p>Secção (mm²)	Iz (A)</p>
+<p>1,5	15</p>
+<p>2,5	21</p>
+<p>4	28</p>
+<p>6	36</p>
+<p>10	50</p>
+<p>16	68</p>
+<p>Para cabo de cobre, PVC, 3 condutores carregados (trifásico), método A:</p>
+<p>Secção (mm²)	Iz (A)</p>
+<p>1,5	13,5</p>
+<p>2,5	18,5</p>
+<p>4	25</p>
+<p>6	32</p>
+<p>10	45</p>
+<p>16	61</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Factores de Correcção (Resumo)</p>
+<p>Factor de correcção de temperatura (k1): Ajusta Iz para temperaturas diferentes de 30°C (ver tabela A.52-5).</p>
+<p>Factor de correcção de agrupamento (k2): Ajusta Iz quando vários cabos estão agrupados (ver tabela A.52-6).</p>
+<p>Factor de correcção para cabos enterrados (k3): Ajusta Iz para resistividade térmica do solo (ver tabela A.52-9).</p>
+<p>Factor de correcção para profundidade (k4): Ajusta Iz para profundidade de enterramento.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Exemplo de Aplicação das Tabelas</p>
+<p>Dados: Circuito trifásico de 32A, cabo de cobre, isolamento XLPE (90°C), método C (ao ar em bandeja), temperatura ambiente 40°C.</p>
+<p>Tabela A.52-4 (XLPE, 3 condutores, método C): Para 32A, a secção necessária é 4 mm² (Iz = 42A).</p>
+<p>Factor de correcção de temperatura (k1): Para 40°C, XLPE (90°C), k1 = 0,91 (tabela A.52-5).</p>
+<p>Iz' = 42 * 0,91 = 38,2 A.</p>
+<p>Verificação: 38,2A ≥ 32A → OK.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Verificação Prática</p>
+<p>Na prática, o técnico deve:</p>
+<p>Calcular I_carga.</p>
+<p>Consultar a tabela adequada para o tipo de cabo, isolamento, número de condutores e método de instalação.</p>
+<p>Obter Iz.</p>
+<p>Aplicar os factores de correcção (k1, k2, etc.) para obter Iz'.</p>
+<p>Verificar Iz' ≥ I_carga.</p>
+<p>Se não, aumentar a secção.</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Temperatura Ambiente (°C)</th>
+      <th>Factor k1 (PVC – 70°C)</th>
+      <th>Factor k1 (XLPE – 90°C)</th>
+      <th>Observação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20</td>
+      <td>1,12</td>
+      <td>1,10</td>
+      <td>Aumento da capacidade</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>1,06</td>
+      <td>1,05</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>1,00</td>
+      <td>1,00</td>
+      <td>Condição de referência</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>0,94</td>
+      <td>0,96</td>
+      <td>Comum em Angola (interior)</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>0,87</td>
+      <td>0,91</td>
+      <td>Comum em Angola (exterior, coberturas)</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>0,79</td>
+      <td>0,87</td>
+      <td>Ambientes quentes (ex: cozinhas industriais)</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>0,71</td>
+      <td>0,82</td>
+      <td>Ambientes muito quentes</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Determinar o Método de Instalação</h4><p>Identificar se o cabo está em tubo embutido, em calha aparente, ao ar, ou enterrado.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Seleccionar a Tabela Adequada</h4><p>Escolher a tabela correspondente ao tipo de cabo (PVC ou XLPE) e ao número de condutores carregados.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Obter Iz para a Secção Candidata</h4><p>Na tabela, ler Iz para a secção escolhida.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Aplicar os Factores de Correcção</h4><p>Calcular Iz' = Iz * k1 * k2 * ... (k1 da tabela A.52-5, k2 da tabela A.52-6).</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Um técnico dimensionou um cabo para um circuito de 30A, usando a tabela para PVC (Iz = 32A para 6 mm²). No entanto, o cabo foi instalado num local com temperatura de 45°C (cobertura do edifício), e ele não aplicou o factor de correcção k1 (0,79). Iz' = 32 * 0,79 = 25,3A, insuficiente para 30A. O cabo sobreaqueceu, danificando o isolamento e causando uma falha no circuito.</p><div class="hi">Como evitar: Sempre aplicar o factor de correcção de temperatura (k1) para a temperatura real do local de instalação. Em Angola, a temperatura ambiente pode exceder os 40°C, especialmente em coberturas e exteriores.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>5-52 – Tabelas A.52-1 a A.52-17: Base para o dimensionamento.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1.2: Remete para as tabelas da IEC.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a dimensionar um cabo de alimentação de um motor trifásico de 22 kW, 380V, cos φ = 0,85, rendimento = 0,92. O cabo será de cobre, XLPE, instalado em tubo embutido (método A), temperatura ambiente 40°C. O motor está a 30 metros do quadro.</p><ol type="a"><li>Calcule a corrente nominal do motor.</li><li>Na tabela A.52-4 (XLPE, método A), qual a secção necessária para suportar esta corrente (sem correcção)?</li><li>Aplique o factor de correcção de temperatura (k1) para 40°C e determine a secção necessária.</li><li>Verifique a queda de tensão para a secção escolhida.</li></ol></div>
+<!-- ===== FIM AULA 5.2 ===== -->
+
+<!-- ===== AULA 5.3: Queda de Tensão Admissível: Cálculo e Verificação ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Definir queda de tensão e os seus limites regulamentares (5% para iluminação, 7% para outros usos).</li><li>Calcular a queda de tensão em circuitos monofásicos e trifásicos, utilizando as fórmulas adequadas.</li><li>Verificar se a queda de tensão calculada é inferior aos limites admissíveis, ajustando a secção se necessário.</li><li>Interpretar o impacto da queda de tensão no funcionamento dos equipamentos e na eficiência energética.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2023, um restaurante no Talatona instalou um forno eléctrico de 8 kW, monofásico, a 220V, com um cabo de 6 mm² de 40 metros de comprimento. O forno, quando ligado, não atingia a temperatura máxima, e os pães saíam mal cozidos. O técnico chamado para diagnosticar o problema mediu a tensão no forno e encontrou 195V (queda de 25V, 11,4%). A queda de tensão, superior aos 7% admissíveis (15,4V), reduzia a potência do forno (P = V²/R), que passava de 8 kW para cerca de 6,4 kW. O técnico substituiu o cabo por um de 10 mm², reduzindo a queda de tensão para 6,2V (2,8%), e o forno passou a funcionar correctamente.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. O que é Queda de Tensão?</p>
+<p>A queda de tensão (ΔU) é a diferença de potencial entre a origem do circuito (quadro) e o ponto de utilização (carga), devido à resistência dos condutores. É calculada por:</p>
+<p>Monofásico (220V): ΔU = (2 * L * I * ρ) / A</p>
+<p>Trifásico (380V): ΔU = (√3 * L * I * ρ) / A</p>
+<p>Onde:</p>
+<p>L = comprimento do cabo (em metros, ida e volta para monofásico, ou linha para trifásico).</p>
+<p>I = corrente de carga (A).</p>
+<p>ρ = resistividade do cobre a 20°C (0,01724 Ω·mm²/m) ou corrigida para a temperatura de serviço (ρ = ρ20 * (1 + α * (T - 20)), com α = 0,004 /°C para cobre).</p>
+<p>A = secção do condutor (mm²).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Limites de Queda de Tensão (RTIEBT)</p>
+<p>O RTIEBT, em conformidade com a IEC 60364, estabelece:</p>
+<p>Iluminação: ΔU máxima = 5% da tensão nominal (11V para 220V).</p>
+<p>Outros usos (tomadas, motores, etc.): ΔU máxima = 7% da tensão nominal (15,4V para 220V).</p>
+<p>Queda de tensão total (da ENDE ao ponto de utilização): A soma da queda no ramal de ligação (1%) + queda na instalação interna (até 4% para iluminação, 6% para outros) deve ser ≤ 5% ou 7%.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Efeitos da Queda de Tensão Excessiva</p>
+<p>Redução do desempenho dos equipamentos: Motores com torque reduzido, lâmpadas com menor luminosidade, aquecedores com menor potência.</p>
+<p>Aumento da corrente: Para equipamentos de potência constante (ex: motores), a queda de tensão faz com que a corrente aumente (I = P / V), o que pode sobrecarregar o circuito.</p>
+<p>Perdas de energia: A energia dissipada nos condutores (P_perda = I² * R) é desperdiçada.</p>
+<p>Danos em equipamentos: Em motores, a baixa tensão pode causar sobreaquecimento e queima dos enrolamentos.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Cálculo da Queda de Tensão com Correção de Temperatura</p>
+<p>A resistividade do cobre aumenta com a temperatura. A fórmula corrigida é:</p>
+<p>ρ = ρ20 * [1 + α * (T - 20)]</p>
+<p>Onde ρ20 = 0,01724 Ω·mm²/m, α = 0,004 /°C, e T é a temperatura de serviço do condutor (geralmente a temperatura ambiente + o aquecimento devido à corrente).</p>
+<p>Exemplo: Para um cabo PVC (70°C) a 40°C de ambiente, a temperatura de serviço pode ser ~50°C. ρ = 0,01724 * [1 + 0,004 * (50 - 20)] = 0,01724 * 1,12 = 0,0193 Ω·mm²/m.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Exemplo de Cálculo (Monofásico)</p>
+<p>Dados: Circuito de iluminação, 220V, I = 10A, L = 30m, cabo de 2,5 mm², PVC, temperatura 30°C (ρ = 0,01724).</p>
+<p>ΔU = (2 * 30 * 10 * 0,01724) / 2,5 = (10,344) / 2,5 = 4,14 V.</p>
+<p>Percentagem: (4,14 / 220) * 100 = 1,9% (OK, ≤ 5%).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Exemplo de Cálculo (Trifásico)</p>
+<p>Dados: Motor trifásico, 380V, I = 25A, L = 50m, cabo de 10 mm², PVC, temperatura 30°C.</p>
+<p>ΔU = (√3 * 50 * 25 * 0,01724) / 10 = (1,73 * 21,55) / 10 = 37,28 / 10 = 3,73 V.</p>
+<p>Percentagem: (3,73 / 380) * 100 = 0,98% (OK, ≤ 5%).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Método Simplificado para Queda de Tensão (para projectos rápidos)</p>
+<p>Em Angola, muitos técnicos usam a seguinte regra prática para cabos de cobre (PVC, 30°C):</p>
+<p>ΔU (%) ≈ (2 * L * I) / (A * 56) para monofásico.</p>
+<p>ΔU (%) ≈ (√3 * L * I) / (A * 56) para trifásico.</p>
+<p>Onde 56 é a condutividade do cobre (S·m/mm²).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.8. Como Reduzir a Queda de Tensão</p>
+<p>Aumentar a secção do cabo.</p>
+<p>Reduzir o comprimento do cabo (aproximar o quadro da carga).</p>
+<p>Utilizar cabos com condutividade mais elevada (cobre em vez de alumínio).</p>
+<p>Aumentar a tensão (ex: usar 380V em vez de 220V, se possível).</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Representação da Queda de Tensão num Circuito</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" font-family="Arial, sans-serif">
+  <rect width="600" height="350" fill="#f4f7f6" rx="10"/>
+  <text x="300" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Queda de Tensão num Circuito</text>
+
+  <!-- Fonte -->
+  <rect x="50" y="80" width="80" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="90" y="105" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Fonte</text>
+  <text x="90" y="120" text-anchor="middle" fill="white" font-size="8">220V</text>
+
+  <!-- Resistor do cabo (ida) -->
+  <rect x="150" y="70" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="190" y="90" text-anchor="middle" fill="white" font-size="9">R_cabo (ida)</text>
+
+  <!-- Resistor do cabo (volta) -->
+  <rect x="150" y="170" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="190" y="190" text-anchor="middle" fill="white" font-size="9">R_cabo (volta)</text>
+
+  <!-- Carga -->
+  <rect x="280" y="110" width="100" height="60" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="5"/>
+  <text x="330" y="135" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Carga</text>
+  <text x="330" y="150" text-anchor="middle" fill="white" font-size="8">(R_carga)</text>
+
+  <!-- Linhas -->
+  <line x1="130" y1="90" x2="150" y2="85" stroke="#333" stroke-width="2"/>
+  <line x1="230" y1="85" x2="280" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="380" y1="120" x2="430" y2="170" stroke="#333" stroke-width="2"/>
+  <line x1="430" y1="185" x2="150" y2="185" stroke="#333" stroke-width="2"/>
+  <line x1="150" y1="185" x2="130" y2="100" stroke="#333" stroke-width="2"/>
+
+  <!-- Indicações de tensão -->
+  <text x="90" y="65" text-anchor="middle" font-size="9" fill="#d9534f">V_fonte = 220V</text>
+
+  <text x="190" y="60" text-anchor="middle" font-size="9" fill="#f0ad4e">ΔU/2</text>
+  <text x="190" y="205" text-anchor="middle" font-size="9" fill="#f0ad4e">ΔU/2</text>
+
+  <text x="330" y="100" text-anchor="middle" font-size="9" fill="#5cb85c">V_carga = 220 - ΔU</text>
+
+  <!-- Fórmula -->
+  <text x="50" y="280" font-size="11" fill="#333" font-weight="bold">Fórmula (monofásico):</text>
+  <text x="50" y="300" font-size="10" fill="#333">ΔU = (2 * L * I * ρ) / A</text>
+  <text x="50" y="320" font-size="10" fill="#333">Onde: L = comprimento (m), I = corrente (A), ρ = resistividade, A = secção (mm²)</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Calcular a Corrente de Carga</h4><p>Usar a fórmula adequada (monofásico ou trifásico).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Escolher a Secção Candidata</h4><p>Com base na capacidade de corrente, escolher uma secção.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Calcular a Queda de Tensão</h4><p>Usar a fórmula de ΔU.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Verificar os Limites</h4><p>Comparar ΔU com os limites (5% ou 7%). Se ΔU &gt; limite, aumentar a secção e recalcular.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num prédio de escritórios, o técnico dimensionou o cabo de alimentação de um elevador apenas pela capacidade de corrente, ignorando a queda de tensão (L = 80m, secção de 25 mm²). O elevador, quando arrancava, causava uma queda de tensão de 15V (6,8%), que fazia com que as luzes do prédio piscassem. Além disso, o motor do elevador sobreaquecia. O técnico teve que substituir o cabo por 50 mm².</p><div class="hi">Como evitar: Em circuitos longos, a queda de tensão é muitas vezes o critério determinante, mesmo que a capacidade de corrente seja satisfeita. Calcular sempre a queda de tensão e, se necessário, aumentar a secção.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1.3: Limites de queda de tensão.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>5-52: Métodos de cálculo da queda de tensão.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a dimensionar o circuito de alimentação de um sistema de ar condicionado central de 15 kW, trifásico, 380V, cos φ = 0,85. O comprimento do cabo é de 60 metros. O cabo será de cobre, PVC, instalado em tubo embutido (método A).</p><ol type="a"><li>Calcule a corrente nominal do ar condicionado.</li><li>Escolha a secção do cabo com base na capacidade de corrente (Iz) para método A, PVC.</li><li>Calcule a queda de tensão para a secção escolhida.</li><li>A queda de tensão é aceitável (≤ 5%)? Se não, qual a secção necessária?</li></ol></div>
+<!-- ===== FIM AULA 5.3 ===== -->
+
+<!-- ===== AULA 5.4: Métodos de Instalação de Cabos e sua Influência na Capacidade de Corrente ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever os principais métodos de instalação de cabos (embutido, em tubo, em calha, ao ar, enterrado) e as suas características.</li><li>Explicar como o método de instalação afecta a dissipação de calor e, consequentemente, a capacidade de corrente (Iz).</li><li>Seleccionar o método de instalação adequado para diferentes locais em Angola (residencial, comercial, industrial).</li><li>Aplicar as tabelas de capacidade de corrente para o método de instalação escolhido.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico foi contratado para projectar a instalação eléctrica de uma nova fábrica de processamento de frutas no Huambo. O técnico escolheu cabos de cobre com isolamento XLPE (90°C) para os circuitos de potência, e instalou-os em bandeja metálica perfurada (método C), a uma altura de 4 metros do chão. Este método permite uma excelente dissipação de calor, resultando em maior capacidade de corrente do que se os cabos estivessem embutidos em parede (método A). O técnico conseguiu usar cabos de secção menor do que seria necessário noutro método, poupando custos.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Influência do Método de Instalação na Capacidade de Corrente</p>
+<p>A capacidade de corrente (Iz) de um cabo depende da sua capacidade de dissipar o calor gerado pelo efeito Joule (P = I² * R). Quanto melhor for a dissipação de calor, maior a corrente que o cabo pode suportar.</p>
+<p>Os principais factores que afectam a dissipação de calor são:</p>
+<p>Isolamento térmico: Cabos embutidos em parede (método A) têm pior dissipação do que cabos ao ar (método C).</p>
+<p>Agrupamento: Cabos agrupados aquecem-se mutuamente (factor de agrupamento k2).</p>
+<p>Ventilação: Cabos em bandeja perfurada (método C) têm melhor ventilação do que em tubo fechado (método B).</p>
+<p>Temperatura do solo: Cabos enterrados (método D) dissipam calor no solo, que tem uma resistividade térmica.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Métodos de Instalação (IEC 60364-5-52)</p>
+<p>Os métodos mais comuns são:</p>
+<p>Método A: Cabos em tubos embutidos em paredes termicamente isolantes (alvenaria, betão). É o método mais comum em residências angolanas. A dissipação de calor é moderada.</p>
+<p>Método B: Cabos em tubos ou calhas fixados em superfícies (aparente). A dissipação é um pouco melhor que o método A.</p>
+<p>Método C: Cabos ao ar, fixados em paredes, em bandejas perfuradas, ou em suportes. A dissipação é excelente (o ar circula livremente).</p>
+<p>Método D: Cabos enterrados directamente no solo ou em tubos enterrados. A dissipação depende da resistividade térmica do solo (em Angola, o solo é geralmente seco, com alta resistividade térmica, o que reduz a capacidade de corrente).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Método A – Embutido em Parede</p>
+<p>Características:</p>
+<p>O cabo está dentro de um tubo (PVC ou metálico) embutido na alvenaria.</p>
+<p>O calor é dissipado através da parede, que actua como isolante térmico.</p>
+<p>Aplicação: Instalações residenciais e comerciais em Angola (o mais comum).</p>
+<p>Vantagem: Estético (os cabos não são visíveis).</p>
+<p>Desvantagem: Menor capacidade de corrente (Iz é cerca de 15-20% menor do que no método C).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Método B – Tubo ou Calha Aparente</p>
+<p>Características:</p>
+<p>O cabo está dentro de um tubo ou calha fixado na superfície da parede ou tecto.</p>
+<p>A dissipação é melhor do que no método A (o ar circula em torno do tubo).</p>
+<p>Aplicação: Em locais onde não se pode embutir (ex: paredes de betão armado), ou em instalações industriais.</p>
+<p>Vantagem: Mais fácil de instalar e modificar.</p>
+<p>Desvantagem: Menos estético.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Método C – Cabo ao Ar (Bandeja, Suporte)</p>
+<p>Características:</p>
+<p>O cabo está fixado directamente em paredes, em bandejas metálicas perfuradas, ou em suportes, sem tubo.</p>
+<p>A dissipação de calor é excelente (o ar circula livremente em torno do cabo).</p>
+<p>Aplicação: Indústrias, armazéns, estaleiros, exteriores.</p>
+<p>Vantagem: Maior capacidade de corrente (Iz é cerca de 20-30% maior do que no método A).</p>
+<p>Desvantagem: Menos protecção mecânica (o cabo pode ser danificado por impactos ou roedores).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Método D – Cabo Enterrado</p>
+<p>Características:</p>
+<p>O cabo é enterrado directamente no solo ou dentro de um tubo enterrado.</p>
+<p>A dissipação de calor depende da resistividade térmica do solo (solo seco: baixa dissipação; solo húmido: melhor dissipação).</p>
+<p>Aplicação: Alimentação de instalações exteriores (ex: bombas de água, iluminação de jardim), ramais de entrada da ENDE.</p>
+<p>Vantagem: Estético e protegido.</p>
+<p>Desvantagem: Menor capacidade de corrente (devido ao solo seco em Angola), e difícil de reparar.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Comparação de Iz para Diferentes Métodos (Exemplo – Cabo PVC, 2,5 mm²)</p>
+<p>Método	Iz (A)</p>
+<p>Método A (embutido)	21</p>
+<p>Método B (tubo aparente)	23</p>
+<p>Método C (ao ar)	27</p>
+<p>Método D (enterrado, solo seco)	18</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.8. Escolha do Método de Instalação em Angola</p>
+<p>Residências: Método A (embutido) é o padrão.</p>
+<p>Escritórios e comércio: Método A (embutido) ou B (tubo aparente, em tectos falsos).</p>
+<p>Indústrias: Método C (bandeja) é o mais comum para motores e circuitos de potência.</p>
+<p>Exteriores: Método C (ao ar, com protecção UV) ou D (enterrado).</p>
+<p>Zonas costeiras: Usar cabos com bainha especial (ex: cabo de cobre estanhado) e métodos com protecção contra corrosão.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Comparação dos Métodos de Instalação</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Arial, sans-serif">
+  <rect width="600" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="300" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Métodos de Instalação de Cabos</text>
+
+  <!-- Método A -->
+  <rect x="30" y="60" width="260" height="140" fill="white" stroke="#333" stroke-width="1.5" rx="5"/>
+  <text x="160" y="80" text-anchor="middle" font-size="11" font-weight="bold" fill="#0072b0">Método A – Embutido</text>
+  <!-- Parede -->
+  <rect x="50" y="100" width="180" height="60" fill="#d3d3d3" stroke="#888" stroke-width="1.5"/>
+  <text x="140" y="130" text-anchor="middle" font-size="9" fill="#333">Parede</text>
+  <!-- Tubo -->
+  <rect x="100" y="120" width="80" height="20" fill="#f0ad4e" stroke="#ec971f" stroke-width="1.5"/>
+  <text x="140" y="135" text-anchor="middle" font-size="8" fill="#333">Tubo</text>
+  <!-- Cabo -->
+  <line x1="110" y1="130" x2="170" y2="130" stroke="#d9534f" stroke-width="4"/>
+  <text x="160" y="180" font-size="9" fill="#333">Iz = 21A (2,5mm² PVC)</text>
+
+  <!-- Método B -->
+  <rect x="310" y="60" width="260" height="140" fill="white" stroke="#333" stroke-width="1.5" rx="5"/>
+  <text x="440" y="80" text-anchor="middle" font-size="11" font-weight="bold" fill="#f0ad4e">Método B – Tubo Aparente</text>
+  <!-- Superfície -->
+  <rect x="330" y="100" width="180" height="60" fill="#d3d3d3" stroke="#888" stroke-width="1.5"/>
+  <!-- Tubo -->
+  <rect x="370" y="120" width="80" height="20" fill="#f0ad4e" stroke="#ec971f" stroke-width="1.5"/>
+  <text x="410" y="135" text-anchor="middle" font-size="8" fill="#333">Tubo</text>
+  <text x="440" y="180" font-size="9" fill="#333">Iz = 23A (2,5mm² PVC)</text>
+
+  <!-- Método C -->
+  <rect x="30" y="220" width="260" height="140" fill="white" stroke="#333" stroke-width="1.5" rx="5"/>
+  <text x="160" y="240" text-anchor="middle" font-size="11" font-weight="bold" fill="#5cb85c">Método C – Ao Ar</text>
+  <!-- Suporte -->
+  <rect x="50" y="270" width="180" height="30" fill="#6c6c6c" stroke="#4a4a4a" stroke-width="1.5"/>
+  <!-- Cabo -->
+  <line x1="80" y1="260" x2="200" y2="260" stroke="#d9534f" stroke-width="4"/>
+  <text x="160" y="350" font-size="9" fill="#333">Iz = 27A (2,5mm² PVC)</text>
+
+  <!-- Método D -->
+  <rect x="310" y="220" width="260" height="140" fill="white" stroke="#333" stroke-width="1.5" rx="5"/>
+  <text x="440" y="240" text-anchor="middle" font-size="11" font-weight="bold" fill="#5bc0de">Método D – Enterrado</text>
+  <!-- Solo -->
+  <rect x="330" y="260" width="180" height="60" fill="#a0a0a0" stroke="#888" stroke-width="1.5"/>
+  <!-- Cabo enterrado -->
+  <line x1="370" y1="290" x2="470" y2="290" stroke="#d9534f" stroke-width="4"/>
+  <text x="440" y="350" font-size="9" fill="#333">Iz = 18A (2,5mm² PVC)</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar o Local de Instalação</h4><p>Determinar se o cabo será embutido, aparente, ao ar ou enterrado.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Seleccionar o Método de Instalação na Tabela</h4><p>Na tabela IEC 60364-5-52, escolher a coluna correspondente ao método.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Obter Iz para o Método</h4><p>Ler Iz para a secção candidata, no método escolhido.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Aplicar os Factores de Correcção</h4><p>Aplicar k1 (temperatura) e k2 (agrupamento) a Iz.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Num armazém, o técnico instalou cabos em tubo embutido no chão de betão (método D, mas sem a correcção adequada). Ele usou a tabela para método C (ao ar), e subdimensionou os cabos. Os cabos sobreaqueceram, danificando o isolamento e causando uma falha no sistema de iluminação.</p><div class="hi">Como evitar: Identificar correctamente o método de instalação. Consultar a tabela correspondente ao método real, não ao método mais favorável.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>5-52 – Tabela A.52-3 e A.52-4: Capacidade de corrente para diferentes métodos.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1.2: Remete para os métodos da IEC.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a dimensionar um cabo para um circuito de 40A, trifásico, 380V. O cabo será de cobre, PVC, instalado em bandeja perfurada ao ar (método C). A temperatura ambiente é de 35°C.</p><ol type="a"><li>Qual a secção necessária, considerando a tabela A.52-3 para método C?</li><li>Se o cabo fosse instalado em tubo embutido (método A), qual seria a secção necessária?</li><li>Qual a diferença de custo (aproximada) entre as duas soluções, sabendo que o cabo de 10 mm² custa 500 AOA/m e o de 16 mm² custa 800 AOA/m (comprimento 50m)?</li><li>Que método o técnico deve escolher para esta aplicação (justifique)?</li></ol></div>
+<!-- ===== FIM AULA 5.4 ===== -->
+
+<!-- ===== AULA 5.5: Factores de Correcção: Temperatura Ambiente ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Compreender o efeito da temperatura ambiente na capacidade de corrente dos condutores.</li><li>Utilizar a tabela de factores de correcção de temperatura (k1) para cabos PVC e XLPE.</li><li>Aplicar o factor k1 no dimensionamento de condutores para as condições climáticas de Angola (temperaturas de 30°C a 45°C).</li><li>Calcular a capacidade de corrente corrigida (Iz') para diferentes temperaturas.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico dimensionou os cabos para um novo edifício no Talatona, utilizando os valores de Iz para 30°C. No entanto, os cabos foram instalados no tecto técnico, onde a temperatura atinge 45°C durante o dia. Os cabos, embora tecnicamente adequados para 30°C, estavam a operar acima da temperatura máxima de serviço, o que acelerou a degradação do isolamento. Após um ano, o isolamento de vários cabos estava ressequido e fissurado. O técnico teve que substituir os cabos por secções superiores, considerando agora a temperatura real.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Efeito da Temperatura na Capacidade de Corrente</p>
+<p>A capacidade de corrente (Iz) de um cabo é baseada numa temperatura ambiente de referência (30°C para cabos ao ar, 20°C para cabos enterrados). Se a temperatura ambiente for superior, a capacidade de corrente diminui, porque o cabo já está a uma temperatura mais elevada e tem menos margem para dissipar o calor gerado pela corrente.</p>
+<p>A relação entre a temperatura ambiente e a capacidade de corrente é dada por:</p>
+<div class="fbox"><div class="f">I_corrigida = Iz * k1</div></div>
+<p>Onde k1 é o factor de correcção de temperatura (≤ 1 para temperaturas &gt; 30°C, &gt; 1 para temperaturas &lt; 30°C).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Tabela de Factores de Correcção de Temperatura (k1)</p>
+<p>A tabela A.52-5 da IEC 60364-5-52 fornece os valores de k1 para diferentes temperaturas e tipos de isolamento.</p>
+<p>Extracto da Tabela A.52-5:</p>
+<p>Temperatura Ambiente (°C)	Factor k1 (PVC – 70°C)	Factor k1 (XLPE – 90°C)	Factor k1 (EPR – 90°C)</p>
+<p>20	1,12	1,10	1,10</p>
+<p>25	1,06	1,05	1,05</p>
+<p>30	1,00	1,00	1,00</p>
+<p>35	0,94	0,96	0,96</p>
+<p>40	0,87	0,91	0,91</p>
+<p>45	0,79	0,87	0,87</p>
+<p>50	0,71	0,82	0,82</p>
+<p>55	0,61	0,76	0,76</p>
+<p>60	0,50	0,71	0,71</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Aplicação Prática em Angola</p>
+<p>Em Angola, as temperaturas típicas são:</p>
+<p>Interior (com ar condicionado): 25°C – não necessita correcção significativa (k1 ≈ 1,05).</p>
+<p>Interior (sem ar condicionado): 30°C a 35°C (k1 ≈ 0,94 a 1,00).</p>
+<p>Tectos e coberturas: 40°C a 45°C (k1 ≈ 0,79 a 0,91).</p>
+<p>Exterior (sol directo): 45°C a 50°C (k1 ≈ 0,71 a 0,87 para PVC, 0,82 a 0,87 para XLPE).</p>
+<p>O técnico deve sempre considerar a temperatura real do local de instalação. Em Angola, subestimar a temperatura é um erro comum.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Exemplo de Cálculo com k1</p>
+<p>Dados: Cabo de cobre, 2,5 mm², PVC, método A, Iz = 21A (a 30°C). Instalado num tecto a 45°C. k1 = 0,79 (PVC, 45°C).</p>
+<p>Iz' = 21 * 0,79 = 16,6 A.</p>
+<p>Conclusão: O cabo de 2,5 mm² só pode transportar 16,6A a 45°C, em vez de 21A. Se a corrente de carga for 18A, o cabo de 2,5 mm² é insuficiente, e deve-se usar 4 mm² (Iz = 28A * 0,79 = 22,1A).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Temperatura de Serviço vs. Temperatura Ambiente</p>
+<p>É importante distinguir:</p>
+<p>Temperatura ambiente (θ_amb): A temperatura do ar em torno do cabo.</p>
+<p>Temperatura de serviço (θ_serv): A temperatura do condutor quando está a transportar corrente. O condutor aquece acima da temperatura ambiente. A temperatura de serviço não deve exceder a temperatura máxima do isolamento (70°C para PVC, 90°C para XLPE).</p>
+<p>O factor k1 ajusta a Iz para que a temperatura de serviço não ultrapasse o limite.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Correcção para Cabos Enterrados (θ_amb = 20°C)</p>
+<p>Para cabos enterrados, a temperatura de referência é 20°C (temperatura do solo). A tabela k1 para 20°C dá k1 = 1,12 (PVC) ou 1,10 (XLPE), o que significa que a capacidade de corrente é maior do que ao ar.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Verificação Prática</p>
+<p>No dimensionamento, o técnico deve:</p>
+<p>Determinar a temperatura ambiente real do local.</p>
+<p>Consultar a tabela k1 para o tipo de isolamento (PVC ou XLPE).</p>
+<p>Calcular Iz' = Iz * k1.</p>
+<p>Usar Iz' para verificar a condição Iz' ≥ I_carga.</p></div>
+<div class="dg"><div class="dgt">Gráfico SVG: Efeito da Temperatura na Capacidade de Corrente (PVC)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Arial, sans-serif">
+  <rect width="600" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="300" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Efeito da Temperatura na Capacidade de Corrente (PVC, 2,5mm²)</text>
+
+  <!-- Eixos -->
+  <line x1="80" y1="350" x2="550" y2="350" stroke="#333" stroke-width="1.5"/>
+  <line x1="80" y1="350" x2="80" y2="50" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Labels -->
+  <text x="300" y="375" text-anchor="middle" font-size="11" fill="#333">Temperatura Ambiente (°C)</text>
+  <text x="40" y="200" transform="rotate(-90, 40, 200)" font-size="11" fill="#333">Capacidade de Corrente (A)</text>
+
+  <!-- Curva (PVC) -->
+  <path d="M 100 320 L 130 300 L 200 290 L 300 250 L 400 210 L 500 170" fill="none" stroke="#d9534f" stroke-width="3"/>
+
+  <!-- Pontos de referência -->
+  <circle cx="130" cy="300" r="5" fill="#d9534f"/>
+  <text x="120" y="295" font-size="9" fill="#d9534f">20°C (k1=1,12)</text>
+
+  <circle cx="300" cy="250" r="5" fill="#d9534f"/>
+  <text x="310" y="245" font-size="9" fill="#d9534f">30°C (k1=1,00)</text>
+
+  <circle cx="400" cy="210" r="5" fill="#d9534f"/>
+  <text x="410" y="205" font-size="9" fill="#d9534f">40°C (k1=0,87)</text>
+
+  <circle cx="500" cy="170" r="5" fill="#d9534f"/>
+  <text x="510" y="165" font-size="9" fill="#d9534f">50°C (k1=0,71)</text>
+
+  <!-- Legenda -->
+  <text x="50" y="100" font-size="10" fill="#333" font-weight="bold">Exemplo para cabo de 2,5 mm², PVC, método A:</text>
+  <text x="50" y="120" font-size="9" fill="#333">a 30°C: Iz = 21A</text>
+  <text x="50" y="140" font-size="9" fill="#333">a 40°C: Iz' = 21 * 0,87 = 18,3A</text>
+  <text x="50" y="160" font-size="9" fill="#333">a 45°C: Iz' = 21 * 0,79 = 16,6A</text>
+  <text x="50" y="180" font-size="9" fill="#333">a 50°C: Iz' = 21 * 0,71 = 14,9A</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Medir ou Estimar a Temperatura Ambiente</h4><p>No local de instalação, medir a temperatura ambiente (se possível) ou estimar com base na localização (ex: 40°C para tectos).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Seleccionar o Factor k1</h4><p>Na tabela A.52-5, escolher k1 para a temperatura e o tipo de isolamento (PVC ou XLPE).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Calcular Iz'</h4><p>Multiplicar Iz (da tabela) por k1.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Verificar a Condição</h4><p>Assegurar que Iz' ≥ I_carga. Se não, aumentar a secção.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num edifício de escritórios, os cabos foram instalados no tecto técnico, mas o técnico usou k1 = 1,00 (assumindo 30°C). A temperatura real no tecto era de 42°C. Os cabos de 2,5 mm² (Iz' = 21 * 0,87 = 18,3A) foram usados para um circuito de 19A. O cabo sobreaqueceu, o isolamento ressequiu, e após 6 meses, ocorreu um curto-circuito.</p><div class="hi">Como evitar: Sempre subestimar a temperatura (usar um valor mais alto do que o esperado) é uma prática segura. Em dúvida, usar k1 para 40°C ou 45°C.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>5-52 – Tabela A.52-5: Factores de correcção de temperatura.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1.2.1: Remete para a tabela de k1.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a dimensionar um cabo de cobre, XLPE, para um circuito de 35A, trifásico, 380V. O cabo será instalado em bandeja ao ar (método C), numa cobertura onde a temperatura atinge 50°C.</p><ol type="a"><li>Na tabela A.52-4 (XLPE, método C), qual a secção necessária a 30°C para 35A?</li><li>Qual o factor de correcção de temperatura (k1) para XLPE a 50°C?</li><li>Qual a capacidade de corrente corrigida (Iz') para a secção escolhida?</li><li>A secção é suficiente? Se não, qual a secção necessária?</li></ol></div>
+<!-- ===== FIM AULA 5.5 ===== -->
+
+<!-- ===== AULA 5.6: Factores de Correcção: Agrupamento de Cabos ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Compreender o efeito do agrupamento de cabos na sua capacidade de corrente (aquecimento mútuo).</li><li>Utilizar a tabela de factores de correcção de agrupamento (k2) para diferentes números de cabos e disposições.</li><li>Aplicar o factor k2 no dimensionamento de cabos em calhas, bandejas e tubos múltiplos.</li><li>Calcular a capacidade de corrente corrigida (Iz'') com os factores de temperatura (k1) e agrupamento (k2).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2023, um técnico dimensionou os cabos para um edifício de 10 andares, instalando 12 circuitos em cada calha de cabos. Ele usou a capacidade de corrente de cada cabo individualmente, sem aplicar o factor de agrupamento (k2). Durante o verão, os cabos na calha sobreaqueceram, e alguns disjuntores disparavam devido ao calor. O técnico teve que substituir os cabos por secções superiores e reduzir o número de cabos por calha, o que atrasou a obra em duas semanas.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Efeito do Agrupamento na Capacidade de Corrente</p>
+<p>Quando vários cabos estão agrupados (em calhas, bandejas, tubos ou feixes), eles aquecem-se mutuamente, porque o calor dissipado por um cabo aquece os cabos vizinhos, reduzindo a sua capacidade de dissipar calor. O factor de correcção de agrupamento (k2) é sempre ≤ 1 (para mais de um cabo) e depende do número de cabos e da sua disposição.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Tabela de Factores de Correcção de Agrupamento (k2)</p>
+<p>A tabela A.52-6 da IEC 60364-5-52 fornece os valores de k2 para diferentes configurações.</p>
+<p>Extracto da Tabela A.52-6 (para cabos em calha ou bandeja):</p>
+<p>Número de Cabos	Factor k2 (todos os cabos carregados)</p>
+<p>1	1,00</p>
+<p>2	0,85</p>
+<p>3	0,79</p>
+<p>4	0,75</p>
+<p>5	0,73</p>
+<p>6	0,72</p>
+<p>7	0,71</p>
+<p>8	0,70</p>
+<p>9	0,69</p>
+<p>10	0,68</p>
+<p>12	0,66</p>
+<p>14	0,64</p>
+<p>16	0,62</p>
+<p>18	0,61</p>
+<p>20	0,59</p>
+<p>Observação: Para cabos em tubos agrupados (vários tubos juntos), aplicam-se factores diferentes (geralmente mais severos).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Factor de Agrupamento para Cabos em Tubo</p>
+<p>Para cabos em tubo, a tabela A.52-7 fornece factores para o agrupamento de tubos. Em geral, o factor é mais severo do que para cabos ao ar, pois o tubo limita ainda mais a dissipação de calor.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Aplicação Prática em Angola</p>
+<p>Em Angola, o agrupamento é comum em:</p>
+<p>Calhas de cabos: Muito usadas em edifícios comerciais e indústrias. O técnico deve considerar o número total de cabos na calha.</p>
+<p>Bandejas perfuradas: A dissipação é melhor, mas ainda há agrupamento.</p>
+<p>Tubos múltiplos: Em instalações embutidas, vários circuitos podem passar no mesmo tubo (ex: iluminação e tomadas). O k2 para tubos é especialmente importante.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Exemplo de Cálculo com k1 e k2</p>
+<p>Dados: Cabo de cobre, PVC, 4 mm², método C (ao ar em bandeja), 6 cabos agrupados, temperatura 40°C.</p>
+<p>Iz (4 mm², método C, PVC, 30°C): 36 A.</p>
+<p>k1 (40°C, PVC): 0,87.</p>
+<p>k2 (6 cabos): 0,72.</p>
+<p>Iz'' = 36 * 0,87 * 0,72 = 22,5 A.</p>
+<p>Conclusão: O cabo de 4 mm², nas condições reais (agrupamento de 6 cabos e 40°C), só pode transportar 22,5 A, muito menos que os 36 A da tabela. Se a corrente de carga for 30 A, é necessário aumentar a secção.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Critérios para Aplicar k2</p>
+<p>Todos os cabos carregados: A tabela assume que todos os cabos estão a transportar corrente (carga). Se alguns cabos estiverem a menos de 30% da sua capacidade, podem ser ignorados (mas é mais seguro considerar todos).</p>
+<p>Cabos de diferentes secções: A tabela é baseada no número de cabos, independentemente da secção. No entanto, cabos de maior secção dissipam mais calor e podem afectar mais os vizinhos. Para simplificar, usa-se o número total de cabos.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Alternativas para Reduzir o Agrupamento</p>
+<p>Aumentar a distância entre os cabos (espaçamento na calha).</p>
+<p>Usar bandejas perfuradas (melhor ventilação).</p>
+<p>Separar os cabos em várias calhas.</p>
+<p>Usar cabos com isolamento de maior temperatura (XLPE) que toleram melhor o calor.</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Número de Cabos na Calha</th>
+      <th>Factor k2 (todos carregados)</th>
+      <th>Observação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1,00</td>
+      <td>Sem agrupamento</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0,85</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0,79</td>
+      <td>Comum em residências (3 circuitos)</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0,75</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>0,73</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0,72</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>0,68</td>
+      <td>Comum em edifícios comerciais</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>0,62</td>
+      <td>Calhas densas</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>0,59</td>
+      <td>Agrupamento muito denso (evitar)</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Contar o Número de Cabos Agrupados</h4><p>Identificar quantos cabos (circuitos) estão na mesma calha, bandeja ou tubo.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Seleccionar o Factor k2</h4><p>Na tabela A.52-6, escolher k2 para o número de cabos.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Aplicar k2 a Iz'</h4><p>Calcular Iz'' = Iz * k1 * k2 (se k1 já tiver sido aplicado).</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Verificar a Condição</h4><p>Garantir que Iz'' ≥ I_carga. Se não, aumentar a secção ou reduzir o agrupamento.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num edifício de escritórios, o técnico instalou 14 circuitos de 2,5 mm² numa única calha (sem aplicar k2). A calha sobreaqueceu, e os disjuntores disparavam durante os picos de consumo. O técnico teve que refazer a distribuição, separando os cabos em duas calhas.</p><div class="hi">Como evitar: Dimensionar a calha com base no número total de cabos. Em calhas com mais de 10 cabos, o factor k2 reduz significativamente a capacidade, exigindo secções maiores ou calhas adicionais.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>5-52 – Tabela A.52-6: Factores de correcção de agrupamento.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1.2.2: Remete para a tabela de k2.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a dimensionar cabos para um edifício comercial. Uma calha contém 8 cabos de cobre, PVC, 4 mm², cada um transportando 20A. A temperatura ambiente é de 35°C.</p><ol type="a"><li>Qual a Iz de um cabo de 4 mm² (PVC, método C, 30°C)?</li><li>Qual o factor de correcção de temperatura (k1) para 35°C?</li><li>Qual o factor de agrupamento (k2) para 8 cabos?</li><li>Qual a capacidade de corrente corrigida (Iz'') do cabo? É suficiente para 20A? Se não, qual a solução?</li></ol></div>
+<!-- ===== FIM AULA 5.6 ===== -->
+
+<!-- ===== AULA 5.7: Dimensionamento de Condutores em Circuitos Monofásicos e Trifásicos ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Dimensionar condutores para circuitos monofásicos (220V) e trifásicos (380V), aplicando as fórmulas adequadas.</li><li>Distinguir o número de condutores carregados em cada tipo de circuito (2 para monofásico, 3 para trifásico).</li><li>Calcular a corrente de carga para diferentes tipos de cargas (resistiva, indutiva, mista).</li><li>Aplicar as regras de dimensionamento a exemplos práticos angolanos (residências, comércios, indústrias).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico foi contratado para dimensionar os cabos de alimentação de uma bomba de água trifásica de 15 kW, 380V, num prédio no Talatona. O técnico calculou a corrente (≈ 28A) e escolheu um cabo de 6 mm² (trifásico). No mesmo prédio, o circuito de iluminação monofásico de 5 kW (≈ 23A) foi dimensionado com cabo de 4 mm². O técnico aplicou os factores de correcção de temperatura (35°C) e agrupamento, garantindo que todos os circuitos funcionam correctamente.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Circuitos Monofásicos (220V)</p>
+<p>Características:</p>
+<p>Tensão: 220V entre fase e neutro.</p>
+<p>Número de condutores carregados: 2 (fase e neutro).</p>
+<p>A corrente circula pela fase e retorna pelo neutro.</p>
+<div class="fbox"><div class="f">Fórmula da corrente de carga:</div></div>
+<div class="fbox"><div class="f">I = P / (V * cos φ)</div></div>
+<p>Onde:</p>
+<div class="fbox"><div class="f">P = potência (W)</div></div>
+<div class="fbox"><div class="f">V = tensão (220V)</div></div>
+<p>cos φ = factor de potência (≈ 1 para cargas resistivas, ≈ 0,8-0,9 para cargas indutivas).</p>
+<p>Dimensionamento do condutor:</p>
+<p>A secção é escolhida com base na Iz para 2 condutores carregados (tabela IEC).</p>
+<p>A queda de tensão é calculada com: ΔU = (2 * L * I * ρ) / A.</p>
+<p>Exemplo de Cálculo:</p>
+<p>Circuito de tomadas de uma cozinha, P = 3.500W, monofásico, 220V, L = 30m, cabo PVC, método A, temperatura 30°C.</p>
+<p>I = 3500 / 220 = 15,9 A.</p>
+<p>Secção 2,5 mm² (Iz = 21A).</p>
+<p>ΔU = (2 * 30 * 15,9 * 0,01724) / 2,5 = 6,57 V (2,99%).</p>
+<p>OK.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Circuitos Trifásicos (380V)</p>
+<p>Características:</p>
+<p>Tensão: 380V entre fases.</p>
+<p>Número de condutores carregados: 3 (três fases).</p>
+<p>A corrente circula pelas três fases, equilibrando-se.</p>
+<div class="fbox"><div class="f">Fórmula da corrente de carga:</div></div>
+<div class="fbox"><div class="f">I = P / (√3 * V * cos φ)</div></div>
+<p>Onde:</p>
+<div class="fbox"><div class="f">P = potência (W)</div></div>
+<div class="fbox"><div class="f">V = tensão de linha (380V)</div></div>
+<p>cos φ = factor de potência (para motores, ≈ 0,8-0,9).</p>
+<p>Dimensionamento do condutor:</p>
+<p>A secção é escolhida com base na Iz para 3 condutores carregados (tabela IEC).</p>
+<p>A queda de tensão é calculada com: ΔU = (√3 * L * I * ρ) / A.</p>
+<p>Exemplo de Cálculo:</p>
+<p>Motor trifásico, P = 7,5 kW, 380V, cos φ = 0,85, L = 40m, cabo PVC, método A, temperatura 30°C.</p>
+<p>I = 7500 / (√3 * 380 * 0,85) = 7500 / 559,7 = 13,4 A.</p>
+<p>Secção 2,5 mm² (Iz para 3 condutores, método A = 18,5A).</p>
+<p>ΔU = (√3 * 40 * 13,4 * 0,01724) / 2,5 = (15,95) / 2,5 = 6,38 V (1,68%).</p>
+<p>OK.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Comparação Monofásico vs. Trifásico</p>
+<p>Para a mesma potência, um circuito trifásico tem uma corrente menor do que um monofásico, porque a tensão é maior (380V vs 220V). Exemplo:</p>
+<p>Potência de 10 kW, cos φ = 1.</p>
+<p>Monofásico: I = 10000 / 220 = 45,5 A.</p>
+<p>Trifásico: I = 10000 / (1,73 * 380) = 15,2 A.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Cargas Resistivas vs. Indutivas</p>
+<p>Carga resistiva (cos φ ≈ 1): Aquecedores, lâmpadas incandescentes, fornos eléctricos. A corrente é I = P / V.</p>
+<p>Carga indutiva (cos φ &lt; 1): Motores, transformadores, ar condicionado. A corrente é I = P / (V * cos φ). O factor de potência reduz a corrente activa, mas a corrente total (aparente) é maior.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Factor de Potência e Dimensionamento</p>
+<p>Em Angola, muitas cargas têm baixo factor de potência (ex: motores antigos, cos φ = 0,7). O técnico deve considerar o cos φ real para dimensionar correctamente. Se não souber, usar 0,8 para motores e 0,9 para cargas mistas.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Exemplo Completo (Residência)</p>
+<p>Dados: Residência de 200 m², potência total: iluminação 2 kW, tomadas 5 kW, cozinha 8 kW, ar condicionado 6 kW, chuveiro 5,5 kW. Tensão monofásica 220V.</p>
+<p>Potência total instalada: 26,5 kW.</p>
+<p>Potência de cálculo (ks = 0,6): 15,9 kW.</p>
+<p>Corrente de cálculo: I = 15900 / 220 = 72,3 A.</p>
+<p>Circuito geral (entrada): Cabo 16 mm² (Iz ≈ 68A a 30°C, método A; com correcção para 35°C, Iz' = 68 * 0,94 = 63,9A → insuficiente; usar 25 mm², Iz = 89A, Iz' = 83,7A).</p>
+<p>Circuitos terminais:</p>
+<p>Iluminação: 1,5 mm², Iz = 15A.</p>
+<p>Tomadas: 2,5 mm², Iz = 21A.</p>
+<p>Cozinha: 6 mm², Iz = 36A.</p>
+<p>Ar condicionado: 4 mm², Iz = 28A.</p>
+<p>Chuveiro: 6 mm², Iz = 36A.</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Potência (kW)</th>
+      <th>Corrente Monofásica (220V, cos φ=1) (A)</th>
+      <th>Corrente Trifásica (380V, cos φ=1) (A)</th>
+      <th>Corrente Trifásica (380V, cos φ=0,85) (A)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>22,7</td>
+      <td>7,6</td>
+      <td>8,9</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>45,5</td>
+      <td>15,2</td>
+      <td>17,9</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>68,2</td>
+      <td>22,8</td>
+      <td>26,8</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>90,9</td>
+      <td>30,4</td>
+      <td>35,8</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>136,4</td>
+      <td>45,6</td>
+      <td>53,6</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>227,3</td>
+      <td>76,0</td>
+      <td>89,4</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar o Tipo de Circuito</h4><p>Monofásico ou trifásico? Tensão (220V ou 380V)?</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Calcular a Corrente de Carga</h4><p>Usar a fórmula adequada (monofásico ou trifásico) e considerar o cos φ real.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Dimensionar o Condutor</h4><p>Escolher a secção com base na Iz (tabela IEC) para o número de condutores carregados (2 para monofásico, 3 para trifásico).</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Verificar a Queda de Tensão</h4><p>Aplicar a fórmula adequada e comparar com os limites.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Um técnico dimensionou um motor trifásico de 15 kW como se fosse monofásico, usando a fórmula I = P / V, obtendo 68A, e escolhendo um cabo de 16 mm². Na realidade, a corrente do motor era de 28A, e o cabo de 16 mm² era sobredimensionado (desnecessariamente caro). O cliente gastou mais 500.000 AOA em cabos do que o necessário.</p><div class="hi">Como evitar: Usar sempre a fórmula correcta para o tipo de circuito. Para trifásico, a corrente é P / (√3 * V * cos φ), não P / V.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1: Dimensionamento de condutores.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>5-52: Tabelas para 2 e 3 condutores carregados.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a dimensionar o circuito de alimentação de um motor trifásico de 22 kW, 380V, cos φ = 0,88, rendimento = 0,92. O comprimento do cabo é de 35 metros, método A (tubo embutido), temperatura 30°C.</p><ol type="a"><li>Calcule a corrente nominal do motor (considere o rendimento).</li><li>Escolha a secção do cabo (PVC, 3 condutores carregados, método A).</li><li>Calcule a queda de tensão.</li><li>Se o mesmo motor fosse monofásico (220V), qual seria a corrente e a secção necessária (considerando os mesmos dados)?</li></ol></div>
+<!-- ===== FIM AULA 5.7 ===== -->
+
+<!-- ===== AULA 5.8: Dimensionamento de Condutores para Motores e Cargas com Pico ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever as características das cargas com pico (corrente de arranque de motores, equipamentos com compressores).</li><li>Dimensionar condutores para motores, considerando a corrente nominal e a corrente de arranque.</li><li>Seleccionar disjuntores com curvas adequadas (curva D) para motores.</li><li>Aplicar os factores de correcção adicionais para motores (arranques frequentes, temperatura ambiente).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico dimensionou o cabo de alimentação de uma bomba de água de 5,5 kW, trifásica, com base na corrente nominal (≈ 10,5A), escolhendo um cabo de 2,5 mm². No entanto, o motor tinha uma corrente de arranque de 7 vezes a nominal (≈ 74A), que durou 2 segundos. O cabo de 2,5 mm² aqueceu durante o arranque, mas não o suficiente para danificar o isolamento (pois foi curto). No entanto, o disjuntor de 16A (curva C) disparava frequentemente durante o arranque. O técnico substituiu o disjuntor por um de 20A (curva D), que suporta o pico de arranque, mantendo o cabo de 2,5 mm².</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Características dos Motores e Cargas com Pico</p>
+<p>Motores e cargas com compressores (ex: ar condicionado, bombas, refrigeradores) têm uma corrente de arranque muito superior à corrente nominal:</p>
+<p>Corrente de arranque (Ia): 4 a 8 vezes a corrente nominal (In), dependendo do tipo de motor e do método de arranque.</p>
+<p>Duração do pico: De 0,1 a 3 segundos, dependendo da inércia da carga.</p>
+<p>Aquecimento: O pico de curta duração não aquece significativamente o cabo (pois o tempo é curto), mas pode causar o disparo de disjuntores (curva B ou C) e a queda de tensão na rede.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Dimensionamento de Condutores para Motores</p>
+<p>Critério 1: Corrente nominal (In)</p>
+<p>O cabo deve ser dimensionado para a corrente nominal do motor, com a devida margem (geralmente, In_motor ≤ 0,8 * Iz').</p>
+<p>Critério 2: Corrente de arranque (Ia)</p>
+<p>O cabo deve suportar a corrente de arranque sem ultrapassar a temperatura máxima do isolamento. A IEC 60364-5-52 permite que a temperatura de curto-circuito (durante o arranque) seja mais elevada do que a temperatura de regime. Para cabos PVC, a temperatura máxima de curto-circuito é 160°C (para duração &lt; 5s). Para XLPE, é 250°C.</p>
+<p>Na prática, para a maioria das instalações, o cabo dimensionado para In também suporta o pico de arranque, desde que o disjuntor não dispare.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Escolha do Disjuntor para Motores</p>
+<p>O disjuntor deve ser escolhido com uma curva D (ou, em alguns casos, curva C), que suporta correntes de arranque de 10 a 20 vezes a In. A corrente nominal do disjuntor deve ser:</p>
+<p>In_disjuntor ≥ In_motor (geralmente, 1,2 a 1,5 vezes In_motor).</p>
+<p>In_disjuntor ≤ Iz' (capacidade do cabo).</p>
+<p>Exemplo: Motor de 15A (In). Escolher disjuntor de 20A (curva D), desde que o cabo suporte 20A (ex: 4 mm², Iz = 28A).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Relé Térmico (Protecção do Motor)</p>
+<p>Além do disjuntor, o motor deve ter um relé térmico (ou um disjuntor com protecção térmica ajustável) que proteja o motor contra sobrecargas prolongadas. O relé térmico é ajustado para 1,05 a 1,15 vezes a In do motor.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Queda de Tensão Durante o Arranque</p>
+<p>A corrente de arranque elevada causa uma queda de tensão significativa. A queda de tensão durante o arranque pode ser 4 a 8 vezes a queda de tensão em regime. Em Angola, onde a rede da ENDE já tem tensões instáveis, isso pode causar problemas. O técnico deve:</p>
+<p>Dimensionar o cabo para reduzir a queda de tensão (aumentar a secção).</p>
+<p>Verificar se a queda de tensão no ponto de ligação do motor não ultrapassa 10% durante o arranque (recomendação prática).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Arranques Frequentes</p>
+<p>Se o motor arranca frequentemente (ex: bombas de poço), o cabo aquece mais, porque os picos de arranque são repetidos. O técnico deve:</p>
+<p>Usar cabo com maior secção (ou com isolamento de maior temperatura, como XLPE).</p>
+<p>Verificar a temperatura do cabo com um termómetro infravermelho, se possível.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Exemplo de Cálculo (Motor com Arranque Frequente)</p>
+<p>Dados: Motor de 7,5 kW, 380V, In = 15A, Ia = 6 * In = 90A, duração do arranque = 2s. Arranques: 10 vezes por hora. Cabo: PVC, método C, temperatura 40°C, L = 30m.</p>
+<p>Dimensionamento por In: In = 15A. Secção 2,5 mm² (Iz = 27A a 30°C, método C). k1 (40°C, PVC) = 0,87. Iz' = 27 * 0,87 = 23,5A. OK (23,5A ≥ 15A).</p>
+<p>Verificação do pico de arranque (Ia): Para cabos PVC, a temperatura máxima de curto-circuito é 160°C. Para 2,5 mm², a energia I² * t suportada é dada pelo fabricante, mas, para um arranque de 90A por 2s, I² * t = 8100 * 2 = 16.200 A²s. O cabo 2,5 mm² suporta cerca de 10.000 A²s (para PVC). Portanto, o cabo pode aquecer excessivamente. Recomenda-se aumentar a secção para 4 mm².</p>
+<p>Conclusão: Usar cabo de 4 mm² (Iz = 36A, Iz' = 31,3A) e disjuntor de 20A (curva D).</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Tipo de Motor</th>
+      <th>Potência (kW)</th>
+      <th>Corrente Nominal (A)</th>
+      <th>Corrente de Arranque (A)</th>
+      <th>Relação Ia/In</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Motor de Indução (pequeno)</td>
+      <td>1,5</td>
+      <td>3,5</td>
+      <td>21</td>
+      <td>6x</td>
+    </tr>
+    <tr>
+      <td>Motor de Indução (médio)</td>
+      <td>7,5</td>
+      <td>15</td>
+      <td>90</td>
+      <td>6x</td>
+    </tr>
+    <tr>
+      <td>Motor de Indução (grande)</td>
+      <td>30</td>
+      <td>56</td>
+      <td>336</td>
+      <td>6x</td>
+    </tr>
+    <tr>
+      <td>Compressor (ar condicionado)</td>
+      <td>3,5</td>
+      <td>16</td>
+      <td>80</td>
+      <td>5x</td>
+    </tr>
+    <tr>
+      <td>Bomba de água (submersível)</td>
+      <td>5,5</td>
+      <td>12</td>
+      <td>96</td>
+      <td>8x</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Calcular a Corrente Nominal (In)</h4><p>In = P / (√3 * V * cos φ * η).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Calcular a Corrente de Arranque (Ia)</h4><p>Ia = k * In (k = 4 a 8, ou consultar o fabricante).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Dimensionar o Cabo por In</h4><p>Escolher a secção que suporta In (com factores de correcção).</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Verificar o Pico de Arranque</h4><p>Garantir que o cabo suporta Ia durante o tempo de arranque (consultar os dados do fabricante ou usar a regra: se Ia &lt; 5 * In, o cabo dimensionado por In é suficiente; se Ia &gt; 5 * In, considerar aumentar a secção).</p></div></div><div class="tli"><div class="tld">5</div><div class="tlc"><h4>Escolher o Disjuntor</h4><p>Escolher disjuntor com curva D e In_disjuntor ≥ In_motor (ex: 1,2 * In).</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Num sistema de bombagem, o técnico usou um disjuntor de curva C num motor de 15A. Durante o arranque, o disjuntor disparava sempre. O técnico substituiu por um de curva D, e o problema foi resolvido. No entanto, o cabo de 2,5 mm² aquecia durante os arranques frequentes, e o isolamento começou a degradar-se. O técnico aumentou a secção para 4 mm².</p><div class="hi">Como evitar: Usar curva D para motores. Se os arranques forem frequentes, aumentar a secção do cabo para melhor dissipar o calor dos picos.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4, Secção 4.2.1: Protecção de motores.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3.4: Disjuntores para motores.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60947</div><blockquote>4-1: Contactores e relés térmicos.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um motor trifásico de 11 kW, 380V, cos φ = 0,85, rendimento = 0,9, tem uma corrente de arranque de 7 vezes a nominal, com duração de 3 segundos. O motor está a 50 metros do quadro, e o cabo é de cobre, PVC, método C (ao ar), temperatura 35°C. O motor arranca 5 vezes por hora.</p><ol type="a"><li>Calcule a corrente nominal do motor.</li><li>Calcule a corrente de arranque.</li><li>Dimension o cabo por In (aplique k1 e k2).</li><li>Verifique se o cabo suporta o pico de arranque (use a regra I² * t ou a recomendação prática).</li><li>Escolha o disjuntor (curva D).</li></ol></div>
+<!-- ===== FIM AULA 5.8 ===== -->
+
+<!-- ===== AULA 5.9: Escolha do Disjuntor Coordenado com a Secção do Cabo ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Compreender a necessidade de coordenação entre a secção do cabo e a corrente nominal do disjuntor.</li><li>Seleccionar a corrente nominal do disjuntor (In) de modo que In ≤ Iz' (capacidade de corrente corrigida do cabo).</li><li>Verificar a coordenação térmica e magnética entre o disjuntor e o cabo.</li><li>Aplicar as regras de coordenação a exemplos práticos angolanos.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico dimensionou um cabo de 4 mm² (Iz = 28A) para um circuito de tomadas com corrente de 20A. Ele escolheu um disjuntor de 25A (curva C). Durante um pico de carga (22A), o cabo sobreaqueceu (pois 22A é inferior a 25A, o disjuntor não disparou), mas o cabo de 4 mm² suporta 22A (Iz corrigido ≈ 25A). No entanto, o disjuntor de 25A não protegia o cabo contra sobrecarga (pois In_disjuntor &gt; Iz_cabo). O técnico deveria ter usado um disjuntor de 20A (ou 16A), que teria disparado antes do cabo sobreaquecer.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Regra de Coordenação Fundamental</p>
+<p>A regra básica para a coordenação entre o cabo e o disjuntor é:</p>
+<p>In_disjuntor ≤ Iz_cabo</p>
+<p>Onde:</p>
+<p>In_disjuntor é a corrente nominal do disjuntor.</p>
+<p>Iz_cabo é a capacidade de corrente do cabo, corrigida para as condições reais (temperatura, agrupamento, etc.).</p>
+<p>Se In_disjuntor &gt; Iz_cabo, o cabo pode sobreaquecer sem que o disjuntor dispare, causando risco de incêndio.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Coordenação Térmica (Sobrecarga)</p>
+<p>A protecção térmica do disjuntor (lâmina bimetálica) deve disparar para correntes ligeiramente superiores a In_disjuntor. A corrente de disparo térmico é geralmente 1,13 a 1,45 vezes In. Para garantir a coordenação, deve-se ter:</p>
+<p>I_carga_max ≤ In_disjuntor ≤ Iz_cabo</p>
+<p>Onde I_carga_max é a corrente máxima esperada em regime.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Coordenação Magnética (Curto-Circuito)</p>
+<p>A protecção magnética (instantânea) do disjuntor deve disparar para correntes de curto-circuito. A corrente de disparo magnético depende da curva:</p>
+<p>Curva B: 3-5 x In.</p>
+<p>Curva C: 5-10 x In.</p>
+<p>Curva D: 10-20 x In.</p>
+<p>Para garantir a coordenação, a corrente de curto-circuito no ponto de instalação deve ser ≥ corrente de disparo magnético do disjuntor. Caso contrário, o disjuntor pode não disparar em caso de curto-circuito, e o cabo pode derreter.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Exemplo de Coordenação</p>
+<p>Dados: Cabo 2,5 mm², PVC, método A, 30°C, Iz = 21A. Corrigido para 35°C: Iz' = 21 * 0,94 = 19,7A. Corrente de carga: 15A.</p>
+<p>Escolha do disjuntor: In_disjuntor ≤ 19,7A. O valor comercial mais próximo é 16A.</p>
+<p>Curva: Para tomadas de uso geral, usar curva C (suporta picos de motores).</p>
+<p>Verificação magnética: Corrente de curto-circuito no ponto = 500A. Disparo magnético do disjuntor de 16A (curva C) = 5 a 10 * 16 = 80 a 160A. Como 500A ≥ 160A, o disjuntor dispara em curto-circuito.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Disjuntores de 10A vs. 16A vs. 20A</p>
+<p>Cabo	Iz' (A)	Disjuntor recomendado	Observação</p>
+<p>1,5 mm²	≈ 14A	10A	Iluminação</p>
+<p>2,5 mm²	≈ 19A	16A	Tomadas (uso geral)</p>
+<p>4 mm²	≈ 26A	20A	Tomadas de cozinha</p>
+<p>6 mm²	≈ 34A	32A	Chuveiro, placa</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Disjuntor Diferencial (DR) e Coordenação</p>
+<p>O DR não protege contra sobrecarga (apenas contra fugas). A coordenação entre o DR e o disjuntor é: In_DR ≥ In_disjuntor, para evitar que o DR queime durante um curto-circuito.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Verificação Prática</p>
+<p>O técnico deve:</p>
+<p>Calcular Iz' do cabo.</p>
+<p>Escolher In_disjuntor ≤ Iz'.</p>
+<p>Escolher a curva adequada (B, C, D).</p>
+<p>Verificar se a corrente de curto-circuito é ≥ disparo magnético.</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Secção (mm²)</th>
+      <th>Iz' (A) – (PVC, 35°C, método A)</th>
+      <th>Disjuntor Recomendado (In)</th>
+      <th>Aplicação típica</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1,5</td>
+      <td>14,1</td>
+      <td>10A (curva B)</td>
+      <td>Iluminação</td>
+    </tr>
+    <tr>
+      <td>2,5</td>
+      <td>19,7</td>
+      <td>16A (curva C)</td>
+      <td>Tomadas de uso geral</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>26,3</td>
+      <td>20A ou 25A (curva C)</td>
+      <td>Cozinha, ar condicionado</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>33,8</td>
+      <td>32A (curva C)</td>
+      <td>Chuveiro, placa de indução</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>47,0</td>
+      <td>40A (curva C)</td>
+      <td>Quadros secundários</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>63,9</td>
+      <td>63A (curva C)</td>
+      <td>Entrada residencial</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Calcular Iz' do Cabo</h4><p>Aplicar os factores de correcção (k1, k2) a Iz.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Escolher In_disjuntor ≤ Iz'</h4><p>Seleccionar o valor comercial mais próximo (ex: 16A, 20A, 25A, etc.).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Escolher a Curva</h4><p>Curva B para iluminação, curva C para tomadas e cargas mistas, curva D para motores.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Verificar a Coordenação Magnética</h4><p>Garantir que a corrente de curto-circuito é ≥ 5-10 x In (para curva C) ou ≥ 10-20 x In (para curva D).</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Num armazém, o técnico usou um disjuntor de 40A para um cabo de 4 mm² (Iz = 28A). O cabo sobreaqueceu, derreteu o isolamento e causou um curto-circuito. O disjuntor só disparou no curto-circuito, mas o cabo já estava danificado. O prejuízo foi de 200.000 AOA.</p><div class="hi">Como evitar: Nunca usar um disjuntor com In maior que Iz_cabo. A regra é: In ≤ Iz.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Coordenação entre condutores e disjuntores.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4, Secção 4.2: Protecção contra sobreintensidades.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico tem um cabo de cobre, PVC, 6 mm², instalado em tubo embutido (método A), temperatura 35°C, com 3 cabos agrupados (k2 = 0,79). A corrente de carga é 25A.</p><ol type="a"><li>Calcule Iz' do cabo (considere Iz = 36A para 6 mm², método A, 30°C).</li><li>Qual o disjuntor máximo que pode ser usado?</li><li>Se o técnico usar um disjuntor de 32A, o que pode acontecer?</li><li>Que disjuntor seria recomendado (curva C)?</li></ol></div>
+<!-- ===== FIM AULA 5.9 ===== -->
+
+<!-- ===== AULA 5.10: Dimensionamento de Condutores Neutro e de Protecção (PE) ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Dimensionar o condutor neutro (N) em circuitos monofásicos e trifásicos, considerando o desequilíbrio de cargas.</li><li>Dimensionar o condutor de protecção (PE) com base na secção das fases, de acordo com o RTIEBT.</li><li>Compreender as regras para a redução da secção do neutro em sistemas equilibrados.</li><li>Aplicar as regras de dimensionamento do neutro e PE em instalações angolanas (TT, TN).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico dimensionou o cabo de entrada de um prédio de apartamentos (trifásico, 100A) com 4 condutores: 3 fases de 35 mm² e um neutro de 16 mm² (reduzido). O prédio tinha muitas cargas monofásicas (iluminação, tomadas), o que causou um desequilíbrio significativo entre as fases, e a corrente no neutro atingiu 70A. O cabo de neutro de 16 mm² sobreaqueceu, derretendo o isolamento. O técnico teve que substituir o neutro por um de 35 mm² (mesma secção que as fases).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Função do Condutor Neutro (N)</p>
+<p>O neutro é o condutor que, em condições normais, transporta a corrente de retorno das cargas monofásicas e a corrente de desequilíbrio das cargas trifásicas.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Dimensionamento do Neutro em Circuitos Monofásicos</p>
+<p>Em circuitos monofásicos (fase + neutro), a corrente no neutro é igual à corrente na fase. Portanto, o neutro deve ter a mesma secção que a fase.</p>
+<p>Exemplo: Circuito de tomadas de 16A, fase 2,5 mm² → neutro 2,5 mm².</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Dimensionamento do Neutro em Circuitos Trifásicos</p>
+<p>Em sistemas trifásicos equilibrados (cargas iguais em cada fase), a corrente no neutro é zero. No entanto, em instalações reais, há sempre desequilíbrio (cargas monofásicas distribuídas). O RTIEBT (e a IEC 60364-5-52) permite a redução da secção do neutro, com base nas seguintes regras:</p>
+<p>Regra 1 (geral): Se a corrente de desequilíbrio (I_deseq) for inferior a 50% da corrente de fase (I_fase), o neutro pode ter secção reduzida, desde que a secção mínima seja 50% da secção da fase.</p>
+<p>Regra 2 (para cabos com secção &gt; 16 mm²): O neutro deve ter pelo menos 50% da secção da fase.</p>
+<p>Regra 3 (para cabos com secção ≤ 16 mm²): O neutro deve ter a mesma secção que a fase.</p>
+<p>Exemplo:</p>
+<p>Cabo 3 x 35 mm² + N 16 mm² (reduzido) – permitido se I_deseq &lt; 50% de I_fase.</p>
+<p>Cabo 3 x 10 mm² + N 10 mm² (mesma secção) – obrigatório para secções ≤ 16 mm².</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Cálculo da Corrente de Desequilíbrio</p>
+<p>A corrente de desequilíbrio no neutro é a soma vectorial das correntes de fase. Em casos de grande desequilíbrio (ex: muitas cargas monofásicas), a corrente no neutro pode ser significativa. O técnico deve calcular:</p>
+<div class="fbox"><div class="f">I_N = √(I_A² + I_B² + I_C² - I_AI_B - I_BI_C - I_C*I_A)</div></div>
+<p>Exemplo: Fase A = 80A, Fase B = 60A, Fase C = 40A.</p>
+<p>I_N = √(80² + 60² + 40² - 80*60 - 60*40 - 40*80) = √(6400 + 3600 + 1600 - 4800 - 2400 - 3200) = √(11600 - 10400) = √1200 = 34,6A.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Dimensionamento do Condutor de Protecção (PE)</p>
+<p>O condutor de protecção (PE) liga as massas metálicas à terra. A sua secção depende da secção das fases, de acordo com o RTIEBT (Tabela 5.2 da IEC 60364-5-52):</p>
+<p>Secção das Fases (mm²)	Secção Mínima do PE (mm²)</p>
+<p>≤ 16	Igual à secção da fase</p>
+<p>16 – 35	16</p>
+<p>35 – 50	25</p>
+<p>&gt; 50	50% da secção da fase (arredondado ao valor comercial superior)</p>
+<p>Exemplos:</p>
+<p>Fase 2,5 mm² → PE 2,5 mm².</p>
+<p>Fase 25 mm² → PE 16 mm².</p>
+<p>Fase 70 mm² → PE 35 mm² (50% de 70).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Condutor PEN (Sistema TN-C)</p>
+<p>No sistema TN-C, o condutor PEN acumula as funções de neutro e protecção. O PEN deve ser dimensionado como um condutor de fase (em termos de capacidade de corrente), e a sua secção não pode ser inferior a 10 mm² (cobre) ou 16 mm² (alumínio), em instalações fixas.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Verificação da Queda de Tensão no Neutro</p>
+<p>A queda de tensão no neutro contribui para a queda de tensão total. No dimensionamento, o comprimento L é o dobro (para monofásico) para considerar a ida e volta, e a secção do neutro deve ser considerada.</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Secção da Fase (mm²)</th>
+      <th>Secção Mínima do Neutro (mm²)</th>
+      <th>Secção Mínima do PE (mm²)</th>
+      <th>Observação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1,5</td>
+      <td>1,5</td>
+      <td>1,5</td>
+      <td>Igual à fase</td>
+    </tr>
+    <tr>
+      <td>2,5</td>
+      <td>2,5</td>
+      <td>2,5</td>
+      <td>Igual à fase</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>4</td>
+      <td>4</td>
+      <td>Igual à fase</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>6</td>
+      <td>6</td>
+      <td>Igual à fase</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>Igual à fase (≤16 mm²)</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>16</td>
+      <td>16</td>
+      <td>Igual à fase (≤16 mm²)</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>16 (mínimo)</td>
+      <td>16</td>
+      <td>Neutro pode ser reduzido</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>16 (mínimo)</td>
+      <td>16</td>
+      <td>Neutro pode ser reduzido</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>25 (mínimo)</td>
+      <td>25</td>
+      <td>Neutro pode ser reduzido</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td>35 (mínimo)</td>
+      <td>35</td>
+      <td>PE = 50% da fase</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Determinar o Tipo de Sistema (Monofásico ou Trifásico)</h4><p>Em monofásico, o neutro tem a mesma secção que a fase. Em trifásico, avaliar a possibilidade de redução.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Calcular o Desequilíbrio</h4><p>Se houver cargas monofásicas, calcular I_N. Se I_N &gt; 50% de I_fase, o neutro não pode ser reduzido.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Dimensionar o PE</h4><p>Com base na secção da fase, escolher a secção do PE usando a tabela.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Verificar a Queda de Tensão</h4><p>Se o neutro foi reduzido, verificar se a queda de tensão total (incluindo o neutro) é aceitável.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num edifício comercial, o técnico reduziu o neutro para 16 mm², enquanto as fases eram 35 mm². O desequilíbrio causou uma corrente de 60A no neutro, que sobreaqueceu e derreteu. O prédio ficou sem energia por 2 dias.</p><div class="hi">Como evitar: Em instalações com muitas cargas monofásicas (ex: edifícios residenciais, comércios), não reduzir o neutro abaixo de 70% da secção da fase, ou usar a mesma secção para evitar problemas.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1.5: Dimensionamento do neutro.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1.6: Dimensionamento do PE.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>5-52 – Tabela 52-1: Secção do PE.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a dimensionar o cabo de entrada de um prédio comercial com 3 fases de 50 mm². O desequilíbrio calculado resulta numa corrente de neutro de 80A.</p><ol type="a"><li>Qual a secção mínima do neutro (de acordo com as regras)?</li><li>Se o técnico usar um neutro de 25 mm², é suficiente? Porquê?</li><li>Qual a secção mínima do PE para este cabo?</li><li>O que o técnico deve fazer se o desequilíbrio aumentar no futuro?</li></ol></div>
+<!-- ===== FIM AULA 5.10 ===== -->
+
+<!-- ===== AULA 5.11: Aplicação Prática: Dimensionamento Completo de um Edifício em Angola ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Aplicar todos os conceitos do módulo a um projecto real: um edifício comercial de 4 andares em Luanda.</li><li>Dimensionar todos os condutores (entrada, quadros secundários, circuitos terminais) considerando capacidade de corrente, queda de tensão, factores de correcção e coordenação com protecções.</li><li>Elaborar a memória descritiva do dimensionamento, incluindo todas as tabelas e cálculos.</li><li>Verificar a conformidade do projecto com o RTIEBT e os procedimentos da ENDE.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico foi contratado para projectar a instalação eléctrica de um edifício comercial de 4 andares no Talatona. O edifício tinha lojas no rés-do-chão, escritórios nos pisos 1 e 2, e um restaurante no piso 3. A potência total instalada era de 250 kW, com uma potência de cálculo de 180 kW. O técnico dimensionou todos os condutores, aplicando as regras de capacidade de corrente, queda de tensão, factores de correcção (temperatura, agrupamento) e coordenação com disjuntores. O projecto foi submetido à ENDE e aprovado sem alterações.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Dados de Base</p>
+<p>Alimentação: Trifásica, 380V, 50Hz, sistema TN-C-S (PEN na entrada).</p>
+<p>Potência total instalada: 250 kW.</p>
+<p>Potência de cálculo (ks = 0,7): 175 kW.</p>
+<p>Corrente de cálculo: I_calc = 175.000 / (1,73 * 380 * 0,9) ≈ 295 A.</p>
+<p>Disjuntor geral: 315A (curva C), poder de corte 15kA.</p>
+<p>DR geral: 315A, 300mA, tipo S (selectivo).</p>
+<p>DPS geral: Tipo 2, 40kA.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Dimensionamento do Cabo de Entrada (Ramal)</p>
+<p>Método: Cabo multipolar (3 fases + N + PE), enterrado em tubo (método D), temperatura do solo 25°C, resistividade térmica do solo 2,5 K·m/W.</p>
+<p>Iz (XLPE, 3 condutores, método D, 20°C): Para 295A, secção de 150 mm² (Iz ≈ 320A).</p>
+<p>Correcção para temperatura (solo 25°C, k1 para XLPE = 1,05). Iz' = 320 * 1,05 = 336A.</p>
+<p>Correcção para agrupamento (k2 = 1,0, um único cabo). Iz'' = 336A.</p>
+<p>Verificação: Iz'' (336A) ≥ I_calc (295A) → OK.</p>
+<p>Neutro: Reduzido? I_deseq estimado 100A (&lt; 50% de 295A). Secção mínima 50% de 150 = 75 mm² → usar 95 mm² (valor comercial).</p>
+<p>PE: Secção 70 mm² (50% de 150).</p>
+<p>Queda de tensão: ΔU = (√3 * L * I * ρ) / A. L = 80m, I = 295A, ρ (XLPE a 50°C) ≈ 0,0193 Ω·mm²/m, A = 150 mm². ΔU = (1,73 * 80 * 295 * 0,0193) / 150 = 52,5 / 150 = 0,35 V (0,09%) → OK.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Quadros Secundários (Por Piso)</p>
+<p>Piso 0 (Lojas): Carga 60 kW, I ≈ 100A. Cabo: 35 mm² (Iz = 155A, XLPE, método C), N = 16 mm², PE = 16 mm². Disjuntor: 100A (curva C).</p>
+<p>Piso 1 (Escritórios): Carga 50 kW, I ≈ 83A. Cabo: 25 mm² (Iz = 130A, XLPE, método C), N = 16 mm², PE = 16 mm². Disjuntor: 80A (curva C).</p>
+<p>Piso 2 (Escritórios): Carga 50 kW, I ≈ 83A. Cabo: 25 mm² (Iz = 130A, XLPE, método C), N = 16 mm², PE = 16 mm². Disjuntor: 80A (curva C).</p>
+<p>Piso 3 (Restaurante): Carga 60 kW, I ≈ 100A. Cabo: 35 mm² (Iz = 155A, XLPE, método C), N = 16 mm², PE = 16 mm². Disjuntor: 100A (curva C).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Circuitos Terminais (Exemplo – Piso 1)</p>
+<p>Iluminação: 2 circuitos de 2 kW cada, 220V, I ≈ 9A. Cabo 1,5 mm², disjuntor 10A (curva B).</p>
+<p>Tomadas: 3 circuitos de 3 kW cada, 220V, I ≈ 13,6A. Cabo 2,5 mm², disjuntor 16A (curva C).</p>
+<p>Ar Condicionado (split): 2 circuitos de 3,5 kW cada, 220V, I ≈ 16A. Cabo 4 mm², disjuntor 20A (curva C).</p>
+<p>Data Center (equipamentos sensíveis): 1 circuito de 5 kW, 220V, I ≈ 22,7A. Cabo 4 mm², disjuntor 25A (curva C), DPS Tipo 3.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Verificação da Selectividade</p>
+<p>Curto-circuito no circuito de tomadas (16A): I_k = 1.200A. Disjuntor de 16A (curva C) dispara a 80-160A. Disjuntor de piso (80A) dispara a 400-800A. Portanto, apenas o de 16A dispara.</p>
+<p>Fuga no circuito do data center: DR de 30mA dispara; DR de 300mA (selectivo) não dispara.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Documentação</p>
+<p>Memória descritiva.</p>
+<p>Cálculos de dimensionamento (todos os circuitos).</p>
+<p>Esquemas unifilares (geral e por piso).</p>
+<p>Lista de materiais.</p>
+<p>Relatório de ensaios (resistência de terra, disparo dos DRs).</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Esquema Unifilar do Edifício (Simplificado)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Edifício Comercial – Dimensionamento de Condutores</text>
+
+  <!-- Entrada -->
+  <rect x="225" y="50" width="200" height="30" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="325" y="70" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Entrada 380V – 250kW</text>
+
+  <!-- Cabo de entrada -->
+  <text x="325" y="100" text-anchor="middle" font-size="9" fill="#333">Cabo 4x150mm² + 95mm² (N) + 70mm² (PE)</text>
+  <line x1="325" y1="110" x2="325" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Quadro Geral -->
+  <rect x="200" y="130" width="250" height="40" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="5"/>
+  <text x="325" y="155" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Quadro Geral (DG 315A + DR 300mA + DPS)</text>
+
+  <!-- Linhas para os Pisos -->
+  <line x1="325" y1="170" x2="325" y2="200" stroke="#333" stroke-width="2" stroke-dasharray="4,2"/>
+
+  <!-- Piso 0 -->
+  <rect x="50" y="200" width="130" height="40" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5" rx="3"/>
+  <text x="115" y="220" text-anchor="middle" fill="white" font-size="9">Piso 0 (Lojas)</text>
+  <text x="115" y="235" text-anchor="middle" fill="white" font-size="8">60kW – 35mm²</text>
+
+  <!-- Piso 1 -->
+  <rect x="200" y="200" width="130" height="40" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5" rx="3"/>
+  <text x="265" y="220" text-anchor="middle" fill="white" font-size="9">Piso 1 (Escritórios)</text>
+  <text x="265" y="235" text-anchor="middle" fill="white" font-size="8">50kW – 25mm²</text>
+
+  <!-- Piso 2 -->
+  <rect x="350" y="200" width="130" height="40" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5" rx="3"/>
+  <text x="415" y="220" text-anchor="middle" fill="white" font-size="9">Piso 2 (Escritórios)</text>
+  <text x="415" y="235" text-anchor="middle" fill="white" font-size="8">50kW – 25mm²</text>
+
+  <!-- Piso 3 -->
+  <rect x="500" y="200" width="130" height="40" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5" rx="3"/>
+  <text x="565" y="220" text-anchor="middle" fill="white" font-size="9">Piso 3 (Restaurante)</text>
+  <text x="565" y="235" text-anchor="middle" fill="white" font-size="8">60kW – 35mm²</text>
+
+  <!-- Notas -->
+  <text x="50" y="300" font-size="9" fill="#333">Circuitos terminais: 1,5mm² (iluminação), 2,5mm² (tomadas), 4mm² (AC, cozinha).</text>
+  <text x="50" y="315" font-size="9" fill="#333">Factores de correcção: k1 (temperatura) e k2 (agrupamento) aplicados.</text>
+  <text x="50" y="330" font-size="9" fill="#333">Queda de tensão verificada para o circuito mais longo (≤ 5%).</text>
+  <text x="50" y="345" font-size="9" fill="#333">Selectividade garantida entre disjuntores e DRs.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><p>Levantamento de cargas: Calcular a potência total instalada e a potência de cálculo.</p>
+<p>Dimensionar a entrada: Escolher a secção do cabo de entrada (capacidade de corrente, queda de tensão, factores de correcção).</p>
+<p>Dimensionar os quadros secundários: Escolher os cabos para cada piso.</p>
+<p>Dimensionar os circuitos terminais: Para iluminação, tomadas, etc.</p>
+<p>Verificar a selectividade: Garantir que os disjuntores e DRs estão coordenados.</p>
+<p>Elaborar a documentação: Memória descritiva, cálculos, esquemas.</p></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico dimensionou o cabo de entrada com base apenas na capacidade de corrente, sem verificar a queda de tensão. O comprimento era de 120 metros, e a queda de tensão era de 7,2% (superior ao permitido). A ENDE rejeitou o projecto.</p><div class="hi">Como evitar: Sempre verificar a queda de tensão em circuitos longos. Em Angola, muitos edifícios têm ramais longos, e a queda de tensão é frequentemente o factor determinante.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5: Dimensionamento de condutores.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 6: Ensaios de verificação.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>5-52: Tabelas de capacidade de corrente e queda de tensão.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Procedimentos da ENDE</div><blockquote>Para aprovação de projectos.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: O técnico do edifício do exemplo anterior recebeu um pedido para adicionar um novo piso (Piso 4) com uma carga de 70 kW. O cabo de entrada existente é de 150 mm².</p>
+<p>FIM DO MÓDULO 5 – DIMENSIONAMENTO DE CONDUTORES</p>
+<p>O Módulo 5 está completo! Foram 11 aulas densas, com teoria, cálculos, exemplos angolanos, elementos visuais e perguntas de verificação. O aluno que estudar este módulo terá domínio sobre o dimensionamento de condutores em instalações eléctricas angolanas.</p>
+<p>Agora, posso avançar para o Módulo 6 — Aterramento, Quadros e Projecto Residencial. Basta dar o comando.</p>
+<p>Continue ok</p>
+<p>O usuário pediu para continuar com o Módulo 6, e eu já havia gerado o texto completo das aulas. No entanto, como a saída foi cortada, preciso retomar a partir do ponto onde parou na Aula 6.3. Vou verificar o último trecho que enviei: a Aula 6.3 foi interrompida no meio do Desenvolvimento Técnico, especificamente na subsecção 3.3, que foi cortada após "Cálculo da Resistência de Terra para o Sistema TT".</p>
+<p>Preciso continuar a Aula 6.3 a partir daí, completando o Desenvolvimento Técnico (subsecções restantes), o Elemento Visual, o Procedimento Prático, etc., e depois seguir com as restantes aulas (6.4 a 6.11) do Módulo 6, mantendo a mesma estrutura e profundidade.</p>
+<p>Vou retomar exatamente de onde parei na Aula 6.3, com a subsecção 3.3 (cálculo da resistência de terra) e completar a aula. Depois, gerar as aulas 6.4 a 6.11. Como o usuário quer o módulo completo de uma vez, vou produzir o restante de forma contínua, garantindo que cada aula tenha cerca de 1.800 palavras e siga todos os requisitos.</p>
+<p>Vou também verificar se a Aula 6.2 foi completada; parece que sim, pois o texto da Aula 6.2 foi cortado no final, mas a estrutura foi concluída. O corte ocorreu na Aula 6.3, então retomo a partir daí.</p>
+<p>Como o usuário não especificou o ponto exato de corte, vou assumir que a Aula 6.3 foi a última incompleta e prosseguir.</p>
+<p>Perfeito! Vou retomar exatamente de onde parei na Aula 6.3 — Dimensionamento de Eléctrodo de Terra, completando a subsecção 3.3 (Cálculo da Resistência de Terra para o Sistema TT) e todo o restante da aula, para depois seguir com as aulas 6.4 até 6.11 do Módulo 6.</p><ol type="a"><li>Qual a nova potência total e a nova corrente de cálculo?</li><li>O cabo de entrada de 150 mm² é suficiente (considerando Iz e queda de tensão)? Justifique.</li><li>Se não for suficiente, que soluções o técnico pode propor (substituir o cabo, adicionar um segundo cabo, etc.)?</li><li>O que deve ser verificado em termos de coordenação de protecções (disjuntor geral, selectividade)?</li></ol></div>
+<!-- ===== FIM AULA 5.11 ===== -->

@@ -1,0 +1,1052 @@
+<!-- ===== AULA 6.3: Dimensionamento de Eléctrodo de Terra (continuação) ===== -->
+<div class="dg"><div class="dgt">Diagrama SVG: Tipos de Eléctrodos de Terra</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Tipos de Eléctrodos de Terra</text>
+
+  <!-- Haste Vertical -->
+  <rect x="30" y="50" width="180" height="160" fill="white" stroke="#333" stroke-width="1.5" rx="5"/>
+  <text x="120" y="70" text-anchor="middle" font-size="10" font-weight="bold" fill="#0072b0">Haste Vertical</text>
+  <rect x="90" y="90" width="60" height="20" fill="#d9534f" stroke="#a94442" stroke-width="1.5"/>
+  <text x="120" y="105" text-anchor="middle" fill="white" font-size="8">Superfície</text>
+  <line x1="120" y1="110" x2="120" y2="190" stroke="#d9534f" stroke-width="4"/>
+  <text x="120" y="210" text-anchor="middle" font-size="8" fill="#333">Haste de cobre (2,4m)</text>
+
+  <!-- Malha de Terra -->
+  <rect x="230" y="50" width="180" height="160" fill="white" stroke="#333" stroke-width="1.5" rx="5"/>
+  <text x="320" y="70" text-anchor="middle" font-size="10" font-weight="bold" fill="#f0ad4e">Malha de Terra</text>
+  <rect x="260" y="90" width="120" height="20" fill="#d9534f" stroke="#a94442" stroke-width="1.5"/>
+  <text x="320" y="105" text-anchor="middle" fill="white" font-size="8">Superfície</text>
+  <!-- Malha -->
+  <line x1="270" y1="130" x2="370" y2="130" stroke="#d9534f" stroke-width="2"/>
+  <line x1="270" y1="160" x2="370" y2="160" stroke="#d9534f" stroke-width="2"/>
+  <line x1="270" y1="130" x2="270" y2="160" stroke="#d9534f" stroke-width="2"/>
+  <line x1="320" y1="130" x2="320" y2="160" stroke="#d9534f" stroke-width="2"/>
+  <line x1="370" y1="130" x2="370" y2="160" stroke="#d9534f" stroke-width="2"/>
+  <text x="320" y="210" text-anchor="middle" font-size="8" fill="#333">Malha de cobre (4x4m)</text>
+
+  <!-- Anel -->
+  <rect x="430" y="50" width="180" height="160" fill="white" stroke="#333" stroke-width="1.5" rx="5"/>
+  <text x="520" y="70" text-anchor="middle" font-size="10" font-weight="bold" fill="#5cb85c">Anel de Terra</text>
+  <rect x="460" y="90" width="120" height="20" fill="#d9534f" stroke="#a94442" stroke-width="1.5"/>
+  <text x="520" y="105" text-anchor="middle" fill="white" font-size="8">Superfície</text>
+  <ellipse cx="520" cy="160" rx="50" ry="30" fill="none" stroke="#d9534f" stroke-width="3"/>
+  <text x="520" y="210" text-anchor="middle" font-size="8" fill="#333">Anel de cobre</text>
+
+  <!-- Legendas -->
+  <text x="50" y="280" font-size="9" fill="#333">Haste: Simples e económica, adequada para solos de baixa resistividade.</text>
+  <text x="50" y="295" font-size="9" fill="#333">Malha: Melhor desempenho, adequada para solos de alta resistividade.</text>
+  <text x="50" y="310" font-size="9" fill="#333">Anel: Útil para edifícios de grande perímetro, distribui a corrente.</text>
+  <text x="50" y="325" font-size="9" fill="#333">Todos os eléctrodos devem ser de cobre ou aço revestido a cobre.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Medir a Resistividade do Solo</h4><p>Utilizar o método Wenner com um terrômetro, em várias profundidades (a = 1m, 2m, 5m) para obter o perfil do solo.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Dimensionar o Eléctrodo</h4><p>Com base na resistividade, escolher o tipo de eléctrodo (haste, malha, anel) e calcular a resistência esperada (R_calc). Se R_calc &gt; 10 Ω, dimensionar um eléctrodo maior (ex: mais hastes, malha maior).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Instalar o Eléctrodo</h4><p>Enterrar a haste (ou malha) a uma profundidade adequada (≥ 2,4m para haste, ≥ 0,5m para malha). A ligação do PE ao eléctrodo deve ser feita com conectores adequados.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Medir R_T</h4><p>Após a instalação, medir a resistência de terra com o terrômetro. Se R_T &gt; 10 Ω, melhorar o eléctrodo (adicionar hastes, usar composto condutivo, etc.).</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num prédio de apartamentos no Talatona, o técnico instalou uma haste de terra de 2,4m, mas não mediu a resistividade do solo. O solo era seco e resistivo (ρ ≈ 400 Ω·m), e R_T media 45 Ω. Quando ocorreu uma fuga, a corrente de defeito foi baixa (220/45 ≈ 4,9A), o DR disparou, mas a tensão na carcaça atingiu 220V durante o tempo de disparo, causando um choque num morador.</p><div class="hi">Como evitar: Sempre medir a resistividade do solo antes de dimensionar o eléctrodo. Em solos de alta resistividade, usar malha de terra em vez de haste simples. Garantir R_T ≤ 10 Ω.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.6: Eléctrodos de terra.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 6, Secção 6.2: Medição de resistência de terra.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>5-54: Dimensionamento de aterramentos.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60523</div><blockquote>Método Wenner para medição de resistividade.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a projectar o aterramento de uma casa em Benguela, onde o solo é arenoso e húmido (ρ ≈ 50 Ω·m). Ele pretende usar uma haste de cobre de 2,4m (raio 0,01m).</p><ol type="a"><li>Calcule a resistência de terra estimada para a haste (use a fórmula de Dwight).</li><li>Se o técnico usar duas hastes em paralelo, espaçadas de 3m, qual a resistência equivalente (considere factor de agrupamento 1,3)?</li><li>Com base nos cálculos, qual o sistema de aterramento mais adequado (haste simples, múltiplas hastes ou malha)? Justifique.</li><li>Que valor de R_T o técnico deve medir após a instalação para garantir a conformidade com o RTIEBT?</li></ol></div>
+<!-- ===== FIM AULA 6.3 ===== -->
+
+<!-- ===== AULA 6.4: Componentes de um Sistema de Aterramento: Condutores, Eléctrodos e Ligações ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Identificar os componentes de um sistema de aterramento: eléctrodo (haste/malha), condutor de terra (PE), barramento de terra, conectores.</li><li>Descrever os materiais utilizados em Angola (cobre, aço revestido a cobre, ligações soldadas).</li><li>Seleccionar a secção mínima do condutor de terra (PE) de acordo com o RTIEBT.</li><li>Realizar as ligações correctas (conectores, soldaduras exotérmicas) garantindo baixa resistência de contacto.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, numa fábrica do Zango, o técnico constatou que o condutor de terra (PE) estava partido na ligação à haste de terra, devido à corrosão. A ligação era feita com um simples parafuso de aço, que se oxidou com a humidade. O técnico substituiu a ligação por um conector de cobre com protecção anticorrosão e verificou a continuidade. A fábrica passou a ter uma ligação à terra confiável.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Componentes do Sistema de Aterramento</p>
+<p>Um sistema de aterramento completo inclui:</p>
+<p>Eléctrodo de terra: Haste, malha, anel ou placa enterrada, que faz o contacto com o solo.</p>
+<p>Condutor de terra (PE): O condutor que liga o eléctrodo ao barramento de terra do quadro.</p>
+<p>Barramento de terra (PE): Barra de cobre ou latão, instalada no quadro, onde convergem todos os condutores de protecção (PE) da instalação.</p>
+<p>Conectores e terminais: Dispositivos que unem os condutores e as hastes.</p>
+<p>Caixas de inspecção: Caixas enterradas com tampa, para acesso ao eléctrodo para medições e manutenção.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Materiais para Eléctrodos de Terra</p>
+<p>Cobre: Excelente condutor, resistente à corrosão. É o material mais utilizado em Angola. As hastes de cobre têm 2,4m ou 3m de comprimento, diâmetro 10mm a 16mm.</p>
+<p>Aço revestido a cobre (Cobreweld): Aço com revestimento de cobre. É mais resistente mecanicamente que o cobre puro, mas a camada de cobre pode ser danificada se for muito fina.</p>
+<p>Aço galvanizado: Utilizado em algumas instalações industriais, mas menos resistente à corrosão do que o cobre. Não recomendado em zonas costeiras.</p>
+<p>Placas de cobre: Em solos com baixa resistividade, podem ser usadas placas de cobre enterradas (ex: 1m²).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Condutores de Terra (PE)</p>
+<p>O condutor de terra (PE) deve ser:</p>
+<p>De cobre: É o mais comum e o recomendado pelo RTIEBT para instalações em Angola.</p>
+<p>Com isolamento amarelo-verde: Para identificação fácil.</p>
+<p>Secção adequada: De acordo com a secção da fase (ver Tabela da Aula 5.10).</p>
+<p>Protegido contra corrosão e danos mecânicos: Em locais expostos, usar tubos ou canaletas.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Ligações e Conectores</p>
+<p>As ligações entre o PE e o eléctrodo são críticas para a baixa resistência de terra.</p>
+<p>Conectores de aperto: Parafusos em cobre ou latão, com pressão adequada. Devem ser protegidos contra oxidação (ex: com vaselina neutra).</p>
+<p>Soldaduras exotérmicas (Cadweld): O método mais fiável. Ocorre uma reacção química que funde o cobre, criando uma ligação permanente e de baixa resistência. Muito usado em Angola para malhas de terra.</p>
+<p>Terminais de compressão: Usados para ligar cabos a hastes, com ferramenta de compressão.</p>
+<p>Garras de terra: Para ligar o PE à haste, de forma destacável (para medições).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Secção Mínima do PE</p>
+<p>Secção da Fase (mm²)	Secção Mínima do PE (mm²)</p>
+<p>≤ 16	Igual à fase</p>
+<p>16 – 35	16</p>
+<p>35 – 50	25</p>
+<p>&gt; 50	50% da fase</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Resistência de Contacto</p>
+<p>A resistência de contacto entre o PE e o eléctrodo deve ser inferior a 0,1 Ω. Para isso, as superfícies devem estar limpas e o aperto deve ser feito com binário adequado.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Caixas de Inspecção</p>
+<p>Em Angola, recomenda-se a instalação de caixas de inspecção para permitir a medição da resistência de terra sem necessidade de desenterrar as ligações. A caixa deve estar identificada e ser acessível.</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Secção da Fase (mm²)</th>
+      <th>Secção Mínima do PE (mm²)</th>
+      <th>Observação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1,5</td>
+      <td>1,5</td>
+      <td>Igual à fase</td>
+    </tr>
+    <tr>
+      <td>2,5</td>
+      <td>2,5</td>
+      <td>Igual à fase</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>4</td>
+      <td>Igual à fase</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>6</td>
+      <td>Igual à fase</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>10</td>
+      <td>Igual à fase</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>16</td>
+      <td>Igual à fase</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>16</td>
+      <td>Redução permitida</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>16</td>
+      <td>Redução permitida</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>25</td>
+      <td>Redução permitida</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td>35</td>
+      <td>50% da fase</td>
+    </tr>
+    <tr>
+      <td>95</td>
+      <td>50</td>
+      <td>50% da fase</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Dimensionar o PE</h4><p>Com base na secção da fase, determinar a secção mínima do PE usando a tabela.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Escolher o Material do Eléctrodo</h4><p>Em Angola, usar cobre ou aço revestido a cobre. Evitar aço galvanizado em zonas húmidas.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Instalar as Ligações</h4><p>Utilizar soldaduras exotérmicas ou conectores de aperto. Aplicar protecção anticorrosão.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Medir a Continuidade</h4><p>Com o multímetro, medir a resistência entre o barramento de terra e o eléctrodo. Deve ser &lt; 0,5 Ω.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Num armazém, o técnico usou um conector de aço para ligar o PE à haste de terra. O conector oxidou, aumentando a resistência de contacto para 5 Ω. Durante uma descarga atmosférica, a corrente de surto não conseguiu dissipar-se rapidamente, e os equipamentos foram danificados.</p><div class="hi">Como evitar: Usar conectores de cobre ou latão, com protecção anticorrosão. Aplicar vaselina neutra nas ligações. Verificar periodicamente a resistência de contacto.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.6: Materiais e ligações de aterramento.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>5-54: Componentes de aterramento.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a instalar o aterramento de um edifício com fases de 50 mm². O solo é argiloso (ρ = 80 Ω·m).</p><ol type="a"><li>Qual a secção mínima do condutor de terra (PE)?</li><li>Que tipo de eléctrodo é mais adequado (haste, malha, anel)? Justifique.</li><li>Que ligação entre o PE e a haste é mais recomendada? Porquê?</li><li>Como o técnico deve verificar a continuidade do PE?</li></ol></div>
+<!-- ===== FIM AULA 6.4 ===== -->
+
+<!-- ===== AULA 6.5: Estrutura de um Quadro Eléctrico Residencial ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever a estrutura de um quadro eléctrico residencial típico angolano (alimentação, barramentos, disjuntores, DRs).</li><li>Identificar os componentes do quadro: disjuntor geral, DR geral, disjuntores individuais, DRs individuais, barramentos.</li><li>Compreender a organização dos circuitos no quadro (distribuição por fases, separação N/PE).</li><li>Seleccionar o tipo de quadro (embutido, de superfície, módulo) e a sua capacidade.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico foi contratado para substituir o quadro eléctrico de uma residência no Talatona. O quadro antigo era um modelo de parafusos, sem DRs e com disjuntores de capacidade excessiva. O técnico instalou um novo quadro modular, com disjuntor geral de 63A, DR geral de 63A/30mA, e disjuntores individuais para iluminação, tomadas, cozinha e ar condicionado. O quadro foi organizado com barramentos de fase e neutro, e com separação N/PE (sistema TT). A residência passou a ter uma instalação mais segura e organizada.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Função do Quadro Eléctrico</p>
+<p>O quadro eléctrico é o centro de distribuição da instalação. Nele convergem todos os circuitos, e aí são instalados os dispositivos de protecção. As principais funções são:</p>
+<p>Protecção: Através de disjuntores e DRs, protege as pessoas e os equipamentos.</p>
+<p>Distribuição: Divide a alimentação em vários circuitos terminais.</p>
+<p>Comando: Permite ligar/desligar a energia geral e dos circuitos individuais.</p>
+<p>Medição: Ponto de ligação do contador da ENDE.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Tipos de Quadros</p>
+<p>Embutido (em parede): O mais comum em residências angolanas. A caixa é embutida na parede, com uma tampa frontal. Deve ter dimensões adequadas ao número de disjuntores.</p>
+<p>De superfície: Fixado directamente na parede. Usado em garagens, armazéns, ou quando não é possível embutir.</p>
+<p>Modular: Os componentes (disjuntores, DRs) são montados em calhas DIN (norma europeia). É o sistema mais moderno e versátil.</p>
+<p>De parafusos (antigo): Os disjuntores são fixados por parafusos. Em desuso, mas ainda encontrado em instalações antigas.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Componentes de um Quadro Residencial</p>
+<p>Disjuntor geral (DG): Protege a entrada da instalação. Geralmente 63A (monofásico) para residências.</p>
+<p>DR geral: Protege contra fugas. Geralmente 63A, 30mA. Em algumas instalações, pode ser 40A ou 63A.</p>
+<p>Barramento de fase: Barra de cobre que distribui a fase para os disjuntores individuais.</p>
+<p>Barramento de neutro (N): Barra de cobre ou latão, isolada do PE, onde são ligados os neutros de cada circuito.</p>
+<p>Barramento de terra (PE): Barra de cobre ou latão, ligada à terra, onde são ligados os condutores de protecção de cada circuito.</p>
+<p>Disjuntores individuais: Protegem cada circuito (iluminação, tomadas, etc.).</p>
+<p>DRs individuais (ou combinados): Em alguns quadros, cada circuito tem o seu próprio DR (ex: 30mA). Em outros, há um DR geral.</p>
+<p>Blocos de bornes (terminais): Para ligação dos condutores.</p>
+<p>Tampa e porta: Protecção contra contactos directos.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Organização do Quadro (Esquema)</p>
+<p>Entrada (ENDE): Fase e neutro entram no quadro.</p>
+<p>Fase → Disjuntor geral → Barramento de fase.</p>
+<p>Neutro → Barramento de neutro.</p>
+<p>Circuito de iluminação: Fase → Disjuntor 10A → saída para o circuito. Neutro → Barramento N.</p>
+<p>Circuito de tomadas: Fase → Disjuntor 16A → saída. Neutro → Barramento N.</p>
+<p>DR geral: Instalado após o disjuntor geral, antes dos disjuntores individuais. O neutro passa pelo DR.</p>
+<p>Separação N/PE (sistema TT): O PE é ligado à terra (eléctrodo). O N não é ligado ao PE.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Dimensões do Quadro</p>
+<p>O número de módulos (espaços) necessários depende do número de disjuntores. Cada disjuntor ocupa 1 ou 2 módulos (geralmente 1 módulo = 17,5mm). Um quadro residencial típico tem 6 a 12 módulos.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Identificação e Etiquetagem</p>
+<p>Todos os disjuntores devem estar identificados (ex: "Iluminação", "Tomadas Sala", "Cozinha", etc.). O RTIEBT exige que o quadro tenha um diagrama unifilar na porta, para facilitar a identificação dos circuitos.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Esquema do Interior de um Quadro Residencial</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" font-family="Arial, sans-serif">
+  <rect width="600" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="300" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Quadro Eléctrico Residencial (Esquema)</text>
+
+  <!-- Caixa do quadro -->
+  <rect x="100" y="50" width="400" height="320" fill="#e0e0e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="385" text-anchor="middle" font-size="9" fill="#333">Quadro modular (12 módulos)</text>
+
+  <!-- Disjuntor Geral -->
+  <rect x="130" y="80" width="80" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="170" y="105" text-anchor="middle" fill="white" font-size="8" font-weight="bold">DG</text>
+  <text x="170" y="118" text-anchor="middle" fill="white" font-size="7">63A</text>
+
+  <!-- DR Geral -->
+  <rect x="230" y="80" width="80" height="40" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="270" y="105" text-anchor="middle" fill="white" font-size="8" font-weight="bold">DR</text>
+  <text x="270" y="118" text-anchor="middle" fill="white" font-size="7">63A/30mA</text>
+
+  <!-- Barramento de Fase -->
+  <rect x="130" y="140" width="300" height="10" fill="#d9534f" stroke="#a94442" stroke-width="1"/>
+  <text x="300" y="160" text-anchor="middle" font-size="8" fill="#333">Barramento de Fase</text>
+
+  <!-- Disjuntores Individuais -->
+  <!-- C1 -->
+  <rect x="140" y="175" width="40" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="160" y="190" text-anchor="middle" fill="white" font-size="7">C1</text>
+  <text x="160" y="200" text-anchor="middle" fill="white" font-size="6">10A</text>
+  <!-- C2 -->
+  <rect x="190" y="175" width="40" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="210" y="190" text-anchor="middle" fill="white" font-size="7">C2</text>
+  <text x="210" y="200" text-anchor="middle" fill="white" font-size="6">16A</text>
+  <!-- C3 -->
+  <rect x="240" y="175" width="40" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="260" y="190" text-anchor="middle" fill="white" font-size="7">C3</text>
+  <text x="260" y="200" text-anchor="middle" fill="white" font-size="6">16A</text>
+  <!-- C4 -->
+  <rect x="290" y="175" width="40" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="310" y="190" text-anchor="middle" fill="white" font-size="7">C4</text>
+  <text x="310" y="200" text-anchor="middle" fill="white" font-size="6">20A</text>
+  <!-- C5 -->
+  <rect x="340" y="175" width="40" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="360" y="190" text-anchor="middle" fill="white" font-size="7">C5</text>
+  <text x="360" y="200" text-anchor="middle" fill="white" font-size="6">25A</text>
+
+  <!-- Barramento N -->
+  <rect x="130" y="240" width="300" height="10" fill="#5bc0de" stroke="#31b0d5" stroke-width="1"/>
+  <text x="300" y="260" text-anchor="middle" font-size="8" fill="#333">Barramento de Neutro (N)</text>
+
+  <!-- Barramento PE -->
+  <rect x="130" y="290" width="300" height="10" fill="#5cb85c" stroke="#4cae4c" stroke-width="1"/>
+  <text x="300" y="310" text-anchor="middle" font-size="8" fill="#333">Barramento de Terra (PE)</text>
+
+  <!-- Legendas -->
+  <text x="50" y="340" font-size="9" fill="#333">DG = Disjuntor Geral</text>
+  <text x="50" y="355" font-size="9" fill="#333">DR = Dispositivo Diferencial</text>
+  <text x="50" y="370" font-size="9" fill="#333">C1 a C5 = Circuitos (Iluminação, Tomadas, Cozinha, AC, etc.)</text>
+  <text x="50" y="385" font-size="9" fill="#333">N = Neutro, PE = Terra (separados no sistema TT)</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Dimensionar o Quadro</h4><p>Calcular o número de circuitos (iluminação, tomadas, cozinha, AC, etc.) e escolher um quadro com módulos suficientes (reservar 20% de espaço para expansão).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Montar os Barramentos</h4><p>Instalar o barramento de fase, o barramento N e o barramento PE, com a devida separação (N isolado do PE).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Instalar os Disjuntores e DRs</h4><p>Instalar o disjuntor geral, o DR geral e os disjuntores individuais. Fixá-los na calha DIN.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Fazer as Ligações</h4><p>Ligar a entrada (fase e neutro), ligar cada circuito (fase e neutro) e ligar os PE ao barramento de terra.</p></div></div><div class="tli"><div class="tld">5</div><div class="tlc"><h4>Etiquetar</h4><p>Identificar todos os disjuntores e circuitos com etiquetas.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Num quadro novo, o técnico ligou o neutro ao barramento de terra, confundindo N com PE. Quando o DR foi ligado, disparou imediatamente, porque parte da corrente estava a fugir pelo PE. O técnico perdeu tempo a diagnosticar até descobrir o erro.</p><div class="hi">Como evitar: No sistema TT, o neutro (N) e a terra (PE) devem ser mantidos separados. O N só é ligado ao PE no ponto de entrada do sistema TN-C-S (se aplicável). Verificar com o multímetro a continuidade entre N e PE; se houver continuidade, há um erro.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.5: Montagem de quadros.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 3, Secção 3.2: Separação N/PE.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a montar um quadro residencial com 6 circuitos: iluminação (2), tomadas (2), cozinha (1), ar condicionado (1). A entrada é monofásica, 220V, 63A.</p><ol type="a"><li>Quantos módulos são necessários (considerando que cada disjuntor ocupa 1 módulo)?</li><li>O técnico deve usar um DR geral ou DRs individuais? Justifique.</li><li>Como deve ser feita a ligação do neutro (N) e da terra (PE) no quadro (sistema TT)?</li><li>O que deve constar no diagrama unifilar que deve ser colocado na porta do quadro?</li></ol></div>
+<!-- ===== FIM AULA 6.5 ===== -->
+
+<!-- ===== AULA 6.6: Esquema Unifilar de uma Casa Completa em Angola ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Desenhar um esquema unifilar completo de uma residência angolana, incluindo entrada, quadro geral, circuitos terminais e protecções.</li><li>Identificar todos os componentes do esquema: disjuntor geral, DR, disjuntores individuais, condutores (secção e número), cargas.</li><li>Interpretar um esquema unifilar para entender a distribuição de energia na casa.</li><li>Aplicar as normas do RTIEBT e as práticas da ENDE na elaboração do esquema.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico foi contratado para projectar a instalação eléctrica de uma nova residência de 3 quartos no Talatona. O técnico elaborou um esquema unifilar completo, que foi submetido à ENDE para aprovação. O esquema mostrava a entrada de 220V, o quadro geral com DG de 63A, DR de 63A/30mA, e 8 circuitos terminais (iluminação, tomadas, cozinha, ar condicionado, chuveiro, etc.). O esquema foi aprovado e a residência foi ligada à rede sem problemas.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. O que é um Esquema Unifilar?</p>
+<p>Um esquema unifilar é uma representação gráfica simplificada da instalação eléctrica, onde cada condutor (fase, neutro, terra) é representado por uma única linha, independentemente do número de fios. Mostra a origem da alimentação, os dispositivos de protecção, os circuitos e as cargas. É o documento base para projectos, licenciamento e manutenção.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Componentes de um Esquema Unifilar Residencial</p>
+<p>Alimentação (ENDE): Indicar a tensão (220V) e a potência contratada (ex: 6,9 kVA).</p>
+<p>Contador: O medidor de energia, representado por um símbolo.</p>
+<p>Disjuntor geral (DG): Corrente nominal e curva (ex: 63A, curva C).</p>
+<p>DR geral: Corrente nominal e sensibilidade (ex: 63A, 30mA).</p>
+<p>Barramento de fase: Distribui a fase para os disjuntores individuais.</p>
+<p>Barramento de neutro (N) e barramento de terra (PE): Separados (sistema TT).</p>
+<p>Disjuntores individuais: Cada circuito tem o seu disjuntor (ex: 10A para iluminação, 16A para tomadas).</p>
+<p>Condutores: Indicar a secção (mm²) e o número de condutores (ex: 2,5 mm², 3 fios).</p>
+<p>Cargas: Simbolizar as cargas (lâmpadas, tomadas, motores, etc.).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Símbolos Normalizados (IEC)</p>
+<p>O esquema unifilar deve usar símbolos normalizados (IEC ou IEEE). Os mais comuns em Angola são:</p>
+<p>Disjuntor: Um quadrado ou rectângulo com uma linha quebrada.</p>
+<p>DR: Um rectângulo com a letra "DR" ou símbolo de DR.</p>
+<p>Tomada: Um círculo com duas linhas.</p>
+<p>Lâmpada: Um círculo com uma cruz (ou círculo com cruz interior).</p>
+<p>Interruptor: Um círculo com uma linha.</p>
+<p>Condutor: Uma linha contínua.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Exemplo de Esquema Unifilar (Casa de 3 Quartos)</p>
+<p>Dados:</p>
+<p>Entrada: 220V, 63A (6,9 kVA).</p>
+<p>Sistema: TT.</p>
+<p>Circuitos:</p>
+<p>C1: Iluminação (1,5 mm², 10A).</p>
+<p>C2: Tomadas (2,5 mm², 16A).</p>
+<p>C3: Tomadas cozinha (4 mm², 20A).</p>
+<p>C4: Ar Condicionado (4 mm², 20A).</p>
+<p>C5: Chuveiro (6 mm², 32A).</p>
+<p>C6: Bomba de água (2,5 mm², 16A).</p>
+<p>C7: Máquina de lavar (2,5 mm², 16A).</p>
+<p>C8: Jardim (tomada exterior, 2,5 mm², 16A).</p>
+<p>Esquema (texto):</p>
+<p>text</p>
+<p>ENDE (220V, 63A)</p>
+<p>|</p>
+<p>+--- Contador</p>
+<p>|</p>
+<p>+--- DG 63A (curva C)</p>
+<p>|</p>
+<p>+--- DR 63A/30mA</p>
+<p>|</p>
+<p>+--- Barramento de Fase</p>
+<p>|      |</p>
+<p>|      +--- Disj. 10A (C1) --&gt; 1,5 mm² --&gt; Iluminação (10 lâmpadas)</p>
+<p>|      |</p>
+<p>|      +--- Disj. 16A (C2) --&gt; 2,5 mm² --&gt; Tomadas (salas/quartos)</p>
+<p>|      |</p>
+<p>|      +--- Disj. 20A (C3) --&gt; 4 mm² --&gt; Tomadas cozinha (placa, forno)</p>
+<p>|      |</p>
+<p>|      +--- Disj. 20A (C4) --&gt; 4 mm² --&gt; Ar Condicionado (2 unidades)</p>
+<p>|      |</p>
+<p>|      +--- Disj. 32A (C5) --&gt; 6 mm² --&gt; Chuveiro</p>
+<p>|      |</p>
+<p>|      +--- Disj. 16A (C6) --&gt; 2,5 mm² --&gt; Bomba de água</p>
+<p>|      |</p>
+<p>|      +--- Disj. 16A (C7) --&gt; 2,5 mm² --&gt; Máquina de lavar</p>
+<p>|      |</p>
+<p>|      +--- Disj. 16A (C8) --&gt; 2,5 mm² --&gt; Tomada exterior</p>
+<p>|</p>
+<p>+--- Barramento N (neutro)</p>
+<p>|</p>
+<p>+--- Barramento PE (terra) --&gt; Eléctrodo de terra (R_T ≤ 10 Ω)</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Como Desenhar o Esquema Unifilar</p>
+<p>Origem: Desenhar a alimentação da ENDE.</p>
+<p>Protecções: Colocar o DG, DR e disjuntores individuais.</p>
+<p>Barramentos: Desenhar os barramentos de fase, N e PE.</p>
+<p>Circuitos: Para cada circuito, desenhar a linha que sai do disjuntor, indicando a secção e o número de condutores.</p>
+<p>Cargas: Colocar os símbolos das cargas no final de cada circuito.</p>
+<p>Legenda: Incluir uma legenda com a identificação dos símbolos.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Ferramentas para Desenho</p>
+<p>Software: AutoCAD, EWS, ou mesmo programas gratuitos como o QElectroTech.</p>
+<p>Manual: Desenho à mão, com régua e estêncil, ainda aceite para projectos simples.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Verificação do Esquema</p>
+<p>Confirmar que o número de circuitos está de acordo com o RTIEBT (mínimo 3 para iluminação, tomadas, cozinha).</p>
+<p>Verificar que a secção dos condutores é adequada.</p>
+<p>Confirmar que o DR é de 30mA.</p>
+<p>Verificar a separação N/PE.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Esquema Unifilar Residencial (Casa de 3 Quartos)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 500" font-family="Arial, sans-serif">
+  <rect width="650" height="500" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Esquema Unifilar – Residência (3 Quartos, Talatona)</text>
+
+  <!-- ENDE -->
+  <rect x="275" y="50" width="100" height="30" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="325" y="70" text-anchor="middle" fill="white" font-size="10" font-weight="bold">ENDE 220V</text>
+  <line x1="325" y1="80" x2="325" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Contador -->
+  <rect x="285" y="100" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="325" y="120" text-anchor="middle" fill="white" font-size="10">Contador</text>
+  <line x1="325" y1="130" x2="325" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- DG -->
+  <rect x="285" y="150" width="80" height="30" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="325" y="170" text-anchor="middle" fill="white" font-size="9" font-weight="bold">DG 63A C</text>
+  <line x1="325" y1="180" x2="325" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- DR -->
+  <rect x="285" y="200" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="325" y="220" text-anchor="middle" fill="white" font-size="9" font-weight="bold">DR 63A/30mA</text>
+  <line x1="325" y1="230" x2="325" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Barramento Fase -->
+  <rect x="200" y="250" width="250" height="10" fill="#d9534f" stroke="#a94442" stroke-width="1"/>
+  <text x="325" y="270" text-anchor="middle" font-size="8" fill="#333">Barramento Fase</text>
+
+  <!-- Circuitos -->
+  <!-- C1 -->
+  <line x1="210" y1="260" x2="210" y2="290" stroke="#333" stroke-width="1.5"/>
+  <rect x="190" y="290" width="40" height="20" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="210" y="305" text-anchor="middle" fill="white" font-size="7">C1 10A</text>
+  <text x="210" y="325" text-anchor="middle" font-size="7" fill="#333">1,5 mm²</text>
+  <text x="210" y="340" text-anchor="middle" font-size="7" fill="#333">Iluminação</text>
+
+  <!-- C2 -->
+  <line x1="260" y1="260" x2="260" y2="290" stroke="#333" stroke-width="1.5"/>
+  <rect x="240" y="290" width="40" height="20" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="260" y="305" text-anchor="middle" fill="white" font-size="7">C2 16A</text>
+  <text x="260" y="325" text-anchor="middle" font-size="7" fill="#333">2,5 mm²</text>
+  <text x="260" y="340" text-anchor="middle" font-size="7" fill="#333">Tomadas</text>
+
+  <!-- C3 -->
+  <line x1="310" y1="260" x2="310" y2="290" stroke="#333" stroke-width="1.5"/>
+  <rect x="290" y="290" width="40" height="20" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="310" y="305" text-anchor="middle" fill="white" font-size="7">C3 20A</text>
+  <text x="310" y="325" text-anchor="middle" font-size="7" fill="#333">4 mm²</text>
+  <text x="310" y="340" text-anchor="middle" font-size="7" fill="#333">Cozinha</text>
+
+  <!-- C4 -->
+  <line x1="360" y1="260" x2="360" y2="290" stroke="#333" stroke-width="1.5"/>
+  <rect x="340" y="290" width="40" height="20" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="360" y="305" text-anchor="middle" fill="white" font-size="7">C4 20A</text>
+  <text x="360" y="325" text-anchor="middle" font-size="7" fill="#333">4 mm²</text>
+  <text x="360" y="340" text-anchor="middle" font-size="7" fill="#333">Ar Condicionado</text>
+
+  <!-- C5 -->
+  <line x1="410" y1="260" x2="410" y2="290" stroke="#333" stroke-width="1.5"/>
+  <rect x="390" y="290" width="40" height="20" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="410" y="305" text-anchor="middle" fill="white" font-size="7">C5 32A</text>
+  <text x="410" y="325" text-anchor="middle" font-size="7" fill="#333">6 mm²</text>
+  <text x="410" y="340" text-anchor="middle" font-size="7" fill="#333">Chuveiro</text>
+
+  <!-- Barramento N -->
+  <rect x="200" y="360" width="250" height="10" fill="#5bc0de" stroke="#31b0d5" stroke-width="1"/>
+  <text x="325" y="380" text-anchor="middle" font-size="8" fill="#333">Barramento N (Neutro)</text>
+
+  <!-- Barramento PE -->
+  <rect x="200" y="400" width="250" height="10" fill="#5cb85c" stroke="#4cae4c" stroke-width="1"/>
+  <text x="325" y="420" text-anchor="middle" font-size="8" fill="#333">Barramento PE (Terra) → Eléctrodo (R_T ≤ 10 Ω)</text>
+
+  <!-- Legenda -->
+  <text x="50" y="460" font-size="9" fill="#333">DG = Disjuntor Geral; DR = Diferencial; N = Neutro; PE = Terra</text>
+  <text x="50" y="475" font-size="9" fill="#333">Sistema TT (N e PE separados)</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Levantar as Cargas</h4><p>Listar todas as cargas da residência (iluminação, tomadas, etc.).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Dimensionar os Circuitos</h4><p>Determinar o número de circuitos, a secção dos cabos e a corrente dos disjuntores.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Desenhar o Esquema</h4><p>Utilizar um software ou desenhar à mão, seguindo os símbolos normalizados.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Verificar o Esquema</h4><p>Confirmar a conformidade com o RTIEBT (circuitos separados, protecções adequadas, etc.).</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Um técnico desenhou um esquema unifilar com um único circuito para toda a casa (iluminação, tomadas e cozinha tudo junto). A ENDE rejeitou o projecto, porque o RTIEBT exige circuitos separados.</p><div class="hi">Como evitar: Sempre separar os circuitos de iluminação, tomadas, cozinha, ar condicionado e chuveiro. Cada circuito deve ter o seu disjuntor.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.5: Esquemas unifilares.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 3, Secção 3.2: Separação de circuitos.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a projectar a instalação de uma casa de 4 quartos no Talatona. As cargas são: iluminação 2 kW, tomadas 6 kW, cozinha 8 kW, ar condicionado 6 kW, chuveiro 5,5 kW.</p><ol type="a"><li>Quantos circuitos terminais são necessários (de acordo com o RTIEBT)?</li><li>Para cada circuito, qual a secção do cabo e a corrente do disjuntor recomendados?</li><li>Desenhe um esquema unifilar simplificado (texto ou desenho) com todos os circuitos.</li><li>O que deve constar na legenda do esquema?</li></ol></div>
+<!-- ===== FIM AULA 6.6 ===== -->
+
+<!-- ===== AULA 6.7: Distribuição de Circuitos numa Residência Angolana ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Determinar o número mínimo de circuitos exigidos pelo RTIEBT para uma residência angolana.</li><li>Distribuir as cargas pelos circuitos, considerando a potência, a localização e o tipo de equipamento.</li><li>Dimensionar cada circuito (condutores, disjuntores, DR) de acordo com a carga.</li><li>Aplicar as regras de balanceamento (se trifásico) e de separação de circuitos.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico foi contratado para rever a instalação de uma casa no Kilamba, onde o disjuntor disparava frequentemente. O técnico verificou que a casa tinha apenas 3 circuitos: iluminação, tomadas (toda a casa) e cozinha. A cozinha incluía a placa de indução (6 kW), o forno (3 kW) e o exaustor (0,5 kW), totalizando 9,5 kW (43 A), num único disjuntor de 32A. O técnico subdividiu a cozinha em dois circuitos: um para a placa (32A) e outro para o forno + exaustor (20A), e adicionou um circuito para o ar condicionado. Os disparos cessaram.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Número Mínimo de Circuitos (RTIEBT)</p>
+<p>O RTIEBT, baseado na IEC 60364, estabelece que uma instalação residencial deve ter, no mínimo, os seguintes circuitos:</p>
+<p>Circuito 1: Iluminação. Pode alimentar todas as lâmpadas da casa.</p>
+<p>Circuito 2: Tomadas de uso geral (salas, quartos, halls). Exclui cozinha e banheiros.</p>
+<p>Circuito 3: Cozinha. Para equipamentos de cozinha (placa, forno, exaustor, etc.). Se a potência for elevada, pode ser subdividido.</p>
+<p>Circuito 4: Ar Condicionado. Se houver, deve ser um circuito separado para cada unidade (ou para um conjunto, desde que a corrente não ultrapasse 16A).</p>
+<p>Circuito 5: Chuveiro ou aquecedor de água. Se houver, circuito separado.</p>
+<p>Circuito 6: Tomadas de banheiro. Pode estar integrado no circuito de tomadas, mas recomenda-se um circuito separado para a zona húmida.</p>
+<p>Circuito 7: Bomba de água / jardim. Circuito separado.</p>
+<p>Além disso, cada circuito deve ser protegido por um disjuntor e DR adequados.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Dimensionamento de Cada Circuito</p>
+<p>Circuito	Carga típica (kW)	Secção (mm²)	Disjuntor	DR</p>
+<p>Iluminação	1 – 2	1,5	10A (curva B)	20A/30mA</p>
+<p>Tomadas (salas/quartos)	3 – 5	2,5	16A (curva C)	25A/30mA</p>
+<p>Cozinha (placa + forno)	7 – 10	4 – 6	20-32A (curva C)	40A/30mA (tipo A)</p>
+<p>Ar Condicionado (split 12.000 BTU)	1,5 – 2,5	2,5	16A (curva C)	25A/30mA</p>
+<p>Ar Condicionado (split 18.000 BTU)	2,5 – 3,5	4	20A (curva C)	40A/30mA</p>
+<p>Chuveiro	5,5 – 7,5	6	32A (curva C)	40A/30mA</p>
+<p>Bomba de água	0,8 – 1,5	2,5	16A (curva D)	25A/30mA (tipo SI)</p>
+<p>Tomadas banheiro	1 – 2	2,5	16A (curva C)	25A/30mA</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Distribuição das Cargas</p>
+<p>Iluminação: Distribuir as lâmpadas por vários pontos, mas todos no mesmo circuito (a menos que a carga exceda 2 kW).</p>
+<p>Tomadas: Dividir a casa em zonas (ex: sala, quartos, corredor). Cada zona deve ter o seu próprio disjuntor (16A).</p>
+<p>Cozinha: Subdividir: placa de indução (circuito dedicado, 6 mm², 32A), forno + exaustor (4 mm², 20A), tomadas de bancada (2,5 mm², 16A).</p>
+<p>Ar Condicionado: Cada unidade split deve ter o seu circuito dedicado. Se houver uma unidade central, pode ser trifásica.</p>
+<p>Chuveiro: Circuito dedicado, devido à elevada potência.</p>
+<p>Bomba de água: Circuito dedicado, com disjuntor de curva D para suportar o pico de arranque.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Balanceamento (para instalações trifásicas)</p>
+<p>Se a residência for trifásica (380V), as cargas monofásicas devem ser distribuídas pelas três fases para equilibrar:</p>
+<p>Fase A: Iluminação + Tomadas (quartos) + Bomba.</p>
+<p>Fase B: Tomadas (sala) + Ar Condicionado 1 + Chuveiro.</p>
+<p>Fase C: Cozinha + Ar Condicionado 2 + Tomadas (banheiro).</p>
+<p>O objectivo é que a corrente em cada fase seja aproximadamente igual.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Circuitos para Zonas Especiais</p>
+<p>Banheiros: As tomadas devem estar a uma distância ≥ 0,6m da banheira/chuveiro. Devem ser protegidas por DR de 30mA.</p>
+<p>Cozinha: As tomadas de bancada devem estar a ≥ 0,3m da pia.</p>
+<p>Jardim/Exterior: Tomadas com grau de protecção IP44 ou superior.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Exemplo de Distribuição (Casa de 3 Quartos)</p>
+<p>Circuito	Descrição	Potência (W)	Corrente (A)	Cabo (mm²)	Disjuntor</p>
+<p>C1	Iluminação (LED)	500	2,3	1,5	10A B</p>
+<p>C2	Tomadas (sala + quartos)	3000	13,6	2,5	16A C</p>
+<p>C3	Tomadas cozinha (bancada)	2000	9,1	2,5	16A C</p>
+<p>C4	Placa de indução	6000	27,3	6	32A C</p>
+<p>C5	Forno + exaustor	3500	15,9	4	20A C</p>
+<p>C6	Ar Condicionado (sala)	2000	9,1	2,5	16A C</p>
+<p>C7	Ar Condicionado (quarto)	2000	9,1	2,5	16A C</p>
+<p>C8	Chuveiro	5500	25,0	6	32A C</p>
+<p>C9	Bomba de água	800	3,6	2,5	16A D</p>
+<p>C10	Tomadas banheiro	1500	6,8	2,5	16A C</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Circuito</th>
+      <th>Descrição</th>
+      <th>Potência (W)</th>
+      <th>Corrente (A)</th>
+      <th>Secção (mm²)</th>
+      <th>Disjuntor</th>
+      <th>DR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C1</td>
+      <td>Iluminação (LED)</td>
+      <td>500</td>
+      <td>2,3</td>
+      <td>1,5</td>
+      <td>10A B</td>
+      <td>20A/30mA</td>
+    </tr>
+    <tr>
+      <td>C2</td>
+      <td>Tomadas (salas/quartos)</td>
+      <td>3000</td>
+      <td>13,6</td>
+      <td>2,5</td>
+      <td>16A C</td>
+      <td>25A/30mA</td>
+    </tr>
+    <tr>
+      <td>C3</td>
+      <td>Tomadas (cozinha)</td>
+      <td>2000</td>
+      <td>9,1</td>
+      <td>2,5</td>
+      <td>16A C</td>
+      <td>25A/30mA</td>
+    </tr>
+    <tr>
+      <td>C4</td>
+      <td>Placa de indução</td>
+      <td>6000</td>
+      <td>27,3</td>
+      <td>6</td>
+      <td>32A C</td>
+      <td>40A/30mA</td>
+    </tr>
+    <tr>
+      <td>C5</td>
+      <td>Forno + Exaustor</td>
+      <td>3500</td>
+      <td>15,9</td>
+      <td>4</td>
+      <td>20A C</td>
+      <td>40A/30mA</td>
+    </tr>
+    <tr>
+      <td>C6</td>
+      <td>Ar Condicionado (sala)</td>
+      <td>2000</td>
+      <td>9,1</td>
+      <td>2,5</td>
+      <td>16A C</td>
+      <td>25A/30mA</td>
+    </tr>
+    <tr>
+      <td>C7</td>
+      <td>Ar Condicionado (quarto)</td>
+      <td>2000</td>
+      <td>9,1</td>
+      <td>2,5</td>
+      <td>16A C</td>
+      <td>25A/30mA</td>
+    </tr>
+    <tr>
+      <td>C8</td>
+      <td>Chuveiro</td>
+      <td>5500</td>
+      <td>25,0</td>
+      <td>6</td>
+      <td>32A C</td>
+      <td>40A/30mA</td>
+    </tr>
+    <tr>
+      <td>C9</td>
+      <td>Bomba de água</td>
+      <td>800</td>
+      <td>3,6</td>
+      <td>2,5</td>
+      <td>16A D</td>
+      <td>25A/30mA</td>
+    </tr>
+    <tr>
+      <td>C10</td>
+      <td>Tomadas banheiro</td>
+      <td>1500</td>
+      <td>6,8</td>
+      <td>2,5</td>
+      <td>16A C</td>
+      <td>25A/30mA</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Calcular a Carga Total</h4><p>Somar as potências de todos os equipamentos (iluminação, tomadas, electrodomésticos).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Definir os Circuitos</h4><p>Com base no RTIEBT, definir o número mínimo de circuitos. Acrescentar circuitos adicionais se a carga for elevada.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Dimensionar Cada Circuito</h4><p>Calcular a corrente de cada circuito e escolher a secção do cabo, o disjuntor e o DR.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Distribuir as Cargas</h4><p>Associar cada equipamento a um circuito específico (ex: placa de indução no circuito C4).</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Um técnico ligou a placa de indução e o forno no mesmo disjuntor de 32A. A potência total (9,5 kW) resultava em 43A, e o disjuntor disparava sempre que os dois equipamentos estavam ligados simultaneamente.</p><div class="hi">Como evitar: Dimensionar os circuitos de cozinha com base na potência real. A placa de indução (6 kW) requer um circuito dedicado de 32A, e o forno (3 kW) pode ficar num circuito de 20A. Nunca agrupar cargas de alta potência no mesmo disjuntor.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 3, Secção 3.2: Número mínimo de circuitos.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1: Dimensionamento de circuitos.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a projectar a instalação de uma casa de 2 quartos com as seguintes cargas: iluminação 1 kW, tomadas (salas/quartos) 4 kW, cozinha (placa 5 kW, forno 2,5 kW, exaustor 0,5 kW), ar condicionado 3 kW (2 unidades), chuveiro 5,5 kW, bomba de água 1 kW.</p><ol type="a"><li>Defina os circuitos necessários, com as respectivas potências e correntes.</li><li>Para cada circuito, escolha a secção do cabo e o disjuntor.</li><li>Quantos DRs são necessários? Onde devem ser instalados?</li><li>Se a instalação for trifásica, como distribuir os circuitos pelas fases?</li></ol></div>
+<!-- ===== FIM AULA 6.7 ===== -->
+
+<!-- ===== AULA 6.8: Dimensionamento de Circuitos Específicos: Iluminação, Tomadas, Cozinha, Ar Condicionado ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Dimensionar o circuito de iluminação (cálculo de potência, secção, disjuntor).</li><li>Dimensionar o circuito de tomadas de uso geral (potência estimada, secção, disjuntor).</li><li>Dimensionar o circuito da cozinha (placa, forno, exaustor) com cargas específicas.</li><li>Dimensionar o circuito de ar condicionado (cálculo da corrente, disjuntor, secção).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico foi chamado para substituir o circuito de iluminação de uma residência no Talatona, que estava a usar cabos de 1,5 mm² para lâmpadas de 50W incandescentes (substituídas por LED de 10W). O técnico manteve o cabo de 1,5 mm², que era mais que suficiente para a nova carga. Para o circuito de tomadas, usou 2,5 mm² e disjuntores de 16A. Para a cozinha, dimensionou circuitos separados para a placa de indução (6 mm², 32A) e para o forno + exaustor (4 mm², 20A). Para o ar condicionado, usou 4 mm² e disjuntores de 20A para cada unidade. A instalação ficou segura e eficiente.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Circuito de Iluminação</p>
+<p>Cargas: Lâmpadas (LED, fluorescentes, incandescentes). Em Angola, o LED é o mais comum actualmente.</p>
+<p>Cálculo da potência: Somar a potência de todas as lâmpadas do circuito. Exemplo: 10 lâmpadas LED de 10W = 100W.</p>
+<p>Corrente: I = P / V = 100 / 220 = 0,45 A (muito baixa).</p>
+<p>Secção: Mínimo 1,5 mm² (RTIEBT). Com 1,5 mm², pode transportar até 15A, o que é mais que suficiente.</p>
+<p>Disjuntor: 10A (curva B), devido à baixa carga.</p>
+<p>DR: 20A, 30mA (ou utilizar o DR geral).</p>
+<p>Observações: O circuito de iluminação não deve incluir tomadas. Em salas grandes, pode ser subdividido em dois circuitos.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Circuito de Tomadas de Uso Geral</p>
+<p>Cargas: Aparelhos portáteis (televisores, carregadores, aspiradores, etc.). Estimar 100 a 200W por tomada.</p>
+<p>Cálculo da potência: Exemplo: 10 tomadas x 200W = 2.000W.</p>
+<p>Corrente: I = 2000 / 220 = 9,1 A.</p>
+<p>Secção: Mínimo 2,5 mm² (RTIEBT). Para circuitos de tomadas, a secção mínima é 2,5 mm².</p>
+<p>Disjuntor: 16A (curva C).</p>
+<p>DR: 25A, 30mA (ou utilizar o DR geral).</p>
+<p>Observações: O número de tomadas por circuito não deve ser superior a 10 (em Angola, recomenda-se até 8). Em cozinhas e banheiros, usar DR individual.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Circuito da Cozinha</p>
+<p>A cozinha tem cargas de alta potência que devem ser distribuídas em circuitos separados.</p>
+<p>Placa de indução: 5 a 7 kW, monofásica. I = 6000/220 = 27,3 A. Secção: 6 mm² (Iz ≈ 36A). Disjuntor: 32A (curva C). DR: 40A, 30mA (tipo A).</p>
+<p>Forno eléctrico: 2 a 3,5 kW. I = 3500/220 = 15,9 A. Secção: 4 mm² (Iz ≈ 28A). Disjuntor: 20A (curva C). DR: 40A, 30mA (tipo A).</p>
+<p>Exaustor: 300 a 500 W. Pode ser ligado ao circuito do forno (se a potência total não exceder o disjuntor) ou num circuito separado de 16A.</p>
+<p>Tomadas de bancada: 2 a 3 tomadas de 200W cada. Circuito separado (2,5 mm², 16A).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Circuito de Ar Condicionado</p>
+<p>Cálculo da corrente: Para um split de 12.000 BTU (≈ 1,5 kW): I = 1500 / 220 = 6,8 A. Secção: 2,5 mm². Disjuntor: 16A (curva C).</p>
+<p>Para 18.000 BTU (≈ 2,5 kW): I = 2500 / 220 = 11,4 A. Secção: 4 mm². Disjuntor: 20A (curva C).</p>
+<p>Para 24.000 BTU (≈ 3,5 kW): I = 3500 / 220 = 15,9 A. Secção: 4 mm². Disjuntor: 20A (curva C).</p>
+<p>DR: 25A, 30mA (ou usar o DR geral). Em alguns casos, pode-se usar DR selectivo para evitar disparos durante o arranque.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Exemplo de Dimensionamento (Casa de 3 Quartos)</p>
+<p>Circuito	Descrição	Potência (W)	Corrente (A)	Secção (mm²)	Disjuntor</p>
+<p>Iluminação	10 Lâmpadas LED 10W	100	0,45	1,5	10A B</p>
+<p>Tomadas (sala)	8 tomadas	1600	7,3	2,5	16A C</p>
+<p>Tomadas (quartos)	8 tomadas	1600	7,3	2,5	16A C</p>
+<p>Placa indução	6 kW	6000	27,3	6	32A C</p>
+<p>Forno	3 kW	3000	13,6	4	20A C</p>
+<p>Tomadas cozinha	3 tomadas	600	2,7	2,5	16A C</p>
+<p>AC Sala	18.000 BTU	2500	11,4	4	20A C</p>
+<p>AC Quarto 1	12.000 BTU	1500	6,8	2,5	16A C</p>
+<p>AC Quarto 2	12.000 BTU	1500	6,8	2,5	16A C</p>
+<p>Chuveiro	5,5 kW	5500	25,0	6	32A C</p>
+<p>Bomba	1 kW	1000	4,5	2,5	16A D</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Circuito</th>
+      <th>Potência (W)</th>
+      <th>Corrente (A)</th>
+      <th>Secção (mm²)</th>
+      <th>Disjuntor</th>
+      <th>DR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Iluminação</td>
+      <td>≤ 2000</td>
+      <td>≤ 9,1</td>
+      <td>1,5</td>
+      <td>10A B</td>
+      <td>20A/30mA</td>
+    </tr>
+    <tr>
+      <td>Tomadas (uso geral)</td>
+      <td>≤ 3500</td>
+      <td>≤ 15,9</td>
+      <td>2,5</td>
+      <td>16A C</td>
+      <td>25A/30mA</td>
+    </tr>
+    <tr>
+      <td>Placa de indução</td>
+      <td>5000-7000</td>
+      <td>22,7-31,8</td>
+      <td>6</td>
+      <td>32A C</td>
+      <td>40A/30mA (tipo A)</td>
+    </tr>
+    <tr>
+      <td>Forno eléctrico</td>
+      <td>2000-3500</td>
+      <td>9,1-15,9</td>
+      <td>4</td>
+      <td>20A C</td>
+      <td>40A/30mA (tipo A)</td>
+    </tr>
+    <tr>
+      <td>AC 12.000 BTU</td>
+      <td>1500</td>
+      <td>6,8</td>
+      <td>2,5</td>
+      <td>16A C</td>
+      <td>25A/30mA</td>
+    </tr>
+    <tr>
+      <td>AC 18.000 BTU</td>
+      <td>2500</td>
+      <td>11,4</td>
+      <td>4</td>
+      <td>20A C</td>
+      <td>40A/30mA</td>
+    </tr>
+    <tr>
+      <td>Chuveiro</td>
+      <td>5500</td>
+      <td>25,0</td>
+      <td>6</td>
+      <td>32A C</td>
+      <td>40A/30mA</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Calcular a Potência de Cada Circuito</h4><p>Listar as cargas e somar a potência.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Dimensionar a Secção e o Disjuntor</h4><p>Usar as regras de capacidade de corrente e coordenação.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Escolher o DR</h4><p>Utilizar 30mA para protecção de pessoas, 300mA (selectivo) para protecção contra incêndios (se aplicável).</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Verificar a Queda de Tensão</h4><p>Para circuitos longos, calcular a queda de tensão e ajustar a secção se necessário.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Um técnico ligou o ar condicionado de 18.000 BTU ao circuito de tomadas (2,5 mm², 16A). Durante o verão, o AC disparava o disjuntor frequentemente. O técnico teve que instalar um circuito dedicado de 4 mm² e 20A.</p><div class="hi">Como evitar: Cada equipamento de alta potência (AC, chuveiro, placa) deve ter o seu próprio circuito dedicado, com a secção e o disjuntor adequados.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1: Dimensionamento de circuitos.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 3, Secção 3.2: Separação de circuitos.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Uma residência tem um ar condicionado de 24.000 BTU (3,5 kW) e outro de 12.000 BTU (1,5 kW). A cozinha tem uma placa de indução de 7 kW e um forno de 3 kW.</p><ol type="a"><li>Para cada equipamento, qual a secção do cabo, o disjuntor e o DR necessários?</li><li>Pode-se ligar o AC de 12.000 BTU ao mesmo circuito das tomadas? Porquê?</li><li>Se a placa de indução for trifásica (380V), qual a corrente e a secção necessária?</li><li>O que deve ser feito se a queda de tensão no circuito da placa de indução for superior a 5%?</li></ol></div>
+<!-- ===== FIM AULA 6.8 ===== -->
+
+<!-- ===== AULA 6.9: Montagem do Quadro e Passagem de Cabos numa Residência ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Planejar a montagem do quadro eléctrico (localização, fixação, acessibilidade).</li><li>Executar a passagem de cabos (embutidos, em tubos, em calhas) com as curvas e fixações adequadas.</li><li>Realizar as ligações no quadro (disjuntores, DRs, barramentos) com aperto correcto.</li><li>Garantir a segurança durante a montagem (desligar a energia, verificar ausência de tensão).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico foi contratado para montar o quadro e passar os cabos de uma nova residência no Talatona. O técnico escolheu uma localização para o quadro perto da entrada, de fácil acesso. Passou os cabos embutidos nas paredes, utilizando tubos de PVC de 16mm para iluminação e 25mm para os circuitos de potência. Fez as curvas com o raio adequado e fixou os tubos com abraçadeiras. No quadro, organizou os disjuntores e DRs, apertou todos os terminais com o binário recomendado, e etiquetou cada circuito. A instalação ficou impecável.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Localização do Quadro</p>
+<p>Próximo da entrada da residência: Para minimizar o comprimento do cabo de entrada.</p>
+<p>Acessível: A uma altura de 1,5 a 1,8m do chão.</p>
+<p>Protegido: Contra humidade, calor e impactos.</p>
+<p>Com espaço: Deixar espaço livre à frente (≥ 0,8m) para manutenção.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Passagem de Cabos (Tubos e Calhas)</p>
+<p>Tubos de PVC: Usar tubos de 16mm (diâmetro interno) para cabos de 1,5 e 2,5 mm², e 25mm para cabos de 4, 6 e 10 mm².</p>
+<p>Curvas: As curvas devem ter raio mínimo de 3 vezes o diâmetro do tubo.</p>
+<p>Fixação: Fixar os tubos à parede a cada 1,5m (máximo).</p>
+<p>Caixas de derivação: Utilizar caixas de passagem para emendas e mudanças de direcção. As emendas devem ser acessíveis (não enterradas na parede).</p>
+<p>Protecção mecânica: Em zonas com risco de impacto (ex: rodapés), usar tubos metálicos ou calhas de protecção.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Passagem de Cabos (Embutidos)</p>
+<p>Rasgos: Fazer rasgos na parede com profundidade suficiente para o tubo.</p>
+<p>Reboco: Cobrir os tubos com reboco, mas deixar as caixas de derivação acessíveis.</p>
+<p>Isolamento: Garantir que os cabos não são danificados durante a passagem.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Ligações no Quadro</p>
+<p>Aperto dos terminais: Apertar os parafusos dos disjuntores e barramentos com a chave de fendas ou chave de binário (se disponível). O aperto correcto evita aquecimento.</p>
+<p>Fios: Os fios devem ser flexíveis (H07V-K) nos terminais. Usar terminais de compressão (ponta de cabos) em fios de secção ≥ 4 mm².</p>
+<p>Cores: Fase (preto, vermelho ou castanho), neutro (azul claro), terra (amarelo-verde).</p>
+<p>Organização: Os cabos devem ser organizados de forma limpa, com braçadeiras para fixação.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Etiquetagem</p>
+<p>Disjuntores: Identificar cada disjuntor com o nome do circuito (ex: "Iluminação", "Tomadas Sala").</p>
+<p>Diagrama: Colocar um diagrama unifilar na porta do quadro, mostrando a disposição dos disjuntores.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Verificação Final</p>
+<p>Continuidade: Verificar a continuidade dos condutores (fase, neutro, terra).</p>
+<p>Isolamento: Medir a resistência de isolamento com megger.</p>
+<p>Energização: Ligar a energia e testar cada circuito (verificar se não há curto-circuitos).</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Passagem de Cabos numa Residência</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Passagem de Cabos numa Residência</text>
+
+  <!-- Planta da Casa -->
+  <rect x="50" y="50" width="550" height="300" fill="white" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="325" y="70" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Planta (esquemática)</text>
+
+  <!-- Quadro -->
+  <rect x="100" y="100" width="40" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="120" y="125" text-anchor="middle" fill="white" font-size="8" font-weight="bold">Q</text>
+  <text x="120" y="150" text-anchor="middle" font-size="8" fill="#333">Quadro</text>
+
+  <!-- Iluminação -->
+  <path d="M 140 120 L 200 120 L 200 160 L 250 160" fill="none" stroke="#f0ad4e" stroke-width="2"/>
+  <text x="220" y="115" text-anchor="middle" font-size="8" fill="#f0ad4e">Iluminação</text>
+  <circle cx="250" cy="160" r="5" fill="#f0ad4e"/>
+  <text x="260" y="165" font-size="8" fill="#333">L</text>
+
+  <!-- Tomadas Sala -->
+  <path d="M 140 140 L 300 140 L 300 200 L 350 200" fill="none" stroke="#5cb85c" stroke-width="2"/>
+  <text x="280" y="135" text-anchor="middle" font-size="8" fill="#5cb85c">Tomadas Sala</text>
+  <rect x="350" y="190" width="15" height="15" fill="#5cb85c"/>
+  <text x="370" y="200" font-size="8" fill="#333">T</text>
+
+  <!-- Cozinha -->
+  <path d="M 140 160 L 450 160 L 450 240 L 500 240" fill="none" stroke="#0072b0" stroke-width="2"/>
+  <text x="400" y="155" text-anchor="middle" font-size="8" fill="#0072b0">Cozinha</text>
+  <rect x="500" y="230" width="20" height="20" fill="#0072b0"/>
+  <text x="530" y="245" font-size="8" fill="#333">C</text>
+
+  <!-- Ar Condicionado -->
+  <path d="M 140 180 L 350 180 L 350 280 L 400 280" fill="none" stroke="#d9534f" stroke-width="2"/>
+  <text x="280" y="175" text-anchor="middle" font-size="8" fill="#d9534f">Ar Condicionado</text>
+  <rect x="400" y="270" width="20" height="20" fill="#d9534f"/>
+  <text x="430" y="285" font-size="8" fill="#333">AC</text>
+
+  <!-- Chuveiro -->
+  <path d="M 140 200 L 200 200 L 200 280 L 150 280" fill="none" stroke="#6c6c6c" stroke-width="2"/>
+  <text x="200" y="195" text-anchor="middle" font-size="8" fill="#6c6c6c">Chuveiro</text>
+  <rect x="130" y="270" width="20" height="20" fill="#6c6c6c"/>
+  <text x="100" y="285" font-size="8" fill="#333">CH</text>
+
+  <!-- Legendas -->
+  <text x="50" y="380" font-size="9" fill="#333">Legenda: Q = Quadro, L = Lâmpada, T = Tomada, C = Cozinha, AC = Ar Condicionado, CH = Chuveiro</text>
+  <text x="50" y="395" font-size="9" fill="#333">Os cabos são passados em tubos de PVC, embutidos na parede.</text>
+  <text x="50" y="410" font-size="9" fill="#333">Cada circuito parte do quadro e percorre os seus pontos de utilização.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Planear a Localização do Quadro</h4><p>Escolher um local de fácil acesso e com espaço suficiente.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Passar os Cabos</h4><p>Passar os tubos e cabos de acordo com o projecto, respeitando as curvas e fixações.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Montar o Quadro</h4><p>Fixar o quadro na parede, instalar os disjuntores e DRs, e fazer as ligações.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Etiquetar e Verificar</h4><p>Etiquetar os disjuntores e verificar a continuidade e o isolamento.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Um técnico passou os cabos de iluminação e tomadas no mesmo tubo, o que é permitido, mas o tubo ficou sobrelotado. Durante a passagem, o isolamento de um cabo foi danificado, causando um curto-circuito.</p><div class="hi">Como evitar: Respeitar a percentagem de ocupação dos tubos (máximo 40% da área do tubo). Para 16mm (área ≈ 200 mm²), a área total dos cabos não deve exceder 80 mm².</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.5: Montagem de quadros.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.1: Passagem de cabos.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a montar o quadro de uma residência. O quadro tem 8 disjuntores de 1 módulo. A entrada é de 63A.</p><ol type="a"><li>Que dimensões mínimas o quadro deve ter?</li><li>Como o técnico deve fixar o quadro à parede?</li><li>Que ferramentas são necessárias para apertar os terminais?</li><li>O que deve ser verificado antes de energizar o quadro?</li></ol></div>
+<!-- ===== FIM AULA 6.9 ===== -->
+
+<!-- ===== AULA 6.10: Verificação e Ensaios da Instalação Residencial ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Realizar os ensaios de verificação exigidos pelo RTIEBT (resistência de isolamento, continuidade, DR).</li><li>Medir a resistência de terra e a continuidade dos condutores de protecção.</li><li>Verificar o funcionamento dos disjuntores e DRs.</li><li>Elaborar o relatório de ensaios para a ENDE.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, após a montagem da instalação de uma residência no Talatona, o técnico realizou todos os ensaios de verificação: mediu a resistência de isolamento (≥ 1 MΩ), a resistência de terra (≤ 10 Ω), e testou os DRs. Tudo estava conforme. O técnico preencheu o relatório de ensaios e entregou ao cliente, que o apresentou à ENDE para a vistoria. A ENDE aprovou a instalação.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Ensaios Obrigatórios (RTIEBT)</p>
+<p>O RTIEBT (Parte 6) exige os seguintes ensaios para instalações novas:</p>
+<p>Medição da resistência de isolamento: Verificar a qualidade do isolamento dos condutores.</p>
+<p>Medição da resistência de terra: Verificar a eficácia do aterramento.</p>
+<p>Medição da continuidade dos condutores de protecção: Verificar a ligação PE.</p>
+<p>Teste de disparo dos DRs: Verificar o funcionamento dos dispositivos diferenciais.</p>
+<p>Medição da tensão de alimentação: Verificar se a tensão está dentro dos limites.</p>
+<p>Medição da corrente de curto-circuito (se possível): Opcional, mas recomendado.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Medição da Resistência de Isolamento</p>
+<p>Instrumento: Megaohmímetro (500V para 220V).</p>
+<p>Procedimento: Desligar a alimentação. Medir entre fase e neutro, fase e terra, neutro e terra.</p>
+<p>Valor mínimo: ≥ 1 MΩ para instalações novas (500V). Se o valor for inferior, há fuga.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Medição da Resistência de Terra</p>
+<p>Instrumento: Terrômetro.</p>
+<p>Procedimento: Ligar o terrômetro ao eléctrodo de terra e aos eléctrodos auxiliares.</p>
+<p>Valor máximo: ≤ 10 Ω (sistema TT). Se for superior, melhorar o aterramento.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Medição da Continuidade dos PE</p>
+<p>Instrumento: Multímetro (escala de resistência).</p>
+<p>Procedimento: Medir a resistência entre o barramento de terra e cada ponto de terra (carcaça de equipamento, etc.).</p>
+<p>Valor máximo: ≤ 0,5 Ω (para garantir a continuidade).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Teste dos DRs</p>
+<p>Instrumento: Botão de teste do DR (ou analisador de DR).</p>
+<p>Procedimento: Pressionar o botão de teste. O DR deve disparar imediatamente.</p>
+<p>Medição do tempo de disparo (opcional): Usar um analisador de DR para medir o tempo de disparo (deve ser &lt; 0,3s para 30mA).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Medição da Tensão</p>
+<p>Instrumento: Multímetro.</p>
+<p>Procedimento: Medir a tensão entre fase e neutro (deve ser 220V ± 6%).</p>
+<p>Medir entre fases (se trifásico): Deve ser 380V ± 6%.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.7. Relatório de Ensaios</p>
+<p>O técnico deve elaborar um relatório com:</p>
+<p>Identificação do cliente e do local.</p>
+<p>Data e hora dos ensaios.</p>
+<p>Instrumentos utilizados (marca, modelo, número de série, data de calibração).</p>
+<p>Resultados de cada ensaio (com valores medidos).</p>
+<p>Conclusão: "Aprovado" ou "Reprovado".</p>
+<p>Assinatura do técnico responsável.</p></div>
+<div class="tw"><table class="dt">
+  <thead>
+    <tr style="background-color: #0072b0; color: white;">
+      <th>Ensaio</th>
+      <th>Instrumento</th>
+      <th>Valor Medido</th>
+      <th>Valor Admissível</th>
+      <th>Resultado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Resistência de Isolamento (F-N)</td>
+      <td>Megger 500V</td>
+      <td>2,5 MΩ</td>
+      <td>≥ 1 MΩ</td>
+      <td style="color: #5cb85c;">Aprovado</td>
+    </tr>
+    <tr>
+      <td>Resistência de Isolamento (F-T)</td>
+      <td>Megger 500V</td>
+      <td>3,0 MΩ</td>
+      <td>≥ 1 MΩ</td>
+      <td style="color: #5cb85c;">Aprovado</td>
+    </tr>
+    <tr>
+      <td>Resistência de Isolamento (N-T)</td>
+      <td>Megger 500V</td>
+      <td>2,8 MΩ</td>
+      <td>≥ 1 MΩ</td>
+      <td style="color: #5cb85c;">Aprovado</td>
+    </tr>
+    <tr>
+      <td>Resistência de Terra (R_T)</td>
+      <td>Terrômetro</td>
+      <td>8 Ω</td>
+      <td>≤ 10 Ω</td>
+      <td style="color: #5cb85c;">Aprovado</td>
+    </tr>
+    <tr>
+      <td>Continuidade PE (motor)</td>
+      <td>Multímetro</td>
+      <td>0,1 Ω</td>
+      <td>≤ 0,5 Ω</td>
+      <td style="color: #5cb85c;">Aprovado</td>
+    </tr>
+    <tr>
+      <td>Teste DR 63A/30mA</td>
+      <td>Botão Teste</td>
+      <td>Disparou</td>
+      <td>Deve disparar</td>
+      <td style="color: #5cb85c;">Aprovado</td>
+    </tr>
+    <tr>
+      <td>Tensão de Alimentação</td>
+      <td>Multímetro</td>
+      <td>218V</td>
+      <td>207 – 233V</td>
+      <td style="color: #5cb85c;">Aprovado</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Desligar a Energia</h4><p>Antes dos ensaios de isolamento e continuidade, desligar a energia no DG.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Realizar os Ensaios de Isolamento e Continuidade</h4><p>Com o megger e o multímetro, medir os valores.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Ligar a Energia e Testar os DRs</h4><p>Religar a energia e testar todos os DRs.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Preencher o Relatório</h4><p>Anotar todos os valores e assinar o relatório.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2023): Um técnico não fez os ensaios de verificação e entregou a instalação. O DR estava avariado, e a ENDE detectou durante a vistoria. O cliente teve que pagar uma nova vistoria.</p><div class="hi">Como evitar: Sempre realizar todos os ensaios de verificação antes de chamar a ENDE. Um DR avariado é uma não-conformidade grave.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 6: Ensaios de verificação.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>6: Ensaios de instalações.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico mediu a resistência de isolamento de uma instalação e obteve 0,8 MΩ.</p><ol type="a"><li>O valor é aceitável para uma instalação nova? E para uma instalação antiga?</li><li>O que pode estar a causar o baixo valor?</li><li>Que acção o técnico deve tomar?</li><li>Se o DR de 30mA não disparar ao pressionar o botão de teste, qual é a possível causa e o que fazer?</li></ol></div>
+<!-- ===== FIM AULA 6.10 ===== -->
+
+<!-- ===== AULA 6.11: Projecto Residencial Passo a Passo: Estudo de Caso em Angola ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Aplicar todos os conceitos do módulo a um projecto residencial real (casa de 4 quartos).</li><li>Desenvolver o projecto desde o levantamento de cargas até à elaboração da documentação.</li><li>Dimensionar todos os componentes: cabos, disjuntores, DRs, quadro, aterramento.</li><li>Apresentar o projecto completo, incluindo memória descritiva, cálculos e esquemas.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico foi contratado para projectar a instalação eléctrica de uma casa de 4 quartos no Talatona, com 300 m² de área. O cliente queria uma instalação moderna, com ar condicionado central, cozinha totalmente eléctrica, iluminação em LED, e sistema de segurança. O técnico elaborou um projecto completo, seguindo as normas RTIEBT e os procedimentos da ENDE. O projecto foi aprovado e a casa foi ligada à rede.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Dados do Projecto</p>
+<p>Local: Talatona, Luanda.</p>
+<p>Área: 300 m², 2 pisos.</p>
+<p>Tensão: Monofásica 220V (a ENDE pode fornecer trifásica, mas optou-se por monofásica com 63A).</p>
+<p>Cargas:</p>
+<p>Iluminação (LED): 50 lâmpadas de 15W = 750W.</p>
+<p>Tomadas (salas, quartos, halls): 20 tomadas de 200W = 4.000W.</p>
+<p>Cozinha: placa de indução 7 kW, forno 3,5 kW, exaustor 0,5 kW, tomadas de bancada 1 kW.</p>
+<p>Ar condicionado central: 10 kW (trifásico? Optou-se por split, total 6 kW).</p>
+<p>Chuveiro: 5,5 kW.</p>
+<p>Bomba de água: 1,5 kW.</p>
+<p>Sistema de segurança (câmaras, alarme): 0,5 kW.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Cálculo de Cargas e Potência de Cálculo</p>
+<p>Potência total instalada: 750 + 4000 + 7000 + 3500 + 500 + 1000 + 6000 + 5500 + 1500 + 500 = 32.250 W (32,25 kW).</p>
+<p>Factor de simultaneidade (ks = 0,6): P_calc = 32,25 * 0,6 = 19,35 kW.</p>
+<p>Corrente de cálculo: I = 19350 / 220 = 87,9 A. → A ENDE fornece 63A (monofásico), mas 87,9A é superior. Portanto, o técnico optou por trifásico (380V). I = 19350 / (1,73 * 380 * 0,9) = 32,7 A (por fase). A ENDE fornecerá 63A trifásico.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Circuitos e Dimensionamento (Trifásico)</p>
+<p>Circuito	Descrição	Potência (W)	Corrente (A)	Secção (mm²)	Disjuntor</p>
+<p>C1	Iluminação (LED)	750	3,4	1,5	10A B</p>
+<p>C2	Tomadas (salas)	2000	9,1	2,5	16A C</p>
+<p>C3	Tomadas (quartos)	2000	9,1	2,5	16A C</p>
+<p>C4	Cozinha (placa)	7000	31,8	6	32A C</p>
+<p>C5	Cozinha (forno)	3500	15,9	4	20A C</p>
+<p>C6	Cozinha (tomadas)	1000	4,5	2,5	16A C</p>
+<p>C7	Ar Condicionado (2 unidades)	6000	27,3	6	32A C</p>
+<p>C8	Chuveiro	5500	25,0	6	32A C</p>
+<p>C9	Bomba de água	1500	6,8	2,5	16A D</p>
+<p>C10	Sistema de segurança	500	2,3	1,5	10A B</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Quadro Geral (Trifásico)</p>
+<p>DG: 63A (curva C), poder de corte 10kA.</p>
+<p>DR geral: 63A, 300mA, tipo S (selectivo).</p>
+<p>DRs individuais: 30mA para cada circuito (ou DR geral + DRs individuais para zonas húmidas).</p>
+<p>Barramentos: Fase (3 barras), N (1 barra), PE (1 barra).</p>
+<p>Separação N/PE: Sistema TN-C-S (PEN na entrada, separação no quadro).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Aterramento</p>
+<p>Eléctrodo: Malha de terra de 5x5m (fio de cobre 25 mm² enterrado a 0,5m).</p>
+<p>R_T: ≤ 5 Ω.</p>
+<p>PE: Secção 16 mm² (de acordo com as fases de 16 mm²).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Documentação</p>
+<p>Memória descritiva: Descrição da instalação, cargas, critérios de dimensionamento.</p>
+<p>Cálculos: Dimensionamento de condutores, disjuntores, DRs, aterramento.</p>
+<p>Esquemas unifilares: Geral e por piso.</p>
+<p>Lista de materiais.</p>
+<p>Relatório de ensaios.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Esquema Unifilar do Projecto Residencial (Trifásico)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 500" font-family="Arial, sans-serif">
+  <rect width="650" height="500" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Esquema Unifilar – Residência (Talatona) – Trifásico</text>
+
+  <!-- ENDE -->
+  <rect x="275" y="50" width="100" height="30" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="325" y="70" text-anchor="middle" fill="white" font-size="10" font-weight="bold">ENDE 380V</text>
+  <line x1="325" y1="80" x2="325" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Contador -->
+  <rect x="285" y="100" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="325" y="120" text-anchor="middle" fill="white" font-size="10">Contador</text>
+  <line x1="325" y1="130" x2="325" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- DG -->
+  <rect x="285" y="150" width="80" height="30" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="325" y="170" text-anchor="middle" fill="white" font-size="9" font-weight="bold">DG 63A C</text>
+  <line x1="325" y1="180" x2="325" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- DR Geral -->
+  <rect x="285" y="200" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="325" y="220" text-anchor="middle" fill="white" font-size="9" font-weight="bold">DR 63A/300mA S</text>
+  <line x1="325" y1="230" x2="325" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Barramento de Fases -->
+  <rect x="200" y="250" width="250" height="10" fill="#d9534f" stroke="#a94442" stroke-width="1"/>
+  <text x="325" y="270" text-anchor="middle" font-size="8" fill="#333">Barramento de Fases (L1, L2, L3)</text>
+
+  <!-- Circuitos (apenas alguns exemplos) -->
+  <!-- C1 -->
+  <line x1="210" y1="260" x2="210" y2="290" stroke="#333" stroke-width="1.5"/>
+  <rect x="190" y="290" width="40" height="20" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="210" y="305" text-anchor="middle" fill="white" font-size="7">C1 10A</text>
+  <text x="210" y="325" text-anchor="middle" font-size="7" fill="#333">Iluminação</text>
+
+  <!-- C4 -->
+  <line x1="260" y1="260" x2="260" y2="290" stroke="#333" stroke-width="1.5"/>
+  <rect x="240" y="290" width="40" height="20" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="260" y="305" text-anchor="middle" fill="white" font-size="7">C4 32A</text>
+  <text x="260" y="325" text-anchor="middle" font-size="7" fill="#333">Placa</text>
+
+  <!-- C7 -->
+  <line x1="310" y1="260" x2="310" y2="290" stroke="#333" stroke-width="1.5"/>
+  <rect x="290" y="290" width="40" height="20" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="310" y="305" text-anchor="middle" fill="white" font-size="7">C7 32A</text>
+  <text x="310" y="325" text-anchor="middle" font-size="7" fill="#333">Ar Condicionado</text>
+
+  <!-- C8 -->
+  <line x1="360" y1="260" x2="360" y2="290" stroke="#333" stroke-width="1.5"/>
+  <rect x="340" y="290" width="40" height="20" fill="#5cb85c" stroke="#4cae4c" stroke-width="1.5"/>
+  <text x="360" y="305" text-anchor="middle" fill="white" font-size="7">C8 32A</text>
+  <text x="360" y="325" text-anchor="middle" font-size="7" fill="#333">Chuveiro</text>
+
+  <!-- Barramento N -->
+  <rect x="200" y="360" width="250" height="10" fill="#5bc0de" stroke="#31b0d5" stroke-width="1"/>
+  <text x="325" y="380" text-anchor="middle" font-size="8" fill="#333">Barramento N (Neutro)</text>
+
+  <!-- Barramento PE -->
+  <rect x="200" y="400" width="250" height="10" fill="#5cb85c" stroke="#4cae4c" stroke-width="1"/>
+  <text x="325" y="420" text-anchor="middle" font-size="8" fill="#333">Barramento PE (Terra) → Malha 5x5m (R_T ≤ 5 Ω)</text>
+
+  <!-- Legendas -->
+  <text x="50" y="460" font-size="9" fill="#333">DG = Disjuntor Geral; DR = Diferencial; N = Neutro; PE = Terra</text>
+  <text x="50" y="475" font-size="9" fill="#333">Sistema TN-C-S (PEN na entrada, separação N/PE no quadro)</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><p>Levantamento de cargas: Calcular a potência total instalada e a potência de cálculo.</p>
+<p>Dimensionar a entrada: Escolher a tensão (monofásica ou trifásica) e o disjuntor geral.</p>
+<p>Dimensionar os circuitos: Dividir as cargas, dimensionar cabos e disjuntores.</p>
+<p>Dimensionar o aterramento: Escolher o eléctrodo e garantir R_T ≤ 10 Ω.</p>
+<p>Elaborar a documentação: Memória descritiva, cálculos, esquemas.</p></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): O técnico do projecto anterior subdimensionou o cabo de entrada (35 mm²) para a corrente de 87,9A (monofásico). A ENDE recusou a ligação, e o técnico teve que aumentar para 50 mm².</p><div class="hi">Como evitar: Calcular correctamente a corrente de cálculo. Se a potência exceder 13,8 kVA (63A), optar por trifásico para reduzir a corrente.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Todos os capítulos aplicáveis.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60364</div><blockquote>Normas de referência.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Procedimentos da ENDE</div><blockquote>Para ligação.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: O técnico do projecto anterior recebeu uma reclamação: a placa de indução dispara o DR de 30mA sempre que é ligada.</p>
+<p>FIM DO MÓDULO 6 – ATERRAMENTO, QUADROS E PROJECTOS RESIDENCIAIS</p>
+<p>O Módulo 6 está completo! Com 11 aulas densas, cobrindo todos os aspectos do aterramento, quadros e projecto residencial, com exemplos práticos para Angola, elementos visuais e perguntas de verificação.</p>
+<p>Agora, posso avançar para o Módulo 7 — Cargas Comerciais e Dimensionamento. Basta dar o comando.</p>
+<p>Ok</p>
+<p>OK, the user just said "Ok" after I provided a huge block of content completing Module 6. That's the signal to move on to the next module as we've been doing throughout this massive project. The user is clearly committed to getting the full course material built out, module by module, with all the specific structure and depth I've been following.</p>
+<p>Looking at the history, this is a super detailed request. The user wants me to act as a senior electrical instructor reconstructing a professional training course for Angola. The current material is weak, like a blog summary, and they want it transformed into real, dense, technical study material that students can learn from without other sources. The user trusts me to do this huge job and is reviewing module by module.</p>
+<p>The user's deep need here is efficiency and completeness. They don't want me to ask permission to proceed each time; they want me to just do the work and present it. They've given me the green light with "Ok" after each module completion. The unspoken need is for me to maintain the exact same quality, depth, and structure across all 18 modules, so the final product is consistent and comprehensive. They're likely building this for a website or educational platform and need it formatted and ready to go.</p>
+<p>So, for this response, I need to dive right into Module 7. I'll start by presenting the full list of 11 lesson titles for the module, which I need to propose based on the scope they gave. The scope for Module 7 is about commercial loads, demand factors, load calculations, air conditioning, commercial lighting, high-power equipment, and phase balancing. I need to come up with a logical progression of lessons that covers this thoroughly.</p>
+<p>Then, I'll develop the first lesson completely, following the strict structure they've been enforcing: Objectives, Real Scenario, Technical Development (with subsections, formulas, real Angolan numbers, calculations, references), Visual Element, Practical Procedure, Common Installation Error, Norms, and Verification Question.</p>
+<p>The real scenario in the first lesson should be a concrete Angolan example—something with specific kW, kVA, cable sizes, and costs, set in a familiar place like Kilamba or Viana. The development needs to be at least 1800 words, broken into sections, with a complete calculation example. The visual element should be an SVG or table as required.</p>
+<p>I'll make sure the technical language is precise, use the Angolan voltage standards (220/380V, 50Hz), reference the relevant norms (RTIEBT, IEC 60364, ENDE), and include a common mistake scenario with real consequences. The verification question should be complex and apply the lesson's concepts.</p>
+<p>The user is probably in Angola or working on an Angolan project, and they need this material for training. They're not just asking for a summary; they want a complete course ready to publish. My role is to be the expert instructor who delivers exactly that, consistently.</p>
+<p>Alright, I'm going to structure the response with the module title, the list of lessons, and then dive into the first lesson with all the required sections. I'll make sure it's ready to just be copied and pasted into their site.</p>
+<p>Perfeito! Vou agora desenvolver o Módulo 7 — Cargas Comerciais e Dimensionamento, seguindo rigorosamente a mesma estrutura, com 11 aulas completas, densas e com exemplos práticos para Angola.</p>
+<p>MÓDULO 7 — CARGAS COMERCIAIS E DIMENSIONAMENTO (COMPLETO)</p>
+<p>Lista de Aulas (11 aulas):</p>
+<p>7.1 — Introdução às Instalações Comerciais em Angola: Tipos e Características</p>
+<p>7.2 — Levantamento de Cargas em Instalações Comerciais</p>
+<p>7.3 — Factor de Demanda e Factor de Simultaneidade em Comércios</p>
+<p>7.4 — Cálculo da Potência de Cálculo e Corrente de Cálculo</p>
+<p>7.5 — Dimensionamento de Circuitos para Iluminação Comercial</p>
+<p>7.6 — Dimensionamento de Circuitos para Climatização (Ar Condicionado e Ventilação)</p>
+<p>7.7 — Dimensionamento de Circuitos para Equipamentos de Maior Potência</p>
+<p>7.8 — Balanceamento de Fases em Instalações Trifásicas Comerciais</p>
+<p>7.9 — Dimensionamento de Condutores e Protecções em Instalações Comerciais</p>
+<p>7.10 — Aterramento e Quadros em Instalações Comerciais</p>
+<p>7.11 — Aplicação Prática: Projecto de um Restaurante e Loja no Kilamba</p><ol type="a"><li>Qual a possível causa?</li><li>O técnico deve substituir o DR por um de 100mA? Porquê?</li><li>Que tipo de DR deve ser usado para a placa de indução?</li><li>Se o problema persistir, o que o técnico deve verificar (em termos de isolamento ou fuga)?</li></ol></div>
+<!-- ===== FIM AULA 6.11 ===== -->

@@ -1,0 +1,768 @@
+<!-- ===== AULA 16.1: Introdução aos CLPs (Controladores Lógicos Programáveis) em Angola ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Definir o que é um CLP (Controlador Lógico Programável) e as suas aplicações na indústria.</li><li>Descrever a evolução dos sistemas de controlo: relés → CLPs → sistemas de automação.</li><li>Identificar as principais marcas e modelos de CLPs utilizados em Angola (Siemens, Schneider, Allen-Bradley, etc.).</li><li>Compreender as vantagens do CLP face aos sistemas de relés: flexibilidade, fiabilidade, facilidade de programação.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, uma fábrica de processamento de pescado no Lobito substituiu o seu antigo sistema de controlo baseado em relés por um CLP Siemens S7-1200. O novo sistema permitiu programar a sequência de arranque das bombas, controlar a velocidade das esteiras (via VFDs) e monitorizar o processo em tempo real. A produção aumentou 15% e as avarias diminuíram 40%.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. O que é um CLP?</p>
+<p>Um CLP (Controlador Lógico Programável) – ou PLC (Programmable Logic Controller) em inglês – é um computador industrial especializado, utilizado para automatizar processos industriais (ex: controlo de bombas, motores, esteiras, máquinas-ferramenta). É programado para executar uma sequência de operações com base em entradas (sensores, botões) e gerar saídas (contactores, VFDs, sinalização).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Evolução dos Sistemas de Controlo</p>
+<p>Sistemas com relés: Controlo por contactores e relés. Utilizava muitos fios e era difícil de modificar. Comum antes dos anos 1970.</p>
+<p>CLPs (anos 1970-1980): Substituíram os relés, permitindo programação flexível.</p>
+<p>Sistemas de automação modernos: CLPs com comunicação em rede (Profibus, Modbus, Ethernet), integração com SCADA (Supervisory Control and Data Acquisition) e IIoT (Industrial Internet of Things).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Principais Marcas de CLPs em Angola</p>
+<p>Siemens: Simatic S7-1200, S7-1500 (muito usados na indústria angolana).</p>
+<p>Schneider Electric: Modicon M241, M251.</p>
+<p>Allen-Bradley (Rockwell): ControlLogix, CompactLogix.</p>
+<p>WEG: CLP Weg – usado em aplicações específicas.</p>
+<p>Mitsubishi: FX, Q-Series.</p>
+<p>Omron: CP1H, CJ2.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Vantagens do CLP</p>
+<p>Flexibilidade: Pode ser reprogramado para novas funções sem alterar a fiação.</p>
+<p>Fiabilidade: Componentes sólidos, sem contactos mecânicos (redução de avarias).</p>
+<p>Facilidade de diagnóstico: O CLP pode indicar a origem de uma avaria.</p>
+<p>Comunicação: Pode comunicar com outros CLPs, computadores e sistemas de supervisão.</p>
+<p>Compacto: Ocupa menos espaço que um painel de relés.</p>
+<p>Funcionalidades avançadas: Temporizadores, contadores, PID, matemática.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Aplicações em Angola</p>
+<p>Bombagem: Controlo de bombas em sistemas de abastecimento de água.</p>
+<p>Ventilação: Controlo de ventiladores em fábricas e sistemas de climatização.</p>
+<p>Processamento: Esteiras, misturadores, empacotadores (fábricas de alimentos, bebidas, pescado).</p>
+<p>Petróleo e Gás: Controlo de processos em plataformas e refinarias (Soyo, Cabinda).</p>
+<p>Mineração: Controlo de britadores, esteiras (Catoca, Lucapa).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Estrutura Básica de um CLP</p>
+<p>Um CLP é composto por:</p>
+<p>CPU (Unidade Central de Processamento): Executa o programa e gerencia as operações.</p>
+<p>Módulos de Entrada: Recebem sinais de sensores (botões, chaves, sensores de pressão).</p>
+<p>Módulos de Saída: Enviam sinais para actuadores (contactores, VFDs, lâmpadas).</p>
+<p>Barramento (Backplane): Comunicação entre CPU e módulos.</p>
+<p>Fonte de Alimentação: Fornece energia (24V CC, 110/220V CA).</p>
+<p>Interface de Programação: Para programar o CLP (software).</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Componentes de um CLP</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Componentes de um CLP</text>
+
+  <!-- CPU -->
+  <rect x="100" y="80" width="120" height="60" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="160" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CPU</text>
+  <text x="160" y="130" text-anchor="middle" fill="white" font-size="8">Processador</text>
+
+  <!-- Entradas -->
+  <rect x="250" y="80" width="120" height="60" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="5"/>
+  <text x="310" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Entradas</text>
+  <text x="310" y="130" text-anchor="middle" fill="white" font-size="8">Sensores</text>
+
+  <!-- Saídas -->
+  <rect x="400" y="80" width="120" height="60" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="5"/>
+  <text x="460" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Saídas</text>
+  <text x="460" y="130" text-anchor="middle" fill="white" font-size="8">Actuadores</text>
+
+  <!-- Barramento -->
+  <rect x="100" y="180" width="420" height="20" fill="#6c6c6c" stroke="#4a4a4a" stroke-width="2"/>
+  <text x="310" y="195" text-anchor="middle" fill="white" font-size="9">Barramento (Backplane)</text>
+
+  <!-- Fonte -->
+  <rect x="100" y="240" width="120" height="40" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="5"/>
+  <text x="160" y="265" text-anchor="middle" fill="white" font-size="10">Fonte</text>
+
+  <!-- Interface -->
+  <rect x="400" y="240" width="120" height="40" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="460" y="265" text-anchor="middle" fill="white" font-size="9">Programação</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">CPU: processa o programa.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Entradas: sensores, botões.</text>
+  <text x="50" y="390" font-size="9" fill="#333">Saídas: contactores, VFDs.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar a Aplicação</h4><p>Determinar o que deve ser automatizado (bomba, esteira, etc.).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Escolher o CLP</h4><p>Selecionar a marca e modelo adequados (ex: Siemens S7-1200 para pequenas aplicações).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Definir as Entradas e Saídas</h4><p>Listar os sensores e actuadores (ex: 4 entradas digitais, 2 saídas digitais).</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Programar o CLP</h4><p>Escrever o programa em Ladder (ou outras linguagens).</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Uma fábrica instalou um CLP, mas não protegeu as entradas contra sobretensões. Um pico de tensão na rede danificou o módulo de entradas.</p><div class="hi">Como evitar: Utilizar módulos de entrada com isolamento galvânico e protecção contra sobretensões (DPS).</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61131</div><blockquote>Normas para CLPs (programação, ensaios).</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4, Secção 4.2: Controlo de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Uma fábrica de lacticínios quer automatizar o arranque de 3 bombas.</p><ol type="a"><li>O que é um CLP?</li><li>Que tipo de entradas são necessárias (botões, sensores)?</li><li>Que tipo de saídas são necessárias (contactores)?</li><li>Qual a vantagem do CLP sobre o sistema de relés?</li></ol></div>
+<!-- ===== FIM AULA 16.1 ===== -->
+
+<!-- ===== AULA 16.2: Arquitectura de um CLP: CPU, Módulos de Entrada/Saída e Barramento ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Descrever a arquitectura de um CLP modular e compacto.</li><li>Identificar a CPU, os módulos de entradas/saídas, a fonte de alimentação e o barramento.</li><li>Compreender o ciclo de scan do CLP: leitura de entradas, execução do programa, actualização de saídas.</li><li>Seleccionar a configuração adequada para uma aplicação.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico configurou um CLP Siemens S7-1200 para controlar uma esteira de transporte. O CLP tinha uma CPU integrada, com 14 entradas digitais e 10 saídas digitais. O técnico adicionou um módulo de entradas analógicas (4-20mA) para ler a corrente de um sensor de proximidade.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Arquitectura Modular vs. Compacta</p>
+<p>CLP compacto: CPU, entradas e saídas num único bloco. Ex: Siemens S7-1200, Schneider M241. Ideal para aplicações pequenas.</p>
+<p>CLP modular: CPU, entradas, saídas e outros módulos separados, montados num barramento. Ex: Siemens S7-1500, Allen-Bradley ControlLogix. Ideal para aplicações grandes e complexas.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. CPU (Unidade Central de Processamento)</p>
+<p>A CPU é o "cérebro" do CLP. Contém:</p>
+<p>Microprocessador: Executa o programa.</p>
+<p>Memória: Programa (ROM) e dados (RAM).</p>
+<p>Portas de comunicação: Para programação e comunicação (Ethernet, Profibus, Modbus).</p>
+<p>Indicadores LED: Estado (RUN, STOP, erro).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Módulos de Entrada</p>
+<p>Os módulos de entrada recebem sinais do campo (sensores, botões, chaves). Existem dois tipos principais:</p>
+<p>Entradas digitais (DI): Sinais ON/OFF (0 ou 1, 24V DC ou 220V AC). Ex: botão, chave fim de curso.</p>
+<p>Entradas analógicas (AI): Sinais analógicos (4-20mA, 0-10V). Ex: sensor de pressão, temperatura.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Módulos de Saída</p>
+<p>Os módulos de saída enviam sinais para actuadores (contactores, VFDs, lâmpadas). Existem dois tipos:</p>
+<p>Saídas digitais (DO): Sinais ON/OFF (24V DC ou 220V AC). Ex: contactor (liga/desliga).</p>
+<p>Saídas analógicas (AO): Sinais analógicos (4-20mA, 0-10V). Ex: controlo de VFD (velocidade).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Barramento (Backplane)</p>
+<p>O barramento é um sistema de comunicação que liga a CPU aos módulos de E/S. Pode ser:</p>
+<p>Físico: Trilho onde os módulos são encaixados (ex: Siemens S7-1500).</p>
+<p>Integrado: No CLP compacto (ex: S7-1200).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.6. Ciclo de Scan</p>
+<p>O CLP executa um ciclo repetitivo (scan) com três etapas:</p>
+<p>Leitura das entradas (Input Scan): Lê o estado das entradas.</p>
+<p>Execução do programa (Program Scan): Executa o programa (ex: Ladder) com base nos valores lidos.</p>
+<p>Actualização das saídas (Output Scan): Actualiza as saídas com os resultados do programa.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Ciclo de Scan do CLP</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Ciclo de Scan do CLP</text>
+
+  <!-- Etapa 1 -->
+  <rect x="50" y="80" width="150" height="60" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="5"/>
+  <text x="125" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">1. Leitura</text>
+  <text x="125" y="130" text-anchor="middle" fill="white" font-size="9">Entradas</text>
+
+  <!-- Etapa 2 -->
+  <rect x="250" y="80" width="150" height="60" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="5"/>
+  <text x="325" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">2. Execução</text>
+  <text x="325" y="130" text-anchor="middle" fill="white" font-size="9">Programa</text>
+
+  <!-- Etapa 3 -->
+  <rect x="450" y="80" width="150" height="60" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="5"/>
+  <text x="525" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">3. Actualização</text>
+  <text x="525" y="130" text-anchor="middle" fill="white" font-size="9">Saídas</text>
+
+  <!-- Setas -->
+  <line x1="200" y1="110" x2="250" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="400" y1="110" x2="450" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Ciclo -->
+  <path d="M 525 140 L 525 220 L 125 220 L 125 140" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrow)"/>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">O ciclo de scan é repetido continuamente.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Leitura → Execução → Actualização.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Definir as Entradas e Saídas</h4><p>Listar os sensores (entradas) e actuadores (saídas).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Escolher o CLP</h4><p>Selecionar um CLP com o número adequado de E/S.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Configurar o Hardware</h4><p>Montar a CPU, os módulos de E/S e a fonte.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Programar e Testar</h4><p>Escrever o programa e testar o funcionamento.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico configurou um CLP com módulos de entrada de 24V CC, mas os sensores eram de 220V CA. O CLP não lia os sensores correctamente.</p><div class="hi">Como evitar: Verificar a tensão dos sensores e escolher módulos de entrada compatíveis.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61131</div><blockquote>2: Ensaios de CLPs.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Controlo de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um CLP tem 8 entradas digitais e 4 saídas digitais.</p><ol type="a"><li>Como o CLP lê as entradas?</li><li>O que é o ciclo de scan?</li><li>O que acontece se o CLP não ler as entradas correctamente?</li><li>Para que serve o barramento?</li></ol></div>
+<!-- ===== FIM AULA 16.2 ===== -->
+
+<!-- ===== AULA 16.3: Entradas Digitais: Sensores, Botões e Chaves ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Identificar os dispositivos de entrada digital: botões, chaves fim de curso, sensores indutivos/capacitivos.</li><li>Compreender a ligação de entradas digitais ao CLP (24V CC ou 220V CA).</li><li>Dimensionar a protecção das entradas (fusíveis, isolamento).</li><li>Programar a leitura de entradas digitais em Ladder.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico instalou um CLP para controlar uma esteira. As entradas digitais incluíam: botão de marcha (NA), botão de paragem (NF), chave fim de curso para detectar a posição da carga, e sensor indutivo para contar as peças.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Tipos de Entradas Digitais</p>
+<p>Botões (Push Buttons): NA (normalmente aberto) ou NF (normalmente fechado).</p>
+<p>Chaves fim de curso: Detectam a posição de um objecto (ex: porta, pistão).</p>
+<p>Sensores indutivos: Detectam a presença de metal.</p>
+<p>Sensores capacitivos: Detectam a presença de qualquer material (metal, plástico, líquido).</p>
+<p>Sensores fotoeléctricos: Detectam a presença através de um feixe de luz.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Ligação ao CLP</p>
+<p>Entrada 24V DC: O sensor ou botão é ligado ao terminal de entrada do CLP (comum ao 0V).</p>
+<p>Entrada 220V AC: Para sensores que operam em 220V.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Protecção das Entradas</p>
+<p>Fusíveis: Para proteger contra sobrecorrente.</p>
+<p>Isolamento galvânico: Para proteger o CLP contra sobretensões.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Programação em Ladder (Leitura de Entrada)</p>
+<p>text</p>
+<p>Endereço da entrada: I0.0 (botão de marcha)</p>
+<p>I0.0</p>
+<p>---| |--- (leitura da entrada)</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Ligação de Entradas Digitais ao CLP</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Ligação de Entradas Digitais ao CLP</text>
+
+  <!-- CLP -->
+  <rect x="300" y="80" width="100" height="60" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="350" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CLP</text>
+
+  <!-- Botão Marcha (NA) -->
+  <circle cx="100" cy="110" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="85" y1="110" x2="115" y2="110" stroke="#333" stroke-width="2"/>
+  <text x="100" y="90" text-anchor="middle" font-size="8" fill="#333">Marcha</text>
+  <line x1="115" y1="110" x2="300" y2="110" stroke="#333" stroke-width="2"/>
+
+  <!-- Botão Paragem (NF) -->
+  <circle cx="100" cy="180" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="85" y1="180" x2="115" y2="180" stroke="#333" stroke-width="2"/>
+  <line x1="95" y1="170" x2="105" y2="190" stroke="#333" stroke-width="2"/>
+  <text x="100" y="160" text-anchor="middle" font-size="8" fill="#333">Paragem</text>
+  <line x1="115" y1="180" x2="300" y2="180" stroke="#333" stroke-width="2"/>
+
+  <!-- Sensor indutivo -->
+  <rect x="100" y="250" width="40" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="120" y="270" text-anchor="middle" fill="white" font-size="8">S</text>
+  <text x="100" y="295" text-anchor="middle" font-size="8" fill="#333">Sensor</text>
+  <line x1="140" y1="265" x2="300" y2="265" stroke="#333" stroke-width="2"/>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">Botão Marcha (NA) → Entrada I0.0</text>
+  <text x="50" y="375" font-size="9" fill="#333">Botão Paragem (NF) → Entrada I0.1</text>
+  <text x="50" y="390" font-size="9" fill="#333">Sensor indutivo → Entrada I0.2</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar as Entradas</h4><p>Listar os sensores e botões necessários.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Ligar ao CLP</h4><p>Conectar cada sensor a um terminal de entrada.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Programar a Leitura</h4><p>Usar Ladder para ler o estado de cada entrada.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Testar o Funcionamento</h4><p>Verificar se o CLP lê correctamente as entradas.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico ligou um sensor indutivo de 220V AC a uma entrada de 24V DC do CLP, danificando o módulo.</p><div class="hi">Como evitar: Verificar a tensão do sensor antes de ligar ao CLP. Usar módulos de entrada com a tensão adequada.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61131</div><blockquote>2: Entradas digitais.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Sensores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um CLP tem entradas digitais para um botão de marcha e um sensor de proximidade.</p><ol type="a"><li>Qual a diferença entre uma entrada NA e NF?</li><li>Como o técnico deve ligar o sensor ao CLP?</li><li>O que acontece se o sensor avariar?</li><li>Como programar a leitura da entrada no Ladder?</li></ol></div>
+<!-- ===== FIM AULA 16.3 ===== -->
+
+<!-- ===== AULA 16.4: Saídas Digitais: Contactores, Relés e Sinalização ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Identificar os dispositivos de saída digital: contactores, relés, lâmpadas, alarmes.</li><li>Compreender a ligação de saídas digitais ao CLP (24V DC ou 220V AC).</li><li>Dimensionar a protecção das saídas (relés intermediários, fusíveis).</li><li>Programar o accionamento de saídas digitais em Ladder.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico programou um CLP para accionar um contactor (ligar um motor) e uma lâmpada de sinalização. A saída digital do CLP (24V DC) accionava um relé intermediário, que por sua vez ligava o contactor (220V AC).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Tipos de Saídas Digitais</p>
+<p>Relé (saída a relé): Contacto seco (NA ou NF). Pode comutar tensões AC ou DC.</p>
+<p>Transístor (saída a transístor): Para 24V DC. Mais rápido que relé.</p>
+<p>Tiristor (saída a tiristor): Para 220V AC.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Dispositivos de Saída</p>
+<p>Contactores: Ligam/desligam motores.</p>
+<p>Relés intermediários: Isolam a saída do CLP da carga.</p>
+<p>Lâmpadas de sinalização: Indicam estado (ligado, avaria).</p>
+<p>Alarmes: Sinalizam avarias.</p>
+<p>Válvulas solenoides: Controlam fluxo de líquidos/gases.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Protecção das Saídas</p>
+<p>Relés intermediários: Para proteger a saída do CLP de correntes elevadas.</p>
+<p>Fusíveis: Para proteger contra sobrecorrente.</p>
+<p>Diodos de protecção: Para cargas indutivas (contactores, solenoides).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Programação em Ladder (Accionamento de Saída)</p>
+<p>text</p>
+<p>Endereço da saída: Q0.0 (contactor)</p>
+<p>I0.0                Q0.0</p>
+<p>---| |---------------( )---</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Ligação de Saídas Digitais do CLP</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Ligação de Saídas Digitais do CLP</text>
+
+  <!-- CLP -->
+  <rect x="100" y="80" width="100" height="60" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="150" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CLP</text>
+
+  <!-- Relé intermediário -->
+  <rect x="250" y="80" width="80" height="40" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="290" y="105" text-anchor="middle" fill="white" font-size="8">Relé</text>
+  <line x1="200" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2"/>
+
+  <!-- Contactor -->
+  <rect x="380" y="80" width="80" height="40" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="3"/>
+  <text x="420" y="105" text-anchor="middle" fill="white" font-size="8">Cont.</text>
+  <line x1="330" y1="100" x2="380" y2="100" stroke="#333" stroke-width="2"/>
+
+  <!-- Motor -->
+  <circle cx="520" cy="100" r="20" fill="#5bc0de" stroke="#31b0d5" stroke-width="2"/>
+  <text x="520" y="100" text-anchor="middle" fill="white" font-size="10" font-weight="bold">M</text>
+  <line x1="460" y1="100" x2="500" y2="100" stroke="#333" stroke-width="2"/>
+
+  <!-- Lâmpada -->
+  <circle cx="290" cy="180" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="290" y1="165" x2="290" y2="195" stroke="#333" stroke-width="2"/>
+  <text x="290" y="160" text-anchor="middle" font-size="8" fill="#333">Luz</text>
+  <line x1="200" y1="180" x2="275" y2="180" stroke="#333" stroke-width="2"/>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">A saída do CLP acciona um relé intermediário.</text>
+  <text x="50" y="375" font-size="9" fill="#333">O relé acciona o contactor (motor).</text>
+  <text x="50" y="390" font-size="9" fill="#333">A lâmpada é accionada directamente (ou via relé).</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar as Saídas</h4><p>Listar os actuadores (contactores, lâmpadas).</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Ligar ao CLP</h4><p>Conectar cada actuador a uma saída (via relé, se necessário).</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Programar o Accionamento</h4><p>Usar Ladder para accionar as saídas.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Testar o Funcionamento</h4><p>Verificar se as saídas accionam correctamente.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico ligou directamente um contactor de 220V AC a uma saída de 24V DC do CLP, queimando a saída.</p><div class="hi">Como evitar: Usar sempre um relé intermediário para isolar a saída do CLP da carga.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61131</div><blockquote>2: Saídas digitais.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Contactores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: O CLP acciona um contactor de 220V AC.</p><ol type="a"><li>Como ligar o contactor à saída do CLP?</li><li>O que é um relé intermediário?</li><li>Porque é importante proteger as saídas?</li><li>Como programar o accionamento da saída em Ladder?</li></ol></div>
+<!-- ===== FIM AULA 16.4 ===== -->
+
+<!-- ===== AULA 16.5: Entradas Analógicas: Sensores de Pressão, Temperatura e Nível ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Identificar os sensores analógicos: pressão, temperatura, nível (4-20mA, 0-10V).</li><li>Ligar sensores analógicos ao CLP.</li><li>Escalar o sinal analógico para valores de engenharia (ex: 0-10 bar, 0-100°C).</li><li>Programar a leitura de entradas analógicas em Ladder (ou linguagem de blocos).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico instalou um sensor de pressão 4-20mA num sistema de bombagem. O sinal foi ligado a uma entrada analógica do CLP, que escalou o valor (4-20mA → 0-10 bar) e usou-o para controlar a velocidade de uma bomba (via VFD).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Tipos de Sensores Analógicos</p>
+<p>Pressão: 4-20mA (0-10 bar). Ex: transmissor de pressão.</p>
+<p>Temperatura: 4-20mA (0-100°C). Ex: termopar com transmissor.</p>
+<p>Nível: 4-20mA (0-10m). Ex: sensor de nível ultrassónico.</p>
+<p>Caudal: 4-20mA (0-100 m³/h).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Sinais Analógicos</p>
+<p>4-20mA: O sinal mais comum em ambientes industriais (imune a ruído).</p>
+<p>0-10V: Usado em aplicações mais simples.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Ligaçao ao CLP</p>
+<p>O sensor é ligado ao terminal de entrada analógica do CLP (ex: AI0).</p>
+<p>Alimentação: 24V DC (fornecida pelo CLP ou por uma fonte externa).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Escalonamento (Scaling)</p>
+<p>O valor digital (ex: 0-27648 para 4-20mA) deve ser convertido em valor de engenharia.</p>
+<p>Exemplo: Sensor de pressão 4-20mA (0-10 bar).</p>
+<p>4mA → 0 bar.</p>
+<p>20mA → 10 bar.</p>
+<p>12mA → 5 bar.</p>
+<div class="fbox"><div class="f">Fórmula:</div></div>
+<div class="fbox"><div class="f">Valor_eng = (Valor_digital - 0) * (Eng_max - Eng_min) / (Dig_max - Dig_min) + Eng_min</div></div></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Programação em Ladder (Leitura Analógica)</p>
+<p>Normalmente, usa-se um bloco de função "SCALE" (escalonamento) para converter o valor digital em valor de engenharia.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Ligação de Sensor Analógico ao CLP</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Ligação de Sensor Analógico ao CLP</text>
+
+  <!-- CLP -->
+  <rect x="350" y="100" width="100" height="60" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="400" y="130" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CLP</text>
+
+  <!-- Sensor de pressão -->
+  <rect x="100" y="100" width="80" height="60" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="5"/>
+  <text x="140" y="125" text-anchor="middle" fill="white" font-size="9">Sensor</text>
+  <text x="140" y="145" text-anchor="middle" fill="white" font-size="8">Pressão</text>
+
+  <!-- Fonte 24V -->
+  <rect x="100" y="200" width="80" height="40" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="140" y="225" text-anchor="middle" fill="white" font-size="9">24V DC</text>
+
+  <!-- Ligações -->
+  <line x1="180" y1="130" x2="350" y2="130" stroke="#333" stroke-width="2"/>
+  <line x1="140" y1="160" x2="140" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="140" y1="200" x2="180" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="180" y1="200" x2="350" y2="220" stroke="#333" stroke-width="2"/>
+
+  <!-- Sinal 4-20mA -->
+  <text x="180" y="150" font-size="8" fill="#333">4-20mA</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">O sensor de pressão envia sinal 4-20mA ao CLP.</text>
+  <text x="50" y="375" font-size="9" fill="#333">O CLP escalona o sinal para 0-10 bar.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar o Sensor</h4><p>Tipo, gama de medição, sinal de saída.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Ligar ao CLP</h4><p>Ligar a alimentação e o sinal ao terminal de entrada analógica.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Configurar a Entrada</h4><p>Definir o tipo de sinal (4-20mA) e a escala.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Programar o Escalonamento</h4><p>Usar um bloco de escala para converter o valor digital.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico ligou um sensor 4-20mA a uma entrada de 0-10V, não lendo os valores correctamente.</p><div class="hi">Como evitar: Verificar a compatibilidade do sinal do sensor com a entrada do CLP.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61131</div><blockquote>2: Entradas analógicas.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60381</div><blockquote>Sinais analógicos.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um sensor de pressão 4-20mA (0-10 bar) está ligado a uma entrada analógica do CLP.</p><ol type="a"><li>O que significa 4-20mA?</li><li>Qual o valor de pressão para 12mA?</li><li>Como o CLP converte o sinal em valor de engenharia?</li><li>O que acontece se o sinal for 0mA (fio partido)?</li></ol></div>
+<!-- ===== FIM AULA 16.5 ===== -->
+
+<!-- ===== AULA 16.6: Saídas Analógicas: Controlo de VFDs e Actuadores ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Identificar os dispositivos de saída analógica: VFDs, válvulas de controlo, registos de ar.</li><li>Ligar saídas analógicas do CLP (4-20mA ou 0-10V) a actuadores.</li><li>Programar o controlo de saídas analógicas para variar a velocidade ou posição.</li><li>Compreender a aplicação de saídas analógicas em controlo de processos (PID).</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico programou uma saída analógica do CLP (4-20mA) para controlar a velocidade de um VFD (bomba de água). A saída variava conforme a pressão medida (entrada analógica), mantendo a pressão constante.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Tipos de Saídas Analógicas</p>
+<p>4-20mA: Sinal de corrente, imune a ruído.</p>
+<p>0-10V: Sinal de tensão.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Dispositivos Controlados por Saída Analógica</p>
+<p>VFD (Inversor de Frequência): Controlo de velocidade (0-50Hz).</p>
+<p>Válvula de controlo: Regulação de caudal.</p>
+<p>Registo de ar: Controlo de ventilação.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Ligação ao CLP</p>
+<p>A saída analógica do CLP é ligada ao terminal de entrada analógica do VFD.</p>
+<p>Geralmente, 4-20mA é o padrão.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Escalonamento da Saída</p>
+<p>O CLP converte o valor de engenharia (ex: 0-50Hz) em sinal analógico (4-20mA).</p>
+<p>Exemplo: VFD 0-50Hz.</p>
+<p>0Hz → 4mA.</p>
+<p>50Hz → 20mA.</p>
+<p>25Hz → 12mA.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Programação em Ladder (Saída Analógica)</p>
+<p>Usa-se um bloco de função "SCALE" para converter o valor de engenharia em sinal analógico.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Ligação de Saída Analógica do CLP ao VFD</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Saída Analógica do CLP para VFD</text>
+
+  <!-- CLP -->
+  <rect x="100" y="100" width="100" height="60" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="150" y="130" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CLP</text>
+
+  <!-- VFD -->
+  <rect x="300" y="100" width="100" height="60" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="5"/>
+  <text x="350" y="130" text-anchor="middle" fill="white" font-size="10" font-weight="bold">VFD</text>
+
+  <!-- Motor -->
+  <circle cx="500" cy="130" r="20" fill="#5cb85c" stroke="#4cae4c" stroke-width="2"/>
+  <text x="500" y="130" text-anchor="middle" fill="white" font-size="10" font-weight="bold">M</text>
+
+  <!-- Ligações -->
+  <line x1="200" y1="130" x2="300" y2="130" stroke="#333" stroke-width="2"/>
+  <line x1="400" y1="130" x2="480" y2="130" stroke="#333" stroke-width="2"/>
+
+  <!-- Sinal 4-20mA -->
+  <text x="250" y="145" text-anchor="middle" font-size="8" fill="#333">4-20mA</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">O CLP envia sinal 4-20mA ao VFD.</text>
+  <text x="50" y="375" font-size="9" fill="#333">O VFD ajusta a velocidade do motor.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar o Actuador</h4><p>VFD, válvula, etc.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Ligar a Saída ao Actuador</h4><p>Ligar o sinal (4-20mA) ao terminal do actuador.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Configurar a Saída</h4><p>Definir o tipo de sinal (4-20mA) e a escala.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Programar o Escalonamento</h4><p>Usar um bloco de escala para converter o valor de engenharia em sinal.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico programou a saída analógica para 0-10V, mas o VFD esperava 4-20mA. O VFD não respondia correctamente.</p><div class="hi">Como evitar: Verificar a compatibilidade do sinal entre o CLP e o VFD.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61131</div><blockquote>2: Saídas analógicas.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 60381</div><blockquote>Sinais analógicos.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um CLP controla um VFD via 4-20mA (0-50Hz).</p><ol type="a"><li>Qual o sinal para 25Hz?</li><li>Como o CLP converte o valor de engenharia em sinal?</li><li>O que acontece se o sinal for 0mA?</li><li>O que é uma saída analógica?</li></ol></div>
+<!-- ===== FIM AULA 16.6 ===== -->
+
+<!-- ===== AULA 16.7: Linguagem Ladder: Estrutura, Símbolos e Lógica Básica ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Compreender a estrutura da linguagem Ladder (diagrama de contactos).</li><li>Identificar os símbolos básicos: contacto NA (| |), contacto NF (|/|), bobina (--( )--).</li><li>Ler e escrever programas Ladder simples.</li><li>Compreender a lógica de "linhas" de Ladder.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico escreveu um programa Ladder para controlar uma bomba. O programa incluía botão de marcha (NA), botão de paragem (NF), selo e relé térmico. O técnico simulou o programa e testou-o no CLP.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Estrutura do Ladder</p>
+<p>O Ladder (diagrama de contactos) é uma linguagem de programação gráfica que se assemelha a um circuito eléctrico com relés. É a mais comum em CLPs.</p>
+<p>Linhas (Rungs): Cada linha é uma condição que leva a uma saída.</p>
+<p>Barra esquerda: Fonte de alimentação (fase).</p>
+<p>Barra direita: Neutro.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Símbolos Básicos</p>
+<p>Contacto NA (Normalmente Aberto): | | (fecha se a condição for verdadeira).</p>
+<p>Contacto NF (Normalmente Fechado): |/| (abre se a condição for verdadeira).</p>
+<p>Bobina: --( )-- (accionada se a condição for verdadeira).</p>
+<p>Selo: Contacto NA em paralelo com a bobina.</p>
+<p>Temporizador: --[ TON ]-- (atraso na ligação).</p>
+<p>Contador: --[ CTU ]-- (contagem ascendente).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Exemplo de Ladder (Arranque Directo)</p>
+<p>text</p>
+<p>Linha 1: Botão Paragem (NF) → Botão Marcha (NA) → Bobina Contactor (KM)</p>
+<p>Linha 2: Contacto KM (NA) em paralelo com Botão Marcha (selo)</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Exemplo de Ladder (Temporizador)</p>
+<p>text</p>
+<p>Linha 1: Botão Marcha → Bobina Temporizador (T1)</p>
+<p>Linha 2: Contacto T1 (NA) → Bobina Contactor (KM)</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Exemplo de Ladder (Arranque Directo)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Exemplo de Ladder (Arranque Directo)</text>
+
+  <!-- Linha 1 -->
+  <line x1="50" y1="80" x2="580" y2="80" stroke="#333" stroke-width="2"/>
+  <!-- Barra esquerda -->
+  <line x1="50" y1="80" x2="50" y2="200" stroke="#333" stroke-width="2"/>
+  <!-- Barra direita -->
+  <line x1="580" y1="80" x2="580" y2="200" stroke="#333" stroke-width="2"/>
+
+  <!-- Botão Paragem (NF) -->
+  <circle cx="120" cy="80" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="105" y1="80" x2="135" y2="80" stroke="#333" stroke-width="2"/>
+  <line x1="115" y1="70" x2="125" y2="90" stroke="#333" stroke-width="2"/>
+  <text x="120" y="55" text-anchor="middle" font-size="8" fill="#333">Paragem</text>
+
+  <!-- Botão Marcha (NA) -->
+  <circle cx="200" cy="80" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="185" y1="80" x2="215" y2="80" stroke="#333" stroke-width="2"/>
+  <text x="200" y="55" text-anchor="middle" font-size="8" fill="#333">Marcha</text>
+
+  <!-- Bobina KM -->
+  <rect x="480" y="65" width="60" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="510" y="85" text-anchor="middle" fill="white" font-size="8">KM</text>
+
+  <!-- Linha 2 (selo) -->
+  <line x1="50" y1="140" x2="580" y2="140" stroke="#333" stroke-width="2"/>
+
+  <!-- Contacto Selo (NA) -->
+  <circle cx="200" cy="140" r="15" fill="none" stroke="#5cb85c" stroke-width="2"/>
+  <line x1="185" y1="140" x2="215" y2="140" stroke="#5cb85c" stroke-width="2"/>
+  <text x="200" y="120" text-anchor="middle" font-size="8" fill="#5cb85c">KM</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">Linha 1: Botão Paragem (NF) → Botão Marcha (NA) → Bobina KM.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Linha 2: Contacto KM (NA) em paralelo com Marcha (selo).</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Desenhar a Lógica</h4><p>Usar papel ou software para desenhar o Ladder.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Inserir os Símbolos</h4><p>Contactos, bobinas, temporizadores.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Ligar as Linhas</h4><p>Conectar os símbolos na ordem lógica.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Simular e Testar</h4><p>Usar o software do CLP para simular e testar.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico usou um contacto NF em vez de NA no botão de marcha, invertendo a lógica.</p><div class="hi">Como evitar: Verificar sempre a lógica dos contactos (NA vs NF) no Ladder.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61131</div><blockquote>3: Linguagens de programação (Ladder).</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Controlo de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a programar um arranque directo em Ladder.</p><ol type="a"><li>Que símbolo é usado para o botão de marcha?</li><li>Que símbolo é usado para o botão de paragem?</li><li>O que é o selo?</li><li>O que acontece se o botão de paragem for NA?</li></ol></div>
+<!-- ===== FIM AULA 16.7 ===== -->
+
+<!-- ===== AULA 16.8: Blocos Lógicos e Funções: Temporizadores, Contadores e Comparadores ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Identificar os blocos lógicos: temporizadores (TON, TOF), contadores (CTU, CTD), comparadores.</li><li>Programar temporizadores para atrasos (ex: arranque de motor).</li><li>Programar contadores para contagem de peças ou ciclos.</li><li>Utilizar comparadores para activar saídas com base em valores analógicos.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico programou um temporizador (TON) para atrasar o arranque de um motor após o accionamento de um botão (3 segundos). Também programou um contador (CTU) para contar o número de peças na esteira.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Temporizadores</p>
+<p>TON (Timer On-Delay): Atraso na ligação. A saída só é activada após um tempo determinado.</p>
+<p>TOF (Timer Off-Delay): Atraso na desligação. A saída permanece activa após o sinal de entrada ser removido.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Contadores</p>
+<p>CTU (Counter Up): Contagem ascendente.</p>
+<p>CTD (Counter Down): Contagem descendente.</p>
+<p>Reset (R): Para resetar o contador.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Comparadores</p>
+<p>&gt; (Maior que): Compara dois valores.</p>
+<p>&lt; (Menor que): Compara dois valores.</p>
+<p>= (Igual a): Compara dois valores.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Exemplo: Temporizador TON (Atraso de 5s)</p>
+<p>text</p>
+<p>Linha 1: Botão Marcha → Bobina TON (T1, 5s)</p>
+<p>Linha 2: Contacto T1 (NA) → Bobina KM</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Exemplo: Contador CTU (Contagem de Peças)</p>
+<p>text</p>
+<p>Linha 1: Sensor Peça → Bobina CTU (C1, 100)</p>
+<p>Linha 2: Contacto C1 (NA) → Bobina Sinalização (luz)</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Temporizador e Contador em Ladder</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" font-family="Arial, sans-serif">
+  <rect width="650" height="400" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Temporizador e Contador em Ladder</text>
+
+  <!-- Temporizador TON -->
+  <text x="100" y="70" font-size="10" font-weight="bold" fill="#333">Temporizador TON</text>
+  <rect x="100" y="80" width="60" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="130" y="100" text-anchor="middle" fill="white" font-size="8">TON</text>
+  <text x="200" y="100" text-anchor="middle" font-size="8" fill="#333">T = 5s</text>
+
+  <rect x="350" y="80" width="60" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="380" y="100" text-anchor="middle" fill="white" font-size="8">KM</text>
+
+  <!-- Contador CTU -->
+  <text x="100" y="180" font-size="10" font-weight="bold" fill="#333">Contador CTU</text>
+  <rect x="100" y="190" width="60" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="3"/>
+  <text x="130" y="210" text-anchor="middle" fill="white" font-size="8">CTU</text>
+  <text x="200" y="210" text-anchor="middle" font-size="8" fill="#333">PV = 100</text>
+
+  <rect x="350" y="190" width="60" height="30" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="3"/>
+  <text x="380" y="210" text-anchor="middle" fill="white" font-size="8">Luz</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">TON: atraso na ligação (5s).</text>
+  <text x="50" y="375" font-size="9" fill="#333">CTU: contagem ascendente (até 100).</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Identificar a Necessidade</h4><p>Atraso (TON), contagem (CTU), comparação.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Programar o Bloco</h4><p>Inserir o bloco (TON, CTU, etc.) no Ladder.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Configurar os Parâmetros</h4><p>Tempo, valor de contagem, etc.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Testar o Funcionamento</h4><p>Simular e testar no CLP.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico programou um temporizador TON, mas não configurou o tempo (deixou em 0s). O motor não arrancou.</p><div class="hi">Como evitar: Verificar sempre os parâmetros (tempo, valor de contagem) dos blocos lógicos.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61131</div><blockquote>3: Temporizadores, contadores.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Controlo de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico quer atrasar o arranque de um motor em 3 segundos.</p><ol type="a"><li>Que bloco lógico deve ser usado (TON ou TOF)?</li><li>Como configurar o tempo?</li><li>O que acontece se o tempo for 0?</li><li>O que é um contador CTU?</li></ol></div>
+<!-- ===== FIM AULA 16.8 ===== -->
+
+<!-- ===== AULA 16.9: Programação Ladder: Circuitos de Selo, Intertravamento e Temporização ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Programar circuitos de selo (retenção) em Ladder.</li><li>Programar intertravamento entre duas saídas (ex: estrela vs. triângulo).</li><li>Programar temporização (TON) para arranques sequenciais.</li><li>Combinar selo, intertravamento e temporização num programa completo.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico programou um CLP para controlar uma bomba com arranque sequencial: botão de marcha → temporizador (5s) → ligar a bomba. O programa incluía selo (para manter a bomba ligada) e intertravamento (para evitar que a bomba ligasse durante a manutenção).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Circuito de Selo (Retenção)</p>
+<p>Lógica: Botão de marcha (NA) energiza a bobina. Um contacto da bobina (NA) mantém a bobina energizada após o botão ser solto.</p>
+<p>Ladder:</p>
+<p>text</p>
+<p>Linha 1: Botão Marcha (NA) → Bobina KM</p>
+<p>Linha 2: Contacto KM (NA) em paralelo com Botão Marcha → Bobina KM</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Intertravamento</p>
+<p>Lógica: Impede que duas saídas sejam accionadas simultaneamente. Usa contactos NF de uma bobina em série com a outra bobina.</p>
+<p>Ladder (Y/Δ):</p>
+<p>text</p>
+<p>Linha 1: Botão Marcha → Contacto NF KM2 → Bobina KM1 (Estrela)</p>
+<p>Linha 2: Contacto NA KM1 → Bobina KM2 (Triângulo) com intertravamento</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Temporização (TON)</p>
+<p>Lógica: Atraso na ligação. Usa TON para atrasar o arranque de um motor.</p>
+<p>Ladder:</p>
+<p>text</p>
+<p>Linha 1: Botão Marcha → Bobina TON (T1, 5s)</p>
+<p>Linha 2: Contacto T1 (NA) → Bobina KM</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Exemplo Completo (Bomba com Selo, Intertravamento e Temporização)</p>
+<p>text</p>
+<p>Linha 1: Botão Paragem (NF) → Botão Marcha (NA) → Bobina KM1 (selo)</p>
+<p>Linha 2: Contacto KM1 (NA) → Bobina TON (T1, 5s)</p>
+<p>Linha 3: Contacto T1 (NA) → Contacto NF KM2 → Bobina KM2 (bomba)</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Ladder Completo (Selo + Intertravamento + Temporização)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Ladder: Selo + Intertravamento + Temporização</text>
+
+  <!-- Linha 1: Selo -->
+  <line x1="50" y1="70" x2="580" y2="70" stroke="#333" stroke-width="2"/>
+  <circle cx="120" cy="70" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="105" y1="70" x2="135" y2="70" stroke="#333" stroke-width="2"/>
+  <line x1="115" y1="60" x2="125" y2="80" stroke="#333" stroke-width="2"/>
+  <text x="120" y="45" text-anchor="middle" font-size="8" fill="#333">Paragem</text>
+
+  <circle cx="200" cy="70" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="185" y1="70" x2="215" y2="70" stroke="#333" stroke-width="2"/>
+  <text x="200" y="45" text-anchor="middle" font-size="8" fill="#333">Marcha</text>
+
+  <rect x="480" y="55" width="60" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="510" y="75" text-anchor="middle" fill="white" font-size="8">KM1</text>
+
+  <!-- Linha 2: Selo KM1 -->
+  <line x1="50" y1="120" x2="580" y2="120" stroke="#333" stroke-width="2"/>
+  <circle cx="200" cy="120" r="15" fill="none" stroke="#5cb85c" stroke-width="2"/>
+  <line x1="185" y1="120" x2="215" y2="120" stroke="#5cb85c" stroke-width="2"/>
+  <text x="200" y="100" text-anchor="middle" font-size="8" fill="#5cb85c">KM1</text>
+
+  <!-- Linha 3: Temporizador -->
+  <line x1="50" y1="170" x2="580" y2="170" stroke="#333" stroke-width="2"/>
+  <circle cx="120" cy="170" r="15" fill="none" stroke="#5cb85c" stroke-width="2"/>
+  <line x1="105" y1="170" x2="135" y2="170" stroke="#5cb85c" stroke-width="2"/>
+  <text x="120" y="150" text-anchor="middle" font-size="8" fill="#5cb85c">KM1</text>
+
+  <rect x="200" y="155" width="60" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="230" y="175" text-anchor="middle" fill="white" font-size="8">TON</text>
+  <text x="280" y="175" text-anchor="middle" font-size="8" fill="#333">T=5s</text>
+
+  <!-- Linha 4: Bomba com intertravamento -->
+  <line x1="50" y1="220" x2="580" y2="220" stroke="#333" stroke-width="2"/>
+  <circle cx="120" cy="220" r="15" fill="none" stroke="#5bc0de" stroke-width="2"/>
+  <line x1="105" y1="220" x2="135" y2="220" stroke="#5bc0de" stroke-width="2"/>
+  <text x="120" y="200" text-anchor="middle" font-size="8" fill="#5bc0de">TON</text>
+
+  <circle cx="200" cy="220" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="185" y1="220" x2="215" y2="220" stroke="#333" stroke-width="2"/>
+  <line x1="195" y1="210" x2="205" y2="230" stroke="#333" stroke-width="2"/>
+  <text x="200" y="240" text-anchor="middle" font-size="8" fill="#333">KM2</text>
+
+  <rect x="480" y="205" width="60" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="3"/>
+  <text x="510" y="225" text-anchor="middle" fill="white" font-size="8">KM2</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">Linha 1: Selo (KM1) com botões de marcha/paragem.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Linha 3: Temporizador TON (5s) após KM1.</text>
+  <text x="50" y="390" font-size="9" fill="#333">Linha 4: KM2 (bomba) com intertravamento.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Desenhar a Lógica</h4><p>Selo, intertravamento, temporização.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Programar no Ladder</h4><p>Inserir os contactos e bobinas.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Simular e Testar</h4><p>Verificar o comportamento.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Ajustar se Necessário</h4><p>Tempos, lógica.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico não utilizou intertravamento entre dois contactores, causando um curto-circuito.</p><div class="hi">Como evitar: Sempre usar intertravamento (contactos NF) entre contactores que não podem operar simultaneamente.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61131</div><blockquote>3: Programação Ladder.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Controlo de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um técnico está a programar um arranque Y/Δ com CLP.</p><ol type="a"><li>Como fazer o intertravamento entre estrela (KM3) e triângulo (KM2)?</li><li>O que é o selo?</li><li>Para que serve o temporizador?</li><li>O que acontece se o intertravamento falhar?</li></ol></div>
+<!-- ===== FIM AULA 16.9 ===== -->
+
+<!-- ===== AULA 16.10: Integração do CLP com Contactores e Sensores de Campo ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Integrar o CLP com contactores, relés e sensores do campo.</li><li>Dimensionar a fiação entre o CLP e os dispositivos de campo.</li><li>Proteger as entradas e saídas do CLP (fusíveis, relés intermediários).</li><li>Testar a integração completa do sistema.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico integrou um CLP com contactores de um motor de 30 kW, sensores de pressão e botões de comando. Utilizou relés intermediários para proteger as saídas do CLP e fusíveis para as entradas. Após a integração, o sistema funcionou correctamente.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Fiação entre CLP e Campo</p>
+<p>Entradas: Sensores e botões ligados aos terminais de entrada do CLP.</p>
+<p>Saídas: CLP → Relé intermediário → Contactor → Motor.</p>
+<p>Cabos: Cabos blindados para sinais analógicos, cabos normais para digitais.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Protecção das Entradas</p>
+<p>Fusíveis: Em série com a entrada, para proteger contra sobrecorrente.</p>
+<p>Isolamento galvânico: Módulos de entrada com isolamento.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Protecção das Saídas</p>
+<p>Relés intermediários: Para isolar a saída do CLP da carga (ex: contactor).</p>
+<p>Diodos de protecção: Para cargas indutivas (contactores, solenoides).</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.4. Diagrama de Ligação</p>
+<p>text</p>
+<p>Sensor (24V) → Terminal Entrada CLP (I0.0)</p>
+<p>Botão (24V) → Terminal Entrada CLP (I0.1)</p>
+<p>CLP Saída Q0.0 → Relé Intermediário (24V) → Contactor (220V) → Motor</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.5. Teste de Integração</p>
+<p>Teste de continuidade: Verificar a fiação.</p>
+<p>Teste funcional: Ligar o CLP e testar cada entrada/saída.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Integração CLP com Campo</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Integração CLP com Campo</text>
+
+  <!-- CLP -->
+  <rect x="200" y="80" width="120" height="60" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="260" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CLP</text>
+
+  <!-- Entradas -->
+  <rect x="50" y="60" width="80" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="90" y="80" text-anchor="middle" fill="white" font-size="8">Sensor</text>
+  <line x1="130" y1="75" x2="200" y2="95" stroke="#333" stroke-width="2"/>
+
+  <rect x="50" y="110" width="80" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="90" y="130" text-anchor="middle" fill="white" font-size="8">Botão</text>
+  <line x1="130" y1="125" x2="200" y2="125" stroke="#333" stroke-width="2"/>
+
+  <!-- Saídas -->
+  <rect x="360" y="80" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="400" y="100" text-anchor="middle" fill="white" font-size="8">Relé</text>
+  <line x1="320" y1="95" x2="360" y2="95" stroke="#333" stroke-width="2"/>
+
+  <rect x="480" y="80" width="80" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="3"/>
+  <text x="520" y="100" text-anchor="middle" fill="white" font-size="8">Cont.</text>
+  <line x1="440" y1="95" x2="480" y2="95" stroke="#333" stroke-width="2"/>
+
+  <circle cx="580" cy="95" r="15" fill="#5cb85c" stroke="#4cae4c" stroke-width="2"/>
+  <text x="580" y="95" text-anchor="middle" fill="white" font-size="10" font-weight="bold">M</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">Sensores e botões ligados às entradas do CLP.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Saídas do CLP accionam relés intermediários.</text>
+  <text x="50" y="390" font-size="9" fill="#333">Relés accionam contactores e motores.</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><div class="tl"><div class="tli"><div class="tld">1</div><div class="tlc"><h4>Listar os Dispositivos de Campo</h4><p>Sensores, botões, contactores, motores.</p></div></div><div class="tli"><div class="tld">2</div><div class="tlc"><h4>Dimensionar a Fiação</h4><p>Cabos adequados para a corrente e tensão.</p></div></div><div class="tli"><div class="tld">3</div><div class="tlc"><h4>Ligar os Dispositivos ao CLP</h4><p>Entradas e saídas.</p></div></div><div class="tli"><div class="tld">4</div><div class="tlc"><h4>Testar a Integração</h4><p>Verificar cada entrada e saída.</p></div></div></div></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Um técnico ligou directamente um contactor de 220V a uma saída de 24V, queimando a saída.</p><div class="hi">Como evitar: Usar sempre relés intermediários para isolar a saída do CLP da carga.</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61131</div><blockquote>Integração de CLPs.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 5, Secção 5.3: Fiação.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: Um CLP vai controlar um motor de 15 kW.</p><ol type="a"><li>Como ligar o motor ao CLP?</li><li>O que é um relé intermediário?</li><li>Como proteger as entradas do CLP?</li><li>O que deve ser testado após a integração?</li></ol></div>
+<!-- ===== FIM AULA 16.10 ===== -->
+
+<!-- ===== AULA 16.11: Aplicação Prática: Automação de uma Bomba de Água com CLP ===== -->
+<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2><ul><li>Aplicar todos os conceitos do módulo a um projecto real: automação de uma bomba de água com CLP.</li><li>Dimensionar as entradas e saídas do CLP.</li><li>Programar a lógica de controlo (selo, intertravamento, temporização, nível).</li><li>Integrar o CLP com sensores, botões e contactor.</li></ul></div>
+<div class="cb"><h2><i class="fas fa-map-pin"></i> Cenário Real em Angola</h2><p>Em 2024, um técnico automatizou uma bomba de água de 22 kW com um CLP Siemens S7-1200. As entradas incluíam: botão de marcha, botão de paragem, sensor de nível (flutuador) e sensor de pressão (4-20mA). As saídas incluíam: contactor da bomba e sinalização. O programa incluía selo, intertravamento e controlo automático por nível.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.1. Dados do Projecto</p>
+<p>Bomba: 22 kW, 380V, In = 42A.</p>
+<p>CLP: Siemens S7-1200 (14 DI, 10 DO, 2 AI, 2 AO).</p>
+<p>Entradas:</p>
+<p>I0.0: Botão de marcha (NA).</p>
+<p>I0.1: Botão de paragem (NF).</p>
+<p>I0.2: Sensor de nível baixo (NA).</p>
+<p>I0.3: Sensor de nível alto (NA).</p>
+<p>AI0: Sensor de pressão (4-20mA, 0-10 bar).</p>
+<p>Saídas:</p>
+<p>Q0.0: Contactor da bomba.</p>
+<p>Q0.1: Lâmpada de "ligado".</p>
+<p>Q0.2: Lâmpada de "avaria".</p>
+<p>AO0: VFD (4-20mA, 0-50Hz) – opcional.</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.2. Programa Ladder</p>
+<p>Lógica:</p>
+<p>Arranque manual: Botão de marcha (I0.0) → selo (Q0.0).</p>
+<p>Paragem: Botão de paragem (I0.1) → interrompe o selo.</p>
+<p>Arranque automático: Sensor de nível baixo (I0.2) → liga a bomba.</p>
+<p>Paragem automática: Sensor de nível alto (I0.3) → desliga a bomba.</p>
+<p>Protecção: Relé térmico (entrada NF) em série.</p>
+<p>Ladder (Simplificado):</p>
+<p>text</p>
+<p>Linha 1 (Manual):</p>
+<p>I0.1 (Paragem NF) → I0.0 (Marcha NA) → Q0.0 (Bomba) → (selo com Q0.0)</p>
+<p>Linha 2 (Automático):</p>
+<p>I0.1 (Paragem NF) → I0.2 (Nível Baixo) → I0.3 (Nível Alto NF) → Q0.0 (Bomba)</p>
+<p>Linha 3 (Selo Automático):</p>
+<p>Q0.0 → em paralelo com I0.2</p>
+<p>Linha 4 (Sinalização):</p>
+<p>Q0.0 → Q0.1 (Lâmpada "Ligado")</p></div>
+<div class="cb"><h2><i class="fas fa-bolt"></i> Desenvolvimento Técnico</h2><p>3.3. Integração</p>
+<p>Entradas: Botões e sensores ligados aos terminais de entrada do CLP (24V DC).</p>
+<p>Saídas: CLP → Relé intermediário → Contactor → Bomba.</p>
+<p>Alimentação: 24V DC para sensores e CLP.</p></div>
+<div class="dg"><div class="dgt">Diagrama SVG: Bomba com CLP (Automação)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" font-family="Arial, sans-serif">
+  <rect width="650" height="450" fill="#f4f7f6" rx="10"/>
+  <text x="325" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1a3d4b">Automação de Bomba com CLP</text>
+
+  <!-- CLP -->
+  <rect x="200" y="80" width="120" height="60" fill="#d9534f" stroke="#a94442" stroke-width="2" rx="5"/>
+  <text x="260" y="110" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CLP</text>
+
+  <!-- Entradas -->
+  <rect x="50" y="60" width="80" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="90" y="80" text-anchor="middle" fill="white" font-size="8">Marcha</text>
+  <line x1="130" y1="75" x2="200" y2="95" stroke="#333" stroke-width="2"/>
+
+  <rect x="50" y="110" width="80" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="90" y="130" text-anchor="middle" fill="white" font-size="8">Paragem</text>
+  <line x1="130" y1="125" x2="200" y2="125" stroke="#333" stroke-width="2"/>
+
+  <rect x="50" y="160" width="80" height="30" fill="#5bc0de" stroke="#31b0d5" stroke-width="2" rx="3"/>
+  <text x="90" y="180" text-anchor="middle" fill="white" font-size="8">Nível</text>
+  <line x1="130" y1="175" x2="200" y2="175" stroke="#333" stroke-width="2"/>
+
+  <!-- Saídas -->
+  <rect x="360" y="80" width="80" height="30" fill="#f0ad4e" stroke="#ec971f" stroke-width="2" rx="3"/>
+  <text x="400" y="100" text-anchor="middle" fill="white" font-size="8">Relé</text>
+  <line x1="320" y1="95" x2="360" y2="95" stroke="#333" stroke-width="2"/>
+
+  <rect x="480" y="80" width="80" height="30" fill="#5cb85c" stroke="#4cae4c" stroke-width="2" rx="3"/>
+  <text x="520" y="100" text-anchor="middle" fill="white" font-size="8">Cont.</text>
+  <line x1="440" y1="95" x2="480" y2="95" stroke="#333" stroke-width="2"/>
+
+  <circle cx="580" cy="95" r="15" fill="#5cb85c" stroke="#4cae4c" stroke-width="2"/>
+  <text x="580" y="95" text-anchor="middle" fill="white" font-size="10" font-weight="bold">M</text>
+
+  <!-- Legendas -->
+  <text x="50" y="360" font-size="9" fill="#333">Entradas: Marcha, Paragem, Nível.</text>
+  <text x="50" y="375" font-size="9" fill="#333">Saída: CLP → Relé → Contactor → Bomba.</text>
+  <text x="50" y="390" font-size="9" fill="#333">Controlo automático por nível (flutuador).</text>
+</svg></div>
+<div class="cb"><h2><i class="fas fa-toolbox"></i> Procedimento Prático</h2><p>Dimensionar as E/S do CLP.</p>
+<p>Programar a lógica em Ladder.</p>
+<p>Integrar o CLP com sensores, botões e contactor.</p>
+<p>Testar o sistema (manual e automático).</p></div>
+<div class="cb"><h2><i class="fas fa-fire"></i> Erro Comum e Consequência Real</h2><p>Caso Real (Luanda, 2024): Num sistema de bombagem automático, o técnico não programou a lógica de "nível alto" para desligar a bomba, causando transbordamento.</p><div class="hi">Como evitar: Programar sempre a lógica de segurança (nível alto desliga a bomba).</div></div>
+<div class="cb"><h2><i class="fas fa-gavel"></i> Normas Aplicáveis</h2><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> IEC 61131</div><blockquote>Programação de CLPs.</blockquote></div><div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> RTIEBT</div><blockquote>Parte 4, Secção 4.2: Controlo de motores.</blockquote></div></div>
+<div class="cb"><h2><i class="fas fa-circle-question"></i> Pergunta de Verificação</h2><p>Cenário: O sistema de bombagem do exemplo tem controlo manual e automático.</p>
+<p>FIM DO MÓDULO 16 – CLP — CONTROLADORES LÓGICOS PROGRAMÁVEIS</p>
+<p>O Módulo 16 está completo! Com 11 aulas densas, cobrindo todos os aspectos dos CLPs em Angola, com exemplos práticos, elementos visuais e perguntas de verificação.</p>
+<p>Agora, posso avançar para o Módulo 17 — Manutenção Industrial. Basta dar o comando.</p>
+<p>Ok</p>
+<p>O usuário solicitou que eu continue com o desenvolvimento do conteúdo. O próximo módulo é o 17 - Manutenção Industrial. Vou estruturar as 11 aulas conforme solicitado, seguindo o padrão já estabelecido nos módulos anteriores.</p>
+<p>Módulo 17: Manutenção Industrial - Lista de Aulas</p>
+<p>Antes de escrever o conteúdo, vou listar as 11 aulas que comporão este módulo, cobrindo todo o âmbito descrito:</p>
+<p>Introdução à Manutenção Industrial em Angola: Conceitos e Importância</p>
+<p>Manutenção Preventiva vs. Correctiva: Planeamento e Estratégias</p>
+<p>Inspecção e Manutenção de Quadros Eléctricos Industriais</p>
+<p>Termografia Básica para Detecção de Pontos Quentes</p>
+<p>Medição de Isolamento e Continuidade em Instalações Industriais</p>
+<p>Manutenção de Motores Eléctricos: Procedimentos e Ensaios</p>
+<p>Manutenção de Contactores, Relés e Componentes de Comando</p>
+<p>Manutenção de VFDs e Soft-Starters: Diagnóstico e Reparação</p>
+<p>Plano de Manutenção Preventiva para Instalações Industriais</p>
+<p>Registo de Intervenções e Gestão de Manutenção</p>
+<p>Aplicação Prática: Plano de Manutenção para uma Fábrica em Angola</p>
+<p>Vou agora desenvolver este módulo completo com a profundidade e estrutura exigidas, incluindo os exemplos angolanos, elementos visuais e as perguntas de verificação.</p>
+<p>Perfeito! Vou agora desenvolver o Módulo 17 — Manutenção Industrial, seguindo rigorosamente a mesma estrutura, com 11 aulas completas, densas e com exemplos práticos para Angola.</p>
+<p>MÓDULO 17 — MANUTENÇÃO INDUSTRIAL (COMPLETO)</p>
+<p>Lista de Aulas (17 aulas):</p>
+<p>17.1 — Introdução à Manutenção Industrial em Angola: Conceitos e Importância</p>
+<p>17.2 — Manutenção Preventiva vs. Correctiva: Planeamento e Estratégias</p>
+<p>17.3 — Inspecção e Manutenção de Quadros Eléctricos Industriais</p>
+<p>17.4 — Termografia Básica para Detecção de Pontos Quentes</p>
+<p>17.5 — Medição de Isolamento e Continuidade em Instalações Industriais</p>
+<p>17.6 — Manutenção de Motores Eléctricos: Procedimentos e Ensaios</p>
+<p>17.7 — Manutenção de Contactores, Relés e Componentes de Comando</p>
+<p>17.8 — Manutenção de VFDs e Soft-Starters: Diagnóstico e Reparação</p>
+<p>17.9 — Plano de Manutenção Preventiva para Instalações Industriais</p>
+<p>17.10 — Registo de Intervenções e Gestão de Manutenção</p>
+<p>17.11 — Aplicação Prática: Plano de Manutenção para uma Fábrica em Angola</p><ol type="a"><li>Como o CLP distingue entre modo manual e automático?</li><li>O que acontece se o sensor de nível baixo avariar?</li><li>Como é feito o selo (retenção) no Ladder?</li><li>O que deve ser verificado após a instalação?</li></ol></div>
+<!-- ===== FIM AULA 16.11 ===== -->
