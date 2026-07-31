@@ -845,6 +845,16 @@
                 }
             });
 
+            // Abre directo no módulo pedido — usado pelos links da Área do Aluno
+            // (laboratorio.html?mod=7 abre o laboratório do módulo 7).
+            (function abrirModuloDaURL() {
+                const mod = parseInt(new URLSearchParams(location.search).get('mod'), 10);
+                if (!mod || !modulosData.some(m => m.id === mod)) return;
+                const card = modulosGrid.querySelector(`.modulo-card[data-id="${mod}"]`);
+                if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                openModal(mod);
+            })();
+
             function observeReveals() {
                 const reveals = document.querySelectorAll('.reveal');
                 const observer = new IntersectionObserver((entries) => {
