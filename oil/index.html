@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oaken Oil - Técnico de Segurança e Operações Offshore</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oaken Oil - Técnico de Segurança e Operações Offshore</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   1. BASE + LANDING  (era o CSS de index.html)
+   ═══════════════════════════════════════════════════════════════ */
         /* Reset e Base */
         * {
             margin: 0;
@@ -576,29 +583,690 @@
                 font-size: 28px;
             }
         }
-    </style>
+
+/* ═══════════════════════════════════════════════════════════════
+   2. PÁGINAS INTERNAS  (modulos / faq / diferenciais / depoimentos)
+   ═══════════════════════════════════════════════════════════════ */
+        /* CONTEÚDO PRINCIPAL */
+        .page-hero { background:linear-gradient(135deg,var(--primary),#1a365d); color:#fff; padding:50px 0 60px; text-align:center; }
+        .page-hero h1 { font-size:40px; font-weight:800; }
+        .page-hero h1 span { color:var(--secondary); }
+.pg-mod .modules-page {padding:60px 0; background:#fff;}
+.pg-mod .modules-page .module-full {background:var(--light); border-radius:16px; padding:25px 30px; margin-bottom:25px; border-left:6px solid var(--secondary); box-shadow:0 4px 12px rgba(0,0,0,0.03); transition:.3s; cursor:pointer;}
+.pg-mod .modules-page .module-full:hover {box-shadow:0 12px 30px rgba(0,0,0,0.06);}
+.pg-mod .modules-page .module-full-head {display:flex; align-items:center; justify-content:space-between; gap:16px;}
+.pg-mod .modules-page .module-full h3 {font-size:22px; color:var(--primary); margin-bottom:6px;}
+.pg-mod .modules-page .module-full .mod-tag {display:inline-block; background:var(--secondary); color:#fff; padding:2px 16px; border-radius:20px; font-size:13px; font-weight:600; margin-bottom:10px;}
+.pg-mod .modules-page .module-full p {color:var(--gray); font-size:16px;}
+.pg-mod .modules-page .module-toggle {font-size:22px; color:var(--gray); flex-shrink:0; transition:.3s;}
+.pg-mod .modules-page .module-full.open .module-toggle {transform:rotate(180deg); color:var(--secondary);}
+.pg-mod .module-body {display:none; margin-top:22px; padding-top:20px; border-top:1px solid #E2E8F0;}
+.pg-mod .module-body.open {display:block;}
+.pg-mod .lesson-block {margin-bottom:26px; border-bottom:2px solid #E9ECF1; padding-bottom:20px;}
+.pg-mod .lesson-block:last-child {border-bottom:none; margin-bottom:0;}
+.pg-mod .lesson-title {font-size:18px; font-weight:700; color:var(--primary); margin-bottom:10px;}
+.pg-mod .lesson-content p {font-size:15px; line-height:1.85; color:#1E293B; margin-bottom:12px;}
+.pg-mod .lesson-content ul, .pg-mod .lesson-content ol {padding-left:24px; margin-bottom:12px;}
+.pg-mod .lesson-content li {font-size:15px; line-height:1.85; color:#1E293B; margin-bottom:6px;}
+.pg-mod .lesson-content .content-box {background:#fff; border-left:4px solid var(--secondary); padding:16px 20px; border-radius:4px; margin:16px 0; font-size:15px; line-height:1.85; color:#1E293B;}
+.pg-mod .lesson-content .table-wrap {overflow-x:auto; margin:14px 0;}
+.pg-mod .lesson-content table {width:100%; border-collapse:collapse; font-size:14px;}
+.pg-mod .lesson-content th {background:var(--primary); color:#fff; padding:8px 12px; text-align:left;}
+.pg-mod .lesson-content td {padding:8px 12px; border:1px solid #E5E7EB;}
+.pg-mod .lesson-content tr:nth-child(even) {background:#F8FAFC;}
+.pg-mod .exam-cta {text-align:center; margin-top:8px;}
+.pg-mod .exam-cta a {display:inline-block; background:var(--secondary); color:#fff; padding:14px 32px; border-radius:8px; font-weight:700; font-size:15px;}
+.pg-mod .exam-cta a:hover {background:#e55e00;}
+.pg-faq .faq-page {padding:60px 0; background:#fff;}
+.pg-faq .faq-item {border-bottom:1px solid #e2e8f0; padding:25px 0;}
+.pg-faq .faq-item h3 {font-size:20px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:600;}
+.pg-faq .faq-item h3 i {transition:.3s; color:var(--secondary);}
+.pg-faq .faq-item .answer {max-height:0; overflow:hidden; transition:.3s; color:var(--gray); font-size:16px; line-height:1.7;}
+.pg-faq .faq-item.active .answer {max-height:300px; padding-top:12px;}
+.pg-faq .faq-item.active h3 i {transform:rotate(180deg);}
+.pg-dif .diffs-page {padding:60px 0; background:#fff;}
+.pg-dif .diff-block {display:flex; gap:30px; align-items:flex-start; margin-bottom:40px; background:var(--light); padding:30px; border-radius:20px; transition:.3s; flex-wrap:wrap;}
+.pg-dif .diff-block:hover {transform:translateY(-5px); box-shadow:0 12px 30px rgba(0,0,0,0.06);}
+.pg-dif .diff-block .icon {font-size:50px; color:var(--secondary); min-width:80px; text-align:center;}
+.pg-dif .diff-block .text {flex:1;}
+.pg-dif .diff-block .text h3 {font-size:24px; margin-bottom:6px;}
+.pg-dif .diff-block .text p {color:var(--gray); font-size:16px;}
+@media (max-width:768px) {
+.pg-dif .diff-block {flex-direction:column; align-items:center; text-align:center;}
+.pg-dif .diff-block .icon {min-width:auto;}
+}
+.pg-dep .testimonials-page {padding:60px 0; background:#fff;}
+.pg-dep .testi-card {background:var(--light); border-radius:20px; padding:30px; margin-bottom:30px; border-bottom:5px solid var(--secondary); box-shadow:0 4px 12px rgba(0,0,0,0.02); transition:.3s;}
+.pg-dep .testi-card:hover {transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,0.05);}
+.pg-dep .testi-card .stars {color:#f59e0b; font-size:18px; margin-bottom:10px;}
+.pg-dep .testi-card p {font-style:italic; font-size:17px; color:#1a202c; margin-bottom:12px;}
+.pg-dep .testi-card .author {font-weight:700; font-size:18px; color:var(--primary);}
+.pg-dep .testi-card .position {color:var(--gray); font-size:15px;}
+
+/* ═══════════════════════════════════════════════════════════════
+   3. ÁREA DO ALUNO + EXAMES  (era o CSS de exame.html)
+   ═══════════════════════════════════════════════════════════════ */
+.aluno-view * {margin:0; padding:0; box-sizing:border-box;}
+.aluno-view {font-family:'Segoe UI',Roboto,sans-serif; background:#f8fafc; color:#0B1F3A; line-height:1.6;}
+.aluno-view a {text-decoration:none; color:inherit;}
+.aluno-view .container {max-width:1100px; margin:0 auto; padding:0 20px;}
+.aluno-view .container-sm {max-width:1000px; margin:0 auto; padding:0 20px;}
+:root {--primary:#0B1F3A; --secondary:#FF6B00; --accent:#00A3A1; --green:#16A34A; --light:#f0f4f8; --gray:#64748B;}
+.aluno-view header {background:var(--primary); color:#fff; padding:15px 0; position:sticky; top:0; z-index:1000; box-shadow:0 4px 20px rgba(0,0,0,0.3);}
+.aluno-view .header-flex {display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;}
+.aluno-view .logo {font-size:28px; font-weight:700; letter-spacing:2px;}
+.aluno-view .logo span {color:var(--secondary);}
+.aluno-view .nav {display:flex; gap:25px; font-weight:500; align-items:center; flex-wrap:wrap;}
+.aluno-view .nav a {color:#fff; transition:color .3s; font-size:15px;}
+.aluno-view .nav a:hover {color:var(--secondary);}
+.aluno-view .nav a.active {color:var(--secondary); border-bottom:2px solid var(--secondary); padding-bottom:4px;}
+.aluno-view .cta-top {background:var(--secondary); padding:8px 22px; border-radius:30px; font-weight:600; transition:transform .2s;}
+.aluno-view .cta-top:hover {transform:scale(1.05);}
+.aluno-view .page-hero {background:linear-gradient(135deg,var(--primary),#1a365d); color:#fff; padding:44px 0 50px; text-align:center;}
+.aluno-view .page-hero h1 {font-size:36px; font-weight:800;}
+.aluno-view .page-hero h1 span {color:var(--secondary);}
+.aluno-view .page-hero p {max-width:700px; margin:10px auto 0; opacity:.85; font-size:17px;}
+.aluno-view .student-bar {background:#fff; border-bottom:1px solid #E5E7EB; padding:16px 0;}
+.aluno-view .student-bar .row {display:flex; gap:12px; align-items:center; flex-wrap:wrap;}
+.aluno-view .student-bar input {flex:1; min-width:220px; padding:10px 14px; border:1.5px solid #E5E7EB; border-radius:8px; font-size:15px;}
+.aluno-view .student-bar button {background:var(--secondary); color:#fff; border:none; padding:10px 22px; border-radius:8px; font-weight:700; cursor:pointer;}
+.aluno-view .student-bar .hint {font-size:13px; color:var(--gray);}
+.aluno-view .main-section {padding:40px 0 70px;}
+/* progress card — igual ao dashboard da Oaken Electrical */
+.aluno-view .progress-card {background:#fff; border-radius:20px; padding:22px 26px; margin-bottom:26px; box-shadow:0 4px 12px rgba(0,0,0,.04); border-top:4px solid var(--secondary);}
+.aluno-view .pc-head {display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; gap:10px;}
+.aluno-view .pc-head h3 {font-size:16px; font-weight:700;}
+.aluno-view .pct {font-size:22px; font-weight:800; color:var(--secondary);}
+.aluno-view .prog-bar {height:12px; background:var(--light); border-radius:6px; overflow:hidden;}
+.aluno-view .prog-fill {height:100%; background:linear-gradient(90deg,var(--secondary),#ff8c3a); border-radius:6px; transition:width .6s;}
+.aluno-view .prog-stats {display:flex; gap:22px; margin-top:12px; flex-wrap:wrap; font-size:13px; color:var(--gray);}
+.aluno-view .prog-stats b {color:var(--primary);}
+/* módulos — grid estilo dashboard (ícone + info + badge), igual à Electrical.
+           Clicar no card abre a vista completa do módulo (hero + abas + sidebar). */
+.aluno-view .modules-grid {display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:16px; align-items:start;}
+@media (max-width:640px) {
+.aluno-view .modules-grid {grid-template-columns:1fr;}
+}
+.aluno-view .module-card {cursor:pointer; background:#fff; border-radius:16px; padding:18px 20px; box-shadow:0 2px 8px rgba(0,0,0,.04); border-left:5px solid #e2e8f0; transition:.2s; display:flex; align-items:center; gap:14px;}
+.aluno-view .module-card:hover {transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.aluno-view .module-card.unlocked {border-left-color:var(--secondary);}
+.aluno-view .module-card.approved {border-left-color:var(--green);}
+.aluno-view .module-card.reprovado {border-left-color:#DC2626;}
+.aluno-view .module-card.locked {opacity:.55; cursor:not-allowed;}
+.aluno-view .module-card.locked:hover {transform:none; box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.aluno-view .mod-ic {width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0; font-weight:800;}
+.aluno-view .mod-ic.locked {background:var(--light); color:#cbd5e1;}
+.aluno-view .mod-ic.unlocked {background:rgba(255,107,0,.1); color:var(--secondary);}
+.aluno-view .mod-ic.approved {background:rgba(22,163,74,.1); color:var(--green);}
+.aluno-view .mod-ic.reprovado {background:rgba(220,38,38,.1); color:#DC2626;}
+.aluno-view .module-card .mod-info {flex:1; min-width:0;}
+.aluno-view .module-card .mod-info h3 {font-size:14px; font-weight:700; margin:0 0 2px; color:var(--primary);}
+.aluno-view .module-card .mod-info span {font-size:12px; color:var(--gray);}
+.aluno-view .status-badge {display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; padding:4px 12px; border-radius:20px; white-space:nowrap;}
+.aluno-view .status-badge.locked {background:var(--light); color:#94A3B8;}
+.aluno-view .status-badge.unlocked {background:rgba(255,107,0,.1); color:var(--secondary);}
+.aluno-view .status-badge.approved {background:rgba(22,163,74,.1); color:var(--green);}
+.aluno-view .status-badge.reprovado {background:rgba(220,38,38,.1); color:#DC2626;}
+/* vista do módulo — hero + progresso por aula + abas + sidebar (igual à Electrical) */
+.aluno-view .mod-hero {background:linear-gradient(135deg,var(--primary) 0%,#1a365d 100%); color:#fff; padding:34px 0 30px;}
+.aluno-view .mh-in {display:flex; align-items:flex-start; gap:30px;}
+.aluno-view .mh-txt {flex:1; min-width:0;}
+.aluno-view .mod-phase {font-size:11px; text-transform:uppercase; letter-spacing:2px; color:var(--accent); margin-bottom:8px; font-weight:700;}
+.aluno-view .mod-hero h1 {font-size:clamp(21px,4vw,30px); font-weight:800; line-height:1.2; margin-bottom:10px;}
+.aluno-view .mod-hero p {opacity:.85; font-size:14px; margin-bottom:18px;}
+.aluno-view .mod-meta {display:flex; flex-wrap:wrap; gap:9px;}
+.aluno-view .meta-tag {background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.15); padding:6px 14px; border-radius:30px; font-size:12px;}
+.aluno-view .meta-tag i {color:var(--secondary); margin-right:5px;}
+.aluno-view .mod-progress {background:#fff; padding:12px 0; border-bottom:2px solid var(--light);}
+.aluno-view .mp-in {display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+.aluno-view .mp-lbl {font-size:12px; color:var(--gray); white-space:nowrap;}
+.aluno-view .dots {display:flex; gap:5px; flex-wrap:wrap;}
+.aluno-view .dot {width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; cursor:pointer; border:2px solid transparent; transition:.2s; flex-shrink:0;}
+.aluno-view .dot.done {background:var(--accent); color:#fff;}
+.aluno-view .dot.active {background:var(--secondary); color:#fff; box-shadow:0 3px 10px rgba(255,107,0,.4);}
+.aluno-view .dot.todo {background:var(--light); color:var(--gray); border-color:#e2e8f0;}
+.aluno-view .tabs {display:flex; overflow-x:auto; margin:22px 0 0; border-bottom:2px solid #e2e8f0; -webkit-overflow-scrolling:touch; scrollbar-width:none;}
+.aluno-view .tabs::-webkit-scrollbar {display:none;}
+.aluno-view .tb {padding:10px 15px; border:none; background:transparent; font-weight:600; font-size:13px; color:var(--gray); cursor:pointer; white-space:nowrap; border-bottom:3px solid transparent; margin-bottom:-2px; flex-shrink:0; transition:.2s; font-family:inherit;}
+.aluno-view .tb.active {color:var(--secondary); border-bottom-color:var(--secondary);}
+.aluno-view .mod-layout {display:grid; grid-template-columns:1fr 250px; gap:24px; align-items:start; margin-top:22px;}
+@media (max-width:900px) {
+.aluno-view .mod-layout {grid-template-columns:1fr;}
+.aluno-view .sidebar {position:static !important;}
+}
+.aluno-view .sidebar {position:sticky; top:20px;}
+.aluno-view .sc {background:#fff; border-radius:14px; padding:18px; box-shadow:0 2px 10px rgba(0,0,0,.06); margin-bottom:14px;}
+.aluno-view .sc h4 {font-size:13px; font-weight:700; margin-bottom:12px; text-transform:uppercase; letter-spacing:1px;}
+.aluno-view .sl {display:flex; align-items:center; gap:9px; padding:7px 0; border-bottom:1px solid var(--light); font-size:12px; cursor:pointer; transition:.2s;}
+.aluno-view .sl:last-child {border-bottom:none;}
+.aluno-view .sl:hover {color:var(--secondary);}
+.aluno-view .sn {width:22px; height:22px; border-radius:50%; background:var(--light); display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;}
+.aluno-view .sl.act .sn {background:var(--secondary); color:#fff;}
+.aluno-view .sbtn {display:block; text-align:center; padding:10px; border-radius:8px; font-size:13px; font-weight:600; margin-bottom:8px; cursor:pointer;}
+.aluno-view .sbtn.grey {background:var(--light); color:var(--primary);}
+.aluno-view .sbtn.orange {background:var(--secondary); color:#fff;}
+.aluno-view .lesson {padding:0 0 20px;}
+.aluno-view .ltitle {font-size:clamp(19px,3.5vw,26px); font-weight:800; margin-bottom:6px;}
+.aluno-view .lsub {color:var(--gray); font-size:13px; margin-bottom:20px; display:flex; align-items:center; gap:9px; flex-wrap:wrap;}
+.aluno-view .lsub span {background:var(--light); padding:4px 10px; border-radius:20px; font-size:12px;}
+.aluno-view .lesson-content {background:#fff; border-radius:14px; padding:clamp(18px,4vw,28px); margin-bottom:16px; box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.aluno-view .lesson-content p {font-size:15px; line-height:1.85; color:#1E293B; margin-bottom:12px;}
+.aluno-view .lesson-content ul, .aluno-view .lesson-content ol {padding-left:24px; margin-bottom:12px;}
+.aluno-view .lesson-content li {font-size:15px; line-height:1.85; color:#1E293B; margin-bottom:6px;}
+.aluno-view .lesson-content .content-box {background:#F8FAFC; border-left:4px solid var(--secondary); padding:16px 20px; border-radius:4px; margin:16px 0; font-size:15px; line-height:1.85; color:#1E293B;}
+.aluno-view .lesson-content .table-wrap {overflow-x:auto; margin:14px 0;}
+.aluno-view .lesson-content table {width:100%; border-collapse:collapse; font-size:14px;}
+.aluno-view .lesson-content th {background:var(--primary); color:#fff; padding:8px 12px; text-align:left;}
+.aluno-view .lesson-content td {padding:8px 12px; border:1px solid #E5E7EB;}
+.aluno-view .lesson-content tr:nth-child(even) {background:#F8FAFC;}
+.aluno-view .lnav {display:flex; justify-content:space-between; margin:22px 0; gap:10px; flex-wrap:wrap;}
+.aluno-view .nb {padding:11px 22px; border-radius:30px; font-weight:700; font-size:14px; cursor:pointer; border:none; transition:.2s; display:inline-flex; align-items:center; gap:7px; font-family:inherit;}
+.aluno-view .nb.np {background:var(--light); color:var(--primary);}
+.aluno-view .nb.np:hover {background:#e2e8f0;}
+.aluno-view .nb.nn {background:var(--secondary); color:#fff; box-shadow:0 4px 14px rgba(255,107,0,.3);}
+.aluno-view .nb.nn:hover {transform:translateY(-2px);}
+.aluno-view .nb:disabled {opacity:.4; cursor:not-allowed; transform:none !important;}
+.aluno-view .cert-cta {margin-top:30px; text-align:center; background:linear-gradient(135deg,#F0FDF4,#fff); border:2px solid #16A34A; border-radius:16px; padding:30px; display:none;}
+.aluno-view .cert-cta.show {display:block;}
+.aluno-view .cert-cta a {display:inline-block; margin-top:14px; background:#16A34A; color:#fff; padding:14px 32px; border-radius:8px; font-weight:700;}
+/* EXAME EM CURSO — modal estilo Oaken Electrical */
+.aluno-view .exam-view {display:none; position:fixed; inset:0; background:rgba(11,31,58,.78); z-index:900; align-items:center; justify-content:center; padding:16px;}
+.aluno-view .exam-view.show {display:flex;}
+.aluno-view .exam-modal {background:#fff; border-radius:22px; max-width:700px; width:100%; max-height:88vh; overflow-y:auto; box-shadow:0 30px 80px rgba(0,0,0,.25);}
+.aluno-view .exam-header {background:var(--primary); color:#fff; padding:22px 26px; border-radius:22px 22px 0 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+.aluno-view .exam-header .timer {font-weight:800; font-size:16px; color:#FF8C3A;}
+.aluno-view .exam-header .progress-txt {font-size:13px; font-weight:700; color:#fff;}
+.aluno-view .exam-progress {background:rgba(255,255,255,.15); border-radius:20px; height:8px; flex:1; min-width:100px;}
+.aluno-view .exam-progress-fill {background:linear-gradient(90deg,var(--secondary),#FF8C3A); height:8px; border-radius:20px; width:0%; transition:width .3s;}
+.aluno-view .exam-body {padding:22px 26px;}
+.aluno-view .back-link {display:inline-block; margin-bottom:18px; color:var(--gray); font-weight:600; cursor:pointer; font-size:13px;}
+.aluno-view .back-link:hover {color:var(--secondary);}
+.aluno-view .question-card {margin-bottom:24px;}
+.aluno-view .question-card.correct .question-text {color:var(--green);}
+.aluno-view .question-card.wrong .question-text {color:#DC2626;}
+.aluno-view .question-text {font-weight:700; font-size:15px; margin-bottom:12px;}
+.aluno-view .options label.option {display:flex; align-items:center; gap:11px; padding:11px 15px; border-radius:10px; border:2px solid #e2e8f0; margin-bottom:8px; cursor:pointer; transition:.15s; font-size:14px; background:#fff;}
+.aluno-view .options label.option:hover {border-color:var(--secondary); background:rgba(255,107,0,.04);}
+.aluno-view .options label.option.sel {border-color:var(--secondary); background:rgba(255,107,0,.07);}
+.aluno-view .options label.option input {accent-color:var(--secondary); width:16px; height:16px; cursor:pointer;}
+.aluno-view .question-card.correct .options label.option.sel {border-color:var(--green); background:rgba(22,163,74,.08);}
+.aluno-view .question-card.wrong .options label.option.sel {border-color:#DC2626; background:rgba(220,38,38,.08);}
+.aluno-view .feedback-answer {font-size:13px; font-weight:600; margin-top:8px;}
+.aluno-view .feedback-answer.correct {color:var(--green);}
+.aluno-view .feedback-answer.wrong {color:#DC2626;}
+.aluno-view .btn-group {display:flex; gap:16px; flex-wrap:wrap; margin-top:28px; justify-content:center;}
+.aluno-view .btn {background:var(--primary); color:#fff; border:none; border-radius:30px; padding:14px 32px; font-weight:700; font-size:15px; cursor:pointer; transition:.3s; font-family:inherit;}
+.aluno-view .btn:hover {background:#1a3a5c; transform:translateY(-2px);}
+.aluno-view .btn.primary {background:var(--secondary); box-shadow:0 4px 14px rgba(255,107,0,.3);}
+.aluno-view .btn.primary:hover {background:#e55e00;}
+.aluno-view .btn.success {background:var(--green);}
+.aluno-view .btn.success:hover {background:#15803D;}
+.aluno-view .btn.danger {background:#DC2626;}
+.aluno-view .result-box {text-align:center; padding:26px; border-radius:12px; margin-top:10px;}
+.aluno-view .result-box.approved {background:#F0FDF4; border:2px solid var(--green);}
+.aluno-view .result-box.failed {background:#FEF2F2; border:2px solid #DC2626;}
+.aluno-view .result-label {font-size:22px; font-weight:800;}
+.aluno-view .result-score {font-size:44px; font-weight:900; margin:10px 0; color:var(--secondary);}
+.aluno-view footer {background:var(--primary); color:#bbb; padding:40px 0 20px; margin-top:40px;}
+.aluno-view .footer-flex {display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;}
+.aluno-view .footer-col {flex:1; min-width:180px;}
+.aluno-view .footer-col h5 {color:#fff; margin-bottom:15px; font-size:18px;}
+.aluno-view .footer-col p, .aluno-view .footer-col a {color:#a0aec0; line-height:1.8;}
+.aluno-view .footer-col a:hover {color:var(--secondary);}
+.aluno-view .footer-bottom {border-top:1px solid #2d3748; margin-top:30px; padding-top:20px; text-align:center; font-size:14px;}
+@media (max-width:768px) {
+.aluno-view .header-flex {flex-direction:column; align-items:center;}
+.aluno-view .nav {justify-content:center; gap:15px; margin-top:8px;}
+.aluno-view .page-hero h1 {font-size:26px;}
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   4. LABORATÓRIO VIRTUAL  (era o CSS de laboratorio.html)
+   ═══════════════════════════════════════════════════════════════ */
+.lab-view * {margin: 0; padding: 0; box-sizing: border-box;}
+.lab-view {--bg-primary: #0b1219;
+            --bg-secondary: #111e2b;
+            --bg-card: #15232f;
+            --bg-card-hover: #1c2f3f;
+            --oil-blue: #0a4b6e;
+            --oil-blue-light: #1a7aa6;
+            --oil-blue-glow: rgba(10, 75, 110, 0.5);
+            --text-white: #f0f4f8;
+            --text-light: #b8cbd8;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.5);
+            --shadow-glow: 0 0 30px rgba(10, 75, 110, 0.2);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --font: 'Inter', sans-serif;}
+.lab-view {scroll-behavior: smooth;}
+.lab-view {background: var(--bg-primary); color: var(--text-white); font-family: var(--font); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden;}
+.lab-view a {color: inherit; text-decoration: none;}
+.lab-view ul {list-style: none;}
+.lab-view img {max-width: 100%; display: block;}
+.lab-view .container {max-width: 1240px; margin: 0 auto; padding: 0 24px;}
+.lab-view ::-webkit-scrollbar {width: 8px;}
+.lab-view ::-webkit-scrollbar-track {background: var(--bg-primary);}
+.lab-view ::-webkit-scrollbar-thumb {background: var(--oil-blue); border-radius: 10px;}
+.lab-view ::-webkit-scrollbar-thumb:hover {background: var(--oil-blue-light);}
+.lab-view .reveal {opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease;}
+.lab-view .reveal.visible {opacity: 1; transform: translateY(0);}
+.lab-view .back-to-catalog {display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; font-size: 0.85rem; font-weight: 600; color: var(--text-light); background: var(--bg-secondary); border-bottom: 1px solid var(--border-subtle); transition: var(--transition);}
+.lab-view .back-to-catalog:hover {color: #fff; background: var(--bg-card-hover);}
+.lab-view .header {position: fixed; top: 34px; left: 0; right: 0; z-index: 1000; padding: 14px 0; background: rgba(11, 18, 25, 0.85); backdrop-filter: blur(14px) saturate(180%); -webkit-backdrop-filter: blur(14px) saturate(180%); border-bottom: 1px solid var(--border-subtle); transition: var(--transition);}
+.lab-view .header .container {display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;}
+.lab-view .logo {display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: var(--text-white);}
+.lab-view .logo i {color: var(--oil-blue-light); font-size: 1.8rem;}
+.lab-view .logo span {color: var(--oil-blue-light);}
+.lab-view .nav-menu {display: flex; align-items: center; gap: 28px; font-weight: 500; font-size: 0.95rem; color: var(--text-light);}
+.lab-view .nav-menu a {transition: var(--transition); position: relative;}
+.lab-view .nav-menu a::after {content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--oil-blue-light); transition: var(--transition);}
+.lab-view .nav-menu a:hover {color: #fff;}
+.lab-view .nav-menu a:hover::after {width: 100%;}
+.lab-view .btn-aluno {background: var(--oil-blue); color: #fff; padding: 10px 22px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: var(--transition); border: 1px solid transparent; display: inline-flex; align-items: center; gap: 8px;}
+.lab-view .btn-aluno:hover {background: var(--oil-blue-light); box-shadow: 0 0 20px var(--oil-blue-glow); transform: scale(1.02);}
+.lab-view .hamburger {display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px;}
+.lab-view .hamburger span {display: block; width: 26px; height: 2.5px; background: var(--text-white); border-radius: 4px; transition: var(--transition);}
+.lab-view .hero {padding: 176px 0 80px; position: relative; min-height: 80vh; display: flex; align-items: center; background: radial-gradient(ellipse at 20% 50%, rgba(10, 75, 110, 0.25) 0%, transparent 70%), radial-gradient(ellipse at 80% 20%, rgba(10, 75, 110, 0.15) 0%, transparent 50%), var(--bg-primary); border-bottom: 1px solid var(--border-subtle);}
+.lab-view .hero-bg {position: absolute; inset: 0; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" opacity="0.07"><path d="M0 400 L120 350 L240 420 L360 320 L480 380 L600 280 L720 340 L800 300 L800 600 L0 600 Z" fill="%230a4b6e"/><circle cx="200" cy="200" r="60" fill="%230a4b6e"/><circle cx="600" cy="150" r="80" fill="%230a4b6e"/><circle cx="400" cy="500" r="100" fill="%230a4b6e"/><circle cx="100" cy="500" r="40" fill="%230a4b6e"/><circle cx="700" cy="450" r="50" fill="%230a4b6e"/></svg>') no-repeat center/cover; pointer-events: none;}
+.lab-view .hero .container {position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;}
+.lab-view .hero-content h1 {font-size: 3.2rem; font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin-bottom: 20px;}
+.lab-view .hero-content h1 span {color: var(--oil-blue-light); background: linear-gradient(135deg, #1a7aa6, #4bb3e6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;}
+.lab-view .hero-content p {font-size: 1.15rem; color: var(--text-light); max-width: 500px; margin-bottom: 32px;}
+.lab-view .hero-actions {display: flex; gap: 16px; flex-wrap: wrap;}
+.lab-view .btn-primary {background: var(--oil-blue); color: #fff; padding: 14px 36px; border-radius: 50px; font-weight: 600; font-size: 1rem; transition: var(--transition); border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 8px 24px rgba(10, 75, 110, 0.3);}
+.lab-view .btn-primary:hover {background: var(--oil-blue-light); transform: translateY(-3px); box-shadow: 0 12px 36px var(--oil-blue-glow);}
+.lab-view .btn-secondary {background: transparent; color: var(--text-white); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; border: 1px solid var(--border-subtle); transition: var(--transition); cursor: pointer; display: inline-flex; align-items: center; gap: 10px;}
+.lab-view .btn-secondary:hover {background: rgba(255, 255, 255, 0.05); border-color: var(--oil-blue-light);}
+.lab-view .hero-image {display: flex; justify-content: center; align-items: center; position: relative;}
+.lab-view .hero-image .illustration {width: 100%; max-width: 520px; aspect-ratio: 1/0.85; background: radial-gradient(ellipse at center, rgba(10, 75, 110, 0.2) 0%, transparent 70%); border-radius: 40px; display: flex; align-items: center; justify-content: center; font-size: 8rem; color: var(--oil-blue-light); opacity: 0.8; filter: drop-shadow(0 20px 40px rgba(10, 75, 110, 0.2)); animation: float 6s ease-in-out infinite;}
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
+.lab-view .stats {padding: 60px 0 40px; background: var(--bg-secondary); border-bottom: 1px solid var(--border-subtle);}
+.lab-view .stats-grid {display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;}
+.lab-view .stat-item {background: var(--bg-card); padding: 28px 20px; border-radius: var(--radius); text-align: center; border: 1px solid var(--border-subtle); transition: var(--transition); backdrop-filter: blur(4px);}
+.lab-view .stat-item:hover {transform: translateY(-6px); border-color: var(--oil-blue); box-shadow: var(--shadow-glow);}
+.lab-view .stat-number {font-size: 2.6rem; font-weight: 800; color: var(--oil-blue-light); display: block; line-height: 1.2;}
+.lab-view .stat-label {font-size: 0.95rem; color: var(--text-light); margin-top: 4px;}
+.lab-view .modulos {padding: 70px 0 60px; background: var(--bg-primary);}
+.lab-view .section-header {margin-bottom: 48px; text-align: center;}
+.lab-view .section-header h2 {font-size: 2.4rem; font-weight: 700; letter-spacing: -0.5px;}
+.lab-view .section-header h2 span {color: var(--oil-blue-light);}
+.lab-view .section-header p {color: var(--text-light); max-width: 560px; margin: 10px auto 0;}
+.lab-view .modulos-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px;}
+.lab-view .modulo-card {background: var(--bg-card); border-radius: var(--radius); padding: 24px 22px 28px; border: 1px solid var(--border-subtle); transition: var(--transition); position: relative; overflow: hidden; backdrop-filter: blur(4px); cursor: pointer;}
+.lab-view .modulo-card::before {content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--oil-blue), var(--oil-blue-light)); opacity: 0; transition: var(--transition);}
+.lab-view .modulo-card:hover {transform: translateY(-8px); border-color: var(--oil-blue); box-shadow: var(--shadow-glow); background: var(--bg-card-hover);}
+.lab-view .modulo-card:hover::before {opacity: 1;}
+.lab-view .modulo-num {font-size: 0.8rem; font-weight: 600; color: var(--oil-blue-light); letter-spacing: 1px; text-transform: uppercase; background: rgba(10, 75, 110, 0.15); display: inline-block; padding: 2px 14px; border-radius: 50px; margin-bottom: 10px;}
+.lab-view .modulo-card h3 {font-size: 1.15rem; font-weight: 600; margin-bottom: 6px;}
+.lab-view .modulo-card p {color: var(--text-light); font-size: 0.9rem; margin-bottom: 16px; line-height: 1.5;}
+.lab-view .modulo-footer {display: flex; justify-content: space-between; align-items: center; margin-top: 10px;}
+.lab-view .modulo-sim {font-size: 0.8rem; color: var(--text-light); background: rgba(255, 255, 255, 0.04); padding: 4px 14px; border-radius: 50px; border: 1px solid var(--border-subtle);}
+.lab-view .btn-modulo {background: transparent; color: var(--oil-blue-light); border: 1px solid var(--oil-blue); padding: 6px 18px; border-radius: 50px; font-weight: 600; font-size: 0.8rem; transition: var(--transition); cursor: pointer;}
+.lab-view .btn-modulo:hover {background: var(--oil-blue); color: #fff; box-shadow: 0 0 20px var(--oil-blue-glow);}
+.lab-view .biblioteca {padding: 70px 0 60px; background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);}
+.lab-view .filtros {display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; justify-content: center;}
+.lab-view .filtro-btn {background: var(--bg-card); color: var(--text-light); border: 1px solid var(--border-subtle); padding: 8px 22px; border-radius: 50px; font-weight: 500; font-size: 0.85rem; transition: var(--transition); cursor: pointer;}
+.lab-view .filtro-btn:hover {border-color: var(--oil-blue); color: #fff;}
+.lab-view .filtro-btn.active {background: var(--oil-blue); color: #fff; border-color: var(--oil-blue); box-shadow: 0 0 20px var(--oil-blue-glow);}
+.lab-view .simuladores-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;}
+.lab-view .sim-card {background: var(--bg-card); border-radius: var(--radius-sm); padding: 20px 18px 22px; border: 1px solid var(--border-subtle); transition: var(--transition); backdrop-filter: blur(4px); display: flex; flex-direction: column;}
+.lab-view .sim-card:hover {transform: translateY(-6px); border-color: var(--oil-blue); box-shadow: var(--shadow-glow); background: var(--bg-card-hover);}
+.lab-view .sim-card h4 {font-size: 1rem; font-weight: 600; margin-bottom: 4px;}
+.lab-view .sim-card .sim-categoria {font-size: 0.8rem; color: var(--oil-blue-light); font-weight: 500; margin-bottom: 6px;}
+.lab-view .sim-card .sim-plataforma {font-size: 0.75rem; color: var(--text-light); background: rgba(255, 255, 255, 0.04); display: inline-block; padding: 2px 12px; border-radius: 50px; border: 1px solid var(--border-subtle); margin-bottom: 12px; align-self: flex-start;}
+.lab-view .sim-card .sim-desc {font-size: 0.85rem; color: var(--text-light); margin-bottom: 14px; flex: 1;}
+.lab-view .btn-sim {background: transparent; color: var(--oil-blue-light); border: 1px solid var(--oil-blue); padding: 6px 16px; border-radius: 50px; font-weight: 500; font-size: 0.8rem; transition: var(--transition); cursor: pointer; align-self: flex-start;}
+.lab-view .btn-sim:hover {background: var(--oil-blue); color: #fff; box-shadow: 0 0 20px var(--oil-blue-glow);}
+.lab-view .como-funciona {padding: 70px 0 60px; background: var(--bg-primary);}
+.lab-view .steps {display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 40px; margin-top: 10px;}
+.lab-view .step {display: flex; align-items: center; gap: 14px; background: var(--bg-card); padding: 18px 28px; border-radius: 60px; border: 1px solid var(--border-subtle); transition: var(--transition); backdrop-filter: blur(4px);}
+.lab-view .step:hover {border-color: var(--oil-blue); transform: scale(1.02); box-shadow: var(--shadow-glow);}
+.lab-view .step-num {background: var(--oil-blue); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0;}
+.lab-view .step-text {font-weight: 500;}
+.lab-view .step-arrow {color: var(--oil-blue-light); font-size: 1.3rem; opacity: 0.6;}
+.lab-view .beneficios {padding: 70px 0 60px; background: var(--bg-secondary); border-top: 1px solid var(--border-subtle);}
+.lab-view .benef-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px; margin-top: 10px;}
+.lab-view .benef-item {background: var(--bg-card); padding: 30px 20px; border-radius: var(--radius); text-align: center; border: 1px solid var(--border-subtle); transition: var(--transition); backdrop-filter: blur(4px);}
+.lab-view .benef-item:hover {transform: translateY(-8px); border-color: var(--oil-blue); box-shadow: var(--shadow-glow);}
+.lab-view .benef-item i {font-size: 2.4rem; color: var(--oil-blue-light); margin-bottom: 14px;}
+.lab-view .benef-item h4 {font-weight: 600; font-size: 1.05rem;}
+.lab-view .benef-item p {color: var(--text-light); font-size: 0.9rem; margin-top: 4px;}
+.lab-view .footer {padding: 40px 0 28px; background: var(--bg-primary); border-top: 1px solid var(--border-subtle);}
+.lab-view .footer .container {display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;}
+.lab-view .footer-logo {font-weight: 700; font-size: 1.3rem; display: flex; align-items: center; gap: 8px;}
+.lab-view .footer-logo i {color: var(--oil-blue-light);}
+.lab-view .footer-links {display: flex; gap: 28px; color: var(--text-light); font-size: 0.9rem;}
+.lab-view .footer-links a:hover {color: #fff;}
+.lab-view .footer-copy {color: var(--text-light); font-size: 0.85rem;}
+.lab-view .modal-overlay {position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(8px); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 30px; animation: fadeInModal 0.3s ease;}
+.lab-view .modal-overlay.active {display: flex;}
+@keyframes fadeInModal { from { opacity:0; } to { opacity:1; } }
+.lab-view .modal {background: var(--bg-secondary); border-radius: var(--radius); max-width: 1100px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 40px 45px; border: 1px solid var(--border-subtle); box-shadow: 0 30px 60px rgba(0,0,0,0.7); position: relative; scroll-behavior: smooth;}
+.lab-view .modal::-webkit-scrollbar {width: 6px;}
+.lab-view .modal::-webkit-scrollbar-thumb {background: var(--oil-blue); border-radius: 10px;}
+.lab-view .modal-close {position: sticky; top: 0; float: right; background: none; border: none; color: var(--text-light); font-size: 2rem; cursor: pointer; transition: var(--transition); z-index: 10; padding: 0 8px;}
+.lab-view .modal-close:hover {color: #fff; transform: rotate(90deg);}
+.lab-view .modal h2 {font-size: 2rem; margin-bottom: 6px;}
+.lab-view .modal .modulo-sub {color: var(--oil-blue-light); font-weight: 500; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;}
+.lab-view .modal .modulo-sub .badge-diff {background: var(--bg-card); padding: 4px 16px; border-radius: 50px; border: 1px solid var(--border-subtle); font-size: 0.8rem;}
+.lab-view .modal-section {margin-top: 32px; border-top: 1px solid var(--border-subtle); padding-top: 28px;}
+.lab-view .modal-section h3 {font-size: 1.3rem; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 12px;}
+.lab-view .modal-section h3 i {color: var(--oil-blue-light); width: 28px;}
+.lab-view .modal-section p, .lab-view .modal-section li {color: var(--text-light); line-height: 1.7;}
+.lab-view .modal-section ul {padding-left: 20px; list-style: disc;}
+.lab-view .modal-section ul li {margin-bottom: 6px;}
+.lab-view .badge-container {display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0;}
+.lab-view .badge {background: var(--bg-card); padding: 4px 16px; border-radius: 50px; border: 1px solid var(--border-subtle); font-size: 0.8rem; color: var(--text-light);}
+.lab-view .badge.primary {border-color: var(--oil-blue); color: var(--oil-blue-light);}
+.lab-view .badge.success {border-color: #2e9a6e; color: #2e9a6e;}
+.lab-view .badge.warning {border-color: #c9a832; color: #c9a832;}
+.lab-view .progress-bar {background: var(--bg-card); border-radius: 50px; height: 8px; width: 100%; margin: 12px 0; overflow: hidden;}
+.lab-view .progress-bar .fill {height: 100%; background: linear-gradient(90deg, var(--oil-blue), var(--oil-blue-light)); border-radius: 50px; width: 0%;}
+.lab-view .sim-item {background: var(--bg-card); border-radius: var(--radius-sm); padding: 18px 22px; margin-bottom: 16px; border: 1px solid var(--border-subtle); transition: var(--transition);}
+.lab-view .sim-item:hover {border-color: var(--oil-blue);}
+.lab-view .sim-item .sim-header {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;}
+.lab-view .sim-item .sim-header h4 {font-weight: 600;}
+.lab-view .sim-item .sim-header .nivel {font-size: 0.7rem; padding: 2px 12px; border-radius: 50px; background: rgba(10,75,110,0.2); color: var(--oil-blue-light);}
+.lab-view .sim-item .sim-meta {display: flex; flex-wrap: wrap; gap: 12px; font-size: 0.8rem; color: var(--text-light); margin: 6px 0;}
+.lab-view .sim-item .sim-meta i {margin-right: 4px;}
+.lab-view .btn-group {display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px;}
+.lab-view .btn-group .btn-sm {background: transparent; border: 1px solid var(--border-subtle); color: var(--text-light); padding: 6px 18px; border-radius: 50px; font-size: 0.8rem; transition: var(--transition); cursor: pointer;}
+.lab-view .btn-group .btn-sm:hover {border-color: var(--oil-blue); color: #fff; background: var(--oil-blue);}
+.lab-view .btn-group .btn-sm.primary {border-color: var(--oil-blue); color: var(--oil-blue-light);}
+.lab-view .btn-group .btn-sm.primary:hover {background: var(--oil-blue); color: #fff;}
+.lab-view .checklist-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px;}
+.lab-view .checklist-grid label {display: flex; align-items: center; gap: 10px; color: var(--text-light); font-size: 0.95rem; cursor: pointer; padding: 4px 0;}
+.lab-view .checklist-grid input[type="checkbox"] {accent-color: var(--oil-blue); width: 18px; height: 18px; cursor: pointer;}
+.lab-view .carreiras-grid {display: flex; flex-wrap: wrap; gap: 8px;}
+.lab-view .carreiras-grid .badge {font-size: 0.75rem;}
+.lab-view .modal-nav {display: flex; justify-content: space-between; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--border-subtle);}
+.lab-view .modal-nav button {background: transparent; border: 1px solid var(--border-subtle); color: var(--text-light); padding: 10px 28px; border-radius: 50px; transition: var(--transition); cursor: pointer; display: flex; align-items: center; gap: 10px;}
+.lab-view .modal-nav button:hover {border-color: var(--oil-blue); color: #fff; background: var(--oil-blue);}
+@media (max-width: 1024px) {
+.lab-view .hero .container {grid-template-columns: 1fr; text-align: center;}
+.lab-view .hero-content p {margin-left: auto; margin-right: auto;}
+.lab-view .hero-actions {justify-content: center;}
+.lab-view .hero-image .illustration {max-width: 360px; font-size: 6rem;}
+.lab-view .stats-grid {grid-template-columns: repeat(2, 1fr);}
+.lab-view .modal {padding: 30px 20px;}
+.lab-view .checklist-grid {grid-template-columns: 1fr;}
+}
+@media (max-width: 768px) {
+.lab-view .nav-menu {display: none; flex-direction: column; width: 100%; background: rgba(11,18,25,0.98); padding: 20px 0; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); gap: 16px;}
+.lab-view .nav-menu.open {display: flex;}
+.lab-view .hamburger {display: flex;}
+.lab-view .header .container {flex-wrap: wrap;}
+.lab-view .hero {padding: 152px 0 60px;}
+.lab-view .hero-content h1 {font-size: 2.2rem;}
+.lab-view .hero-content p {font-size: 1rem;}
+.lab-view .hero-image .illustration {max-width: 260px; font-size: 4.5rem;}
+.lab-view .modulos-grid {grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));}
+.lab-view .simuladores-grid {grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));}
+.lab-view .steps {flex-direction: column; align-items: stretch; gap: 12px;}
+.lab-view .step {border-radius: var(--radius-sm); justify-content: center;}
+.lab-view .step-arrow {display: none;}
+.lab-view .footer .container {flex-direction: column; text-align: center; gap: 16px;}
+.lab-view .footer-links {flex-wrap: wrap; justify-content: center; gap: 16px;}
+.lab-view .modal-overlay {padding: 15px;}
+.lab-view .modal {padding: 20px 16px; max-height: 95vh;}
+}
+@media (max-width: 480px) {
+.lab-view .stats-grid {grid-template-columns: 1fr 1fr; gap: 12px;}
+.lab-view .stat-item {padding: 20px 12px;}
+.lab-view .stat-number {font-size: 2rem;}
+.lab-view .modulos-grid {grid-template-columns: 1fr;}
+.lab-view .simuladores-grid {grid-template-columns: 1fr 1fr;}
+.lab-view .filtros {gap: 6px;}
+.lab-view .filtro-btn {padding: 6px 14px; font-size: 0.75rem;}
+.lab-view .section-header h2 {font-size: 1.8rem;}
+}
+.lab-view .glow-pulse {animation: glowPulse 3s ease-in-out infinite;}
+@keyframes glowPulse { 0%,100% { box-shadow: 0 0 10px var(--oil-blue-glow); } 50% { box-shadow: 0 0 30px var(--oil-blue-glow), 0 0 60px rgba(10,75,110,0.2); } }
+.lab-view .fade-in {animation: fadeIn 0.6s ease forwards;}
+@keyframes fadeIn { from { opacity:0; transform:scale(0.97); } to { opacity:1; transform:scale(1); } }
+.lab-view { display:block; }
+.lab-view .hero { padding:70px 0 70px; min-height:auto; }
+.lab-view .hero-content h1 { margin-top:0; }
+
+/* ═══════════════════════════════════════════════════════════════
+   5. CERTIFICADO  (era o bloco CERTIFICADO de style.css)
+   ═══════════════════════════════════════════════════════════════ */
+.cert-view .btn-group {display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; justify-content: center;}
+.cert-view .btn {background: #0B1F3A; color: #fff; border: none; border-radius: 8px; padding: 14px 32px; font-weight: 700; font-size: 16px; cursor: pointer; transition: .3s;}
+.cert-view .btn:hover {background: #1a3a5c; transform: translateY(-2px);}
+.cert-view .btn.primary {background: #FF6B00;}
+.cert-view .btn.primary:hover {background: #e55e00;}
+.cert-view .btn.success {background: #16A34A;}
+.cert-view .btn.success:hover {background: #15803D;}
+.cert-view .result-box {text-align: center; padding: 32px; border-radius: 12px; margin-top: 28px;}
+.cert-view .result-box.approved {background: #F0FDF4; border: 2px solid #16A34A;}
+.cert-view .result-box.failed {background: #FEF2F2; border: 2px solid #DC2626;}
+.cert-view .result-score {font-size: 56px; font-weight: 900; color: #0B1F3A;}
+.cert-view .result-label {font-size: 20px; font-weight: 700;}
+/* CERTIFICADO — design premium */
+:root {--gold: #C9A227;
+  --gold-light: #E4C766;
+  --gold-dark: #9C7C1A;
+  --navy: #0B1F3A;
+  --cream: #FFFCF5;}
+.cert-view .certificate-page-bg {min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 48px 20px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,107,0,.06) 0%, transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(11,31,58,.08) 0%, transparent 45%),
+    linear-gradient(135deg, #E8ECF3 0%, #DCE3ED 100%);}
+.cert-view .certificate-outer {position: relative; max-width: 980px; width: 100%;}
+.cert-view .certificate {position: relative; width: 100%; padding: 56px 64px 40px;
+  background:
+    radial-gradient(ellipse at top, rgba(201,162,39,.05) 0%, transparent 60%),
+    var(--cream);
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(11,31,58,.28), 0 2px 0 rgba(255,255,255,.6) inset;
+  overflow: hidden;}
+/* moldura dupla dourada + navy */
+.cert-view .certificate::before {content: ''; position: absolute; inset: 14px;
+  border: 2px solid var(--navy); border-radius: 3px; pointer-events: none;}
+.cert-view .certificate::after {content: ''; position: absolute; inset: 20px;
+  border: 1.5px solid var(--gold); border-radius: 2px; pointer-events: none;}
+/* marca d'água diagonal */
+.cert-view .cert-watermark {position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+  opacity: .035; display: flex; align-items: center; justify-content: center;
+  transform: rotate(-28deg); white-space: nowrap;}
+.cert-view .cert-watermark span {font-size: 64px; font-weight: 900; letter-spacing: 14px; color: var(--navy);
+  display: block; line-height: 2.4;}
+.cert-view .cert-corner {position: absolute; width: 46px; height: 46px; z-index: 1;}
+.cert-view .cert-corner.tl {top: 20px; left: 20px;}
+.cert-view .cert-corner.tr {top: 20px; right: 20px; transform: scaleX(-1);}
+.cert-view .cert-corner.bl {bottom: 20px; left: 20px; transform: scaleY(-1);}
+.cert-view .cert-corner.br {bottom: 20px; right: 20px; transform: scale(-1,-1);}
+.cert-view .cert-content {position: relative; z-index: 2;}
+.cert-view .cert-emblem {margin: 0 auto 6px; width: 84px; height: 84px;}
+.cert-view .cert-brand {font-size: 24px; font-weight: 900; color: var(--navy); letter-spacing: 6px; margin-top: 4px;}
+.cert-view .cert-brand span {color: var(--gold-dark);}
+.cert-view .cert-tagline {font-size: 11px; color: #8A93A3; letter-spacing: 3px; text-transform: uppercase; margin-top: 4px;}
+.cert-view .cert-divider {display: flex; align-items: center; justify-content: center; gap: 14px; margin: 26px auto 22px; max-width: 380px;}
+.cert-view .cert-divider .line {flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent);}
+.cert-view .cert-divider .diamond {width: 9px; height: 9px; background: var(--gold); transform: rotate(45deg); flex-shrink: 0;}
+.cert-view .cert-title {font-family: Georgia, 'Times New Roman', serif; font-size: 34px; font-weight: 700; color: var(--navy); letter-spacing: 3px; text-transform: uppercase;}
+.cert-view .cert-conferido {font-family: Georgia, serif; font-style: italic; font-size: 15px; color: #64748B; margin: 18px 0 10px;}
+.cert-view .cert-name {font-family: Georgia, 'Times New Roman', serif; font-size: 44px; font-weight: 700; font-style: italic;
+  margin: 8px 0 18px; letter-spacing: .5px;
+  background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold-dark) 100%);
+  -webkit-background-clip: text; background-clip: text; color: var(--gold-dark);
+  -webkit-text-fill-color: transparent;
+  position: relative; display: inline-block; padding-bottom: 10px;}
+.cert-view .cert-name::after {content: ''; position: absolute; bottom: 0; left: 50%; translate: -50% 0;
+  width: 70%; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent);}
+.cert-view .cert-details {font-family: Georgia, serif; font-size: 16px; color: #3F4B5C; line-height: 2; max-width: 640px; margin: 0 auto 8px;}
+.cert-view .cert-details strong {color: var(--navy);}
+.cert-view .cert-input-wrap {max-width: 420px; margin: 0 auto 20px;}
+.cert-view .cert-input {padding: 12px 16px; border: 1.5px solid #E5E7EB; border-radius: 6px; width: 100%; font-size: 16px; text-align: center; font-family: Georgia, serif;}
+.cert-view .cert-footer-grid {display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 24px;
+  margin-top: 36px; padding-top: 24px;}
+.cert-view .cert-sign-block {text-align: center;}
+.cert-view .cert-sign-line {width: 100%; max-width: 190px; margin: 0 auto 8px; height: 30px;}
+.cert-view .cert-sign-caption {font-size: 12px; color: #64748B; border-top: 1.5px solid #CBD5E1; padding-top: 8px; max-width: 190px; margin: 0 auto;}
+.cert-view .cert-sign-caption strong {display: block; color: var(--navy); font-size: 13px; margin-top: 2px;}
+.cert-view .cert-seal {width: 92px; height: 108px; margin: 0 auto;}
+.cert-view .cert-qr-block {text-align: center;}
+.cert-view .cert-qr-box {width: 96px; height: 96px; margin: 0 auto 6px; padding: 6px; background: #fff;
+  border: 1.5px solid var(--gold); border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,.08);}
+.cert-view .cert-qr-box canvas, .cert-view .cert-qr-box img {width: 100%; height: 100%; display: block;}
+.cert-view .cert-qr-caption {font-size: 10px; color: #94A3B8; letter-spacing: .5px; max-width: 140px; margin: 0 auto; line-height: 1.4;}
+.cert-view .cert-code-footer {margin-top: 22px; font-size: 11px; color: #94A3B8; letter-spacing: 1px;
+  border-top: 1px dashed #E2E8F0; padding-top: 14px;}
+.cert-view .cert-code-footer strong {color: #64748B; font-family: 'Courier New', monospace;}
+.cert-view .no-print {margin-top: 30px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;}
+/* ANEXO — Programa Estudado */
+.cert-view .cert-stack {flex-direction: column; gap: 40px;}
+.cert-view .cert-appendix {text-align: left; padding: 44px 56px 36px;}
+.cert-view .cert-appendix-header {text-align: center; margin-bottom: 24px;}
+.cert-view .cert-appendix-title {font-family: Georgia, serif; font-size: 20px; font-weight: 700; color: var(--navy); margin-top: 6px;}
+.cert-view .cert-appendix-sub {font-size: 13px; color: #64748B; margin-top: 8px;}
+.cert-view .cert-appendix-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; margin: 8px 0 20px;}
+.cert-view .cert-appendix-row {display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid #EEE3C4; font-size: 13px;}
+.cert-view .cert-appendix-row .apx-id {color: var(--gold-dark); font-weight: 800; flex-shrink: 0; min-width: 22px;}
+.cert-view .cert-appendix-row .apx-title {color: #1E293B; line-height: 1.4;}
+.cert-view .cert-appendix-row .apx-hours {color: #94A3B8; font-size: 11px; white-space: nowrap; margin-left: auto; padding-left: 8px;}
+.cert-view .cert-appendix-total {text-align: center; font-size: 13px; color: var(--navy); padding-top: 14px; border-top: 1.5px solid var(--gold); margin-bottom: 14px;}
+@media (max-width: 700px) {
+.cert-view .cert-appendix {padding: 32px 24px;}
+.cert-view .cert-appendix-grid {grid-template-columns: 1fr;}
+}
+@media print {
+.cert-view @page {size: landscape; margin: 10mm;}
+.cert-view nav, .cert-view .no-print {display: none !important;}
+.cert-view, .cert-view .certificate-page-bg {background: #fff !important; padding: 0 !important; min-height: auto;}
+.cert-view .certificate {box-shadow: none;}
+.cert-view .cert-appendix-outer {page-break-before: always;}
+}
+@media (max-width: 700px) {
+.cert-view .certificate {padding: 40px 24px 28px;}
+.cert-view .cert-title {font-size: 24px; letter-spacing: 1.5px;}
+.cert-view .cert-name {font-size: 30px;}
+.cert-view .cert-details {font-size: 14px;}
+.cert-view .cert-footer-grid {grid-template-columns: 1fr; gap: 28px;}
+.cert-view .cert-watermark span {font-size: 40px;}
+}
+/* FOOTER */
+.cert-view .footer {background: #111827; padding: 48px 24px; text-align: center;}
+.cert-view .foot-brand {font-size: 20px; font-weight: 900; color: #FF6B00; letter-spacing: 3px; margin-bottom: 8px;}
+.cert-view .foot-sub {font-size: 13px; color: #6B7280; margin-bottom: 4px;}
+.cert-view .foot-links {margin-top: 20px;}
+.cert-view .foot-links a {color: #8BAFC7; text-decoration: none; margin: 0 16px; font-size: 13px;}
+.cert-view .foot-links a:hover {color: #FF6B00;}
+
+/* ═══════════════════════════════════════════════════════════════
+   6. VERIFICAÇÃO DE CERTIFICADO  (era o CSS de verificar.html)
+   ═══════════════════════════════════════════════════════════════ */
+.verify-view .verify-bg {min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px;
+      background: radial-gradient(circle at 20% 20%, rgba(255,107,0,.06) 0%, transparent 45%),
+                  radial-gradient(circle at 80% 80%, rgba(11,31,58,.08) 0%, transparent 45%),
+                  linear-gradient(135deg, #E8ECF3 0%, #DCE3ED 100%);}
+.verify-view .verify-card {max-width: 520px; width: 100%; background: #FFFCF5; border-radius: 14px; padding: 44px 36px;
+      box-shadow: 0 30px 80px rgba(11,31,58,.28); text-align: center; border: 1.5px solid #C9A227;}
+.verify-view .verify-badge {width: 84px; height: 84px; margin: 0 auto 16px;}
+.verify-view .verify-status {font-size: 13px; font-weight: 800; letter-spacing: 2px; color: #16A34A; text-transform: uppercase; margin-bottom: 4px;}
+.verify-view .verify-title {font-family: Georgia, serif; font-size: 24px; font-weight: 700; color: #0B1F3A; margin-bottom: 24px;}
+.verify-view .verify-name {font-family: Georgia, serif; font-style: italic; font-size: 30px; font-weight: 700; color: #9C7C1A; margin: 8px 0 20px;}
+.verify-view .verify-rows {text-align: left; border-top: 1px solid #E5E7EB; margin-top: 8px;}
+.verify-view .verify-row {display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #E5E7EB; font-size: 14px;}
+.verify-view .verify-row span:first-child {color: #64748B;}
+.verify-view .verify-row span:last-child {color: #0B1F3A; font-weight: 700; text-align: right;}
+.verify-view .verify-code {margin-top: 24px; font-size: 12px; color: #94A3B8; letter-spacing: 1px;}
+.verify-view .verify-code strong {font-family: 'Courier New', monospace; color: #64748B;}
+.verify-view .verify-footer-brand {margin-top: 28px; font-size: 12px; color: #94A3B8; letter-spacing: 3px; text-transform: uppercase;}
+.verify-view .verify-footer-brand strong {color: #C9A227;}
+
+/* ═══════════════════════════════════════════════════════════════
+   7. CASCA DA APLICAÇÃO DE PÁGINA ÚNICA
+   ═══════════════════════════════════════════════════════════════ */
+.nav a { cursor:pointer; }
+.nav a.active { color:var(--secondary); border-bottom:2px solid var(--secondary); padding-bottom:4px; }
+#app { min-height:60vh; }
+.cert-locked { max-width:640px; margin:70px auto; background:#fff; border-radius:16px; padding:44px 32px; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,.06); border-top:4px solid var(--secondary); }
+.cert-locked i { font-size:44px; color:var(--secondary); margin-bottom:14px; }
+.cert-locked h2 { font-size:24px; color:var(--primary); margin-bottom:10px; }
+.cert-locked p { color:#64748B; font-size:15px; margin-bottom:20px; }
+.cert-locked button { background:var(--secondary); color:#fff; border:none; border-radius:30px; padding:13px 30px; font-weight:700; font-size:15px; cursor:pointer; font-family:inherit; }
+@media print {
+  header, footer, .topbar-portal, .no-print { display:none !important; }
+  body { background:#fff !important; }
+}
+</style>
 </head>
 <body>
-<div style="background:#111827;padding:8px 24px;text-align:center;font-size:12px;"><a href="../index.html" style="color:#FF8C3A;text-decoration:none;font-weight:700;letter-spacing:.5px;">&larr; OAKEN CURSOS</a></div>
 
-<!-- HEADER -->
+<div class="topbar-portal" style="background:#111827;padding:8px 24px;text-align:center;font-size:12px;"><a href="../index.html" style="color:#FF8C3A;text-decoration:none;font-weight:700;letter-spacing:.5px;">&larr; OAKEN CURSOS</a></div>
+
 <header>
     <div class="container header-flex">
-        <div class="logo">OAKEN<span>OIL</span></div>
-        <nav class="nav">
-            <a href="#modules">Módulos</a>
-            <a href="#differentials">Diferenciais</a>
-            <a href="#testimonials">Depoimentos</a>
-            <a href="#faq">FAQ</a>
-            <a href="laboratorio.html">Laboratório</a>
-            <a href="exame.html">Área do Aluno</a>
-            <a href="#pricing" class="cta-top"><i class="fas fa-whatsapp"></i> Inscrever-me</a>
+        <div class="logo" onclick="nav('home')" style="cursor:pointer">OAKEN<span>OIL</span></div>
+        <nav class="nav" id="mainNav">
+            <a href="#home" data-r="home">Home</a>
+            <a href="#modulos" data-r="modulos">Módulos</a>
+            <a href="#diferenciais" data-r="diferenciais">Diferenciais</a>
+            <a href="#depoimentos" data-r="depoimentos">Depoimentos</a>
+            <a href="#faq" data-r="faq">FAQ</a>
+            <a href="#laboratorio" data-r="laboratorio">Laboratório</a>
+            <a href="#aluno" data-r="aluno">Área do Aluno</a>
+            <a href="#certificado" data-r="certificado">Certificado</a>
+            <a href="https://wa.me/351913388794" target="_blank" class="cta-top"><i class="fab fa-whatsapp"></i> Inscrever-me</a>
         </nav>
     </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<div id="app"></div>
+
+<div id="siteFooter"></div>
+
+<!-- MODAL DO EXAME (persistente, fora do #app) -->
+<div class="aluno-view">
+  <div id="examView" class="exam-view">
+    <div class="exam-modal">
+      <div class="exam-header">
+          <div>
+              <span class="progress-txt">Módulo <span id="examModNum"></span> — <span id="examModTitle"></span></span><br>
+              <span class="back-link" style="color:rgba(255,255,255,.7);margin:6px 0 0;" onclick="backToModules()">← Voltar aos módulos</span>
+          </div>
+          <span class="timer">⏱️ <span id="examTimer">50:00</span></span>
+      </div>
+      <div class="exam-body">
+          <div class="exam-progress" style="margin-bottom:8px;background:var(--light);"><div class="exam-progress-fill" id="progressFill"></div></div>
+          <p style="font-size:12px;color:var(--gray);margin-bottom:18px;"><span id="answeredCount">0</span>/30 questões respondidas</p>
+          <div id="questionsContainer"></div>
+          <div class="btn-group">
+              <button class="btn primary" onclick="submitExam()">✅ Corrigir Exame</button>
+              <button class="btn danger" onclick="finalizarProva()">🏁 Finalizar Prova</button>
+          </div>
+          <div id="resultArea"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DO LABORATÓRIO (persistente, fora do #app) -->
+<div class="lab-view" style="margin:0">
+  <div class="modal-overlay" id="modalOverlay">
+      <div class="modal" id="modalContent">
+          <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+          <div id="modalBody"></div>
+          <div class="modal-nav">
+              <button id="modalPrev"><i class="fas fa-arrow-left"></i> Anterior</button>
+              <button id="modalNext">Próximo <i class="fas fa-arrow-right"></i></button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script src="modulos-data.js"></script>
+<script src="course-meta.js"></script>
+<script src="exame-questions.js"></script>
+<script src="laboratorio-data.js"></script>
+<script>
+const HTML_HOME = `<section class="hero">
     <div class="container hero-flex">
         <div class="hero-content">
             <div class="floating-badge"><i class="fas fa-shield-alt"></i> Formação Técnica Profissionalizante</div>
@@ -795,7 +1463,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="faq" id="faq">
+<section class="faq" id="home-faq">
     <div class="container">
         <h2 class="section-title">Perguntas <span>Frequentes</span></h2>
         <p class="section-sub">Tire as suas dúvidas sobre o curso Oaken Oil.</p>
@@ -826,10 +1494,8 @@
             </div>
         </div>
     </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
+</section>`;
+const HTML_FOOTER = `<footer>
     <div class="container">
         <div class="footer-flex">
             <div class="footer-col">
@@ -850,27 +1516,1573 @@
             </div>
             <div class="footer-col">
                 <h5>Links Rápidos</h5>
-                <p><a href="#modules">Módulos</a></p>
-                <p><a href="#differentials">Diferenciais</a></p>
-                <p><a href="#testimonials">Depoimentos</a></p>
-                <p><a href="#pricing">Inscrever-me</a></p>
+                <p><a onclick="jump('modules')" style="cursor:pointer">Módulos</a></p>
+                <p><a onclick="nav('diferenciais')" style="cursor:pointer">Diferenciais</a></p>
+                <p><a onclick="nav('depoimentos')" style="cursor:pointer">Depoimentos</a></p>
+                <p><a onclick="jump('pricing')" style="cursor:pointer">Inscrever-me</a></p>
             </div>
         </div>
         <div class="footer-bottom">
             &copy; 2026 Oaken Oil. Todos os direitos reservados. | Desenvolvido com <i class="fas fa-heart" style="color:var(--secondary);"></i> para o futuro do offshore em Angola.
         </div>
     </div>
-</footer>
+</footer>`;
+const HTML_MODULOS = `<section class="page-hero">
+    <div class="container">
+        <h1>Os <span>17 Módulos</span> do Curso</h1>
+        <p>Conheça em detalhe cada um dos módulos que compõem o curso <strong>Técnico de Segurança e Operações Offshore</strong> da Oaken Oil.</p>
+    </div>
+</section>
 
-<!-- JavaScript para FAQ -->
-<script>
-    document.querySelectorAll('.faq-item h4').forEach(item => {
-        item.addEventListener('click', function() {
-            const parent = this.closest('.faq-item');
-            parent.classList.toggle('active');
-        });
-    });
+<section class="modules-page">
+    <div class="container">
+        <div class="module-full" data-mod="1" onclick="toggleModule(1)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 1</span>
+                    <h3>Fundamentos da Indústria do Petróleo e Gás</h3>
+                    <p>Geologia do petróleo, exploração sísmica 2D/3D/4D, história do petróleo em Angola, bacias sedimentares (Kwanza, Congo, Namibe), características do petróleo angolano (API, enxofre), operadoras, economia do petróleo, blocos de exploração, contratos de partilha de produção (PSA), recursos vs. reservas, ciclo de vida do campo e tendências futuras.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-1"></div>
+        </div>
+        <div class="module-full" data-mod="2" onclick="toggleModule(2)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 2</span>
+                    <h3>Plataformas, Embarcações e Estruturas Offshore</h3>
+                    <p>Plataformas fixas (Jacket), semi-submersíveis, FPSO, SPAR, TLP, drillships, sistemas de ancoragem, risers (rígidos, flexíveis, híbridos), sistemas de offloading e amarração (CALM, SPM), alojamento, guindastes, HVAC, sistemas de água e combustível, inspeção de estruturas, navios de apoio (PSV, AHTS, DSV), posicionamento dinâmico, integridade estrutural e proteção contra incêndios.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-2"></div>
+        </div>
+        <div class="module-full" data-mod="3" onclick="toggleModule(3)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 3</span>
+                    <h3>Segurança Offshore (BOSIET / HUET / HSE)</h3>
+                    <p>Cultura de segurança e pirâmide de Heinrich, sistema de gestão HSE, princípios de segurança de processos, EPI específico, método PASS, classes de incêndio, tetraedro do fogo, procedimento de abandono, fato de imersão, HUET, sobrevivência no mar, sinalização e equipamentos de resgate, gestão de risco de gás (H₂S, CH₄), trabalhos a quente, trabalhos em altura e espaços confinados, gestão de mudanças, investigação de acidentes, simulacros e legislação de segurança em Angola.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-3"></div>
+        </div>
+        <div class="module-full" data-mod="4" onclick="toggleModule(4)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 4</span>
+                    <h3>Primeiros Socorros e Emergências Médicas</h3>
+                    <p>Protocolo DRSABCD, SBV adulto e pediátrico, controlo de hemorragias, queimaduras, fraturas e imobilização, hipotermia e insolação, lesões por H₂S, resgate de vítima na água, evacuação médica por heli-ambulância, kit de primeiros socorros, comunicação médica (SBAR), suporte psicológico, triagem, transporte em maca, legislação médica, emergências obstétricas, choque anafilático e simulação de emergências.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-4"></div>
+        </div>
+        <div class="module-full" data-mod="5" onclick="toggleModule(5)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 5</span>
+                    <h3>Sistemas Mecânicos (Motores, Bombas, Compressores)</h3>
+                    <p>Motores Diesel marítimos, manutenção e análise de óleo, bombas centrífugas, bombas de deslocamento positivo, compressores alternativos, compressores de parafuso, turbinas a gás, sistemas de lubrificação, sistemas de refrigeração, válvulas de controlo, atuadores, alinhamento de eixos, transmissões, soldadura, diagnóstico de falhas, VFDs, tribologia, ar comprimido, manutenção de rolamentos e tendências em sistemas mecânicos.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-5"></div>
+        </div>
+        <div class="module-full" data-mod="6" onclick="toggleModule(6)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 6</span>
+                    <h3>Sistemas Elétricos, Instrumentação e Controlo</h3>
+                    <p>Geração de energia, transformadores, MCC, LOTO elétrico, motores elétricos, sensores e transmissores, P&ID, DCS e SCADA, válvulas de controlo, ESD, deteção de incêndio e gás, iluminação, aterramento, manutenção de instrumentos, segurança elétrica, gestão de cabos, UPS, EMS, classificação de áreas (ATEX/IECEx) e tendências em automação.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-6"></div>
+        </div>
+        <div class="module-full" data-mod="7" onclick="toggleModule(7)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 7</span>
+                    <h3>Operações Submarinas e Completação de Poços</h3>
+                    <p>BOP (componentes e operação), árvore de natal (wet/dry), manifolds submarinos, riser systems, umbilicais, perfuração (brocas, BHA), lama de perfuração, cimentação (casing/tubing), completação de poços (tubing, packer, SCSSV), intervenção (wireline, coiled tubing), DST, perfilagem (logging), ROVs, mergulho offshore, instalação de pipelines e jumpers, monitorização de integridade, sistemas de elevação, soldadura subaquática, gestão de químicos e tendências em automação submarina.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-7"></div>
+        </div>
+        <div class="module-full" data-mod="8" onclick="toggleModule(8)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 8</span>
+                    <h3>Manutenção, Confiabilidade e Análise de Falhas</h3>
+                    <p>Tipos de manutenção (preventiva, corretiva, preditiva), planeamento com SAP/Maximo, MTBF/MTTR/disponibilidade, RCA (5 Porquês), FMEA, gestão de sobressalentes, lubrificação (ISO VG), NDT (ultrassom, radiografia, etc.), termografia, análise de vibração (FFT), alinhamento a laser, balanceamento de rotores, gestão de paragens (turnaround), confiabilidade humana, análise de fadiga, condition monitoring, asset management, RCM, software de gestão com IA e tendências Indústria 4.0.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-8"></div>
+        </div>
+        <div class="module-full" data-mod="9" onclick="toggleModule(9)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 9</span>
+                    <h3>Soft Skills, Comunicação e Fatores Humanos</h3>
+                    <p>Comunicação em emergências (PA, rádio), técnica SBAR, método STAR, alfabeto fonético ICAO, trabalho em equipas multiculturais, gestão de conflitos, liderança e supervisão, gestão de fadiga, resiliência e saúde mental, ética profissional, relações interpessoais, tomada de decisão em risco, cultura de reporte de incidentes, networking, gestão do tempo, comunicação intercultural, stress e burnout, inteligência emocional, feedback e avaliação de desempenho.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-9"></div>
+        </div>
+        <div class="module-full" data-mod="10" onclick="toggleModule(10)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 10</span>
+                    <h3>Legislação, Gestão Ambiental e Empregabilidade</h3>
+                    <p>Lei Geral do Trabalho (Lei 2/00), IRS, Segurança Social (INSS), normas OPITO, IMO/SOLAS/ILO, MARPOL (Anexos I‑VI), planos de contingência e resposta a derrames, gestão de resíduos, proteção da biodiversidade, elaboração de CV, carta de motivação e LinkedIn, processo de recrutamento, ética e anticorrupção, planeamento de carreira, mercado de trabalho em Angola, acordos internacionais (OPEP, GECF), licenciamento ambiental, RSE, transparência (EITI) e novas competências para o futuro.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-10"></div>
+        </div>
+        <div class="module-full" data-mod="11" onclick="toggleModule(11)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 11</span>
+                    <h3>Processamento de Hidrocarbonetos</h3>
+                    <p>Separação trifásica, separadores gravitacionais e ciclónicos, tratamento de óleo (desidratação/dessalinização), sistemas de aquecimento (heaters/trocadores), compressão e tratamento de gás, desidratação de gás (glicol, peneiras moleculares), remoção de CO₂/H₂S (aminas, membranas), sistemas de tocha (flare) e vent, medição fiscal, tanques de armazenamento e offloading, injeção de água e gás, processamento de GNL, estabilização de condensados, controlo de processo, fracionamento de LGN, segurança de processo, simulação (HYSYS/Aspen), eficiência energética, manutenção e digitalização.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-11"></div>
+        </div>
+        <div class="module-full" data-mod="12" onclick="toggleModule(12)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 12</span>
+                    <h3>Automação Industrial e Indústria 4.0</h3>
+                    <p>Fundamentos de automação, PLC, SCADA avançado, redes industriais (Ethernet/IP, Modbus, Profinet), sensores inteligentes e IoT, Big Data e analytics, IA/ML, digital twins (gêmeos digitais), cibersegurança industrial, realidade aumentada/virtual, manutenção preditiva 4.0, robótica e drones, blockchain na cadeia de fornecimento, cloud/edge computing, integração MES/ERP, normas IEC 62443/ISA‑95, automação de poços (iFields), monitorização remota, impressão 3D e tendências futuras.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-12"></div>
+        </div>
+        <div class="module-full" data-mod="13" onclick="toggleModule(13)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 13</span>
+                    <h3>Geologia e Engenharia de Poços</h3>
+                    <p>Petrofísica (porosidade, permeabilidade), tipos de reservatórios (arenitos, carbonatos), mecanismos de produção, curvas de permeabilidade relativa, análise PVT, balanço de materiais, simulação de reservatórios, EOR, geomecânica de poços, perfuração direcional e horizontal, geosteering, LWD/MWD, testes de pressão (MDT/RFT), fraturas naturais e induzidas, injeção de água e gás, sísmica 4D, incertezas e análise de risco, classificação PRMS, novas fronteiras (Pré‑Sal, não convencionais) e integração multidisciplinar.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-13"></div>
+        </div>
+        <div class="module-full" data-mod="14" onclick="toggleModule(14)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 14</span>
+                    <h3>Logística e Cadeia de Suprimentos Offshore</h3>
+                    <p>Introdução à logística offshore, bases de apoio (supply bases), navios PSV/AHTS/DSV, gestão de carga e estiva, operações de içamento, transporte de cargas perigosas (IMDG), gestão de armazéns, logística de perfuração, heli‑logística, logística de emergência, planeamento de rotas, TMS, procurement, gestão de contratos e fornecedores, alfândega e desembaraço, logística reversa, KPIs (OTIF, lead time), tecnologia (RFID, GPS), sustentabilidade e desafios logísticos em Angola.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-14"></div>
+        </div>
+        <div class="module-full" data-mod="15" onclick="toggleModule(15)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 15</span>
+                    <h3>Energias Renováveis e Transição Energética</h3>
+                    <p>Cenário global da transição, eólica offshore (fundamentos, componentes, instalação), solar fotovoltaica flutuante, hidrogénio verde, CCS (captura e armazenamento de carbono), eletrificação de plataformas, baterias e armazenamento, energia das marés e ondas, integração com redes elétricas, regulamentação, economia do hidrogénio em Angola, novas competências, hibridização de sistemas, aproveitamento de gás associado, eficiência energética, certificações (GHG Protocol), financiamento verde e o futuro do profissional offshore.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-15"></div>
+        </div>
+        <div class="module-full" data-mod="16" onclick="toggleModule(16)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 16</span>
+                    <h3>Roustabout – Operações de Convés</h3>
+                    <p>O papel do Roustabout, hierarquia de convés, EPI e EPC, ferramentas manuais e elétricas, metodologia 5S, rigging e lingagem, inspeção de acessórios, cálculo de cargas e ângulos, código de sinais manuais (sinaleiro), operações com guindaste, manuseio de cargas, pipe handling, transferência navio‑plataforma, transferência de pessoal (cesto/passarela), apoio à perfuração, manutenção e pintura, PTW/JSA, trabalho em equipa, riscos críticos (cargas suspensas, snap‑back) e progressão de carreira.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-16"></div>
+        </div>
+        <div class="module-full" data-mod="17" onclick="toggleModule(17)">
+            <div class="module-full-head">
+                <div>
+                    <span class="mod-tag">Módulo 17</span>
+                    <h3>Pintura Industrial e Proteção Anticorrosiva</h3>
+                    <p>Corrosão no ambiente marinho (mecanismos e tipos), custo da corrosão (NACE IMPACT), normas ISO 12944, NORSOK M‑501, SSPC/AMPP, preparação de superfície (graus Sa 1‑3), jateamento abrasivo (blasting), hidrojateamento, perfil de rugosidade, tipos de tintas (epóxi, poliuretano, zinco), sistemas multicamada, aplicação Airless, trincha/rolo, metalização (TSA) e galvanização, proteção catódica, controlo de qualidade (WFT/DFT), testes de aderência (pull‑off) e descontinuidade (holiday test), condições ambientais, revestimentos especiais (PFP, antifouling), segurança na pintura, gestão de resíduos, inspeção de revestimentos (certificação NACE/AMPP/FROSIO) e empregabilidade.</p>
+                </div>
+                <span class="module-toggle">&#9662;</span>
+            </div>
+            <div class="module-body" id="mbody-17"></div>
+        </div>
+    </div>
+</section>`;
+const HTML_FAQ = `<section class="page-hero">
+    <div class="container">
+        <h1>Perguntas <span>Frequentes</span></h1>
+        <p>Esclareça as suas dúvidas sobre o curso, o acesso, a certificação e o pagamento.</p>
+    </div>
+</section>
+
+<section class="faq-page">
+    <div class="container">
+        <div class="faq-item">
+            <h3>O curso é reconhecido pelas operadoras em Angola? <i class="fas fa-chevron-down"></i></h3>
+            <div class="answer">Sim, o conteúdo está alinhado com as normas <strong>OPITO</strong>, <strong>IMO</strong>, <strong>SOLAS</strong> e <strong>NACE/AMPP</strong>, e foi desenvolvido com base na experiência prática em campos angolanos como <strong>Girassol</strong>, <strong>Dalia</strong>, <strong>Kaombo</strong> e <strong>Kizomba</strong>. O certificado de conclusão é valorizado por operadoras como TotalEnergies, Chevron, ExxonMobil e Sonangol.</div>
+        </div>
+        <div class="faq-item">
+            <h3>Preciso de experiência prévia para fazer o curso? <i class="fas fa-chevron-down"></i></h3>
+            <div class="answer">Não. O curso é desenhado para iniciantes que querem entrar no setor offshore e também para profissionais que desejam atualizar ou aprofundar os seus conhecimentos. Começamos pelos fundamentos (geologia, segurança, operações) e avançamos gradualmente até tópicos mais complexos (automação, geomecânica, transição energética).</div>
+        </div>
+        <div class="faq-item">
+            <h3>Como funciona o acesso vitalício? <i class="fas fa-chevron-down"></i></h3>
+            <div class="answer">Após a inscrição, terá acesso a todo o conteúdo do curso (17 módulos, 340 aulas) por tempo ilimitado, sem qualquer renovação anual. Além disso, receberá todas as atualizações futuras do curso (novos conteúdos, normas, tecnologias) sem custos adicionais.</div>
+        </div>
+        <div class="faq-item">
+            <h3>O curso tem certificado? <i class="fas fa-chevron-down"></i></h3>
+            <div class="answer">Sim, ao concluir o curso com aproveitamento (mínimo <strong>70%</strong> em cada um dos 17 exames de módulo), receberá um certificado de conclusão em formato digital, reconhecido por várias empresas do setor offshore em Angola e internacionalmente.</div>
+        </div>
+        <div class="faq-item">
+            <h3>Como posso pagar? <i class="fas fa-chevron-down"></i></h3>
+            <div class="answer">Aceitamos pagamento por <strong>transferência bancária</strong> (para Angola e internacional), <strong>MB Way</strong> (Portugal), e <strong>numerário</strong> (em Angola, mediante agendamento). Pode também optar pelo parcelamento em até <strong>12x sem juros</strong> com cartão de crédito (via plataforma de pagamento). Entre em contacto pelo WhatsApp para mais detalhes.</div>
+        </div>
+        <div class="faq-item">
+            <h3>O curso é 100% online? <i class="fas fa-chevron-down"></i></h3>
+            <div class="answer">Sim, o curso é 100% online com acesso a uma plataforma de aprendizagem moderna, onde pode estudar no seu ritmo, com suporte de instrutores por e‑mail e WhatsApp. A certificação prática, como o <strong>HUET</strong>, combate a incêndio real ou <strong>STCW</strong>, deve ser feita presencialmente em centros credenciados (pode fazê‑lo após concluir a base teórica).</div>
+        </div>
+        <div class="faq-item">
+            <h3>Qual é a duração do curso? <i class="fas fa-chevron-down"></i></h3>
+            <div class="answer">O curso tem <strong>153 horas</strong> de conteúdo distribuídas por 17 módulos. Pode estudar ao seu ritmo: a maioria dos alunos conclui em <strong>3‑6 meses</strong>, mas tem acesso vitalício, por isso não há pressa.</div>
+        </div>
+        <div class="faq-item">
+            <h3>O curso é teórico ou prático? <i class="fas fa-chevron-down"></i></h3>
+            <div class="answer">O curso é <strong>100% teórico</strong>, com conteúdo aprofundado e exemplos práticos do dia a dia offshore. Para a certificação prática (ex: extintor, HUET, STCW), deve procurar um centro credenciado após concluir a base teórica aqui.</div>
+        </div>
+    </div>
+</section>
+`;
+const HTML_DIF = `<section class="page-hero">
+    <div class="container">
+        <h1>Porquê escolher a <span>Oaken Oil</span>?</h1>
+        <p>Os diferenciais que fazem do nosso curso a melhor opção para a sua carreira offshore em Angola.</p>
+    </div>
+</section>
+
+<section class="diffs-page">
+    <div class="container">
+        <div class="diff-block">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div class="text">
+                <h3>Certificação Reconhecida Internacionalmente</h3>
+                <p>O nosso conteúdo está alinhado com as normas <strong>OPITO</strong>, <strong>IMO</strong>, <strong>SOLAS</strong> e <strong>NACE/AMPP</strong>, sendo valorizado pelas principais operadoras em Angola – TotalEnergies, Chevron, ExxonMobil e Sonangol. O certificado de conclusão é um diferencial no seu currículo.</p>
+            </div>
+        </div>
+        <div class="diff-block">
+            <div class="icon"><i class="fas fa-infinity"></i></div>
+            <div class="text">
+                <h3>Acesso Vitalício e Atualizações Gratuitas</h3>
+                <p>Pague uma única vez e tenha acesso a todo o conteúdo para sempre. Além disso, recebe todas as futuras atualizações do curso sem custos adicionais, garantindo que está sempre a par das últimas tecnologias e normas do setor.</p>
+            </div>
+        </div>
+        <div class="diff-block">
+            <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+            <div class="text">
+                <h3>Conteúdo Focado em Angola</h3>
+                <p>Estude com exemplos reais dos campos angolanos: <strong>Girassol</strong>, <strong>Dalia</strong>, <strong>Kaombo</strong>, <strong>Kizomba</strong>, e conheça a realidade das operadoras no <strong>Bloco 17</strong>, <strong>Bloco 15</strong> e <strong>Cabinda</strong>. Aprenda com a legislação local (ANPG, Decreto 34/11) e com casos práticos do dia a dia offshore.</p>
+            </div>
+        </div>
+        <div class="diff-block">
+            <div class="icon"><i class="fas fa-headset"></i></div>
+            <div class="text">
+                <h3>Suporte Pedagógico Especializado</h3>
+                <p>Tire dúvidas com instrutores experientes, com vasta experiência em operações offshore em Angola. Receba acompanhamento personalizado durante toda a sua formação, com feedback contínuo sobre o seu progresso.</p>
+            </div>
+        </div>
+        <div class="diff-block">
+            <div class="icon"><i class="fas fa-bolt"></i></div>
+            <div class="text">
+                <h3>Preparação para o Futuro do Setor</h3>
+                <p>O curso cobre desde as operações de convés (Roustabout) até à <strong>transição energética</strong> (eólica offshore, hidrogénio verde, CCS), preparando-o para os desafios de um setor em constante evolução. Formamos profissionais completos e adaptáveis.</p>
+            </div>
+        </div>
+        <div class="diff-block">
+            <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+            <div class="text">
+                <h3>Investimento Acessível e Flexível</h3>
+                <p>Preço promocional por tempo limitado, com condições especiais para pagamento em moeda local (Kz) e parcelamento até 12x sem juros. Acreditamos que a educação de qualidade deve estar ao alcance de todos os que querem crescer no offshore.</p>
+            </div>
+        </div>
+        <div class="diff-block">
+            <div class="icon"><i class="fas fa-users"></i></div>
+            <div class="text">
+                <h3>Comunidade de Ex‑Alunos Ativa</h3>
+                <p>Ao inscrever-se, passa a fazer parte de uma rede de profissionais que partilham oportunidades de emprego, experiências e dicas. O networking é uma das chaves para o sucesso no offshore, e a Oaken Oil promove essa ligação.</p>
+            </div>
+        </div>
+        <div class="diff-block">
+            <div class="icon"><i class="fas fa-clock"></i></div>
+            <div class="text">
+                <h3>Estudo no Seu Próprio Ritmo</h3>
+                <p>Plataforma online 24/7, com acesso a partir de qualquer dispositivo. Estude quando e onde quiser, sem pressas, e faça cada exame de módulo quando se sentir preparado. Perfeito para quem já trabalha ou tem outros compromissos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+`;
+const HTML_DEP = `<section class="page-hero">
+    <div class="container">
+        <h1>O que os nossos <span>alunos dizem</span></h1>
+        <p>Histórias reais de profissionais que transformaram as suas carreiras com o curso Oaken Oil.</p>
+    </div>
+</section>
+
+<section class="testimonials-page">
+    <div class="container">
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"O curso Oaken Oil é completo e muito prático. Aprendi desde as operações de convés até à manutenção de sistemas. Recomendo a todos os que querem entrar no offshore."</p>
+            <div class="author">João M.</div>
+            <div class="position">Roustabout, FPSO Girassol (TotalEnergies)</div>
+        </div>
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Graças ao Oaken Oil, consegui passar de Roustabout para Roughneck. Os módulos de segurança e operações são excelentes, com exemplos reais de Angola."</p>
+            <div class="author">Maria L.</div>
+            <div class="position">Roughneck, Bloco 17 (Chevron)</div>
+        </div>
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"O módulo de pintura e proteção anticorrosiva deu‑me a base para obter a certificação NACE/AMPP. O curso é uma referência em Angola."</p>
+            <div class="author">Pedro A.</div>
+            <div class="position">Inspetor de Revestimentos, Sonangol</div>
+        </div>
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Nunca tinha trabalhado no offshore, mas o curso deu‑me a confiança e os conhecimentos necessários. Já estou a trabalhar numa FPSO em Cabinda."</p>
+            <div class="author">Carlos F.</div>
+            <div class="position">Técnico de Manutenção, Bloco 0</div>
+        </div>
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"A parte de automação e Indústria 4.0 abriu‑me os olhos para o futuro do setor. Recomendo vivamente a quem quer evoluir na carreira."</p>
+            <div class="author">Ana S.</div>
+            <div class="position">Engenheira de Automação, ExxonMobil</div>
+        </div>
+        <div class="testi-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"O suporte dos instrutores é fantástico. Tirei todas as minhas dúvidas sobre o exame final e consegui aprovar com 85% de classificação."</p>
+            <div class="author">Paulo R.</div>
+            <div class="position">Rigger, FPSO Dalia</div>
+        </div>
+    </div>
+</section>
+`;
+const HTML_CERT = `<div class="certificate-page-bg cert-stack">
+  <div class="certificate-outer">
+    <div class="certificate" id="certificate">
+
+      <div class="cert-watermark"><span>OAKEN OIL&nbsp;&nbsp;&nbsp;OAKEN OIL&nbsp;&nbsp;&nbsp;OAKEN OIL<br>OAKEN OIL&nbsp;&nbsp;&nbsp;OAKEN OIL&nbsp;&nbsp;&nbsp;OAKEN OIL<br>OAKEN OIL&nbsp;&nbsp;&nbsp;OAKEN OIL&nbsp;&nbsp;&nbsp;OAKEN OIL</span></div>
+
+      <!-- Cantos ornamentais -->
+      <svg class="cert-corner tl" viewBox="0 0 46 46"><path d="M2 44 V14 Q2 2 14 2 H44" fill="none" stroke="#C9A227" stroke-width="1.6"/><circle cx="2" cy="44" r="2.4" fill="#C9A227"/><path d="M8 44 V20 Q8 8 20 8" fill="none" stroke="#0B1F3A" stroke-width="1"/></svg>
+      <svg class="cert-corner tr" viewBox="0 0 46 46"><path d="M2 44 V14 Q2 2 14 2 H44" fill="none" stroke="#C9A227" stroke-width="1.6"/><circle cx="2" cy="44" r="2.4" fill="#C9A227"/><path d="M8 44 V20 Q8 8 20 8" fill="none" stroke="#0B1F3A" stroke-width="1"/></svg>
+      <svg class="cert-corner bl" viewBox="0 0 46 46"><path d="M2 44 V14 Q2 2 14 2 H44" fill="none" stroke="#C9A227" stroke-width="1.6"/><circle cx="2" cy="44" r="2.4" fill="#C9A227"/><path d="M8 44 V20 Q8 8 20 8" fill="none" stroke="#0B1F3A" stroke-width="1"/></svg>
+      <svg class="cert-corner br" viewBox="0 0 46 46"><path d="M2 44 V14 Q2 2 14 2 H44" fill="none" stroke="#C9A227" stroke-width="1.6"/><circle cx="2" cy="44" r="2.4" fill="#C9A227"/><path d="M8 44 V20 Q8 8 20 8" fill="none" stroke="#0B1F3A" stroke-width="1"/></svg>
+
+      <div class="cert-content">
+        <!-- Emblema (medalha com louros) -->
+        <svg class="cert-emblem" viewBox="0 0 100 100">
+          <defs>
+            <linearGradient id="goldEmblem" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F0D372"/>
+              <stop offset="100%" stop-color="#9C7C1A"/>
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="30" fill="url(#goldEmblem)" stroke="#0B1F3A" stroke-width="2"/>
+          <circle cx="50" cy="50" r="24" fill="none" stroke="#FFFCF5" stroke-width="1" stroke-dasharray="2,3"/>
+          <path d="M50 34 L54 45 L66 45 L56 52 L60 64 L50 57 L40 64 L44 52 L34 45 L46 45 Z" fill="#FFFCF5"/>
+          <!-- ramos de louro -->
+          <path d="M16 55 Q10 40 20 20" fill="none" stroke="#9C7C1A" stroke-width="2"/>
+          <path d="M17 50 q-6 -2 -8 -8 M18 42 q-6 -1 -9 -6 M20 34 q-6 0 -9 -4 M22 27 q-5 1 -8 -2" fill="none" stroke="#C9A227" stroke-width="1.5"/>
+          <path d="M84 55 Q90 40 80 20" fill="none" stroke="#9C7C1A" stroke-width="2"/>
+          <path d="M83 50 q6 -2 8 -8 M82 42 q6 -1 9 -6 M80 34 q6 0 9 -4 M78 27 q5 1 8 -2" fill="none" stroke="#C9A227" stroke-width="1.5"/>
+        </svg>
+
+        <div class="cert-brand">OAKEN<span>OIL</span></div>
+        <div class="cert-tagline">Centro de Formação Técnica Profissional · Luanda, Angola</div>
+
+        <div class="cert-divider"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+        <div class="cert-title">Certificado de Conclusão</div>
+        <div class="cert-conferido">é conferido com aproveitamento a</div>
+
+        <div class="cert-name" id="certName">— aguardando —</div>
+
+        <div class="cert-details">
+          por ter concluído o curso <strong>"Técnico de Segurança e Operações Offshore"</strong>,
+          com carga horária total de <strong id="certHours">—</strong> horas, distribuídas por
+          <strong id="certModules">—</strong> módulos e <strong id="certLessons">—</strong> aulas,
+          tendo sido aprovado(a) em <strong id="certTotalQ">17</strong> de <strong id="certRatio">17</strong>
+          exames de módulo, com aproveitamento médio de <strong id="certScore">—</strong>,
+          superando em cada módulo a nota mínima de aprovação de 70%.
+        </div>
+
+        <div class="cert-footer-grid">
+          <div class="cert-sign-block">
+            <svg class="cert-sign-line" viewBox="0 0 190 30"><path d="M10 20 Q30 2 45 18 T80 15 Q95 5 110 18 T150 12 Q165 22 180 10" fill="none" stroke="#0B1F3A" stroke-width="1.4"/></svg>
+            <div class="cert-sign-caption">Direção Técnica<strong>OAKEN OIL</strong></div>
+          </div>
+
+          <svg class="cert-seal" viewBox="0 0 100 118">
+            <defs>
+              <linearGradient id="goldSeal" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#F0D372"/>
+                <stop offset="100%" stop-color="#9C7C1A"/>
+              </linearGradient>
+            </defs>
+            <path d="M30 62 L20 112 L50 98 L80 112 L70 62 Z" fill="#0B1F3A"/>
+            <circle cx="50" cy="46" r="38" fill="url(#goldSeal)" stroke="#0B1F3A" stroke-width="2.5"/>
+            <circle cx="50" cy="46" r="30" fill="none" stroke="#FFFCF5" stroke-width="1.2" stroke-dasharray="2,3"/>
+            <text x="50" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-weight="700" fill="#FFFCF5">APROVADO</text>
+            <path d="M36 48 L45 57 L65 35" fill="none" stroke="#FFFCF5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          <div class="cert-qr-block">
+            <div class="cert-qr-box" id="qrBox"></div>
+            <div class="cert-qr-caption">Escaneie para verificar a autenticidade</div>
+          </div>
+        </div>
+
+        <div class="cert-code-footer">
+          Código de verificação: <strong id="certCode">—</strong> &nbsp;·&nbsp; Data de emissão: <strong id="certDate">—</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="certificate-outer cert-appendix-outer">
+    <div class="certificate cert-appendix">
+      <div class="cert-appendix-header">
+        <div class="cert-brand" style="font-size:18px;">OAKEN<span>OIL</span></div>
+        <div class="cert-appendix-title">Programa Estudado — Anexo ao Certificado</div>
+        <div class="cert-appendix-sub">Titular: <strong id="apxName">—</strong> &nbsp;·&nbsp; Código: <strong id="apxCode">—</strong></div>
+      </div>
+      <div class="cert-appendix-grid" id="apxModuleGrid"></div>
+      <div class="cert-appendix-total">
+        Carga horária total: <strong id="apxHours">—</strong> horas &nbsp;·&nbsp;
+        <strong id="apxModules">—</strong> módulos &nbsp;·&nbsp;
+        <strong id="apxLessons">—</strong> aulas
+      </div>
+      <div class="cert-code-footer">
+        OAKEN<strong>OIL</strong> · Centro de Formação Técnica Profissional · Luanda, Angola
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="no-print" style="text-align:center;padding:0 20px 40px;">
+  <div id="setupArea" style="max-width:500px;margin:0 auto 24px;background:#fff;border:1px solid #E5E7EB;border-radius:10px;padding:24px;">
+    <p style="font-weight:700;color:#0B1F3A;margin-bottom:12px;">Digite o nome para o certificado:</p>
+    <input type="text" id="studentName" class="cert-input" placeholder="Ex: João Miguel" oninput="updateCert()">
+  </div>
+  <div class="btn-group">
+    <button class="btn primary" onclick="window.print()">🖨️ Imprimir / Guardar como PDF</button>
+    <button class="btn" onclick="nav('aluno')">📝 Voltar à Área do Aluno</button>
+  </div>
+  <p id="avisoNaoAprovado" style="display:none;color:#DC2626;font-size:14px;margin-top:16px;max-width:500px;margin-left:auto;margin-right:auto;">
+    ⚠️ Ainda não há um resultado de aprovação guardado neste navegador. Complete os 17 exames de módulo na <a onclick="nav('aluno')" style="color:#DC2626;font-weight:700;cursor:pointer;">Área do Aluno</a> primeiro — ou preencha o nome acima para pré-visualizar o modelo do certificado.</p>
+</div>
+`;
+const HTML_VERIFY = `<div class="verify-bg">
+  <div class="verify-card">
+    <svg class="verify-badge" viewBox="0 0 100 100">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4ADE80"/><stop offset="100%" stop-color="#16A34A"/></linearGradient></defs>
+      <circle cx="50" cy="50" r="42" fill="url(#g)"/>
+      <path d="M30 52 L44 66 L72 34" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="verify-status">✔ Certificado Autêntico</div>
+    <div class="verify-title">Verificação Oaken Oil</div>
+
+    <div style="font-size:14px;color:#64748B;">Este certificado foi emitido para</div>
+    <div class="verify-name" id="vNome">—</div>
+
+    <div class="verify-rows">
+      <div class="verify-row"><span>Curso</span><span>Técnico de Segurança e Operações Offshore</span></div>
+      <div class="verify-row"><span>Carga horária</span><span id="vHoras">—</span></div>
+      <div class="verify-row"><span>Módulos</span><span id="vModulos">—</span></div>
+      <div class="verify-row"><span>Aproveitamento médio</span><span id="vNota">—</span></div>
+      <div class="verify-row"><span>Módulos aprovados</span><span id="vAcertos">—</span></div>
+      <div class="verify-row"><span>Data de emissão</span><span id="vData">—</span></div>
+    </div>
+
+    <div class="verify-code">Código de verificação: <strong id="vCodigo">—</strong></div>
+    <div class="verify-footer-brand">OAKEN<strong>OIL</strong> · Centro de Formação Técnica Profissional</div>
+  </div>
+</div>`;
+
 </script>
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   OAKEN OIL — aplicação de página única
+   Rotas: #home #modulos #aluno #modulo-N #laboratorio #laboratorio-N
+          #certificado #verificar #faq #diferenciais #depoimentos
+   ═══════════════════════════════════════════════════════════════ */
 
+const TOTAL_MODULES = 17;
+const QUESTIONS_PER_EXAM = 30;
+const EXAM_DURATION_MIN = 50;
+const PASS_PCT = 70;
+
+const PROGRESS_KEY = 'oaken_modulos_progresso';
+const NAME_KEY = 'oaken_student_name';
+const CURRENT_EXAM_KEY = 'oaken_exame_atual';
+
+const app = document.getElementById('app');
+
+/* ───────── router ───────── */
+const ROTAS = ['home','modulos','aluno','laboratorio','certificado','verificar','faq','diferenciais','depoimentos'];
+let vistaActual = '';
+
+function nav(rota) { location.hash = rota; }
+function jump(id) {
+  setTimeout(() => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 80);
+}
+
+function marcarNav(rota) {
+  document.querySelectorAll('#mainNav a[data-r]').forEach(a => {
+    a.classList.toggle('active', a.dataset.r === rota);
+  });
+}
+
+function router() {
+  const h = (location.hash || '#home').slice(1);
+
+  if (h.startsWith('modulo-')) {
+    const n = parseInt(h.split('-')[1], 10);
+    return renderModulo(n);
+  }
+  if (h.startsWith('laboratorio-')) {
+    const n = parseInt(h.split('-')[1], 10);
+    return renderLab(n);
+  }
+  if (ROTAS.indexOf(h) !== -1) {
+    switch (h) {
+      case 'modulos':      return renderModulos();
+      case 'aluno':        return renderAluno();
+      case 'laboratorio':  return renderLab(null);
+      case 'certificado':  return renderCertificado();
+      case 'verificar':    return renderVerificar();
+      case 'faq':          return renderPagina('faq', HTML_FAQ, 'pg-faq');
+      case 'diferenciais': return renderPagina('diferenciais', HTML_DIF, 'pg-dif');
+      case 'depoimentos':  return renderPagina('depoimentos', HTML_DEP, 'pg-dep');
+      default:             return renderHome();
+    }
+  }
+  // âncora interna da landing (#modules, #pricing, #differentials, …)
+  if (vistaActual !== 'home') renderHome();
+  jump(h);
+}
+
+window.addEventListener('hashchange', router);
+
+/* ───────── vistas simples ───────── */
+function abrirVista(nome, html, scroll) {
+  fecharExameSilencioso();
+  fecharLabModal();
+  vistaActual = nome;
+  marcarNav(nome);
+  app.innerHTML = html;
+  document.getElementById('siteFooter').innerHTML = HTML_FOOTER;
+  if (scroll !== false) window.scrollTo(0, 0);
+}
+
+function renderHome() {
+  abrirVista('home', HTML_HOME);
+  app.querySelectorAll('.faq-item h4').forEach(item => {
+    item.addEventListener('click', function () { this.closest('.faq-item').classList.toggle('active'); });
+  });
+}
+
+function renderPagina(nome, html, cls) {
+  abrirVista(nome, '<div class="' + cls + '">' + html + '</div>');
+  if (nome === 'faq') {
+    app.querySelectorAll('.faq-item h3').forEach(item => {
+      item.addEventListener('click', function () { this.closest('.faq-item').classList.toggle('active'); });
+    });
+  }
+}
+
+/* ───────── #modulos (catálogo com acordeão) ───────── */
+function renderModulos() {
+  abrirVista('modulos', '<div class="pg-mod">' + HTML_MODULOS + '</div>');
+}
+
+function renderModuleBody(modId) {
+  const body = document.getElementById('mbody-' + modId);
+  if (!body || body.dataset.rendered) return;
+  const mod = COURSE_DATA.find(m => m.id === modId);
+  if (!mod) { body.innerHTML = '<p>Conteúdo em preparação.</p>'; body.dataset.rendered = '1'; return; }
+
+  let html = mod.lessons.map(lesson => `
+    <div class="lesson-block">
+      <div class="lesson-title">${lesson.title}</div>
+      <div class="lesson-content">${lesson.content}</div>
+    </div>
+  `).join('');
+
+  html += `
+    <div class="exam-cta">
+      <a onclick="event.stopPropagation();nav('modulo-${modId}')" style="cursor:pointer">Estudar e fazer a prova do Módulo ${modId} &rarr;</a>
+    </div>
+  `;
+
+  body.innerHTML = html;
+  body.dataset.rendered = '1';
+}
+
+function toggleModule(modId) {
+  const card = document.querySelector('.module-full[data-mod="' + modId + '"]');
+  const body = document.getElementById('mbody-' + modId);
+  if (!card || !body) return;
+  if (body.classList.contains('open')) {
+    body.classList.remove('open');
+    card.classList.remove('open');
+  } else {
+    renderModuleBody(modId);
+    body.classList.add('open');
+    card.classList.add('open');
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ÁREA DO ALUNO — progresso, módulos, aulas e exames
+   ═══════════════════════════════════════════════════════════════ */
+
+// DESBLOQUEIO TEMPORÁRIO: todos os módulos abertos para edição/revisão de conteúdo.
+// Para reativar o desbloqueio sequencial normal, trocar 'desbloqueado' de volta
+// para `m === 1 ? 'desbloqueado' : 'bloqueado'` nas duas linhas abaixo.
+function loadProgress() {
+  let p;
+  try { p = JSON.parse(localStorage.getItem(PROGRESS_KEY)); } catch (e) { p = null; }
+  if (!p || typeof p !== 'object') p = {};
+  for (let m = 1; m <= TOTAL_MODULES; m++) {
+    if (!p[m]) p[m] = { status: 'desbloqueado', melhorNota: null, tentativas: 0 };
+    if (p[m].status === 'bloqueado') p[m].status = 'desbloqueado';
+  }
+  return p;
+}
+function saveProgress(p) { localStorage.setItem(PROGRESS_KEY, JSON.stringify(p)); }
+
+function saveStudentName() {
+  const v = document.getElementById('studentNameInput').value.trim();
+  if (!v) { alert('Por favor, escreva o seu nome.'); return; }
+  localStorage.setItem(NAME_KEY, v);
+  alert('Nome guardado: ' + v);
+}
+
+function moduleTitle(id) {
+  const m = COURSE_DATA.find(x => x.id === id);
+  return m ? m.title : `Módulo ${id}`;
+}
+
+function totalAprovados() {
+  const p = loadProgress();
+  let n = 0;
+  for (let m = 1; m <= TOTAL_MODULES; m++) if (p[m].status === 'aprovado') n++;
+  return n;
+}
+
+/* ───────── #aluno — selector de módulos ───────── */
+function renderAluno() {
+  abrirVista('aluno', `
+  <div class="aluno-view">
+    <section class="page-hero" id="pageHero">
+        <div class="container">
+            <h1>Área do <span>Aluno</span></h1>
+            <p>Complete os 17 exames de módulo, um de cada vez. Cada prova tem 30 questões, 50 minutos e exige 70% de aproveitamento para desbloquear o módulo seguinte.</p>
+        </div>
+    </section>
+    <section class="student-bar" id="studentBar">
+        <div class="container row">
+            <input type="text" id="studentNameInput" placeholder="Digite o seu nome completo para começar" />
+            <button onclick="saveStudentName()">Guardar Nome</button>
+            <span class="hint">O seu progresso fica guardado neste dispositivo.</span>
+        </div>
+    </section>
+    <section class="main-section">
+      <div class="container">
+        <div id="moduleSelectorView">
+            <div class="progress-card">
+                <div class="pc-head"><h3><i class="fas fa-chart-line" style="color:var(--secondary)"></i> O seu progresso</h3><span class="pct" id="overallPct">0%</span></div>
+                <div class="prog-bar"><div class="prog-fill" id="overallBarFill"></div></div>
+                <div class="prog-stats">
+                    <div id="overallCount"><b>0</b> de <b>17</b> módulos aprovados</div>
+                    <div><b>340</b> aulas no curso</div>
+                    <div><b>153h</b> de carga horária</div>
+                    <div><b>70%</b> mínimo por exame</div>
+                </div>
+            </div>
+            <div class="modules-grid" id="modulesGrid"></div>
+            <div class="cert-cta" id="certCta">
+                <h2>🎓 Parabéns! Completou os 17 módulos.</h2>
+                <p>Já pode gerar o seu certificado de conclusão do curso Técnico de Segurança e Operações Offshore.</p>
+                <a id="certLink" onclick="irParaCertificado()" style="cursor:pointer">Gerar Certificado</a>
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>`);
+  renderModuleSelector();
+}
+
+function renderModuleSelector() {
+  const nameInput = document.getElementById('studentNameInput');
+  const savedName = localStorage.getItem(NAME_KEY);
+  if (nameInput && savedName) nameInput.value = savedName;
+
+  const progress = loadProgress();
+  const grid = document.getElementById('modulesGrid');
+  if (!grid) return;
+  grid.innerHTML = '';
+  let approvedCount = 0;
+
+  for (let m = 1; m <= TOTAL_MODULES; m++) {
+    const st = progress[m];
+    if (st.status === 'aprovado') approvedCount++;
+
+    const card = document.createElement('div');
+    card.className = `module-card ${st.status === 'desbloqueado' ? 'unlocked' : st.status}`;
+    card.id = `mcard-${m}`;
+
+    let badge, ic;
+    if (st.status === 'bloqueado') {
+      badge = `<span class="status-badge locked">🔒 Bloqueado</span>`;
+      ic = `<div class="mod-ic locked"><i class="fas fa-lock"></i></div>`;
+    } else if (st.status === 'desbloqueado') {
+      badge = `<span class="status-badge unlocked">🟠 Disponível</span>`;
+      ic = `<div class="mod-ic unlocked">${m}</div>`;
+    } else if (st.status === 'aprovado') {
+      badge = `<span class="status-badge approved">✅ Aprovado · ${st.melhorNota}%</span>`;
+      ic = `<div class="mod-ic approved"><i class="fas fa-check"></i></div>`;
+    } else if (st.status === 'reprovado') {
+      badge = `<span class="status-badge reprovado">❌ Reprovado · ${st.melhorNota}%</span>`;
+      ic = `<div class="mod-ic reprovado">${m}</div>`;
+    }
+
+    const mod = COURSE_DATA.find(x => x.id === m);
+    card.onclick = st.status === 'bloqueado' ? null : () => nav('modulo-' + m);
+    card.innerHTML = `
+      ${ic}
+      <div class="mod-info">
+        <h3>Módulo ${m} — ${moduleTitle(m)}</h3>
+        <span>${mod ? mod.lessons.length : 0} aulas${badge ? ' · ' : ''}${badge}</span>
+      </div>
+    `;
+    grid.appendChild(card);
+  }
+
+  const pct = Math.round(approvedCount / TOTAL_MODULES * 100);
+  document.getElementById('overallPct').textContent = pct + '%';
+  document.getElementById('overallCount').innerHTML = `<b>${approvedCount}</b> de <b>${TOTAL_MODULES}</b> módulos aprovados`;
+  document.getElementById('overallBarFill').style.width = pct + '%';
+
+  const certCta = document.getElementById('certCta');
+  if (approvedCount === TOTAL_MODULES) certCta.classList.add('show');
+  else certCta.classList.remove('show');
+}
+
+function irParaCertificado() {
+  localStorage.setItem('oaken_exame_aprovado', 'true');
+  localStorage.setItem('oaken_exame_nota', '100');
+  localStorage.setItem('oaken_exame_acertos', String(TOTAL_MODULES));
+  localStorage.setItem('oaken_exame_total', String(TOTAL_MODULES));
+  nav('certificado');
+}
+
+/* ───────── #modulo-N — hero, abas, aulas e sidebar ───────── */
+let currentModuleId = null;
+let currentLessonIdx = 0;
+
+function renderModulo(m) {
+  const mod = COURSE_DATA.find(x => x.id === m);
+  if (!mod) return renderAluno();
+  const progress = loadProgress();
+  if (progress[m] && progress[m].status === 'bloqueado') {
+    alert('Este módulo ainda está bloqueado. Aprove primeiro o módulo anterior.');
+    return nav('aluno');
+  }
+  currentModuleId = m;
+  currentLessonIdx = 0;
+
+  abrirVista('modulo-' + m, `
+  <div class="aluno-view">
+    <section class="mod-hero" id="modHero">
+        <div class="container-sm mh-in">
+            <div class="mh-txt">
+                <div class="mod-phase"><i class="fas fa-layer-group"></i> <span id="modHeroPhase">Módulo ${m} de ${TOTAL_MODULES}</span></div>
+                <h1 id="modHeroTitle">Módulo ${m} — <span>${mod.title}</span></h1>
+                <p id="modHeroDesc">Estude todas as aulas deste módulo e depois faça o exame para desbloquear o seguinte.</p>
+                <div class="mod-meta" id="modMeta">
+                    <span class="meta-tag"><i class="fas fa-book-open"></i> ${mod.lessons.length} Aulas</span>
+                    <span class="meta-tag"><i class="fas fa-clock"></i> ${mod.hours || 9} Horas</span>
+                    <span class="meta-tag"><i class="fas fa-percent"></i> 70% para aprovar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mod-progress" id="modProgressBar">
+        <div class="container-sm mp-in">
+            <span class="mp-lbl">Progresso do módulo:</span><div class="dots" id="dots"></div>
+        </div>
+    </section>
+    <section class="main-section">
+      <div class="container">
+        <div id="moduloView">
+            <div class="tabs" id="tabs"></div>
+            <div class="mod-layout">
+                <div id="lessonArea"></div>
+                <div class="sidebar">
+                    <div class="sc"><h4><i class="fas fa-list" style="color:var(--secondary)"></i> Aulas</h4><div id="slinks"></div></div>
+                    <div class="sc"><h4><i class="fas fa-flask" style="color:var(--secondary)"></i> Laboratório</h4>
+                        <p style="font-size:12px;color:var(--gray);margin-bottom:10px">Simuladores e software profissional usados neste módulo.</p>
+                        <div class="sbtn grey" onclick="nav('laboratorio-${m}')"><i class="fas fa-microchip"></i> Abrir laboratório</div>
+                    </div>
+                    <div class="sc"><h4><i class="fas fa-trophy" style="color:var(--secondary)"></i> Avaliação</h4>
+                        <p style="font-size:12px;color:var(--gray);margin-bottom:10px">Conclua as aulas e faça o exame do módulo para desbloquear o seguinte.</p>
+                        <div class="sbtn orange" onclick="startExam(${m})">Fazer exame</div>
+                    </div>
+                    <div class="sc"><h4><i class="fas fa-route" style="color:var(--secondary)"></i> Navegação</h4>
+                        <div id="navButtons">
+                          ${m > 1 ? `<div class="sbtn grey" onclick="nav('modulo-${m - 1}')"><i class="fas fa-arrow-left"></i> Módulo ${m - 1}</div>` : ''}
+                          <div class="sbtn grey" onclick="nav('aluno')"><i class="fas fa-table-cells"></i> Todos os módulos</div>
+                          ${m < TOTAL_MODULES ? `<div class="sbtn orange" onclick="nav('modulo-${m + 1}')">Módulo ${m + 1} <i class="fas fa-arrow-right"></i></div>` : ''}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>`);
+
+  const tabs = document.getElementById('tabs'), dots = document.getElementById('dots'), sl = document.getElementById('slinks');
+  mod.lessons.forEach((lesson, i) => {
+    const t = document.createElement('button'); t.className = 'tb'; t.id = 'tb' + i;
+    t.textContent = (i + 1) + '. ' + lesson.title.replace(/^\d+\.\d+\s*/, '').split(' ').slice(0, 3).join(' ') + '…';
+    t.onclick = () => goToLesson(i); tabs.appendChild(t);
+    const d = document.createElement('div'); d.className = 'dot'; d.id = 'dt' + i; d.textContent = i + 1;
+    d.onclick = () => goToLesson(i); dots.appendChild(d);
+    const s = document.createElement('div'); s.className = 'sl'; s.id = 'sl' + i;
+    s.innerHTML = `<span class="sn">${i + 1}</span>${lesson.title}`; s.onclick = () => goToLesson(i); sl.appendChild(s);
+  });
+
+  goToLesson(0, true);
+}
+
+function goToLesson(i, primeira) {
+  const mod = COURSE_DATA.find(x => x.id === currentModuleId);
+  if (!mod) return;
+  const lesson = mod.lessons[i];
+  currentLessonIdx = i;
+  document.getElementById('lessonArea').innerHTML = `
+    <div class="lesson">
+      <div class="ltitle">${lesson.title}</div>
+      <div class="lsub"><span><i class="fas fa-book"></i> Módulo ${currentModuleId} · ${mod.title}</span></div>
+      <div class="lesson-content">${lesson.content}</div>
+      <div class="lnav">
+        <button class="nb np" onclick="goToLesson(${i - 1})" ${i === 0 ? 'disabled' : ''}><i class="fas fa-arrow-left"></i> Anterior</button>
+        ${i < mod.lessons.length - 1
+          ? `<button class="nb nn" onclick="goToLesson(${i + 1})">Próxima aula <i class="fas fa-arrow-right"></i></button>`
+          : `<button class="nb nn" onclick="startExam(${currentModuleId})"><i class="fas fa-trophy"></i> Fazer exame do módulo</button>`}
+      </div>
+    </div>
+  `;
+  mod.lessons.forEach((_, j) => {
+    document.getElementById('tb' + j).classList.toggle('active', j === i);
+    document.getElementById('dt' + j).className = 'dot ' + (j < i ? 'done' : (j === i ? 'active' : 'todo'));
+    document.getElementById('sl' + j).classList.toggle('act', j === i);
+  });
+  if (primeira) window.scrollTo(0, 0);
+  else window.scrollTo({ top: document.getElementById('modProgressBar').offsetTop, behavior: 'smooth' });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   EXAME — 30 questões sorteadas, opções embaralhadas, 50 min, 70%
+   ═══════════════════════════════════════════════════════════════ */
+let currentQuestions = [];
+let examTimerInterval = null;
+let examTimedOut = false;
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function buildExamQuestions(moduleId) {
+  const pool = MODULE_QUESTIONS[moduleId] || [];
+  const picked = shuffle(pool).slice(0, Math.min(QUESTIONS_PER_EXAM, pool.length));
+  return picked.map(q => {
+    const optionOrder = shuffle(q.options.map((_, i) => i));
+    const options = optionOrder.map(i => q.options[i]);
+    const answer = optionOrder.indexOf(q.answer);
+    return { id: q.id, text: q.text, options, answer };
+  });
+}
+
+function examStateKey(moduleId) { return `${CURRENT_EXAM_KEY}_${moduleId}`; }
+function getSavedExamState(moduleId) {
+  try { return JSON.parse(localStorage.getItem(examStateKey(moduleId))); } catch (e) { return null; }
+}
+function saveExamState(moduleId, state) { localStorage.setItem(examStateKey(moduleId), JSON.stringify(state)); }
+function clearExamState(moduleId) { localStorage.removeItem(examStateKey(moduleId)); }
+
+function startExam(moduleId) {
+  const progress = loadProgress();
+  if (progress[moduleId].status === 'bloqueado') { alert('Este módulo ainda está bloqueado.'); return; }
+
+  currentModuleId = moduleId;
+
+  const saved = getSavedExamState(moduleId);
+  if (saved && saved.questions && saved.questions.length) {
+    currentQuestions = saved.questions;
+  } else {
+    currentQuestions = buildExamQuestions(moduleId);
+    saveExamState(moduleId, { questions: currentQuestions, deadline: Date.now() + EXAM_DURATION_MIN * 60 * 1000, answers: {} });
+  }
+
+  document.getElementById('examView').classList.add('show');
+  document.getElementById('examModNum').textContent = moduleId;
+  document.getElementById('examModTitle').textContent = moduleTitle(moduleId);
+  document.getElementById('resultArea').innerHTML = '';
+
+  renderExamQuestions();
+  restoreSavedAnswers();
+  startExamTimer();
+}
+
+function backToModules() {
+  stopExamTimer();
+  document.getElementById('examView').classList.remove('show');
+  nav('aluno');
+  if (vistaActual === 'aluno') renderAluno();
+}
+
+function fecharExameSilencioso() {
+  stopExamTimer();
+  const v = document.getElementById('examView');
+  if (v) v.classList.remove('show');
+}
+
+function renderExamQuestions() {
+  const container = document.getElementById('questionsContainer');
+  container.innerHTML = '';
+  currentQuestions.forEach((q, idx) => {
+    const div = document.createElement('div');
+    div.className = 'question-card';
+    div.id = `q${q.id}`;
+    let optionsHTML = q.options.map((opt, oi) => `<label class="option" onclick="selOpt(this)"><input type="radio" name="q${q.id}" value="${oi}" onchange="onAnswerChange(${q.id})"> ${opt}</label>`).join('');
+    div.innerHTML = `<div class="question-text">${idx + 1}. ${q.text}</div><div class="options">${optionsHTML}</div><div class="feedback-answer" id="fb${q.id}"></div>`;
+    container.appendChild(div);
+  });
+  updateProgress();
+}
+
+function restoreSavedAnswers() {
+  const state = getSavedExamState(currentModuleId);
+  if (!state || !state.answers) return;
+  Object.keys(state.answers).forEach(qid => {
+    const val = state.answers[qid];
+    const el = document.querySelector(`input[name="q${qid}"][value="${val}"]`);
+    if (el) { el.checked = true; el.closest('.option').classList.add('sel'); }
+  });
+  updateProgress();
+}
+
+function selOpt(el) {
+  el.closest('.options').querySelectorAll('.option').forEach(o => o.classList.remove('sel'));
+  el.classList.add('sel');
+}
+
+function onAnswerChange(qid) {
+  const state = getSavedExamState(currentModuleId) || { questions: currentQuestions, deadline: Date.now() + EXAM_DURATION_MIN * 60 * 1000, answers: {} };
+  const selected = document.querySelector(`input[name="q${qid}"]:checked`);
+  if (selected) state.answers[qid] = Number(selected.value);
+  saveExamState(currentModuleId, state);
+  updateProgress();
+}
+
+function updateProgress() {
+  let answered = 0;
+  currentQuestions.forEach(q => {
+    if (document.querySelector(`input[name="q${q.id}"]:checked`)) answered++;
+  });
+  document.getElementById('answeredCount').textContent = answered;
+  document.getElementById('progressFill').style.width = (answered / currentQuestions.length * 100) + '%';
+}
+
+function lockExam() {
+  document.querySelectorAll('#questionsContainer input[type="radio"]').forEach(el => el.disabled = true);
+  document.querySelectorAll('#questionsContainer .option').forEach(el => { el.onclick = null; el.style.cursor = 'default'; });
+}
+
+function submitExam(forced) {
+  let unanswered = 0;
+  currentQuestions.forEach(q => { if (!document.querySelector(`input[name="q${q.id}"]:checked`)) unanswered++; });
+  if (!forced && unanswered > 0) { alert(`${unanswered} questão(ões) sem resposta. Complete o exame antes de corrigir.`); return; }
+
+  stopExamTimer();
+  lockExam();
+
+  let correct = 0;
+  currentQuestions.forEach(q => {
+    const selectedEl = document.querySelector(`input[name="q${q.id}"]:checked`);
+    const selected = selectedEl ? Number(selectedEl.value) : -1;
+    const card = document.getElementById(`q${q.id}`);
+    const fb = document.getElementById(`fb${q.id}`);
+    if (selected === q.answer) {
+      correct++;
+      card.classList.add('correct');
+      fb.textContent = '✅ Correto!'; fb.className = 'feedback-answer correct';
+    } else {
+      card.classList.add('wrong');
+      fb.textContent = `❌ Resposta correta: ${q.options[q.answer]}`; fb.className = 'feedback-answer wrong';
+    }
+  });
+
+  const pct = Math.round((correct / currentQuestions.length) * 1000) / 10;
+  const approved = !examTimedOut && pct >= PASS_PCT;
+
+  const progress = loadProgress();
+  progress[currentModuleId].tentativas++;
+  if (progress[currentModuleId].melhorNota === null || pct > progress[currentModuleId].melhorNota) {
+    progress[currentModuleId].melhorNota = pct;
+  }
+  if (approved) {
+    progress[currentModuleId].status = 'aprovado';
+    const next = currentModuleId + 1;
+    if (next <= TOTAL_MODULES && progress[next].status === 'bloqueado') {
+      progress[next].status = 'desbloqueado';
+    }
+  } else {
+    progress[currentModuleId].status = 'reprovado';
+  }
+  saveProgress(progress);
+  clearExamState(currentModuleId);
+
+  document.getElementById('resultArea').innerHTML = `
+    ${examTimedOut ? `<p style="text-align:center;color:#DC2626;font-weight:700;margin-bottom:16px;">⏱️ Tempo esgotado (50 min). O exame foi corrigido e marcado como reprovado automaticamente.</p>` : ''}
+    <div class="result-box ${approved ? 'approved' : 'failed'}">
+      <div class="result-label">${approved ? '🎉 APROVADO' : '😞 REPROVADO'}</div>
+      <div class="result-score">${pct.toFixed(1)}%</div>
+      <p>${approved ? `Parabéns! Atingiu a nota mínima de ${PASS_PCT}%. O próximo módulo foi desbloqueado.` : `Não atingiu os ${PASS_PCT}%. Reveja o módulo e tente novamente — as questões erradas estão marcadas acima.`}</p>
+      <p><strong>Acertos: ${correct}/${currentQuestions.length}</strong></p>
+      <div class="btn-group"><button class="btn" onclick="backToModules()">← Voltar aos módulos</button></div>
+    </div>
+  `;
+  const ra = document.getElementById('resultArea');
+  ra.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function finalizarProva() {
+  let unanswered = 0;
+  currentQuestions.forEach(q => { if (!document.querySelector(`input[name="q${q.id}"]:checked`)) unanswered++; });
+  const msg = unanswered > 0
+    ? `Tem ${unanswered} questão(ões) sem resposta — elas vão contar como erradas. Quer mesmo finalizar a prova agora?`
+    : 'Finalizar e corrigir a prova agora?';
+  if (!confirm(msg)) return;
+  examTimedOut = false;
+  submitExam(true);
+}
+
+function formatCountdown(ms) {
+  const totalSec = Math.max(0, Math.floor(ms / 1000));
+  const m = String(Math.floor(totalSec / 60)).padStart(2, '0');
+  const s = String(totalSec % 60).padStart(2, '0');
+  return `${m}:${s}`;
+}
+
+function stopExamTimer() { if (examTimerInterval) { clearInterval(examTimerInterval); examTimerInterval = null; } }
+
+function startExamTimer() {
+  examTimedOut = false;
+  const state = getSavedExamState(currentModuleId);
+  let deadline = state && state.deadline ? state.deadline : Date.now() + EXAM_DURATION_MIN * 60 * 1000;
+
+  function tick() {
+    const remaining = deadline - Date.now();
+    const timerEl = document.getElementById('examTimer');
+    if (remaining <= 0) {
+      if (timerEl) timerEl.textContent = '00:00';
+      stopExamTimer();
+      examTimedOut = true;
+      submitExam(true);
+      return;
+    }
+    if (timerEl) timerEl.textContent = formatCountdown(remaining);
+  }
+  tick();
+  examTimerInterval = setInterval(tick, 1000);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LABORATÓRIO VIRTUAL — #laboratorio e #laboratorio-N
+   ═══════════════════════════════════════════════════════════════ */
+const modalOverlay = document.getElementById('modalOverlay');
+const modalBody = document.getElementById('modalBody');
+const modalClose = document.getElementById('modalClose');
+const modalPrev = document.getElementById('modalPrev');
+const modalNext = document.getElementById('modalNext');
+let currentModuloId = 1;
+
+function renderLab(modId) {
+  abrirVista(modId ? 'laboratorio-' + modId : 'laboratorio', `
+  <div class="lab-view">
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content reveal">
+                <h1>Laboratório Virtual <br><span>Oaken Oil</span></h1>
+                <p>Aprenda utilizando simuladores gratuitos e ferramentas profissionais usadas na indústria do petróleo e gás.</p>
+                <div class="hero-actions">
+                    <a class="btn-primary" onclick="jump('biblioteca')" style="cursor:pointer"><i class="fas fa-flask"></i> Explorar Laboratórios</a>
+                    <a class="btn-secondary" onclick="jump('lab-modulos')" style="cursor:pointer"><i class="fas fa-arrow-right"></i> Ver Módulos</a>
+                </div>
+            </div>
+            <div class="hero-image reveal"><div class="illustration"><i class="fas fa-oil-well"></i></div></div>
+        </div>
+    </section>
+
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal"><span class="stat-number">60+</span><span class="stat-label">Simuladores</span></div>
+                <div class="stat-item reveal"><span class="stat-number">17</span><span class="stat-label">Laboratórios</span></div>
+                <div class="stat-item reveal"><span class="stat-number">100%</span><span class="stat-label">Gratuitos / Open Source</span></div>
+                <div class="stat-item reveal"><span class="stat-number"><i class="fab fa-windows"></i> + <i class="fas fa-globe"></i></span><span class="stat-label">Windows + Online</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="modulos" id="lab-modulos">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Laboratórios por <span>Módulo</span></h2>
+                <p>17 módulos com simuladores práticos para cada área do offshore</p>
+            </div>
+            <div class="modulos-grid" id="modulosGrid"></div>
+        </div>
+    </section>
+
+    <section class="biblioteca" id="biblioteca">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Biblioteca de <span>Simuladores</span></h2>
+                <p>Ferramentas open-source e gratuitas usadas na indústria</p>
+            </div>
+            <div class="filtros" id="filtros">
+                <button class="filtro-btn active" data-filter="todos">Todos</button>
+                <button class="filtro-btn" data-filter="segurança">Segurança</button>
+                <button class="filtro-btn" data-filter="perfuração">Perfuração</button>
+                <button class="filtro-btn" data-filter="produção">Produção</button>
+                <button class="filtro-btn" data-filter="automação">Automação</button>
+                <button class="filtro-btn" data-filter="geologia">Geologia</button>
+                <button class="filtro-btn" data-filter="logística">Logística</button>
+                <button class="filtro-btn" data-filter="energia">Energia</button>
+                <button class="filtro-btn" data-filter="mecânica">Mecânica</button>
+                <button class="filtro-btn" data-filter="elétrica">Elétrica</button>
+            </div>
+            <div class="simuladores-grid" id="simuladoresGrid"></div>
+        </div>
+    </section>
+
+    <section class="como-funciona" id="como-funciona">
+        <div class="container">
+            <div class="section-header reveal"><h2>Como <span>Funciona</span></h2><p>Seu caminho para o aprendizado prático</p></div>
+            <div class="steps">
+                <div class="step reveal"><span class="step-num">1</span><span class="step-text">Baixe o simulador</span><span class="step-arrow"><i class="fas fa-arrow-right"></i></span></div>
+                <div class="step reveal"><span class="step-num">2</span><span class="step-text">Estude a aula</span><span class="step-arrow"><i class="fas fa-arrow-right"></i></span></div>
+                <div class="step reveal"><span class="step-num">3</span><span class="step-text">Realize o exercício</span><span class="step-arrow"><i class="fas fa-arrow-right"></i></span></div>
+                <div class="step reveal"><span class="step-num">4</span><span class="step-text">Responda ao questionário</span><span class="step-arrow"><i class="fas fa-arrow-right"></i></span></div>
+                <div class="step reveal"><span class="step-num">5</span><span class="step-text">Conclua o laboratório</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="beneficios" id="beneficios">
+        <div class="container">
+            <div class="section-header reveal"><h2>Benefícios</h2><p>Por que treinar no Laboratório Virtual Oaken Oil</p></div>
+            <div class="benef-grid">
+                <div class="benef-item reveal"><i class="fas fa-laptop-code"></i><h4>Aprendizado prático</h4><p>Mãos à obra com ferramentas reais</p></div>
+                <div class="benef-item reveal"><i class="fas fa-gem"></i><h4>Simuladores gratuitos</h4><p>100% open-source sem custos</p></div>
+                <div class="benef-item reveal"><i class="fas fa-industry"></i><h4>Experiência industrial</h4><p>Próxima da realidade offshore</p></div>
+                <div class="benef-item reveal"><i class="fas fa-users"></i><h4>Preparação para entrevistas</h4><p>Destaque-se no mercado</p></div>
+                <div class="benef-item reveal"><i class="fas fa-chart-line"></i><h4>Desenvolvimento profissional</h4><p>Evolua sua carreira</p></div>
+            </div>
+        </div>
+    </section>
+  </div>`);
+
+  const modulosGrid = document.getElementById('modulosGrid');
+  modulosData.forEach(m => {
+    const card = document.createElement('div');
+    card.className = 'modulo-card reveal';
+    card.dataset.id = m.id;
+    card.innerHTML = `
+        <div class="modulo-num">Módulo ${String(m.id).padStart(2, '0')}</div>
+        <h3>${m.nome}</h3>
+        <p>${m.desc}</p>
+        <div class="modulo-footer">
+            <span class="modulo-sim"><i class="fas fa-microchip"></i> ${m.simuladores.length} simuladores</span>
+            <button class="btn-modulo" data-id="${m.id}">Abrir Laboratório</button>
+        </div>
+    `;
+    modulosGrid.appendChild(card);
+  });
+
+  renderSimuladores(simuladoresGerais);
+
+  const filtroBtns = document.querySelectorAll('.lab-view .filtro-btn');
+  filtroBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      filtroBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      const filtro = this.dataset.filter;
+      if (filtro === 'todos') renderSimuladores(simuladoresGerais);
+      else renderSimuladores(simuladoresGerais.filter(s => s.categoria === filtro));
+    });
+  });
+
+  observeReveals();
+
+  if (modId && modulosData.some(m => m.id === modId)) {
+    const card = modulosGrid.querySelector(`.modulo-card[data-id="${modId}"]`);
+    if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    openModal(modId);
+  }
+}
+
+function renderSimuladores(lista) {
+  const simGrid = document.getElementById('simuladoresGrid');
+  if (!simGrid) return;
+  simGrid.innerHTML = '';
+  lista.forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'sim-card reveal';
+    card.dataset.categoria = s.categoria;
+    card.innerHTML = `
+        <h4>${s.nome}</h4>
+        <div class="sim-categoria">${s.categoria.charAt(0).toUpperCase() + s.categoria.slice(1)}</div>
+        <span class="sim-plataforma"><i class="fas fa-desktop"></i> ${s.plataforma}</span>
+        <div class="sim-desc">${s.desc}</div>
+        <button class="btn-sim">Ver detalhes</button>
+    `;
+    simGrid.appendChild(card);
+  });
+  observeReveals();
+}
+
+function observeReveals() {
+  const reveals = document.querySelectorAll('.lab-view .reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.15, rootMargin: '0px 0px -20px 0px' });
+  reveals.forEach(el => observer.observe(el));
+}
+
+function openModal(id) {
+    currentModuloId = id;
+    const mod = modulosData.find(m => m.id === id);
+    if (!mod) return;
+
+    let html = `
+        <h2>${mod.nome}</h2>
+        <div class="modulo-sub">
+            <span>Módulo ${String(mod.id).padStart(2,'0')}</span>
+            <span class="badge-diff"><i class="fas fa-signal"></i> ${mod.dificuldade}</span>
+            <span class="badge-diff"><i class="far fa-clock"></i> ${mod.tempo.total}</span>
+        </div>
+    `;
+
+    html += `<div class="modal-section"><h3><i class="fas fa-bullseye"></i> Objetivo do Laboratório</h3><p>${mod.objetivo}</p></div>`;
+
+    html += `<div class="modal-section"><h3><i class="fas fa-microchip"></i> Simuladores do Módulo</h3>
+            ${mod.simuladores.length === 0 ? '<p>Este módulo não possui simuladores específicos, mas utilize os recursos extras para complementar o aprendizado.</p>' : ''}`;
+    mod.simuladores.forEach(sim => {
+        html += `
+            <div class="sim-item">
+                <div class="sim-header">
+                    <h4>${sim.nome}</h4>
+                    <span class="nivel">${sim.nivel}</span>
+                </div>
+                <p style="margin:6px 0;">${sim.desc}</p>
+                <div class="sim-meta">
+                    <span><i class="fas fa-cogs"></i> ${sim.paraQue}</span>
+                    <span><i class="fas fa-users"></i> ${sim.quemUsa}</span>
+                    <span><i class="fas fa-check-circle"></i> ${sim.vantagens}</span>
+                    <span><i class="fas fa-exclamation-triangle"></i> ${sim.limitacoes}</span>
+                    <span><i class="fab fa-linux"></i> ${sim.SO}</span>
+                    <span><i class="fas fa-balance-scale"></i> ${sim.licenca}</span>
+                </div>
+                <div class="btn-group">
+                    <a href="${sim.site}" target="_blank" class="btn-sm primary"><i class="fas fa-globe"></i> Site Oficial</a>
+                    <button class="btn-sm"><i class="fas fa-download"></i> Baixar</button>
+                    <button class="btn-sm"><i class="fas fa-book-open"></i> Tutorial</button>
+                </div>
+            </div>
+        `;
+    });
+    html += `</div>`;
+
+    html += `<div class="modal-section"><h3><i class="fas fa-list-check"></i> O que o aluno será capaz de fazer</h3><ul>${mod.habilidades.map(h => `<li>✔ ${h}</li>`).join('')}</ul></div>`;
+    html += `<div class="modal-section"><h3><i class="fas fa-dumbbell"></i> Exercício Prático</h3><p>${mod.exercicio}</p></div>`;
+    html += `<div class="modal-section"><h3><i class="fas fa-folder-open"></i> Estudo de Caso</h3><p>${mod.estudoCaso}</p></div>`;
+    html += `<div class="modal-section"><h3><i class="fas fa-check-double"></i> Checklist</h3><div class="checklist-grid">${mod.checklist.map(item => `<label><input type="checkbox"> ${item}</label>`).join('')}</div></div>`;
+    html += `<div class="modal-section"><h3><i class="fas fa-award"></i> Competências Desenvolvidas</h3><div class="badge-container">${mod.competencias.map(c => `<span class="badge primary">${c}</span>`).join('')}</div></div>`;
+    html += `<div class="modal-section"><h3><i class="fas fa-briefcase"></i> Carreiras</h3><div class="carreiras-grid">${mod.carreiras.map(c => `<span class="badge">${c}</span>`).join('')}</div></div>`;
+
+    const diffMap = { 'Muito Fácil': 20, 'Fácil': 40, 'Intermediário': 60, 'Avançado': 80, 'Especialista': 100 };
+    const diffVal = diffMap[mod.dificuldade] || 50;
+    html += `<div class="modal-section"><h3><i class="fas fa-chart-simple"></i> Grau de Dificuldade</h3><div class="progress-bar"><div class="fill" style="width:${diffVal}%;"></div></div><span style="color:var(--text-light);">${mod.dificuldade}</span></div>`;
+
+    html += `<div class="modal-section"><h3><i class="fas fa-hourglass-half"></i> Tempo Estimado</h3>
+        <ul>
+            <li>Instalação: ${mod.tempo.instalacao}</li>
+            <li>Estudo: ${mod.tempo.estudo}</li>
+            <li>Exercício: ${mod.tempo.exercicio}</li>
+            <li>Questionário: ${mod.tempo.questionario}</li>
+            <li><strong>Total: ${mod.tempo.total}</strong></li>
+        </ul>
+    </div>`;
+
+    html += `<div class="modal-section"><h3><i class="fas fa-paperclip"></i> Recursos Extras</h3>
+        <div class="btn-group">
+            ${mod.recursos.manual ? `<a href="${mod.recursos.manual}" target="_blank" class="btn-sm primary"><i class="fas fa-file-pdf"></i> Manual</a>` : ''}
+            ${mod.recursos.video ? `<a href="${mod.recursos.video}" target="_blank" class="btn-sm"><i class="fab fa-youtube"></i> Vídeo</a>` : ''}
+            ${mod.recursos.github ? `<a href="${mod.recursos.github}" target="_blank" class="btn-sm"><i class="fab fa-github"></i> GitHub</a>` : ''}
+            <button class="btn-sm"><i class="fas fa-question-circle"></i> Questionário</button>
+            <button class="btn-sm"><i class="fas fa-file-alt"></i> Estudo de Caso</button>
+        </div>
+    </div>`;
+
+    html += `<div class="modal-section"><h3><i class="fas fa-graduation-cap"></i> Conhecimentos Necessários</h3><p>${mod.preRequisitos}</p></div>`;
+
+    const nextMod = modulosData.find(m => m.id === mod.proximo);
+    html += `<div class="modal-section"><h3><i class="fas fa-arrow-circle-right"></i> Próximo Laboratório</h3><p><strong>${nextMod ? nextMod.nome : 'Concluído'}</strong></p></div>`;
+
+    html += `<div class="modal-section"><div class="btn-group">
+        <button class="btn-sm primary"><i class="fas fa-play"></i> Abrir Simulador</button>
+        <button class="btn-sm"><i class="fas fa-download"></i> Baixar</button>
+        <button class="btn-sm"><i class="fas fa-book"></i> Tutorial</button>
+        <button class="btn-sm"><i class="fas fa-file-alt"></i> Exercício</button>
+    </div></div>`;
+
+    modalBody.innerHTML = html;
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+function fecharLabModal() {
+  if (modalOverlay) modalOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', function (e) { if (e.target === this) closeModal(); });
+
+function navigateModulo(delta) {
+  const ids = modulosData.map(m => m.id).sort((a, b) => a - b);
+  let idx = ids.indexOf(currentModuloId);
+  idx = (idx + delta + ids.length) % ids.length;
+  openModal(ids[idx]);
+}
+modalPrev.addEventListener('click', () => navigateModulo(-1));
+modalNext.addEventListener('click', () => navigateModulo(1));
+
+document.addEventListener('click', function (e) {
+  const btn = e.target.closest('.btn-modulo');
+  if (btn) {
+    e.preventDefault();
+    const id = parseInt(btn.dataset.id, 10);
+    if (id) openModal(id);
+  }
+});
+
+/* ═══════════════════════════════════════════════════════════════
+   CERTIFICADO — só depois dos 17 módulos aprovados
+   ═══════════════════════════════════════════════════════════════ */
+let CURRENT = { nome: '', nota: '', acertos: '', total: String(TOTAL_MODULES), codigo: '', data: '' };
+
+function renderCertificado() {
+  if (totalAprovados() < TOTAL_MODULES) {
+    abrirVista('certificado', `
+      <div class="cert-locked">
+        <i class="fas fa-lock"></i>
+        <h2>Certificado ainda bloqueado</h2>
+        <p>O certificado só fica disponível depois de aprovar os <strong>${TOTAL_MODULES} módulos</strong> do curso.
+        Já aprovou <strong>${totalAprovados()}</strong>.</p>
+        <button onclick="nav('aluno')"><i class="fas fa-table-cells"></i> Ir para a Área do Aluno</button>
+      </div>`);
+    return;
+  }
+  abrirVista('certificado', '<div class="cert-view">' + HTML_CERT + '</div>');
+  initCert();
+}
+
+function formatDate() {
+  const d = new Date();
+  const meses = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  return `${d.getDate()} de ${meses[d.getMonth()]} de ${d.getFullYear()}`;
+}
+function formatDateShort() {
+  const d = new Date();
+  const pad = n => String(n).padStart(2, '0');
+  return `${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()}`;
+}
+function randomCode() { return 'OAKEN-' + Math.random().toString(36).substr(2, 9).toUpperCase(); }
+
+// URL de verificação: mesma página, com os dados na query string e a rota #verificar.
+function verifyBaseUrl() {
+  return location.href.split('#')[0].split('?')[0];
+}
+function buildVerifyUrl() {
+  const s = getCourseStats();
+  const p = new URLSearchParams({
+    codigo: CURRENT.codigo,
+    nome: CURRENT.nome || 'Aluno Oaken Oil',
+    nota: CURRENT.nota || '0',
+    acertos: CURRENT.acertos || '0',
+    total: CURRENT.total || String(TOTAL_MODULES),
+    data: CURRENT.data,
+    horas: s.hours,
+    modulos: s.modules
+  });
+  return verifyBaseUrl() + '?' + p.toString() + '#verificar';
+}
+
+function renderAppendix() {
+  const s = getCourseStats();
+  const syllabus = getCourseSyllabus();
+  document.getElementById('certHours').textContent = s.hours;
+  document.getElementById('certModules').textContent = s.modules;
+  document.getElementById('certLessons').textContent = s.lessons;
+  document.getElementById('apxHours').textContent = s.hours;
+  document.getElementById('apxModules').textContent = s.modules;
+  document.getElementById('apxLessons').textContent = s.lessons;
+
+  document.getElementById('apxModuleGrid').innerHTML = syllabus.map(m => `
+    <div class="cert-appendix-row">
+      <span class="apx-id">${m.id}.</span>
+      <span class="apx-title">${m.title}</span>
+      <span class="apx-hours">${m.hours}h</span>
+    </div>
+  `).join('');
+}
+
+function renderQR() {
+  const box = document.getElementById('qrBox');
+  if (!box) return;
+  const url = buildVerifyUrl();
+  if (window.QRCode) {
+    box.innerHTML = '';
+    const canvas = document.createElement('canvas');
+    box.appendChild(canvas);
+    QRCode.toCanvas(canvas, url, { width: 150, margin: 0, color: { dark: '#0B1F3A', light: '#FFFFFF' } }, function (err) {
+      if (err) box.innerHTML = '<div style="font-size:9px;color:#94A3B8;padding:4px;">' + CURRENT.codigo + '</div>';
+    });
+  } else {
+    box.innerHTML = '<div style="font-size:9px;color:#94A3B8;padding:4px;word-break:break-all;">' + CURRENT.codigo + '</div>';
+  }
+}
+
+function updateCert() {
+  const input = document.getElementById('studentName');
+  if (!input) return;
+  const name = input.value.trim();
+  CURRENT.nome = name;
+  document.getElementById('certName').textContent = name ? name : '— aguardando —';
+  document.getElementById('apxName').textContent = name ? name : '— aguardando —';
+  localStorage.setItem(NAME_KEY, name);
+  renderQR();
+}
+
+function initCert() {
+  let nota = localStorage.getItem('oaken_exame_nota');
+  let acertos = localStorage.getItem('oaken_exame_acertos');
+  let total = localStorage.getItem('oaken_exame_total');
+
+  document.getElementById('certDate').textContent = formatDate();
+  CURRENT.data = formatDateShort();
+
+  let code = localStorage.getItem('oaken_cert_code');
+  if (!code) { code = randomCode(); localStorage.setItem('oaken_cert_code', code); }
+  const fullCode = code + '-' + new Date().getFullYear();
+  document.getElementById('certCode').textContent = fullCode;
+  document.getElementById('apxCode').textContent = fullCode;
+  CURRENT.codigo = fullCode;
+
+  renderAppendix();
+
+  if (nota && acertos && total) {
+    document.getElementById('certScore').textContent = nota + '%';
+    document.getElementById('certRatio').textContent = acertos;
+    document.getElementById('certTotalQ').textContent = total;
+    CURRENT.nota = nota; CURRENT.acertos = acertos; CURRENT.total = total;
+  } else {
+    document.getElementById('certScore').textContent = '—%';
+    document.getElementById('certRatio').textContent = '—';
+    const aviso = document.getElementById('avisoNaoAprovado');
+    if (aviso) aviso.style.display = 'block';
+  }
+
+  const savedName = localStorage.getItem(NAME_KEY);
+  if (savedName) document.getElementById('studentName').value = savedName;
+  updateCert();
+  document.getElementById('studentName').addEventListener('input', updateCert);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   VERIFICAÇÃO DO CERTIFICADO — lê a query string do QR
+   ═══════════════════════════════════════════════════════════════ */
+function renderVerificar() {
+  abrirVista('verificar', '<div class="verify-view">' + HTML_VERIFY + '</div>');
+  const p = new URLSearchParams(window.location.search);
+  if (!p.get('codigo')) {
+    const st = app.querySelector('.verify-status');
+    st.textContent = 'Verificação de Certificado';
+    st.style.color = '#64748B';
+    app.querySelector('.verify-badge circle').setAttribute('fill', '#CBD5E1');
+    app.querySelector('.verify-title').textContent = 'Nenhum certificado para verificar';
+    app.querySelector('.verify-name').previousElementSibling.textContent =
+      'Para verificar um certificado, digitalize o código QR impresso no próprio certificado.';
+  }
+  document.getElementById('vNome').textContent = p.get('nome') || '—';
+  document.getElementById('vNota').textContent = (p.get('nota') || '—') + '%';
+  document.getElementById('vAcertos').textContent = (p.get('acertos') || '—') + ' / ' + (p.get('total') || '—');
+  document.getElementById('vData').textContent = p.get('data') || '—';
+  document.getElementById('vCodigo').textContent = p.get('codigo') || '—';
+  document.getElementById('vHoras').textContent = p.get('horas') ? p.get('horas') + ' horas' : '—';
+  document.getElementById('vModulos').textContent = p.get('modulos') || '—';
+}
+
+/* ───────── arranque ───────── */
+router();
+
+</script>
 </body>
 </html>

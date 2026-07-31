@@ -33,20 +33,32 @@ Depois de passar no módulo 17, o aluno vai para o certificado.
 
 ## Estrutura
 
+O curso é uma **aplicação de página única**: todo o site vive em `index.html` e a
+navegação é feita por rotas de hash, sem recarregar a página.
+
 ```
-├── index.html            # Página principal do curso
-├── modulos.html          # Programa completo dos 17 módulos
-├── exame.html            # Área do Aluno — os 17 exames
-├── certificado.html      # Certificado + anexo com o programa estudado
-├── verificar.html        # Página de verificação (destino do QR code)
-├── diferenciais.html
-├── depoimentos.html
-├── faq.html
+├── index.html            # Todo o site: landing, módulos, área do aluno, aulas,
+│                         # laboratório, certificado e verificação
 ├── modulos-data.js       # Conteúdo das aulas (dados do curso)
 ├── exame-questions.js    # Banco de 655 questões, indexado por módulo
 ├── course-meta.js        # Estatísticas do curso (horas, módulos, aulas)
-└── style.css             # Estilos partilhados pelo certificado/verificação
+├── laboratorio-data.js   # Módulos e simuladores do Laboratório Virtual
+└── style.css             # CSS original do certificado/verificação (referência)
 ```
+
+### Rotas
+
+| Rota | Vista |
+|---|---|
+| `#home` | Landing do curso |
+| `#modulos` | Programa completo dos 17 módulos (acordeão) |
+| `#aluno` | Área do Aluno — progresso e lista de módulos |
+| `#modulo-N` | Aulas do módulo N + sidebar (laboratório e exame) |
+| `#laboratorio` | Laboratório Virtual |
+| `#laboratorio-N` | Laboratório Virtual já aberto no módulo N |
+| `#certificado` | Certificado + anexo (só com os 17 módulos aprovados) |
+| `#verificar` | Verificação do certificado (destino do QR code) |
+| `#faq` `#diferenciais` `#depoimentos` | Páginas de apoio |
 
 ## Detalhes técnicos
 
@@ -54,7 +66,7 @@ Depois de passar no módulo 17, o aluno vai para o certificado.
 
 O progresso do aluno (módulos aprovados, prova em curso, tempo restante, nome no certificado) fica guardado em `localStorage`, com o prefixo `oaken_`. Isso mantém tudo simples, mas tem uma consequência que vale saber: **o progresso é por dispositivo e navegador** — quem trocar de telemóvel ou limpar os dados do browser recomeça do zero. Para um curso pago a sério, o passo seguinte seria mover esse estado para um backend com contas de utilizador.
 
-O certificado gera um código de verificação e um QR code (via `qrcode.js` por CDN) que aponta para `verificar.html` com os dados na query string. Serve para conferência visual rápida — não é uma verificação criptográfica contra um registo central.
+O certificado gera um código de verificação e um QR code (via `qrcode.js` por CDN) que aponta para a própria página com os dados na query string e a rota `#verificar`. Serve para conferência visual rápida — não é uma verificação criptográfica contra um registo central.
 
 ## Correr localmente
 
