@@ -425,10 +425,15 @@ const COURSES = [
     "title": "Técnico Administrativo",
     "description": "Administração de empresas com fiscalidade angolana: rotinas administrativas, documentação, arquivo e obrigações junto da AGT.",
     "icon": "fa-solid fa-folder-open",
-    "status": "building",
-    "url": null,
-    "stats": null,
-    "pitch": "Material didáctico já produzido. A página do curso está a ser construída.",
+    "status": "available",
+    "url": "administrativo/index.html",
+    "stats": {
+      "modules": 16,
+      "lessons": 352,
+      "hours": 352,
+      "questions": 0
+    },
+    "pitch": "16 dos 18 módulos já com aulas na plataforma. Os módulos 1 e 2 e os exames de módulo estão em produção.",
     "cover": "https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=1200&q=80",
     "accent": "#4E8FD1",
     "programa": [
