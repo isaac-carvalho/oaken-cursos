@@ -59,7 +59,7 @@
   <div class="foot-sub">Centro de Formação Técnica Profissional · Luanda, Angola</div>
 </footer>
 
-<script src="courses.js"></script>
+<script src="courses.js?v=202608010420"></script>
 <script>
 (function () {
   'use strict';
@@ -110,11 +110,30 @@
 
   /* ---------- Cartões ---------- */
   function cardMedia(course) {
-    if (course.status === 'available' && course.poster) {
-      return '<img class="course-card-img" src="' + esc(course.poster) +
-             '" alt="' + esc(course.title) + '" loading="lazy">';
+    // Todos os cursos mostram capa. Os que ainda nao estao disponiveis levam
+    // um veu por cima, para a foto nao sugerir que ja se pode comprar.
+    var img = course.cover || (course.status === 'available' ? course.poster : null);
+    if (img) {
+      return '<div class="course-card-media' + (course.status === 'available' ? '' : ' is-dimmed') + '">' +
+               '<img class="course-card-img" src="' + esc(img) +
+               '" alt="' + esc(course.title) + '" loading="lazy">' +
+               '<span class="course-card-badge"><i class="' + esc(course.icon) + '"></i></span>' +
+             '</div>';
     }
     return '<div class="course-card-icon"><i class="' + esc(course.icon) + '"></i></div>';
+  }
+
+  // Programa do curso: os titulos dos modulos, escondidos atras de um <details>
+  // para nao encher o cartao mas ficarem acessiveis a quem quer ver o que aprende.
+  function cardPrograma(course) {
+    if (!course.programa || !course.programa.length) return '';
+    var itens = course.programa.map(function (m) {
+      return '<li><span class="pm-n">' + esc(m.n) + '</span>' + esc(m.titulo) + '</li>';
+    }).join('');
+    return '<details class="course-programa">' +
+             '<summary>Ver o programa dos ' + course.programa.length + ' modulos</summary>' +
+             '<ol class="pm-list">' + itens + '</ol>' +
+           '</details>';
   }
 
   function cardMeta(course) {
@@ -143,6 +162,7 @@
     html += '<p>' + esc(course.description) + '</p>';
     if (course.pitch) html += '<div class="course-card-pitch">' + esc(course.pitch) + '</div>';
     html += cardMeta(course);
+    html += cardPrograma(course);
     html += '</div>';
     return html;
   }
@@ -185,6 +205,14 @@
                  COURSES.filter(function (c) { return c.status === 'available'; })[0];
   if (featured) renderBanner(featured);
   renderAreas();
+
+  // Nos cursos disponiveis o cartao e um <a>. Sem isto, abrir o programa
+  // navegava para o curso em vez de expandir.
+  document.getElementById('areas').addEventListener('click', function (e) {
+    var sum = e.target.closest('.course-programa summary');
+    if (sum) { e.preventDefault(); e.stopPropagation();
+      var d = sum.parentElement; d.open = !d.open; }
+  });
 })();
 </script>
 </body>
