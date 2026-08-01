@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do Curso ao Negócio — Bónus do curso Técnico Administrativo | Oaken Cursos</title>
+<meta name="description" content="Bónus do curso Técnico Administrativo: guia de 10 capítulos, 10 checklists, kit de ficheiros editáveis e plano de 90 dias para abrir uma empresa de serviços administrativos em Angola.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=202608010500">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   "Do Curso ao Negócio" — página do bónus.
+   Herda o shell do portal (nav.topnav + footer de style.css) para
+   ficar coerente com o resto do site. O acento próprio é o TEAL
+   (--accent do design system), porque este é um produto distinto
+   dos cursos (que usam o laranja) — mas continua dentro da paleta.
+   Todas as classes levam o prefixo dcn- para não colidirem com
+   as do catálogo.
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  --dcn: #00A3A1;          /* teal — acento do bónus */
+  --dcn-soft: #0E3B3A;
+  --dcn-ink: #0B1F3A;      /* navy da marca */
+  --dcn-orange: #FF6B00;
+}
+
+.dcn-wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* ── HERO ─────────────────────────────────────────────────── */
+.dcn-hero {
+  position: relative; overflow: hidden;
+  padding: 72px 0 64px;
+  background:
+    radial-gradient(1200px 420px at 15% -10%, rgba(0,163,161,.22) 0%, transparent 70%),
+    linear-gradient(160deg, var(--dcn-ink) 0%, #0B0E14 70%);
+  border-bottom: 1px solid #17222F;
+}
+.dcn-kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
+  color: #4FD8D6; background: rgba(0,163,161,.12);
+  border: 1px solid rgba(0,163,161,.45);
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 20px;
+}
+.dcn-hero h1 {
+  font-size: clamp(30px, 5vw, 50px); font-weight: 900; color: #fff;
+  line-height: 1.12; margin-bottom: 16px; letter-spacing: -.5px;
+}
+.dcn-hero h1 em { font-style: normal; color: #4FD8D6; }
+.dcn-lead { font-size: 17px; color: #B9C6D6; line-height: 1.75; max-width: 680px; margin-bottom: 26px; }
+.dcn-lead strong { color: #E8EEF6; }
+
+.dcn-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+.dcn-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12.5px; font-weight: 600; color: #CBD8E6;
+  background: rgba(255,255,255,.05); border: 1px solid #22303F;
+  padding: 8px 14px; border-radius: 8px;
+}
+.dcn-pill i { color: var(--dcn); }
+
+.dcn-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.dcn-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 28px; border-radius: 8px; text-decoration: none;
+  font-weight: 700; font-size: 15px; transition: .2s; border: 1.5px solid transparent;
+}
+.dcn-btn.primary { background: var(--dcn); color: #04231F; }
+.dcn-btn.primary:hover { background: #00b8b6; transform: translateY(-2px); }
+.dcn-btn.ghost { background: rgba(255,255,255,.06); color: #fff; border-color: #33465A; }
+.dcn-btn.ghost:hover { background: rgba(255,255,255,.12); }
+
+/* ── SECÇÕES ──────────────────────────────────────────────── */
+.dcn-sec { padding: 58px 0; }
+.dcn-sec.alt { background: #0D121A; border-block: 1px solid #161D28; }
+.dcn-h2 {
+  font-size: clamp(22px, 3.2vw, 30px); font-weight: 800; color: #fff;
+  margin-bottom: 12px; line-height: 1.25;
+}
+.dcn-sub { font-size: 14.5px; color: #8FA0B4; line-height: 1.75; max-width: 720px; margin-bottom: 30px; }
+.dcn-eyebrow {
+  font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--dcn); margin-bottom: 10px;
+}
+
+/* ── PROBLEMA ─────────────────────────────────────────────── */
+.dcn-prob { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.dcn-prob-card {
+  background: #121822; border: 1px solid #1F2937; border-radius: 12px; padding: 22px;
+  border-top: 3px solid var(--dcn-orange);
+}
+.dcn-prob-card i { font-size: 20px; color: var(--dcn-orange); margin-bottom: 12px; display: block; }
+.dcn-prob-card h3 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.dcn-prob-card p { font-size: 13.5px; color: #8FA0B4; line-height: 1.7; }
+
+/* ── CAPÍTULOS ────────────────────────────────────────────── */
+.dcn-chaps { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.dcn-chap {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: #121822; border: 1px solid #1F2937; border-radius: 10px; padding: 16px 18px;
+  transition: border-color .2s;
+}
+.dcn-chap:hover { border-color: rgba(0,163,161,.5); }
+.dcn-chap-n {
+  flex: none; width: 30px; height: 30px; border-radius: 8px;
+  display: grid; place-items: center;
+  background: rgba(0,163,161,.14); color: #4FD8D6;
+  font-size: 13px; font-weight: 800; font-variant-numeric: tabular-nums;
+}
+.dcn-chap h3 { font-size: 14.5px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+.dcn-chap p { font-size: 12.5px; color: #7E90A5; line-height: 1.6; }
+
+/* ── LISTAS (checklists / kit) ────────────────────────────── */
+.dcn-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px; }
+.dcn-panel {
+  background: #121822; border: 1px solid #1F2937; border-radius: 14px; padding: 26px;
+}
+.dcn-panel > h3 {
+  font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 6px;
+  display: flex; align-items: center; gap: 10px;
+}
+.dcn-panel > h3 i { color: var(--dcn); }
+.dcn-panel .dcn-panel-note { font-size: 12.5px; color: #6F8095; margin-bottom: 16px; }
+.dcn-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.dcn-list li {
+  display: flex; gap: 10px; align-items: flex-start;
+  font-size: 13.5px; color: #B4C2D2; line-height: 1.55;
+}
+.dcn-list li i { color: var(--dcn); font-size: 12px; margin-top: 4px; flex: none; }
+.dcn-list li span.d { display: block; font-size: 12px; color: #6F8095; margin-top: 2px; }
+
+/* ── LINHA DO TEMPO (formalização) ────────────────────────── */
+.dcn-tl { position: relative; padding-left: 34px; }
+.dcn-tl::before {
+  content: ''; position: absolute; left: 11px; top: 6px; bottom: 6px; width: 2px;
+  background: linear-gradient(180deg, var(--dcn) 0%, rgba(0,163,161,.15) 100%);
+}
+.dcn-tl-item { position: relative; padding-bottom: 26px; }
+.dcn-tl-item:last-child { padding-bottom: 0; }
+.dcn-tl-item::before {
+  content: ''; position: absolute; left: -28px; top: 4px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #0B0E14; border: 2.5px solid var(--dcn);
+}
+.dcn-tl-step {
+  font-size: 10.5px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase;
+  color: var(--dcn); margin-bottom: 5px;
+}
+.dcn-tl-item h3 { font-size: 15.5px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.dcn-tl-item p { font-size: 13.5px; color: #8FA0B4; line-height: 1.65; }
+.dcn-cost {
+  display: inline-block; margin-top: 8px;
+  font-size: 12.5px; font-weight: 700; color: #E8EEF6;
+  background: rgba(255,255,255,.06); border: 1px solid #2A3746;
+  padding: 4px 12px; border-radius: 6px;
+}
+
+/* ── TABELA DE PREÇOS ─────────────────────────────────────── */
+.dcn-table-wrap {
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  border: 1px solid #1F2937; border-radius: 12px; background: #121822;
+}
+.dcn-table { width: 100%; border-collapse: collapse; min-width: 620px; }
+.dcn-table th {
+  text-align: left; font-size: 11px; font-weight: 800; letter-spacing: 1.2px;
+  text-transform: uppercase; color: #4FD8D6; background: rgba(0,163,161,.08);
+  padding: 14px 18px; border-bottom: 1px solid #22303F; white-space: nowrap;
+}
+.dcn-table td {
+  padding: 15px 18px; font-size: 13.5px; color: #B4C2D2;
+  border-bottom: 1px solid #19212C; vertical-align: top;
+}
+.dcn-table tr:last-child td { border-bottom: none; }
+.dcn-table td:first-child { color: #fff; font-weight: 600; }
+.dcn-table td.kz { color: #4FD8D6; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* ── AVISO / DISCLAIMER ───────────────────────────────────── */
+.dcn-warn {
+  display: flex; gap: 14px; align-items: flex-start; margin-top: 18px;
+  background: rgba(255,107,0,.07); border: 1px solid rgba(255,107,0,.35);
+  border-radius: 10px; padding: 16px 18px;
+}
+.dcn-warn i { color: var(--dcn-orange); font-size: 17px; margin-top: 2px; flex: none; }
+.dcn-warn p { font-size: 13px; color: #C2CEDC; line-height: 1.7; }
+.dcn-warn strong { color: #FFB27A; }
+
+/* ── PLANO 90 DIAS ────────────────────────────────────────── */
+.dcn-90 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.dcn-90-card {
+  background: #121822; border: 1px solid #1F2937; border-radius: 14px; padding: 22px;
+  border-top: 3px solid var(--dcn);
+}
+.dcn-90-card h3 { font-size: 15px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.dcn-90-card .m { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--dcn); margin-bottom: 12px; }
+.dcn-week { display: flex; gap: 11px; align-items: flex-start; padding: 8px 0; border-top: 1px solid #19212C; }
+.dcn-week:first-of-type { border-top: none; }
+.dcn-week b {
+  flex: none; font-size: 10.5px; font-weight: 800; color: #7E90A5;
+  background: rgba(255,255,255,.05); border-radius: 5px; padding: 3px 8px; margin-top: 1px;
+  white-space: nowrap;
+}
+.dcn-week p { font-size: 13px; color: #B4C2D2; line-height: 1.55; }
+
+/* ── PARA QUEM É / NÃO É ──────────────────────────────────── */
+.dcn-fit { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+.dcn-fit-card { background: #121822; border: 1px solid #1F2937; border-radius: 14px; padding: 26px; }
+.dcn-fit-card.yes { border-left: 3px solid #22C55E; }
+.dcn-fit-card.no { border-left: 3px solid #64748B; }
+.dcn-fit-card h3 { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.dcn-fit-card.yes h3 i { color: #4ADE80; }
+.dcn-fit-card.no h3 i { color: #94A3B8; }
+.dcn-fit-card li i { color: inherit; }
+.dcn-fit-card.yes .dcn-list li i { color: #4ADE80; }
+.dcn-fit-card.no .dcn-list li i { color: #64748B; }
+
+/* ── CTA ──────────────────────────────────────────────────── */
+.dcn-cta {
+  text-align: center; padding: 66px 24px;
+  background:
+    radial-gradient(800px 320px at 50% 0%, rgba(0,163,161,.20) 0%, transparent 72%),
+    linear-gradient(160deg, var(--dcn-ink) 0%, #0B0E14 78%);
+  border-top: 1px solid #17222F;
+}
+.dcn-cta h2 { font-size: clamp(24px, 4vw, 34px); font-weight: 900; color: #fff; margin-bottom: 14px; }
+.dcn-cta p { font-size: 15px; color: #A9B8C9; line-height: 1.75; max-width: 620px; margin: 0 auto 28px; }
+.dcn-cta .dcn-actions { justify-content: center; }
+.dcn-cta-note { font-size: 12.5px; color: #64748B; margin-top: 20px; }
+
+/* ── ESTADO DO PRODUTO ────────────────────────────────────── */
+.dcn-status {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: rgba(255,255,255,.04); border: 1px solid #22303F;
+  border-radius: 10px; padding: 14px 18px; margin-top: 24px; max-width: 680px;
+}
+.dcn-status i { color: #4FD8D6; margin-top: 3px; flex: none; }
+.dcn-status p { font-size: 13px; color: #93A4B8; line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .dcn-wrap { padding: 0 16px; }
+  .dcn-hero { padding: 48px 0 44px; }
+  .dcn-sec { padding: 42px 0; }
+  .dcn-panel, .dcn-fit-card { padding: 20px; }
+  .dcn-actions .dcn-btn { flex: 1 1 100%; justify-content: center; }
+  .dcn-tl { padding-left: 28px; }
+  .dcn-tl::before { left: 8px; }
+  .dcn-tl-item::before { left: -25px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="logo" href="index.html">
+    <span class="logo-name">OAKEN</span>
+    <span class="logo-sub">CURSOS<br>FORMAÇÃO TÉCNICA</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Catálogo</a>
+    <a href="index.html#catalogo">Técnico Administrativo</a>
+    <a href="#bonus" class="active">Do Curso ao Negócio</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══════════════════════════════════════════════ -->
+<header class="dcn-hero" id="bonus">
+  <div class="dcn-wrap">
+    <span class="dcn-kicker"><i class="fa-solid fa-gift"></i> Bónus do curso Técnico Administrativo</span>
+    <h1>Do Curso ao Negócio<br><em>— o que fazer com o diploma na mão</em></h1>
+    <p class="dcn-lead">
+      O guia prático para abrir a sua própria empresa de <strong>serviços administrativos em Angola</strong>.
+      O curso ensina a competência; este bónus ensina o percurso para <strong>ganhar dinheiro com ela</strong>:
+      escolher o nicho, formalizar a empresa, definir preços e chegar aos primeiros clientes.
+    </p>
+
+    <div class="dcn-pills">
+      <span class="dcn-pill"><i class="fa-solid fa-book-open"></i> Guia de 10 capítulos</span>
+      <span class="dcn-pill"><i class="fa-solid fa-list-check"></i> 10 checklists para imprimir</span>
+      <span class="dcn-pill"><i class="fa-solid fa-folder-open"></i> Kit de 7 ficheiros editáveis</span>
+      <span class="dcn-pill"><i class="fa-regular fa-calendar-days"></i> Plano de acção de 90 dias</span>
+      <span class="dcn-pill"><i class="fa-solid fa-people-group"></i> Comunidade de ex-alunos</span>
+    </div>
+
+    <div class="dcn-actions">
+      <a class="dcn-btn primary" href="https://wa.me/351913388794" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> Falar connosco pelo WhatsApp
+      </a>
+      <a class="dcn-btn ghost" href="#incluido"><i class="fa-solid fa-arrow-down"></i> Ver o que está incluído</a>
+    </div>
+
+    <div class="dcn-status">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>
+        Este bónus acompanha o curso <strong style="color:#CBD8E6">Técnico Administrativo</strong>,
+        que está em desenvolvimento. O programa do bónus está definido e é o que descrevemos aqui.
+        Contacte-nos pelo WhatsApp para saber quando abrem as inscrições.
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ O PROBLEMA ═════════════════════════════════════════ -->
+<section class="dcn-sec">
+  <div class="dcn-wrap">
+    <div class="dcn-eyebrow">O problema</div>
+    <h2 class="dcn-h2">Saber administrar não é o mesmo que saber vender o serviço</h2>
+    <p class="dcn-sub">
+      Quem acaba um curso técnico fica com a competência — e fica parado. Não é falta de conhecimento:
+      é falta de um percurso. O que se segue são os obstáculos concretos que o material do bónus foi
+      escrito para atacar, tal como aparecem no módulo de Empreendedorismo do próprio curso.
+    </p>
+
+    <div class="dcn-prob">
+      <div class="dcn-prob-card">
+        <i class="fa-solid fa-signs-post"></i>
+        <h3>Não sabe por onde começar</h3>
+        <p>Tem o diploma, mas não sabe que serviço vender primeiro, a quem, nem por que preço. A base é ampla demais para se transformar sozinha numa oferta.</p>
+      </div>
+      <div class="dcn-prob-card">
+        <i class="fa-solid fa-stamp"></i>
+        <h3>A burocracia trava</h3>
+        <p>Procedimentos complexos e demorados são apontados no curso como um dos principais desafios de empreender em Angola. Sem a sequência certa, perde-se tempo e dinheiro.</p>
+      </div>
+      <div class="dcn-prob-card">
+        <i class="fa-solid fa-hand-holding-dollar"></i>
+        <h3>Financiamento escasso</h3>
+        <p>Escassez de crédito e de capital de risco. Sem saber que apoios existem e como se candidatar, o projecto morre antes de arrancar.</p>
+      </div>
+      <div class="dcn-prob-card">
+        <i class="fa-solid fa-user-slash"></i>
+        <h3>Cai-se na informalidade</h3>
+        <p>Trabalhar sem empresa registada fecha portas: não se emite factura, não se concorre a contratos, não se cresce. E a concorrência desleal do sector informal aperta a margem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ O QUE ESTÁ INCLUÍDO ════════════════════════════════ -->
+<section class="dcn-sec alt" id="incluido">
+  <div class="dcn-wrap">
+    <div class="dcn-eyebrow">O que está incluído</div>
+    <h2 class="dcn-h2">O guia — 10 capítulos, do nicho ao crescimento</h2>
+    <p class="dcn-sub">
+      Cada capítulo trata de uma decisão concreta que quem abre uma empresa de serviços
+      administrativos tem mesmo de tomar, pela ordem em que aparece na prática.
+    </p>
+
+    <div class="dcn-chaps">
+      <div class="dcn-chap"><span class="dcn-chap-n">1</span><div><h3>Escolher o nicho</h3><p>Que serviços administrativos têm mais procura em Angola.</p></div></div>
+      <div class="dcn-chap"><span class="dcn-chap-n">2</span><div><h3>Formalizar o negócio</h3><p>Passo a passo para abrir empresa: nome, registo, NIF, licenças.</p></div></div>
+      <div class="dcn-chap"><span class="dcn-chap-n">3</span><div><h3>Plano de negócio simplificado</h3><p>Modelo pronto para preencher, com três cenários.</p></div></div>
+      <div class="dcn-chap"><span class="dcn-chap-n">4</span><div><h3>Financiamento inicial</h3><p>Onde buscar capital: FAE, microcrédito, poupança, investidor.</p></div></div>
+      <div class="dcn-chap"><span class="dcn-chap-n">5</span><div><h3>Montar o escritório</h3><p>O que comprar, o que alugar e o que fazer a partir de casa.</p></div></div>
+      <div class="dcn-chap"><span class="dcn-chap-n">6</span><div><h3>Precificar serviços</h3><p>Tabela de preços construída a partir do mercado e dos seus custos.</p></div></div>
+      <div class="dcn-chap"><span class="dcn-chap-n">7</span><div><h3>Encontrar os primeiros clientes</h3><p>Prospecção, networking e marketing digital.</p></div></div>
+      <div class="dcn-chap"><span class="dcn-chap-n">8</span><div><h3>Gerir o primeiro contrato</h3><p>O que deve constar de um contrato de prestação de serviços.</p></div></div>
+      <div class="dcn-chap"><span class="dcn-chap-n">9</span><div><h3>Organização fiscal</h3><p>Como emitir facturas, declarar impostos e gerir o IRS.</p></div></div>
+      <div class="dcn-chap"><span class="dcn-chap-n">10</span><div><h3>Crescer o negócio</h3><p>Como contratar, delegar e expandir.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CHECKLISTS + KIT ═══════════════════════════════════ -->
+<section class="dcn-sec">
+  <div class="dcn-wrap">
+    <div class="dcn-cols">
+
+      <div class="dcn-panel">
+        <h3><i class="fa-solid fa-list-check"></i> 10 checklists para imprimir</h3>
+        <p class="dcn-panel-note">Uma folha por tarefa. Risca à medida que avança.</p>
+        <ul class="dcn-list">
+          <li><i class="fa-regular fa-square-check"></i> Abertura de empresa</li>
+          <li><i class="fa-regular fa-square-check"></i> Formalidades legais</li>
+          <li><i class="fa-regular fa-square-check"></i> Prospecção de clientes</li>
+          <li><i class="fa-regular fa-square-check"></i> Elaboração de orçamento</li>
+          <li><i class="fa-regular fa-square-check"></i> Fecho de vendas</li>
+          <li><i class="fa-regular fa-square-check"></i> Gestão de contratos</li>
+          <li><i class="fa-regular fa-square-check"></i> Organização fiscal mensal</li>
+          <li><i class="fa-regular fa-square-check"></i> Atendimento ao cliente</li>
+          <li><i class="fa-regular fa-square-check"></i> Marketing digital</li>
+          <li><i class="fa-regular fa-square-check"></i> Expansão e contratação</li>
+        </ul>
+      </div>
+
+      <div class="dcn-panel">
+        <h3><i class="fa-solid fa-folder-open"></i> Kit de ficheiros editáveis</h3>
+        <p class="dcn-panel-note">Modelos para abrir, preencher com os seus dados e usar.</p>
+        <ul class="dcn-list">
+          <li><i class="fa-regular fa-file-word"></i><div>Plano de Negócios <span class="d">Word / Google Docs — estrutura com perguntas-guia e campos por preencher.</span></div></li>
+          <li><i class="fa-regular fa-file-word"></i><div>Contrato de Prestação de Serviços <span class="d">Cláusulas comuns a serviços administrativos, adaptável a vários tipos de cliente.</span></div></li>
+          <li><i class="fa-regular fa-file-word"></i><div>Proposta Comercial <span class="d">Identificação do problema, solução, preço e condições.</span></div></li>
+          <li><i class="fa-regular fa-file-excel"></i><div>Folha de Controlo Financeiro <span class="d">Excel / Sheets — receitas, despesas, lucro, margem, fluxo de caixa e gráficos mensais.</span></div></li>
+          <li><i class="fa-regular fa-file-excel"></i><div>Folha de Gestão de Clientes <span class="d">Registo de clientes, contactos, contratos e facturação, com alertas de aniversário de contrato.</span></div></li>
+          <li><i class="fa-regular fa-file-invoice"></i><div>Modelo de Factura-Recibo <span class="d">Campos pré-definidos para serviços administrativos, pensado para as exigências da AGT.</span></div></li>
+          <li><i class="fa-regular fa-file-powerpoint"></i><div>Kit de Marketing Digital <span class="d">Modelos de post para redes sociais, e-mail de prospecção e roteiro de 30 dias de presença digital.</span></div></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FORMALIZAÇÃO ═══════════════════════════════════════ -->
+<section class="dcn-sec alt">
+  <div class="dcn-wrap">
+    <div class="dcn-eyebrow">Capítulo 2, em detalhe</div>
+    <h2 class="dcn-h2">O percurso de formalização em Angola</h2>
+    <p class="dcn-sub">
+      A sequência que o guia percorre para ter uma empresa legal — com os custos e o prazo
+      indicados no material. É esta ordem que evita voltar atrás.
+    </p>
+
+    <div class="dcn-tl">
+      <div class="dcn-tl-item">
+        <div class="dcn-tl-step">Passo 1</div>
+        <h3>INAPI — registar o nome</h3>
+        <p>Instituto Nacional de Propriedade Industrial. É aqui que o nome da empresa fica reservado em seu nome.</p>
+        <span class="dcn-cost">cerca de 15.000 Kz</span>
+      </div>
+      <div class="dcn-tl-item">
+        <div class="dcn-tl-step">Passo 2</div>
+        <h3>AGT — obter o NIF</h3>
+        <p>Administração Geral Tributária: número de identificação fiscal e declaração de início de actividade.</p>
+        <span class="dcn-cost">gratuito</span>
+      </div>
+      <div class="dcn-tl-item">
+        <div class="dcn-tl-step">Passo 3</div>
+        <h3>INSS — inscrição na segurança social</h3>
+        <p>Registo no Instituto Nacional de Segurança Social.</p>
+        <span class="dcn-cost">gratuito</span>
+      </div>
+      <div class="dcn-tl-item">
+        <div class="dcn-tl-step">Passo 4</div>
+        <h3>Abrir conta bancária empresarial</h3>
+        <p>O valor mínimo de abertura depende do banco escolhido.</p>
+        <span class="dcn-cost">mínimo 50.000 Kz (depende do banco)</span>
+      </div>
+      <div class="dcn-tl-item">
+        <div class="dcn-tl-step">Passo 5</div>
+        <h3>Licenças, se aplicável</h3>
+        <p>Nem toda a actividade exige licença adicional. O guia indica consultar a Câmara de Comércio ou o Ministério da Justiça para o seu caso.</p>
+        <span class="dcn-cost">a confirmar caso a caso</span>
+      </div>
+    </div>
+
+    <div class="dcn-warn">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <p>
+        <strong>Prazo total indicado no material: 2 a 4 semanas</strong>, se tiver toda a documentação reunida.
+        Custos, prazos e requisitos são <strong>indicativos</strong> e podem ter mudado. Confirme sempre
+        junto do <strong>INAPI</strong>, da <strong>AGT</strong> e do <strong>INSS</strong> — e junto do seu banco —
+        antes de tomar qualquer decisão financeira ou legal. Este material é formativo e não substitui
+        aconselhamento jurídico, contabilístico ou fiscal.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PREÇOS POR NICHO ═══════════════════════════════════ -->
+<section class="dcn-sec">
+  <div class="dcn-wrap">
+    <div class="dcn-eyebrow">Capítulo 1, em detalhe</div>
+    <h2 class="dcn-h2">Cinco nichos, e o que o mercado costuma pagar</h2>
+    <p class="dcn-sub">
+      O guia sugere começar por um nicho que já conhece e onde já tem contactos, e só depois
+      expandir. Os intervalos abaixo são os que constam do material, em kwanzas, por mês.
+    </p>
+
+    <div class="dcn-table-wrap">
+      <table class="dcn-table">
+        <thead>
+          <tr>
+            <th>Serviço</th>
+            <th>Clientes potenciais</th>
+            <th>Preço médio indicado (mês)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gestão de Recursos Humanos<br><span style="font-size:12px;color:#6F8095;font-weight:400">recrutamento, folhas de salário</span></td>
+            <td>PMEs, ONGs</td>
+            <td class="kz">200.000 – 500.000 Kz</td>
+          </tr>
+          <tr>
+            <td>Contabilidade e Fiscalidade</td>
+            <td>PMEs, empresários</td>
+            <td class="kz">150.000 – 400.000 Kz</td>
+          </tr>
+          <tr>
+            <td>Secretariado e Gestão de Arquivo</td>
+            <td>Empresas, escritórios</td>
+            <td class="kz">100.000 – 300.000 Kz</td>
+          </tr>
+          <tr>
+            <td>Gestão de Projectos e Consultoria</td>
+            <td>Organizações, governo</td>
+            <td class="kz">300.000 – 1.000.000 Kz</td>
+          </tr>
+          <tr>
+            <td>Apoio Administrativo Geral</td>
+            <td>Startups, profissionais liberais</td>
+            <td class="kz">80.000 – 200.000 Kz</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="dcn-warn">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <p>
+        <strong>Estes valores são indicativos e não são uma tabela oficial nem uma garantia de rendimento.</strong>
+        São referências de mercado registadas no material do bónus para servirem de ponto de partida ao seu
+        próprio cálculo de preço. O que cobrar depende do seu custo, da sua experiência, do cliente e da
+        região. Confirme os preços praticados no seu mercado antes de fechar qualquer proposta.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PLANO DE 90 DIAS ═══════════════════════════════════ -->
+<section class="dcn-sec alt">
+  <div class="dcn-wrap">
+    <div class="dcn-eyebrow">Roteiro de acção</div>
+    <h2 class="dcn-h2">O plano de 90 dias — 12 semanas, uma tarefa de cada vez</h2>
+    <p class="dcn-sub">
+      Para quem prefere metas a teoria. Três meses, quatro semanas cada, com a tarefa
+      principal de cada semana definida à partida.
+    </p>
+
+    <div class="dcn-90">
+      <div class="dcn-90-card">
+        <div class="m">Mês 1</div>
+        <h3>Preparação</h3>
+        <div class="dcn-week"><b>Sem. 1</b><p>Definir o nome, a missão e os serviços da empresa.</p></div>
+        <div class="dcn-week"><b>Sem. 2</b><p>Formalizar legalmente: INAPI, AGT, INSS.</p></div>
+        <div class="dcn-week"><b>Sem. 3</b><p>Montar o espaço de trabalho, físico ou virtual.</p></div>
+        <div class="dcn-week"><b>Sem. 4</b><p>Criar materiais de marketing: cartão, site, redes.</p></div>
+      </div>
+      <div class="dcn-90-card">
+        <div class="m">Mês 2</div>
+        <h3>Lançamento</h3>
+        <div class="dcn-week"><b>Sem. 5</b><p>Prospecção activa: contactar antigos empregadores e conhecidos.</p></div>
+        <div class="dcn-week"><b>Sem. 6</b><p>Participar em eventos e feiras de negócios.</p></div>
+        <div class="dcn-week"><b>Sem. 7</b><p>Criar conteúdos para redes sociais, com publicações semanais.</p></div>
+        <div class="dcn-week"><b>Sem. 8</b><p>Trabalhar o fecho do primeiro contrato — o cliente âncora.</p></div>
+      </div>
+      <div class="dcn-90-card">
+        <div class="m">Mês 3</div>
+        <h3>Consolidação</h3>
+        <div class="dcn-week"><b>Sem. 9</b><p>Entregar o primeiro serviço com excelência.</p></div>
+        <div class="dcn-week"><b>Sem. 10</b><p>Pedir testemunhos, avaliações e recomendações.</p></div>
+        <div class="dcn-week"><b>Sem. 11</b><p>Analisar a rentabilidade e ajustar os preços.</p></div>
+        <div class="dcn-week"><b>Sem. 12</b><p>Planear os 3 meses seguintes: novos serviços, novos clientes.</p></div>
+      </div>
+    </div>
+
+    <div class="dcn-warn">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <p>
+        O plano define <strong>o que fazer em cada semana</strong> — não promete que o contrato feche
+        na semana 8. O ritmo real depende do seu mercado, dos seus contactos e do tempo que conseguir dedicar.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PARA QUEM É / NÃO É ════════════════════════════════ -->
+<section class="dcn-sec">
+  <div class="dcn-wrap">
+    <div class="dcn-eyebrow">Honestidade</div>
+    <h2 class="dcn-h2">Para quem é — e para quem não é</h2>
+    <p class="dcn-sub">Preferimos que desista agora a que se sinta enganado depois.</p>
+
+    <div class="dcn-fit">
+      <div class="dcn-fit-card yes">
+        <h3><i class="fa-solid fa-circle-check"></i> É para si se…</h3>
+        <ul class="dcn-list">
+          <li><i class="fa-solid fa-check"></i> Está a fazer, ou acabou, o curso Técnico Administrativo e quer trabalhar por conta própria.</li>
+          <li><i class="fa-solid fa-check"></i> Quer prestar serviços de RH, contabilidade, secretariado, arquivo, consultoria ou apoio administrativo.</li>
+          <li><i class="fa-solid fa-check"></i> Está em Angola e precisa do percurso local — INAPI, AGT, INSS — e não de conselhos genéricos.</li>
+          <li><i class="fa-solid fa-check"></i> Prefere modelos prontos e checklists a teoria solta.</li>
+          <li><i class="fa-solid fa-check"></i> Está disposto a cumprir um plano de 12 semanas.</li>
+        </ul>
+      </div>
+      <div class="dcn-fit-card no">
+        <h3><i class="fa-solid fa-circle-minus"></i> Não é para si se…</h3>
+        <ul class="dcn-list">
+          <li><i class="fa-solid fa-xmark"></i> Procura garantia de clientes ou de rendimento. Nenhum material o pode dar, e este não o dá.</li>
+          <li><i class="fa-solid fa-xmark"></i> Espera aconselhamento jurídico, fiscal ou contabilístico personalizado — isso exige um profissional habilitado para o seu caso.</li>
+          <li><i class="fa-solid fa-xmark"></i> Quer uma tabela oficial de preços. Os valores aqui são referências de mercado, não uma tabela regulada.</li>
+          <li><i class="fa-solid fa-xmark"></i> Espera que o bónus pague os custos de abertura. O capital inicial é seu.</li>
+          <li><i class="fa-solid fa-xmark"></i> Não pretende formalizar a actividade. Quase tudo o que o guia ensina pressupõe empresa registada.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ════════════════════════════════════════════════ -->
+<section class="dcn-cta">
+  <h2>Fale connosco antes de decidir</h2>
+  <p>
+    Diga-nos em que ponto está — a estudar, a acabar o curso, ou já a pensar em abrir —
+    e explicamos exactamente o que o bónus cobre e o que não cobre.
+  </p>
+  <div class="dcn-actions">
+    <a class="dcn-btn primary" href="https://wa.me/351913388794" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> +351 913 388 794
+    </a>
+    <a class="dcn-btn ghost" href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar ao catálogo</a>
+  </div>
+  <p class="dcn-cta-note">
+    Bónus do curso Técnico Administrativo · Oaken Cursos · Luanda, Angola
+  </p>
+</section>
+
+<footer class="footer">
+  <div class="foot-brand">OAKEN CURSOS</div>
+  <div class="foot-sub">Centro de Formação Técnica Profissional · Luanda, Angola</div>
+  <div class="foot-sub" style="margin-top:10px">
+    <a href="index.html" style="color:#00A3A1;text-decoration:none">Catálogo de cursos</a>
+    &nbsp;·&nbsp;
+    <a href="https://wa.me/351913388794" target="_blank" rel="noopener" style="color:#00A3A1;text-decoration:none">WhatsApp</a>
+  </div>
+  <div class="foot-sub" style="margin-top:14px;font-size:11.5px;color:#4B5563;max-width:760px;margin-left:auto;margin-right:auto;line-height:1.7">
+    Os custos, prazos e preços apresentados nesta página são indicativos e provêm do material formativo do bónus.
+    Não constituem aconselhamento jurídico, fiscal ou contabilístico. Confirme sempre junto das entidades competentes
+    (INAPI, AGT, INSS) e do seu banco antes de qualquer decisão.
+  </div>
+</footer>
+
+</body>
+</html>

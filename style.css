@@ -134,6 +134,34 @@ nav.topnav {
 .course-card.is-soon .course-card-icon { opacity: .45; }
 .course-card.is-soon h3 { color: #CBD5E1; }
 
+/* ── FAIXA DO BÓNUS ─────────────────────────────────────────
+   Produto separado dos cursos: acento teal, fora da grelha. */
+.bonus-band {
+  display: flex; align-items: center; gap: 22px; flex-wrap: wrap;
+  margin: 8px 24px 24px; padding: 24px 28px; border-radius: 12px;
+  background: linear-gradient(120deg, #06282A 0%, #10141C 70%);
+  border: 1px solid #14484A; text-decoration: none;
+}
+.bonus-band-tag {
+  flex: 0 0 auto; font-size: 11px; font-weight: 800; letter-spacing: 1.6px;
+  text-transform: uppercase; color: #4FD8D6; background: rgba(0,163,161,.14);
+  border: 1px solid rgba(0,163,161,.45); padding: 7px 14px; border-radius: 20px;
+}
+.bonus-band-body { flex: 1 1 320px; }
+.bonus-band-body h3 { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 7px; }
+.bonus-band-body p { font-size: 13.5px; color: #93A4B8; line-height: 1.7; max-width: 720px; }
+.bonus-band-body strong { color: #CBD8E6; }
+.bonus-band-cta {
+  flex: 0 0 auto; display: inline-flex; align-items: center; gap: 9px;
+  padding: 12px 24px; border-radius: 8px; text-decoration: none;
+  background: #00A3A1; color: #04231F; font-weight: 700; font-size: 14px; transition: .2s;
+}
+.bonus-band-cta:hover { background: #00b8b6; transform: translateY(-2px); }
+@media (max-width: 768px) {
+  .bonus-band { margin: 8px 16px 20px; padding: 20px; gap: 16px; }
+  .bonus-band-cta { width: 100%; justify-content: center; }
+}
+
 /* NOTA DE CRITÉRIO */
 .criteria {
   margin: 8px 24px 0; padding: 26px 28px; border-radius: 12px;
