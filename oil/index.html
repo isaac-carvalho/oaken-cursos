@@ -666,12 +666,68 @@
 .aluno-view .page-hero h1 {font-size:36px; font-weight:800;}
 .aluno-view .page-hero h1 span {color:var(--secondary);}
 .aluno-view .page-hero p {max-width:700px; margin:10px auto 0; opacity:.85; font-size:17px;}
-.aluno-view .student-bar {background:#fff; border-bottom:1px solid #E5E7EB; padding:16px 0;}
-.aluno-view .student-bar .row {display:flex; gap:12px; align-items:center; flex-wrap:wrap;}
-.aluno-view .student-bar input {flex:1; min-width:220px; padding:10px 14px; border:1.5px solid #E5E7EB; border-radius:8px; font-size:15px;}
-.aluno-view .student-bar button {background:var(--secondary); color:#fff; border:none; padding:10px 22px; border-radius:8px; font-weight:700; cursor:pointer;}
-.aluno-view .student-bar .hint {font-size:13px; color:var(--gray);}
 .aluno-view .main-section {padding:40px 0 70px;}
+/* ───── login da Área do Aluno (igual à Oaken Electrical) ───── */
+.aluno-view .login-wrap {min-height:70vh; display:flex; align-items:center; justify-content:center; padding:44px 16px;}
+.aluno-view .login-box {background:#fff; border-radius:24px; padding:44px 38px; max-width:420px; width:100%; box-shadow:0 20px 60px rgba(11,31,58,.12); text-align:center;}
+.aluno-view .login-icon {width:68px; height:68px; background:rgba(255,107,0,.1); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 18px; font-size:27px; color:var(--secondary);}
+.aluno-view .login-box h2 {font-size:23px; margin-bottom:6px;}
+.aluno-view .login-box>p {color:var(--gray); font-size:14px; margin-bottom:26px;}
+.aluno-view .field {margin-bottom:15px; text-align:left;}
+.aluno-view .field label {display:block; font-size:13px; font-weight:600; margin-bottom:6px;}
+.aluno-view .field input {width:100%; padding:12px 15px; border-radius:10px; border:2px solid #e2e8f0; background:#f8fafc; font-size:15px; transition:.2s; font-family:inherit;}
+.aluno-view .field input:focus {outline:none; border-color:var(--secondary); background:#fff;}
+.aluno-view .btn-login {width:100%; padding:14px; border:none; border-radius:30px; background:var(--secondary); color:#fff; font-weight:700; font-size:16px; cursor:pointer; transition:.2s; box-shadow:0 6px 20px rgba(255,107,0,.35); margin-top:8px; font-family:inherit;}
+.aluno-view .btn-login:hover {transform:translateY(-2px);}
+.aluno-view .login-alt {margin-top:18px; font-size:14px; color:var(--gray);}
+.aluno-view .login-alt a {color:var(--secondary); font-weight:600; cursor:pointer;}
+.aluno-view .demo-hint {margin-top:22px; background:var(--light); border-radius:10px; padding:12px 16px; font-size:13px; color:var(--gray);}
+.aluno-view .demo-hint i {color:var(--secondary); margin-right:6px;}
+@media (max-width:480px) {
+.aluno-view .login-box {padding:30px 20px;}
+}
+/* ───── dashboard do aluno (igual à Oaken Electrical) ───── */
+.aluno-view .dash-header {background:var(--primary); color:#fff; padding:28px 0;}
+.aluno-view .dash-in {display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;}
+.aluno-view .dash-header h1 {font-size:clamp(18px,4vw,22px); font-weight:700;}
+.aluno-view .dash-header p {opacity:.7; font-size:14px; margin-top:3px;}
+.aluno-view .btn-logout {background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); color:#fff; padding:8px 20px; border-radius:30px; font-size:14px; cursor:pointer; font-family:inherit;}
+.aluno-view .btn-logout:hover {background:rgba(255,255,255,.2);}
+.aluno-view .dash-body {padding:30px 0 70px;}
+.aluno-view .phase-head {display:flex; align-items:center; gap:12px; margin:28px 0 12px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--accent);}
+.aluno-view .phase-head::after {content:''; flex:1; height:1px; background:#e2e8f0;}
+.aluno-view .mod-list {display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:14px;}
+@media (max-width:600px) {
+.aluno-view .mod-list {grid-template-columns:1fr;}
+}
+.aluno-view .mod-card {background:#fff; border-radius:16px; padding:18px 20px; display:flex; align-items:center; gap:14px; box-shadow:0 2px 8px rgba(0,0,0,.04); border-left:5px solid #e2e8f0; transition:.2s;}
+.aluno-view .mod-card.unlocked {border-left-color:var(--secondary); cursor:pointer;}
+.aluno-view .mod-card.unlocked:hover {transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.aluno-view .mod-card.done {border-left-color:var(--green); cursor:pointer;}
+.aluno-view .mod-card.done:hover {transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.aluno-view .mod-card.reprovado {border-left-color:#DC2626; cursor:pointer;}
+.aluno-view .mod-card.reprovado:hover {transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.aluno-view .mod-card .mod-info h4 {font-size:14px; font-weight:700; margin-bottom:2px; color:var(--primary);}
+.aluno-view .mod-card .mod-info span {font-size:12px; color:var(--gray);}
+.aluno-view .mod-ic.done {background:rgba(22,163,74,.1); color:var(--green);}
+.aluno-view .mod-badge {font-size:12px; font-weight:600; padding:4px 12px; border-radius:20px; white-space:nowrap;}
+.aluno-view .mod-badge.locked {background:var(--light); color:#94a3b8;}
+.aluno-view .mod-badge.unlocked {background:rgba(255,107,0,.1); color:var(--secondary);}
+.aluno-view .mod-badge.done {background:rgba(22,163,74,.1); color:var(--green);}
+.aluno-view .mod-badge.reprovado {background:rgba(220,38,38,.1); color:#DC2626;}
+/* separadores do dashboard: Módulos | Laboratório */
+.aluno-view .dash-tabs {display:flex; gap:8px; flex-wrap:wrap; margin-bottom:22px;}
+.aluno-view .dash-tab {background:#fff; border:1.5px solid #e2e8f0; color:var(--gray); padding:9px 20px; border-radius:30px; font-size:14px; font-weight:600; cursor:pointer; font-family:inherit; transition:.2s;}
+.aluno-view .dash-tab:hover {border-color:var(--secondary); color:var(--secondary);}
+.aluno-view .dash-tab.active {background:var(--secondary); border-color:var(--secondary); color:#fff; box-shadow:0 6px 18px rgba(255,107,0,.28);}
+.aluno-view .dash-lab {margin-top:4px; border-radius:20px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,.06);}
+.aluno-view .dash-lab .lab-view {padding-bottom:10px;}
+.aluno-view .dash-lab .lab-view .container {padding:0 22px;}
+.aluno-view .dash-lab .lab-view .stats {padding-top:30px;}
+.aluno-view .dash-lab .lab-view section {padding-left:0; padding-right:0;}
+.aluno-view .lab-intro {background:#fff; border-radius:16px; padding:20px 24px; margin-bottom:18px; border-left:5px solid var(--accent); box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.aluno-view .lab-intro h3 {font-size:16px; font-weight:700; margin-bottom:6px; color:var(--primary);}
+.aluno-view .lab-intro p {font-size:14px; color:var(--gray);}
 /* progress card — igual ao dashboard da Oaken Electrical */
 .aluno-view .progress-card {background:#fff; border-radius:20px; padding:22px 26px; margin-bottom:26px; box-shadow:0 4px 12px rgba(0,0,0,.04); border-top:4px solid var(--secondary);}
 .aluno-view .pc-head {display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; gap:10px;}
@@ -1247,7 +1303,6 @@
             <a href="#diferenciais" data-r="diferenciais">Diferenciais</a>
             <a href="#depoimentos" data-r="depoimentos">Depoimentos</a>
             <a href="#faq" data-r="faq">FAQ</a>
-            <a href="#laboratorio" data-r="laboratorio">Laboratório</a>
             <a href="#aluno" data-r="aluno">Área do Aluno</a>
             <a href="#certificado" data-r="certificado">Certificado</a>
             <a href="https://wa.me/351913388794" target="_blank" class="cta-top"><i class="fab fa-whatsapp"></i> Inscrever-me</a>
@@ -2218,11 +2273,33 @@ function loadProgress() {
 }
 function saveProgress(p) { localStorage.setItem(PROGRESS_KEY, JSON.stringify(p)); }
 
-function saveStudentName() {
-  const v = document.getElementById('studentNameInput').value.trim();
-  if (!v) { alert('Por favor, escreva o seu nome.'); return; }
-  localStorage.setItem(NAME_KEY, v);
-  alert('Nome guardado: ' + v);
+/* ───────── sessão do aluno (login) — igual à Oaken Electrical ─────────
+   O progresso continua em `oaken_modulos_progresso` e o nome em
+   `oaken_student_name`; só o estado de sessão vive em `oaken_oil_aluno`. */
+const ALUNO_KEY = 'oaken_oil_aluno';
+let AL = { logado: false, nome: '' };
+try { const raw = localStorage.getItem(ALUNO_KEY); if (raw) AL = Object.assign(AL, JSON.parse(raw) || {}); } catch (e) {}
+if (!AL.nome) { const antigo = localStorage.getItem(NAME_KEY); if (antigo) AL.nome = antigo; }
+function saveAluno() { try { localStorage.setItem(ALUNO_KEY, JSON.stringify(AL)); } catch (e) {} }
+
+function doLogin() {
+  const el = document.getElementById('li-mail');
+  const mail = ((el && el.value) || '').trim();
+  const guardado = localStorage.getItem(NAME_KEY);
+  AL.logado = true;
+  AL.nome = guardado || (mail ? mail.split('@')[0] : '') || 'Aluno';
+  localStorage.setItem(NAME_KEY, AL.nome);
+  saveAluno();
+  renderAluno();
+}
+function doLogout() { AL.logado = false; saveAluno(); nav('aluno'); renderAluno(); }
+function editarNome() {
+  const v = prompt('O seu nome completo (é o que aparece no certificado):', AL.nome || '');
+  if (v === null) return;
+  const nome = v.trim();
+  if (!nome) { alert('Por favor, escreva o seu nome.'); return; }
+  AL.nome = nome; localStorage.setItem(NAME_KEY, nome); saveAluno();
+  renderAluno();
 }
 
 function moduleTitle(id) {
@@ -2237,103 +2314,111 @@ function totalAprovados() {
   return n;
 }
 
-/* ───────── #aluno — selector de módulos ───────── */
-function renderAluno() {
-  abrirVista('aluno', `
-  <div class="aluno-view">
-    <section class="page-hero" id="pageHero">
-        <div class="container">
-            <h1>Área do <span>Aluno</span></h1>
-            <p>Complete os 17 exames de módulo, um de cada vez. Cada prova tem 30 questões, 50 minutos e exige 70% de aproveitamento para desbloquear o módulo seguinte.</p>
-        </div>
-    </section>
-    <section class="student-bar" id="studentBar">
-        <div class="container row">
-            <input type="text" id="studentNameInput" placeholder="Digite o seu nome completo para começar" />
-            <button onclick="saveStudentName()">Guardar Nome</button>
-            <span class="hint">O seu progresso fica guardado neste dispositivo.</span>
-        </div>
-    </section>
-    <section class="main-section">
-      <div class="container">
-        <div id="moduleSelectorView">
-            <div class="progress-card">
-                <div class="pc-head"><h3><i class="fas fa-chart-line" style="color:var(--secondary)"></i> O seu progresso</h3><span class="pct" id="overallPct">0%</span></div>
-                <div class="prog-bar"><div class="prog-fill" id="overallBarFill"></div></div>
-                <div class="prog-stats">
-                    <div id="overallCount"><b>0</b> de <b>17</b> módulos aprovados</div>
-                    <div><b>527</b> aulas no curso</div>
-                    <div><b>153h</b> de carga horária</div>
-                    <div><b>70%</b> mínimo por exame</div>
-                </div>
-            </div>
-            <div class="modules-grid" id="modulesGrid"></div>
-            <div class="cert-cta" id="certCta">
-                <h2>🎓 Parabéns! Completou os 17 módulos.</h2>
-                <p>Já pode gerar o seu certificado de conclusão do curso Técnico de Segurança e Operações Offshore.</p>
-                <a id="certLink" onclick="irParaCertificado()" style="cursor:pointer">Gerar Certificado</a>
-            </div>
-        </div>
-      </div>
-    </section>
-  </div>`);
-  renderModuleSelector();
+/* ───────── fases do curso (agrupamento dos 17 módulos) ───────── */
+const FASES_OIL = {
+  1: 'Fase 1 — Fundamentos e Estruturas Offshore',
+  2: 'Fase 2 — Segurança, Emergência e Factor Humano',
+  3: 'Fase 3 — Sistemas Técnicos e Operações',
+  4: 'Fase 4 — Logística, Ambiente e Carreira'
+};
+const FASE_MODULOS = { 1: [1, 2], 2: [3, 4, 9], 3: [5, 6, 7, 8, 11, 12, 13], 4: [10, 14, 15, 16, 17] };
+function faseDoModulo(id) {
+  for (const f of [1, 2, 3, 4]) if (FASE_MODULOS[f].indexOf(id) !== -1) return f;
+  return 1;
 }
 
-function renderModuleSelector() {
-  const nameInput = document.getElementById('studentNameInput');
-  const savedName = localStorage.getItem(NAME_KEY);
-  if (nameInput && savedName) nameInput.value = savedName;
+/* ───────── #aluno — ecrã de login ───────── */
+function renderLogin() {
+  abrirVista('aluno', `
+  <div class="aluno-view">
+    <div class="login-wrap"><div class="login-box">
+      <div class="login-icon"><i class="fas fa-oil-well"></i></div>
+      <h2>Área do Aluno</h2>
+      <p>Entre com as suas credenciais para aceder à plataforma de estudos.</p>
+      <div class="field"><label>E-mail</label><input type="email" id="li-mail" placeholder="seuemail@exemplo.com"></div>
+      <div class="field"><label>Senha</label><input type="password" id="li-pass" placeholder="••••••••"></div>
+      <button class="btn-login" onclick="doLogin()"><i class="fas fa-right-to-bracket"></i> Entrar na plataforma</button>
+      <div class="login-alt">Ainda não é aluno? <a onclick="nav('home');jump('pricing')">Inscreva-se aqui</a></div>
+      <div class="demo-hint"><i class="fas fa-circle-info"></i> Use qualquer e-mail e senha para aceder à demonstração. O seu progresso fica guardado neste dispositivo.</div>
+    </div></div>
+  </div>`);
+  marcarNav('aluno');
+  const inp = document.getElementById('li-pass');
+  if (inp) inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') doLogin(); });
+}
+
+/* ───────── estrutura do dashboard (cabeçalho + separadores) ───────── */
+function dashShell(tab, corpo) {
+  return `
+  <div class="aluno-view">
+    <div class="dash-header"><div class="container dash-in">
+      <div><h1>Olá, ${AL.nome}! 👋</h1><p>Oaken Oil — Técnico de Segurança e Operações Offshore</p></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn-logout" onclick="editarNome()"><i class="fas fa-user-pen"></i> Editar nome</button>
+        <button class="btn-logout" onclick="doLogout()"><i class="fas fa-right-from-bracket"></i> Sair</button>
+      </div>
+    </div></div>
+    <div class="dash-body"><div class="container">
+      <div class="dash-tabs">
+        <button class="dash-tab ${tab === 'modulos' ? 'active' : ''}" onclick="nav('aluno')"><i class="fas fa-table-cells"></i> Meus módulos</button>
+        <button class="dash-tab ${tab === 'laboratorio' ? 'active' : ''}" onclick="nav('laboratorio')"><i class="fas fa-flask"></i> Laboratório virtual</button>
+      </div>
+      ${corpo}
+    </div></div>
+  </div>`;
+}
+
+/* ───────── #aluno — dashboard com progresso, fases e módulos ───────── */
+function renderAluno() {
+  if (!AL.logado) return renderLogin();
 
   const progress = loadProgress();
-  const grid = document.getElementById('modulesGrid');
-  if (!grid) return;
-  grid.innerHTML = '';
-  let approvedCount = 0;
+  let aprovados = 0;
+  for (let m = 1; m <= TOTAL_MODULES; m++) if (progress[m].status === 'aprovado') aprovados++;
+  const pct = Math.round(aprovados / TOTAL_MODULES * 100);
 
-  for (let m = 1; m <= TOTAL_MODULES; m++) {
-    const st = progress[m];
-    if (st.status === 'aprovado') approvedCount++;
+  let lista = '';
+  [1, 2, 3, 4].forEach(function (f) {
+    lista += `<div class="phase-head">${FASES_OIL[f]}</div><div class="mod-list">`;
+    FASE_MODULOS[f].forEach(function (m) {
+      const est = progress[m];
+      // DESBLOQUEIO TEMPORÁRIO mantido: loadProgress() nunca devolve 'bloqueado'.
+      const st = est.status === 'aprovado' ? 'done' : (est.status === 'reprovado' ? 'reprovado' : 'unlocked');
+      const ic = st === 'done' ? '<i class="fas fa-check"></i>' : m;
+      const bd = st === 'done' ? `Aprovado · ${est.melhorNota}%` : (st === 'reprovado' ? `Repetir · ${est.melhorNota}%` : 'Continuar →');
+      const mod = COURSE_DATA.find(x => x.id === m);
+      const naulas = mod ? mod.lessons.length : 0;
+      const horas = mod && mod.hours ? ` · ${mod.hours}h` : '';
+      lista += `<div class="mod-card ${st}" onclick="nav('modulo-${m}')">
+        <div class="mod-ic ${st}">${ic}</div>
+        <div class="mod-info"><h4>Módulo ${m} — ${moduleTitle(m)}</h4>
+        <span>${naulas} aulas${horas}</span></div>
+        <span class="mod-badge ${st}">${bd}</span></div>`;
+    });
+    lista += `</div>`;
+  });
 
-    const card = document.createElement('div');
-    card.className = `module-card ${st.status === 'desbloqueado' ? 'unlocked' : st.status}`;
-    card.id = `mcard-${m}`;
-
-    let badge, ic;
-    if (st.status === 'bloqueado') {
-      badge = `<span class="status-badge locked">🔒 Bloqueado</span>`;
-      ic = `<div class="mod-ic locked"><i class="fas fa-lock"></i></div>`;
-    } else if (st.status === 'desbloqueado') {
-      badge = `<span class="status-badge unlocked">🟠 Disponível</span>`;
-      ic = `<div class="mod-ic unlocked">${m}</div>`;
-    } else if (st.status === 'aprovado') {
-      badge = `<span class="status-badge approved">✅ Aprovado · ${st.melhorNota}%</span>`;
-      ic = `<div class="mod-ic approved"><i class="fas fa-check"></i></div>`;
-    } else if (st.status === 'reprovado') {
-      badge = `<span class="status-badge reprovado">❌ Reprovado · ${st.melhorNota}%</span>`;
-      ic = `<div class="mod-ic reprovado">${m}</div>`;
-    }
-
-    const mod = COURSE_DATA.find(x => x.id === m);
-    card.onclick = st.status === 'bloqueado' ? null : () => nav('modulo-' + m);
-    card.innerHTML = `
-      ${ic}
-      <div class="mod-info">
-        <h3>Módulo ${m} — ${moduleTitle(m)}</h3>
-        <span>${mod ? mod.lessons.length : 0} aulas${badge ? ' · ' : ''}${badge}</span>
+  const stats = (typeof getCourseStats === 'function') ? getCourseStats() : { lessons: 527, hours: 153 };
+  const corpo = `
+    <div class="progress-card">
+      <div class="pc-head"><h3><i class="fas fa-chart-line" style="color:var(--secondary)"></i> O seu progresso</h3><span class="pct">${pct}%</span></div>
+      <div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div>
+      <div class="prog-stats">
+        <div><b>${aprovados}</b> de <b>${TOTAL_MODULES}</b> módulos aprovados</div>
+        <div><b>${stats.lessons || 527}</b> aulas no curso</div>
+        <div><b>${stats.hours || 153}h</b> de carga horária</div>
+        <div><b>${PASS_PCT}%</b> mínimo por exame</div>
       </div>
-    `;
-    grid.appendChild(card);
-  }
+    </div>
+    ${lista}
+    <div class="cert-cta${aprovados === TOTAL_MODULES ? ' show' : ''}" id="certCta">
+      <h2>🎓 Parabéns! Completou os 17 módulos.</h2>
+      <p>Já pode gerar o seu certificado de conclusão do curso Técnico de Segurança e Operações Offshore.</p>
+      <a id="certLink" onclick="irParaCertificado()" style="cursor:pointer">Gerar Certificado</a>
+    </div>`;
 
-  const pct = Math.round(approvedCount / TOTAL_MODULES * 100);
-  document.getElementById('overallPct').textContent = pct + '%';
-  document.getElementById('overallCount').innerHTML = `<b>${approvedCount}</b> de <b>${TOTAL_MODULES}</b> módulos aprovados`;
-  document.getElementById('overallBarFill').style.width = pct + '%';
-
-  const certCta = document.getElementById('certCta');
-  if (approvedCount === TOTAL_MODULES) certCta.classList.add('show');
-  else certCta.classList.remove('show');
+  abrirVista('aluno', dashShell('modulos', corpo));
+  marcarNav('aluno');
 }
 
 function irParaCertificado() {
@@ -2349,6 +2434,7 @@ let currentModuleId = null;
 let currentLessonIdx = 0;
 
 function renderModulo(m) {
+  if (!AL.logado) return renderLogin();
   const mod = COURSE_DATA.find(x => x.id === m);
   if (!mod) return renderAluno();
   const progress = loadProgress();
@@ -2683,24 +2769,17 @@ const modalPrev = document.getElementById('modalPrev');
 const modalNext = document.getElementById('modalNext');
 let currentModuloId = 1;
 
+/* O laboratório vive DENTRO da Área do Aluno (separador do dashboard).
+   Continua acessível por #laboratorio e por #laboratorio-N (botão do módulo). */
 function renderLab(modId) {
-  abrirVista(modId ? 'laboratorio-' + modId : 'laboratorio', `
+  if (!AL.logado) return renderLogin();
+  abrirVista(modId ? 'laboratorio-' + modId : 'laboratorio', dashShell('laboratorio', `
+    <div class="lab-intro">
+      <h3><i class="fas fa-flask" style="color:var(--accent)"></i> Laboratório Virtual Oaken Oil</h3>
+      <p>Simuladores gratuitos e ferramentas profissionais da indústria do petróleo e gás, um laboratório por cada um dos 17 módulos. Também pode abrir o laboratório de um módulo pelo botão "Abrir laboratório" dentro da vista do módulo.</p>
+    </div>
+    <div class="dash-lab">
   <div class="lab-view">
-    <section class="hero" id="hero">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="hero-content reveal">
-                <h1>Laboratório Virtual <br><span>Oaken Oil</span></h1>
-                <p>Aprenda utilizando simuladores gratuitos e ferramentas profissionais usadas na indústria do petróleo e gás.</p>
-                <div class="hero-actions">
-                    <a class="btn-primary" onclick="jump('biblioteca')" style="cursor:pointer"><i class="fas fa-flask"></i> Explorar Laboratórios</a>
-                    <a class="btn-secondary" onclick="jump('lab-modulos')" style="cursor:pointer"><i class="fas fa-arrow-right"></i> Ver Módulos</a>
-                </div>
-            </div>
-            <div class="hero-image reveal"><div class="illustration"><i class="fas fa-oil-well"></i></div></div>
-        </div>
-    </section>
-
     <section class="stats" id="stats">
         <div class="container">
             <div class="stats-grid">
@@ -2769,7 +2848,9 @@ function renderLab(modId) {
             </div>
         </div>
     </section>
-  </div>`);
+  </div>
+    </div>`));
+  marcarNav('aluno');
 
   const modulosGrid = document.getElementById('modulosGrid');
   modulosData.forEach(m => {
