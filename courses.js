@@ -58,7 +58,7 @@ const COURSES = [
     icon: 'fa-solid fa-bolt',
     status: 'available',
     url: 'electrical/index.html',
-    backdrop: 'https://images.unsplash.com/photo-1621905251189-08b45249df7a?w=1600&q=80',
+    backdrop: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80',
     poster: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80',
     stats: { modules: 18, lessons: 141, hours: 162, questions: 141 },
   },
