@@ -1,0 +1,1158 @@
+{
+  "1": [
+    {
+      "num": 1,
+      "titulo": "GEOLOGIA DO PETRÓLEO",
+      "chars": 21513,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "EXPLORAÇÃO SÍSMICA 2D/3D/4D",
+      "chars": 26531,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "HISTÓRIA DO PETRÓLEO EM ANGOLA",
+      "chars": 22122,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "BACIAS SEDIMENTARES ANGOLANAS (KWANZA, CONGO, NAMIBE)",
+      "chars": 24280,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "CARACTERÍSTICAS DO PETRÓLEO ANGOLANO (API, TEOR DE ENXOFRE)",
+      "chars": 21786,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "OPERADORAS DA INDÚSTRIA (MAJORS, INDEPENDENTES, SONANGOL E PARCEIROS)",
+      "chars": 28130,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "ECONOMIA DO PETRÓLEO (PREÇO, MERCADO, CADEIA DE VALOR)",
+      "chars": 31468,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "BLOCOS DE EXPLORAÇÃO EM ANGOLA",
+      "chars": 24074,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "CONTRATOS DE PARTILHA DE PRODUÇÃO (PSA)",
+      "chars": 25828,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "RECURSOS VS. RESERVAS (CLASSIFICAÇÃO E DIFERENÇA)",
+      "chars": 17439,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "CICLO DE VIDA DO CAMPO E TENDÊNCIAS FUTURAS DA INDÚSTRIA",
+      "chars": 28931,
+      "secs": 7
+    }
+  ],
+  "2": [
+    {
+      "num": 1,
+      "titulo": "Plataformas Fixas (Jacket)",
+      "chars": 16200,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Semi-submersíveis",
+      "chars": 14176,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "FPSO (Floating Production, Storage and Offloading)",
+      "chars": 12045,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "SPAR e TLP (Tension Leg Platform)",
+      "chars": 11265,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Navios-Sonda (Drillships) e Posicionamento Dinâmico (DP)",
+      "chars": 11428,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Sistemas de Ancoragem",
+      "chars": 10150,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Riser Systems (Rígidos, Flexíveis e Híbridos)",
+      "chars": 8462,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Sistemas de Offloading e Amarração (CALM, SPM)",
+      "chars": 7658,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Navios de Apoio e Alojamento (PSV, AHTS, ROV, Accommodation Vessels)",
+      "chars": 6511,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Integridade Estrutural: Inspeção, Fadiga e Corrosão",
+      "chars": 5286,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Estabilidade, Lastro, Proteção contra Incêndio e o Futuro das Estruturas Offshore",
+      "chars": 4605,
+      "secs": 7
+    }
+  ],
+  "3": [
+    {
+      "num": 1,
+      "titulo": "Cultura de Segurança e Pirâmide de Heinrich",
+      "chars": 11948,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Sistema de Gestão HSE e Segurança de Processos (Process Safety)",
+      "chars": 9905,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "EPI Específico, Extintores (Método PASS) e Tetraedro do Fogo",
+      "chars": 8491,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Procedimento de Abandono, Fato de Imersão e Estações de Muster",
+      "chars": 8286,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "HUET (Helicopter Underwater Escape Training) e Sobrevivência no Mar",
+      "chars": 8441,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Sinalização e Equipamentos de Resgate (EPIRB, PLB)",
+      "chars": 7188,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Gestão de Risco de Gás (H2S, CH4) e Deteção",
+      "chars": 7486,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Trabalhos a Quente, em Altura e em Espaços Confinados",
+      "chars": 7492,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Gestão de Mudanças (MOC) e Investigação de Acidentes",
+      "chars": 6949,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Fatores Humanos e Erro Operacional",
+      "chars": 6929,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Legislação de Segurança em Angola (Aplicação e Fiscalização)",
+      "chars": 6705,
+      "secs": 7
+    }
+  ],
+  "4": [
+    {
+      "num": 1,
+      "titulo": "Protocolo DRSABCD e Suporte Básico de Vida (SBV)",
+      "chars": 11013,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Controlo de Hemorragias e Trauma (Torniquete, Curativo Compressivo)",
+      "chars": 7965,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Queimaduras, Fraturas e Imobilização",
+      "chars": 7588,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Hipotermia, Insolação e Lesões por H2S",
+      "chars": 7861,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Resgate de Vítima na Água (Man Overboard)",
+      "chars": 6648,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Evacuação Médica por Heli-ambulância",
+      "chars": 7320,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Comunicação Médica (SBAR) e Kit de Primeiros Socorros Offshore",
+      "chars": 6912,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Triagem de Múltiplas Vítimas (Triage)",
+      "chars": 6601,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Suporte Psicológico de Emergência",
+      "chars": 6741,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Legislação Médica Offshore (Direitos e Deveres)",
+      "chars": 6784,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Simulação de Emergências Médicas e Treinamento Contínuo",
+      "chars": 6670,
+      "secs": 7
+    }
+  ],
+  "5": [
+    {
+      "num": 1,
+      "titulo": "Motores Diesel Marítimos e Manutenção (Análise de Óleo)",
+      "chars": 9991,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Bombas Centrífugas e Bombas de Deslocamento Positivo",
+      "chars": 9134,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Compressores Alternativos e Compressores de Parafuso",
+      "chars": 8029,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Turbinas a Gás (Aero-derivadas e Industriais)",
+      "chars": 8381,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Sistemas de Lubrificação e Refrigeração",
+      "chars": 8306,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Válvulas de Controlo e Atuadores",
+      "chars": 8458,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Alinhamento de Eixos e Sistemas de Transmissão",
+      "chars": 7320,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Diagnóstico de Falhas Mecânicas (Vibração, Temperatura, Ruído)",
+      "chars": 7520,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Acionamento a Velocidade Variável (VFD) e Tribologia",
+      "chars": 7413,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Sistemas de Ar Comprimido e Manutenção de Rolamentos/Vedações",
+      "chars": 8023,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Tendências em Sistemas Mecânicos Offshore (Eficiência e Digitalização)",
+      "chars": 9840,
+      "secs": 7
+    }
+  ],
+  "6": [
+    {
+      "num": 1,
+      "titulo": "Geração de Energia Elétrica e Transformadores de Potência",
+      "chars": 13708,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "MCC (Motor Control Centers) e Procedimento LOTO Elétrico",
+      "chars": 16666,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Motores Elétricos e Instrumentação (Sensores e Transmissores)",
+      "chars": 13945,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "P&ID, DCS e SCADA",
+      "chars": 12549,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Sistema de Paragem de Emergência (ESD) e Deteção de Incêndio e Gás",
+      "chars": 12442,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Aterramento, Proteção contra Raios e Iluminação de Emergência",
+      "chars": 9662,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Manutenção de Instrumentos (Calibração e Diagnóstico)",
+      "chars": 8994,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Segurança Elétrica e Trabalhos com Alta Tensão",
+      "chars": 9473,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "UPS e Gestão de Energia (EMS)",
+      "chars": 9011,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Classificação de Áreas (ATEX / IECEx)",
+      "chars": 10209,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Tendências em Automação e Instrumentação (IIoT, Gémeos Digitais)",
+      "chars": 11145,
+      "secs": 7
+    }
+  ],
+  "7": [
+    {
+      "num": 1,
+      "titulo": "BOP (Blowout Preventer): Componentes e Operação",
+      "chars": 12225,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Árvore de Natal (Wet/Dry) e Manifolds Submarinos",
+      "chars": 10007,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Riser Systems e Umbilicais",
+      "chars": 9872,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Perfuração: Componentes, Brocas e Lama de Perfuração",
+      "chars": 9798,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Cimentação (Casing/Tubing) e Completação de Poços",
+      "chars": 8778,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Intervenção em Poços (Wireline, Coiled Tubing)",
+      "chars": 8823,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Teste de Formação (DST) e Perfilagem (Logging)",
+      "chars": 8576,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "ROVs (Veículos Remotamente Operados) e Mergulho Offshore",
+      "chars": 8296,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Instalação Submarina (Pipelines e Jumpers)",
+      "chars": 7260,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Soldadura Subaquática e Sistemas de Elevação de Carga",
+      "chars": 8037,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Tendências em Operações Submarinas (Automação e Robótica)",
+      "chars": 7891,
+      "secs": 7
+    }
+  ],
+  "8": [
+    {
+      "num": 1,
+      "titulo": "Tipos de Manutenção e Planeamento (Preventiva, Corretiva, Preditiva, SAP/Maximo)",
+      "chars": 11383,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Cálculo de MTBF, MTTR e Disponibilidade",
+      "chars": 7484,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Análise de Causa Raiz (RCA — 5 Porquês) e FMEA",
+      "chars": 7971,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Gestão de Sobressalentes e Lubrificação (ISO VG)",
+      "chars": 7432,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Inspeção Não Destrutiva (NDT) e Termografia Infravermelha",
+      "chars": 8307,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Análise de Vibração (FFT) e Alinhamento a Laser",
+      "chars": 6995,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Balanceamento de Rotores e Gestão de Paragem Planeada (Turnaround)",
+      "chars": 7363,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Confiabilidade Humana e Análise de Fadiga de Materiais",
+      "chars": 7140,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Monitorização da Condição (Condition Monitoring) e Gestão de Ativos",
+      "chars": 6089,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Manutenção Centrada na Confiabilidade (RCM)",
+      "chars": 6448,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Tendências em Manutenção Offshore (IA e Indústria 4.0)",
+      "chars": 5909,
+      "secs": 7
+    }
+  ],
+  "9": [
+    {
+      "num": 1,
+      "titulo": "Comunicação Eficaz em Emergências (PA System, Rádio, SBAR)",
+      "chars": 10100,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Alfabeto Fonético ICAO e Trabalho em Equipas Multiculturais",
+      "chars": 8319,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Gestão de Conflitos e Liderança e Supervisão a Bordo",
+      "chars": 7826,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Gestão de Fadiga e Ciclo Circadiano",
+      "chars": 7071,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Resiliência, Saúde Mental e Gestão de Stress/Burnout",
+      "chars": 7141,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Ética Profissional e Código de Conduta",
+      "chars": 6091,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Tomada de Decisão em Situações de Risco",
+      "chars": 6230,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Cultura de Reporte de Incidentes (Near Miss)",
+      "chars": 4741,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Inteligência Emocional e Feedback Construtivo",
+      "chars": 6030,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Gestão do Tempo e Networking Profissional",
+      "chars": 5799,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "O Futuro das Soft Skills no Offshore (Adaptabilidade e Inovação)",
+      "chars": 7333,
+      "secs": 7
+    }
+  ],
+  "10": [
+    {
+      "num": 1,
+      "titulo": "Lei Geral do Trabalho (Lei n.º 12/23) e Segurança Social (INSS)",
+      "chars": 10790,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Normas Internacionais: OPITO, IMO, SOLAS e ILO",
+      "chars": 9313,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "MARPOL (Anexos I-VI) e Planos de Resposta a Derrames",
+      "chars": 8789,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Gestão de Resíduos Offshore e Proteção da Biodiversidade Marinha",
+      "chars": 7993,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Elaboração de CV, Carta de Motivação e Processo de Recrutamento",
+      "chars": 8620,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Ética e Anticorrupção no Sector Petrolífero",
+      "chars": 6915,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Planeamento de Carreira no Sector Energético",
+      "chars": 6544,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Mercado de Trabalho e Emprego em Angola",
+      "chars": 6608,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Acordos Internacionais (OPEP, GECF) e Licenciamento Ambiental",
+      "chars": 7198,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Responsabilidade Social Empresarial (RSE) e Transparência (EITI)",
+      "chars": 6489,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "O Futuro da Empregabilidade no Offshore (Novas Competências)",
+      "chars": 8888,
+      "secs": 7
+    }
+  ],
+  "11": [
+    {
+      "num": 1,
+      "titulo": "Separação Trifásica (Óleo, Gás, Água) e Separadores Gravitacionais/Ciclónicos",
+      "chars": 9379,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Tratamento de Óleo (Desidratação e Dessalinização)",
+      "chars": 7029,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Compressão e Desidratação de Gás (Glicol, Peneiras Moleculares)",
+      "chars": 7457,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Remoção de CO2 e H2S (Aminas, Membranas)",
+      "chars": 7177,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Sistemas de Tocha (Flare) e Vent",
+      "chars": 6966,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Medição Fiscal de Hidrocarbonetos",
+      "chars": 6498,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Tanques de Armazenamento e Offloading",
+      "chars": 6099,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Sistemas de Injeção de Água e Gás",
+      "chars": 5729,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Processamento de GNL e Estabilização de Condensados",
+      "chars": 5815,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Segurança de Processo e Simulação (HYSYS, Aspen)",
+      "chars": 5612,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Tendências: Digitalização e Eficiência Energética no Processamento",
+      "chars": 6279,
+      "secs": 7
+    }
+  ],
+  "12": [
+    {
+      "num": 1,
+      "titulo": "Fundamentos de Automação Industrial e PLC",
+      "chars": 7904,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Sistemas SCADA Avançados e Redes Industriais (Ethernet/IP, Modbus, Profinet)",
+      "chars": 6257,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Sensores Inteligentes e IoT Industrial",
+      "chars": 6853,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Big Data, Inteligência Artificial e Machine Learning no Offshore",
+      "chars": 7253,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Digital Twins (Gémeos Digitais)",
+      "chars": 6527,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Cibersegurança Industrial (OT Security)",
+      "chars": 6394,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Realidade Aumentada e Virtual (AR/VR)",
+      "chars": 6128,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Manutenção Preditiva 4.0",
+      "chars": 5617,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Robótica, Drones e Automação de Poços (iFields)",
+      "chars": 6129,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Normas (IEC 62443, ISA-95) e Integração de Sistemas (MES/ERP)",
+      "chars": 5743,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "O Futuro da Automação Offshore",
+      "chars": 5620,
+      "secs": 7
+    }
+  ],
+  "13": [
+    {
+      "num": 1,
+      "titulo": "Petrofísica Básica (Porosidade, Permeabilidade)",
+      "chars": 7446,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Tipos de Reservatórios e Mecanismos de Produção",
+      "chars": 7061,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Análise PVT e Balanço de Materiais",
+      "chars": 6151,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Simulação de Reservatórios",
+      "chars": 6221,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Recuperação Avançada (EOR)",
+      "chars": 6495,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Geomecânica de Poços",
+      "chars": 6173,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Perfuração Direcional, Horizontal e Geosteering",
+      "chars": 5842,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Avaliação de Formações (LWD/MWD) e Testes de Pressão (MDT/RFT)",
+      "chars": 5689,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Fraturas Naturais e Induzidas",
+      "chars": 6408,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Reservas e Classificação PRMS (revisão aplicada a engenharia de poços)",
+      "chars": 6069,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Novas Fronteiras (Pré-Sal, Reservatórios Não Convencionais)",
+      "chars": 7005,
+      "secs": 7
+    }
+  ],
+  "14": [
+    {
+      "num": 1,
+      "titulo": "Introdução à Logística Offshore e Bases de Apoio (Supply Bases)",
+      "chars": 6977,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Navios de Apoio (PSV, AHTS, DSV)",
+      "chars": 5981,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Gestão de Carga, Estiva e Operações de Içamento",
+      "chars": 5633,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Transporte de Cargas Perigosas (IMDG)",
+      "chars": 5762,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Logística de Perfuração e Heli-logística",
+      "chars": 6207,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Logística de Emergência e Contingência",
+      "chars": 5172,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Planeamento de Rotas e Sistemas de Gestão de Transporte (TMS)",
+      "chars": 5373,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Procurement e Gestão de Contratos e Fornecedores",
+      "chars": 6234,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Alfândega e Desembaraço Aduaneiro",
+      "chars": 5571,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "KPIs Logísticos (OTIF, Lead Time) e Tecnologia (RFID, GPS)",
+      "chars": 5057,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Desafios Logísticos em Angola",
+      "chars": 6362,
+      "secs": 7
+    }
+  ],
+  "15": [
+    {
+      "num": 1,
+      "titulo": "Cenário Global da Transição Energética",
+      "chars": 8626,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Energia Eólica Offshore (Fundamentos, Turbinas e Instalação)",
+      "chars": 6065,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Solar Fotovoltaica Flutuante e Energia das Marés/Ondas",
+      "chars": 5718,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Hidrogénio Verde: Produção e Aplicações",
+      "chars": 5559,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Captura e Armazenamento de Carbono (CCS)",
+      "chars": 4471,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Eletrificação de Plataformas e Armazenamento em Baterias",
+      "chars": 5114,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Integração com Redes Elétricas e Regulamentação",
+      "chars": 5071,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Economia do Hidrogénio em Angola",
+      "chars": 4811,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Aproveitamento de Gás Associado e Hibridização de Sistemas",
+      "chars": 4913,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Financiamento Verde, ESG e Certificações (GHG Protocol)",
+      "chars": 4629,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "O Futuro do Profissional Offshore",
+      "chars": 6049,
+      "secs": 7
+    }
+  ],
+  "16": [
+    {
+      "num": 1,
+      "titulo": "O Papel do Roustabout e Hierarquia de Convés",
+      "chars": 9122,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "EPI/EPC e Ferramentas Manuais e Elétricas de Convés",
+      "chars": 6606,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Fundamentos de Rigging e Lingagem (Slinging)",
+      "chars": 6453,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Inspeção de Acessórios de Içamento e Cálculo de Cargas",
+      "chars": 5582,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Sinaleiro (Banksman) e Operações com Guindaste",
+      "chars": 5197,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Manuseio de Cargas em Convés e Pipe Handling",
+      "chars": 5266,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Transferência Navio-Plataforma e de Pessoal (Cesto/Passarela)",
+      "chars": 5401,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Apoio a Operações de Perfuração, Manutenção e Pintura",
+      "chars": 5649,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Permit to Work (PTW) e Análise de Risco da Tarefa (JSA/TRA)",
+      "chars": 5017,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Riscos Críticos do Convés (Cargas Suspensas, Snap-back)",
+      "chars": 4931,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Progressão de Carreira: de Roustabout a Roughneck e Derrickman",
+      "chars": 5407,
+      "secs": 7
+    }
+  ],
+  "17": [
+    {
+      "num": 1,
+      "titulo": "Corrosão no Ambiente Marinho: Mecanismos, Tipos e Custo (NACE IMPACT)",
+      "chars": 7594,
+      "secs": 7
+    },
+    {
+      "num": 2,
+      "titulo": "Normas de Pintura Industrial (ISO 12944, NORSOK M-501, SSPC/AMPP)",
+      "chars": 6189,
+      "secs": 7
+    },
+    {
+      "num": 3,
+      "titulo": "Preparação de Superfície e Jateamento Abrasivo (Blasting)",
+      "chars": 5741,
+      "secs": 7
+    },
+    {
+      "num": 4,
+      "titulo": "Hidrojateamento e Perfil de Rugosidade",
+      "chars": 5073,
+      "secs": 7
+    },
+    {
+      "num": 5,
+      "titulo": "Tintas e Revestimentos: Sistemas Multicamada (Epóxi, Poliuretano, Zinco)",
+      "chars": 5700,
+      "secs": 7
+    },
+    {
+      "num": 6,
+      "titulo": "Aplicação por Pistola Airless, Trincha e Rolo",
+      "chars": 4699,
+      "secs": 7
+    },
+    {
+      "num": 7,
+      "titulo": "Metalização (TSA) e Galvanização",
+      "chars": 4954,
+      "secs": 7
+    },
+    {
+      "num": 8,
+      "titulo": "Proteção Catódica (Ânodos de Sacrifício e Corrente Impressa)",
+      "chars": 5638,
+      "secs": 7
+    },
+    {
+      "num": 9,
+      "titulo": "Controlo de Qualidade (WFT/DFT) e Testes de Aderência/Descontinuidade",
+      "chars": 4553,
+      "secs": 7
+    },
+    {
+      "num": 10,
+      "titulo": "Segurança na Pintura (Espaços Confinados, VOCs) e Gestão de Resíduos",
+      "chars": 4852,
+      "secs": 7
+    },
+    {
+      "num": 11,
+      "titulo": "Inspeção de Revestimentos, Certificação (NACE/AMPP/FROSIO) e Empregabilidade",
+      "chars": 13622,
+      "secs": 7
+    }
+  ]
+}

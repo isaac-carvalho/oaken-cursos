@@ -46,7 +46,7 @@ const COURSES = [
     url: 'oil/index.html',
     backdrop: 'oil/img/hero-plataforma-offshore.jpg',
     poster: 'oil/img/cta-trabalhadores-offshore.jpg',
-    stats: { modules: 17, lessons: 340, hours: 153, questions: 655 },
+    stats: { modules: 17, lessons: 527, hours: 153, questions: 655 },
     featured: true,
   },
   {

@@ -1,0 +1,1744 @@
+{
+  "total": 187,
+  "porModulo": {
+    "1": 11,
+    "2": 11,
+    "3": 11,
+    "4": 11,
+    "5": 11,
+    "6": 11,
+    "7": 11,
+    "8": 11,
+    "9": 11,
+    "10": 11,
+    "11": 11,
+    "12": 11,
+    "13": 11,
+    "14": 11,
+    "15": 11,
+    "16": 11,
+    "17": 11
+  },
+  "aulas": [
+    {
+      "mod": 1,
+      "num": 1,
+      "titulo": "GEOLOGIA DO PETRÓLEO",
+      "chars": 21513,
+      "htmlLen": 23779,
+      "secs": 7,
+      "origem": "L485 aulas 1-9 e 11"
+    },
+    {
+      "mod": 1,
+      "num": 2,
+      "titulo": "EXPLORAÇÃO SÍSMICA 2D/3D/4D",
+      "chars": 26531,
+      "htmlLen": 28846,
+      "secs": 7,
+      "origem": "L667 aulas 1-9 e 11"
+    },
+    {
+      "mod": 1,
+      "num": 3,
+      "titulo": "HISTÓRIA DO PETRÓLEO EM ANGOLA",
+      "chars": 22122,
+      "htmlLen": 24165,
+      "secs": 7,
+      "origem": "L822 aulas 1-9 e 11"
+    },
+    {
+      "mod": 1,
+      "num": 4,
+      "titulo": "BACIAS SEDIMENTARES ANGOLANAS (KWANZA, CONGO, NAMIBE)",
+      "chars": 24280,
+      "htmlLen": 26530,
+      "secs": 7,
+      "origem": "L955 aulas 1-9 e 11"
+    },
+    {
+      "mod": 1,
+      "num": 5,
+      "titulo": "CARACTERÍSTICAS DO PETRÓLEO ANGOLANO (API, TEOR DE ENXOFRE)",
+      "chars": 21786,
+      "htmlLen": 24750,
+      "secs": 7,
+      "origem": "L1122 aulas 1-9 e 11"
+    },
+    {
+      "mod": 1,
+      "num": 6,
+      "titulo": "OPERADORAS DA INDÚSTRIA (MAJORS, INDEPENDENTES, SONANGOL E PARCEIROS)",
+      "chars": 28130,
+      "htmlLen": 30488,
+      "secs": 7,
+      "origem": "L1285 aulas 1-9 e 11"
+    },
+    {
+      "mod": 1,
+      "num": 7,
+      "titulo": "ECONOMIA DO PETRÓLEO (PREÇO, MERCADO, CADEIA DE VALOR)",
+      "chars": 31468,
+      "htmlLen": 35076,
+      "secs": 7,
+      "origem": "L1468 aulas 1-9 e 11"
+    },
+    {
+      "mod": 1,
+      "num": 8,
+      "titulo": "BLOCOS DE EXPLORAÇÃO EM ANGOLA",
+      "chars": 24074,
+      "htmlLen": 26382,
+      "secs": 7,
+      "origem": "L1726 aulas 1-9 e 11"
+    },
+    {
+      "mod": 1,
+      "num": 9,
+      "titulo": "CONTRATOS DE PARTILHA DE PRODUÇÃO (PSA)",
+      "chars": 25828,
+      "htmlLen": 28424,
+      "secs": 7,
+      "origem": "L1910 aulas 1-9 e 11"
+    },
+    {
+      "mod": 1,
+      "num": 10,
+      "titulo": "RECURSOS VS. RESERVAS (CLASSIFICAÇÃO E DIFERENÇA)",
+      "chars": 17439,
+      "htmlLen": 19527,
+      "secs": 7,
+      "origem": "L45 aula 10 isolada (primeira resposta do LLM)"
+    },
+    {
+      "mod": 1,
+      "num": 11,
+      "titulo": "CICLO DE VIDA DO CAMPO E TENDÊNCIAS FUTURAS DA INDÚSTRIA",
+      "chars": 28931,
+      "htmlLen": 31420,
+      "secs": 7,
+      "origem": "L2161 aulas 1-9 e 11"
+    },
+    {
+      "mod": 2,
+      "num": 1,
+      "titulo": "Plataformas Fixas (Jacket)",
+      "chars": 16200,
+      "htmlLen": 18217,
+      "secs": 7,
+      "origem": "L4837"
+    },
+    {
+      "mod": 2,
+      "num": 2,
+      "titulo": "Semi-submersíveis",
+      "chars": 14176,
+      "htmlLen": 16181,
+      "secs": 7,
+      "origem": "L4921"
+    },
+    {
+      "mod": 2,
+      "num": 3,
+      "titulo": "FPSO (Floating Production, Storage and Offloading)",
+      "chars": 12045,
+      "htmlLen": 14083,
+      "secs": 7,
+      "origem": "L4999"
+    },
+    {
+      "mod": 2,
+      "num": 4,
+      "titulo": "SPAR e TLP (Tension Leg Platform)",
+      "chars": 11265,
+      "htmlLen": 13286,
+      "secs": 7,
+      "origem": "L5077"
+    },
+    {
+      "mod": 2,
+      "num": 5,
+      "titulo": "Navios-Sonda (Drillships) e Posicionamento Dinâmico (DP)",
+      "chars": 11428,
+      "htmlLen": 13507,
+      "secs": 7,
+      "origem": "L5155"
+    },
+    {
+      "mod": 2,
+      "num": 6,
+      "titulo": "Sistemas de Ancoragem",
+      "chars": 10150,
+      "htmlLen": 12177,
+      "secs": 7,
+      "origem": "L5238"
+    },
+    {
+      "mod": 2,
+      "num": 7,
+      "titulo": "Riser Systems (Rígidos, Flexíveis e Híbridos)",
+      "chars": 8462,
+      "htmlLen": 10495,
+      "secs": 7,
+      "origem": "L5322"
+    },
+    {
+      "mod": 2,
+      "num": 8,
+      "titulo": "Sistemas de Offloading e Amarração (CALM, SPM)",
+      "chars": 7658,
+      "htmlLen": 9709,
+      "secs": 7,
+      "origem": "L5400"
+    },
+    {
+      "mod": 2,
+      "num": 9,
+      "titulo": "Navios de Apoio e Alojamento (PSV, AHTS, ROV, Accommodation Vessels)",
+      "chars": 6511,
+      "htmlLen": 8468,
+      "secs": 7,
+      "origem": "L5485"
+    },
+    {
+      "mod": 2,
+      "num": 10,
+      "titulo": "Integridade Estrutural: Inspeção, Fadiga e Corrosão",
+      "chars": 5286,
+      "htmlLen": 7255,
+      "secs": 7,
+      "origem": "L5562"
+    },
+    {
+      "mod": 2,
+      "num": 11,
+      "titulo": "Estabilidade, Lastro, Proteção contra Incêndio e o Futuro das Estruturas Offshore",
+      "chars": 4605,
+      "htmlLen": 6465,
+      "secs": 7,
+      "origem": "L5647"
+    },
+    {
+      "mod": 3,
+      "num": 1,
+      "titulo": "Cultura de Segurança e Pirâmide de Heinrich",
+      "chars": 11948,
+      "htmlLen": 14016,
+      "secs": 7,
+      "origem": "L5745"
+    },
+    {
+      "mod": 3,
+      "num": 2,
+      "titulo": "Sistema de Gestão HSE e Segurança de Processos (Process Safety)",
+      "chars": 9905,
+      "htmlLen": 12076,
+      "secs": 7,
+      "origem": "L5834"
+    },
+    {
+      "mod": 3,
+      "num": 3,
+      "titulo": "EPI Específico, Extintores (Método PASS) e Tetraedro do Fogo",
+      "chars": 8491,
+      "htmlLen": 10718,
+      "secs": 7,
+      "origem": "L5920"
+    },
+    {
+      "mod": 3,
+      "num": 4,
+      "titulo": "Procedimento de Abandono, Fato de Imersão e Estações de Muster",
+      "chars": 8286,
+      "htmlLen": 10405,
+      "secs": 7,
+      "origem": "L6051"
+    },
+    {
+      "mod": 3,
+      "num": 5,
+      "titulo": "HUET (Helicopter Underwater Escape Training) e Sobrevivência no Mar",
+      "chars": 8441,
+      "htmlLen": 10564,
+      "secs": 7,
+      "origem": "L6143"
+    },
+    {
+      "mod": 3,
+      "num": 6,
+      "titulo": "Sinalização e Equipamentos de Resgate (EPIRB, PLB)",
+      "chars": 7188,
+      "htmlLen": 9251,
+      "secs": 7,
+      "origem": "L6241"
+    },
+    {
+      "mod": 3,
+      "num": 7,
+      "titulo": "Gestão de Risco de Gás (H2S, CH4) e Deteção",
+      "chars": 7486,
+      "htmlLen": 9629,
+      "secs": 7,
+      "origem": "L6326"
+    },
+    {
+      "mod": 3,
+      "num": 8,
+      "titulo": "Trabalhos a Quente, em Altura e em Espaços Confinados",
+      "chars": 7492,
+      "htmlLen": 9638,
+      "secs": 7,
+      "origem": "L6440"
+    },
+    {
+      "mod": 3,
+      "num": 9,
+      "titulo": "Gestão de Mudanças (MOC) e Investigação de Acidentes",
+      "chars": 6949,
+      "htmlLen": 9004,
+      "secs": 7,
+      "origem": "L6545"
+    },
+    {
+      "mod": 3,
+      "num": 10,
+      "titulo": "Fatores Humanos e Erro Operacional",
+      "chars": 6929,
+      "htmlLen": 9001,
+      "secs": 7,
+      "origem": "L6652"
+    },
+    {
+      "mod": 3,
+      "num": 11,
+      "titulo": "Legislação de Segurança em Angola (Aplicação e Fiscalização)",
+      "chars": 6705,
+      "htmlLen": 8948,
+      "secs": 7,
+      "origem": "L6744"
+    },
+    {
+      "mod": 4,
+      "num": 1,
+      "titulo": "Protocolo DRSABCD e Suporte Básico de Vida (SBV)",
+      "chars": 11013,
+      "htmlLen": 13263,
+      "secs": 7,
+      "origem": "L6870"
+    },
+    {
+      "mod": 4,
+      "num": 2,
+      "titulo": "Controlo de Hemorragias e Trauma (Torniquete, Curativo Compressivo)",
+      "chars": 7965,
+      "htmlLen": 10083,
+      "secs": 7,
+      "origem": "L7017"
+    },
+    {
+      "mod": 4,
+      "num": 3,
+      "titulo": "Queimaduras, Fraturas e Imobilização",
+      "chars": 7588,
+      "htmlLen": 9724,
+      "secs": 7,
+      "origem": "L7111"
+    },
+    {
+      "mod": 4,
+      "num": 4,
+      "titulo": "Hipotermia, Insolação e Lesões por H2S",
+      "chars": 7861,
+      "htmlLen": 10007,
+      "secs": 7,
+      "origem": "L7227"
+    },
+    {
+      "mod": 4,
+      "num": 5,
+      "titulo": "Resgate de Vítima na Água (Man Overboard)",
+      "chars": 6648,
+      "htmlLen": 8725,
+      "secs": 7,
+      "origem": "L7341"
+    },
+    {
+      "mod": 4,
+      "num": 6,
+      "titulo": "Evacuação Médica por Heli-ambulância",
+      "chars": 7320,
+      "htmlLen": 9468,
+      "secs": 7,
+      "origem": "L7435"
+    },
+    {
+      "mod": 4,
+      "num": 7,
+      "titulo": "Comunicação Médica (SBAR) e Kit de Primeiros Socorros Offshore",
+      "chars": 6912,
+      "htmlLen": 9064,
+      "secs": 7,
+      "origem": "L7552"
+    },
+    {
+      "mod": 4,
+      "num": 8,
+      "titulo": "Triagem de Múltiplas Vítimas (Triage)",
+      "chars": 6601,
+      "htmlLen": 8808,
+      "secs": 7,
+      "origem": "L7664"
+    },
+    {
+      "mod": 4,
+      "num": 9,
+      "titulo": "Suporte Psicológico de Emergência",
+      "chars": 6741,
+      "htmlLen": 8923,
+      "secs": 7,
+      "origem": "L7799"
+    },
+    {
+      "mod": 4,
+      "num": 10,
+      "titulo": "Legislação Médica Offshore (Direitos e Deveres)",
+      "chars": 6784,
+      "htmlLen": 9023,
+      "secs": 7,
+      "origem": "L7932"
+    },
+    {
+      "mod": 4,
+      "num": 11,
+      "titulo": "Simulação de Emergências Médicas e Treinamento Contínuo",
+      "chars": 6670,
+      "htmlLen": 8817,
+      "secs": 7,
+      "origem": "L8044"
+    },
+    {
+      "mod": 5,
+      "num": 1,
+      "titulo": "Motores Diesel Marítimos e Manutenção (Análise de Óleo)",
+      "chars": 9991,
+      "htmlLen": 12169,
+      "secs": 7,
+      "origem": "L8189"
+    },
+    {
+      "mod": 5,
+      "num": 2,
+      "titulo": "Bombas Centrífugas e Bombas de Deslocamento Positivo",
+      "chars": 9134,
+      "htmlLen": 11251,
+      "secs": 7,
+      "origem": "L8302"
+    },
+    {
+      "mod": 5,
+      "num": 3,
+      "titulo": "Compressores Alternativos e Compressores de Parafuso",
+      "chars": 8029,
+      "htmlLen": 10074,
+      "secs": 7,
+      "origem": "L8402"
+    },
+    {
+      "mod": 5,
+      "num": 4,
+      "titulo": "Turbinas a Gás (Aero-derivadas e Industriais)",
+      "chars": 8381,
+      "htmlLen": 10435,
+      "secs": 7,
+      "origem": "L8483"
+    },
+    {
+      "mod": 5,
+      "num": 5,
+      "titulo": "Sistemas de Lubrificação e Refrigeração",
+      "chars": 8306,
+      "htmlLen": 10412,
+      "secs": 7,
+      "origem": "L8572"
+    },
+    {
+      "mod": 5,
+      "num": 6,
+      "titulo": "Válvulas de Controlo e Atuadores",
+      "chars": 8458,
+      "htmlLen": 10528,
+      "secs": 7,
+      "origem": "L8678"
+    },
+    {
+      "mod": 5,
+      "num": 7,
+      "titulo": "Alinhamento de Eixos e Sistemas de Transmissão",
+      "chars": 7320,
+      "htmlLen": 9439,
+      "secs": 7,
+      "origem": "L8773"
+    },
+    {
+      "mod": 5,
+      "num": 8,
+      "titulo": "Diagnóstico de Falhas Mecânicas (Vibração, Temperatura, Ruído)",
+      "chars": 7520,
+      "htmlLen": 9663,
+      "secs": 7,
+      "origem": "L8881"
+    },
+    {
+      "mod": 5,
+      "num": 9,
+      "titulo": "Acionamento a Velocidade Variável (VFD) e Tribologia",
+      "chars": 7413,
+      "htmlLen": 9557,
+      "secs": 7,
+      "origem": "L8987"
+    },
+    {
+      "mod": 5,
+      "num": 10,
+      "titulo": "Sistemas de Ar Comprimido e Manutenção de Rolamentos/Vedações",
+      "chars": 8023,
+      "htmlLen": 10149,
+      "secs": 7,
+      "origem": "L9095"
+    },
+    {
+      "mod": 5,
+      "num": 11,
+      "titulo": "Tendências em Sistemas Mecânicos Offshore (Eficiência e Digitalização)",
+      "chars": 9840,
+      "htmlLen": 12145,
+      "secs": 7,
+      "origem": "L11432 repetição do módulo 5"
+    },
+    {
+      "mod": 6,
+      "num": 1,
+      "titulo": "Geração de Energia Elétrica e Transformadores de Potência",
+      "chars": 13708,
+      "htmlLen": 15860,
+      "secs": 7,
+      "origem": "L11574 aulas 1-4"
+    },
+    {
+      "mod": 6,
+      "num": 2,
+      "titulo": "MCC (Motor Control Centers) e Procedimento LOTO Elétrico",
+      "chars": 16666,
+      "htmlLen": 19077,
+      "secs": 7,
+      "origem": "L11685 aulas 1-4"
+    },
+    {
+      "mod": 6,
+      "num": 3,
+      "titulo": "Motores Elétricos e Instrumentação (Sensores e Transmissores)",
+      "chars": 13945,
+      "htmlLen": 16108,
+      "secs": 7,
+      "origem": "L11897 aulas 1-4"
+    },
+    {
+      "mod": 6,
+      "num": 4,
+      "titulo": "P&ID, DCS e SCADA",
+      "chars": 12549,
+      "htmlLen": 14771,
+      "secs": 7,
+      "origem": "L12005 aulas 1-4"
+    },
+    {
+      "mod": 6,
+      "num": 5,
+      "titulo": "Sistema de Paragem de Emergência (ESD) e Deteção de Incêndio e Gás",
+      "chars": 12442,
+      "htmlLen": 14660,
+      "secs": 7,
+      "origem": "L12179 aulas 5-11"
+    },
+    {
+      "mod": 6,
+      "num": 6,
+      "titulo": "Aterramento, Proteção contra Raios e Iluminação de Emergência",
+      "chars": 9662,
+      "htmlLen": 11792,
+      "secs": 7,
+      "origem": "L12299 aulas 5-11"
+    },
+    {
+      "mod": 6,
+      "num": 7,
+      "titulo": "Manutenção de Instrumentos (Calibração e Diagnóstico)",
+      "chars": 8994,
+      "htmlLen": 11231,
+      "secs": 7,
+      "origem": "L12396 aulas 5-11"
+    },
+    {
+      "mod": 6,
+      "num": 8,
+      "titulo": "Segurança Elétrica e Trabalhos com Alta Tensão",
+      "chars": 9473,
+      "htmlLen": 11702,
+      "secs": 7,
+      "origem": "L12532 aulas 5-11"
+    },
+    {
+      "mod": 6,
+      "num": 9,
+      "titulo": "UPS e Gestão de Energia (EMS)",
+      "chars": 9011,
+      "htmlLen": 11177,
+      "secs": 7,
+      "origem": "L12671 aulas 5-11"
+    },
+    {
+      "mod": 6,
+      "num": 10,
+      "titulo": "Classificação de Áreas (ATEX / IECEx)",
+      "chars": 10209,
+      "htmlLen": 12423,
+      "secs": 7,
+      "origem": "L12795 aulas 5-11"
+    },
+    {
+      "mod": 6,
+      "num": 11,
+      "titulo": "Tendências em Automação e Instrumentação (IIoT, Gémeos Digitais)",
+      "chars": 11145,
+      "htmlLen": 13359,
+      "secs": 7,
+      "origem": "L12929 aulas 5-11"
+    },
+    {
+      "mod": 7,
+      "num": 1,
+      "titulo": "BOP (Blowout Preventer): Componentes e Operação",
+      "chars": 12225,
+      "htmlLen": 14490,
+      "secs": 7,
+      "origem": "L13055"
+    },
+    {
+      "mod": 7,
+      "num": 2,
+      "titulo": "Árvore de Natal (Wet/Dry) e Manifolds Submarinos",
+      "chars": 10007,
+      "htmlLen": 12248,
+      "secs": 7,
+      "origem": "L13188"
+    },
+    {
+      "mod": 7,
+      "num": 3,
+      "titulo": "Riser Systems e Umbilicais",
+      "chars": 9872,
+      "htmlLen": 12005,
+      "secs": 7,
+      "origem": "L13327"
+    },
+    {
+      "mod": 7,
+      "num": 4,
+      "titulo": "Perfuração: Componentes, Brocas e Lama de Perfuração",
+      "chars": 9798,
+      "htmlLen": 11995,
+      "secs": 7,
+      "origem": "L13441"
+    },
+    {
+      "mod": 7,
+      "num": 5,
+      "titulo": "Cimentação (Casing/Tubing) e Completação de Poços",
+      "chars": 8778,
+      "htmlLen": 10953,
+      "secs": 7,
+      "origem": "L13570"
+    },
+    {
+      "mod": 7,
+      "num": 6,
+      "titulo": "Intervenção em Poços (Wireline, Coiled Tubing)",
+      "chars": 8823,
+      "htmlLen": 10985,
+      "secs": 7,
+      "origem": "L13694"
+    },
+    {
+      "mod": 7,
+      "num": 7,
+      "titulo": "Teste de Formação (DST) e Perfilagem (Logging)",
+      "chars": 8576,
+      "htmlLen": 10698,
+      "secs": 7,
+      "origem": "L13812"
+    },
+    {
+      "mod": 7,
+      "num": 8,
+      "titulo": "ROVs (Veículos Remotamente Operados) e Mergulho Offshore",
+      "chars": 8296,
+      "htmlLen": 10416,
+      "secs": 7,
+      "origem": "L13950"
+    },
+    {
+      "mod": 7,
+      "num": 9,
+      "titulo": "Instalação Submarina (Pipelines e Jumpers)",
+      "chars": 7260,
+      "htmlLen": 9283,
+      "secs": 7,
+      "origem": "L14082"
+    },
+    {
+      "mod": 7,
+      "num": 10,
+      "titulo": "Soldadura Subaquática e Sistemas de Elevação de Carga",
+      "chars": 8037,
+      "htmlLen": 10199,
+      "secs": 7,
+      "origem": "L14190"
+    },
+    {
+      "mod": 7,
+      "num": 11,
+      "titulo": "Tendências em Operações Submarinas (Automação e Robótica)",
+      "chars": 7891,
+      "htmlLen": 9992,
+      "secs": 7,
+      "origem": "L14309"
+    },
+    {
+      "mod": 8,
+      "num": 1,
+      "titulo": "Tipos de Manutenção e Planeamento (Preventiva, Corretiva, Preditiva, SAP/Maximo)",
+      "chars": 11383,
+      "htmlLen": 13474,
+      "secs": 7,
+      "origem": "L14434"
+    },
+    {
+      "mod": 8,
+      "num": 2,
+      "titulo": "Cálculo de MTBF, MTTR e Disponibilidade",
+      "chars": 7484,
+      "htmlLen": 9888,
+      "secs": 7,
+      "origem": "L14548"
+    },
+    {
+      "mod": 8,
+      "num": 3,
+      "titulo": "Análise de Causa Raiz (RCA — 5 Porquês) e FMEA",
+      "chars": 7971,
+      "htmlLen": 10239,
+      "secs": 7,
+      "origem": "L14680"
+    },
+    {
+      "mod": 8,
+      "num": 4,
+      "titulo": "Gestão de Sobressalentes e Lubrificação (ISO VG)",
+      "chars": 7432,
+      "htmlLen": 9576,
+      "secs": 7,
+      "origem": "L14840"
+    },
+    {
+      "mod": 8,
+      "num": 5,
+      "titulo": "Inspeção Não Destrutiva (NDT) e Termografia Infravermelha",
+      "chars": 8307,
+      "htmlLen": 10460,
+      "secs": 7,
+      "origem": "L14952"
+    },
+    {
+      "mod": 8,
+      "num": 6,
+      "titulo": "Análise de Vibração (FFT) e Alinhamento a Laser",
+      "chars": 6995,
+      "htmlLen": 9151,
+      "secs": 7,
+      "origem": "L15066"
+    },
+    {
+      "mod": 8,
+      "num": 7,
+      "titulo": "Balanceamento de Rotores e Gestão de Paragem Planeada (Turnaround)",
+      "chars": 7363,
+      "htmlLen": 9420,
+      "secs": 7,
+      "origem": "L15182"
+    },
+    {
+      "mod": 8,
+      "num": 8,
+      "titulo": "Confiabilidade Humana e Análise de Fadiga de Materiais",
+      "chars": 7140,
+      "htmlLen": 9270,
+      "secs": 7,
+      "origem": "L15293"
+    },
+    {
+      "mod": 8,
+      "num": 9,
+      "titulo": "Monitorização da Condição (Condition Monitoring) e Gestão de Ativos",
+      "chars": 6089,
+      "htmlLen": 8179,
+      "secs": 7,
+      "origem": "L15403"
+    },
+    {
+      "mod": 8,
+      "num": 10,
+      "titulo": "Manutenção Centrada na Confiabilidade (RCM)",
+      "chars": 6448,
+      "htmlLen": 8517,
+      "secs": 7,
+      "origem": "L15520"
+    },
+    {
+      "mod": 8,
+      "num": 11,
+      "titulo": "Tendências em Manutenção Offshore (IA e Indústria 4.0)",
+      "chars": 5909,
+      "htmlLen": 7938,
+      "secs": 7,
+      "origem": "L15646"
+    },
+    {
+      "mod": 9,
+      "num": 1,
+      "titulo": "Comunicação Eficaz em Emergências (PA System, Rádio, SBAR)",
+      "chars": 10100,
+      "htmlLen": 12221,
+      "secs": 7,
+      "origem": "L15766"
+    },
+    {
+      "mod": 9,
+      "num": 2,
+      "titulo": "Alfabeto Fonético ICAO e Trabalho em Equipas Multiculturais",
+      "chars": 8319,
+      "htmlLen": 10491,
+      "secs": 7,
+      "origem": "L15901"
+    },
+    {
+      "mod": 9,
+      "num": 3,
+      "titulo": "Gestão de Conflitos e Liderança e Supervisão a Bordo",
+      "chars": 7826,
+      "htmlLen": 9909,
+      "secs": 7,
+      "origem": "L16022"
+    },
+    {
+      "mod": 9,
+      "num": 4,
+      "titulo": "Gestão de Fadiga e Ciclo Circadiano",
+      "chars": 7071,
+      "htmlLen": 9156,
+      "secs": 7,
+      "origem": "L16149"
+    },
+    {
+      "mod": 9,
+      "num": 5,
+      "titulo": "Resiliência, Saúde Mental e Gestão de Stress/Burnout",
+      "chars": 7141,
+      "htmlLen": 9297,
+      "secs": 7,
+      "origem": "L16279"
+    },
+    {
+      "mod": 9,
+      "num": 6,
+      "titulo": "Ética Profissional e Código de Conduta",
+      "chars": 6091,
+      "htmlLen": 8105,
+      "secs": 7,
+      "origem": "L16429"
+    },
+    {
+      "mod": 9,
+      "num": 7,
+      "titulo": "Tomada de Decisão em Situações de Risco",
+      "chars": 6230,
+      "htmlLen": 8273,
+      "secs": 7,
+      "origem": "L16539"
+    },
+    {
+      "mod": 9,
+      "num": 8,
+      "titulo": "Cultura de Reporte de Incidentes (Near Miss)",
+      "chars": 4741,
+      "htmlLen": 6386,
+      "secs": 7,
+      "origem": "L16656"
+    },
+    {
+      "mod": 9,
+      "num": 9,
+      "titulo": "Inteligência Emocional e Feedback Construtivo",
+      "chars": 6030,
+      "htmlLen": 8001,
+      "secs": 7,
+      "origem": "L16749"
+    },
+    {
+      "mod": 9,
+      "num": 10,
+      "titulo": "Gestão do Tempo e Networking Profissional",
+      "chars": 5799,
+      "htmlLen": 7772,
+      "secs": 7,
+      "origem": "L16873"
+    },
+    {
+      "mod": 9,
+      "num": 11,
+      "titulo": "O Futuro das Soft Skills no Offshore (Adaptabilidade e Inovação)",
+      "chars": 7333,
+      "htmlLen": 9294,
+      "secs": 7,
+      "origem": "L17001"
+    },
+    {
+      "mod": 10,
+      "num": 1,
+      "titulo": "Lei Geral do Trabalho (Lei n.º 12/23) e Segurança Social (INSS)",
+      "chars": 10790,
+      "htmlLen": 13057,
+      "secs": 7,
+      "origem": "L18370 repetição do módulo 10"
+    },
+    {
+      "mod": 10,
+      "num": 2,
+      "titulo": "Normas Internacionais: OPITO, IMO, SOLAS e ILO",
+      "chars": 9313,
+      "htmlLen": 11526,
+      "secs": 7,
+      "origem": "L18514 repetição do módulo 10"
+    },
+    {
+      "mod": 10,
+      "num": 3,
+      "titulo": "MARPOL (Anexos I-VI) e Planos de Resposta a Derrames",
+      "chars": 8789,
+      "htmlLen": 10976,
+      "secs": 7,
+      "origem": "L18655 repetição do módulo 10"
+    },
+    {
+      "mod": 10,
+      "num": 4,
+      "titulo": "Gestão de Resíduos Offshore e Proteção da Biodiversidade Marinha",
+      "chars": 7993,
+      "htmlLen": 10224,
+      "secs": 7,
+      "origem": "L18780 repetição do módulo 10"
+    },
+    {
+      "mod": 10,
+      "num": 5,
+      "titulo": "Elaboração de CV, Carta de Motivação e Processo de Recrutamento",
+      "chars": 8620,
+      "htmlLen": 10651,
+      "secs": 7,
+      "origem": "L18916 repetição do módulo 10"
+    },
+    {
+      "mod": 10,
+      "num": 6,
+      "titulo": "Ética e Anticorrupção no Sector Petrolífero",
+      "chars": 6915,
+      "htmlLen": 8955,
+      "secs": 7,
+      "origem": "L19052 repetição do módulo 10"
+    },
+    {
+      "mod": 10,
+      "num": 7,
+      "titulo": "Planeamento de Carreira no Sector Energético",
+      "chars": 6544,
+      "htmlLen": 8489,
+      "secs": 7,
+      "origem": "L19167 repetição do módulo 10"
+    },
+    {
+      "mod": 10,
+      "num": 8,
+      "titulo": "Mercado de Trabalho e Emprego em Angola",
+      "chars": 6608,
+      "htmlLen": 8622,
+      "secs": 7,
+      "origem": "L19278 repetição do módulo 10"
+    },
+    {
+      "mod": 10,
+      "num": 9,
+      "titulo": "Acordos Internacionais (OPEP, GECF) e Licenciamento Ambiental",
+      "chars": 7198,
+      "htmlLen": 9285,
+      "secs": 7,
+      "origem": "L19391 repetição do módulo 10"
+    },
+    {
+      "mod": 10,
+      "num": 10,
+      "titulo": "Responsabilidade Social Empresarial (RSE) e Transparência (EITI)",
+      "chars": 6489,
+      "htmlLen": 8584,
+      "secs": 7,
+      "origem": "L19481 repetição do módulo 10"
+    },
+    {
+      "mod": 10,
+      "num": 11,
+      "titulo": "O Futuro da Empregabilidade no Offshore (Novas Competências)",
+      "chars": 8888,
+      "htmlLen": 10913,
+      "secs": 7,
+      "origem": "L19604 repetição do módulo 10"
+    },
+    {
+      "mod": 11,
+      "num": 1,
+      "titulo": "Separação Trifásica (Óleo, Gás, Água) e Separadores Gravitacionais/Ciclónicos",
+      "chars": 9379,
+      "htmlLen": 11678,
+      "secs": 7,
+      "origem": "L19742"
+    },
+    {
+      "mod": 11,
+      "num": 2,
+      "titulo": "Tratamento de Óleo (Desidratação e Dessalinização)",
+      "chars": 7029,
+      "htmlLen": 9126,
+      "secs": 7,
+      "origem": "L19858"
+    },
+    {
+      "mod": 11,
+      "num": 3,
+      "titulo": "Compressão e Desidratação de Gás (Glicol, Peneiras Moleculares)",
+      "chars": 7457,
+      "htmlLen": 9518,
+      "secs": 7,
+      "origem": "L19963"
+    },
+    {
+      "mod": 11,
+      "num": 4,
+      "titulo": "Remoção de CO2 e H2S (Aminas, Membranas)",
+      "chars": 7177,
+      "htmlLen": 9283,
+      "secs": 7,
+      "origem": "L20072"
+    },
+    {
+      "mod": 11,
+      "num": 5,
+      "titulo": "Sistemas de Tocha (Flare) e Vent",
+      "chars": 6966,
+      "htmlLen": 8987,
+      "secs": 7,
+      "origem": "L20200"
+    },
+    {
+      "mod": 11,
+      "num": 6,
+      "titulo": "Medição Fiscal de Hidrocarbonetos",
+      "chars": 6498,
+      "htmlLen": 8549,
+      "secs": 7,
+      "origem": "L20315"
+    },
+    {
+      "mod": 11,
+      "num": 7,
+      "titulo": "Tanques de Armazenamento e Offloading",
+      "chars": 6099,
+      "htmlLen": 8101,
+      "secs": 7,
+      "origem": "L20421"
+    },
+    {
+      "mod": 11,
+      "num": 8,
+      "titulo": "Sistemas de Injeção de Água e Gás",
+      "chars": 5729,
+      "htmlLen": 7740,
+      "secs": 7,
+      "origem": "L20528"
+    },
+    {
+      "mod": 11,
+      "num": 9,
+      "titulo": "Processamento de GNL e Estabilização de Condensados",
+      "chars": 5815,
+      "htmlLen": 7810,
+      "secs": 7,
+      "origem": "L20633"
+    },
+    {
+      "mod": 11,
+      "num": 10,
+      "titulo": "Segurança de Processo e Simulação (HYSYS, Aspen)",
+      "chars": 5612,
+      "htmlLen": 7601,
+      "secs": 7,
+      "origem": "L20729"
+    },
+    {
+      "mod": 11,
+      "num": 11,
+      "titulo": "Tendências: Digitalização e Eficiência Energética no Processamento",
+      "chars": 6279,
+      "htmlLen": 8334,
+      "secs": 7,
+      "origem": "L20822"
+    },
+    {
+      "mod": 12,
+      "num": 1,
+      "titulo": "Fundamentos de Automação Industrial e PLC",
+      "chars": 7904,
+      "htmlLen": 9997,
+      "secs": 7,
+      "origem": "L20932"
+    },
+    {
+      "mod": 12,
+      "num": 2,
+      "titulo": "Sistemas SCADA Avançados e Redes Industriais (Ethernet/IP, Modbus, Profinet)",
+      "chars": 6257,
+      "htmlLen": 8474,
+      "secs": 7,
+      "origem": "L21064"
+    },
+    {
+      "mod": 12,
+      "num": 3,
+      "titulo": "Sensores Inteligentes e IoT Industrial",
+      "chars": 6853,
+      "htmlLen": 8922,
+      "secs": 7,
+      "origem": "L21199"
+    },
+    {
+      "mod": 12,
+      "num": 4,
+      "titulo": "Big Data, Inteligência Artificial e Machine Learning no Offshore",
+      "chars": 7253,
+      "htmlLen": 9334,
+      "secs": 7,
+      "origem": "L21328"
+    },
+    {
+      "mod": 12,
+      "num": 5,
+      "titulo": "Digital Twins (Gémeos Digitais)",
+      "chars": 6527,
+      "htmlLen": 8588,
+      "secs": 7,
+      "origem": "L21450"
+    },
+    {
+      "mod": 12,
+      "num": 6,
+      "titulo": "Cibersegurança Industrial (OT Security)",
+      "chars": 6394,
+      "htmlLen": 8478,
+      "secs": 7,
+      "origem": "L21580"
+    },
+    {
+      "mod": 12,
+      "num": 7,
+      "titulo": "Realidade Aumentada e Virtual (AR/VR)",
+      "chars": 6128,
+      "htmlLen": 8049,
+      "secs": 7,
+      "origem": "L21711"
+    },
+    {
+      "mod": 12,
+      "num": 8,
+      "titulo": "Manutenção Preditiva 4.0",
+      "chars": 5617,
+      "htmlLen": 7660,
+      "secs": 7,
+      "origem": "L21823"
+    },
+    {
+      "mod": 12,
+      "num": 9,
+      "titulo": "Robótica, Drones e Automação de Poços (iFields)",
+      "chars": 6129,
+      "htmlLen": 8203,
+      "secs": 7,
+      "origem": "L21948"
+    },
+    {
+      "mod": 12,
+      "num": 10,
+      "titulo": "Normas (IEC 62443, ISA-95) e Integração de Sistemas (MES/ERP)",
+      "chars": 5743,
+      "htmlLen": 7957,
+      "secs": 7,
+      "origem": "L22073"
+    },
+    {
+      "mod": 12,
+      "num": 11,
+      "titulo": "O Futuro da Automação Offshore",
+      "chars": 5620,
+      "htmlLen": 7646,
+      "secs": 7,
+      "origem": "L22206"
+    },
+    {
+      "mod": 13,
+      "num": 1,
+      "titulo": "Petrofísica Básica (Porosidade, Permeabilidade)",
+      "chars": 7446,
+      "htmlLen": 9464,
+      "secs": 7,
+      "origem": "L22323"
+    },
+    {
+      "mod": 13,
+      "num": 2,
+      "titulo": "Tipos de Reservatórios e Mecanismos de Produção",
+      "chars": 7061,
+      "htmlLen": 9082,
+      "secs": 7,
+      "origem": "L22424"
+    },
+    {
+      "mod": 13,
+      "num": 3,
+      "titulo": "Análise PVT e Balanço de Materiais",
+      "chars": 6151,
+      "htmlLen": 8217,
+      "secs": 7,
+      "origem": "L22530"
+    },
+    {
+      "mod": 13,
+      "num": 4,
+      "titulo": "Simulação de Reservatórios",
+      "chars": 6221,
+      "htmlLen": 8148,
+      "secs": 7,
+      "origem": "L22648"
+    },
+    {
+      "mod": 13,
+      "num": 5,
+      "titulo": "Recuperação Avançada (EOR)",
+      "chars": 6495,
+      "htmlLen": 8533,
+      "secs": 7,
+      "origem": "L22767"
+    },
+    {
+      "mod": 13,
+      "num": 6,
+      "titulo": "Geomecânica de Poços",
+      "chars": 6173,
+      "htmlLen": 8107,
+      "secs": 7,
+      "origem": "L22889"
+    },
+    {
+      "mod": 13,
+      "num": 7,
+      "titulo": "Perfuração Direcional, Horizontal e Geosteering",
+      "chars": 5842,
+      "htmlLen": 7812,
+      "secs": 7,
+      "origem": "L22975"
+    },
+    {
+      "mod": 13,
+      "num": 8,
+      "titulo": "Avaliação de Formações (LWD/MWD) e Testes de Pressão (MDT/RFT)",
+      "chars": 5689,
+      "htmlLen": 7724,
+      "secs": 7,
+      "origem": "L23068"
+    },
+    {
+      "mod": 13,
+      "num": 9,
+      "titulo": "Fraturas Naturais e Induzidas",
+      "chars": 6408,
+      "htmlLen": 8386,
+      "secs": 7,
+      "origem": "L23175"
+    },
+    {
+      "mod": 13,
+      "num": 10,
+      "titulo": "Reservas e Classificação PRMS (revisão aplicada a engenharia de poços)",
+      "chars": 6069,
+      "htmlLen": 8096,
+      "secs": 7,
+      "origem": "L23274"
+    },
+    {
+      "mod": 13,
+      "num": 11,
+      "titulo": "Novas Fronteiras (Pré-Sal, Reservatórios Não Convencionais)",
+      "chars": 7005,
+      "htmlLen": 9178,
+      "secs": 7,
+      "origem": "L23375"
+    },
+    {
+      "mod": 14,
+      "num": 1,
+      "titulo": "Introdução à Logística Offshore e Bases de Apoio (Supply Bases)",
+      "chars": 6977,
+      "htmlLen": 9043,
+      "secs": 7,
+      "origem": "L23515"
+    },
+    {
+      "mod": 14,
+      "num": 2,
+      "titulo": "Navios de Apoio (PSV, AHTS, DSV)",
+      "chars": 5981,
+      "htmlLen": 8006,
+      "secs": 7,
+      "origem": "L23632"
+    },
+    {
+      "mod": 14,
+      "num": 3,
+      "titulo": "Gestão de Carga, Estiva e Operações de Içamento",
+      "chars": 5633,
+      "htmlLen": 7683,
+      "secs": 7,
+      "origem": "L23743"
+    },
+    {
+      "mod": 14,
+      "num": 4,
+      "titulo": "Transporte de Cargas Perigosas (IMDG)",
+      "chars": 5762,
+      "htmlLen": 7838,
+      "secs": 7,
+      "origem": "L23856"
+    },
+    {
+      "mod": 14,
+      "num": 5,
+      "titulo": "Logística de Perfuração e Heli-logística",
+      "chars": 6207,
+      "htmlLen": 8245,
+      "secs": 7,
+      "origem": "L23985"
+    },
+    {
+      "mod": 14,
+      "num": 6,
+      "titulo": "Logística de Emergência e Contingência",
+      "chars": 5172,
+      "htmlLen": 7236,
+      "secs": 7,
+      "origem": "L24099"
+    },
+    {
+      "mod": 14,
+      "num": 7,
+      "titulo": "Planeamento de Rotas e Sistemas de Gestão de Transporte (TMS)",
+      "chars": 5373,
+      "htmlLen": 7408,
+      "secs": 7,
+      "origem": "L24220"
+    },
+    {
+      "mod": 14,
+      "num": 8,
+      "titulo": "Procurement e Gestão de Contratos e Fornecedores",
+      "chars": 6234,
+      "htmlLen": 8325,
+      "secs": 7,
+      "origem": "L24326"
+    },
+    {
+      "mod": 14,
+      "num": 9,
+      "titulo": "Alfândega e Desembaraço Aduaneiro",
+      "chars": 5571,
+      "htmlLen": 7456,
+      "secs": 7,
+      "origem": "L24451"
+    },
+    {
+      "mod": 14,
+      "num": 10,
+      "titulo": "KPIs Logísticos (OTIF, Lead Time) e Tecnologia (RFID, GPS)",
+      "chars": 5057,
+      "htmlLen": 7076,
+      "secs": 7,
+      "origem": "L24547"
+    },
+    {
+      "mod": 14,
+      "num": 11,
+      "titulo": "Desafios Logísticos em Angola",
+      "chars": 6362,
+      "htmlLen": 8357,
+      "secs": 7,
+      "origem": "L24647"
+    },
+    {
+      "mod": 15,
+      "num": 1,
+      "titulo": "Cenário Global da Transição Energética",
+      "chars": 8626,
+      "htmlLen": 10681,
+      "secs": 7,
+      "origem": "L24776"
+    },
+    {
+      "mod": 15,
+      "num": 2,
+      "titulo": "Energia Eólica Offshore (Fundamentos, Turbinas e Instalação)",
+      "chars": 6065,
+      "htmlLen": 8084,
+      "secs": 7,
+      "origem": "L24896"
+    },
+    {
+      "mod": 15,
+      "num": 3,
+      "titulo": "Solar Fotovoltaica Flutuante e Energia das Marés/Ondas",
+      "chars": 5718,
+      "htmlLen": 7645,
+      "secs": 7,
+      "origem": "L24997"
+    },
+    {
+      "mod": 15,
+      "num": 4,
+      "titulo": "Hidrogénio Verde: Produção e Aplicações",
+      "chars": 5559,
+      "htmlLen": 7575,
+      "secs": 7,
+      "origem": "L25104"
+    },
+    {
+      "mod": 15,
+      "num": 5,
+      "titulo": "Captura e Armazenamento de Carbono (CCS)",
+      "chars": 4471,
+      "htmlLen": 6419,
+      "secs": 7,
+      "origem": "L25211"
+    },
+    {
+      "mod": 15,
+      "num": 6,
+      "titulo": "Eletrificação de Plataformas e Armazenamento em Baterias",
+      "chars": 5114,
+      "htmlLen": 7044,
+      "secs": 7,
+      "origem": "L25296"
+    },
+    {
+      "mod": 15,
+      "num": 7,
+      "titulo": "Integração com Redes Elétricas e Regulamentação",
+      "chars": 5071,
+      "htmlLen": 7061,
+      "secs": 7,
+      "origem": "L25403"
+    },
+    {
+      "mod": 15,
+      "num": 8,
+      "titulo": "Economia do Hidrogénio em Angola",
+      "chars": 4811,
+      "htmlLen": 6711,
+      "secs": 7,
+      "origem": "L25501"
+    },
+    {
+      "mod": 15,
+      "num": 9,
+      "titulo": "Aproveitamento de Gás Associado e Hibridização de Sistemas",
+      "chars": 4913,
+      "htmlLen": 6932,
+      "secs": 7,
+      "origem": "L25606"
+    },
+    {
+      "mod": 15,
+      "num": 10,
+      "titulo": "Financiamento Verde, ESG e Certificações (GHG Protocol)",
+      "chars": 4629,
+      "htmlLen": 6623,
+      "secs": 7,
+      "origem": "L25710"
+    },
+    {
+      "mod": 15,
+      "num": 11,
+      "titulo": "O Futuro do Profissional Offshore",
+      "chars": 6049,
+      "htmlLen": 8067,
+      "secs": 7,
+      "origem": "L25806"
+    },
+    {
+      "mod": 16,
+      "num": 1,
+      "titulo": "O Papel do Roustabout e Hierarquia de Convés",
+      "chars": 9122,
+      "htmlLen": 11328,
+      "secs": 7,
+      "origem": "L25919"
+    },
+    {
+      "mod": 16,
+      "num": 2,
+      "titulo": "EPI/EPC e Ferramentas Manuais e Elétricas de Convés",
+      "chars": 6606,
+      "htmlLen": 8825,
+      "secs": 7,
+      "origem": "L26075"
+    },
+    {
+      "mod": 16,
+      "num": 3,
+      "titulo": "Fundamentos de Rigging e Lingagem (Slinging)",
+      "chars": 6453,
+      "htmlLen": 8489,
+      "secs": 7,
+      "origem": "L26204"
+    },
+    {
+      "mod": 16,
+      "num": 4,
+      "titulo": "Inspeção de Acessórios de Içamento e Cálculo de Cargas",
+      "chars": 5582,
+      "htmlLen": 7656,
+      "secs": 7,
+      "origem": "L26303"
+    },
+    {
+      "mod": 16,
+      "num": 5,
+      "titulo": "Sinaleiro (Banksman) e Operações com Guindaste",
+      "chars": 5197,
+      "htmlLen": 7264,
+      "secs": 7,
+      "origem": "L26416"
+    },
+    {
+      "mod": 16,
+      "num": 6,
+      "titulo": "Manuseio de Cargas em Convés e Pipe Handling",
+      "chars": 5266,
+      "htmlLen": 7308,
+      "secs": 7,
+      "origem": "L26520"
+    },
+    {
+      "mod": 16,
+      "num": 7,
+      "titulo": "Transferência Navio-Plataforma e de Pessoal (Cesto/Passarela)",
+      "chars": 5401,
+      "htmlLen": 7425,
+      "secs": 7,
+      "origem": "L26623"
+    },
+    {
+      "mod": 16,
+      "num": 8,
+      "titulo": "Apoio a Operações de Perfuração, Manutenção e Pintura",
+      "chars": 5649,
+      "htmlLen": 7750,
+      "secs": 7,
+      "origem": "L26711"
+    },
+    {
+      "mod": 16,
+      "num": 9,
+      "titulo": "Permit to Work (PTW) e Análise de Risco da Tarefa (JSA/TRA)",
+      "chars": 5017,
+      "htmlLen": 7001,
+      "secs": 7,
+      "origem": "L26828"
+    },
+    {
+      "mod": 16,
+      "num": 10,
+      "titulo": "Riscos Críticos do Convés (Cargas Suspensas, Snap-back)",
+      "chars": 4931,
+      "htmlLen": 6994,
+      "secs": 7,
+      "origem": "L26936"
+    },
+    {
+      "mod": 16,
+      "num": 11,
+      "titulo": "Progressão de Carreira: de Roustabout a Roughneck e Derrickman",
+      "chars": 5407,
+      "htmlLen": 7501,
+      "secs": 7,
+      "origem": "L27039"
+    },
+    {
+      "mod": 17,
+      "num": 1,
+      "titulo": "Corrosão no Ambiente Marinho: Mecanismos, Tipos e Custo (NACE IMPACT)",
+      "chars": 7594,
+      "htmlLen": 9672,
+      "secs": 7,
+      "origem": "L27158"
+    },
+    {
+      "mod": 17,
+      "num": 2,
+      "titulo": "Normas de Pintura Industrial (ISO 12944, NORSOK M-501, SSPC/AMPP)",
+      "chars": 6189,
+      "htmlLen": 8307,
+      "secs": 7,
+      "origem": "L27266"
+    },
+    {
+      "mod": 17,
+      "num": 3,
+      "titulo": "Preparação de Superfície e Jateamento Abrasivo (Blasting)",
+      "chars": 5741,
+      "htmlLen": 7897,
+      "secs": 7,
+      "origem": "L27371"
+    },
+    {
+      "mod": 17,
+      "num": 4,
+      "titulo": "Hidrojateamento e Perfil de Rugosidade",
+      "chars": 5073,
+      "htmlLen": 7096,
+      "secs": 7,
+      "origem": "L27473"
+    },
+    {
+      "mod": 17,
+      "num": 5,
+      "titulo": "Tintas e Revestimentos: Sistemas Multicamada (Epóxi, Poliuretano, Zinco)",
+      "chars": 5700,
+      "htmlLen": 7775,
+      "secs": 7,
+      "origem": "L27571"
+    },
+    {
+      "mod": 17,
+      "num": 6,
+      "titulo": "Aplicação por Pistola Airless, Trincha e Rolo",
+      "chars": 4699,
+      "htmlLen": 6755,
+      "secs": 7,
+      "origem": "L27675"
+    },
+    {
+      "mod": 17,
+      "num": 7,
+      "titulo": "Metalização (TSA) e Galvanização",
+      "chars": 4954,
+      "htmlLen": 7007,
+      "secs": 7,
+      "origem": "L27781"
+    },
+    {
+      "mod": 17,
+      "num": 8,
+      "titulo": "Proteção Catódica (Ânodos de Sacrifício e Corrente Impressa)",
+      "chars": 5638,
+      "htmlLen": 7722,
+      "secs": 7,
+      "origem": "L27888"
+    },
+    {
+      "mod": 17,
+      "num": 9,
+      "titulo": "Controlo de Qualidade (WFT/DFT) e Testes de Aderência/Descontinuidade",
+      "chars": 4553,
+      "htmlLen": 6663,
+      "secs": 7,
+      "origem": "L27979"
+    },
+    {
+      "mod": 17,
+      "num": 10,
+      "titulo": "Segurança na Pintura (Espaços Confinados, VOCs) e Gestão de Resíduos",
+      "chars": 4852,
+      "htmlLen": 6920,
+      "secs": 7,
+      "origem": "L28057"
+    },
+    {
+      "mod": 17,
+      "num": 11,
+      "titulo": "Inspeção de Revestimentos, Certificação (NACE/AMPP/FROSIO) e Empregabilidade",
+      "chars": 13622,
+      "htmlLen": 16039,
+      "secs": 7,
+      "origem": "L28160"
+    }
+  ],
+  "avisos": [
+    "Módulo 1, aula 2: 2 variantes, usada a de 26531 car. (L667 aulas 1-9 e 11)",
+    "Módulo 1, aula 8: 2 variantes, usada a de 24074 car. (L1726 aulas 1-9 e 11)",
+    "Módulo 3, aula 1: 2 variantes, usada a de 11948 car. (L5745)",
+    "Módulo 3, aula 2: 2 variantes, usada a de 9905 car. (L5834)",
+    "Módulo 3, aula 3: 2 variantes, usada a de 8491 car. (L5920)",
+    "Módulo 3, aula 4: 2 variantes, usada a de 8286 car. (L6051)",
+    "Módulo 3, aula 5: 2 variantes, usada a de 8441 car. (L6143)",
+    "Módulo 3, aula 6: 2 variantes, usada a de 7188 car. (L6241)",
+    "Módulo 3, aula 7: 2 variantes, usada a de 7486 car. (L6326)",
+    "Módulo 3, aula 8: 2 variantes, usada a de 7492 car. (L6440)",
+    "Módulo 3, aula 9: 2 variantes, usada a de 6949 car. (L6545)",
+    "Módulo 3, aula 10: 2 variantes, usada a de 6929 car. (L6652)",
+    "Módulo 3, aula 11: 2 variantes, usada a de 6705 car. (L6744)",
+    "Módulo 5, aula 1: 2 variantes, usada a de 9991 car. (L8189)",
+    "Módulo 5, aula 2: 2 variantes, usada a de 9134 car. (L8302)",
+    "Módulo 5, aula 3: 2 variantes, usada a de 8029 car. (L8402)",
+    "Módulo 5, aula 4: 2 variantes, usada a de 8381 car. (L8483)",
+    "Módulo 5, aula 5: 2 variantes, usada a de 8306 car. (L8572)",
+    "Módulo 5, aula 6: 2 variantes, usada a de 8458 car. (L8678)",
+    "Módulo 5, aula 7: 2 variantes, usada a de 7320 car. (L8773)",
+    "Módulo 5, aula 8: 2 variantes, usada a de 7520 car. (L8881)",
+    "Módulo 5, aula 9: 2 variantes, usada a de 7413 car. (L8987)",
+    "Módulo 5, aula 10: 2 variantes, usada a de 8023 car. (L9095)",
+    "Módulo 5, aula 11: 2 variantes, usada a de 9840 car. (L11432 repetição do módulo 5)",
+    "Módulo 10, aula 1: 2 variantes, usada a de 10790 car. (L18370 repetição do módulo 10)",
+    "Módulo 10, aula 2: 2 variantes, usada a de 9313 car. (L18514 repetição do módulo 10)",
+    "Módulo 10, aula 3: 2 variantes, usada a de 8789 car. (L18655 repetição do módulo 10)",
+    "Módulo 10, aula 4: 2 variantes, usada a de 7993 car. (L18780 repetição do módulo 10)",
+    "Módulo 10, aula 5: 2 variantes, usada a de 8620 car. (L18916 repetição do módulo 10)",
+    "Módulo 10, aula 6: 2 variantes, usada a de 6915 car. (L19052 repetição do módulo 10)",
+    "Módulo 10, aula 7: 2 variantes, usada a de 6544 car. (L19167 repetição do módulo 10)",
+    "Módulo 10, aula 8: 2 variantes, usada a de 6608 car. (L19278 repetição do módulo 10)",
+    "Módulo 10, aula 9: 2 variantes, usada a de 7198 car. (L19391 repetição do módulo 10)",
+    "Módulo 10, aula 10: 2 variantes, usada a de 6489 car. (L19481 repetição do módulo 10)",
+    "Módulo 10, aula 11: 2 variantes, usada a de 8888 car. (L19604 repetição do módulo 10)"
+  ]
+}

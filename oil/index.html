@@ -759,6 +759,43 @@
 .aluno-view .lesson-content th {background:var(--primary); color:#fff; padding:8px 12px; text-align:left;}
 .aluno-view .lesson-content td {padding:8px 12px; border:1px solid #E5E7EB;}
 .aluno-view .lesson-content tr:nth-child(even) {background:#F8FAFC;}
+
+/* ── Blocos das aulas convertidas (ver oil/_import/converter.js) ─────────
+   Valem nas duas vistas que renderizam .lesson-content: .pg-mod e .aluno-view.
+   .tl aqui é a timeline do procedimento; o .cert-corner.tl do certificado
+   vive dentro de .cert-view e não colide.                                    */
+.lesson-content .cb {background:#fff; border:1px solid #E5E7EB; border-radius:14px; padding:clamp(16px,3.5vw,24px); margin:0 0 16px;}
+.lesson-content .cb h2 {font-size:clamp(16px,3vw,19px); font-weight:800; color:var(--primary); margin-bottom:11px; line-height:1.35;}
+.lesson-content .cb h2 i {color:var(--secondary); margin-right:7px;}
+.lesson-content .cb > p:last-child {margin-bottom:0;}
+.lesson-content .cb ol[type="a"] {padding-left:22px; margin:12px 0 0;}
+.lesson-content .hi {border-left:4px solid var(--secondary); background:rgba(255,107,0,.06); padding:14px 18px; border-radius:0 10px 10px 0; margin:13px 0; font-size:14px; line-height:1.8; color:#1E293B;}
+.lesson-content .hi strong {color:var(--secondary);}
+.lesson-content .lawbox {border:2px solid var(--primary); border-radius:10px; padding:14px 16px; margin:12px 0; background:rgba(11,31,58,.03);}
+.lesson-content .lawbox .lt {font-size:12px; text-transform:uppercase; letter-spacing:.8px; font-weight:700; color:var(--primary); margin-bottom:8px;}
+.lesson-content .lawbox .lt i {margin-right:6px; color:var(--secondary);}
+.lesson-content .lawbox blockquote {font-style:italic; color:#374151; font-size:14px; line-height:1.75; border-left:3px solid var(--secondary); padding-left:12px; margin:0;}
+.lesson-content .fbox {background:var(--primary); color:#fff; border-radius:12px; padding:18px 20px; margin:15px 0; text-align:center;}
+.lesson-content .fbox .f {font-size:clamp(16px,3.5vw,24px); font-weight:800; color:var(--secondary); letter-spacing:.5px; margin-bottom:6px; word-break:break-word;}
+.lesson-content .fbox .fd {font-size:12px; opacity:.75;}
+.lesson-content .tl {margin:14px 0 0;}
+.lesson-content .tli {display:flex; gap:14px; margin-bottom:16px; align-items:flex-start;}
+.lesson-content .tli:last-child {margin-bottom:0;}
+.lesson-content .tld {width:34px; height:34px; border-radius:50%; background:var(--secondary); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:13px; flex-shrink:0;}
+.lesson-content .tlc {min-width:0;}
+.lesson-content .tlc h4 {font-size:14px; font-weight:700; color:var(--primary); margin-bottom:4px;}
+.lesson-content .tlc p {font-size:14px; line-height:1.8;}
+.lesson-content .dg {background:#fff; border:2px solid #E5E7EB; border-radius:14px; padding:16px; margin:16px 0; overflow-x:auto;}
+.lesson-content .dgt {font-size:12px; font-weight:700; color:var(--primary); margin-bottom:12px; text-transform:uppercase; letter-spacing:.8px; text-align:center;}
+.lesson-content .tw {overflow-x:auto; -webkit-overflow-scrolling:touch; margin:14px 0;}
+.lesson-content .dt {width:100%; border-collapse:collapse; font-size:14px; min-width:430px;}
+.lesson-content .dt th {background:var(--primary); color:#fff; padding:9px 13px; text-align:left; white-space:nowrap;}
+.lesson-content .dt td {padding:9px 13px; border-bottom:1px solid #E5E7EB;}
+.lesson-content .dt tr:nth-child(even) td {background:var(--light);}
+/* na Área do Aluno o .lesson-content já é um cartão branco: os .cb ficam lisos */
+.aluno-view .lesson-content .cb {border:none; padding:0 0 4px; background:transparent;}
+.aluno-view .lesson-content .cb + .cb {border-top:1px solid #E5E7EB; padding-top:18px;}
+
 .aluno-view .lnav {display:flex; justify-content:space-between; margin:22px 0; gap:10px; flex-wrap:wrap;}
 .aluno-view .nb {padding:11px 22px; border-radius:30px; font-weight:700; font-size:14px; cursor:pointer; border:none; transition:.2s; display:inline-flex; align-items:center; gap:7px; font-family:inherit;}
 .aluno-view .nb.np {background:var(--light); color:var(--primary);}
@@ -1280,7 +1317,7 @@ const HTML_HOME = `<section class="hero">
                     <span class="stat-label">Módulos Especializados</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">340</span>
+                    <span class="stat-number">527</span>
                     <span class="stat-label">Aulas Detalhadas</span>
                 </div>
                 <div class="stat-item">
@@ -1329,7 +1366,7 @@ const HTML_HOME = `<section class="hero">
                 <span class="label">Módulos Especializados</span>
             </div>
             <div class="quick-stat-item">
-                <span class="number">340</span>
+                <span class="number">527</span>
                 <span class="label">Aulas Detalhadas</span>
             </div>
             <div class="quick-stat-item">
@@ -1352,7 +1389,7 @@ const HTML_HOME = `<section class="hero">
 <section class="modules" id="modules">
     <div class="container">
         <h2 class="section-title">O que você vai aprender <span>no curso</span></h2>
-        <p class="section-sub">17 módulos completos, com 340 aulas técnicas e práticas, desenvolvidas por especialistas com experiência em Angola.</p>
+        <p class="section-sub">17 módulos completos, com 527 aulas técnicas e práticas, desenvolvidas por especialistas com experiência em Angola.</p>
         <div class="modules-grid">
             <div class="module-card"><span class="mod-num">Módulo 1</span><h3>Fundamentos da Indústria do Petróleo e Gás</h3><p>Geologia, exploração, história em Angola, bacias, operadoras e economia do petróleo.</p></div>
             <div class="module-card"><span class="mod-num">Módulo 2</span><h3>Plataformas, Embarcações e Estruturas Offshore</h3><p>FPSOs, semi-submersíveis, SPAR, TLP, drillships, ancoragem, risers e sistemas de apoio.</p></div>
@@ -1478,7 +1515,7 @@ const HTML_HOME = `<section class="hero">
             </div>
             <div class="faq-item">
                 <h4>Como funciona o acesso vitalício? <i class="fas fa-chevron-down"></i></h4>
-                <div class="answer">Após a inscrição, terá acesso a todo o conteúdo do curso (17 módulos, 340 aulas) por tempo ilimitado. Além disso, receberá todas as atualizações futuras sem custos adicionais.</div>
+                <div class="answer">Após a inscrição, terá acesso a todo o conteúdo do curso (17 módulos, 527 aulas) por tempo ilimitado. Além disso, receberá todas as atualizações futuras sem custos adicionais.</div>
             </div>
             <div class="faq-item">
                 <h4>O curso tem certificado? <i class="fas fa-chevron-down"></i></h4>
@@ -1744,7 +1781,7 @@ const HTML_FAQ = `<section class="page-hero">
         </div>
         <div class="faq-item">
             <h3>Como funciona o acesso vitalício? <i class="fas fa-chevron-down"></i></h3>
-            <div class="answer">Após a inscrição, terá acesso a todo o conteúdo do curso (17 módulos, 340 aulas) por tempo ilimitado, sem qualquer renovação anual. Além disso, receberá todas as atualizações futuras do curso (novos conteúdos, normas, tecnologias) sem custos adicionais.</div>
+            <div class="answer">Após a inscrição, terá acesso a todo o conteúdo do curso (17 módulos, 527 aulas) por tempo ilimitado, sem qualquer renovação anual. Além disso, receberá todas as atualizações futuras do curso (novos conteúdos, normas, tecnologias) sem custos adicionais.</div>
         </div>
         <div class="faq-item">
             <h3>O curso tem certificado? <i class="fas fa-chevron-down"></i></h3>
@@ -2225,7 +2262,7 @@ function renderAluno() {
                 <div class="prog-bar"><div class="prog-fill" id="overallBarFill"></div></div>
                 <div class="prog-stats">
                     <div id="overallCount"><b>0</b> de <b>17</b> módulos aprovados</div>
-                    <div><b>340</b> aulas no curso</div>
+                    <div><b>527</b> aulas no curso</div>
                     <div><b>153h</b> de carga horária</div>
                     <div><b>70%</b> mínimo por exame</div>
                 </div>

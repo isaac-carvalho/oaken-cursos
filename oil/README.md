@@ -10,7 +10,7 @@ Plataforma de formação técnica em segurança e operações offshore, com exam
 
 Curso técnico-profissionalizante completo de **Técnico de Segurança e Operações Offshore**, pensado para o mercado angolano:
 
-- **17 módulos** · 340 aulas · 153 horas de conteúdo
+- **17 módulos** · 527 aulas · 153 horas de conteúdo
 - **655 questões** no banco, distribuídas por módulo
 - Exame por módulo com desbloqueio sequencial
 - Certificado de conclusão com código QR de verificação
