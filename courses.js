@@ -34,8 +34,6 @@ const AREAS = [
   }
 ];
 
-// cover / accent / programa / saidas vem de cursos-catalogo.js, fundidos aqui
-// para o portal poder mostrar a capa e o programa sem carregar dois ficheiros.
 const COURSES = [
   {
     "id": "oil",
@@ -51,7 +49,7 @@ const COURSES = [
     "stats": {
       "modules": 17,
       "lessons": 527,
-      "hours": 153,
+      "hours": 527,
       "questions": 655
     },
     "featured": true,
@@ -148,7 +146,7 @@ const COURSES = [
     "stats": {
       "modules": 18,
       "lessons": 141,
-      "hours": 162,
+      "hours": 152,
       "questions": 141
     },
     "cover": "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1200&q=80",
