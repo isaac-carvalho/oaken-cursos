@@ -230,11 +230,13 @@ function htmlHome() {
 <section class="pricing" id="pricing">
     <div class="container">
         <div class="pricing-box">
-            <h2 style="font-size:28px;">Quer inscrever-se?</h2>
-            <p style="margin:20px 0;font-size:16px;opacity:0.9;">O valor e as condições de pagamento deste curso são confirmados no atendimento. Fale connosco pelo WhatsApp.</p>
+            <h2 style="font-size:28px;">Invista na sua carreira</h2>
+            <span class="old-price">Antes 450.000 Kz</span>
+            <span class="new-price">350.000 Kz</span>
+            <span class="price-detail">Condições de pagamento faseado disponíveis — fale connosco</span>
             <p style="margin:10px 0;font-size:16px;opacity:0.9;"><i class="fas fa-check-circle" style="color:var(--secondary);"></i> ${STATS.lessons} aulas · ${STATS.hours} horas de formação</p>
             <p style="margin:10px 0;font-size:16px;opacity:0.9;"><i class="fas fa-check-circle" style="color:var(--secondary);"></i> Certificado de conclusão</p>
-            <a href="https://wa.me/351913388794" class="cta-hero" target="_blank"><i class="fab fa-whatsapp"></i> Pedir informações</a>
+            <a href="https://wa.me/351913388794" class="cta-hero" target="_blank"><i class="fab fa-whatsapp"></i> Garantir a minha vaga</a>
         </div>
     </div>
 </section>
