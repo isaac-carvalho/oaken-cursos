@@ -4,11 +4,25 @@ Uma sessão, um problema, até ao fim. Quando fechar, marca-se ✅ e passa-se ao
 
 ---
 
-## Em curso agora
+## Decisões à espera do dono
 
-- [ ] **Auditar os ~152 quizzes do curso de eléctrica**
-  Nunca foram verificados por ninguém. É onde o risco é maior: o curso ensina a dimensionar cabos e escolher protecções. Já se apanhou um erro de 5,7× (0,37 Ω marcado quando o cálculo dá 0,065 Ω, com a opção certa na lista marcada como errada).
-  *Ficheiro:* `electrical/index.html`
+Três quizzes da eléctrica onde **a resposta correcta não existe entre as quatro opções**. Não foram alterados.
+
+**1. Sequência de dispositivos no quadro** (módulo 6)
+A opção marcada diz `geral → DR → DPS → circuitos`. A prática da IEC 60364-5-53 é o DPS **a montante** do DR (ou o DR ser imune a surtos): `geral → DPS → DR`. Não está entre as opções.
+*Caminhos:* corrigir a opção marcada · ou reescrever a pergunta.
+
+**2. Desequilíbrio de fases** (módulo 17)
+O enunciado descreve 55/48/50 A como "desequilíbrio de 15%". Pela definição NEMA dá **7,8%** — abaixo do limite de 10% que a própria resposta invoca. Por (máx−mín)/média dá 13,7%.
+*Caminhos:* mudar os valores do enunciado para dar mesmo 15% · ou mudar a resposta.
+
+**3. Resposta certa com conselho perigoso** (módulo 3)
+A opção marcada como correcta contém "…ou **dispensar** se a terra for muito baixa" — dispensar o diferencial. Conselho perigoso dentro de uma resposta que o aluno memoriza como certa.
+*Sugestão:* reescrever o texto da opção, mantendo-a correcta mas sem a parte do "dispensar".
+
+---
+
+## Em curso agora
 
 - [ ] **Escrever os módulos 1 e 2 do Administrativo** — 44 aulas
   Perderam-se numa conversa não guardada. O curso anuncia 18 módulos e só 16 têm aulas.
@@ -59,6 +73,8 @@ O conteúdo está escrito (10 capítulos, 1.626–2.376 palavras cada, plano de 
 
 ## Feito
 
+- ✅ **Auditados os 168 quizzes da eléctrica** (commit `7fa05eb`) — 5 corrigidos, 61 confirmados por cálculo refeito ou fonte citada, 102 dependentes de juízo de campo. Os 5 erros tinham todos o mesmo padrão: a resposta certa estava na lista, marcada como errada. O mais grave trocava o Decreto 40/04 (licencia instalações) pelo 39/04 (Estatuto do Técnico). Três casos ficaram por decidir — ver secção no topo.
+- ✅ Preço do curso Administrativo — 450.000 Kz por 350.000 Kz
 - ✅ Portal com catálogo de 8 cursos, capas e 143 títulos de módulo
 - ✅ Curso offshore em página única, 17 módulos, 527 aulas, laboratório integrado na Área do Aluno
 - ✅ Curso de eléctrica reparado — nunca tinha funcionado (erro de TDZ: `const A` declarado depois do primeiro uso)
