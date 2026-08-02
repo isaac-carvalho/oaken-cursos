@@ -478,7 +478,7 @@ P('O megaohmímetro aplica alta tensão (500V/1000V) e mede a corrente de fuga: 
 P('<strong>Exemplo (Viana):</strong> DR dispara sem carga ligada. Isolamento fase-terra numa linha: 0,2MΩ → fuga=220/200.000=1,1mA. Isoladamente não dispara o DR de 30mA, mas somada a outras fugas, ultrapassa o limiar.'))+
 WB('<strong>Caso real (Luanda, 2022):</strong> um sistema de som num estádio usou cabo de 2,5mm² (80m) sem corrigir a resistência para 38°C — a queda de tensão de 9V distorceu o áudio num evento transmitido nacionalmente, com custo de substituição de 1,2 milhões AOA. <strong>Como evitar:</strong> aplicar sempre R=ρ×(L/A) com correcção de temperatura e respeitar a queda de tensão máxima (5%).')+
 IB('<strong>Normas aplicáveis:</strong> RTIEBT — Secção 5.2 (queda de tensão) · IEC 60364-5-52 · Decreto n.º 40/04.')],
-QZ('Um transformador em vazio dá 230V no secundário; em carga cai para 200V, com corrente de 50A. Qual a resistência total do circuito que causa esta queda?',['0,6Ω','30Ω','6Ω — R=ΔU/I=30/50=0,6Ω','Não é possível calcular sem mais dados'],2)),
+QZ('Um transformador em vazio dá 230V no secundário; em carga cai para 200V, com corrente de 50A. Qual a resistência total do circuito que causa esta queda?',['0,6Ω — R=ΔU/I=30/50=0,6Ω','30Ω','6Ω','Não é possível calcular sem mais dados'],0)),
 
 A('Potência Eléctrica: Cálculo em Corrente Contínua e Alternada',null,[
 CB(H('fa-gauge-high','Um Condomínio que Disparava com os Ares Condicionados')+
@@ -691,7 +691,7 @@ TL([['Reunir documentação','BI ou passaporte válido, certificado de habilita�
 ['Prova de aptidão técnica','Exame que avalia legislação, normas RTIEBT e competências práticas de instalação'],
 ['Emissão da carteira profissional','Com categoria, número de licença e validade (tipicamente 3 anos)'],
 ['Renovação periódica','Mediante comprovativo de actividade profissional e formação contínua']]))+
-QZ('Qual diploma regula especificamente o licenciamento de técnicos de instalações eléctricas em Angola?',['Lei nº 27/15','Decreto nº 40/04','Decreto nº 39-04','RTIEBT'],1)},
+QZ('Qual diploma regula especificamente o licenciamento de técnicos de instalações eléctricas em Angola?',['Lei nº 27/15','Decreto nº 40/04','Decreto nº 39-04 — Estatuto do Técnico Responsável por Instalações Eléctricas','RTIEBT'],2)},
 
 {t:'Decreto nº 39-04 — Estatuto do Técnico',html:
 CB(H('fa-user-tie','Direitos, Deveres e Responsabilidades')+
@@ -1046,7 +1046,7 @@ UL(['<strong>Vantagens:</strong> simples, seguro com DR, isola a instalação de
 '<strong>Desvantagens:</strong> depende inteiramente do DR; resistência de terra difícil de baixar em solos rochosos/secos (Huambo, Namibe)']))+
 WB('<strong>Caso real (Luanda, 2023):</strong> um técnico ligou por engano o neutro ao barramento de terra no quadro TT — a carcaça ficou ao potencial da fase (220V) apesar do DR de 30mA disparar durante o defeito. <strong>Como evitar:</strong> nunca ligar N ao PE num sistema TT — mantê-los sempre separados.')+
 IB('<strong>Normas aplicáveis:</strong> RTIEBT — Parte 3.2 e Parte 4.1 · IEC 60364-4-41.')],
-QZ('Uma residência no Huambo tem resistência de terra medida de 50 Ω (solo rochoso e seco). A corrente de defeito máxima (220V) é suficiente para disparar um DR de 30mA?',['Não — 220/50=4,4A, muito superior a 30mA, dispara sem problema','Sim, mas é preciso reduzir R_T para menos de 1.467 Ω','A corrente de defeito é insuficiente porque R_T é muito baixa','O DR nunca dispara com resistência de terra alta'],0)),
+QZ('Uma residência no Huambo tem resistência de terra medida de 50 Ω (solo rochoso e seco). A corrente de defeito máxima (220V) é suficiente para disparar um DR de 30mA?',['Sim — 220/50=4,4A, muito superior a 30mA, o DR dispara sem problema','Não, seria preciso reduzir R_T para menos de 1.467 Ω','A corrente de defeito é insuficiente porque R_T é muito baixa','O DR nunca dispara com resistência de terra alta'],0)),
 
 A('Esquemas de Ligação à Terra: Sistema TN (TN-C, TN-S, TN-C-S)',null,[
 CB(H('fa-network-wired','O PEN que Poupa um Condutor')+
@@ -1273,7 +1273,7 @@ TB(['Código','Protecção','Aplicação típica em Angola'],[
 ['<strong>IP 65</strong>','Estanque ao pó, jactos de água','Exteriores expostos à chuva'],
 ['<strong>IP 67/68</strong>','Imersão temporária/permanente','Piscinas, instalações subaquáticas']])+
 WB('<strong>Erro muito comum em Angola:</strong> instalar tomadas IP 20 (interior seco) em varandas, garagens e áreas exteriores cobertas. Quando chove com vento, a água penetra e provoca curto-circuito. A RTIEBT exige <strong>IP 44 no mínimo</strong> em zonas sujeitas a humidade ou salpicos, e <strong>IP 65</strong> em exteriores expostos.'))],
-QZ('Que grau IP mínimo exige a RTIEBT para uma tomada instalada num jardim, exposta à chuva?',['IP 20','IP 44','IP 65','O IP não se aplica a tomadas'],2)),
+QZ('Que grau IP mínimo exige a RTIEBT para uma tomada instalada num jardim, exposta à chuva?',['IP 20','IP 44 (IPX4 — RTIEBT 512.2 para exposição à chuva)','IP 65','O IP não se aplica a tomadas'],1)),
 
 A('Categorias de Tensão em Angola',null,[
 CB(H('fa-bolt','Como Angola Classifica os Níveis de Tensão')+
@@ -3816,7 +3816,7 @@ TL([['Obter a licença profissional','Reunir a documentação e submeter o reque
 ['Manter-se actualizado','Acompanhar as publicações do MINEA e as revisões das normas'],
 ['Investir em instrumentos','Megóhmetro, telurómetro e, mais tarde, câmara termográfica — abrem serviços de maior valor']])+
 HI('<strong>Uma palavra final:</strong> o mercado angolano precisa de técnicos competentes, licenciados e honestos. Cada instalação que executar correctamente é uma casa que não arde, uma família que não é electrocutada, um negócio que não pára. É uma profissão com responsabilidade real — e é exactamente por isso que vale a pena exercê-la bem.'))],
-QZ('O certificado do Oaken Electrical substitui a licença do MINEA?',['Sim, substitui integralmente','Não — comprova a formação; a habilitação legal exige registo no MINEA conforme o Decreto nº 40/04','Sim, mas só em Luanda','O MINEA não emite licenças'],1))
+QZ('O certificado do Oaken Electrical substitui a licença do MINEA?',['Sim, substitui integralmente','Não — comprova a formação; a habilitação legal exige registo no MINEA conforme o Decreto nº 39/04 (Estatuto do Técnico Responsável)','Sim, mas só em Luanda','O MINEA não emite licenças'],1))
 ]};
 
 const COURSE = [M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,M13,M14,M15,M16,M17,M18];
