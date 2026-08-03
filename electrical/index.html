@@ -1026,9 +1026,9 @@ TB(['Tipo','Exemplos em Angola','Tensão','Requisitos principais'],[
 ['<strong>Locais especiais</strong>','Piscinas, cozinhas industriais, postos de combustível','220/380 V','DR 30mA, distâncias de segurança, IP adequado']])+
 CB(H('fa-house','Residencial em Detalhe')+
 P('Potência contratada geralmente até 13,8 kVA (63 A). Circuitos mínimos: iluminação, tomadas gerais, cozinha, um por AC &gt;2 kW, chuveiro. Em banheiros, tomadas e interruptores a ≥0,60 m da zona de banho, com DR de 30 mA.'))+
-WB('<strong>Caso real (Luanda, 2023):</strong> uma lavandaria industrial foi projectada como residencial, com DR de 30 mA em circuitos de motores de 5 kW — disparava a cada arranque. <strong>Como evitar:</strong> para motores, dispensar o DR se a resistência de terra for muito baixa (&lt;2 Ω), ou usar DR selectivo (tipo S) ou "super-imune" (SI).')+
+WB('<strong>Caso real (Luanda, 2023):</strong> uma lavandaria industrial foi projectada como residencial, com DR de 30 mA em circuitos de motores de 5 kW — disparava a cada arranque. <strong>Como evitar:</strong> para motores, usar DR selectivo (tipo S) ou "super-imune" (SI) de 30 mA. Nunca dispensar o diferencial: a terra baixa reduz a tensão de contacto mas não substitui a protecção contra contactos directos.')+
 IB('<strong>Normas aplicáveis:</strong> RTIEBT — Parte 3 (classificação) e Parte 7 (locais especiais).')],
-QZ('Uma lavandaria industrial com motores de 5 kW tem DRs de 30mA que disparam a cada arranque. Qual a causa e a solução mais provável?',['O DR está avariado — substituir por disjuntor comum','Sensibilidade inadequada para motores — usar DR selectivo (S) ou dispensar se a terra for muito baixa','A instalação deve ser trifásica','Os motores estão sobrecarregados'],1)),
+QZ('Uma lavandaria industrial com motores de 5 kW tem DRs de 30mA que disparam a cada arranque. Qual a causa e a solução mais provável?',['O DR está avariado — substituir por disjuntor comum','Sensibilidade inadequada para motores — usar DR selectivo (tipo S) ou super-imune (SI), mantendo sempre o DR','A instalação deve ser trifásica','Os motores estão sobrecarregados'],1)),
 
 A('Esquemas de Ligação à Terra: Sistema TT',null,[
 CB(H('fa-earth-africa','O Sistema Padrão de Angola')+
@@ -1551,7 +1551,7 @@ CB(H('fa-list','Tipos de Selectividade')+
 UL(['<strong>Amperimétrica:</strong> disjuntor a montante tem corrente de disparo magnético bem superior ao de jusante',
 '<strong>Cronométrica:</strong> DR selectivo (tipo S, 300mA) tem retardo (~0,1s), dando tempo ao DR de 30mA (rápido) para disparar primeiro']))+
 P('<strong>Exemplo:</strong> disjuntor de 16A curva C dispara magneticamente a 80-160A; disjuntor geral de 63A curva C dispara a 315-630A. Um curto de 200A dispara só o de 16A — selectividade garantida.')+
-WB('<strong>Caso real (Luanda, 2023):</strong> num hospital, DRs de 30mA em motores de bombagem disparavam a cada arranque; a troca por DR selectivo (tipo S) manteve o problema porque a sensibilidade continuava 30mA. <strong>Como evitar:</strong> para motores, usar DR "super-imune" (SI) de 30mA para pessoas, ou dispensar o DR confiando no relé térmico + terra muito baixa (&lt;2Ω), reservando o DR de 300mA para incêndio.')+
+WB('<strong>Caso real (Luanda, 2023):</strong> num hospital, DRs de 30mA em motores de bombagem disparavam a cada arranque; a troca por DR selectivo (tipo S) manteve o problema porque a sensibilidade continuava 30mA. <strong>Como evitar:</strong> para motores, usar DR "super-imune" (SI) de 30mA para pessoas, mantendo sempre o DR de 30 mA para protecção de pessoas, e reservando o de 300 mA para protecção contra incêndio.')+
 IB('<strong>Normas aplicáveis:</strong> RTIEBT — Parte 4.2.5 · IEC 60364-4-43 · tabelas de selectividade dos fabricantes (ABB, Siemens, Schneider).')],
 QZ('Um curto-circuito de 400A ocorre no circuito B (disjuntor 32A, disparo magnético 160-320A). O geral A (100A) dispara a partir de 500A. Qual disjuntor actua?',['Apenas A','Apenas B — selectividade garantida','Ambos ao mesmo tempo','Nenhum'],1)),
 
@@ -2241,7 +2241,7 @@ UL(['✅ <strong>Módulo 1:</strong> grandezas eléctricas, Lei de Ohm, circuito
 CB(H('fa-forward','O Que Vem a Seguir — Fase 2')+
 P('Os Módulos 7 a 12 abordam as <strong>instalações comerciais e prediais</strong>: cargas comerciais, quadros de distribuição, SPDA, eficiência energética, locais especiais e projecto comercial completo. O nível de complexidade sobe — mas a base que construiu na Fase 1 sustenta tudo o que vem a seguir.')+
 IB('<strong>Antes de avançar:</strong> se algum conceito da Fase 1 ainda lhe parece pouco claro, volte atrás e reveja. Os módulos seguintes assumem que estes fundamentos estão consolidados. Não há vergonha em rever — há risco em avançar sem base.'))],
-QZ('Qual é a sequência correcta de dispositivos num quadro residencial em Angola?',['DR → disjuntor geral → DPS → circuitos','Disjuntor geral → DR → DPS → circuitos','DPS → DR → disjuntor geral → circuitos','A ordem é indiferente'],1))
+QZ('Qual é a sequência correcta de dispositivos num quadro residencial em Angola?',['DR → disjuntor geral → DPS → circuitos','Disjuntor geral → DPS → DR → circuitos','DPS → DR → disjuntor geral → circuitos','A ordem é indiferente'],1))
 ]};
 
 /* ═══════════════ MÓDULOS 7 A 12 — FASE 2: COMERCIAL E PREDIAL ═══════════════ */
@@ -3547,7 +3547,7 @@ TL([['Desligar o motor','Aplicar LOTO'],
 ['Medir corrente e isolamento','Registar os valores']]))+
 WB('<strong>Caso real (Luanda, 2024):</strong> um técnico lubrificou em demasia um motor, causando sobreaquecimento e queima dos rolamentos. <strong>Como evitar:</strong> seguir as recomendações do fabricante quanto à quantidade e periodicidade da lubrificação.')+
 IB('<strong>Normas aplicáveis:</strong> IEC 60034 (motores eléctricos) · RTIEBT — Parte 6 (ensaios de verificação).')],
-QZ('Um motor de 30 kW apresenta correntes de 55A, 48A e 50A nas três fases (desequilíbrio de 15%). Este valor é aceitável?',['Sim, está dentro do normal','Não — o limite é 10% e deve investigar-se a causa','Sim, desde que o motor não sobreaqueça','Não é possível avaliar sem a tensão'],1)),
+QZ('Um motor de 30 kW apresenta correntes de 46A, 38A e 36A nas três fases (desequilíbrio de 15%). Este valor é aceitável?',['Sim, está dentro do normal','Não — o limite é 10% e deve investigar-se a causa','Sim, desde que o motor não sobreaqueça','Não é possível avaliar sem a tensão'],1)),
 
 A('Manutenção de Contactores, Relés e Componentes de Comando',null,[
 CB(H('fa-microchip','A Bobina Queimada')+
