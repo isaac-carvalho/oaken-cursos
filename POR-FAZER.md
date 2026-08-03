@@ -4,27 +4,10 @@ Uma sessão, um problema, até ao fim. Quando fechar, marca-se ✅ e passa-se ao
 
 ---
 
-## Decisões à espera do dono
-
-Três quizzes da eléctrica onde **a resposta correcta não existe entre as quatro opções**. Não foram alterados.
-
-**1. Sequência de dispositivos no quadro** (módulo 6)
-A opção marcada diz `geral → DR → DPS → circuitos`. A prática da IEC 60364-5-53 é o DPS **a montante** do DR (ou o DR ser imune a surtos): `geral → DPS → DR`. Não está entre as opções.
-*Caminhos:* corrigir a opção marcada · ou reescrever a pergunta.
-
-**2. Desequilíbrio de fases** (módulo 17)
-O enunciado descreve 55/48/50 A como "desequilíbrio de 15%". Pela definição NEMA dá **7,8%** — abaixo do limite de 10% que a própria resposta invoca. Por (máx−mín)/média dá 13,7%.
-*Caminhos:* mudar os valores do enunciado para dar mesmo 15% · ou mudar a resposta.
-
-**3. Resposta certa com conselho perigoso** (módulo 3)
-A opção marcada como correcta contém "…ou **dispensar** se a terra for muito baixa" — dispensar o diferencial. Conselho perigoso dentro de uma resposta que o aluno memoriza como certa.
-*Sugestão:* reescrever o texto da opção, mantendo-a correcta mas sem a parte do "dispensar".
-
----
-
 ## Em curso agora
 
 - [ ] **Escrever os módulos 1 e 2 do Administrativo** — 44 aulas
+  **10 de 22 do módulo 1 já escritas** (commits `c2042ed` e `86b0ba7`, em `administrativo/_import/mod01.js`). Retomar a partir da aula 1.11. O agente caiu duas vezes por limite de sessão.
   Perderam-se numa conversa não guardada. O curso anuncia 18 módulos e só 16 têm aulas.
   *Atenção:* o curso não tem as classes `.quiz`, `.wb`, `.ib` nem a função `cq()` — são do offshore. Usar só as classes que existem, ou acrescentá-las ao CSS/JS do curso.
 
@@ -73,7 +56,7 @@ O conteúdo está escrito (10 capítulos, 1.626–2.376 palavras cada, plano de 
 
 ## Feito
 
-- ✅ **Auditados os 168 quizzes da eléctrica** (commit `7fa05eb`) — 5 corrigidos, 61 confirmados por cálculo refeito ou fonte citada, 102 dependentes de juízo de campo. Os 5 erros tinham todos o mesmo padrão: a resposta certa estava na lista, marcada como errada. O mais grave trocava o Decreto 40/04 (licencia instalações) pelo 39/04 (Estatuto do Técnico). Três casos ficaram por decidir — ver secção no topo.
+- ✅ **Auditados os 168 quizzes da eléctrica** (commits `7fa05eb` e `2ad22be`) — 5 corrigidos na auditoria, mais 3 resolvidos por decisão do dono, 61 confirmados por cálculo refeito ou fonte citada, 102 dependentes de juízo de campo. Os erros tinham todos o mesmo padrão: a resposta certa estava na lista, marcada como errada. O mais grave trocava o Decreto 40/04 (licencia instalações) pelo 39/04 (Estatuto do Técnico). As 3 decisões: DPS passou a montante do DR (IEC 60364-5-53); correntes do desequilíbrio trocadas para 46/38/36 A, que dão mesmo 15%; e retirado o conselho de "dispensar o DR", que aparecia no quiz e em mais dois sítios no texto das aulas.
 - ✅ Preço do curso Administrativo — 450.000 Kz por 350.000 Kz
 - ✅ Portal com catálogo de 8 cursos, capas e 143 títulos de módulo
 - ✅ Curso offshore em página única, 17 módulos, 527 aulas, laboratório integrado na Área do Aluno
