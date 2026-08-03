@@ -862,6 +862,387 @@ const MOD01_LESSONS = [
 <div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Conservação e apresentação de documentos</div><blockquote>Os documentos de suporte devem ser conservados pelo prazo legal e apresentados em caso de fiscalização. A folha de conciliação assinada e arquivada é elemento de prova do controlo interno exercido.</blockquote></div>
 <div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Apropriação de valores da empresa</div><blockquote>A apropriação de valores da entidade empregadora constitui infracção disciplinar grave nos termos da <strong>Lei n.º 12/23, de 27 de Dezembro de 2023</strong>, sem prejuízo da responsabilidade criminal. O procedimento disciplinar deve respeitar as garantias legais — a acusação precipitada sem prova documental expõe a empresa.</blockquote></div>
 <div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Custos aceites fiscalmente</div><blockquote>Só são aceites como custo os gastos devidamente documentados e relacionados com a actividade. Aceitar um documento sem os elementos exigidos transfere o custo para a empresa em sede de imposto — confirme os requisitos junto do contabilista.</blockquote></div>
+</div>` },
+
+{ title: "1.8 Estrutura organizacional: tipos e critérios de escolha",
+  content: `<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2>
+<ul>
+<li>Identificar os tipos de estrutura organizacional e as vantagens e custos de cada um.</li>
+<li>Relacionar a estrutura escolhida com a dimensão, a dispersão geográfica e a actividade da empresa.</li>
+<li>Reconhecer os sinais de que uma estrutura deixou de servir a empresa.</li>
+<li>Elaborar uma proposta fundamentada de reorganização de um escritório.</li>
+</ul></div>
+
+<div class="cb"><h2><i class="fas fa-building"></i> Cenário Real num Escritório Angolano</h2>
+<p>A <strong>Nzinga Serviços, Lda.</strong> começou em 2016 como uma empresa de limpeza e manutenção com 14 trabalhadores em Luanda. Em 2024 tinha 210 trabalhadores, contratos com quatro bancos, dois hospitais e um centro comercial em Talatona, e uma delegação em Benguela com 38 pessoas.</p>
+<p>A estrutura, porém, nunca mudou: continuavam todos a reportar directamente ao sócio-gerente. Ele aprovava a compra de detergente, autorizava férias, decidia escalas e falava com os clientes. A amplitude de controlo era de <strong>onze pessoas em reporte directo</strong>, algumas em Benguela.</p>
+<p>As consequências eram mensuráveis. O prazo médio de aprovação de uma requisição de material era de <strong>6,4 dias</strong>; em 2019 tinha sido de 1 dia. Em Março, uma equipa ficou dois dias sem produtos num hospital porque a requisição estava à espera de assinatura enquanto o gerente estava em Benguela. O cliente aplicou uma penalização contratual de <strong>1.750.000 Kz</strong>. E a delegação de Benguela funcionava, na prática, como uma empresa à parte sem regras escritas.</p>
+<p>A reorganização criou três unidades operacionais com responsável próprio (Bancos, Saúde, Retalho), uma delegação com autonomia definida e um serviço administrativo central. O gerente passou de 11 para 5 reportes directos, e o prazo de aprovação de requisições caiu para <strong>1,2 dias</strong>.</p></div>
+
+<div class="cb"><h2><i class="fas fa-sitemap"></i> 1. Os tipos de estrutura</h2>
+<div class="tw"><table class="dt">
+<tr><th>Tipo</th><th>Agrupamento</th><th>Serve bem</th><th>Custa</th></tr>
+<tr><td>Simples</td><td>Todos reportam ao dono</td><td>Até 15 a 20 pessoas, num local</td><td>Não escala: o dono torna-se o estrangulamento</td></tr>
+<tr><td>Funcional</td><td>Por especialidade: financeiro, RH, comercial, produção</td><td>Empresa de dimensão média, actividade homogénea</td><td>Departamentos que não falam entre si</td></tr>
+<tr><td>Divisional</td><td>Por produto, cliente ou zona geográfica</td><td>Actividades ou mercados muito diferentes; dispersão geográfica</td><td>Duplicação de funções de apoio</td></tr>
+<tr><td>Matricial</td><td>Duplo reporte: funcional e por projecto</td><td>Empresas de projecto — construção, consultoria, engenharia</td><td>Viola a unidade de comando; exige regras escritas de precedência</td></tr>
+<tr><td>Por processos</td><td>Por circuito ponta a ponta</td><td>Onde o processo atravessa muitos departamentos</td><td>Difícil de implantar sem cultura de medição</td></tr>
+</table></div>
+<p>Na prática angolana, a maioria das PME está numa estrutura simples que já não serve e ainda não passou a funcional. A transição é adiada porque exige delegar — e delegar exige confiar em procedimentos escritos, não em pessoas.</p></div>
+
+<div class="cb"><h2><i class="fas fa-ruler-combined"></i> 2. Os critérios de escolha</h2>
+<ul>
+<li><strong>Dimensão.</strong> Até cerca de 20 pessoas, uma estrutura simples funciona. Acima disso, o dono deixa de conseguir supervisionar e a informação começa a perder-se.</li>
+<li><strong>Dispersão geográfica.</strong> Em Angola este critério pesa mais do que noutros países. Uma delegação em Benguela ou uma obra no Kwanza-Sul não se gere com decisões diárias tomadas em Luanda: as distâncias e o tempo de deslocação impõem alguma forma divisional.</li>
+<li><strong>Diversidade da actividade.</strong> Se a empresa faz limpeza hospitalar e manutenção de <em>data centers</em>, os requisitos técnicos, os clientes e os riscos são diferentes: agrupar por cliente ou por serviço faz sentido.</li>
+<li><strong>Ritmo de mudança.</strong> Actividades estáveis toleram estruturas rígidas; actividades de projecto exigem estruturas que se reconfigurem.</li>
+<li><strong>Amplitude de controlo praticável.</strong> Trabalho administrativo variado: 5 a 8 reportes. Trabalho padronizado e no mesmo espaço: até 15.</li>
+</ul>
+<div class="fbox"><div class="f">Níveis hierárquicos ≈ log(N.º de trabalhadores) ÷ log(Amplitude média)</div><div class="fd">Estimativa grosseira do número de níveis necessários; serve para detectar excesso de hierarquia</div></div>
+<p>Na Nzinga, com 210 trabalhadores e amplitude média de 8: log(210) ÷ log(8) ≈ 2,32 ÷ 0,90 = <strong>2,6</strong>, ou seja cerca de <strong>3 níveis</strong> — direcção, responsáveis de unidade, encarregados. A empresa tinha 1 nível e meio, o que explicava o congestionamento; se tivesse 5 níveis, o problema seria o oposto, com decisões a demorar semanas a subir e a descer.</p></div>
+
+<div class="cb"><h2><i class="fas fa-triangle-exclamation"></i> 3. Sete sinais de que a estrutura deixou de servir</h2>
+<ol>
+<li>Decisões de rotina esperam pela mesma pessoa — e essa pessoa viaja.</li>
+<li>O mesmo trabalho é feito em dois sítios sem que ninguém tenha decidido isso.</li>
+<li>Existem tarefas que toda a gente reconhece como necessárias e ninguém executa.</li>
+<li>Um cliente ou um fornecedor não sabe com quem falar e liga ao gerente.</li>
+<li>A informação chega à direcção sistematicamente tarde ou distorcida.</li>
+<li>Há pessoas a receber ordens de duas chefias e a escolher qual seguir.</li>
+<li>Quando alguém sai ou adoece, um processo pára por completo.</li>
+</ol>
+<div class="hi">Três ou mais sinais em simultâneo justificam uma proposta escrita de reorganização. Menos do que isso resolve-se normalmente com uma matriz de responsabilidades — que custa uma reunião, e não uma reestruturação.</div></div>
+
+<div class="cb"><h2><i class="fas fa-calculator"></i> 4. Exemplo trabalhado: quantificar o custo da estrutura errada</h2>
+<p>Argumentar reorganização com palavras raramente convence. Com números, convence quase sempre.</p>
+<p>Na Nzinga mediram-se três efeitos ao longo de seis meses:</p>
+<div class="tw"><table class="dt">
+<tr><th>Efeito</th><th>Cálculo</th><th>Custo (Kz)</th></tr>
+<tr><td>Penalizações contratuais por falha de material</td><td>3 ocorrências × 1.750.000</td><td>5.250.000</td></tr>
+<tr><td>Horas de espera de equipas paradas</td><td>420 h × 2.100 Kz/h</td><td>882.000</td></tr>
+<tr><td>Tempo do gerente em aprovações de rotina</td><td>6 h/semana × 26 semanas × 18.000 Kz/h</td><td>2.808.000</td></tr>
+<tr><td><strong>Total em seis meses</strong></td><td>—</td><td><strong>8.940.000</strong></td></tr>
+</table></div>
+<p>Anualizado: cerca de <strong>17.880.000 Kz</strong>. O custo anual de três responsáveis de unidade, com encargos, foi estimado em 14.400.000 Kz.</p>
+<div class="hi">A reorganização pagava-se a si própria com uma folga de cerca de 3.480.000 Kz por ano — e isto sem contar com a receita perdida por não conseguir aceitar novos contratos. Foi este quadro, e não o organigrama bonito, que fez a direcção decidir.</div></div>
+
+<div class="dg"><div class="dgt">Da estrutura simples à estrutura divisional</div>
+<svg viewBox="0 0 620 250" xmlns="http://www.w3.org/2000/svg">
+<text x="150" y="20" font-size="12" fill="#dc2626" text-anchor="middle" font-weight="bold">ANTES — 11 reportes directos</text>
+<rect x="110" y="32" width="80" height="30" rx="5" fill="#0B1F3A"/>
+<text x="150" y="52" font-size="11" fill="#ffffff" text-anchor="middle">GERENTE</text>
+<g stroke="#dc2626" stroke-width="1.5">
+<line x1="150" y1="62" x2="30" y2="100"/><line x1="150" y1="62" x2="54" y2="100"/><line x1="150" y1="62" x2="78" y2="100"/>
+<line x1="150" y1="62" x2="102" y2="100"/><line x1="150" y1="62" x2="126" y2="100"/><line x1="150" y1="62" x2="150" y2="100"/>
+<line x1="150" y1="62" x2="174" y2="100"/><line x1="150" y1="62" x2="198" y2="100"/><line x1="150" y1="62" x2="222" y2="100"/>
+<line x1="150" y1="62" x2="246" y2="100"/><line x1="150" y1="62" x2="270" y2="100"/>
+</g>
+<text x="150" y="120" font-size="11" fill="#dc2626" text-anchor="middle">11 equipas · aprovação em 6,4 dias</text>
+<line x1="305" y1="20" x2="305" y2="230" stroke="#64748B" stroke-width="2" stroke-dasharray="5,5"/>
+<text x="465" y="20" font-size="12" fill="#16a34a" text-anchor="middle" font-weight="bold">DEPOIS — 5 reportes directos</text>
+<rect x="425" y="32" width="80" height="30" rx="5" fill="#0B1F3A"/>
+<text x="465" y="52" font-size="11" fill="#ffffff" text-anchor="middle">GERENTE</text>
+<g stroke="#16a34a" stroke-width="1.5">
+<line x1="465" y1="62" x2="350" y2="95"/><line x1="465" y1="62" x2="407" y2="95"/><line x1="465" y1="62" x2="465" y2="95"/>
+<line x1="465" y1="62" x2="523" y2="95"/><line x1="465" y1="62" x2="580" y2="95"/>
+</g>
+<rect x="322" y="95" width="56" height="26" rx="4" fill="#FF6B00"/><text x="350" y="112" font-size="10" fill="#fff" text-anchor="middle">Bancos</text>
+<rect x="379" y="95" width="56" height="26" rx="4" fill="#FF6B00"/><text x="407" y="112" font-size="10" fill="#fff" text-anchor="middle">Saúde</text>
+<rect x="437" y="95" width="56" height="26" rx="4" fill="#FF6B00"/><text x="465" y="112" font-size="10" fill="#fff" text-anchor="middle">Retalho</text>
+<rect x="495" y="95" width="56" height="26" rx="4" fill="#00A3A1"/><text x="523" y="112" font-size="10" fill="#fff" text-anchor="middle">Benguela</text>
+<rect x="552" y="95" width="56" height="26" rx="4" fill="#00A3A1"/><text x="580" y="112" font-size="10" fill="#fff" text-anchor="middle">Admin.</text>
+<text x="465" y="145" font-size="11" fill="#16a34a" text-anchor="middle">aprovação em 1,2 dias</text>
+<text x="310" y="200" font-size="12" fill="#0B1F3A" text-anchor="middle" font-weight="bold">A estrutura não é um desenho: é o tempo que uma decisão demora</text>
+<text x="310" y="225" font-size="12" fill="#0B1F3A" text-anchor="middle">Custo medido da estrutura errada: 17.880.000 Kz/ano</text>
+</svg></div>
+
+<div class="cb"><h2><i class="fas fa-clipboard-check"></i> Procedimento Prático — propor uma reorganização</h2>
+<div class="tl">
+<div class="tli"><div class="tld">1</div><div class="tlc"><h4>Desenhar a estrutura real, não a oficial</h4><p>Pergunte a cada pessoa a quem pede autorização e a quem entrega o trabalho. O desenho que sai é quase sempre diferente do organigrama da parede.</p></div></div>
+<div class="tli"><div class="tld">2</div><div class="tlc"><h4>Medir tempos de decisão</h4><p>Escolha três decisões de rotina — requisição, contratação, aprovação de pagamento — e meça o tempo entre pedido e resposta durante um mês.</p></div></div>
+<div class="tli"><div class="tld">3</div><div class="tlc"><h4>Quantificar o custo do atraso</h4><p>Penalizações, horas paradas, tempo de chefia em aprovações de rotina. Sem esta secção a proposta é uma opinião.</p></div></div>
+<div class="tli"><div class="tld">4</div><div class="tlc"><h4>Propor duas alternativas, não uma</h4><p>Uma mínima (limites de decisão e matriz de responsabilidades, sem criar postos) e uma estrutural. Apresente o custo e o efeito esperado de cada uma.</p></div></div>
+<div class="tli"><div class="tld">5</div><div class="tlc"><h4>Definir o faseamento</h4><p>Reorganizar tudo de uma vez paralisa a empresa. Comece por uma unidade, meça três meses, depois estenda.</p></div></div>
+<div class="tli"><div class="tld">6</div><div class="tlc"><h4>Actualizar organigrama, descrições de funções e matriz</h4><p>Uma reorganização que não chega aos documentos desfaz-se em dois meses.</p></div></div>
+</div></div>
+
+<div class="cb"><h2><i class="fas fa-triangle-exclamation"></i> Erro Comum e Consequência Real</h2>
+<p>Uma empresa de comércio de materiais em Viana cresceu de 25 para 90 trabalhadores em três anos e criou quatro departamentos com responsáveis. Fez o organigrama, afixou-o na parede e comunicou por circular. Não alterou, porém, os <strong>limites de decisão</strong>: todas as compras, todos os pagamentos e todas as contratações continuaram a exigir a assinatura do sócio-gerente.</p>
+<p>O resultado foi o pior dos dois mundos: passou a haver quatro responsáveis com o custo salarial correspondente — cerca de <strong>19.200.000 Kz por ano</strong> — e nenhum poder real. Os departamentos queixavam-se de não decidir nada, o gerente continuava sobrecarregado, e em nove meses três dos quatro responsáveis saíram. A empresa gastou o dinheiro da estrutura e não comprou nenhuma das suas vantagens.</p>
+<div class="hi">Como evitar: uma reorganização faz-se em <strong>três documentos ao mesmo tempo</strong> — organigrama, descrições de funções e limites de decisão com valores em kwanzas. Alterar só o primeiro é mudar o desenho e manter o problema. Se a direcção não estiver disposta a delegar autoridade real, não vale a pena criar os lugares.</div></div>
+
+<div class="cb"><h2><i class="fas fa-scale-balanced"></i> Obrigações e Referências Aplicáveis</h2>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Alteração de funções e categoria</div><blockquote>Alterações de funções decorrentes de reorganização devem respeitar a categoria e as condições do contrato, nos termos da <strong>Lei Geral do Trabalho (Lei n.º 12/23, de 27 de Dezembro de 2023)</strong>. Uma reorganização não é fundamento automático para alterar unilateralmente condições essenciais.</blockquote></div>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Informação aos trabalhadores</div><blockquote>As alterações relevantes na organização do trabalho devem ser comunicadas aos trabalhadores. Onde exista representação dos trabalhadores, verifique os deveres de informação e consulta aplicáveis.</blockquote></div>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Poderes de representação da sociedade</div><blockquote>Criar um responsável de unidade não lhe confere poderes para obrigar a sociedade. Para que possa assinar contratos ou ordens de pagamento perante terceiros, é necessária delegação formal nos termos do pacto social — confirme com o apoio jurídico da empresa.</blockquote></div>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Actualização dos registos</div><blockquote>Alterações à gerência ou aos poderes de representação inscritos devem ser levadas ao registo comercial. Uma alteração interna não produz efeitos perante terceiros enquanto não for registada.</blockquote></div>
+</div>` },
+
+{ title: "1.9 Organigramas: ler, desenhar e manter actualizado",
+  content: `<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2>
+<ul>
+<li>Ler um organigrama e extrair dele linhas de autoridade, amplitude de controlo e níveis hierárquicos.</li>
+<li>Desenhar organigramas verticais, horizontais e circulares com as convenções correctas.</li>
+<li>Distinguir relações hierárquicas de relações funcionais e de apoio (linha e <em>staff</em>).</li>
+<li>Manter o organigrama actualizado e utilizá-lo como instrumento de trabalho, não como decoração.</li>
+</ul></div>
+
+<div class="cb"><h2><i class="fas fa-building"></i> Cenário Real num Escritório Angolano</h2>
+<p>A <strong>Clínica Kilamba Saúde</strong>, com 62 trabalhadores, foi visitada por um cliente institucional que pretendia contratar assistência médica para os seus 300 empregados. Entre os documentos pedidos estava o organigrama da clínica.</p>
+<p>O que existia era um desenho feito em 2019, com 5 caixas, feito num programa de apresentações. Metade dos nomes já não trabalhava lá, o laboratório — criado em 2022 — não aparecia, e a direcção de enfermagem estava representada como reportando ao director clínico, quando na prática reportava à administração. O cliente devolveu o documento e pediu "o organigrama actual, assinado".</p>
+<p>O técnico administrativo levou onze dias a reconstruí-lo, porque teve de perguntar caso a caso quem reportava a quem — e descobriu, no processo, que <strong>quatro pessoas não sabiam ao certo quem era a sua chefia directa</strong> e que a técnica de facturação recebia instruções da recepção, da direcção clínica e da administração.</p>
+<p>O contrato acabou por ser assinado, com um mês de atraso. Mas o valor real do exercício foi outro: o levantamento revelou três reportes duplos e uma função — controlo de material clínico — sem responsável definido, exactamente a mesma patologia que o módulo já descreveu noutros contextos.</p></div>
+
+<div class="cb"><h2><i class="fas fa-diagram-project"></i> 1. O que um organigrama mostra — e o que não mostra</h2>
+<p>Um organigrama é a representação gráfica da estrutura formal. Mostra quatro coisas:</p>
+<ul>
+<li><strong>Órgãos e unidades</strong> que existem — cada caixa é uma unidade ou um posto, não uma pessoa.</li>
+<li><strong>Linhas de autoridade</strong> — quem reporta a quem.</li>
+<li><strong>Níveis hierárquicos</strong> — a que altura está cada unidade.</li>
+<li><strong>Amplitude de controlo</strong> — quantas unidades dependem de cada chefia.</li>
+</ul>
+<p>E não mostra: a influência real, a qualidade da comunicação, a carga de trabalho, nem os circuitos informais por onde metade das coisas acontece. Quem confunde o organigrama com a realidade da empresa engana-se sempre.</p>
+<div class="hi">Regra de desenho fundamental: as caixas representam <strong>funções</strong>, não pessoas. O nome da pessoa aparece por baixo do nome da função, em letra mais pequena. Assim, quando alguém sai, altera-se uma linha e não se refaz o documento.</div></div>
+
+<div class="cb"><h2><i class="fas fa-pen-ruler"></i> 2. Tipos de organigrama e convenções</h2>
+<div class="tw"><table class="dt">
+<tr><th>Tipo</th><th>Como se lê</th><th>Quando usar</th></tr>
+<tr><td>Vertical (clássico)</td><td>Autoridade de cima para baixo</td><td>Uso geral; é o que as entidades e clientes esperam ver</td></tr>
+<tr><td>Horizontal</td><td>Autoridade da esquerda para a direita</td><td>Estruturas com muitos níveis, que não cabem em altura</td></tr>
+<tr><td>Circular</td><td>Direcção no centro, níveis em anéis</td><td>Comunicação interna; suaviza a leitura hierárquica</td></tr>
+<tr><td>Funcional</td><td>Destaca funções e não pessoas</td><td>Documentação de processos e manuais de qualidade</td></tr>
+</table></div>
+<p>Convenções que não se violam:</p>
+<ul>
+<li><strong>Linha cheia</strong> = autoridade hierárquica (dá ordens, avalia, aprova férias).</li>
+<li><strong>Linha tracejada</strong> = relação funcional ou de apoio (orienta tecnicamente, mas não é a chefia). É a linha certa para representar o contabilista externo ou o apoio jurídico.</li>
+<li>Unidades de <strong><em>staff</em></strong> (secretariado da direcção, qualidade, jurídico) desenham-se lateralmente, ligadas à unidade que apoiam.</li>
+<li>Unidades do <strong>mesmo nível</strong> desenham-se à mesma altura. Colocar um departamento mais acima porque a chefia é mais antiga é o erro mais comum e cria conflito.</li>
+<li>Cada caixa leva a <strong>designação da unidade ou do posto</strong>; o nome da pessoa é secundário.</li>
+<li>O documento leva <strong>data de elaboração e versão</strong>. Um organigrama sem data não vale nada, porque ninguém sabe se está em vigor.</li>
+</ul></div>
+
+<div class="cb"><h2><i class="fas fa-code-branch"></i> 3. Linha e <em>staff</em>: a distinção que evita conflitos</h2>
+<p>Numa empresa angolana média, três funções costumam ser mal colocadas:</p>
+<div class="tw"><table class="dt">
+<tr><th>Função</th><th>Erro frequente</th><th>Representação correcta</th></tr>
+<tr><td>Contabilista externo</td><td>Caixa em linha cheia sob a direcção, como se fosse departamento</td><td>Caixa lateral com linha tracejada — é prestador de serviços, não tem autoridade sobre ninguém</td></tr>
+<tr><td>Segurança e higiene no trabalho</td><td>Sob a produção, a quem deveria fiscalizar</td><td>Lateral à direcção, com linha tracejada às unidades operacionais</td></tr>
+<tr><td>Secretariado da direcção</td><td>Ao mesmo nível dos directores de departamento</td><td>Caixa lateral ligada à direcção; apoia, não dirige</td></tr>
+</table></div>
+<div class="hi">O teste para saber se uma relação é hierárquica: <em>esta pessoa aprova as férias e avalia o desempenho da outra?</em> Se sim, linha cheia. Se apenas orienta tecnicamente, linha tracejada. Não há terceira hipótese.</div></div>
+
+<div class="cb"><h2><i class="fas fa-magnifying-glass-chart"></i> 4. Ler um organigrama como diagnóstico</h2>
+<p>Um organigrama bem lido dá quatro indicadores em cinco minutos:</p>
+<ol>
+<li><strong>Amplitude por chefia.</strong> Conte as caixas ligadas a cada uma. Mais de 8 em trabalho variado é excessivo; menos de 3 sugere um nível desnecessário.</li>
+<li><strong>Número de níveis.</strong> Numa empresa de 60 pessoas, três níveis chegam. Cinco níveis com 60 pessoas significa hierarquia a mais e decisões lentas.</li>
+<li><strong>Caixas com duas linhas cheias a entrar.</strong> Violação da unidade de comando. Ou se converte uma em tracejada, ou se define por escrito a regra de precedência.</li>
+<li><strong>Funções ausentes.</strong> Procure no desenho: controlo interno, arquivo, gestão de contratos, segurança no trabalho. Se não estão em lado nenhum, não têm dono.</li>
+</ol>
+<p><strong>Exemplo trabalhado</strong> — Clínica Kilamba Saúde, 62 trabalhadores, organigrama reconstruído:</p>
+<div class="tw"><table class="dt">
+<tr><th>Chefia</th><th>Reportes directos</th><th>Leitura</th></tr>
+<tr><td>Administração</td><td>4</td><td>Adequado</td></tr>
+<tr><td>Direcção clínica</td><td>13</td><td>Excessivo — criar coordenação por especialidade</td></tr>
+<tr><td>Direcção de enfermagem</td><td>9</td><td>No limite — aceitável por ser trabalho padronizado por turno</td></tr>
+<tr><td>Responsável administrativo</td><td>5</td><td>Adequado</td></tr>
+<tr><td>Responsável de laboratório</td><td>3</td><td>Adequado</td></tr>
+</table></div>
+<div class="hi">Diagnóstico: 62 trabalhadores, 3 níveis — correcto. Um ponto crítico na direcção clínica com 13 reportes, e uma função sem dono (controlo de material clínico). Duas correcções pontuais, não uma reestruturação.</div></div>
+
+<div class="dg"><div class="dgt">Organigrama com linha, staff e relação funcional</div>
+<svg viewBox="0 0 620 260" xmlns="http://www.w3.org/2000/svg">
+<rect x="255" y="15" width="110" height="34" rx="5" fill="#0B1F3A"/>
+<text x="310" y="30" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">ADMINISTRAÇÃO</text>
+<text x="310" y="43" font-size="9" fill="#cbd5e1" text-anchor="middle">Dr. A. Neto</text>
+<rect x="440" y="20" width="110" height="26" rx="5" fill="#64748B"/>
+<text x="495" y="37" font-size="10" fill="#ffffff" text-anchor="middle">Contabilista externo</text>
+<line x1="365" y1="33" x2="438" y2="33" stroke="#64748B" stroke-width="2" stroke-dasharray="5,4"/>
+<text x="400" y="15" font-size="9" fill="#64748B" text-anchor="middle">staff</text>
+<line x1="310" y1="49" x2="310" y2="70" stroke="#0B1F3A" stroke-width="2"/>
+<line x1="105" y1="70" x2="515" y2="70" stroke="#0B1F3A" stroke-width="2"/>
+<line x1="105" y1="70" x2="105" y2="90" stroke="#0B1F3A" stroke-width="2"/>
+<line x1="242" y1="70" x2="242" y2="90" stroke="#0B1F3A" stroke-width="2"/>
+<line x1="378" y1="70" x2="378" y2="90" stroke="#0B1F3A" stroke-width="2"/>
+<line x1="515" y1="70" x2="515" y2="90" stroke="#0B1F3A" stroke-width="2"/>
+<rect x="50" y="90" width="110" height="34" rx="5" fill="#FF6B00"/>
+<text x="105" y="105" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">DIR. CLÍNICA</text>
+<text x="105" y="118" font-size="9" fill="#ffffff" text-anchor="middle">13 reportes</text>
+<rect x="187" y="90" width="110" height="34" rx="5" fill="#FF6B00"/>
+<text x="242" y="105" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">DIR. ENFERMAGEM</text>
+<text x="242" y="118" font-size="9" fill="#ffffff" text-anchor="middle">9 reportes</text>
+<rect x="323" y="90" width="110" height="34" rx="5" fill="#00A3A1"/>
+<text x="378" y="105" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">ADMINISTRATIVO</text>
+<text x="378" y="118" font-size="9" fill="#ffffff" text-anchor="middle">5 reportes</text>
+<rect x="460" y="90" width="110" height="34" rx="5" fill="#00A3A1"/>
+<text x="515" y="105" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">LABORATÓRIO</text>
+<text x="515" y="118" font-size="9" fill="#ffffff" text-anchor="middle">3 reportes</text>
+<rect x="220" y="165" width="180" height="30" rx="5" fill="#dc2626"/>
+<text x="310" y="184" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">13 reportes — ponto crítico</text>
+<line x1="105" y1="124" x2="105" y2="150" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,3"/>
+<line x1="105" y1="150" x2="218" y2="177" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,3"/>
+<text x="310" y="225" font-size="12" fill="#0B1F3A" text-anchor="middle" font-weight="bold">Linha cheia = hierarquia · Linha tracejada = apoio ou orientação técnica</text>
+<text x="310" y="247" font-size="11" fill="#64748B" text-anchor="middle">Versão 3 · elaborado em 12/03 · aprovado pela Administração</text>
+</svg></div>
+
+<div class="cb"><h2><i class="fas fa-clipboard-check"></i> Procedimento Prático — levantar e desenhar o organigrama</h2>
+<div class="tl">
+<div class="tli"><div class="tld">1</div><div class="tlc"><h4>Listar todos os postos, não as pessoas</h4><p>Do mapa de pessoal ou da folha de salários. Um posto por linha, com a designação da função.</p></div></div>
+<div class="tli"><div class="tld">2</div><div class="tlc"><h4>Perguntar a cada pessoa a quem reporta</h4><p>Duas perguntas: "quem aprova as suas férias?" e "quem avalia o seu trabalho?". Se as respostas divergirem, encontrou um reporte duplo.</p></div></div>
+<div class="tli"><div class="tld">3</div><div class="tlc"><h4>Confrontar com a versão da chefia</h4><p>Pergunte a cada chefia quem lhe reporta. As diferenças entre as duas listas são o material do diagnóstico.</p></div></div>
+<div class="tli"><div class="tld">4</div><div class="tlc"><h4>Desenhar com as convenções</h4><p>Mesmo nível à mesma altura; linha cheia para hierarquia; tracejada para apoio; <em>staff</em> lateral. Uma folha A4 na horizontal chega para 40 caixas.</p></div></div>
+<div class="tli"><div class="tld">5</div><div class="tlc"><h4>Datar, numerar a versão e submeter a aprovação</h4><p>"Versão 3 — 12/03 — aprovado pela Administração". Sem estes três elementos o documento não serve para instruir processos nem para entregar a clientes.</p></div></div>
+<div class="tli"><div class="tld">6</div><div class="tlc"><h4>Fixar a regra de actualização</h4><p>Revisão sempre que entra, sai ou muda de função alguém com reporte directo, e revisão geral semestral. Guarde as versões anteriores — servem de histórico.</p></div></div>
+</div></div>
+
+<div class="cb"><h2><i class="fas fa-triangle-exclamation"></i> Erro Comum e Consequência Real</h2>
+<p>Uma empresa de segurança privada em Luanda concorreu, em 2023, a um concurso para vigilância de instalações de um cliente institucional. O caderno de encargos exigia organigrama actualizado com identificação do responsável de operações e comprovativo dos seus poderes.</p>
+<p>A empresa entregou um organigrama sem data, onde o responsável de operações indicado tinha saído dez meses antes. A proposta foi excluída na fase de qualificação, por desconformidade documental. O contrato tinha um valor estimado de <strong>96.000.000 Kz por ano</strong>. Não houve recurso possível: o documento estava efectivamente errado.</p>
+<div class="hi">Como evitar: trate o organigrama como <strong>documento controlado</strong> — com data, número de versão, aprovação e responsável pela actualização. Inclua a sua revisão na rotina de saída e entrada de pessoal: quem processa a admissão ou a cessação verifica também se o organigrama precisa de mudar. Guarde sempre uma versão em PDF assinado e datado, pronta a anexar a uma candidatura.</div></div>
+
+<div class="cb"><h2><i class="fas fa-scale-balanced"></i> Obrigações e Referências Aplicáveis</h2>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Documentação em concursos e contratação pública</div><blockquote>Os cadernos de encargos exigem frequentemente organigrama, comprovativo de poderes de representação e documentos de idoneidade fiscal e social actualizados. Verifique os requisitos de cada procedimento e mantenha um dossiê permanente com estes documentos válidos.</blockquote></div>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Representação da sociedade</div><blockquote>Quem representa a sociedade consta do registo comercial. Um organigrama interno não substitui a certidão de registo comercial nem a procuração quando é exigida prova de poderes.</blockquote></div>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Registo de pessoal</div><blockquote>A empresa deve manter registo actualizado dos trabalhadores ao seu serviço, nos termos da <strong>Lei n.º 12/23, de 27 de Dezembro de 2023</strong> e da regulamentação aplicável. O organigrama apoia-se nesse registo, mas não o substitui.</blockquote></div>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Segurança e saúde no trabalho</div><blockquote>A empresa deve designar quem responde pela segurança e saúde no trabalho. Esta função deve constar do organigrama, com posicionamento que lhe permita reportar directamente à direcção.</blockquote></div>
+</div>` },
+
+{ title: "1.10 Formas jurídicas de empresa em Angola: nome individual, unipessoal e por quotas",
+  content: `<div class="cb"><h2><i class="fas fa-bullseye"></i> Objectivos de Aprendizagem</h2>
+<ul>
+<li>Distinguir o <strong>empresário em nome individual</strong> da <strong>sociedade unipessoal por quotas</strong> e da <strong>sociedade por quotas</strong>.</li>
+<li>Avaliar o impacto de cada forma na responsabilidade patrimonial do empresário.</li>
+<li>Identificar os documentos societários que o técnico administrativo trata no dia-a-dia.</li>
+<li>Reconhecer os actos que exigem deliberação dos sócios e os que a gerência pratica sozinha.</li>
+</ul></div>
+
+<div class="cb"><h2><i class="fas fa-building"></i> Cenário Real num Escritório Angolano</h2>
+<p>Dois irmãos abriram, em 2019, uma oficina de reparação automóvel no Cazenga. Um deles inscreveu-se como <strong>empresário em nome individual</strong>, porque era mais rápido e mais barato do que constituir sociedade. O outro entrava com dinheiro e trabalho, sem qualquer formalização.</p>
+<p>O negócio cresceu. Em 2023, a oficina facturava cerca de <strong>18.000.000 Kz por mês</strong>, tinha 9 trabalhadores e um contrato de manutenção de frota com uma empresa de distribuição.</p>
+<p>Aconteceram então duas coisas. Primeiro, um cliente institucional exigiu, para renovar o contrato, que a contraparte fosse uma sociedade com certidão de registo comercial — o que o empresário em nome individual não podia apresentar nos termos pedidos. Segundo, e mais grave: a oficina foi responsabilizada por danos num veículo de cliente, e a indemnização foi cobrada sobre o património do irmão inscrito — incluindo bens pessoais, porque no regime de empresário em nome individual <strong>não há separação entre o património da empresa e o património da pessoa</strong>.</p>
+<p>A transformação em sociedade por quotas fez-se em 2024, com os dois irmãos como sócios. Custou tempo e dinheiro. Feita em 2019 teria custado uma fracção disso e evitado ambos os problemas — e teria dado ao segundo irmão um direito que ele, durante cinco anos, simplesmente não teve.</p></div>
+
+<div class="cb"><h2><i class="fas fa-user"></i> 1. Empresário em nome individual</h2>
+<p>É uma pessoa singular que exerce actividade comercial em nome próprio. Não cria uma pessoa jurídica nova: quem exerce a actividade e quem responde por ela são a mesma pessoa.</p>
+<ul>
+<li><strong>Responsabilidade:</strong> ilimitada. As dívidas da actividade respondem sobre todo o património pessoal do empresário — casa, viatura, contas. É a característica decisiva e a mais mal compreendida.</li>
+<li><strong>Constituição:</strong> simples e rápida, sem pacto social nem sócios.</li>
+<li><strong>Obrigações:</strong> registo e NIF junto da AGT, licenciamento da actividade, inscrição no INSS enquanto entidade empregadora se tiver trabalhadores, e cumprimento das obrigações fiscais aplicáveis ao seu regime.</li>
+<li><strong>Serve para:</strong> actividade de pequena escala, com risco baixo e sem sócios — uma loja, um prestador de serviços, uma actividade profissional.</li>
+<li><strong>Não serve para:</strong> actividade com risco material relevante, com necessidade de sócios, ou com clientes institucionais que exijam contraparte societária.</li>
+</ul>
+<div class="hi">Regra prática para aconselhar (sem substituir apoio jurídico): se a actividade pode gerar um dano superior ao que o empresário está disposto a perder do seu património pessoal, o nome individual é a forma errada.</div></div>
+
+<div class="cb"><h2><i class="fas fa-user-shield"></i> 2. Sociedade unipessoal por quotas</h2>
+<p>É uma sociedade por quotas com um único sócio. Cria uma pessoa colectiva distinta do sócio, com património próprio.</p>
+<ul>
+<li><strong>Responsabilidade:</strong> em princípio limitada ao património da sociedade. Esta limitação depende, porém, de o sócio manter uma <em>separação efectiva</em> entre o seu património e o da sociedade — misturar contas bancárias, pagar despesas pessoais pela empresa ou não ter contabilidade organizada expõe o sócio.</li>
+<li><strong>Constituição:</strong> exige acto de constituição com os estatutos, registo comercial e publicação nos termos legais.</li>
+<li><strong>Gerência:</strong> normalmente o próprio sócio, mas pode ser terceiro.</li>
+<li><strong>Serve para:</strong> quem quer trabalhar sozinho mas com o património pessoal protegido, e quem precisa de apresentar certidão de registo comercial a clientes e bancos.</li>
+</ul>
+<div class="hi">Aviso prático que o técnico administrativo deve conhecer: a sociedade unipessoal só protege enquanto for tratada como entidade separada. A conta bancária da empresa não é a carteira do sócio. O levantamento sem título — sem ser salário, sem ser distribuição de lucros deliberada, sem ser reembolso documentado — é o erro que destrói a protecção.</div></div>
+
+<div class="cb"><h2><i class="fas fa-users"></i> 3. Sociedade por quotas (Lda.)</h2>
+<p>É a forma societária mais comum em Angola para PME. O capital divide-se em quotas, e cada sócio detém uma quota correspondente à sua entrada.</p>
+<div class="tw"><table class="dt">
+<tr><th>Elemento</th><th>Conteúdo</th><th>Onde consta</th></tr>
+<tr><td>Firma</td><td>Denominação seguida de "Limitada" ou "Lda."</td><td>Certificado de admissibilidade e pacto social</td></tr>
+<tr><td>Objecto social</td><td>Actividades que a sociedade pode exercer</td><td>Pacto social</td></tr>
+<tr><td>Capital social</td><td>Valor total e divisão em quotas por sócio</td><td>Pacto social e registo comercial</td></tr>
+<tr><td>Sede</td><td>Endereço da sociedade</td><td>Pacto social e registo comercial</td></tr>
+<tr><td>Gerência</td><td>Quem gere e como obriga a sociedade (uma ou duas assinaturas)</td><td>Pacto social e registo comercial</td></tr>
+<tr><td>Exercício social</td><td>Período a que respeitam as contas</td><td>Pacto social</td></tr>
+</table></div>
+<p><strong>Forma de obrigar</strong> é a cláusula que o técnico administrativo mais consulta na prática. Se o pacto diz que a sociedade se obriga com <em>duas assinaturas de gerentes</em>, um contrato assinado por um só gerente pode não vincular a sociedade — e é o técnico quem normalmente prepara os documentos para assinatura.</p>
+<div class="hi">Tenha sempre no dossiê da empresa uma <strong>certidão de registo comercial actualizada</strong> e o pacto social. São os dois documentos mais pedidos por bancos, clientes institucionais e entidades públicas, e o primeiro a ser rejeitado quando está desactualizado.</div></div>
+
+<div class="cb"><h2><i class="fas fa-scale-balanced"></i> 4. Comparação para decisão</h2>
+<div class="tw"><table class="dt">
+<tr><th>Critério</th><th>Nome individual</th><th>Unipessoal por quotas</th><th>Por quotas (Lda.)</th></tr>
+<tr><td>Personalidade jurídica distinta</td><td>Não</td><td>Sim</td><td>Sim</td></tr>
+<tr><td>Responsabilidade pelo passivo</td><td>Ilimitada, património pessoal</td><td>Limitada, com separação efectiva</td><td>Limitada, com separação efectiva</td></tr>
+<tr><td>N.º de titulares</td><td>1</td><td>1</td><td>2 ou mais</td></tr>
+<tr><td>Complexidade de constituição</td><td>Baixa</td><td>Média</td><td>Média</td></tr>
+<tr><td>Entrada de novos sócios</td><td>Impossível sem mudar de forma</td><td>Por cessão de quota e alteração do pacto</td><td>Por cessão de quota e alteração do pacto</td></tr>
+<tr><td>Aceitação por clientes institucionais</td><td>Limitada</td><td>Boa</td><td>Boa</td></tr>
+<tr><td>Continuidade após a morte do titular</td><td>Frágil</td><td>Sociedade subsiste</td><td>Sociedade subsiste</td></tr>
+</table></div>
+<p><strong>Exemplo trabalhado</strong> — a oficina do Cazenga, transformada em Lda. com capital social de 2.000.000 Kz, repartido conforme as entradas acordadas:</p>
+<div class="tw"><table class="dt">
+<tr><th>Sócio</th><th>Entrada (Kz)</th><th>Quota</th><th>% do capital</th><th>Efeito prático</th></tr>
+<tr><td>Irmão A</td><td>1.200.000</td><td>1.200.000</td><td>60%</td><td>Maioria em deliberações simples</td></tr>
+<tr><td>Irmão B</td><td>800.000</td><td>800.000</td><td>40%</td><td>Direito a lucros e a informação; bloqueia deliberações que exijam maioria qualificada</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2.000.000</strong></td><td>—</td><td><strong>100%</strong></td><td>—</td></tr>
+</table></div>
+<p>Distribuição de um lucro deliberado de 9.000.000 Kz, na proporção das quotas: Irmão A = 9.000.000 × 0,60 = <strong>5.400.000 Kz</strong>; Irmão B = 9.000.000 × 0,40 = <strong>3.600.000 Kz</strong>.</p>
+<div class="hi">Repare no que a formalização deu ao irmão B: durante cinco anos trabalhou e investiu sem qualquer título jurídico sobre o negócio. Se tivessem discutido, não teria como provar coisa nenhuma. A quota é isso — um direito que existe em papel e não depende da boa vontade do outro.</div></div>
+
+<div class="cb"><h2><i class="fas fa-gavel"></i> 5. O que a gerência decide e o que exige deliberação dos sócios</h2>
+<p>Distinção prática para o técnico administrativo, que prepara os documentos de ambos:</p>
+<div class="tw"><table class="dt">
+<tr><th>Acto</th><th>Quem decide</th><th>Documento a preparar</th></tr>
+<tr><td>Compras e contratos correntes</td><td>Gerência</td><td>Contrato, ordem de compra</td></tr>
+<tr><td>Contratação e cessação de trabalhadores</td><td>Gerência</td><td>Contrato de trabalho, comunicação</td></tr>
+<tr><td>Aprovação de contas do exercício</td><td>Assembleia de sócios</td><td>Convocatória, contas, acta</td></tr>
+<tr><td>Distribuição de lucros</td><td>Assembleia de sócios</td><td>Acta com a deliberação</td></tr>
+<tr><td>Alteração do pacto social (firma, sede, objecto, capital)</td><td>Assembleia de sócios</td><td>Acta e registo da alteração</td></tr>
+<tr><td>Nomeação e destituição de gerentes</td><td>Assembleia de sócios</td><td>Acta e registo</td></tr>
+<tr><td>Cessão de quotas</td><td>Sócios, nos termos do pacto</td><td>Contrato de cessão, acta, registo</td></tr>
+</table></div>
+<div class="hi">A regra que o técnico deve interiorizar: tudo o que altera o pacto social ou o quadro de sócios <strong>tem de ser registado</strong> para produzir efeitos perante terceiros. Uma deliberação em acta que não vai a registo é invisível para o banco, para o cliente e para a AGT.</div></div>
+
+<div class="dg"><div class="dgt">Responsabilidade patrimonial por forma jurídica</div>
+<svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg">
+<rect x="25" y="45" width="245" height="160" rx="10" fill="#dc2626" opacity="0.09" stroke="#dc2626" stroke-width="2"/>
+<text x="147" y="70" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">NOME INDIVIDUAL</text>
+<rect x="55" y="85" width="85" height="45" rx="6" fill="#dc2626"/>
+<text x="97" y="103" font-size="10" fill="#fff" text-anchor="middle">PATRIMÓNIO</text>
+<text x="97" y="118" font-size="10" fill="#fff" text-anchor="middle">DO NEGÓCIO</text>
+<rect x="155" y="85" width="85" height="45" rx="6" fill="#dc2626"/>
+<text x="197" y="103" font-size="10" fill="#fff" text-anchor="middle">PATRIMÓNIO</text>
+<text x="197" y="118" font-size="10" fill="#fff" text-anchor="middle">PESSOAL</text>
+<text x="147" y="152" font-size="12" fill="#dc2626" text-anchor="middle" font-weight="bold">sem separação</text>
+<text x="147" y="175" font-size="11" fill="#0B1F3A" text-anchor="middle">a dívida do negócio alcança</text>
+<text x="147" y="192" font-size="11" fill="#0B1F3A" text-anchor="middle">a casa e a viatura da família</text>
+<rect x="325" y="45" width="250" height="160" rx="10" fill="#16a34a" opacity="0.09" stroke="#16a34a" stroke-width="2"/>
+<text x="450" y="70" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">SOCIEDADE POR QUOTAS</text>
+<rect x="355" y="85" width="85" height="45" rx="6" fill="#16a34a"/>
+<text x="397" y="103" font-size="10" fill="#fff" text-anchor="middle">PATRIMÓNIO</text>
+<text x="397" y="118" font-size="10" fill="#fff" text-anchor="middle">DA SOCIEDADE</text>
+<rect x="460" y="85" width="85" height="45" rx="6" fill="#64748B"/>
+<text x="502" y="103" font-size="10" fill="#fff" text-anchor="middle">PATRIMÓNIO</text>
+<text x="502" y="118" font-size="10" fill="#fff" text-anchor="middle">DO SÓCIO</text>
+<line x1="450" y1="80" x2="450" y2="140" stroke="#16a34a" stroke-width="4"/>
+<text x="450" y="152" font-size="12" fill="#16a34a" text-anchor="middle" font-weight="bold">separação jurídica</text>
+<text x="450" y="175" font-size="11" fill="#0B1F3A" text-anchor="middle">mas só se for separação REAL:</text>
+<text x="450" y="192" font-size="11" fill="#0B1F3A" text-anchor="middle">contas distintas e contabilidade organizada</text>
+<text x="300" y="228" font-size="12" fill="#0B1F3A" text-anchor="middle" font-weight="bold">A forma jurídica é a primeira decisão administrativa de uma empresa</text>
+</svg></div>
+
+<div class="cb"><h2><i class="fas fa-clipboard-check"></i> Procedimento Prático — manter o dossiê societário da empresa</h2>
+<div class="tl">
+<div class="tli"><div class="tld">1</div><div class="tlc"><h4>Reunir os documentos constitutivos</h4><p>Pacto social e todas as alterações, certificado de admissibilidade da firma, certidão de registo comercial, publicação, NIF, licença ou alvará da actividade.</p></div></div>
+<div class="tli"><div class="tld">2</div><div class="tlc"><h4>Manter o livro de actas em dia</h4><p>Todas as deliberações dos sócios ficam em acta, numeradas e assinadas. É o documento que prova, anos depois, quem decidiu o quê.</p></div></div>
+<div class="tli"><div class="tld">3</div><div class="tlc"><h4>Manter uma certidão de registo comercial recente</h4><p>Peça uma nova sempre que a existente ultrapasse alguns meses ou sempre que haja alteração. Bancos e concursos recusam certidões antigas.</p></div></div>
+<div class="tli"><div class="tld">4</div><div class="tlc"><h4>Registar as alterações no prazo</h4><p>Mudança de sede, de gerência, de objecto, de capital ou de sócios. Uma alteração deliberada e não registada não vale perante terceiros.</p></div></div>
+<div class="tli"><div class="tld">5</div><div class="tlc"><h4>Verificar a forma de obrigar antes de cada assinatura</h4><p>Antes de submeter qualquer contrato a assinatura, confirme no pacto e na certidão quantas assinaturas são necessárias e de quem.</p></div></div>
+<div class="tli"><div class="tld">6</div><div class="tlc"><h4>Guardar cópia digitalizada e organizada</h4><p>Pasta única, ficheiros nomeados com data e tipo. Metade dos atrasos em candidaturas vem de não encontrar um documento que existe.</p></div></div>
+</div></div>
+
+<div class="cb"><h2><i class="fas fa-triangle-exclamation"></i> Erro Comum e Consequência Real</h2>
+<p>Uma empresa de catering em Talatona, constituída como sociedade unipessoal por quotas, funcionou três anos com uma única conta bancária, usada indistintamente para a actividade e para as despesas pessoais da sócia — propinas, renda de casa, compras. Não havia contabilidade organizada nem qualquer registo que separasse os movimentos.</p>
+<p>Quando um fornecedor accionou judicialmente uma dívida de <strong>14.000.000 Kz</strong>, invocou precisamente a confusão de patrimónios para pedir que a sócia respondesse pessoalmente. Independentemente do desfecho, a empresa teve de suportar apoio jurídico e passou dois anos com o assunto pendente, período em que dois clientes institucionais não renovaram contrato por causa do processo.</p>
+<p>A protecção da responsabilidade limitada existia no papel. Foi destruída pela prática diária de tratar a conta da empresa como carteira pessoal.</p>
+<div class="hi">Como evitar: conta bancária <strong>exclusiva</strong> da sociedade; contabilidade organizada desde o primeiro mês; qualquer valor que o sócio retire tem de ter título documentado — salário processado, distribuição de lucros deliberada em acta, ou reembolso de despesa com factura. Estas três regras são responsabilidade directa do técnico administrativo e custam zero.</div></div>
+
+<div class="cb"><h2><i class="fas fa-scale-balanced"></i> Obrigações e Referências Aplicáveis</h2>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Regime das sociedades comerciais</div><blockquote>A constituição, o funcionamento e a dissolução das sociedades comerciais em Angola regem-se pela Lei das Sociedades Comerciais e legislação complementar. Confirme a versão em vigor e as exigências concretas — capital, número de sócios, forma do acto constitutivo — junto do Guiché Único da Empresa ou de apoio jurídico, antes de aconselhar seja quem for.</blockquote></div>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Registo comercial</div><blockquote>Os factos sujeitos a registo — constituição, alteração do pacto, nomeação e cessação de gerentes, cessão de quotas, dissolução — só produzem efeitos perante terceiros depois de registados. Mantenha certidão actualizada no dossiê da empresa.</blockquote></div>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Identificação fiscal</div><blockquote>Toda a entidade que exerça actividade tem de possuir NIF atribuído pela <strong>AGT</strong> e cumprir as obrigações declarativas do seu regime de tributação. Confirme o regime aplicável e os respectivos prazos junto da AGT ou do contabilista.</blockquote></div>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Entidade empregadora</div><blockquote>A empresa que admita trabalhadores inscreve-se no <strong>INSS</strong> como entidade empregadora e inscreve cada trabalhador, aplicando-se a <strong>Lei Geral do Trabalho — Lei n.º 12/23, de 27 de Dezembro de 2023</strong> às relações laborais constituídas.</blockquote></div>
+<div class="lawbox"><div class="lt"><i class="fas fa-gavel"></i> Contabilidade organizada</div><blockquote>As entidades sujeitas a contabilidade organizada devem manter escrituração regular e documentos de suporte. A ausência de contabilidade organizada, além das consequências fiscais, enfraquece a separação patrimonial numa sociedade unipessoal.</blockquote></div>
 </div>` }
 
 ];
