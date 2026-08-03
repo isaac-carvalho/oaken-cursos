@@ -5879,12 +5879,12 @@ const MODULE_QUESTIONS = {
     },
     {
       "id": 4722,
-      "text": "Segundo a aula 18.12, o que estabelece a Lei do Empreendedorismo (Lei 23/21) em Angola?",
+      "text": "Qual a lei angolana que estabelece o tratamento diferenciado das micro, pequenas e médias empresas (MPME) e criou o INAPEM?",
       "options": [
-        "As regras de protecção de dados pessoais",
-        "As normas de segurança nas obras de construção",
-        "O regime jurídico do empreendedorismo",
-        "O regime geral das relações de trabalho"
+        "A Lei n.º 22/11, de protecção de dados",
+        "A Lei n.º 23/21, do cadastro predial",
+        "A Lei n.º 30/11, das MPME",
+        "A Lei n.º 12/23, Lei Geral do Trabalho"
       ],
       "answer": 2
     },
