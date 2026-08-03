@@ -441,7 +441,7 @@ const MODULE_QUESTIONS = {
       "id": 3306,
       "text": "Segundo a aula, em Angola a contabilidade é regulada pelo:",
       "options": [
-        "Plano de Contabilidade Geral (PCGA)",
+        "Plano Geral de Contabilidade (PGC)",
         "Regulamento de Transportes Rodoviários",
         "Código da Estrada",
         "Regulamento de Segurança e Saúde no Trabalho"
@@ -3795,7 +3795,7 @@ const MODULE_QUESTIONS = {
         "Código Comercial",
         "Código da Estrada",
         "Regulamento de Segurança e Saúde no Trabalho",
-        "Plano de Contabilidade Geral"
+        "Plano Geral de Contabilidade (PGC)"
       ],
       "answer": 0
     },
@@ -4056,9 +4056,9 @@ const MODULE_QUESTIONS = {
       "id": 4227,
       "text": "Segundo a aula, o desembaraço aduaneiro em Angola é feito através:",
       "options": [
-        "Do Serviço Nacional de Alfândegas",
-        "Da Agência Reguladora e Supervisora de Seguros",
-        "Do Instituto Nacional de Propriedade Industrial",
+        "Da Administração Geral Tributária (AGT)",
+        "Da Agência Angolana de Regulação e Supervisão de Seguros",
+        "Do Instituto Angolano da Propriedade Industrial (IAPI)",
         "Dos Caminhos de Ferro de Angola"
       ],
       "answer": 0
@@ -4731,10 +4731,10 @@ const MODULE_QUESTIONS = {
       "id": 4420,
       "text": "Segundo a aula, o mercado de seguros em Angola é regulado pela:",
       "options": [
-        "Agência Reguladora e Supervisora de Seguros (ARSEG)",
+        "Agência Angolana de Regulação e Supervisão de Seguros (ARSEG)",
         "Administração Geral Tributária",
-        "Serviço Nacional de Alfândegas",
-        "Instituto Nacional de Propriedade Industrial"
+        "Banco Nacional de Angola",
+        "Instituto Angolano da Propriedade Industrial (IAPI)"
       ],
       "answer": 0
     },
@@ -4833,7 +4833,7 @@ const MODULE_QUESTIONS = {
         "Regulamento de Transporte de Mercadorias Perigosas",
         "Código Comercial",
         "Regulamento de Higiene em Obras",
-        "Plano de Contabilidade Geral"
+        "Plano Geral de Contabilidade (PGC)"
       ],
       "answer": 0
     },
@@ -5851,7 +5851,7 @@ const MODULE_QUESTIONS = {
         "O Banco Nacional de Angola",
         "O Instituto Nacional de Estatística",
         "A Autoridade Geral Tributária",
-        "O Instituto Nacional de Propriedade Industrial (INPI)"
+        "O Instituto Angolano da Propriedade Industrial (IAPI)"
       ],
       "answer": 3
     },
