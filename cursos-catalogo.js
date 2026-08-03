@@ -126,7 +126,7 @@ const CURSOS_CATALOGO = [
     "modulos": 18,
     "aulasPorModulo": null,
     "aulas": 168,
-    "horas": 152,
+    "horas": 168,
     "descricao": "Instalações residenciais, comerciais e industriais para a rede angolana de 220/380 V 50 Hz, com RTIEBT e IEC 60364 e prática de projecto em EWS e CADe SIMU.",
     "saidas": [
       "Electricista de Instalações",

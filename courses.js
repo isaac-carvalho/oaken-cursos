@@ -145,8 +145,8 @@ const COURSES = [
     "poster": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
     "stats": {
       "modules": 18,
-      "lessons": 141,
-      "hours": 152,
+      "lessons": 168,
+      "hours": 168,
       "questions": 141
     },
     "cover": "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1200&q=80",
