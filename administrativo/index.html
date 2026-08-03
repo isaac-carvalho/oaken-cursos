@@ -1325,8 +1325,33 @@
 
 <div id="siteFooter"></div>
 
-<script src="modulos-data.js?v=202608021254"></script>
-<script src="course-meta.js?v=202608021254"></script>
+<!-- MODAL DO EXAME (persistente, fora do #app) -->
+<div class="aluno-view">
+  <div id="examView" class="exam-view">
+    <div class="exam-modal">
+      <div class="exam-header">
+          <div>
+              <span class="progress-txt">Módulo <span id="examModNum"></span> — <span id="examModTitle"></span></span><br>
+              <span class="back-link" style="color:rgba(255,255,255,.7);margin:6px 0 0;cursor:pointer" onclick="backToModules()">← Voltar aos módulos</span>
+          </div>
+          <span class="timer">⏱️ <span id="examTimer">50:00</span></span>
+      </div>
+      <div class="exam-body">
+          <div class="exam-progress" style="margin-bottom:8px;background:var(--light);"><div class="exam-progress-fill" id="progressFill"></div></div>
+          <p style="font-size:12px;color:var(--gray);margin-bottom:18px;"><span id="answeredCount">0</span>/<span id="totalCount">30</span> questões respondidas</p>
+          <div id="questionsContainer"></div>
+          <div class="btn-group">
+              <button class="btn primary" onclick="submitExam()">✅ Corrigir Exame</button>
+              <button class="btn danger" onclick="finalizarProva()">🏁 Finalizar Prova</button>
+          </div>
+          <div id="resultArea"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="modulos-data.js?v=202608031500"></script>
+<script src="course-meta.js?v=202608031500"></script>
 <script>
 const HTML_CERT = `<div class="certificate-page-bg cert-stack">
   <div class="certificate-outer">
@@ -1469,6 +1494,7 @@ const HTML_VERIFY = `<div class="verify-bg">
   </div>
 </div>`;
 </script>
-<script src="app.js?v=202608021254"></script>
+<script src="exame-questions.js?v=202608031500"></script>
+<script src="app.js?v=202608031500"></script>
 </body>
 </html>

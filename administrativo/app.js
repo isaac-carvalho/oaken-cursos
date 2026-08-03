@@ -5,10 +5,27 @@
    ═══════════════════════════════════════════════════════════════ */
 
 const TOTAL_MODULES = 18;
+const QUESTIONS_PER_EXAM = 30;
+const EXAM_DURATION_MIN = 50;
+const PASS_PCT = 70;
 
 const PROGRESS_KEY = 'oaken_adm_progresso';
 const NAME_KEY = 'oaken_adm_student_name';
 const ALUNO_KEY = 'oaken_adm_aluno';
+const CURRENT_EXAM_KEY = 'oaken_adm_exame_atual';
+
+// Decisão explícita do dono: o desbloqueio sequencial fica DESLIGADO.
+// Todos os módulos com aulas estão abertos; o exame regista aprovação
+// mas não tranca o módulo seguinte.
+const SEQUENTIAL_UNLOCK = false;
+
+// Só há exame onde há banco de questões. Os módulos 1 e 2 não têm aulas
+// nem questões — o botão fica desactivado nesses dois.
+function temExame(id) {
+  return typeof MODULE_QUESTIONS !== 'undefined'
+    && Array.isArray(MODULE_QUESTIONS[id])
+    && MODULE_QUESTIONS[id].length > 0;
+}
 
 const app = document.getElementById('app');
 
@@ -50,10 +67,25 @@ function loadProgress() {
   try { p = JSON.parse(localStorage.getItem(PROGRESS_KEY)); } catch (e) { p = null; }
   if (!p || typeof p !== 'object') p = {};
   for (let m = 1; m <= TOTAL_MODULES; m++) {
-    if (!p[m] || typeof p[m] !== 'object') p[m] = { lidas: [] };
+    if (!p[m] || typeof p[m] !== 'object') p[m] = {};
     if (!Array.isArray(p[m].lidas)) p[m].lidas = [];
+    if (typeof p[m].tentativas !== 'number') p[m].tentativas = 0;
+    if (typeof p[m].melhorNota !== 'number') p[m].melhorNota = null;
+    if (p[m].exame !== 'aprovado' && p[m].exame !== 'reprovado') p[m].exame = null;
   }
   return p;
+}
+function exameAprovado(modId) { return loadProgress()[modId].exame === 'aprovado'; }
+function melhorNota(modId) { return loadProgress()[modId].melhorNota; }
+function totalComExame() {
+  let n = 0;
+  for (let m = 1; m <= TOTAL_MODULES; m++) if (temExame(m)) n++;
+  return n;
+}
+function examesAprovados() {
+  let n = 0;
+  for (let m = 1; m <= TOTAL_MODULES; m++) if (temExame(m) && exameAprovado(m)) n++;
+  return n;
 }
 function saveProgress(p) {
   try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(p)); } catch (e) {}
@@ -184,7 +216,7 @@ function htmlHome() {
 
             <div class="disclaimer-box">
                 <i class="fas fa-exclamation-triangle"></i>
-                <strong>⚠️ Curso 100% teórico.</strong> Os módulos 1 e 2 do programa estão em produção e ainda não têm aulas na plataforma. Os exames de módulo estão em preparação.
+                <strong>⚠️ Curso 100% teórico.</strong> Os módulos 1 e 2 do programa estão em produção e ainda não têm aulas nem exame na plataforma.
             </div>
         </div>
         <div class="hero-image">
@@ -252,7 +284,7 @@ function htmlHome() {
             </div>
             <div class="faq-item">
                 <h4>O curso está completo? <i class="fas fa-chevron-down"></i></h4>
-                <div class="answer">Estão disponíveis ${STATS.modulesReady} dos ${TOTAL_MODULES} módulos do programa, com ${STATS.lessons} aulas. Os módulos 1 e 2 e os exames de módulo estão em produção.</div>
+                <div class="answer">Estão disponíveis ${STATS.modulesReady} dos ${TOTAL_MODULES} módulos do programa, com ${STATS.lessons} aulas e exame em cada um. Os módulos 1 e 2 estão em produção.</div>
             </div>
             <div class="faq-item">
                 <h4>Como é contada a carga horária? <i class="fas fa-chevron-down"></i></h4>
@@ -260,7 +292,7 @@ function htmlHome() {
             </div>
             <div class="faq-item">
                 <h4>Há exames? <i class="fas fa-chevron-down"></i></h4>
-                <div class="answer">Os exames de módulo estão em preparação. Por agora, a Área do Aluno regista o seu progresso de leitura em cada módulo.</div>
+                <div class="answer">Sim. Cada módulo com aulas tem um exame de ${QUESTIONS_PER_EXAM} questões sorteadas do banco do módulo, com ${EXAM_DURATION_MIN} minutos de duração e ${PASS_PCT}% de acertos para aprovar. Ao esgotar o tempo a prova é entregue automaticamente e as respostas certas ficam à vista. Pode repetir as vezes que quiser.</div>
             </div>
             <div class="faq-item">
                 <h4>O curso é 100% online? <i class="fas fa-chevron-down"></i></h4>
@@ -340,6 +372,9 @@ function router() {
 window.addEventListener('hashchange', router);
 
 function abrirVista(nome, html, scroll) {
+  // O modal do exame vive fora do #app: se ficasse aberto, sobrepunha-se
+  // à vista nova. Fecha-se em silêncio a cada mudança de rota.
+  if (typeof fecharExameSilencioso === 'function') fecharExameSilencioso();
   vistaActual = nome;
   marcarNav(nome);
   app.innerHTML = html;
@@ -469,10 +504,16 @@ function renderAluno() {
       }
       const horas = total ? ` · ${total}h` : '';
       const badgeCls = st === 'preparacao' ? 'locked' : st;
+      const nota = melhorNota(m);
+      const linhaExame = !temExame(m)
+        ? 'exame em preparação'
+        : (exameAprovado(m)
+            ? `exame aprovado · ${nota}%`
+            : (nota !== null ? `exame: melhor nota ${nota}%` : `exame disponível · ${PASS_PCT}% para aprovar`));
       lista += `<div class="mod-card ${st}"${clique}>
         <div class="mod-ic ${st}">${ic}</div>
         <div class="mod-info"><h4>Módulo ${m} — ${moduleTitle(m)}</h4>
-        <span>${total ? total + ' aulas' + horas : 'aulas em produção'}</span></div>
+        <span>${total ? total + ' aulas' + horas : 'aulas em produção'} · ${linhaExame}</span></div>
         <span class="mod-badge ${badgeCls}">${bd}</span></div>`;
     });
     lista += `</div>`;
@@ -486,7 +527,7 @@ function renderAluno() {
         <div><b>${concluidos}</b> de <b>${STATS.modulesReady}</b> módulos concluídos</div>
         <div><b>${STATS.lessons}</b> aulas no curso</div>
         <div><b>${STATS.hours}h</b> de carga horária</div>
-        <div><b>Exames</b> em preparação</div>
+        <div><b>${examesAprovados()}</b> de <b>${totalComExame()}</b> exames aprovados</div>
       </div>
     </div>
     ${lista}
@@ -528,7 +569,9 @@ function renderModulo(m) {
                 <div class="mod-meta">
                     <span class="meta-tag"><i class="fas fa-book-open"></i> ${mod.lessons.length} Aulas</span>
                     <span class="meta-tag"><i class="fas fa-clock"></i> ${mod.hours} Horas</span>
-                    <span class="meta-tag"><i class="fas fa-hourglass-half"></i> Exame em preparação</span>
+                    ${temExame(m)
+                      ? `<span class="meta-tag"><i class="fas fa-percent"></i> ${PASS_PCT}% para aprovar</span>`
+                      : `<span class="meta-tag"><i class="fas fa-hourglass-half"></i> Exame em preparação</span>`}
                 </div>
             </div>
         </div>
@@ -547,8 +590,11 @@ function renderModulo(m) {
                 <div class="sidebar">
                     <div class="sc"><h4><i class="fas fa-list" style="color:var(--secondary)"></i> Aulas</h4><div id="slinks"></div></div>
                     <div class="sc"><h4><i class="fas fa-trophy" style="color:var(--secondary)"></i> Avaliação</h4>
-                        <p style="font-size:12px;color:var(--gray);margin-bottom:10px">O banco de questões deste curso ainda está a ser produzido.</p>
-                        <div class="sbtn disabled" aria-disabled="true">Exame em preparação</div>
+                        ${temExame(m)
+                          ? `<p style="font-size:12px;color:var(--gray);margin-bottom:10px">${QUESTIONS_PER_EXAM} questões sorteadas · ${EXAM_DURATION_MIN} minutos · ${PASS_PCT}% para aprovar.</p>
+                             <div class="sbtn orange" onclick="startExam(${m})"><i class="fas fa-trophy"></i> Fazer exame</div>`
+                          : `<p style="font-size:12px;color:var(--gray);margin-bottom:10px">O banco de questões deste módulo ainda está a ser produzido.</p>
+                             <div class="sbtn disabled" aria-disabled="true">Exame em preparação</div>`}
                     </div>
                     <div class="sc"><h4><i class="fas fa-route" style="color:var(--secondary)"></i> Navegação</h4>
                         <div id="navButtons">
@@ -599,9 +645,11 @@ function goToLesson(i, primeira) {
         <button class="nb np" onclick="goToLesson(${i - 1})" ${i === 0 ? 'disabled' : ''}><i class="fas fa-arrow-left"></i> Anterior</button>
         ${!ultima
           ? `<button class="nb nn" onclick="goToLesson(${i + 1})">Próxima aula <i class="fas fa-arrow-right"></i></button>`
-          : (seguinte
-              ? `<button class="nb nn" onclick="nav('modulo-${seguinte}')">Módulo ${seguinte} <i class="fas fa-arrow-right"></i></button>`
-              : `<button class="nb nn" onclick="nav('aluno')"><i class="fas fa-table-cells"></i> Voltar aos módulos</button>`)}
+          : (temExame(currentModuleId)
+              ? `<button class="nb nn" onclick="startExam(${currentModuleId})"><i class="fas fa-trophy"></i> Fazer exame do módulo</button>`
+              : (seguinte
+                  ? `<button class="nb nn" onclick="nav('modulo-${seguinte}')">Módulo ${seguinte} <i class="fas fa-arrow-right"></i></button>`
+                  : `<button class="nb nn" onclick="nav('aluno')"><i class="fas fa-table-cells"></i> Voltar aos módulos</button>`))}
       </div>
     </div>`;
 
@@ -757,6 +805,265 @@ function renderVerificar() {
   document.getElementById('vCodigo').textContent = p.get('codigo') || '—';
   document.getElementById('vHoras').textContent = p.get('horas') ? p.get('horas') + ' horas' : '—';
   document.getElementById('vModulos').textContent = p.get('modulos') || '—';
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   EXAME DE MÓDULO
+   30 questões sorteadas do banco do módulo, 50 minutos, 70% para
+   aprovar. Ao esgotar o tempo a prova é entregue automaticamente e
+   as respostas certas ficam reveladas.
+   ═══════════════════════════════════════════════════════════════ */
+let currentQuestions = [];
+let examTimerInterval = null;
+let examTimedOut = false;
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+
+// Sorteia as questões e baralha também as opções de cada uma, para que
+// o índice da resposta certa não seja decorável entre tentativas.
+function buildExamQuestions(moduleId) {
+  const pool = (typeof MODULE_QUESTIONS !== 'undefined' && MODULE_QUESTIONS[moduleId]) || [];
+  const picked = shuffle(pool).slice(0, Math.min(QUESTIONS_PER_EXAM, pool.length));
+  return picked.map(function (q) {
+    const order = shuffle(q.options.map(function (_, i) { return i; }));
+    return {
+      id: q.id,
+      text: q.text,
+      options: order.map(function (i) { return q.options[i]; }),
+      answer: order.indexOf(q.answer)
+    };
+  });
+}
+
+function examStateKey(moduleId) { return CURRENT_EXAM_KEY + '_' + moduleId; }
+function getSavedExamState(moduleId) {
+  try { return JSON.parse(localStorage.getItem(examStateKey(moduleId))); } catch (e) { return null; }
+}
+function saveExamState(moduleId, state) {
+  try { localStorage.setItem(examStateKey(moduleId), JSON.stringify(state)); } catch (e) {}
+}
+function clearExamState(moduleId) {
+  try { localStorage.removeItem(examStateKey(moduleId)); } catch (e) {}
+}
+
+function startExam(moduleId) {
+  if (!temExame(moduleId)) {
+    alert('O exame deste módulo ainda está em preparação.');
+    return;
+  }
+  currentModuleId = moduleId;
+
+  const saved = getSavedExamState(moduleId);
+  if (saved && saved.questions && saved.questions.length) {
+    currentQuestions = saved.questions;
+  } else {
+    currentQuestions = buildExamQuestions(moduleId);
+    saveExamState(moduleId, {
+      questions: currentQuestions,
+      deadline: Date.now() + EXAM_DURATION_MIN * 60 * 1000,
+      answers: {}
+    });
+  }
+
+  document.getElementById('examView').classList.add('show');
+  document.getElementById('examModNum').textContent = moduleId;
+  document.getElementById('examModTitle').textContent = moduleTitle(moduleId);
+  document.getElementById('totalCount').textContent = currentQuestions.length;
+  document.getElementById('resultArea').innerHTML = '';
+
+  renderExamQuestions();
+  restoreSavedAnswers();
+  startExamTimer();
+}
+
+function backToModules() {
+  stopExamTimer();
+  document.getElementById('examView').classList.remove('show');
+  nav('aluno');
+  renderAluno();
+}
+
+function fecharExameSilencioso() {
+  stopExamTimer();
+  const v = document.getElementById('examView');
+  if (v) v.classList.remove('show');
+}
+
+function renderExamQuestions() {
+  const container = document.getElementById('questionsContainer');
+  container.innerHTML = '';
+  currentQuestions.forEach(function (q, idx) {
+    const div = document.createElement('div');
+    div.className = 'question-card';
+    div.id = 'q' + q.id;
+    const optionsHTML = q.options.map(function (opt, oi) {
+      return '<label class="option" onclick="selOpt(this)"><input type="radio" name="q' + q.id +
+             '" value="' + oi + '" onchange="onAnswerChange(' + q.id + ')"> ' + opt + '</label>';
+    }).join('');
+    div.innerHTML = '<div class="question-text">' + (idx + 1) + '. ' + q.text + '</div>' +
+                    '<div class="options">' + optionsHTML + '</div>' +
+                    '<div class="feedback-answer" id="fb' + q.id + '"></div>';
+    container.appendChild(div);
+  });
+  updateExamProgress();
+}
+
+function restoreSavedAnswers() {
+  const state = getSavedExamState(currentModuleId);
+  if (!state || !state.answers) return;
+  Object.keys(state.answers).forEach(function (qid) {
+    const el = document.querySelector('input[name="q' + qid + '"][value="' + state.answers[qid] + '"]');
+    if (el) { el.checked = true; el.closest('.option').classList.add('sel'); }
+  });
+  updateExamProgress();
+}
+
+function selOpt(el) {
+  el.closest('.options').querySelectorAll('.option').forEach(function (o) { o.classList.remove('sel'); });
+  el.classList.add('sel');
+}
+
+function onAnswerChange(qid) {
+  const state = getSavedExamState(currentModuleId) || {
+    questions: currentQuestions,
+    deadline: Date.now() + EXAM_DURATION_MIN * 60 * 1000,
+    answers: {}
+  };
+  if (!state.answers) state.answers = {};
+  const selected = document.querySelector('input[name="q' + qid + '"]:checked');
+  if (selected) state.answers[qid] = Number(selected.value);
+  saveExamState(currentModuleId, state);
+  updateExamProgress();
+}
+
+function updateExamProgress() {
+  let answered = 0;
+  currentQuestions.forEach(function (q) {
+    if (document.querySelector('input[name="q' + q.id + '"]:checked')) answered++;
+  });
+  document.getElementById('answeredCount').textContent = answered;
+  document.getElementById('progressFill').style.width =
+    (currentQuestions.length ? answered / currentQuestions.length * 100 : 0) + '%';
+}
+
+function lockExam() {
+  document.querySelectorAll('#questionsContainer input[type="radio"]').forEach(function (el) { el.disabled = true; });
+  document.querySelectorAll('#questionsContainer .option').forEach(function (el) {
+    el.onclick = null; el.style.cursor = 'default';
+  });
+}
+
+function submitExam(forced) {
+  let unanswered = 0;
+  currentQuestions.forEach(function (q) {
+    if (!document.querySelector('input[name="q' + q.id + '"]:checked')) unanswered++;
+  });
+  if (!forced && unanswered > 0) {
+    alert(unanswered + ' questão(ões) sem resposta. Complete o exame antes de corrigir.');
+    return;
+  }
+
+  stopExamTimer();
+  lockExam();
+
+  let correct = 0;
+  currentQuestions.forEach(function (q) {
+    const selEl = document.querySelector('input[name="q' + q.id + '"]:checked');
+    const selected = selEl ? Number(selEl.value) : -1;
+    const card = document.getElementById('q' + q.id);
+    const fb = document.getElementById('fb' + q.id);
+    if (selected === q.answer) {
+      correct++;
+      card.classList.add('correct');
+      fb.textContent = '✅ Correto!';
+      fb.className = 'feedback-answer correct';
+    } else {
+      card.classList.add('wrong');
+      fb.textContent = '❌ Resposta correta: ' + q.options[q.answer];
+      fb.className = 'feedback-answer wrong';
+    }
+  });
+
+  const pct = Math.round((correct / currentQuestions.length) * 1000) / 10;
+  const approved = !examTimedOut && pct >= PASS_PCT;
+
+  const progress = loadProgress();
+  progress[currentModuleId].tentativas++;
+  if (progress[currentModuleId].melhorNota === null || pct > progress[currentModuleId].melhorNota) {
+    progress[currentModuleId].melhorNota = pct;
+  }
+  progress[currentModuleId].exame = approved ? 'aprovado' : 'reprovado';
+  saveProgress(progress);
+  clearExamState(currentModuleId);
+
+  document.getElementById('resultArea').innerHTML =
+    (examTimedOut
+      ? '<p style="text-align:center;color:#DC2626;font-weight:700;margin-bottom:16px;">⏱️ Tempo esgotado (' +
+        EXAM_DURATION_MIN + ' min). O exame foi corrigido e marcado como reprovado automaticamente.</p>'
+      : '') +
+    '<div class="result-box ' + (approved ? 'approved' : 'failed') + '">' +
+      '<div class="result-label">' + (approved ? '🎉 APROVADO' : '😞 REPROVADO') + '</div>' +
+      '<div class="result-score">' + pct.toFixed(1) + '%</div>' +
+      '<p>' + (approved
+        ? 'Parabéns! Atingiu a nota mínima de ' + PASS_PCT + '%.'
+        : 'Não atingiu os ' + PASS_PCT + '%. Reveja o módulo e tente novamente — as questões erradas estão marcadas acima.') +
+      '</p>' +
+      '<p><strong>Acertos: ' + correct + '/' + currentQuestions.length + '</strong></p>' +
+      '<div class="btn-group"><button class="btn" onclick="backToModules()">← Voltar aos módulos</button></div>' +
+    '</div>';
+  document.getElementById('resultArea').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function finalizarProva() {
+  let unanswered = 0;
+  currentQuestions.forEach(function (q) {
+    if (!document.querySelector('input[name="q' + q.id + '"]:checked')) unanswered++;
+  });
+  const msg = unanswered > 0
+    ? 'Tem ' + unanswered + ' questão(ões) sem resposta — elas vão contar como erradas. Quer mesmo finalizar a prova agora?'
+    : 'Finalizar e corrigir a prova agora?';
+  if (!confirm(msg)) return;
+  examTimedOut = false;
+  submitExam(true);
+}
+
+function formatCountdown(ms) {
+  const totalSec = Math.max(0, Math.floor(ms / 1000));
+  const m = String(Math.floor(totalSec / 60)).padStart(2, '0');
+  const s = String(totalSec % 60).padStart(2, '0');
+  return m + ':' + s;
+}
+
+function stopExamTimer() {
+  if (examTimerInterval) { clearInterval(examTimerInterval); examTimerInterval = null; }
+}
+
+function startExamTimer() {
+  examTimedOut = false;
+  const state = getSavedExamState(currentModuleId);
+  const deadline = (state && state.deadline) ? state.deadline : Date.now() + EXAM_DURATION_MIN * 60 * 1000;
+
+  function tick() {
+    const remaining = deadline - Date.now();
+    const timerEl = document.getElementById('examTimer');
+    if (remaining <= 0) {
+      if (timerEl) timerEl.textContent = '00:00';
+      stopExamTimer();
+      examTimedOut = true;
+      submitExam(true);
+      return;
+    }
+    if (timerEl) timerEl.textContent = formatCountdown(remaining);
+  }
+  tick();
+  examTimerInterval = setInterval(tick, 1000);
 }
 
 /* ───────── arranque ───────── */
