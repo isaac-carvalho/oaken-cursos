@@ -786,6 +786,12 @@
 .aluno-view .tb {padding:10px 15px; border:none; background:transparent; font-weight:600; font-size:13px; color:var(--gray); cursor:pointer; white-space:nowrap; border-bottom:3px solid transparent; margin-bottom:-2px; flex-shrink:0; transition:.2s; font-family:inherit;}
 .aluno-view .tb.active {color:var(--secondary); border-bottom-color:var(--secondary);}
 .aluno-view .mod-layout {display:grid; grid-template-columns:1fr 250px; gap:24px; align-items:start; margin-top:22px;}
+/* Itens de grelha tem min-width:auto por omissao e nao encolhem abaixo da
+   largura natural do conteudo - uma tabela larga puxava a coluna para 466px
+   num ecra de 375px. Com min-width:0 a coluna encolhe e o overflow-x:auto
+   do .tw passa a fazer efeito. */
+.mod-layout>*{min-width:0}
+.lesson img,.lesson svg{max-width:100%;height:auto}
 @media (max-width:900px) {
 .aluno-view .mod-layout {grid-template-columns:1fr;}
 .aluno-view .sidebar {position:static !important;}

@@ -225,6 +225,12 @@ footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
 .tb.active{color:var(--secondary);border-bottom-color:var(--secondary)}
 
 .mod-layout{display:grid;grid-template-columns:1fr 250px;gap:24px;align-items:start;margin-top:22px}
+/* Itens de grelha tem min-width:auto por omissao, o que os impede de encolher
+   abaixo da largura natural do conteudo. Uma tabela larga dentro da aula puxava
+   a coluna para 466px num ecra de 375px. Com min-width:0 a coluna encolhe e o
+   overflow-x:auto do .tw passa finalmente a fazer efeito. */
+.mod-layout>*{min-width:0}
+.lesson img,.lesson svg{max-width:100%;height:auto}
 @media(max-width:900px){.mod-layout{grid-template-columns:1fr}.sidebar{position:static!important}}
 .sidebar{position:sticky;top:74px}
 .sc{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,.06);margin-bottom:14px}
