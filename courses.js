@@ -331,10 +331,17 @@ const COURSES = [
     "title": "Técnico em Edificações",
     "description": "Construção civil adaptada a Angola: leitura de projecto, materiais, processos construtivos, medições e acompanhamento de obra.",
     "icon": "fa-solid fa-trowel-bricks",
-    "status": "building",
-    "url": null,
-    "stats": null,
-    "pitch": "Material didáctico já produzido. A página do curso está a ser construída.",
+    "status": "available",
+    "url": "edificacoes/index.html",
+    "stats": {
+      "modules": 18,
+      "modulesAvailable": 3,
+      "lessons": 33,
+      "lessonsPlanned": 198,
+      "hours": 33,
+      "questions": 0
+    },
+    "pitch": "18 módulos no currículo — 3 disponíveis com aulas na plataforma (Sector e Enquadramento Legal, Matemática e Física Aplicadas, Desenho Técnico), os restantes em preparação.",
     "cover": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
     "accent": "#E8B33A",
     "programa": [
