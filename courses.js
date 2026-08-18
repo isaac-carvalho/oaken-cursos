@@ -528,8 +528,8 @@ const COURSES = [
     "url": "contabilidade/index.html",
     "stats": {
       "modules": 3,
-      "lessons": 32,
-      "hours": 32,
+      "lessons": 34,
+      "hours": 34,
       "questions": 0
     },
     "pitch": "3 módulos com aulas na plataforma: Fundamentos da Contabilidade, Fiscalidade Angolana e Aplicação Prática.",

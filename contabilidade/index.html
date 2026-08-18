@@ -15,8 +15,6 @@ svg{max-width:100%;height:auto}
 :root{--primary:#0B1F3A;--secondary:#FF6B00;--accent:#00A3A1;--light:#f0f4f8;--gray:#64748B;--green:#16a34a}
 .container{max-width:1200px;margin:0 auto;padding:0 16px}
 .container-sm{max-width:1000px;margin:0 auto;padding:0 16px}
-
-/* ============ HEADER ============ */
 header{background:var(--primary);color:#fff;padding:12px 0;position:sticky;top:0;z-index:500;box-shadow:0 4px 20px rgba(0,0,0,.3)}
 .hflex{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
 .logo{font-size:24px;font-weight:700;letter-spacing:2px;cursor:pointer;white-space:nowrap}
@@ -27,8 +25,6 @@ header{background:var(--primary);color:#fff;padding:12px 0;position:sticky;top:0
 .cta-top{background:var(--secondary);padding:9px 22px;border-radius:30px;font-weight:600;transition:transform .2s;display:inline-block}
 .cta-top:hover{transform:scale(1.05);color:#fff!important}
 @media(max-width:820px){.hflex{flex-direction:column;align-items:center}.nav{justify-content:center;gap:14px}.nav a{font-size:14px}}
-
-/* ============ HERO ============ */
 .hero{background:linear-gradient(135deg,var(--primary) 0%,#1a365d 100%);color:#fff;padding:60px 0 70px;position:relative;overflow:hidden}
 .hero::after{content:'';position:absolute;right:-100px;top:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(255,107,0,.12) 0%,transparent 70%);border-radius:50%;z-index:0}
 .hero-flex{display:flex;align-items:center;gap:50px;position:relative;z-index:1;flex-wrap:wrap}
@@ -53,22 +49,16 @@ header{background:var(--primary);color:#fff;padding:12px 0;position:sticky;top:0
 .floating-badge{display:inline-block;background:rgba(255,255,255,.08);padding:9px 20px;border-radius:50px;font-size:13px;border:1px solid rgba(255,255,255,.15);margin-bottom:16px}
 .disclaimer-box{background:rgba(255,200,0,.12);border-left:4px solid #f59e0b;padding:14px 18px;border-radius:10px;margin-top:20px;font-size:14px;opacity:.9}
 .disclaimer-box i{color:#f59e0b;margin-right:8px}
-
-/* ============ SECTIONS ============ */
 section{padding:70px 0}
 .section-title{text-align:center;font-size:clamp(24px,5vw,38px);font-weight:700;margin-bottom:12px}
 .section-title span{color:var(--secondary)}
 .section-sub{text-align:center;font-size:clamp(14px,2.5vw,18px);color:var(--gray);max-width:700px;margin:0 auto 44px}
 .bg-white{background:#fff}
 .bg-light{background:var(--light)}
-
-/* quick stats */
 .quick-stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;text-align:center}
 .qs-item{background:#fff;padding:24px 14px;border-radius:16px;box-shadow:0 4px 10px rgba(0,0,0,.03);border-top:4px solid var(--secondary)}
 .qs-item .number{font-size:clamp(24px,5vw,36px);font-weight:800;color:var(--primary);display:block}
 .qs-item .label{font-size:13px;color:var(--gray)}
-
-/* details table */
 .details-table{max-width:860px;margin:36px auto 0;border-radius:18px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.05)}
 .d-row{display:grid;grid-template-columns:210px 1fr}
 .d-row:nth-child(odd){background:var(--light)}
@@ -76,8 +66,6 @@ section{padding:70px 0}
 .d-label{padding:15px 20px;font-weight:700;color:var(--secondary);font-size:14px}
 .d-value{padding:15px 20px;font-size:15px}
 @media(max-width:640px){.d-row{grid-template-columns:1fr}.d-label{padding-bottom:2px}.d-value{padding-top:0;padding-bottom:15px}}
-
-/* module cards on landing */
 .phase-label{text-align:center;text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:700;color:var(--accent);margin:42px 0 18px}
 .modules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px}
 .module-card{background:#fff;padding:24px 20px;border-radius:16px;transition:all .3s;border-left:5px solid var(--secondary);box-shadow:0 4px 10px rgba(0,0,0,.03);cursor:pointer}
@@ -85,35 +73,18 @@ section{padding:70px 0}
 .module-card h3{font-size:17px;margin-bottom:7px}
 .module-card p{font-size:14px;color:var(--gray)}
 .mod-num{display:inline-block;background:var(--secondary);color:#fff;padding:2px 12px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:9px}
-.mod-soft{display:inline-block;background:rgba(0,163,161,.12);color:var(--accent);padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;margin-left:6px}
-
-/* differentials */
 .diff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px;margin-top:36px}
 .diff-item{text-align:center;padding:28px 20px;background:var(--light);border-radius:20px;box-shadow:0 6px 20px rgba(0,0,0,.04);transition:.3s}
 .diff-item:hover{transform:scale(1.02)}
 .diff-item i{font-size:42px;color:var(--secondary);margin-bottom:14px}
 .diff-item h4{font-size:19px;margin-bottom:9px}
 .diff-item p{color:var(--gray);font-size:15px}
-
-/* testimonials */
 .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:26px;margin-top:36px}
 .test-item{background:#fff;padding:28px;border-radius:20px;border-bottom:4px solid var(--secondary);box-shadow:0 4px 15px rgba(0,0,0,.03)}
 .test-item p{font-style:italic;margin-bottom:14px}
 .author{font-weight:600}
 .position{color:var(--gray);font-size:14px}
 .stars{color:#f59e0b;letter-spacing:2px;margin-bottom:9px}
-
-/* pricing */
-.pricing{background:linear-gradient(135deg,rgba(11,31,58,.95) 0%,rgba(26,54,93,.95) 100%);color:#fff;text-align:center}
-.pricing-box{max-width:680px;margin:0 auto;background:rgba(255,255,255,.05);padding:44px 34px;border-radius:30px;border:1px solid rgba(255,255,255,.1)}
-.countdown{display:inline-block;background:rgba(255,107,0,.2);padding:8px 24px;border-radius:50px;font-weight:600;margin-bottom:18px;border:1px solid rgba(255,107,0,.3);font-size:14px}
-.old-price{font-size:19px;text-decoration:line-through;opacity:.6}
-.new-price{font-size:clamp(32px,7vw,52px);font-weight:800;color:var(--secondary);display:block;margin:8px 0 16px}
-.price-detail{font-size:16px;opacity:.8}
-.guarantee{margin-top:18px;font-size:14px;opacity:.7}
-@media(max-width:600px){.pricing-box{padding:28px 18px}}
-
-/* faq */
 .faq-grid{max-width:800px;margin:0 auto}
 .faq-item{border-bottom:1px solid #e2e8f0;padding:18px 0}
 .faq-item h4{font-size:clamp(15px,2.5vw,18px);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600}
@@ -121,19 +92,13 @@ section{padding:70px 0}
 .faq-item .answer{max-height:0;overflow:hidden;transition:.35s;color:var(--gray);font-size:15px}
 .faq-item.active .answer{max-height:400px;padding-top:10px}
 .faq-item.active h4 i{transform:rotate(180deg)}
-
-/* footer */
 footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
 .footer-flex{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px}
 .footer-col{flex:1;min-width:190px}
 .footer-col h5{color:#fff;margin-bottom:14px;font-size:18px}
 .footer-col p,.footer-col a{color:#a0aec0;line-height:1.9;font-size:15px}
 .footer-col a:hover{color:var(--secondary)}
-.social-links a{display:inline-block;margin-right:14px;font-size:21px;color:#a0aec0}
-.social-links a:hover{color:var(--secondary)}
 .footer-bottom{border-top:1px solid #2d3748;margin-top:28px;padding-top:18px;text-align:center;font-size:14px}
-
-/* ============ ÁREA DO ALUNO ============ */
 .login-wrap{min-height:70vh;display:flex;align-items:center;justify-content:center;padding:44px 16px}
 .login-box{background:#fff;border-radius:24px;padding:44px 38px;max-width:420px;width:100%;box-shadow:0 20px 60px rgba(11,31,58,.12);text-align:center}
 .login-icon{width:68px;height:68px;background:rgba(255,107,0,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:27px;color:var(--secondary)}
@@ -150,7 +115,6 @@ footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
 .demo-hint{margin-top:22px;background:var(--light);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--gray)}
 .demo-hint i{color:var(--secondary);margin-right:6px}
 @media(max-width:480px){.login-box{padding:30px 20px}}
-
 .dash-header{background:var(--primary);color:#fff;padding:28px 0}
 .dash-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
 .dash-header h1{font-size:clamp(18px,4vw,22px);font-weight:700}
@@ -185,8 +149,6 @@ footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
 .mod-badge.unlocked{background:rgba(255,107,0,.1);color:var(--secondary)}
 .mod-badge.done{background:rgba(22,163,74,.1);color:var(--green)}
 @media(max-width:600px){.mod-list{grid-template-columns:1fr}}
-
-/* ============ VISTA DO MÓDULO ============ */
 .mod-hero{background:linear-gradient(135deg,var(--primary) 0%,#1a365d 100%);color:#fff;padding:34px 0 30px}
 .mh-in{display:flex;align-items:flex-start;gap:30px}
 .mh-txt{flex:1;min-width:0}
@@ -200,7 +162,6 @@ footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
 .mh-img{flex:0 0 230px;border-radius:14px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.4)}
 .mh-img img{width:100%;height:175px;object-fit:cover}
 @media(max-width:760px){.mh-img{display:none}}
-
 .mod-progress{background:#fff;padding:12px 0;border-bottom:2px solid var(--light)}
 .mp-in{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .mp-lbl{font-size:12px;color:var(--gray);white-space:nowrap}
@@ -209,12 +170,10 @@ footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
 .dot.done{background:var(--accent);color:#fff}
 .dot.active{background:var(--secondary);color:#fff;box-shadow:0 3px 10px rgba(255,107,0,.4)}
 .dot.todo{background:var(--light);color:var(--gray);border-color:#e2e8f0}
-
 .tabs{display:flex;overflow-x:auto;margin:22px 0 0;border-bottom:2px solid #e2e8f0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
 .tb{padding:10px 15px;border:none;background:transparent;font-weight:600;font-size:13px;color:var(--gray);cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-2px;flex-shrink:0;transition:.2s;font-family:inherit}
 .tb.active{color:var(--secondary);border-bottom-color:var(--secondary)}
-
 .mod-layout{display:grid;grid-template-columns:1fr 250px;gap:24px;align-items:start;margin-top:22px}
 @media(max-width:900px){.mod-layout{grid-template-columns:1fr}.sidebar{position:static!important}}
 .mod-layout>*{min-width:0}
@@ -229,7 +188,6 @@ footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
 .sbtn{display:block;text-align:center;padding:10px;border-radius:8px;font-size:13px;font-weight:600;margin-bottom:8px;cursor:pointer}
 .sbtn.grey{background:var(--light);color:var(--primary)}
 .sbtn.orange{background:var(--secondary);color:#fff}
-
 .lesson{padding:26px 0 50px}
 .ltitle{font-size:clamp(19px,3.5vw,26px);font-weight:800;margin-bottom:6px}
 .lsub{color:var(--gray);font-size:13px;margin-bottom:20px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
@@ -286,8 +244,6 @@ footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
 .nn{background:var(--secondary);color:#fff;box-shadow:0 4px 14px rgba(255,107,0,.3)}
 .nn:hover{transform:translateY(-2px)}
 .nb:disabled{opacity:.4;cursor:not-allowed;transform:none!important}
-
-/* ============ EXAME ============ */
 .overlay{display:none;position:fixed;inset:0;background:rgba(11,31,58,.78);z-index:900;align-items:center;justify-content:center;padding:16px}
 .overlay.open{display:flex}
 .modal{background:#fff;border-radius:22px;max-width:600px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 30px 80px rgba(0,0,0,.25)}
@@ -312,7 +268,6 @@ footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
 .res-verdict.pass{background:rgba(22,163,74,.1);color:var(--green)}
 .res-verdict.fail{background:rgba(239,68,68,.1);color:#dc2626}
 @media(max-width:600px){.modal-head,.modal-body{padding:18px 18px}}
-
 .hidden{display:none!important}
 .wa-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:400}
 </style>
@@ -327,7 +282,7 @@ footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
       <a onclick="nav('home');jump('modulos')">Módulos</a>
       <a onclick="nav('home');jump('faq')">FAQ</a>
       <a onclick="nav('aluno')">Área do Aluno</a>
-      <a class="cta-top" onclick="nav('home');jump('preco')"><i class="fab fa-whatsapp"></i> Inscrever-me</a>
+      <a class="cta-top" onclick="nav('aluno')"><i class="fas fa-right-to-bracket"></i> Aceder</a>
     </nav>
   </div>
 </header>
@@ -362,9 +317,7 @@ footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
 const IMG = {
   contabilidade:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&q=80',
   fiscalidade:'https://images.unsplash.com/photo-1554224154-26032ffc2f5f?w=900&q=80',
-  impostos:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&q=80',
-  agt:'https://images.unsplash.com/photo-1554224154-26032ffc2f5f?w=900&q=80',
-  balanco:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&q=80'
+  impostos:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&q=80'
 };
 
 /* ═══════════════ MÓDULO 1 — FUNDAMENTOS DA CONTABILIDADE ═══════════════ */
@@ -374,290 +327,334 @@ const M1 = {
   desc:'Introdução à contabilidade, PGCA, partidas dobradas, documentos fiscais, existências, imobilizado e muito mais. A base para dominar a contabilidade angolana.',
   aulas:[
     {t:'Introdução à Contabilidade: Património, Fluxos e Equação Fundamental', html:`
-      <div class="cb"><h2><i class="fas fa-university"></i> O que é Contabilidade?</h2>
-      <p>A contabilidade é a ciência que estuda e controla o património das entidades. Em Angola, é regulada pelo <strong>Plano Geral de Contabilidade Angolano (PGCA)</strong> e é essencial para cumprir as obrigações fiscais perante a <strong>AGT (Administração Geral Tributária)</strong>.</p>
-      <p>O património de uma empresa é o conjunto de <strong>bens, direitos e obrigações</strong> que ela possui num determinado momento.</p>
-      <div class="hi"><strong>Equação Fundamental:</strong> Ativo = Passivo + Capital Próprio</div>
-      <p><strong>Exemplo em Kz:</strong> A "Kwanza Tech, LDA" tem computadores (Kz 500.000), dinheiro no banco (Kz 300.000) e uma dívida de Kz 200.000. O Capital Próprio é 800.000 - 200.000 = <strong>Kz 600.000</strong>.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual é a equação fundamental da contabilidade?</div>
-      <div class="qo" onclick="cq(this,false)">a) Ativo = Passivo - Capital Próprio</div>
-      <div class="qo" onclick="cq(this,true)">b) Ativo = Passivo + Capital Próprio</div>
-      <div class="qo" onclick="cq(this,false)">c) Ativo + Passivo = Capital Próprio</div>
-      <div class="qo" onclick="cq(this,false)">d) Passivo = Ativo + Capital Próprio</div>
-      </div>
-    `},
-    {t:'O PGCA: Estrutura e Classes de Contas', html:`
-      <div class="cb"><h2><i class="fas fa-sitemap"></i> Estrutura do PGCA</h2>
-      <p>O PGCA é organizado em <strong>7 classes</strong> (de 1 a 7). Cada classe é dividida em grupos, subgrupos e contas.</p>
-      <div class="tw"><table class="dt"><tr><th>Classe</th><th>Designação</th><th>Natureza</th></tr>
-      <tr><td><strong>1</strong></td><td>Meios Financeiros e Operações Financeiras</td><td>Ativo</td></tr>
-      <tr><td><strong>2</strong></td><td>Contas a Receber e a Pagar</td><td>Ativo e Passivo</td></tr>
-      <tr><td><strong>3</strong></td><td>Existências</td><td>Ativo</td></tr>
-      <tr><td><strong>4</strong></td><td>Imobilizado</td><td>Ativo</td></tr>
-      <tr><td><strong>5</strong></td><td>Capital Próprio e Passivo de Longo Prazo</td><td>Capital Próprio e Passivo</td></tr>
-      <tr><td><strong>6</strong></td><td>Custos e Perdas</td><td>Devedora</td></tr>
-      <tr><td><strong>7</strong></td><td>Proveitos e Ganhos</td><td>Credora</td></tr>
-      </table></div>
-      <div class="ib"><strong>Regra de ouro:</strong> Ativo = Devedora; Passivo e CP = Credora.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">A conta "Fornecedores" pertence a que classe?</div>
-      <div class="qo" onclick="cq(this,false)">a) Classe 1</div>
-      <div class="qo" onclick="cq(this,true)">b) Classe 2</div>
-      <div class="qo" onclick="cq(this,false)">c) Classe 3</div>
-      <div class="qo" onclick="cq(this,false)">d) Classe 4</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-university"></i> O Que é Contabilidade?</h2>
+<p>A contabilidade é a ciência que estuda, regista e controla o património das entidades. Em Angola, é regulada pelo <strong>Plano Geral de Contabilidade Angolano (PGCA)</strong> e é essencial para cumprir as obrigações fiscais perante a <strong>AGT (Administração Geral Tributária)</strong>.</p>
+<p>O património de uma empresa é o conjunto de <strong>bens, direitos e obrigações</strong> que ela possui num determinado momento.</p>
+<div class="hi"><strong>Equação Fundamental:</strong> Ativo = Passivo + Capital Próprio</div>
+<p><strong>Exemplo em Kz:</strong> A "Kwanza Tech, LDA" tem computadores (Kz 500.000), dinheiro no banco (Kz 300.000) e uma dívida de Kz 200.000. O Capital Próprio é 800.000 - 200.000 = <strong>Kz 600.000</strong>.</p>
+<div class="ib"><strong>Pare e pense:</strong> Se uma empresa tem Ativo de Kz 1.000.000 e Passivo de Kz 700.000, qual é o seu Capital Próprio? (Resposta: 300.000 Kz).</div>
+</div>
+<div class="cb"><h2><i class="fas fa-exchange-alt"></i> Fluxos Financeiros</h2>
+<p><strong>Ingressos:</strong> entradas de recursos (vendas, recebimentos, empréstimos).<br>
+<strong>Dispêndios:</strong> saídas de recursos (compras, salários, impostos).</p>
+<div class="wb"><strong>Lembre-se:</strong> Nem todo ingresso é receita (ex: empréstimo), nem todo dispêndio é despesa (ex: compra de imobilizado).</div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual é a equação fundamental da contabilidade?</div>
+<div class="qo" onclick="cq(this,false)">a) Ativo = Passivo - Capital Próprio</div>
+<div class="qo" onclick="cq(this,true)">b) Ativo = Passivo + Capital Próprio</div>
+<div class="qo" onclick="cq(this,false)">c) Ativo + Passivo = Capital Próprio</div>
+<div class="qo" onclick="cq(this,false)">d) Passivo = Ativo + Capital Próprio</div>
+</div>`},
+    {t:'O Plano Geral de Contabilidade Angolano (PGCA): Estrutura e Classes 1-5', html:`
+<div class="cb"><h2><i class="fas fa-sitemap"></i> Estrutura do PGCA</h2>
+<p>O PGCA é organizado em <strong>7 classes</strong> (de 1 a 7). Cada classe é dividida em grupos, subgrupos e contas.</p>
+<div class="tw"><table class="dt"><tr><th>Classe</th><th>Designação</th><th>Natureza</th></tr>
+<tr><td><strong>1</strong></td><td>Meios Financeiros e Operações Financeiras</td><td>Ativo</td></tr>
+<tr><td><strong>2</strong></td><td>Contas a Receber e a Pagar</td><td>Ativo e Passivo</td></tr>
+<tr><td><strong>3</strong></td><td>Existências</td><td>Ativo</td></tr>
+<tr><td><strong>4</strong></td><td>Imobilizado</td><td>Ativo</td></tr>
+<tr><td><strong>5</strong></td><td>Capital Próprio e Passivo de Longo Prazo</td><td>Capital Próprio e Passivo</td></tr>
+</table></div>
+<div class="ib"><strong>Regra de ouro:</strong> Ativo = Devedora; Passivo e CP = Credora.</div>
+<p><strong>Exemplo:</strong> A conta "Caixa" (11) é Ativo, Devedora. A conta "Fornecedores" (22) é Passivo, Credora.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">A conta "Fornecedores" pertence a que classe e tem que natureza?</div>
+<div class="qo" onclick="cq(this,false)">a) Classe 1, Devedora</div>
+<div class="qo" onclick="cq(this,true)">b) Classe 2, Credora</div>
+<div class="qo" onclick="cq(this,false)">c) Classe 3, Devedora</div>
+<div class="qo" onclick="cq(this,false)">d) Classe 4, Credora</div>
+</div>`},
     {t:'Partidas Dobradas: Princípio, Regras de Débito e Crédito', html:`
-      <div class="cb"><h2><i class="fas fa-scale-balanced"></i> O Método das Partidas Dobradas</h2>
-      <p>O método das partidas dobradas assenta no princípio: <strong>"A todo o débito corresponde um crédito de igual valor, e vice-versa."</strong></p>
-      <div class="hi"><strong>Regras:</strong> Ativo e Custos aumentam com Débito; Passivo, CP e Proveitos aumentam com Crédito.</div>
-      <p><strong>Exemplo:</strong> Compra de mercadorias a crédito: Débito em Mercadorias (31) e Crédito em Fornecedores (22).</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Uma conta de Ativo aumenta com:</div>
-      <div class="qo" onclick="cq(this,true)">a) Débito</div>
-      <div class="qo" onclick="cq(this,false)">b) Crédito</div>
-      <div class="qo" onclick="cq(this,false)">c) Débito e Crédito</div>
-      <div class="qo" onclick="cq(this,false)">d) Nenhuma das anteriores</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-scale-balanced"></i> O Método das Partidas Dobradas</h2>
+<p>O método das partidas dobradas assenta no princípio: <strong>"A todo o débito corresponde um crédito de igual valor, e vice-versa."</strong></p>
+<div class="hi"><strong>Regras:</strong> Ativo e Custos aumentam com Débito; Passivo, CP e Proveitos aumentam com Crédito.</div>
+<p><strong>Exemplo:</strong> Compra de mercadorias a crédito: Débito em Mercadorias (31) e Crédito em Fornecedores (22).</p>
+</div>
+<div class="cb"><h2><i class="fas fa-table"></i> Tipos de Lançamentos</h2>
+<ul><li><strong>Simples:</strong> 1 Débito × 1 Crédito</li><li><strong>Composto:</strong> Vários Débitos × Vários Créditos</li><li><strong>De Regularização:</strong> Envolve contas como 69/76 ou 24 (IVA)</li></ul>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Uma conta de Ativo aumenta com:</div>
+<div class="qo" onclick="cq(this,true)">a) Débito</div>
+<div class="qo" onclick="cq(this,false)">b) Crédito</div>
+<div class="qo" onclick="cq(this,false)">c) Débito e Crédito</div>
+<div class="qo" onclick="cq(this,false)">d) Nenhuma das anteriores</div>
+</div>`},
     {t:'Registo das Operações Correntes: Diário, Razão e Balancete', html:`
-      <div class="cb"><h2><i class="fas fa-book"></i> Livros Contabilísticos</h2>
-      <p>O <strong>Diário</strong> regista cronologicamente todas as operações. O <strong>Razão</strong> regista por conta. O <strong>Balancete</strong> lista os saldos de todas as contas.</p>
-      <div class="ib"><strong>Regra:</strong> O total dos saldos devedores deve ser igual ao total dos saldos credores.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual a função principal do Livro Razão?</div>
-      <div class="qo" onclick="cq(this,false)">a) Registar por ordem cronológica</div>
-      <div class="qo" onclick="cq(this,true)">b) Mostrar o saldo de cada conta</div>
-      <div class="qo" onclick="cq(this,false)">c) Calcular o IVA</div>
-      <div class="qo" onclick="cq(this,false)">d) Substituir o Balancete</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-book"></i> Livros Contabilísticos</h2>
+<p>O <strong>Diário</strong> regista cronologicamente todas as operações. O <strong>Razão</strong> regista por conta. O <strong>Balancete</strong> lista os saldos de todas as contas.</p>
+<div class="ib"><strong>Regra:</strong> O total dos saldos devedores deve ser igual ao total dos saldos credores.</div>
+</div>
+<div class="cb"><h2><i class="fas fa-calculator"></i> Exemplo de Balancete</h2>
+<div class="tw"><table class="dt"><tr><th>Conta</th><th>Saldo Devedor</th><th>Saldo Credor</th></tr>
+<tr><td>Caixa</td><td>50.000</td><td>—</td></tr>
+<tr><td>Bancos</td><td>300.000</td><td>—</td></tr>
+<tr><td>Fornecedores</td><td>—</td><td>150.000</td></tr>
+<tr><td>Capital</td><td>—</td><td>200.000</td></tr>
+<tr><td><strong>Totais</strong></td><td><strong>350.000</strong></td><td><strong>350.000</strong></td></tr>
+</table></div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual a função principal do Livro Razão?</div>
+<div class="qo" onclick="cq(this,false)">a) Registar por ordem cronológica</div>
+<div class="qo" onclick="cq(this,true)">b) Mostrar o saldo de cada conta</div>
+<div class="qo" onclick="cq(this,false)">c) Calcular o IVA</div>
+<div class="qo" onclick="cq(this,false)">d) Substituir o Balancete</div>
+</div>`},
     {t:'Documentos, Facturação e Regime Jurídico das Facturas em Angola', html:`
-      <div class="cb"><h2><i class="fas fa-file-invoice"></i> A Factura em Angola</h2>
-      <p>A <strong>Lei n.º 7/19 de 24 de Abril</strong> estabelece os elementos obrigatórios da factura: título, número, data, identificação do emitente e do adquirente, descrição, valor tributável, taxa de IVA, valor do IVA e total.</p>
-      <div class="wb"><strong>Atenção:</strong> Facturas sem NIF do adquirente não permitem deduzir o IVA.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual documento legal regula a facturação em Angola?</div>
-      <div class="qo" onclick="cq(this,false)">a) Código do Trabalho</div>
-      <div class="qo" onclick="cq(this,true)">b) Lei n.º 7/19 de 24 de Abril</div>
-      <div class="qo" onclick="cq(this,false)">c) Decreto n.º 1/05</div>
-      <div class="qo" onclick="cq(this,false)">d) Código Comercial</div>
-      </div>
-    `},
-    {t:'Compras, Vendas, Existências e CMV — Parte 1', html:`
-      <div class="cb"><h2><i class="fas fa-calculator"></i> Custo das Mercadorias Vendidas (CMV)</h2>
-      <p><strong>CMV = Inventário Inicial + Compras – Inventário Final</strong></p>
-      <p>Métodos de custeio: <strong>PEPS</strong> (primeiro a entrar, primeiro a sair), <strong>UEPS</strong> (último a entrar, primeiro a sair) e <strong>Custo Médio Ponderado</strong>.</p>
-      <div class="hi"><strong>Exemplo:</strong> PEPS: vende-se primeiro o stock mais antigo.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual a fórmula do CMV?</div>
-      <div class="qo" onclick="cq(this,false)">a) CMV = Vendas - Compras</div>
-      <div class="qo" onclick="cq(this,true)">b) CMV = II + Compras - IF</div>
-      <div class="qo" onclick="cq(this,false)">c) CMV = IF - II + Compras</div>
-      <div class="qo" onclick="cq(this,false)">d) CMV = Compras - IF</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-file-invoice"></i> A Factura em Angola</h2>
+<p>A <strong>Lei n.º 7/19 de 24 de Abril</strong> estabelece os elementos obrigatórios da factura: título, número, data, identificação do emitente e do adquirente, descrição, valor tributável, taxa de IVA, valor do IVA e total.</p>
+<div class="wb"><strong>Atenção:</strong> Facturas sem NIF do adquirente não permitem deduzir o IVA.</div>
+</div>
+<div class="cb"><h2><i class="fas fa-clock"></i> Prazos e SAFT-AO</h2>
+<p>O ficheiro <strong>SAFT-AO</strong> deve ser enviado à AGT até ao dia 15 do mês seguinte, contendo todas as facturas emitidas e recebidas.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual documento legal regula a facturação em Angola?</div>
+<div class="qo" onclick="cq(this,false)">a) Código do Trabalho</div>
+<div class="qo" onclick="cq(this,true)">b) Lei n.º 7/19 de 24 de Abril</div>
+<div class="qo" onclick="cq(this,false)">c) Decreto n.º 1/05</div>
+<div class="qo" onclick="cq(this,false)">d) Código Comercial</div>
+</div>`},
+    {t:'Compras, Vendas, Existências e CMV — Parte 1 (Métodos de Inventário)', html:`
+<div class="cb"><h2><i class="fas fa-calculator"></i> Custo das Mercadorias Vendidas (CMV)</h2>
+<p><strong>CMV = Inventário Inicial + Compras – Inventário Final</strong></p>
+<p>Métodos de custeio: <strong>PEPS</strong> (primeiro a entrar, primeiro a sair), <strong>UEPS</strong> (último a entrar, primeiro a sair) e <strong>Custo Médio Ponderado</strong>.</p>
+<div class="hi"><strong>Exemplo PEPS:</strong> Vende-se primeiro o stock mais antigo. O CMV reflete preços antigos; o stock final reflete preços recentes.</div>
+</div>
+<div class="cb"><h2><i class="fas fa-table"></i> Comparação</h2>
+<div class="tw"><table class="dt"><tr><th>Método</th><th>CMV (em inflação)</th><th>Lucro</th></tr>
+<tr><td>PEPS</td><td>Baixo</td><td>Alto</td></tr>
+<tr><td>UEPS</td><td>Alto</td><td>Baixo</td></tr>
+<tr><td>CMP</td><td>Médio</td><td>Médio</td></tr>
+</table></div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual a fórmula do CMV?</div>
+<div class="qo" onclick="cq(this,false)">a) CMV = Vendas - Compras</div>
+<div class="qo" onclick="cq(this,true)">b) CMV = II + Compras - IF</div>
+<div class="qo" onclick="cq(this,false)">c) CMV = IF - II + Compras</div>
+<div class="qo" onclick="cq(this,false)">d) CMV = Compras - IF</div>
+</div>`},
     {t:'Compras, Vendas, Existências e CMV — Parte 2 (Devoluções e Ajustamentos)', html:`
-      <div class="cb"><h2><i class="fas fa-rotate-left"></i> Devoluções e Ajustamentos</h2>
-      <p>Devoluções de compras invertem o lançamento original: Débito em Fornecedores, Crédito em Mercadorias e Crédito em IVA Dedutível.</p>
-      <p>Devoluções de vendas: Débito em Vendas e Crédito em Clientes.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Como se regista a devolução de uma compra a crédito?</div>
-      <div class="qo" onclick="cq(this,true)">a) Débito Fornecedores, Crédito Mercadorias e Crédito IVA Dedutível</div>
-      <div class="qo" onclick="cq(this,false)">b) Débito Mercadorias, Crédito Fornecedores</div>
-      <div class="qo" onclick="cq(this,false)">c) Débito IVA Dedutível, Crédito Fornecedores</div>
-      <div class="qo" onclick="cq(this,false)">d) Débito Fornecedores, Crédito Bancos</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-rotate-left"></i> Devoluções e Ajustamentos</h2>
+<p>Devoluções de compras invertem o lançamento original: Débito em Fornecedores, Crédito em Mercadorias e Crédito em IVA Dedutível.</p>
+<p>Devoluções de vendas: Débito em Vendas e Crédito em Clientes (ou Bancos).</p>
+<p><strong>Exemplo:</strong> Compra de 200.000 + IVA, devolução de 50.000 + IVA: Débito Fornecedores 57.000; Crédito Mercadorias 50.000; Crédito IVA Dedutível 7.000.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Como se regista a devolução de uma compra a crédito?</div>
+<div class="qo" onclick="cq(this,true)">a) Débito Fornecedores, Crédito Mercadorias e Crédito IVA Dedutível</div>
+<div class="qo" onclick="cq(this,false)">b) Débito Mercadorias, Crédito Fornecedores</div>
+<div class="qo" onclick="cq(this,false)">c) Débito IVA Dedutível, Crédito Fornecedores</div>
+<div class="qo" onclick="cq(this,false)">d) Débito Fornecedores, Crédito Bancos</div>
+</div>`},
     {t:'Meios Monetários, Bancos e Reconciliações Bancárias', html:`
-      <div class="cb"><h2><i class="fas fa-university"></i> Reconciliação Bancária</h2>
-      <p>A reconciliação ajusta as diferenças entre o extrato bancário e o saldo contabilístico. Depósitos em trânsito e cheques não compensados são as causas mais comuns.</p>
-      <div class="hi"><strong>Fórmula:</strong> Saldo Extrato + Depósitos em Trânsito - Cheques não compensados = Saldo Contabilístico Ajustado.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">O que é um depósito em trânsito?</div>
-      <div class="qo" onclick="cq(this,false)">a) Um depósito que o banco já creditou mas a empresa não registou</div>
-      <div class="qo" onclick="cq(this,true)">b) Um depósito que a empresa registou mas o banco ainda não creditou</div>
-      <div class="qo" onclick="cq(this,false)">c) Um cheque emitido que ainda não foi descontado</div>
-      <div class="qo" onclick="cq(this,false)">d) Um erro de cálculo</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-university"></i> Reconciliação Bancária</h2>
+<p>A reconciliação ajusta as diferenças entre o extrato bancário e o saldo contabilístico. Depósitos em trânsito e cheques não compensados são as causas mais comuns.</p>
+<div class="hi"><strong>Fórmula:</strong> Saldo Extrato + Depósitos em Trânsito - Cheques não compensados = Saldo Contabilístico Ajustado.</div>
+<p><strong>Exemplo:</strong> Saldo extrato 450.000, depósitos em trânsito 80.000, cheques não compensados 30.000 → 450.000+80.000-30.000 = 500.000 (saldo contabilístico antes de comissões).</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">O que é um depósito em trânsito?</div>
+<div class="qo" onclick="cq(this,false)">a) Um depósito que o banco já creditou mas a empresa não registou</div>
+<div class="qo" onclick="cq(this,true)">b) Um depósito que a empresa registou mas o banco ainda não creditou</div>
+<div class="qo" onclick="cq(this,false)">c) Um cheque emitido que ainda não foi descontado</div>
+<div class="qo" onclick="cq(this,false)">d) Um erro de cálculo</div>
+</div>`},
     {t:'Imobilizado, Amortizações e Reavaliações — Parte 1', html:`
-      <div class="cb"><h2><i class="fas fa-building"></i> Amortizações</h2>
-      <p>A amortização regista a perda de valor do imobilizado ao longo do tempo. <strong>Amortização Anual = Custo × Taxa de Amortização</strong>.</p>
-      <div class="tw"><table class="dt"><tr><th>Bem</th><th>Taxa máxima (AGT)</th></tr>
-      <tr><td>Edifícios</td><td>2%</td></tr>
-      <tr><td>Mobiliário</td><td>10%</td></tr>
-      <tr><td>Equipamento informático</td><td>25%</td></tr>
-      <tr><td>Viaturas ligeiras</td><td>25%</td></tr>
-      </table></div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual a taxa máxima de amortização para equipamento informático?</div>
-      <div class="qo" onclick="cq(this,false)">a) 10%</div>
-      <div class="qo" onclick="cq(this,false)">b) 20%</div>
-      <div class="qo" onclick="cq(this,true)">c) 25%</div>
-      <div class="qo" onclick="cq(this,false)">d) 33%</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-building"></i> Amortizações</h2>
+<p>A amortização regista a perda de valor do imobilizado ao longo do tempo. <strong>Amortização Anual = Custo × Taxa de Amortização</strong></p>
+<div class="tw"><table class="dt"><tr><th>Bem</th><th>Taxa máxima (AGT)</th></tr>
+<tr><td>Edifícios</td><td>2%</td></tr>
+<tr><td>Mobiliário</td><td>10%</td></tr>
+<tr><td>Equipamento informático</td><td>25%</td></tr>
+<tr><td>Viaturas ligeiras</td><td>25%</td></tr>
+</table></div>
+<p><strong>Registo:</strong> Débito 65 (Amortizações) e Crédito 44 (Amortizações Acumuladas).</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual a taxa máxima de amortização para equipamento informático?</div>
+<div class="qo" onclick="cq(this,false)">a) 10%</div>
+<div class="qo" onclick="cq(this,false)">b) 20%</div>
+<div class="qo" onclick="cq(this,true)">c) 25%</div>
+<div class="qo" onclick="cq(this,false)">d) 33%</div>
+</div>`},
     {t:'Imobilizado, Amortizações e Reavaliações — Parte 2', html:`
-      <div class="cb"><h2><i class="fas fa-hand-holding-usd"></i> Alienação de Imobilizado</h2>
-      <p><strong>Valor Contabilístico Líquido (VCL) = Custo - Amortizações Acumuladas</strong></p>
-      <p>Mais-valia: preço de venda > VCL. Menos-valia: preço de venda < VCL.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Se uma empresa vende um bem por um valor inferior ao VCL, tem:</div>
-      <div class="qo" onclick="cq(this,false)">a) Uma mais-valia</div>
-      <div class="qo" onclick="cq(this,true)">b) Uma menos-valia</div>
-      <div class="qo" onclick="cq(this,false)">c) Um lucro</div>
-      <div class="qo" onclick="cq(this,false)">d) Uma receita</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-hand-holding-usd"></i> Alienação de Imobilizado</h2>
+<p><strong>Valor Contabilístico Líquido (VCL) = Custo - Amortizações Acumuladas</strong></p>
+<p>Mais-valia: preço de venda > VCL. Menos-valia: preço de venda < VCL.</p>
+<p><strong>Exemplo:</strong> Custo 400.000, Amortizações 300.000 → VCL = 100.000. Vende por 150.000 → mais-valia de 50.000.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Se uma empresa vende um bem por um valor inferior ao VCL, tem:</div>
+<div class="qo" onclick="cq(this,false)">a) Uma mais-valia</div>
+<div class="qo" onclick="cq(this,true)">b) Uma menos-valia</div>
+<div class="qo" onclick="cq(this,false)">c) Um lucro</div>
+<div class="qo" onclick="cq(this,false)">d) Uma receita</div>
+</div>`},
     {t:'Contas a Receber, Contas a Pagar e Provisões', html:`
-      <div class="cb"><h2><i class="fas fa-hand-holding-usd"></i> Provisões para Devedores Duvidosos</h2>
-      <p>As provisões estimam perdas futuras com clientes. A AGT aceita percentagens por tempo de atraso.</p>
-      <div class="tw"><table class="dt"><tr><th>Período em atraso</th><th>Percentual</th></tr>
-      <tr><td>Até 90 dias</td><td>0%</td></tr>
-      <tr><td>91 a 180 dias</td><td>10%</td></tr>
-      <tr><td>181 a 360 dias</td><td>50%</td></tr>
-      <tr><td>Acima de 360 dias</td><td>100%</td></tr>
-      </table></div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Uma provisão para devedores duvidosos é registada como:</div>
-      <div class="qo" onclick="cq(this,false)">a) Um ativo</div>
-      <div class="qo" onclick="cq(this,true)">b) Uma redução do ativo e um custo</div>
-      <div class="qo" onclick="cq(this,false)">c) Um aumento do capital próprio</div>
-      <div class="qo" onclick="cq(this,false)">d) Uma receita</div>
-      </div>
-    `}
-  ]
-};
+<div class="cb"><h2><i class="fas fa-hand-holding-usd"></i> Provisões para Devedores Duvidosos</h2>
+<p>As provisões estimam perdas futuras com clientes. A AGT aceita percentagens por tempo de atraso.</p>
+<div class="tw"><table class="dt"><tr><th>Período em atraso</th><th>Percentual</th></tr>
+<tr><td>Até 90 dias</td><td>0%</td></tr>
+<tr><td>91 a 180 dias</td><td>10%</td></tr>
+<tr><td>181 a 360 dias</td><td>50%</td></tr>
+<tr><td>Acima de 360 dias</td><td>100%</td></tr>
+</table></div>
+<p><strong>Registo:</strong> Débito 66 (Provisões) e Crédito 29 (Provisões p/ Devedores).</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Uma provisão para devedores duvidosos é registada como:</div>
+<div class="qo" onclick="cq(this,false)">a) Um ativo</div>
+<div class="qo" onclick="cq(this,true)">b) Uma redução do ativo e um custo</div>
+<div class="qo" onclick="cq(this,false)">c) Um aumento do capital próprio</div>
+<div class="qo" onclick="cq(this,false)">d) Uma receita</div>
+</div>`}
+]};
 
 /* ═══════════════ MÓDULO 2 — FISCALIDADE ANGOLANA ═══════════════ */
 const M2 = {
   n:2, fase:1, img:IMG.fiscalidade,
   titulo:'Fiscalidade Angolana',
-  desc:'IVA, IRT, INSS, Imposto Industrial, Imposto Predial, Retenções na Fonte, Obrigações Declarativas e muito mais. Domine a relação com a AGT.',
+  desc:'Moeda estrangeira, processamento salarial, IVA, IRT, INSS, Imposto Industrial, Imposto Predial, Retenções na Fonte, Obrigações Declarativas e muito mais. Domine a relação com a AGT.',
   aulas:[
+    {t:'Operações em Moeda Estrangeira e Diferenças Cambiais', html:`
+<div class="cb"><h2><i class="fas fa-exchange-alt"></i> Moeda Estrangeira</h2>
+<p>Transacções em moeda estrangeira (USD, EUR) são convertidas para Kwanzas usando a taxa de câmbio do BNA. No final do período, itens monetários são reavaliados ao câmbio atual.</p>
+<div class="hi"><strong>Exemplo:</strong> Dívida em USD de 10.000 a 900 Kz/USD. No final, o USD subiu para 950 → diferença cambial passiva de 500.000 Kz (Débito 68, Crédito 22).</div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">As diferenças cambiais são registadas em que classes do PGCA?</div>
+<div class="qo" onclick="cq(this,false)">a) Classe 1 e 2</div>
+<div class="qo" onclick="cq(this,true)">b) Classe 6 e 7</div>
+<div class="qo" onclick="cq(this,false)">c) Classe 3 e 4</div>
+<div class="qo" onclick="cq(this,false)">d) Classe 5</div>
+</div>`},
+    {t:'Processamento Salarial: Remunerações, IRT e INSS', html:`
+<div class="cb"><h2><i class="fas fa-users"></i> Cálculo Salarial</h2>
+<p><strong>IRT</strong> é calculado por tabela progressiva. <strong>INSS:</strong> 3% trabalhador, 8% empresa.</p>
+<div class="tw"><table class="dt"><tr><th>Rendimento mensal</th><th>Taxa</th><th>Abater</th></tr>
+<tr><td>Até 100.000</td><td>Isento</td><td>0</td></tr>
+<tr><td>100.001 a 200.000</td><td>10%</td><td>10.000</td></tr>
+<tr><td>200.001 a 500.000</td><td>15%</td><td>20.000</td></tr>
+<tr><td>500.001 a 1.000.000</td><td>20%</td><td>45.000</td></tr>
+<tr><td>Acima de 1.000.000</td><td>25%</td><td>95.000</td></tr>
+</table></div>
+<p><strong>Exemplo:</strong> Salário base 400.000, subsídio 15.000 (isento). IRT = (400.000×15%) - 20.000 = 40.000. INSS = 400.000×3% = 12.000. Líquido = 400.000+15.000-40.000-12.000 = 363.000.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual a alíquota do INSS suportada pelo trabalhador em Angola?</div>
+<div class="qo" onclick="cq(this,false)">a) 8%</div>
+<div class="qo" onclick="cq(this,true)">b) 3%</div>
+<div class="qo" onclick="cq(this,false)">c) 10%</div>
+<div class="qo" onclick="cq(this,false)">d) 5%</div>
+</div>`},
     {t:'IVA: Liquidação, Dedução e Apuramento — Parte 1', html:`
-      <div class="cb"><h2><i class="fas fa-percent"></i> Mecanismo do IVA</h2>
-      <p>O <strong>IVA</strong> é um imposto sobre o valor acrescentado. A taxa normal em Angola é de <strong>14%</strong>.</p>
-      <div class="hi"><strong>IVA a pagar = IVA Liquidado (vendas) - IVA Dedutível (compras)</strong></div>
-      <p><strong>Exemplo:</strong> Vendas de Kz 1.000.000 + IVA (140.000); Compras de Kz 500.000 + IVA (70.000). IVA a pagar = 140.000 - 70.000 = <strong>Kz 70.000</strong>.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual é a taxa normal de IVA em Angola?</div>
-      <div class="qo" onclick="cq(this,false)">a) 10%</div>
-      <div class="qo" onclick="cq(this,true)">b) 14%</div>
-      <div class="qo" onclick="cq(this,false)">c) 18%</div>
-      <div class="qo" onclick="cq(this,false)">d) 20%</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-percent"></i> Mecanismo do IVA</h2>
+<p>O <strong>IVA</strong> é um imposto sobre o valor acrescentado. A taxa normal em Angola é de <strong>14%</strong>.</p>
+<div class="hi"><strong>IVA a pagar = IVA Liquidado (vendas) - IVA Dedutível (compras)</strong></div>
+<p><strong>Exemplo:</strong> Vendas de Kz 1.000.000 + IVA (140.000); Compras de Kz 500.000 + IVA (70.000). IVA a pagar = 140.000 - 70.000 = <strong>Kz 70.000</strong>.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual é a taxa normal de IVA em Angola?</div>
+<div class="qo" onclick="cq(this,false)">a) 10%</div>
+<div class="qo" onclick="cq(this,true)">b) 14%</div>
+<div class="qo" onclick="cq(this,false)">c) 18%</div>
+<div class="qo" onclick="cq(this,false)">d) 20%</div>
+</div>`},
     {t:'IVA: Declaração Periódica (Modelo 14) e Portal AGT — Parte 2', html:`
-      <div class="cb"><h2><i class="fas fa-file-invoice"></i> Modelo 14 e SAFT-AO</h2>
-      <p>A declaração periódica do IVA (<strong>Modelo 14</strong>) é submetida no Portal do Contribuinte da AGT até ao dia 15 do mês seguinte. O <strong>ficheiro SAFT-AO</strong> deve ser anexado.</p>
-      <div class="wb"><strong>Consequência do não envio do SAFT-AO:</strong> multa e impossibilidade de deduzir o IVA.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual o prazo para entrega do Modelo 14 (contribuintes mensais)?</div>
-      <div class="qo" onclick="cq(this,false)">a) Dia 10 do mês seguinte</div>
-      <div class="qo" onclick="cq(this,true)">b) Dia 15 do mês seguinte</div>
-      <div class="qo" onclick="cq(this,false)">c) Dia 20 do mês seguinte</div>
-      <div class="qo" onclick="cq(this,false)">d) Dia 30 do mês seguinte</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-file-invoice"></i> Modelo 14 e SAFT-AO</h2>
+<p>A declaração periódica do IVA (<strong>Modelo 14</strong>) é submetida no Portal do Contribuinte da AGT até ao dia 15 do mês seguinte. O <strong>ficheiro SAFT-AO</strong> deve ser anexado.</p>
+<div class="wb"><strong>Consequência do não envio do SAFT-AO:</strong> multa e impossibilidade de deduzir o IVA.</div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual o prazo para entrega do Modelo 14 (contribuintes mensais)?</div>
+<div class="qo" onclick="cq(this,false)">a) Dia 10 do mês seguinte</div>
+<div class="qo" onclick="cq(this,true)">b) Dia 15 do mês seguinte</div>
+<div class="qo" onclick="cq(this,false)">c) Dia 20 do mês seguinte</div>
+<div class="qo" onclick="cq(this,false)">d) Dia 30 do mês seguinte</div>
+</div>`},
     {t:'IRT e Contribuições para a Segurança Social (INSS)', html:`
-      <div class="cb"><h2><i class="fas fa-users"></i> IRT e INSS</h2>
-      <p>O <strong>IRT</strong> é calculado por tabela progressiva. O <strong>INSS</strong> é de 3% para o trabalhador e 8% para a empresa.</p>
-      <div class="hi"><strong>Salário Líquido = Salário Bruto - IRT - INSS (3%)</strong></div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual a alíquota do INSS suportada pelo trabalhador em Angola?</div>
-      <div class="qo" onclick="cq(this,false)">a) 8%</div>
-      <div class="qo" onclick="cq(this,true)">b) 3%</div>
-      <div class="qo" onclick="cq(this,false)">c) 10%</div>
-      <div class="qo" onclick="cq(this,false)">d) 5%</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-users"></i> IRT e INSS</h2>
+<p>O <strong>IRT</strong> é calculado por tabela progressiva. O <strong>INSS</strong> é de 3% para o trabalhador e 8% para a empresa.</p>
+<div class="hi"><strong>Salário Líquido = Salário Bruto - IRT - INSS (3%)</strong></div>
+<p>O empregador entrega o IRT à AGT (Modelo 2) até dia 15, e o INSS ao INSS até dia 10.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual a alíquota do INSS suportada pelo trabalhador em Angola?</div>
+<div class="qo" onclick="cq(this,false)">a) 8%</div>
+<div class="qo" onclick="cq(this,true)">b) 3%</div>
+<div class="qo" onclick="cq(this,false)">c) 10%</div>
+<div class="qo" onclick="cq(this,false)">d) 5%</div>
+</div>`},
     {t:'Imposto Industrial: Apuramento, DLP e Declaração Anual', html:`
-      <div class="cb"><h2><i class="fas fa-industry"></i> Imposto Industrial (II)</h2>
-      <p>O II incide sobre o lucro tributável à taxa de <strong>25%</strong>, acrescida de derrama municipal.</p>
-      <p><strong>Lucro tributável = Lucro Contabilístico + Adições - Deduções</strong></p>
-      <div class="ib"><strong>Exemplo:</strong> Lucro contabilístico Kz 2.000.000 + multas (100.000) - prejuízos (400.000) = Kz 1.700.000. II = 1.700.000 × 25% = Kz 425.000.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual é a taxa normal do Imposto Industrial em Angola?</div>
-      <div class="qo" onclick="cq(this,false)">a) 15%</div>
-      <div class="qo" onclick="cq(this,false)">b) 20%</div>
-      <div class="qo" onclick="cq(this,true)">c) 25%</div>
-      <div class="qo" onclick="cq(this,false)">d) 30%</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-industry"></i> Imposto Industrial (II)</h2>
+<p>O II incide sobre o lucro tributável à taxa de <strong>25%</strong>, acrescida de derrama municipal.</p>
+<p><strong>Lucro tributável = Lucro Contabilístico + Adições - Deduções</strong></p>
+<div class="ib"><strong>Exemplo:</strong> Lucro contabilístico Kz 2.000.000 + multas (100.000) - prejuízos (400.000) = Kz 1.700.000. II = 1.700.000 × 25% = Kz 425.000.</div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual é a taxa normal do Imposto Industrial em Angola?</div>
+<div class="qo" onclick="cq(this,false)">a) 15%</div>
+<div class="qo" onclick="cq(this,false)">b) 20%</div>
+<div class="qo" onclick="cq(this,true)">c) 25%</div>
+<div class="qo" onclick="cq(this,false)">d) 30%</div>
+</div>`},
     {t:'Imposto Predial, Imposto do Selo e IAC', html:`
-      <div class="cb"><h2><i class="fas fa-home"></i> IP, IS e IAC</h2>
-      <p><strong>Imposto Predial:</strong> sobre imóveis urbanos. <strong>Imposto do Selo:</strong> sobre documentos e contratos. <strong>IAC:</strong> sobre aplicações de capitais (juros, dividendos).</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">O Imposto Predial incide sobre:</div>
-      <div class="qo" onclick="cq(this,false)">a) Vendas de mercadorias</div>
-      <div class="qo" onclick="cq(this,true)">b) Propriedade de imóveis urbanos</div>
-      <div class="qo" onclick="cq(this,false)">c) Rendimentos do trabalho</div>
-      <div class="qo" onclick="cq(this,false)">d) Aplicações financeiras</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-home"></i> IP, IS e IAC</h2>
+<p><strong>Imposto Predial:</strong> sobre imóveis urbanos (10-35% da renda anual). <strong>Imposto do Selo:</strong> sobre documentos e contratos. <strong>IAC:</strong> sobre aplicações de capitais (juros, dividendos) a 10%.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">O Imposto Predial incide sobre:</div>
+<div class="qo" onclick="cq(this,false)">a) Vendas de mercadorias</div>
+<div class="qo" onclick="cq(this,true)">b) Propriedade de imóveis urbanos</div>
+<div class="qo" onclick="cq(this,false)">c) Rendimentos do trabalho</div>
+<div class="qo" onclick="cq(this,false)">d) Aplicações financeiras</div>
+</div>`},
     {t:'Retenções na Fonte e Tributação de Não Residentes', html:`
-      <div class="cb"><h2><i class="fas fa-hand-holding-usd"></i> Retenções na Fonte</h2>
-      <p><strong>IRT:</strong> 6,5% para pessoas singulares. <strong>II:</strong> 6,5% para pessoas coletivas. <strong>Não residentes:</strong> retenção de 15%.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual a taxa geral de retenção na fonte de II para serviços prestados por empresas angolanas?</div>
-      <div class="qo" onclick="cq(this,true)">a) 6,5%</div>
-      <div class="qo" onclick="cq(this,false)">b) 10%</div>
-      <div class="qo" onclick="cq(this,false)">c) 15%</div>
-      <div class="qo" onclick="cq(this,false)">d) 25%</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-hand-holding-usd"></i> Retenções na Fonte</h2>
+<p><strong>IRT:</strong> 6,5% para pessoas singulares. <strong>II:</strong> 6,5% para pessoas coletivas. <strong>Não residentes:</strong> retenção de 15%.</p>
+<p><strong>Exemplo:</strong> Serviço de 500.000 a pessoa singular → retenção IRT = 32.500, líquido = 467.500.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual a taxa geral de retenção na fonte de II para serviços prestados por empresas angolanas?</div>
+<div class="qo" onclick="cq(this,true)">a) 6,5%</div>
+<div class="qo" onclick="cq(this,false)">b) 10%</div>
+<div class="qo" onclick="cq(this,false)">c) 15%</div>
+<div class="qo" onclick="cq(this,false)">d) 25%</div>
+</div>`},
     {t:'Obrigações Declarativas, Calendário Fiscal e Portal do Contribuinte', html:`
-      <div class="cb"><h2><i class="fas fa-calendar-alt"></i> Calendário Fiscal</h2>
-      <div class="tw"><table class="dt"><tr><th>Data</th><th>Obrigação</th></tr>
-      <tr><td>Dia 10</td><td>INSS</td></tr>
-      <tr><td>Dia 15</td><td>IVA (Modelo 14) + IRT (Modelo 2)</td></tr>
-      <tr><td>Dia 20</td><td>DLP (Imposto Industrial)</td></tr>
-      <tr><td>Até 31 de Maio</td><td>Declaração Anual do II (Modelo 1)</td></tr>
-      </table></div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Até que dia se entrega a Declaração Mensal de IVA (Modelo 14)?</div>
-      <div class="qo" onclick="cq(this,false)">a) Dia 10</div>
-      <div class="qo" onclick="cq(this,true)">b) Dia 15</div>
-      <div class="qo" onclick="cq(this,false)">c) Dia 20</div>
-      <div class="qo" onclick="cq(this,false)">d) Dia 30</div>
-      </div>
-    `},
-    {t:'Encerramento de Contas e Demonstrações Financeiras', html:`
-      <div class="cb"><h2><i class="fas fa-chart-pie"></i> Demonstrações Financeiras</h2>
-      <p>O <strong>Balanço</strong> mostra a situação patrimonial. A <strong>DRE</strong> mostra o desempenho. O <strong>DFC</strong> mostra os fluxos de caixa.</p>
-      <div class="hi"><strong>Análise por rácios:</strong> Liquidez Corrente = Ativo Corrente / Passivo Corrente. Endividamento = Passivo Total / Capital Próprio.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual documento mostra a situação patrimonial da empresa num momento específico?</div>
-      <div class="qo" onclick="cq(this,false)">a) DRE</div>
-      <div class="qo" onclick="cq(this,true)">b) Balanço Patrimonial</div>
-      <div class="qo" onclick="cq(this,false)">c) DFC</div>
-      <div class="qo" onclick="cq(this,false)">d) DMR</div>
-      </div>
-    `}
-  ]
-};
+<div class="cb"><h2><i class="fas fa-calendar-alt"></i> Calendário Fiscal</h2>
+<div class="tw"><table class="dt"><tr><th>Data</th><th>Obrigação</th></tr>
+<tr><td>Dia 10</td><td>INSS</td></tr>
+<tr><td>Dia 15</td><td>IVA (Modelo 14) + IRT (Modelo 2)</td></tr>
+<tr><td>Dia 20</td><td>DLP (Imposto Industrial) — trimestral</td></tr>
+<tr><td>Até 31 de Maio</td><td>Declaração Anual do II (Modelo 1)</td></tr>
+</table></div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Até que dia se entrega a Declaração Mensal de IVA (Modelo 14)?</div>
+<div class="qo" onclick="cq(this,false)">a) Dia 10</div>
+<div class="qo" onclick="cq(this,true)">b) Dia 15</div>
+<div class="qo" onclick="cq(this,false)">c) Dia 20</div>
+<div class="qo" onclick="cq(this,false)">d) Dia 30</div>
+</div>`},
+    {t:'Encerramento de Contas, Demonstrações Financeiras e Análise', html:`
+<div class="cb"><h2><i class="fas fa-chart-pie"></i> Demonstrações Financeiras</h2>
+<p>O <strong>Balanço</strong> mostra a situação patrimonial. A <strong>DRE</strong> mostra o desempenho. O <strong>DFC</strong> mostra os fluxos de caixa.</p>
+<div class="hi"><strong>Análise por rácios:</strong> Liquidez Corrente = Ativo Corrente / Passivo Corrente. Endividamento = Passivo Total / Capital Próprio.</div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual documento mostra a situação patrimonial da empresa num momento específico?</div>
+<div class="qo" onclick="cq(this,false)">a) DRE</div>
+<div class="qo" onclick="cq(this,true)">b) Balanço Patrimonial</div>
+<div class="qo" onclick="cq(this,false)">c) DFC</div>
+<div class="qo" onclick="cq(this,false)">d) DMR</div>
+</div>`}
+]};
 
 /* ═══════════════ MÓDULO 3 — APLICAÇÃO PRÁTICA E CASOS REAIS ═══════════════ */
 const M3 = {
@@ -665,170 +662,156 @@ const M3 = {
   titulo:'Aplicação Prática e Casos Reais',
   desc:'Constituição de empresa, planos de contas personalizados, contabilidade de gestão, construção civil, operações bancárias, fusões, auditoria, fiscalização e simulações completas.',
   aulas:[
-    {t:'Constituição de Empresa em Angola', html:`
-      <div class="cb"><h2><i class="fas fa-building"></i> Constituição de uma LDA</h2>
-      <p>Registo da constituição de uma sociedade por quotas (LDA) do zero: capital social, despesas de constituição, NIF, alvará.</p>
-      <div class="hi"><strong>Registo:</strong> Débito em Despesas de Constituição, Crédito em Capital Social.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">O que é o capital social?</div>
-      <div class="qo" onclick="cq(this,false)">a) Uma dívida da empresa</div>
-      <div class="qo" onclick="cq(this,true)">b) O investimento dos sócios</div>
-      <div class="qo" onclick="cq(this,false)">c) Um imposto</div>
-      <div class="qo" onclick="cq(this,false)">d) Uma despesa</div>
-      </div>
-    `},
+    {t:'Constituição de Empresa em Angola: Aspectos Contábeis e Fiscais', html:`
+<div class="cb"><h2><i class="fas fa-building"></i> Constituição de uma LDA</h2>
+<p>Registo da constituição de uma sociedade por quotas (LDA) do zero: capital social, despesas de constituição, NIF, alvará.</p>
+<div class="hi"><strong>Registo:</strong> Débito em Despesas de Constituição, Crédito em Capital Social.</div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">O que é o capital social?</div>
+<div class="qo" onclick="cq(this,false)">a) Uma dívida da empresa</div>
+<div class="qo" onclick="cq(this,true)">b) O investimento dos sócios</div>
+<div class="qo" onclick="cq(this,false)">c) Um imposto</div>
+<div class="qo" onclick="cq(this,false)">d) Uma despesa</div>
+</div>`},
     {t:'Plano de Contas Personalizado e Parametrização do Software Contábil', html:`
-      <div class="cb"><h2><i class="fas fa-sitemap"></i> Plano de Contas Personalizado</h2>
-      <p>Criação de um plano de contas específico a partir do PGCA, parametrização de IVA e centros de custo no software contábil.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">O que são centros de custo?</div>
-      <div class="qo" onclick="cq(this,false)">a) Contas de ativo</div>
-      <div class="qo" onclick="cq(this,true)">b) Divisões que permitem alocar custos</div>
-      <div class="qo" onclick="cq(this,false)">c) Impostos</div>
-      <div class="qo" onclick="cq(this,false)">d) Proveitos</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-sitemap"></i> Plano de Contas Personalizado</h2>
+<p>Criação de um plano de contas específico a partir do PGCA, parametrização de IVA e centros de custo no software contábil.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">O que são centros de custo?</div>
+<div class="qo" onclick="cq(this,false)">a) Contas de ativo</div>
+<div class="qo" onclick="cq(this,true)">b) Divisões que permitem alocar custos</div>
+<div class="qo" onclick="cq(this,false)">c) Impostos</div>
+<div class="qo" onclick="cq(this,false)">d) Proveitos</div>
+</div>`},
     {t:'Contabilidade de Gestão: Custos, Margens e Preços de Venda', html:`
-      <div class="cb"><h2><i class="fas fa-chart-line"></i> Cálculo de Custos e Preços</h2>
-      <p><strong>Custo Total = Custos Fixos + Custos Variáveis</strong></p>
-      <p><strong>Preço de Venda = Custo Total + Margem de Lucro</strong></p>
-      <div class="hi"><strong>Ponto de Equilíbrio:</strong> quantidade a vender para cobrir todos os custos.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">O que é o ponto de equilíbrio?</div>
-      <div class="qo" onclick="cq(this,false)">a) O lucro máximo</div>
-      <div class="qo" onclick="cq(this,true)">b) A quantidade a vender para cobrir todos os custos</div>
-      <div class="qo" onclick="cq(this,false)">c) O preço de venda</div>
-      <div class="qo" onclick="cq(this,false)">d) O custo fixo</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-chart-line"></i> Cálculo de Custos e Preços</h2>
+<p><strong>Custo Total = Custos Fixos + Custos Variáveis</strong></p>
+<p><strong>Preço de Venda = Custo Total + Margem de Lucro</strong></p>
+<div class="hi"><strong>Ponto de Equilíbrio:</strong> quantidade a vender para cobrir todos os custos.</div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">O que é o ponto de equilíbrio?</div>
+<div class="qo" onclick="cq(this,false)">a) O lucro máximo</div>
+<div class="qo" onclick="cq(this,true)">b) A quantidade a vender para cobrir todos os custos</div>
+<div class="qo" onclick="cq(this,false)">c) O preço de venda</div>
+<div class="qo" onclick="cq(this,false)">d) O custo fixo</div>
+</div>`},
     {t:'Contabilidade de Construção Civil e Empreitadas', html:`
-      <div class="cb"><h2><i class="fas fa-hard-hat"></i> Método do Percentual de Conclusão</h2>
-      <p>Registo de receitas e custos de empreitadas com base no <strong>percentual de conclusão</strong> da obra.</p>
-      <div class="ib"><strong>Exemplo:</strong> Obra de Kz 1.000.000 com 50% concluída → reconhecer Kz 500.000 de receita.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Em que consiste o método do percentual de conclusão?</div>
-      <div class="qo" onclick="cq(this,false)">a) Reconhecer toda a receita no início</div>
-      <div class="qo" onclick="cq(this,true)">b) Reconhecer receita e custos proporcionalmente ao avanço da obra</div>
-      <div class="qo" onclick="cq(this,false)">c) Reconhecer apenas no final da obra</div>
-      <div class="qo" onclick="cq(this,false)">d) Não reconhecer receita</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-hard-hat"></i> Método do Percentual de Conclusão</h2>
+<p>Registo de receitas e custos de empreitadas com base no <strong>percentual de conclusão</strong> da obra.</p>
+<div class="ib"><strong>Exemplo:</strong> Obra de Kz 1.000.000 com 50% concluída → reconhecer Kz 500.000 de receita.</div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Em que consiste o método do percentual de conclusão?</div>
+<div class="qo" onclick="cq(this,false)">a) Reconhecer toda a receita no início</div>
+<div class="qo" onclick="cq(this,true)">b) Reconhecer receita e custos proporcionalmente ao avanço da obra</div>
+<div class="qo" onclick="cq(this,false)">c) Reconhecer apenas no final da obra</div>
+<div class="qo" onclick="cq(this,false)">d) Não reconhecer receita</div>
+</div>`},
     {t:'Operações Bancárias, Seguros e Instituições Financeiras', html:`
-      <div class="cb"><h2><i class="fas fa-university"></i> Operações Financeiras</h2>
-      <p>Registo de empréstimos, cartas de crédito, fianças e seguros. Cálculo de prestações (Price/SAC).</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">O que é uma carta de crédito?</div>
-      <div class="qo" onclick="cq(this,false)">a) Um empréstimo</div>
-      <div class="qo" onclick="cq(this,true)">b) Uma garantia de pagamento emitida por um banco</div>
-      <div class="qo" onclick="cq(this,false)">c) Um seguro</div>
-      <div class="qo" onclick="cq(this,false)">d) Um imposto</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-university"></i> Operações Financeiras</h2>
+<p>Registo de empréstimos, cartas de crédito, fianças e seguros. Cálculo de prestações (Price/SAC).</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">O que é uma carta de crédito?</div>
+<div class="qo" onclick="cq(this,false)">a) Um empréstimo</div>
+<div class="qo" onclick="cq(this,true)">b) Uma garantia de pagamento emitida por um banco</div>
+<div class="qo" onclick="cq(this,false)">c) Um seguro</div>
+<div class="qo" onclick="cq(this,false)">d) Um imposto</div>
+</div>`},
     {t:'Fusões, Aquisições e Encerramento de Empresas', html:`
-      <div class="cb"><h2><i class="fas fa-merge"></i> Fusões e Aquisições</h2>
-      <p>Registo de fusão por incorporação, elaboração de relatório de liquidação e distribuição de ativos.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">O que é uma fusão por incorporação?</div>
-      <div class="qo" onclick="cq(this,false)">a) Duas empresas se dissolvem</div>
-      <div class="qo" onclick="cq(this,true)">b) Uma empresa absorve outra</div>
-      <div class="qo" onclick="cq(this,false)">c) Uma empresa se divide</div>
-      <div class="qo" onclick="cq(this,false)">d) Nenhuma das anteriores</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-merge"></i> Fusões e Aquisições</h2>
+<p>Registo de fusão por incorporação, elaboração de relatório de liquidação e distribuição de ativos.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">O que é uma fusão por incorporação?</div>
+<div class="qo" onclick="cq(this,false)">a) Duas empresas se dissolvem</div>
+<div class="qo" onclick="cq(this,true)">b) Uma empresa absorve outra</div>
+<div class="qo" onclick="cq(this,false)">c) Uma empresa se divide</div>
+<div class="qo" onclick="cq(this,false)">d) Nenhuma das anteriores</div>
+</div>`},
     {t:'Auditoria Interna, Controlo Interno e Prevenção de Fraudes', html:`
-      <div class="cb"><h2><i class="fas fa-shield-halved"></i> Controlo Interno</h2>
-      <p>Implementação de controlos internos, identificação de riscos de fraude e elaboração de plano de auditoria.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual o objetivo do controlo interno?</div>
-      <div class="qo" onclick="cq(this,false)">a) Aumentar os lucros</div>
-      <div class="qo" onclick="cq(this,true)">b) Prevenir erros e fraudes</div>
-      <div class="qo" onclick="cq(this,false)">c) Reduzir impostos</div>
-      <div class="qo" onclick="cq(this,false)">d) Aumentar as despesas</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-shield-halved"></i> Controlo Interno</h2>
+<p>Implementação de controlos internos, identificação de riscos de fraude e elaboração de plano de auditoria.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual o objetivo do controlo interno?</div>
+<div class="qo" onclick="cq(this,false)">a) Aumentar os lucros</div>
+<div class="qo" onclick="cq(this,true)">b) Prevenir erros e fraudes</div>
+<div class="qo" onclick="cq(this,false)">c) Reduzir impostos</div>
+<div class="qo" onclick="cq(this,false)">d) Aumentar as despesas</div>
+</div>`},
     {t:'Contabilidade para Órgãos do Estado e Entidades Públicas (SISTAC)', html:`
-      <div class="cb"><h2><i class="fas fa-landmark"></i> SISTAC</h2>
-      <p>O <strong>SISTAC</strong> é o sistema de contabilidade pública em Angola. Regista as quatro fases da despesa pública: <strong>programação, compromisso, liquidação e pagamento</strong>.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Quantas fases tem a despesa pública no SISTAC?</div>
-      <div class="qo" onclick="cq(this,false)">a) 2</div>
-      <div class="qo" onclick="cq(this,false)">b) 3</div>
-      <div class="qo" onclick="cq(this,true)">c) 4</div>
-      <div class="qo" onclick="cq(this,false)">d) 5</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-landmark"></i> SISTAC</h2>
+<p>O <strong>SISTAC</strong> é o sistema de contabilidade pública em Angola. Regista as quatro fases da despesa pública: <strong>programação, compromisso, liquidação e pagamento</strong>.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Quantas fases tem a despesa pública no SISTAC?</div>
+<div class="qo" onclick="cq(this,false)">a) 2</div>
+<div class="qo" onclick="cq(this,false)">b) 3</div>
+<div class="qo" onclick="cq(this,true)">c) 4</div>
+<div class="qo" onclick="cq(this,false)">d) 5</div>
+</div>`},
     {t:'Planeamento Fiscal e Otimização Legal do Encargo Tributário', html:`
-      <div class="cb"><h2><i class="fas fa-scale-balanced"></i> Planeamento Fiscal</h2>
-      <p>Simulação de cenários fiscais, cálculo do encargo tributário global e proposta de estrutura ótima dentro da legalidade.</p>
-      <div class="wb"><strong>Importante:</strong> Planeamento fiscal é legal; evasão fiscal é crime.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual a diferença entre planeamento fiscal e evasão fiscal?</div>
-      <div class="qo" onclick="cq(this,false)">a) São a mesma coisa</div>
-      <div class="qo" onclick="cq(this,true)">b) Planeamento é legal; evasão é crime</div>
-      <div class="qo" onclick="cq(this,false)">c) Planeamento é crime; evasão é legal</div>
-      <div class="qo" onclick="cq(this,false)">d) Ambos são ilegais</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-scale-balanced"></i> Planeamento Fiscal</h2>
+<p>Simulação de cenários fiscais, cálculo do encargo tributário global e proposta de estrutura ótima dentro da legalidade.</p>
+<div class="wb"><strong>Importante:</strong> Planeamento fiscal é legal; evasão fiscal é crime.</div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual a diferença entre planeamento fiscal e evasão fiscal?</div>
+<div class="qo" onclick="cq(this,false)">a) São a mesma coisa</div>
+<div class="qo" onclick="cq(this,true)">b) Planeamento é legal; evasão é crime</div>
+<div class="qo" onclick="cq(this,false)">c) Planeamento é crime; evasão é legal</div>
+<div class="qo" onclick="cq(this,false)">d) Ambos são ilegais</div>
+</div>`},
     {t:'Preços de Transferência e Operações com Partes Relacionadas', html:`
-      <div class="cb"><h2><i class="fas fa-handshake"></i> Preços de Transferência</h2>
-      <p>Aplicação dos 5 métodos de preços de transferência, elaboração de dossier local e verificação de conformidade com o intervalo de mercado.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">O que são preços de transferência?</div>
-      <div class="qo" onclick="cq(this,false)">a) Preços de venda ao público</div>
-      <div class="qo" onclick="cq(this,true)">b) Preços praticados entre empresas do mesmo grupo</div>
-      <div class="qo" onclick="cq(this,false)">c) Preços de importação</div>
-      <div class="qo" onclick="cq(this,false)">d) Preços de exportação</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-handshake"></i> Preços de Transferência</h2>
+<p>Aplicação dos 5 métodos de preços de transferência, elaboração de dossier local e verificação de conformidade com o intervalo de mercado.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">O que são preços de transferência?</div>
+<div class="qo" onclick="cq(this,false)">a) Preços de venda ao público</div>
+<div class="qo" onclick="cq(this,true)">b) Preços praticados entre empresas do mesmo grupo</div>
+<div class="qo" onclick="cq(this,false)">c) Preços de importação</div>
+<div class="qo" onclick="cq(this,false)">d) Preços de exportação</div>
+</div>`},
     {t:'Simulação Completa: Um Ano de Contabilidade de uma Empresa', html:`
-      <div class="cb"><h2><i class="fas fa-calendar-alt"></i> Simulação Anual</h2>
-      <p>Registo de 12 meses completos de operações, encerramento de contas, elaboração de Balanço e DRE, e apuramento de todos os impostos.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual o objetivo da simulação anual?</div>
-      <div class="qo" onclick="cq(this,false)">a) Apenas praticar lançamentos</div>
-      <div class="qo" onclick="cq(this,true)">b) Aplicar todo o conhecimento num caso real completo</div>
-      <div class="qo" onclick="cq(this,false)">c) Apenas calcular impostos</div>
-      <div class="qo" onclick="cq(this,false)">d) Apenas elaborar o Balanço</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-calendar-alt"></i> Simulação Anual</h2>
+<p>Registo de 12 meses completos de operações, encerramento de contas, elaboração de Balanço e DRE, e apuramento de todos os impostos.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual o objetivo da simulação anual?</div>
+<div class="qo" onclick="cq(this,false)">a) Apenas praticar lançamentos</div>
+<div class="qo" onclick="cq(this,true)">b) Aplicar todo o conhecimento num caso real completo</div>
+<div class="qo" onclick="cq(this,false)">c) Apenas calcular impostos</div>
+<div class="qo" onclick="cq(this,false)">d) Apenas elaborar o Balanço</div>
+</div>`},
     {t:'Simulação de Fiscalização da AGT: Defesa e Procedimentos', html:`
-      <div class="cb"><h2><i class="fas fa-search"></i> Defesa em Fiscalização</h2>
-      <p>Organização da documentação de defesa, cálculo do impacto de irregularidades e elaboração de resposta técnica à AGT.</p>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">Qual a primeira atitude numa fiscalização da AGT?</div>
-      <div class="qo" onclick="cq(this,false)">a) Contestar tudo</div>
-      <div class="qo" onclick="cq(this,true)">b) Organizar a documentação e colaborar</div>
-      <div class="qo" onclick="cq(this,false)">c) Recusar o acesso</div>
-      <div class="qo" onclick="cq(this,false)">d) Ignorar a notificação</div>
-      </div>
-    `},
+<div class="cb"><h2><i class="fas fa-search"></i> Defesa em Fiscalização</h2>
+<p>Organização da documentação de defesa, cálculo do impacto de irregularidades e elaboração de resposta técnica à AGT.</p>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">Qual a primeira atitude numa fiscalização da AGT?</div>
+<div class="qo" onclick="cq(this,false)">a) Contestar tudo</div>
+<div class="qo" onclick="cq(this,true)">b) Organizar a documentação e colaborar</div>
+<div class="qo" onclick="cq(this,false)">c) Recusar o acesso</div>
+<div class="qo" onclick="cq(this,false)">d) Ignorar a notificação</div>
+</div>`},
     {t:'Trabalho Final: Consultoria Contábil e Fiscal Integrada', html:`
-      <div class="cb"><h2><i class="fas fa-trophy"></i> Trabalho Final</h2>
-      <p>Diagnóstico de uma empresa real, elaboração de relatório de consultoria completo e defesa da proposta.</p>
-      <div class="hi"><strong>Este é o seu portefólio profissional.</strong> Demonstra a sua capacidade de assumir a contabilidade completa de uma empresa.</div>
-      </div>
-      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
-      <div class="qq">O que o trabalho final de consultoria demonstra?</div>
-      <div class="qo" onclick="cq(this,false)">a) Apenas conhecimentos teóricos</div>
-      <div class="qo" onclick="cq(this,true)">b) A capacidade de aplicar todos os conhecimentos a um caso real</div>
-      <div class="qo" onclick="cq(this,false)">c) Apenas a capacidade de elaborar relatórios</div>
-      <div class="qo" onclick="cq(this,false)">d) Nenhuma das anteriores</div>
-      </div>
-    `}
-  ]
-};
+<div class="cb"><h2><i class="fas fa-trophy"></i> Trabalho Final</h2>
+<p>Diagnóstico de uma empresa real, elaboração de relatório de consultoria completo e defesa da proposta.</p>
+<div class="hi"><strong>Este é o seu portefólio profissional.</strong> Demonstra a sua capacidade de assumir a contabilidade completa de uma empresa.</div>
+</div>
+<div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+<div class="qq">O que o trabalho final de consultoria demonstra?</div>
+<div class="qo" onclick="cq(this,false)">a) Apenas conhecimentos teóricos</div>
+<div class="qo" onclick="cq(this,true)">b) A capacidade de aplicar todos os conhecimentos a um caso real</div>
+<div class="qo" onclick="cq(this,false)">c) Apenas a capacidade de elaborar relatórios</div>
+<div class="qo" onclick="cq(this,false)">d) Nenhuma das anteriores</div>
+</div>`}
+]};
 
 const COURSE = [M1, M2, M3];
 const FASES = {1:'Módulo 1 — Fundamentos da Contabilidade', 2:'Módulo 2 — Fiscalidade Angolana', 3:'Módulo 3 — Aplicação Prática e Casos Reais'};
@@ -882,7 +865,7 @@ function renderHome(){
       <div class="floating-badge"><i class="fas fa-shield-halved"></i> Formação Autodidata</div>
       <h1><span>Contabilidade e Fiscalidade</span> Angolana</h1>
       <div class="sub-title">Domine o PGCA, IVA, IRT, Imposto Industrial e a relação com a AGT</div>
-      <p>Curso 100% online, autodidata, com 3 módulos e aulas detalhadas. Aprenda ao seu ritmo, com quizzes e exercícios práticos para consolidar o conhecimento.</p>
+      <p>Curso 100% online, autodidata, com 3 módulos e ${TOTAL_AULAS} aulas detalhadas. Aprenda ao seu ritmo, com quizzes e exercícios práticos para consolidar o conhecimento.</p>
       <div class="hero-stats">
         <div class="stat-item"><span class="stat-number">3</span><span class="stat-label">Módulos</span></div>
         <div class="stat-item"><span class="stat-number">${TOTAL_AULAS}</span><span class="stat-label">Aulas</span></div>
@@ -948,6 +931,17 @@ function renderHome(){
       <div class="diff-item"><i class="fas fa-infinity"></i><h4>Acesso Incluído</h4><p>Faz parte do acesso anual à plataforma Oaken Cursos.</p></div>
       <div class="diff-item"><i class="fas fa-graduation-cap"></i><h4>Metodologia Autodidata</h4><p>Leitura, exercícios práticos e quizzes para consolidar o conhecimento.</p></div>
       <div class="diff-item"><i class="fas fa-certificate"></i><h4>Progressão Validada</h4><p>Só avança de módulo após aprovação — certificado final validado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="container">
+    <h2 class="section-title">O que dizem os nossos <span>alunos</span></h2>
+    <div class="test-grid">
+      <div class="test-item"><div class="stars">★★★★★</div><p>"Excelente curso! Consegui aprender os fundamentos da contabilidade e aplicar na prática. Os quizzes são muito úteis."</p><div class="author">Maria F.</div><div class="position">Contabilista, Luanda</div></div>
+      <div class="test-item"><div class="stars">★★★★★</div><p>"O módulo sobre fiscalidade é muito completo. Agora consigo lidar com o IVA e o Imposto Industrial com confiança."</p><div class="author">João K.</div><div class="position">Gestor Financeiro, Benguela</div></div>
+      <div class="test-item"><div class="stars">★★★★★</div><p>"A metodologia autodidata é perfeita para quem tem pouco tempo. Estudei ao meu ritmo e consegui aprovar todos os módulos."</p><div class="author">Ana S.</div><div class="position">Técnica de Contabilidade, Huíla</div></div>
     </div>
   </div>
 </section>
