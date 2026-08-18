@@ -527,27 +527,33 @@ const COURSES = [
     "status": "available",
     "url": "contabilidade/index.html",
     "stats": {
-      "modules": 3,
+      "modules": 16,
+      "modulesAvailable": 3,
       "lessons": 34,
+      "lessonsPlanned": 177,
       "hours": 34,
       "questions": 0
     },
-    "pitch": "3 módulos com aulas na plataforma: Fundamentos da Contabilidade, Fiscalidade Angolana e Aplicação Prática.",
+    "pitch": "16 módulos no currículo — 3 disponíveis com aulas na plataforma (Fundamentos, Fiscalidade e Aplicação Prática), os restantes em preparação.",
     "cover": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&q=80",
     "accent": "#2E6E9E",
     "programa": [
-      {
-        "n": 1,
-        "titulo": "Fundamentos da Contabilidade"
-      },
-      {
-        "n": 2,
-        "titulo": "Fiscalidade Angolana"
-      },
-      {
-        "n": 3,
-        "titulo": "Aplicação Prática e Casos Reais"
-      }
+      { "n": 1, "titulo": "Fundamentos da Contabilidade" },
+      { "n": 2, "titulo": "Fiscalidade Angolana" },
+      { "n": 3, "titulo": "Aplicação Prática e Casos Reais" },
+      { "n": 4, "titulo": "Contabilidade de Custos e Análise de Resultados" },
+      { "n": 5, "titulo": "Orçamentos e Controlo de Gestão" },
+      { "n": 6, "titulo": "Consolidação de Contas e Contabilidade de Grupos" },
+      { "n": 7, "titulo": "Contabilidade de Instrumentos Financeiros" },
+      { "n": 8, "titulo": "Contabilidade de Impostos Diferidos e Ativos Fiscais" },
+      { "n": 9, "titulo": "Combinações de Negócios e Ativos Intangíveis" },
+      { "n": 10, "titulo": "Contabilidade Pública Avançada e SISTAC" },
+      { "n": 11, "titulo": "Planeamento Financeiro e Análise de Projetos" },
+      { "n": 12, "titulo": "Contabilidade Internacional e Harmonização (NCRF vs. IFRS)" },
+      { "n": 13, "titulo": "Ética, Governança e Responsabilidade Social" },
+      { "n": 14, "titulo": "Auditoria Externa e Fiscalização" },
+      { "n": 15, "titulo": "Contabilidade de PME e Microempresas" },
+      { "n": 16, "titulo": "Casos Integradores e Preparação para Certificação Profissional" }
     ],
     "saidas": [
       "Técnico de Contabilidade",

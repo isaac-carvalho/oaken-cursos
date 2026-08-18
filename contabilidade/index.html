@@ -1975,6 +1975,27 @@ const M3 = {
 const COURSE = [M1, M2, M3];
 const FASES = {1:'Módulo 1 — Fundamentos da Contabilidade', 2:'Módulo 2 — Fiscalidade Angolana', 3:'Módulo 3 — Aplicação Prática e Casos Reais'};
 const TOTAL_AULAS = COURSE.reduce((s,m)=>s+m.aulas.length,0);
+
+/* Módulos 4-16: currículo já definido, conteúdo ainda por escrever.
+   Aparecem no site como "em preparação" — nunca como disponíveis — até termos
+   as aulas reais. Servem para mostrar o roteiro completo do curso ao aluno. */
+const MODULOS_FUTUROS = [
+  {n:4, titulo:'Contabilidade de Custos e Análise de Resultados', aulas:11},
+  {n:5, titulo:'Orçamentos e Controlo de Gestão', aulas:11},
+  {n:6, titulo:'Consolidação de Contas e Contabilidade de Grupos', aulas:11},
+  {n:7, titulo:'Contabilidade de Instrumentos Financeiros', aulas:11},
+  {n:8, titulo:'Contabilidade de Impostos Diferidos e Ativos Fiscais', aulas:11},
+  {n:9, titulo:'Combinações de Negócios e Ativos Intangíveis', aulas:11},
+  {n:10, titulo:'Contabilidade Pública Avançada e SISTAC', aulas:11},
+  {n:11, titulo:'Planeamento Financeiro e Análise de Projetos', aulas:11},
+  {n:12, titulo:'Contabilidade Internacional e Harmonização (NCRF vs. IFRS)', aulas:11},
+  {n:13, titulo:'Ética, Governança e Responsabilidade Social', aulas:11},
+  {n:14, titulo:'Auditoria Externa e Fiscalização', aulas:11},
+  {n:15, titulo:'Contabilidade de PME e Microempresas', aulas:11},
+  {n:16, titulo:'Casos Integradores e Preparação para Certificação Profissional', aulas:11}
+];
+const TOTAL_AULAS_PLANEADAS = TOTAL_AULAS + MODULOS_FUTUROS.reduce((s,m)=>s+m.aulas,0);
+const TOTAL_MODULOS_PLANEADOS = COURSE.length + MODULOS_FUTUROS.length;
 const ST_KEY = 'oaken_contabilidade_v1';
 
 let ST = {logado:false, nome:'', desbloqueado:1, notas:{}};
@@ -2016,6 +2037,13 @@ function renderHome(){
     });
     modulosHTML += `</div>`;
   });
+  modulosHTML += `<div class="phase-label">Módulos ${COURSE.length+1} a ${TOTAL_MODULOS_PLANEADOS} — Em preparação</div><div class="modules-grid">`;
+  MODULOS_FUTUROS.forEach(m=>{
+    modulosHTML += `<div class="module-card" style="opacity:.6;cursor:default;border-left-color:#cbd5e1">
+      <span class="mod-num" style="background:#94a3b8"><i class="fas fa-lock" style="margin-right:5px"></i>Módulo ${m.n}</span>
+      <h3>${m.titulo}</h3><p>${m.aulas} aulas planeadas — chega em breve, desbloqueia por ordem.</p></div>`;
+  });
+  modulosHTML += `</div>`;
 
   app.innerHTML = `
 <section class="hero">
@@ -2024,12 +2052,12 @@ function renderHome(){
       <div class="floating-badge"><i class="fas fa-shield-halved"></i> Formação Autodidata</div>
       <h1><span>Contabilidade e Fiscalidade</span> Angolana</h1>
       <div class="sub-title">Domine o PGCA, IVA, IRT, Imposto Industrial e a relação com a AGT</div>
-      <p>Curso 100% online, autodidata, com 3 módulos e ${TOTAL_AULAS} aulas detalhadas. Aprenda ao seu ritmo, com quizzes e exercícios práticos para consolidar o conhecimento.</p>
+      <p>Curso 100% online, autodidata, com ${TOTAL_MODULOS_PLANEADOS} módulos no currículo completo — ${COURSE.length} já disponíveis com ${TOTAL_AULAS} aulas prontas a estudar. Aprenda ao seu ritmo, com quizzes e exercícios práticos para consolidar o conhecimento.</p>
       <div class="hero-stats">
-        <div class="stat-item"><span class="stat-number">3</span><span class="stat-label">Módulos</span></div>
-        <div class="stat-item"><span class="stat-number">${TOTAL_AULAS}</span><span class="stat-label">Aulas</span></div>
+        <div class="stat-item"><span class="stat-number">${COURSE.length}/${TOTAL_MODULOS_PLANEADOS}</span><span class="stat-label">Módulos disponíveis</span></div>
+        <div class="stat-item"><span class="stat-number">${TOTAL_AULAS}</span><span class="stat-label">Aulas disponíveis</span></div>
         <div class="stat-item"><span class="stat-number">${TOTAL_AULAS}</span><span class="stat-label">Horas</span></div>
-        <div class="stat-item"><span class="stat-number">3</span><span class="stat-label">Certificações</span></div>
+        <div class="stat-item"><span class="stat-number">${TOTAL_MODULOS_PLANEADOS}</span><span class="stat-label">Certificações no total</span></div>
       </div>
       <div class="hero-badges">
         <span><i class="fas fa-circle-check"></i> PGCA</span>
@@ -2039,7 +2067,7 @@ function renderHome(){
       </div>
       <a onclick="nav('aluno')" class="cta-hero"><i class="fas fa-right-to-bracket"></i> Aceder à plataforma</a>
       <div class="disclaimer-box"><i class="fas fa-triangle-exclamation"></i>
-        <strong>Curso 100% autodidata.</strong> A aprovação em cada módulo depende do desempenho nos quizzes e exames.</div>
+        <strong>Curso 100% autodidata.</strong> A aprovação em cada módulo depende do desempenho nos quizzes e exames. O currículo tem ${TOTAL_MODULOS_PLANEADOS} módulos ao todo — os módulos ${COURSE.length+1} a ${TOTAL_MODULOS_PLANEADOS} estão em preparação e vão sendo publicados por ordem.</div>
     </div>
     <div class="hero-image"><img src="${IMG.contabilidade}" alt="Contabilidade e Fiscalidade Angolana"></div>
   </div>
@@ -2064,7 +2092,7 @@ function renderHome(){
       <div class="d-row"><div class="d-label">Nome</div><div class="d-value">Contabilidade e Fiscalidade Angolana</div></div>
       <div class="d-row"><div class="d-label">Modalidade</div><div class="d-value">100% Online — Autodidata</div></div>
       <div class="d-row"><div class="d-label">Público</div><div class="d-value">Iniciantes e profissionais em Angola</div></div>
-      <div class="d-row"><div class="d-label">Estrutura</div><div class="d-value">3 módulos · ${TOTAL_AULAS} aulas</div></div>
+      <div class="d-row"><div class="d-label">Estrutura</div><div class="d-value">${TOTAL_MODULOS_PLANEADOS} módulos no currículo (${COURSE.length} disponíveis, ${TOTAL_AULAS} aulas prontas) · restantes em preparação</div></div>
       <div class="d-row"><div class="d-label">Normas</div><div class="d-value">PGCA · Lei n.º 7/19 · CIVA · Lei Geral Tributária</div></div>
       <div class="d-row"><div class="d-label">Avaliação</div><div class="d-value">Quiz por aula · Exame por módulo (mínimo 70%)</div></div>
       <div class="d-row"><div class="d-label">Progressão</div><div class="d-value">Só avança de módulo após aprovação no anterior</div></div>
@@ -2076,7 +2104,7 @@ function renderHome(){
 <section class="bg-white" id="modulos">
   <div class="container">
     <h2 class="section-title">O que vai aprender <span>no curso</span></h2>
-    <p class="section-sub">3 módulos organizados para uma progressão lógica, do básico ao avançado.</p>
+    <p class="section-sub">${TOTAL_MODULOS_PLANEADOS} módulos organizados para uma progressão lógica, do básico ao avançado — ${COURSE.length} já disponíveis, os restantes em preparação.</p>
     ${modulosHTML}
   </div>
 </section>
@@ -2185,6 +2213,15 @@ function renderAluno(){
     });
     lista += `</div>`;
   });
+  lista += `<div class="phase-head">Módulos ${COURSE.length+1} a ${TOTAL_MODULOS_PLANEADOS} — Em preparação</div><div class="mod-list">`;
+  MODULOS_FUTUROS.forEach(m=>{
+    lista += `<div class="mod-card locked">
+      <div class="mod-ic locked"><i class="fas fa-lock"></i></div>
+      <div class="mod-info"><h4>Módulo ${m.n} — ${m.titulo}</h4>
+      <span>${m.aulas} aulas planeadas</span></div>
+      <span class="mod-badge locked">Em preparação</span></div>`;
+  });
+  lista += `</div>`;
 
   app.innerHTML = `
   <div class="dash-header"><div class="container dash-in">
@@ -2196,8 +2233,8 @@ function renderAluno(){
       <div class="pc-head"><h3><i class="fas fa-chart-line" style="color:var(--secondary)"></i> O seu progresso</h3><span class="pct">${pct}%</span></div>
       <div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div>
       <div class="prog-stats">
-        <div><b>${done}</b> de <b>3</b> módulos concluídos</div>
-        <div><b>${TOTAL_AULAS}</b> aulas no curso</div>
+        <div><b>${done}</b> de <b>${COURSE.length}</b> módulos disponíveis concluídos</div>
+        <div><b>${TOTAL_AULAS}</b> aulas disponíveis agora · <b>${TOTAL_AULAS_PLANEADAS}</b> no currículo completo</div>
         <div><b>70%</b> mínimo por exame</div>
       </div>
     </div>
