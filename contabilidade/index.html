@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Curso de Contabilidade e Fiscalidade Angolana — Oaken Cursos</title>
+<meta name="description" content="Curso completo de Contabilidade e Fiscalidade Angolana. 3 módulos, aulas autodidatas com quizzes. Domine o PGCA, IVA, IRT, Imposto Industrial e muito mais.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,system-ui,-apple-system,sans-serif;background:#f8fafc;color:#0B1F3A;line-height:1.7;font-size:16px}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+svg{max-width:100%;height:auto}
+:root{--primary:#0B1F3A;--secondary:#FF6B00;--accent:#00A3A1;--light:#f0f4f8;--gray:#64748B;--green:#16a34a}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+.container-sm{max-width:1000px;margin:0 auto;padding:0 16px}
+
+/* ============ HEADER ============ */
+header{background:var(--primary);color:#fff;padding:12px 0;position:sticky;top:0;z-index:500;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.hflex{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.logo{font-size:24px;font-weight:700;letter-spacing:2px;cursor:pointer;white-space:nowrap}
+.logo span{color:var(--secondary)}
+.nav{display:flex;gap:22px;align-items:center;font-weight:500;flex-wrap:wrap}
+.nav a{color:#fff;font-size:15px;transition:color .2s;cursor:pointer}
+.nav a:hover{color:var(--secondary)}
+.cta-top{background:var(--secondary);padding:9px 22px;border-radius:30px;font-weight:600;transition:transform .2s;display:inline-block}
+.cta-top:hover{transform:scale(1.05);color:#fff!important}
+@media(max-width:820px){.hflex{flex-direction:column;align-items:center}.nav{justify-content:center;gap:14px}.nav a{font-size:14px}}
+
+/* ============ HERO ============ */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,#1a365d 100%);color:#fff;padding:60px 0 70px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-100px;top:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(255,107,0,.12) 0%,transparent 70%);border-radius:50%;z-index:0}
+.hero-flex{display:flex;align-items:center;gap:50px;position:relative;z-index:1;flex-wrap:wrap}
+.hero-content{flex:1;min-width:280px}
+.hero-content h1{font-size:clamp(26px,5vw,42px);font-weight:800;line-height:1.2;margin-bottom:14px}
+.hero-content h1 span{color:var(--secondary)}
+.sub-title{font-size:clamp(17px,3vw,22px);font-weight:600;color:var(--secondary);margin-bottom:12px}
+.hero-content p{font-size:clamp(15px,2.5vw,18px);opacity:.9;margin-bottom:22px;max-width:640px}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap;margin:20px 0 26px;background:rgba(255,255,255,.05);padding:18px 26px;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
+.stat-item{text-align:center}
+.stat-number{font-size:clamp(20px,4vw,32px);font-weight:800;color:var(--secondary);display:block}
+.stat-label{font-size:12px;opacity:.7;text-transform:uppercase;letter-spacing:1px}
+.hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.hero-badges span{background:rgba(255,255,255,.08);padding:6px 16px;border-radius:50px;font-size:13px;border:1px solid rgba(255,255,255,.1)}
+.hero-badges i{color:var(--secondary);margin-right:6px}
+.cta-hero{background:var(--secondary);color:#fff;padding:16px 40px;border-radius:50px;font-size:clamp(16px,3vw,20px);font-weight:700;display:inline-block;transition:all .3s;box-shadow:0 8px 30px rgba(255,107,0,.4);border:none;cursor:pointer}
+.cta-hero:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(255,107,0,.6);color:#fff}
+.cta-hero i{margin-right:9px}
+.hero-image{flex:0 0 380px}
+.hero-image img{width:100%;height:280px;object-fit:cover;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.5);border:3px solid rgba(255,255,255,.1)}
+@media(max-width:900px){.hero-image{display:none}}
+.floating-badge{display:inline-block;background:rgba(255,255,255,.08);padding:9px 20px;border-radius:50px;font-size:13px;border:1px solid rgba(255,255,255,.15);margin-bottom:16px}
+.disclaimer-box{background:rgba(255,200,0,.12);border-left:4px solid #f59e0b;padding:14px 18px;border-radius:10px;margin-top:20px;font-size:14px;opacity:.9}
+.disclaimer-box i{color:#f59e0b;margin-right:8px}
+
+/* ============ SECTIONS ============ */
+section{padding:70px 0}
+.section-title{text-align:center;font-size:clamp(24px,5vw,38px);font-weight:700;margin-bottom:12px}
+.section-title span{color:var(--secondary)}
+.section-sub{text-align:center;font-size:clamp(14px,2.5vw,18px);color:var(--gray);max-width:700px;margin:0 auto 44px}
+.bg-white{background:#fff}
+.bg-light{background:var(--light)}
+
+/* quick stats */
+.quick-stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;text-align:center}
+.qs-item{background:#fff;padding:24px 14px;border-radius:16px;box-shadow:0 4px 10px rgba(0,0,0,.03);border-top:4px solid var(--secondary)}
+.qs-item .number{font-size:clamp(24px,5vw,36px);font-weight:800;color:var(--primary);display:block}
+.qs-item .label{font-size:13px;color:var(--gray)}
+
+/* details table */
+.details-table{max-width:860px;margin:36px auto 0;border-radius:18px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.05)}
+.d-row{display:grid;grid-template-columns:210px 1fr}
+.d-row:nth-child(odd){background:var(--light)}
+.d-row:nth-child(even){background:#fff}
+.d-label{padding:15px 20px;font-weight:700;color:var(--secondary);font-size:14px}
+.d-value{padding:15px 20px;font-size:15px}
+@media(max-width:640px){.d-row{grid-template-columns:1fr}.d-label{padding-bottom:2px}.d-value{padding-top:0;padding-bottom:15px}}
+
+/* module cards on landing */
+.phase-label{text-align:center;text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:700;color:var(--accent);margin:42px 0 18px}
+.modules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px}
+.module-card{background:#fff;padding:24px 20px;border-radius:16px;transition:all .3s;border-left:5px solid var(--secondary);box-shadow:0 4px 10px rgba(0,0,0,.03);cursor:pointer}
+.module-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,.09)}
+.module-card h3{font-size:17px;margin-bottom:7px}
+.module-card p{font-size:14px;color:var(--gray)}
+.mod-num{display:inline-block;background:var(--secondary);color:#fff;padding:2px 12px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:9px}
+.mod-soft{display:inline-block;background:rgba(0,163,161,.12);color:var(--accent);padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;margin-left:6px}
+
+/* differentials */
+.diff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px;margin-top:36px}
+.diff-item{text-align:center;padding:28px 20px;background:var(--light);border-radius:20px;box-shadow:0 6px 20px rgba(0,0,0,.04);transition:.3s}
+.diff-item:hover{transform:scale(1.02)}
+.diff-item i{font-size:42px;color:var(--secondary);margin-bottom:14px}
+.diff-item h4{font-size:19px;margin-bottom:9px}
+.diff-item p{color:var(--gray);font-size:15px}
+
+/* testimonials */
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:26px;margin-top:36px}
+.test-item{background:#fff;padding:28px;border-radius:20px;border-bottom:4px solid var(--secondary);box-shadow:0 4px 15px rgba(0,0,0,.03)}
+.test-item p{font-style:italic;margin-bottom:14px}
+.author{font-weight:600}
+.position{color:var(--gray);font-size:14px}
+.stars{color:#f59e0b;letter-spacing:2px;margin-bottom:9px}
+
+/* pricing */
+.pricing{background:linear-gradient(135deg,rgba(11,31,58,.95) 0%,rgba(26,54,93,.95) 100%);color:#fff;text-align:center}
+.pricing-box{max-width:680px;margin:0 auto;background:rgba(255,255,255,.05);padding:44px 34px;border-radius:30px;border:1px solid rgba(255,255,255,.1)}
+.countdown{display:inline-block;background:rgba(255,107,0,.2);padding:8px 24px;border-radius:50px;font-weight:600;margin-bottom:18px;border:1px solid rgba(255,107,0,.3);font-size:14px}
+.old-price{font-size:19px;text-decoration:line-through;opacity:.6}
+.new-price{font-size:clamp(32px,7vw,52px);font-weight:800;color:var(--secondary);display:block;margin:8px 0 16px}
+.price-detail{font-size:16px;opacity:.8}
+.guarantee{margin-top:18px;font-size:14px;opacity:.7}
+@media(max-width:600px){.pricing-box{padding:28px 18px}}
+
+/* faq */
+.faq-grid{max-width:800px;margin:0 auto}
+.faq-item{border-bottom:1px solid #e2e8f0;padding:18px 0}
+.faq-item h4{font-size:clamp(15px,2.5vw,18px);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600}
+.faq-item h4 i{transition:.3s;color:var(--secondary)}
+.faq-item .answer{max-height:0;overflow:hidden;transition:.35s;color:var(--gray);font-size:15px}
+.faq-item.active .answer{max-height:400px;padding-top:10px}
+.faq-item.active h4 i{transform:rotate(180deg)}
+
+/* footer */
+footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
+.footer-flex{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px}
+.footer-col{flex:1;min-width:190px}
+.footer-col h5{color:#fff;margin-bottom:14px;font-size:18px}
+.footer-col p,.footer-col a{color:#a0aec0;line-height:1.9;font-size:15px}
+.footer-col a:hover{color:var(--secondary)}
+.social-links a{display:inline-block;margin-right:14px;font-size:21px;color:#a0aec0}
+.social-links a:hover{color:var(--secondary)}
+.footer-bottom{border-top:1px solid #2d3748;margin-top:28px;padding-top:18px;text-align:center;font-size:14px}
+
+/* ============ ÁREA DO ALUNO ============ */
+.login-wrap{min-height:70vh;display:flex;align-items:center;justify-content:center;padding:44px 16px}
+.login-box{background:#fff;border-radius:24px;padding:44px 38px;max-width:420px;width:100%;box-shadow:0 20px 60px rgba(11,31,58,.12);text-align:center}
+.login-icon{width:68px;height:68px;background:rgba(255,107,0,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:27px;color:var(--secondary)}
+.login-box h2{font-size:23px;margin-bottom:6px}
+.login-box>p{color:var(--gray);font-size:14px;margin-bottom:26px}
+.field{margin-bottom:15px;text-align:left}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.field input{width:100%;padding:12px 15px;border-radius:10px;border:2px solid #e2e8f0;background:#f8fafc;font-size:15px;transition:.2s;font-family:inherit}
+.field input:focus{outline:none;border-color:var(--secondary);background:#fff}
+.btn-login{width:100%;padding:14px;border:none;border-radius:30px;background:var(--secondary);color:#fff;font-weight:700;font-size:16px;cursor:pointer;transition:.2s;box-shadow:0 6px 20px rgba(255,107,0,.35);margin-top:8px;font-family:inherit}
+.btn-login:hover{transform:translateY(-2px)}
+.login-alt{margin-top:18px;font-size:14px;color:var(--gray)}
+.login-alt a{color:var(--secondary);font-weight:600;cursor:pointer}
+.demo-hint{margin-top:22px;background:var(--light);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--gray)}
+.demo-hint i{color:var(--secondary);margin-right:6px}
+@media(max-width:480px){.login-box{padding:30px 20px}}
+
+.dash-header{background:var(--primary);color:#fff;padding:28px 0}
+.dash-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.dash-header h1{font-size:clamp(18px,4vw,22px);font-weight:700}
+.dash-header p{opacity:.7;font-size:14px;margin-top:3px}
+.btn-logout{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:8px 20px;border-radius:30px;font-size:14px;cursor:pointer;font-family:inherit}
+.btn-logout:hover{background:rgba(255,255,255,.2)}
+.dash-body{padding:30px 0 70px}
+.progress-card{background:#fff;border-radius:20px;padding:22px 26px;margin-bottom:26px;box-shadow:0 4px 12px rgba(0,0,0,.04);border-top:4px solid var(--secondary)}
+.pc-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:10px}
+.pc-head h3{font-size:16px;font-weight:700}
+.pct{font-size:22px;font-weight:800;color:var(--secondary)}
+.prog-bar{height:12px;background:var(--light);border-radius:6px;overflow:hidden}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--secondary),#ff8c3a);border-radius:6px;transition:width .6s}
+.prog-stats{display:flex;gap:22px;margin-top:12px;flex-wrap:wrap;font-size:13px;color:var(--gray)}
+.prog-stats b{color:var(--primary)}
+.phase-head{display:flex;align-items:center;gap:12px;margin:28px 0 12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent)}
+.phase-head::after{content:'';flex:1;height:1px;background:#e2e8f0}
+.mod-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.mod-card{background:#fff;border-radius:16px;padding:18px 20px;display:flex;align-items:center;gap:14px;box-shadow:0 2px 8px rgba(0,0,0,.04);border-left:5px solid #e2e8f0;transition:.2s}
+.mod-card.unlocked{border-left-color:var(--secondary);cursor:pointer}
+.mod-card.unlocked:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.mod-card.done{border-left-color:var(--green);cursor:pointer}
+.mod-ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;font-weight:800}
+.mod-ic.locked{background:var(--light);color:#cbd5e1}
+.mod-ic.unlocked{background:rgba(255,107,0,.1);color:var(--secondary)}
+.mod-ic.done{background:rgba(22,163,74,.1);color:var(--green)}
+.mod-info{flex:1;min-width:0}
+.mod-info h4{font-size:14px;font-weight:700;margin-bottom:2px}
+.mod-info span{font-size:12px;color:var(--gray)}
+.mod-badge{font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;white-space:nowrap}
+.mod-badge.locked{background:var(--light);color:#94a3b8}
+.mod-badge.unlocked{background:rgba(255,107,0,.1);color:var(--secondary)}
+.mod-badge.done{background:rgba(22,163,74,.1);color:var(--green)}
+@media(max-width:600px){.mod-list{grid-template-columns:1fr}}
+
+/* ============ VISTA DO MÓDULO ============ */
+.mod-hero{background:linear-gradient(135deg,var(--primary) 0%,#1a365d 100%);color:#fff;padding:34px 0 30px}
+.mh-in{display:flex;align-items:flex-start;gap:30px}
+.mh-txt{flex:1;min-width:0}
+.mod-phase{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:8px;font-weight:700}
+.mod-hero h1{font-size:clamp(21px,4vw,32px);font-weight:800;line-height:1.2;margin-bottom:10px}
+.mod-hero h1 span{color:var(--secondary)}
+.mod-hero>.container-sm>.mh-in>.mh-txt>p{opacity:.85;font-size:clamp(14px,2.5vw,16px);margin-bottom:18px}
+.mod-meta{display:flex;flex-wrap:wrap;gap:9px}
+.meta-tag{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:30px;font-size:12px}
+.meta-tag i{color:var(--secondary);margin-right:5px}
+.mh-img{flex:0 0 230px;border-radius:14px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mh-img img{width:100%;height:175px;object-fit:cover}
+@media(max-width:760px){.mh-img{display:none}}
+
+.mod-progress{background:#fff;padding:12px 0;border-bottom:2px solid var(--light)}
+.mp-in{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.mp-lbl{font-size:12px;color:var(--gray);white-space:nowrap}
+.dots{display:flex;gap:5px;flex-wrap:wrap}
+.dot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;cursor:pointer;border:2px solid transparent;transition:.2s;flex-shrink:0}
+.dot.done{background:var(--accent);color:#fff}
+.dot.active{background:var(--secondary);color:#fff;box-shadow:0 3px 10px rgba(255,107,0,.4)}
+.dot.todo{background:var(--light);color:var(--gray);border-color:#e2e8f0}
+
+.tabs{display:flex;overflow-x:auto;margin:22px 0 0;border-bottom:2px solid #e2e8f0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tb{padding:10px 15px;border:none;background:transparent;font-weight:600;font-size:13px;color:var(--gray);cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-2px;flex-shrink:0;transition:.2s;font-family:inherit}
+.tb.active{color:var(--secondary);border-bottom-color:var(--secondary)}
+
+.mod-layout{display:grid;grid-template-columns:1fr 250px;gap:24px;align-items:start;margin-top:22px}
+@media(max-width:900px){.mod-layout{grid-template-columns:1fr}.sidebar{position:static!important}}
+.mod-layout>*{min-width:0}
+.sidebar{position:sticky;top:74px}
+.sc{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,.06);margin-bottom:14px}
+.sc h4{font-size:13px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
+.sl{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--light);font-size:12px;cursor:pointer;transition:.2s}
+.sl:last-child{border-bottom:none}
+.sl:hover{color:var(--secondary)}
+.sn{width:22px;height:22px;border-radius:50%;background:var(--light);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0}
+.sl.act .sn{background:var(--secondary);color:#fff}
+.sbtn{display:block;text-align:center;padding:10px;border-radius:8px;font-size:13px;font-weight:600;margin-bottom:8px;cursor:pointer}
+.sbtn.grey{background:var(--light);color:var(--primary)}
+.sbtn.orange{background:var(--secondary);color:#fff}
+
+.lesson{padding:26px 0 50px}
+.ltitle{font-size:clamp(19px,3.5vw,26px);font-weight:800;margin-bottom:6px}
+.lsub{color:var(--gray);font-size:13px;margin-bottom:20px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.lsub span{background:var(--light);padding:4px 10px;border-radius:20px;font-size:12px}
+.cb{background:#fff;border-radius:14px;padding:clamp(18px,4vw,28px);margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.cb h2{font-size:clamp(16px,3vw,20px);font-weight:800;margin-bottom:11px}
+.cb h2 i{color:var(--secondary);margin-right:7px}
+.cb p{color:#374151;font-size:clamp(14px,2.5vw,15px);margin-bottom:11px}
+.cb p:last-child{margin-bottom:0}
+.cb ul,.cb ol{padding-left:20px;color:#374151;font-size:clamp(14px,2.5vw,15px)}
+.cb li{margin-bottom:7px}
+.hi{border-left:4px solid var(--secondary);background:rgba(255,107,0,.05);padding:14px 18px;border-radius:0 10px 10px 0;margin:13px 0;font-size:14px}
+.hi strong{color:var(--secondary)}
+.ib{border-left:4px solid var(--accent);background:rgba(0,163,161,.05);padding:14px 18px;border-radius:0 10px 10px 0;margin:13px 0;font-size:14px}
+.ib strong{color:var(--accent)}
+.wb{border-left:4px solid #f59e0b;background:rgba(245,158,11,.07);padding:14px 18px;border-radius:0 10px 10px 0;margin:13px 0;font-size:14px}
+.lawbox{border:2px solid var(--primary);border-radius:10px;padding:16px 18px;margin:14px 0;background:rgba(11,31,58,.03)}
+.lawbox .lt{font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:8px}
+.lawbox blockquote{font-style:italic;color:#374151;font-size:14px;border-left:3px solid var(--secondary);padding-left:12px}
+.fbox{background:var(--primary);color:#fff;border-radius:12px;padding:20px 22px;margin:15px 0;text-align:center}
+.fbox .f{font-size:clamp(18px,4vw,27px);font-weight:800;color:var(--secondary);letter-spacing:1px;margin-bottom:6px}
+.fbox .fd{font-size:12px;opacity:.72}
+.ig{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+@media(max-width:580px){.ig{grid-template-columns:1fr}}
+.ig img{width:100%;height:180px;border-radius:10px;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.is{margin:16px 0}
+.is img{width:100%;height:clamp(180px,40vw,270px);border-radius:12px;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.ic{font-size:12px;color:var(--gray);margin-top:6px;text-align:center;font-style:italic}
+.dg{background:#fff;border:2px solid #e2e8f0;border-radius:14px;padding:16px;margin:16px 0;overflow:hidden}
+.dgt{font-size:12px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;text-align:center}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0;border-radius:10px}
+.dt{width:100%;border-collapse:collapse;font-size:clamp(12px,2vw,14px);min-width:430px}
+.dt th{background:var(--primary);color:#fff;padding:10px 14px;text-align:left;white-space:nowrap}
+.dt td{padding:10px 14px;border-bottom:1px solid #e2e8f0}
+.dt tr:nth-child(even) td{background:var(--light)}
+.dt td strong{color:var(--secondary)}
+.tl{margin:16px 0}
+.tli{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
+.tld{width:38px;height:38px;border-radius:50%;background:var(--secondary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0}
+.tlc h4{font-size:14px;font-weight:700;margin-bottom:3px}
+.tlc p{font-size:13px;color:var(--gray)}
+.quiz{background:linear-gradient(135deg,#1a365d,var(--primary));color:#fff;border-radius:14px;padding:clamp(18px,4vw,26px);margin:22px 0}
+.quiz h3{font-size:clamp(15px,3vw,17px);margin-bottom:13px}
+.quiz h3 i{color:var(--secondary);margin-right:7px}
+.qq{font-size:clamp(13px,2.5vw,15px);margin-bottom:11px;opacity:.9}
+.qo{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:11px 14px;margin:7px 0;cursor:pointer;transition:.2s;font-size:clamp(13px,2.5vw,14px)}
+.qo:hover{background:rgba(255,107,0,.2);border-color:var(--secondary)}
+.qo.ok{background:rgba(22,163,74,.28);border-color:var(--green)}
+.qo.no{background:rgba(239,68,68,.28);border-color:#dc2626}
+.lnav{display:flex;justify-content:space-between;margin:22px 0;gap:10px;flex-wrap:wrap}
+.nb{padding:11px 22px;border-radius:30px;font-weight:700;font-size:14px;cursor:pointer;border:none;transition:.2s;display:inline-flex;align-items:center;gap:7px;font-family:inherit}
+.np{background:var(--light);color:var(--primary)}
+.np:hover{background:#e2e8f0}
+.nn{background:var(--secondary);color:#fff;box-shadow:0 4px 14px rgba(255,107,0,.3)}
+.nn:hover{transform:translateY(-2px)}
+.nb:disabled{opacity:.4;cursor:not-allowed;transform:none!important}
+
+/* ============ EXAME ============ */
+.overlay{display:none;position:fixed;inset:0;background:rgba(11,31,58,.78);z-index:900;align-items:center;justify-content:center;padding:16px}
+.overlay.open{display:flex}
+.modal{background:#fff;border-radius:22px;max-width:600px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 30px 80px rgba(0,0,0,.25)}
+.modal-head{background:var(--primary);color:#fff;padding:22px 26px;border-radius:22px 22px 0 0}
+.modal-head .ml{font-size:12px;color:rgba(255,255,255,.6);margin-bottom:4px}
+.modal-head h3{font-size:19px;font-weight:800}
+.exam-info{display:flex;gap:10px;margin-top:11px;flex-wrap:wrap}
+.exam-info span{font-size:12px;background:rgba(255,255,255,.1);padding:5px 13px;border-radius:20px}
+.exam-info i{color:var(--secondary);margin-right:5px}
+.modal-body{padding:22px 26px}
+.question{margin-bottom:24px}
+.question>p{font-weight:700;font-size:15px;margin-bottom:12px}
+.option{display:flex;align-items:center;gap:11px;padding:11px 15px;border-radius:10px;border:2px solid #e2e8f0;margin-bottom:8px;cursor:pointer;transition:.15s;font-size:14px}
+.option:hover{border-color:var(--secondary);background:rgba(255,107,0,.04)}
+.option.sel{border-color:var(--secondary);background:rgba(255,107,0,.07)}
+.option input{accent-color:var(--secondary);width:16px;height:16px;cursor:pointer}
+.exam-result{text-align:center;padding:26px}
+.res-ic{font-size:52px;margin-bottom:14px}
+.res-score{font-size:clamp(36px,8vw,50px);font-weight:800;color:var(--secondary)}
+.res-lbl{font-size:15px;color:var(--gray);margin:6px 0}
+.res-verdict{display:inline-block;padding:8px 22px;border-radius:30px;font-weight:700;font-size:15px;margin:10px 0 18px}
+.res-verdict.pass{background:rgba(22,163,74,.1);color:var(--green)}
+.res-verdict.fail{background:rgba(239,68,68,.1);color:#dc2626}
+@media(max-width:600px){.modal-head,.modal-body{padding:18px 18px}}
+
+.hidden{display:none!important}
+.wa-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:400}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container hflex">
+    <div class="logo" onclick="nav('home')">OAKEN<span>CURSOS</span></div>
+    <nav class="nav">
+      <a onclick="nav('home');jump('detalhes')">Detalhes</a>
+      <a onclick="nav('home');jump('modulos')">Módulos</a>
+      <a onclick="nav('home');jump('faq')">FAQ</a>
+      <a onclick="nav('aluno')">Área do Aluno</a>
+      <a class="cta-top" onclick="nav('home');jump('preco')"><i class="fab fa-whatsapp"></i> Inscrever-me</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<!-- MODAL EXAME -->
+<div class="overlay" id="examOverlay">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="ml" id="examMeta"></div>
+      <h3 id="examTitle"></h3>
+      <div class="exam-info">
+        <span><i class="fas fa-list-check"></i> <span id="examQCount"></span> questões</span>
+        <span><i class="fas fa-clock"></i> 1 hora</span>
+        <span><i class="fas fa-percent"></i> Mínimo 70%</span>
+      </div>
+    </div>
+    <div class="modal-body" id="examBody"></div>
+    <div class="exam-result hidden" id="examResult"></div>
+  </div>
+</div>
+
+<a href="https://wa.me/351913388794" class="wa-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   CURSO DE CONTABILIDADE E FISCALIDADE ANGOLANA
+   3 módulos · formato autodidata
+   ══════════════════════════════════════════════════════════════ */
+
+const IMG = {
+  contabilidade:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&q=80',
+  fiscalidade:'https://images.unsplash.com/photo-1554224154-26032ffc2f5f?w=900&q=80',
+  impostos:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&q=80',
+  agt:'https://images.unsplash.com/photo-1554224154-26032ffc2f5f?w=900&q=80',
+  balanco:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&q=80'
+};
+
+/* ═══════════════ MÓDULO 1 — FUNDAMENTOS DA CONTABILIDADE ═══════════════ */
+const M1 = {
+  n:1, fase:1, img:IMG.contabilidade,
+  titulo:'Fundamentos da Contabilidade',
+  desc:'Introdução à contabilidade, PGCA, partidas dobradas, documentos fiscais, existências, imobilizado e muito mais. A base para dominar a contabilidade angolana.',
+  aulas:[
+    {t:'Introdução à Contabilidade: Património, Fluxos e Equação Fundamental', html:`
+      <div class="cb"><h2><i class="fas fa-university"></i> O que é Contabilidade?</h2>
+      <p>A contabilidade é a ciência que estuda e controla o património das entidades. Em Angola, é regulada pelo <strong>Plano Geral de Contabilidade Angolano (PGCA)</strong> e é essencial para cumprir as obrigações fiscais perante a <strong>AGT (Administração Geral Tributária)</strong>.</p>
+      <p>O património de uma empresa é o conjunto de <strong>bens, direitos e obrigações</strong> que ela possui num determinado momento.</p>
+      <div class="hi"><strong>Equação Fundamental:</strong> Ativo = Passivo + Capital Próprio</div>
+      <p><strong>Exemplo em Kz:</strong> A "Kwanza Tech, LDA" tem computadores (Kz 500.000), dinheiro no banco (Kz 300.000) e uma dívida de Kz 200.000. O Capital Próprio é 800.000 - 200.000 = <strong>Kz 600.000</strong>.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual é a equação fundamental da contabilidade?</div>
+      <div class="qo" onclick="cq(this,false)">a) Ativo = Passivo - Capital Próprio</div>
+      <div class="qo" onclick="cq(this,true)">b) Ativo = Passivo + Capital Próprio</div>
+      <div class="qo" onclick="cq(this,false)">c) Ativo + Passivo = Capital Próprio</div>
+      <div class="qo" onclick="cq(this,false)">d) Passivo = Ativo + Capital Próprio</div>
+      </div>
+    `},
+    {t:'O PGCA: Estrutura e Classes de Contas', html:`
+      <div class="cb"><h2><i class="fas fa-sitemap"></i> Estrutura do PGCA</h2>
+      <p>O PGCA é organizado em <strong>7 classes</strong> (de 1 a 7). Cada classe é dividida em grupos, subgrupos e contas.</p>
+      <div class="tw"><table class="dt"><tr><th>Classe</th><th>Designação</th><th>Natureza</th></tr>
+      <tr><td><strong>1</strong></td><td>Meios Financeiros e Operações Financeiras</td><td>Ativo</td></tr>
+      <tr><td><strong>2</strong></td><td>Contas a Receber e a Pagar</td><td>Ativo e Passivo</td></tr>
+      <tr><td><strong>3</strong></td><td>Existências</td><td>Ativo</td></tr>
+      <tr><td><strong>4</strong></td><td>Imobilizado</td><td>Ativo</td></tr>
+      <tr><td><strong>5</strong></td><td>Capital Próprio e Passivo de Longo Prazo</td><td>Capital Próprio e Passivo</td></tr>
+      <tr><td><strong>6</strong></td><td>Custos e Perdas</td><td>Devedora</td></tr>
+      <tr><td><strong>7</strong></td><td>Proveitos e Ganhos</td><td>Credora</td></tr>
+      </table></div>
+      <div class="ib"><strong>Regra de ouro:</strong> Ativo = Devedora; Passivo e CP = Credora.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">A conta "Fornecedores" pertence a que classe?</div>
+      <div class="qo" onclick="cq(this,false)">a) Classe 1</div>
+      <div class="qo" onclick="cq(this,true)">b) Classe 2</div>
+      <div class="qo" onclick="cq(this,false)">c) Classe 3</div>
+      <div class="qo" onclick="cq(this,false)">d) Classe 4</div>
+      </div>
+    `},
+    {t:'Partidas Dobradas: Princípio, Regras de Débito e Crédito', html:`
+      <div class="cb"><h2><i class="fas fa-scale-balanced"></i> O Método das Partidas Dobradas</h2>
+      <p>O método das partidas dobradas assenta no princípio: <strong>"A todo o débito corresponde um crédito de igual valor, e vice-versa."</strong></p>
+      <div class="hi"><strong>Regras:</strong> Ativo e Custos aumentam com Débito; Passivo, CP e Proveitos aumentam com Crédito.</div>
+      <p><strong>Exemplo:</strong> Compra de mercadorias a crédito: Débito em Mercadorias (31) e Crédito em Fornecedores (22).</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Uma conta de Ativo aumenta com:</div>
+      <div class="qo" onclick="cq(this,true)">a) Débito</div>
+      <div class="qo" onclick="cq(this,false)">b) Crédito</div>
+      <div class="qo" onclick="cq(this,false)">c) Débito e Crédito</div>
+      <div class="qo" onclick="cq(this,false)">d) Nenhuma das anteriores</div>
+      </div>
+    `},
+    {t:'Registo das Operações Correntes: Diário, Razão e Balancete', html:`
+      <div class="cb"><h2><i class="fas fa-book"></i> Livros Contabilísticos</h2>
+      <p>O <strong>Diário</strong> regista cronologicamente todas as operações. O <strong>Razão</strong> regista por conta. O <strong>Balancete</strong> lista os saldos de todas as contas.</p>
+      <div class="ib"><strong>Regra:</strong> O total dos saldos devedores deve ser igual ao total dos saldos credores.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual a função principal do Livro Razão?</div>
+      <div class="qo" onclick="cq(this,false)">a) Registar por ordem cronológica</div>
+      <div class="qo" onclick="cq(this,true)">b) Mostrar o saldo de cada conta</div>
+      <div class="qo" onclick="cq(this,false)">c) Calcular o IVA</div>
+      <div class="qo" onclick="cq(this,false)">d) Substituir o Balancete</div>
+      </div>
+    `},
+    {t:'Documentos, Facturação e Regime Jurídico das Facturas em Angola', html:`
+      <div class="cb"><h2><i class="fas fa-file-invoice"></i> A Factura em Angola</h2>
+      <p>A <strong>Lei n.º 7/19 de 24 de Abril</strong> estabelece os elementos obrigatórios da factura: título, número, data, identificação do emitente e do adquirente, descrição, valor tributável, taxa de IVA, valor do IVA e total.</p>
+      <div class="wb"><strong>Atenção:</strong> Facturas sem NIF do adquirente não permitem deduzir o IVA.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual documento legal regula a facturação em Angola?</div>
+      <div class="qo" onclick="cq(this,false)">a) Código do Trabalho</div>
+      <div class="qo" onclick="cq(this,true)">b) Lei n.º 7/19 de 24 de Abril</div>
+      <div class="qo" onclick="cq(this,false)">c) Decreto n.º 1/05</div>
+      <div class="qo" onclick="cq(this,false)">d) Código Comercial</div>
+      </div>
+    `},
+    {t:'Compras, Vendas, Existências e CMV — Parte 1', html:`
+      <div class="cb"><h2><i class="fas fa-calculator"></i> Custo das Mercadorias Vendidas (CMV)</h2>
+      <p><strong>CMV = Inventário Inicial + Compras – Inventário Final</strong></p>
+      <p>Métodos de custeio: <strong>PEPS</strong> (primeiro a entrar, primeiro a sair), <strong>UEPS</strong> (último a entrar, primeiro a sair) e <strong>Custo Médio Ponderado</strong>.</p>
+      <div class="hi"><strong>Exemplo:</strong> PEPS: vende-se primeiro o stock mais antigo.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual a fórmula do CMV?</div>
+      <div class="qo" onclick="cq(this,false)">a) CMV = Vendas - Compras</div>
+      <div class="qo" onclick="cq(this,true)">b) CMV = II + Compras - IF</div>
+      <div class="qo" onclick="cq(this,false)">c) CMV = IF - II + Compras</div>
+      <div class="qo" onclick="cq(this,false)">d) CMV = Compras - IF</div>
+      </div>
+    `},
+    {t:'Compras, Vendas, Existências e CMV — Parte 2 (Devoluções e Ajustamentos)', html:`
+      <div class="cb"><h2><i class="fas fa-rotate-left"></i> Devoluções e Ajustamentos</h2>
+      <p>Devoluções de compras invertem o lançamento original: Débito em Fornecedores, Crédito em Mercadorias e Crédito em IVA Dedutível.</p>
+      <p>Devoluções de vendas: Débito em Vendas e Crédito em Clientes.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Como se regista a devolução de uma compra a crédito?</div>
+      <div class="qo" onclick="cq(this,true)">a) Débito Fornecedores, Crédito Mercadorias e Crédito IVA Dedutível</div>
+      <div class="qo" onclick="cq(this,false)">b) Débito Mercadorias, Crédito Fornecedores</div>
+      <div class="qo" onclick="cq(this,false)">c) Débito IVA Dedutível, Crédito Fornecedores</div>
+      <div class="qo" onclick="cq(this,false)">d) Débito Fornecedores, Crédito Bancos</div>
+      </div>
+    `},
+    {t:'Meios Monetários, Bancos e Reconciliações Bancárias', html:`
+      <div class="cb"><h2><i class="fas fa-university"></i> Reconciliação Bancária</h2>
+      <p>A reconciliação ajusta as diferenças entre o extrato bancário e o saldo contabilístico. Depósitos em trânsito e cheques não compensados são as causas mais comuns.</p>
+      <div class="hi"><strong>Fórmula:</strong> Saldo Extrato + Depósitos em Trânsito - Cheques não compensados = Saldo Contabilístico Ajustado.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">O que é um depósito em trânsito?</div>
+      <div class="qo" onclick="cq(this,false)">a) Um depósito que o banco já creditou mas a empresa não registou</div>
+      <div class="qo" onclick="cq(this,true)">b) Um depósito que a empresa registou mas o banco ainda não creditou</div>
+      <div class="qo" onclick="cq(this,false)">c) Um cheque emitido que ainda não foi descontado</div>
+      <div class="qo" onclick="cq(this,false)">d) Um erro de cálculo</div>
+      </div>
+    `},
+    {t:'Imobilizado, Amortizações e Reavaliações — Parte 1', html:`
+      <div class="cb"><h2><i class="fas fa-building"></i> Amortizações</h2>
+      <p>A amortização regista a perda de valor do imobilizado ao longo do tempo. <strong>Amortização Anual = Custo × Taxa de Amortização</strong>.</p>
+      <div class="tw"><table class="dt"><tr><th>Bem</th><th>Taxa máxima (AGT)</th></tr>
+      <tr><td>Edifícios</td><td>2%</td></tr>
+      <tr><td>Mobiliário</td><td>10%</td></tr>
+      <tr><td>Equipamento informático</td><td>25%</td></tr>
+      <tr><td>Viaturas ligeiras</td><td>25%</td></tr>
+      </table></div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual a taxa máxima de amortização para equipamento informático?</div>
+      <div class="qo" onclick="cq(this,false)">a) 10%</div>
+      <div class="qo" onclick="cq(this,false)">b) 20%</div>
+      <div class="qo" onclick="cq(this,true)">c) 25%</div>
+      <div class="qo" onclick="cq(this,false)">d) 33%</div>
+      </div>
+    `},
+    {t:'Imobilizado, Amortizações e Reavaliações — Parte 2', html:`
+      <div class="cb"><h2><i class="fas fa-hand-holding-usd"></i> Alienação de Imobilizado</h2>
+      <p><strong>Valor Contabilístico Líquido (VCL) = Custo - Amortizações Acumuladas</strong></p>
+      <p>Mais-valia: preço de venda > VCL. Menos-valia: preço de venda < VCL.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Se uma empresa vende um bem por um valor inferior ao VCL, tem:</div>
+      <div class="qo" onclick="cq(this,false)">a) Uma mais-valia</div>
+      <div class="qo" onclick="cq(this,true)">b) Uma menos-valia</div>
+      <div class="qo" onclick="cq(this,false)">c) Um lucro</div>
+      <div class="qo" onclick="cq(this,false)">d) Uma receita</div>
+      </div>
+    `},
+    {t:'Contas a Receber, Contas a Pagar e Provisões', html:`
+      <div class="cb"><h2><i class="fas fa-hand-holding-usd"></i> Provisões para Devedores Duvidosos</h2>
+      <p>As provisões estimam perdas futuras com clientes. A AGT aceita percentagens por tempo de atraso.</p>
+      <div class="tw"><table class="dt"><tr><th>Período em atraso</th><th>Percentual</th></tr>
+      <tr><td>Até 90 dias</td><td>0%</td></tr>
+      <tr><td>91 a 180 dias</td><td>10%</td></tr>
+      <tr><td>181 a 360 dias</td><td>50%</td></tr>
+      <tr><td>Acima de 360 dias</td><td>100%</td></tr>
+      </table></div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Uma provisão para devedores duvidosos é registada como:</div>
+      <div class="qo" onclick="cq(this,false)">a) Um ativo</div>
+      <div class="qo" onclick="cq(this,true)">b) Uma redução do ativo e um custo</div>
+      <div class="qo" onclick="cq(this,false)">c) Um aumento do capital próprio</div>
+      <div class="qo" onclick="cq(this,false)">d) Uma receita</div>
+      </div>
+    `}
+  ]
+};
+
+/* ═══════════════ MÓDULO 2 — FISCALIDADE ANGOLANA ═══════════════ */
+const M2 = {
+  n:2, fase:1, img:IMG.fiscalidade,
+  titulo:'Fiscalidade Angolana',
+  desc:'IVA, IRT, INSS, Imposto Industrial, Imposto Predial, Retenções na Fonte, Obrigações Declarativas e muito mais. Domine a relação com a AGT.',
+  aulas:[
+    {t:'IVA: Liquidação, Dedução e Apuramento — Parte 1', html:`
+      <div class="cb"><h2><i class="fas fa-percent"></i> Mecanismo do IVA</h2>
+      <p>O <strong>IVA</strong> é um imposto sobre o valor acrescentado. A taxa normal em Angola é de <strong>14%</strong>.</p>
+      <div class="hi"><strong>IVA a pagar = IVA Liquidado (vendas) - IVA Dedutível (compras)</strong></div>
+      <p><strong>Exemplo:</strong> Vendas de Kz 1.000.000 + IVA (140.000); Compras de Kz 500.000 + IVA (70.000). IVA a pagar = 140.000 - 70.000 = <strong>Kz 70.000</strong>.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual é a taxa normal de IVA em Angola?</div>
+      <div class="qo" onclick="cq(this,false)">a) 10%</div>
+      <div class="qo" onclick="cq(this,true)">b) 14%</div>
+      <div class="qo" onclick="cq(this,false)">c) 18%</div>
+      <div class="qo" onclick="cq(this,false)">d) 20%</div>
+      </div>
+    `},
+    {t:'IVA: Declaração Periódica (Modelo 14) e Portal AGT — Parte 2', html:`
+      <div class="cb"><h2><i class="fas fa-file-invoice"></i> Modelo 14 e SAFT-AO</h2>
+      <p>A declaração periódica do IVA (<strong>Modelo 14</strong>) é submetida no Portal do Contribuinte da AGT até ao dia 15 do mês seguinte. O <strong>ficheiro SAFT-AO</strong> deve ser anexado.</p>
+      <div class="wb"><strong>Consequência do não envio do SAFT-AO:</strong> multa e impossibilidade de deduzir o IVA.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual o prazo para entrega do Modelo 14 (contribuintes mensais)?</div>
+      <div class="qo" onclick="cq(this,false)">a) Dia 10 do mês seguinte</div>
+      <div class="qo" onclick="cq(this,true)">b) Dia 15 do mês seguinte</div>
+      <div class="qo" onclick="cq(this,false)">c) Dia 20 do mês seguinte</div>
+      <div class="qo" onclick="cq(this,false)">d) Dia 30 do mês seguinte</div>
+      </div>
+    `},
+    {t:'IRT e Contribuições para a Segurança Social (INSS)', html:`
+      <div class="cb"><h2><i class="fas fa-users"></i> IRT e INSS</h2>
+      <p>O <strong>IRT</strong> é calculado por tabela progressiva. O <strong>INSS</strong> é de 3% para o trabalhador e 8% para a empresa.</p>
+      <div class="hi"><strong>Salário Líquido = Salário Bruto - IRT - INSS (3%)</strong></div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual a alíquota do INSS suportada pelo trabalhador em Angola?</div>
+      <div class="qo" onclick="cq(this,false)">a) 8%</div>
+      <div class="qo" onclick="cq(this,true)">b) 3%</div>
+      <div class="qo" onclick="cq(this,false)">c) 10%</div>
+      <div class="qo" onclick="cq(this,false)">d) 5%</div>
+      </div>
+    `},
+    {t:'Imposto Industrial: Apuramento, DLP e Declaração Anual', html:`
+      <div class="cb"><h2><i class="fas fa-industry"></i> Imposto Industrial (II)</h2>
+      <p>O II incide sobre o lucro tributável à taxa de <strong>25%</strong>, acrescida de derrama municipal.</p>
+      <p><strong>Lucro tributável = Lucro Contabilístico + Adições - Deduções</strong></p>
+      <div class="ib"><strong>Exemplo:</strong> Lucro contabilístico Kz 2.000.000 + multas (100.000) - prejuízos (400.000) = Kz 1.700.000. II = 1.700.000 × 25% = Kz 425.000.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual é a taxa normal do Imposto Industrial em Angola?</div>
+      <div class="qo" onclick="cq(this,false)">a) 15%</div>
+      <div class="qo" onclick="cq(this,false)">b) 20%</div>
+      <div class="qo" onclick="cq(this,true)">c) 25%</div>
+      <div class="qo" onclick="cq(this,false)">d) 30%</div>
+      </div>
+    `},
+    {t:'Imposto Predial, Imposto do Selo e IAC', html:`
+      <div class="cb"><h2><i class="fas fa-home"></i> IP, IS e IAC</h2>
+      <p><strong>Imposto Predial:</strong> sobre imóveis urbanos. <strong>Imposto do Selo:</strong> sobre documentos e contratos. <strong>IAC:</strong> sobre aplicações de capitais (juros, dividendos).</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">O Imposto Predial incide sobre:</div>
+      <div class="qo" onclick="cq(this,false)">a) Vendas de mercadorias</div>
+      <div class="qo" onclick="cq(this,true)">b) Propriedade de imóveis urbanos</div>
+      <div class="qo" onclick="cq(this,false)">c) Rendimentos do trabalho</div>
+      <div class="qo" onclick="cq(this,false)">d) Aplicações financeiras</div>
+      </div>
+    `},
+    {t:'Retenções na Fonte e Tributação de Não Residentes', html:`
+      <div class="cb"><h2><i class="fas fa-hand-holding-usd"></i> Retenções na Fonte</h2>
+      <p><strong>IRT:</strong> 6,5% para pessoas singulares. <strong>II:</strong> 6,5% para pessoas coletivas. <strong>Não residentes:</strong> retenção de 15%.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual a taxa geral de retenção na fonte de II para serviços prestados por empresas angolanas?</div>
+      <div class="qo" onclick="cq(this,true)">a) 6,5%</div>
+      <div class="qo" onclick="cq(this,false)">b) 10%</div>
+      <div class="qo" onclick="cq(this,false)">c) 15%</div>
+      <div class="qo" onclick="cq(this,false)">d) 25%</div>
+      </div>
+    `},
+    {t:'Obrigações Declarativas, Calendário Fiscal e Portal do Contribuinte', html:`
+      <div class="cb"><h2><i class="fas fa-calendar-alt"></i> Calendário Fiscal</h2>
+      <div class="tw"><table class="dt"><tr><th>Data</th><th>Obrigação</th></tr>
+      <tr><td>Dia 10</td><td>INSS</td></tr>
+      <tr><td>Dia 15</td><td>IVA (Modelo 14) + IRT (Modelo 2)</td></tr>
+      <tr><td>Dia 20</td><td>DLP (Imposto Industrial)</td></tr>
+      <tr><td>Até 31 de Maio</td><td>Declaração Anual do II (Modelo 1)</td></tr>
+      </table></div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Até que dia se entrega a Declaração Mensal de IVA (Modelo 14)?</div>
+      <div class="qo" onclick="cq(this,false)">a) Dia 10</div>
+      <div class="qo" onclick="cq(this,true)">b) Dia 15</div>
+      <div class="qo" onclick="cq(this,false)">c) Dia 20</div>
+      <div class="qo" onclick="cq(this,false)">d) Dia 30</div>
+      </div>
+    `},
+    {t:'Encerramento de Contas e Demonstrações Financeiras', html:`
+      <div class="cb"><h2><i class="fas fa-chart-pie"></i> Demonstrações Financeiras</h2>
+      <p>O <strong>Balanço</strong> mostra a situação patrimonial. A <strong>DRE</strong> mostra o desempenho. O <strong>DFC</strong> mostra os fluxos de caixa.</p>
+      <div class="hi"><strong>Análise por rácios:</strong> Liquidez Corrente = Ativo Corrente / Passivo Corrente. Endividamento = Passivo Total / Capital Próprio.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual documento mostra a situação patrimonial da empresa num momento específico?</div>
+      <div class="qo" onclick="cq(this,false)">a) DRE</div>
+      <div class="qo" onclick="cq(this,true)">b) Balanço Patrimonial</div>
+      <div class="qo" onclick="cq(this,false)">c) DFC</div>
+      <div class="qo" onclick="cq(this,false)">d) DMR</div>
+      </div>
+    `}
+  ]
+};
+
+/* ═══════════════ MÓDULO 3 — APLICAÇÃO PRÁTICA E CASOS REAIS ═══════════════ */
+const M3 = {
+  n:3, fase:2, img:IMG.impostos,
+  titulo:'Aplicação Prática e Casos Reais',
+  desc:'Constituição de empresa, planos de contas personalizados, contabilidade de gestão, construção civil, operações bancárias, fusões, auditoria, fiscalização e simulações completas.',
+  aulas:[
+    {t:'Constituição de Empresa em Angola', html:`
+      <div class="cb"><h2><i class="fas fa-building"></i> Constituição de uma LDA</h2>
+      <p>Registo da constituição de uma sociedade por quotas (LDA) do zero: capital social, despesas de constituição, NIF, alvará.</p>
+      <div class="hi"><strong>Registo:</strong> Débito em Despesas de Constituição, Crédito em Capital Social.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">O que é o capital social?</div>
+      <div class="qo" onclick="cq(this,false)">a) Uma dívida da empresa</div>
+      <div class="qo" onclick="cq(this,true)">b) O investimento dos sócios</div>
+      <div class="qo" onclick="cq(this,false)">c) Um imposto</div>
+      <div class="qo" onclick="cq(this,false)">d) Uma despesa</div>
+      </div>
+    `},
+    {t:'Plano de Contas Personalizado e Parametrização do Software Contábil', html:`
+      <div class="cb"><h2><i class="fas fa-sitemap"></i> Plano de Contas Personalizado</h2>
+      <p>Criação de um plano de contas específico a partir do PGCA, parametrização de IVA e centros de custo no software contábil.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">O que são centros de custo?</div>
+      <div class="qo" onclick="cq(this,false)">a) Contas de ativo</div>
+      <div class="qo" onclick="cq(this,true)">b) Divisões que permitem alocar custos</div>
+      <div class="qo" onclick="cq(this,false)">c) Impostos</div>
+      <div class="qo" onclick="cq(this,false)">d) Proveitos</div>
+      </div>
+    `},
+    {t:'Contabilidade de Gestão: Custos, Margens e Preços de Venda', html:`
+      <div class="cb"><h2><i class="fas fa-chart-line"></i> Cálculo de Custos e Preços</h2>
+      <p><strong>Custo Total = Custos Fixos + Custos Variáveis</strong></p>
+      <p><strong>Preço de Venda = Custo Total + Margem de Lucro</strong></p>
+      <div class="hi"><strong>Ponto de Equilíbrio:</strong> quantidade a vender para cobrir todos os custos.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">O que é o ponto de equilíbrio?</div>
+      <div class="qo" onclick="cq(this,false)">a) O lucro máximo</div>
+      <div class="qo" onclick="cq(this,true)">b) A quantidade a vender para cobrir todos os custos</div>
+      <div class="qo" onclick="cq(this,false)">c) O preço de venda</div>
+      <div class="qo" onclick="cq(this,false)">d) O custo fixo</div>
+      </div>
+    `},
+    {t:'Contabilidade de Construção Civil e Empreitadas', html:`
+      <div class="cb"><h2><i class="fas fa-hard-hat"></i> Método do Percentual de Conclusão</h2>
+      <p>Registo de receitas e custos de empreitadas com base no <strong>percentual de conclusão</strong> da obra.</p>
+      <div class="ib"><strong>Exemplo:</strong> Obra de Kz 1.000.000 com 50% concluída → reconhecer Kz 500.000 de receita.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Em que consiste o método do percentual de conclusão?</div>
+      <div class="qo" onclick="cq(this,false)">a) Reconhecer toda a receita no início</div>
+      <div class="qo" onclick="cq(this,true)">b) Reconhecer receita e custos proporcionalmente ao avanço da obra</div>
+      <div class="qo" onclick="cq(this,false)">c) Reconhecer apenas no final da obra</div>
+      <div class="qo" onclick="cq(this,false)">d) Não reconhecer receita</div>
+      </div>
+    `},
+    {t:'Operações Bancárias, Seguros e Instituições Financeiras', html:`
+      <div class="cb"><h2><i class="fas fa-university"></i> Operações Financeiras</h2>
+      <p>Registo de empréstimos, cartas de crédito, fianças e seguros. Cálculo de prestações (Price/SAC).</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">O que é uma carta de crédito?</div>
+      <div class="qo" onclick="cq(this,false)">a) Um empréstimo</div>
+      <div class="qo" onclick="cq(this,true)">b) Uma garantia de pagamento emitida por um banco</div>
+      <div class="qo" onclick="cq(this,false)">c) Um seguro</div>
+      <div class="qo" onclick="cq(this,false)">d) Um imposto</div>
+      </div>
+    `},
+    {t:'Fusões, Aquisições e Encerramento de Empresas', html:`
+      <div class="cb"><h2><i class="fas fa-merge"></i> Fusões e Aquisições</h2>
+      <p>Registo de fusão por incorporação, elaboração de relatório de liquidação e distribuição de ativos.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">O que é uma fusão por incorporação?</div>
+      <div class="qo" onclick="cq(this,false)">a) Duas empresas se dissolvem</div>
+      <div class="qo" onclick="cq(this,true)">b) Uma empresa absorve outra</div>
+      <div class="qo" onclick="cq(this,false)">c) Uma empresa se divide</div>
+      <div class="qo" onclick="cq(this,false)">d) Nenhuma das anteriores</div>
+      </div>
+    `},
+    {t:'Auditoria Interna, Controlo Interno e Prevenção de Fraudes', html:`
+      <div class="cb"><h2><i class="fas fa-shield-halved"></i> Controlo Interno</h2>
+      <p>Implementação de controlos internos, identificação de riscos de fraude e elaboração de plano de auditoria.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual o objetivo do controlo interno?</div>
+      <div class="qo" onclick="cq(this,false)">a) Aumentar os lucros</div>
+      <div class="qo" onclick="cq(this,true)">b) Prevenir erros e fraudes</div>
+      <div class="qo" onclick="cq(this,false)">c) Reduzir impostos</div>
+      <div class="qo" onclick="cq(this,false)">d) Aumentar as despesas</div>
+      </div>
+    `},
+    {t:'Contabilidade para Órgãos do Estado e Entidades Públicas (SISTAC)', html:`
+      <div class="cb"><h2><i class="fas fa-landmark"></i> SISTAC</h2>
+      <p>O <strong>SISTAC</strong> é o sistema de contabilidade pública em Angola. Regista as quatro fases da despesa pública: <strong>programação, compromisso, liquidação e pagamento</strong>.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Quantas fases tem a despesa pública no SISTAC?</div>
+      <div class="qo" onclick="cq(this,false)">a) 2</div>
+      <div class="qo" onclick="cq(this,false)">b) 3</div>
+      <div class="qo" onclick="cq(this,true)">c) 4</div>
+      <div class="qo" onclick="cq(this,false)">d) 5</div>
+      </div>
+    `},
+    {t:'Planeamento Fiscal e Otimização Legal do Encargo Tributário', html:`
+      <div class="cb"><h2><i class="fas fa-scale-balanced"></i> Planeamento Fiscal</h2>
+      <p>Simulação de cenários fiscais, cálculo do encargo tributário global e proposta de estrutura ótima dentro da legalidade.</p>
+      <div class="wb"><strong>Importante:</strong> Planeamento fiscal é legal; evasão fiscal é crime.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual a diferença entre planeamento fiscal e evasão fiscal?</div>
+      <div class="qo" onclick="cq(this,false)">a) São a mesma coisa</div>
+      <div class="qo" onclick="cq(this,true)">b) Planeamento é legal; evasão é crime</div>
+      <div class="qo" onclick="cq(this,false)">c) Planeamento é crime; evasão é legal</div>
+      <div class="qo" onclick="cq(this,false)">d) Ambos são ilegais</div>
+      </div>
+    `},
+    {t:'Preços de Transferência e Operações com Partes Relacionadas', html:`
+      <div class="cb"><h2><i class="fas fa-handshake"></i> Preços de Transferência</h2>
+      <p>Aplicação dos 5 métodos de preços de transferência, elaboração de dossier local e verificação de conformidade com o intervalo de mercado.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">O que são preços de transferência?</div>
+      <div class="qo" onclick="cq(this,false)">a) Preços de venda ao público</div>
+      <div class="qo" onclick="cq(this,true)">b) Preços praticados entre empresas do mesmo grupo</div>
+      <div class="qo" onclick="cq(this,false)">c) Preços de importação</div>
+      <div class="qo" onclick="cq(this,false)">d) Preços de exportação</div>
+      </div>
+    `},
+    {t:'Simulação Completa: Um Ano de Contabilidade de uma Empresa', html:`
+      <div class="cb"><h2><i class="fas fa-calendar-alt"></i> Simulação Anual</h2>
+      <p>Registo de 12 meses completos de operações, encerramento de contas, elaboração de Balanço e DRE, e apuramento de todos os impostos.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual o objetivo da simulação anual?</div>
+      <div class="qo" onclick="cq(this,false)">a) Apenas praticar lançamentos</div>
+      <div class="qo" onclick="cq(this,true)">b) Aplicar todo o conhecimento num caso real completo</div>
+      <div class="qo" onclick="cq(this,false)">c) Apenas calcular impostos</div>
+      <div class="qo" onclick="cq(this,false)">d) Apenas elaborar o Balanço</div>
+      </div>
+    `},
+    {t:'Simulação de Fiscalização da AGT: Defesa e Procedimentos', html:`
+      <div class="cb"><h2><i class="fas fa-search"></i> Defesa em Fiscalização</h2>
+      <p>Organização da documentação de defesa, cálculo do impacto de irregularidades e elaboração de resposta técnica à AGT.</p>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">Qual a primeira atitude numa fiscalização da AGT?</div>
+      <div class="qo" onclick="cq(this,false)">a) Contestar tudo</div>
+      <div class="qo" onclick="cq(this,true)">b) Organizar a documentação e colaborar</div>
+      <div class="qo" onclick="cq(this,false)">c) Recusar o acesso</div>
+      <div class="qo" onclick="cq(this,false)">d) Ignorar a notificação</div>
+      </div>
+    `},
+    {t:'Trabalho Final: Consultoria Contábil e Fiscal Integrada', html:`
+      <div class="cb"><h2><i class="fas fa-trophy"></i> Trabalho Final</h2>
+      <p>Diagnóstico de uma empresa real, elaboração de relatório de consultoria completo e defesa da proposta.</p>
+      <div class="hi"><strong>Este é o seu portefólio profissional.</strong> Demonstra a sua capacidade de assumir a contabilidade completa de uma empresa.</div>
+      </div>
+      <div class="quiz"><h3><i class="fas fa-circle-question"></i> Verificação de Aprendizagem</h3>
+      <div class="qq">O que o trabalho final de consultoria demonstra?</div>
+      <div class="qo" onclick="cq(this,false)">a) Apenas conhecimentos teóricos</div>
+      <div class="qo" onclick="cq(this,true)">b) A capacidade de aplicar todos os conhecimentos a um caso real</div>
+      <div class="qo" onclick="cq(this,false)">c) Apenas a capacidade de elaborar relatórios</div>
+      <div class="qo" onclick="cq(this,false)">d) Nenhuma das anteriores</div>
+      </div>
+    `}
+  ]
+};
+
+const COURSE = [M1, M2, M3];
+const FASES = {1:'Módulo 1 — Fundamentos da Contabilidade', 2:'Módulo 2 — Fiscalidade Angolana', 3:'Módulo 3 — Aplicação Prática e Casos Reais'};
+const TOTAL_AULAS = COURSE.reduce((s,m)=>s+m.aulas.length,0);
+const ST_KEY = 'oaken_contabilidade_v1';
+
+let ST = {logado:false, nome:'', desbloqueado:1, notas:{}};
+try{ const s=localStorage.getItem(ST_KEY); if(s) ST=Object.assign(ST,JSON.parse(s)); }catch(e){}
+function save(){ try{ localStorage.setItem(ST_KEY,JSON.stringify(ST)); }catch(e){} }
+
+const app = document.getElementById('app');
+let aulaAtual = 0, moduloAtual = null;
+
+function nav(rota){ location.hash = rota; }
+function jump(id){ setTimeout(()=>{const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth'});},80); }
+
+window.addEventListener('hashchange', router);
+window.addEventListener('DOMContentLoaded', router);
+
+function router(){
+  const h = (location.hash||'#home').slice(1);
+  if(h.startsWith('modulo-')){
+    const n = parseInt(h.split('-')[1]);
+    const m = COURSE.find(x=>x.n===n);
+    if(m && (ST.logado)) return renderModulo(m);
+    if(m) return renderAluno();
+    return renderHome();
+  }
+  if(h==='aluno') return renderAluno();
+  return renderHome();
+}
+
+/* ───────── LANDING PAGE ───────── */
+function renderHome(){
+  const fases = [1,2,3];
+  let modulosHTML = '';
+  fases.forEach(f=>{
+    modulosHTML += `<div class="phase-label">${FASES[f]}</div><div class="modules-grid">`;
+    COURSE.filter(m=>m.fase===f).forEach(m=>{
+      modulosHTML += `<div class="module-card" onclick="nav('aluno')">
+        <span class="mod-num">Módulo ${m.n}</span>
+        <h3>${m.titulo}</h3><p>${m.desc.slice(0,110)}…</p></div>`;
+    });
+    modulosHTML += `</div>`;
+  });
+
+  app.innerHTML = `
+<section class="hero">
+  <div class="container hero-flex">
+    <div class="hero-content">
+      <div class="floating-badge"><i class="fas fa-shield-halved"></i> Formação Autodidata</div>
+      <h1><span>Contabilidade e Fiscalidade</span> Angolana</h1>
+      <div class="sub-title">Domine o PGCA, IVA, IRT, Imposto Industrial e a relação com a AGT</div>
+      <p>Curso 100% online, autodidata, com 3 módulos e aulas detalhadas. Aprenda ao seu ritmo, com quizzes e exercícios práticos para consolidar o conhecimento.</p>
+      <div class="hero-stats">
+        <div class="stat-item"><span class="stat-number">3</span><span class="stat-label">Módulos</span></div>
+        <div class="stat-item"><span class="stat-number">${TOTAL_AULAS}</span><span class="stat-label">Aulas</span></div>
+        <div class="stat-item"><span class="stat-number">${TOTAL_AULAS}</span><span class="stat-label">Horas</span></div>
+        <div class="stat-item"><span class="stat-number">3</span><span class="stat-label">Certificações</span></div>
+      </div>
+      <div class="hero-badges">
+        <span><i class="fas fa-circle-check"></i> PGCA</span>
+        <span><i class="fas fa-circle-check"></i> IVA 14%</span>
+        <span><i class="fas fa-circle-check"></i> IRT</span>
+        <span><i class="fas fa-circle-check"></i> Imposto Industrial 25%</span>
+      </div>
+      <a onclick="nav('aluno')" class="cta-hero"><i class="fas fa-right-to-bracket"></i> Aceder à plataforma</a>
+      <div class="disclaimer-box"><i class="fas fa-triangle-exclamation"></i>
+        <strong>Curso 100% autodidata.</strong> A aprovação em cada módulo depende do desempenho nos quizzes e exames.</div>
+    </div>
+    <div class="hero-image"><img src="${IMG.contabilidade}" alt="Contabilidade e Fiscalidade Angolana"></div>
+  </div>
+</section>
+
+<section class="bg-light" style="padding:44px 0">
+  <div class="container">
+    <div class="quick-stats-grid">
+      <div class="qs-item"><span class="number">3</span><span class="label">Módulos</span></div>
+      <div class="qs-item"><span class="number">${TOTAL_AULAS}</span><span class="label">Aulas</span></div>
+      <div class="qs-item"><span class="number">${TOTAL_AULAS}h</span><span class="label">Carga Horária</span></div>
+      <div class="qs-item"><span class="number">3</span><span class="label">Certificações</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white" id="detalhes">
+  <div class="container">
+    <h2 class="section-title">Detalhes do <span>Curso</span></h2>
+    <p class="section-sub">Tudo o que precisa de saber antes de começar.</p>
+    <div class="details-table">
+      <div class="d-row"><div class="d-label">Nome</div><div class="d-value">Contabilidade e Fiscalidade Angolana</div></div>
+      <div class="d-row"><div class="d-label">Modalidade</div><div class="d-value">100% Online — Autodidata</div></div>
+      <div class="d-row"><div class="d-label">Público</div><div class="d-value">Iniciantes e profissionais em Angola</div></div>
+      <div class="d-row"><div class="d-label">Estrutura</div><div class="d-value">3 módulos · ${TOTAL_AULAS} aulas</div></div>
+      <div class="d-row"><div class="d-label">Normas</div><div class="d-value">PGCA · Lei n.º 7/19 · CIVA · Lei Geral Tributária</div></div>
+      <div class="d-row"><div class="d-label">Avaliação</div><div class="d-value">Quiz por aula · Exame por módulo (mínimo 70%)</div></div>
+      <div class="d-row"><div class="d-label">Progressão</div><div class="d-value">Só avança de módulo após aprovação no anterior</div></div>
+      <div class="d-row"><div class="d-label">Certificação</div><div class="d-value">Certificado por módulo e certificado final</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white" id="modulos">
+  <div class="container">
+    <h2 class="section-title">O que vai aprender <span>no curso</span></h2>
+    <p class="section-sub">3 módulos organizados para uma progressão lógica, do básico ao avançado.</p>
+    ${modulosHTML}
+  </div>
+</section>
+
+<section class="bg-light">
+  <div class="container">
+    <h2 class="section-title">Porquê escolher este <span>curso</span>?</h2>
+    <p class="section-sub">Um curso desenhado para formar contabilistas completos, com foco na realidade angolana.</p>
+    <div class="diff-grid">
+      <div class="diff-item"><i class="fas fa-book"></i><h4>Conteúdo Local</h4><p>Exemplos em Kwanzas, referências à AGT, PGCA e leis angolanas.</p></div>
+      <div class="diff-item"><i class="fas fa-infinity"></i><h4>Acesso Incluído</h4><p>Faz parte do acesso anual à plataforma Oaken Cursos.</p></div>
+      <div class="diff-item"><i class="fas fa-graduation-cap"></i><h4>Metodologia Autodidata</h4><p>Leitura, exercícios práticos e quizzes para consolidar o conhecimento.</p></div>
+      <div class="diff-item"><i class="fas fa-certificate"></i><h4>Progressão Validada</h4><p>Só avança de módulo após aprovação — certificado final validado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white" id="faq">
+  <div class="container">
+    <h2 class="section-title">Perguntas <span>Frequentes</span></h2>
+    <div class="faq-grid">
+      ${[
+        ['O curso é reconhecido em Angola?','O conteúdo é desenvolvido com base no PGCA, Lei n.º 7/19, CIVA e demais legislação angolana vigente.'],
+        ['Preciso de experiência prévia?','Não. O curso começa pelos fundamentos e avança gradualmente até ao nível profissional.'],
+        ['Como funciona a progressão dos módulos?','Cada módulo tem um exame com nota mínima de 70%. Só é desbloqueado o módulo seguinte após aprovação no actual.'],
+        ['O curso tem certificado?','Sim, emitido após aprovação nos 3 módulos, mencionando as normas e a carga horária.'],
+        ['Como posso aceder?','O curso faz parte da plataforma Oaken Cursos. Contacte-nos pelo WhatsApp para mais informação.'],
+        ['O que significa "formato autodidata"?','Não há professor ao vivo. O aluno lê o material, estuda, faz exercícios e responde a quizzes para consolidar o conhecimento.']
+      ].map(f=>`<div class="faq-item" onclick="this.classList.toggle('active')"><h4>${f[0]} <i class="fas fa-chevron-down"></i></h4><div class="answer">${f[1]}</div></div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-flex">
+      <div class="footer-col">
+        <h5>OAKEN CURSOS</h5>
+        <p>Formação técnica de excelência em contabilidade e fiscalidade, com foco no mercado angolano e nas normas PGCA e legislação fiscal.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <p><i class="fab fa-whatsapp" style="color:var(--secondary)"></i> <a href="https://wa.me/351913388794">+351 913 388 794</a></p>
+        <p><i class="fas fa-location-dot"></i> Talatona, Luanda, Angola</p>
+      </div>
+      <div class="footer-col">
+        <h5>Links Rápidos</h5>
+        <p><a onclick="jump('modulos')" style="cursor:pointer">Módulos</a></p>
+        <p><a onclick="nav('aluno')" style="cursor:pointer">Área do Aluno</a></p>
+        <p><a href="../index.html" style="cursor:pointer">Oaken Cursos</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Oaken Cursos. Todos os direitos reservados.</div>
+  </div>
+</footer>`;
+
+  window.scrollTo(0,0);
+}
+
+/* ───────── ÁREA DO ALUNO ───────── */
+function renderAluno(){
+  if(!ST.logado){
+    app.innerHTML = `
+    <div class="login-wrap"><div class="login-box">
+      <div class="login-icon"><i class="fas fa-calculator"></i></div>
+      <h2>Área do Aluno</h2>
+      <p>Entre com as suas credenciais para aceder à plataforma de estudos.</p>
+      <div class="field"><label>E-mail</label><input type="email" id="li-mail" placeholder="seuemail@exemplo.com"></div>
+      <div class="field"><label>Senha</label><input type="password" id="li-pass" placeholder="••••••••"></div>
+      <button class="btn-login" onclick="doLogin()"><i class="fas fa-right-to-bracket"></i> Entrar na plataforma</button>
+      <div class="login-alt">Ainda não é aluno? <a onclick="nav('home')">Ver mais sobre o curso</a></div>
+      <div class="demo-hint"><i class="fas fa-circle-info"></i> Entrada liberada nesta fase. O seu progresso fica guardado neste dispositivo.</div>
+    </div></div>`;
+    const inp=document.getElementById('li-pass');
+    if(inp) inp.addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
+    window.scrollTo(0,0); return;
+  }
+
+  const done = ST.desbloqueado-1;
+  const pct = Math.round(done/3*100);
+  let lista='';
+  [1,2,3].forEach(f=>{
+    lista += `<div class="phase-head">${FASES[f]}</div><div class="mod-list">`;
+    COURSE.filter(m=>m.fase===f).forEach(m=>{
+      const st = m.n<ST.desbloqueado?'done':(m.n===ST.desbloqueado?'unlocked':'locked');
+      const ic = st==='done'?'<i class="fas fa-check"></i>':(st==='locked'?'<i class="fas fa-lock"></i>':m.n);
+      const bd = st==='done'?'Concluído':(st==='unlocked'?'Continuar →':'Bloqueado');
+      const nota = ST.notas[m.n]?` · ${ST.notas[m.n]}%`:'';
+      const click = st!=='locked'?`onclick="nav('modulo-${m.n}')"`:'';
+      lista += `<div class="mod-card ${st}" ${click}>
+        <div class="mod-ic ${st}">${ic}</div>
+        <div class="mod-info"><h4>Módulo ${m.n} — ${m.titulo}</h4>
+        <span>${m.aulas.length} aulas${nota}</span></div>
+        <span class="mod-badge ${st}">${bd}</span></div>`;
+    });
+    lista += `</div>`;
+  });
+
+  app.innerHTML = `
+  <div class="dash-header"><div class="container dash-in">
+    <div><h1>Olá, ${ST.nome}! 👋</h1><p>Curso de Contabilidade e Fiscalidade Angolana</p></div>
+    <button class="btn-logout" onclick="doLogout()"><i class="fas fa-right-from-bracket"></i> Sair</button>
+  </div></div>
+  <div class="dash-body"><div class="container">
+    <div class="progress-card">
+      <div class="pc-head"><h3><i class="fas fa-chart-line" style="color:var(--secondary)"></i> O seu progresso</h3><span class="pct">${pct}%</span></div>
+      <div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div>
+      <div class="prog-stats">
+        <div><b>${done}</b> de <b>3</b> módulos concluídos</div>
+        <div><b>${TOTAL_AULAS}</b> aulas no curso</div>
+        <div><b>70%</b> mínimo por exame</div>
+      </div>
+    </div>
+    ${lista}
+  </div></div>`;
+  window.scrollTo(0,0);
+}
+
+function doLogin(){
+  const mail = (document.getElementById('li-mail').value||'aluno@demo.ao').trim();
+  ST.logado = true;
+  ST.nome = mail.split('@')[0] || 'Aluno';
+  save(); renderAluno();
+}
+function doLogout(){ ST.logado=false; save(); nav('aluno'); renderAluno(); }
+
+/* ───────── VISTA DO MÓDULO ───────── */
+function renderModulo(m){
+  moduloAtual = m; aulaAtual = 0;
+  app.innerHTML = `
+  <div class="mod-hero"><div class="container-sm mh-in">
+    <div class="mh-txt">
+      <div class="mod-phase"><i class="fas fa-layer-group"></i> ${FASES[m.fase]}</div>
+      <h1>Módulo ${m.n} — <span>${m.titulo}</span></h1>
+      <p>${m.desc}</p>
+      <div class="mod-meta">
+        <span class="meta-tag"><i class="fas fa-book-open"></i> ${m.aulas.length} Aulas</span>
+        <span class="meta-tag"><i class="fas fa-bolt"></i> Angola</span>
+      </div>
+    </div>
+    <div class="mh-img"><img src="${m.img}" alt="${m.titulo}"></div>
+  </div></div>
+  <div class="mod-progress"><div class="container-sm mp-in">
+    <span class="mp-lbl">Progresso do módulo:</span><div class="dots" id="dots"></div>
+  </div></div>
+  <div class="container-sm">
+    <div class="tabs" id="tabs"></div>
+    <div class="mod-layout">
+      <div id="lesson"></div>
+      <div class="sidebar">
+        <div class="sc"><h4><i class="fas fa-list" style="color:var(--secondary)"></i> Aulas</h4><div id="slinks"></div></div>
+        <div class="sc"><h4><i class="fas fa-trophy" style="color:var(--secondary)"></i> Avaliação</h4>
+          <p style="font-size:12px;color:var(--gray);margin-bottom:10px">Conclua as aulas e faça o exame do módulo para desbloquear o seguinte.</p>
+          <div class="sbtn orange" onclick="abrirExame(${m.n})"><i class="fas fa-pen-to-square"></i> Fazer exame</div>
+        </div>
+        <div class="sc"><h4><i class="fas fa-route" style="color:var(--secondary)"></i> Navegação</h4>
+          ${m.n>1?`<div class="sbtn grey" onclick="nav('modulo-${m.n-1}')"><i class="fas fa-arrow-left"></i> Módulo ${m.n-1}</div>`:''}
+          <div class="sbtn grey" onclick="nav('aluno')"><i class="fas fa-table-cells"></i> Todos os módulos</div>
+          ${m.n<3&&ST.desbloqueado>m.n?`<div class="sbtn orange" onclick="nav('modulo-${m.n+1}')">Módulo ${m.n+1} <i class="fas fa-arrow-right"></i></div>`:''}
+        </div>
+      </div>
+    </div>
+  </div>`;
+
+  const tabs=document.getElementById('tabs'), dots=document.getElementById('dots'), sl=document.getElementById('slinks');
+  m.aulas.forEach((a,i)=>{
+    const t=document.createElement('button'); t.className='tb'; t.id='tb'+i;
+    t.textContent=(i+1)+'. '+a.t.split(' ').slice(0,3).join(' ')+'…';
+    t.onclick=()=>irAula(i); tabs.appendChild(t);
+    const d=document.createElement('div'); d.className='dot'; d.id='dt'+i; d.textContent=i+1;
+    d.onclick=()=>irAula(i); dots.appendChild(d);
+    const s=document.createElement('div'); s.className='sl'; s.id='sl'+i;
+    s.innerHTML=`<span class="sn">${i+1}</span>${a.t}`; s.onclick=()=>irAula(i); sl.appendChild(s);
+  });
+  irAula(0);
+  window.scrollTo(0,0);
+}
+
+function irAula(i){
+  const m=moduloAtual, a=m.aulas[i]; aulaAtual=i;
+  document.getElementById('lesson').innerHTML = `
+  <div class="lesson">
+    <div class="ltitle">Aula ${i+1} — ${a.t}</div>
+    <div class="lsub"><span><i class="fas fa-clock"></i> ~15 min</span><span>Módulo ${m.n} · ${m.titulo}</span></div>
+    ${a.html}
+    <div class="lnav">
+      <button class="nb np" onclick="irAula(${i-1})" ${i===0?'disabled':''}><i class="fas fa-arrow-left"></i> Anterior</button>
+      ${i<m.aulas.length-1
+        ? `<button class="nb nn" onclick="irAula(${i+1})">Próxima aula <i class="fas fa-arrow-right"></i></button>`
+        : `<button class="nb nn" onclick="abrirExame(${m.n})"><i class="fas fa-trophy"></i> Fazer exame do módulo</button>`}
+    </div>
+  </div>`;
+  m.aulas.forEach((_,j)=>{
+    document.getElementById('tb'+j).classList.toggle('active',j===i);
+    document.getElementById('dt'+j).className='dot '+(j<i?'done':(j===i?'active':'todo'));
+    document.getElementById('sl'+j).classList.toggle('act',j===i);
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function cq(el,ok){
+  el.closest('.quiz').querySelectorAll('.qo').forEach(o=>{o.onclick=null;o.style.cursor='default';});
+  el.classList.add(ok?'ok':'no');
+}
+
+/* ───────── SISTEMA DE EXAMES ───────── */
+function gerarExame(m){
+  const perg=[];
+  m.aulas.forEach(a=>{
+    const re=/<div class="qq">(.*?)<\/div>((?:<div class="qo"[\s\S]*?<\/div>)+)/g;
+    let mt;
+    while((mt=re.exec(a.html))!==null){
+      const q=mt[1];
+      const opts=[]; let ok=-1;
+      const ore=/<div class="qo" onclick="cq\(this,(true|false)\)">(.*?)<\/div>/g;
+      let om,k=0;
+      while((om=ore.exec(mt[2]))!==null){ if(om[1]==='true') ok=k; opts.push(om[2].replace(/^[a-z]\)\s*/,'')); k++; }
+      if(opts.length&&ok>=0) perg.push({q,opts,ok});
+    }
+  });
+  return perg;
+}
+
+let EXAME=null;
+function abrirExame(n){
+  const m=COURSE.find(x=>x.n===n);
+  EXAME={mod:m, perg:gerarExame(m)};
+  document.getElementById('examMeta').textContent=`Módulo ${m.n}`;
+  document.getElementById('examTitle').textContent=m.titulo;
+  document.getElementById('examQCount').textContent=EXAME.perg.length;
+  document.getElementById('examResult').classList.add('hidden');
+  const body=document.getElementById('examBody');
+  body.classList.remove('hidden');
+  body.innerHTML = EXAME.perg.map((p,i)=>`
+    <div class="question"><p>${i+1}. ${p.q}</p>
+    ${p.opts.map((o,j)=>`<label class="option" onclick="selOpt(this)"><input type="radio" name="eq${i}" value="${j}"> ${o}</label>`).join('')}
+    </div>`).join('')
+    + `<button class="btn-login" onclick="submeterExame()"><i class="fas fa-paper-plane"></i> Enviar respostas</button>
+       <button class="btn-logout" style="width:100%;margin-top:10px;background:#f0f4f8;color:#64748B;border:1px solid #e2e8f0" onclick="fecharExame()">Cancelar</button>`;
+  document.getElementById('examOverlay').classList.add('open');
+}
+function selOpt(el){
+  el.closest('.question').querySelectorAll('.option').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel'); el.querySelector('input').checked=true;
+}
+function submeterExame(){
+  let cert=0;
+  EXAME.perg.forEach((p,i)=>{
+    const s=document.querySelector(`input[name="eq${i}"]:checked`);
+    if(s&&parseInt(s.value)===p.ok) cert++;
+  });
+  const pct=Math.round(cert/EXAME.perg.length*100);
+  const pass=pct>=70;
+  const n=EXAME.mod.n;
+  ST.notas[n]=pct;
+  if(pass && n===ST.desbloqueado && n<3) ST.desbloqueado=n+1;
+  if(pass && n===3) ST.desbloqueado=4;
+  save();
+  document.getElementById('examBody').classList.add('hidden');
+  const r=document.getElementById('examResult');
+  r.classList.remove('hidden');
+  r.innerHTML=`
+    <div class="res-ic">${pass?'🎉':'📚'}</div>
+    <div class="res-score">${pct}%</div>
+    <div class="res-lbl">${cert} de ${EXAME.perg.length} respostas correctas</div>
+    <div class="res-verdict ${pass?'pass':'fail'}">
+      <i class="fas fa-${pass?'circle-check':'circle-xmark'}"></i>
+      ${pass?(n<3?`Aprovado! Módulo ${n+1} desbloqueado.`:'Aprovado! Curso concluído — parabéns!'):'Não atingiu 70%. Reveja o módulo e tente novamente.'}
+    </div>
+    <button class="btn-login" style="max-width:320px;margin:0 auto" onclick="fecharExame();nav('aluno')">
+      <i class="fas fa-table-cells"></i> Voltar aos módulos</button>`;
+}
+function fecharExame(){ document.getElementById('examOverlay').classList.remove('open'); }
+document.getElementById('examOverlay').addEventListener('click',e=>{ if(e.target.id==='examOverlay') fecharExame(); });
+</script>
+</body>
+</html>

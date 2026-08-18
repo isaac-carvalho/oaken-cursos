@@ -524,84 +524,29 @@ const COURSES = [
     "title": "Contabilidade e Fiscalidade Angolana",
     "description": "IVA, IRT, obrigações declarativas e relação com a AGT, com os mapas e prazos que a empresa tem mesmo de cumprir.",
     "icon": "fa-solid fa-calculator",
-    "status": "planned",
-    "url": null,
-    "stats": null,
-    "pitch": "A regulação fiscal muda com frequência — cada alteração gera necessidade de reciclagem.",
+    "status": "available",
+    "url": "contabilidade/index.html",
+    "stats": {
+      "modules": 3,
+      "lessons": 32,
+      "hours": 32,
+      "questions": 0
+    },
+    "pitch": "3 módulos com aulas na plataforma: Fundamentos da Contabilidade, Fiscalidade Angolana e Aplicação Prática.",
     "cover": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&q=80",
     "accent": "#2E6E9E",
     "programa": [
       {
         "n": 1,
-        "titulo": "Introdução à Contabilidade: Património, Fluxos e Equação Fundamental"
+        "titulo": "Fundamentos da Contabilidade"
       },
       {
         "n": 2,
-        "titulo": "O Plano Geral de Contabilidade Angolano: Estrutura e Classes de Contas"
+        "titulo": "Fiscalidade Angolana"
       },
       {
         "n": 3,
-        "titulo": "Partidas Dobradas e Registo das Operações Correntes"
-      },
-      {
-        "n": 4,
-        "titulo": "Documentos, Facturação e Regime Jurídico das Facturas"
-      },
-      {
-        "n": 5,
-        "titulo": "Compras, Vendas, Existências e Custo das Mercadorias Vendidas"
-      },
-      {
-        "n": 6,
-        "titulo": "Meios Monetários, Bancos e Reconciliações Bancárias"
-      },
-      {
-        "n": 7,
-        "titulo": "Imobilizado, Amortizações e Reavaliações"
-      },
-      {
-        "n": 8,
-        "titulo": "Contas a Receber, Contas a Pagar e Provisões"
-      },
-      {
-        "n": 9,
-        "titulo": "Operações em Moeda Estrangeira e Diferenças Cambiais"
-      },
-      {
-        "n": 10,
-        "titulo": "Processamento Salarial: Remunerações, Descontos e Contabilização"
-      },
-      {
-        "n": 11,
-        "titulo": "IVA: Liquidação, Dedução e Declaração Periódica"
-      },
-      {
-        "n": 12,
-        "titulo": "IRT e Contribuições para a Segurança Social (INSS)"
-      },
-      {
-        "n": 13,
-        "titulo": "Imposto Industrial: Apuramento, Liquidação Provisória e Declaração Anual"
-      },
-      {
-        "n": 14,
-        "titulo": "Imposto Predial, Imposto do Selo e Imposto sobre a Aplicação de Capitais"
-      },
-      {
-        "n": 15,
-        "titulo": "Retenções na Fonte e Tributação de Serviços de Não Residentes"
-      },
-      {
-        "n": 16,
-        "titulo": "Obrigações Declarativas, Calendário Fiscal e Portal do Contribuinte da AGT"
-      },
-      {
-        "n": 17,
-        "titulo": "Encerramento de Contas e Demonstrações Financeiras"
-      },
-      {
-        "n": 18,
-        "titulo": "Análise Financeira, Fiscalizações da AGT e Ética Profissional"
+        "titulo": "Aplicação Prática e Casos Reais"
       }
     ],
     "saidas": [
