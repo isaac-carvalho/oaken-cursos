@@ -3784,7 +3784,7 @@ const MODULE_QUESTIONS = {
         "Lei de Contratação Pública (Lei 41/20)",
         "Lei Geral do Trabalho",
         "Lei de Protecção de Dados Pessoais",
-        "Lei do Empreendedorismo"
+        "Lei das Micro, Pequenas e Médias Empresas (Lei 30/11)"
       ],
       "answer": 0
     },
@@ -5440,7 +5440,7 @@ const MODULE_QUESTIONS = {
       "text": "Uma empresa angolana vai começar a recolher dados de clientes. Segundo a aula 17.9, que diploma regula o tratamento de dados pessoais em Angola?",
       "options": [
         "A Lei Geral do Trabalho",
-        "A Lei do Empreendedorismo",
+        "A Lei das Micro, Pequenas e Médias Empresas (Lei 30/11)",
         "A Lei de Proteção de Dados Pessoais (Lei 22/11)",
         "O Regulamento de Segurança e Saúde no Trabalho"
       ],
