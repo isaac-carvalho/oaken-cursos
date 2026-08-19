@@ -490,7 +490,7 @@ footer{background:var(--primary);color:#bbb;padding:44px 0 20px}
 <script>
 /* ══════════════════════════════════════════════════════════════
    OAKEN ELECTRICAL — BASE DE DADOS DO CURSO
-   18 módulos · 168 aulas · 1h por aula · 168h total
+   18 módulos · 168 aulas · 50 min por aula · 140h total
    Normas: RTIEBT · IEC 60364 · Lei nº 27/15 · Dec. 40/04 · Dec. 39-04
    Tensão: 220/380 V — 50 Hz (Angola)
    ══════════════════════════════════════════════════════════════ */
@@ -3920,7 +3920,7 @@ QZ('Qual a queda de tensão máxima admissível durante o arranque de um motor?'
 
 A('Avaliação Final e Certificação',null,[
 CB(H('fa-trophy','Concluiu o Oaken Electrical')+
-P('Chegou ao final dos 18 módulos do curso técnico de instalações eléctricas residenciais, comerciais e industriais — Edição Angola. Percorreu 162 horas de formação estruturada, dos fundamentos da electricidade à automação industrial.')),
+P('Chegou ao final dos 18 módulos do curso técnico de instalações eléctricas residenciais, comerciais e industriais — Edição Angola. Percorreu 140 horas de formação estruturada (168 aulas de 50 minutos), dos fundamentos da electricidade à automação industrial.')),
 CB(H('fa-list-check','O Percurso Completo')+
 UL(['<strong>Fase 1 — Fundamentos e Residencial (Módulos 1 a 6):</strong> grandezas eléctricas, legislação angolana, RTIEBT Partes 1 a 4, dimensionamento de condutores, aterramento e projecto residencial completo',
 '<strong>Fase 2 — Comercial e Predial (Módulos 7 a 12):</strong> cargas comerciais, quadros de distribuição, SPDA, eficiência energética, locais especiais e projecto comercial integrador',
@@ -3928,7 +3928,7 @@ UL(['<strong>Fase 1 — Fundamentos e Residencial (Módulos 1 a 6):</strong> gra
 CB(H('fa-certificate','Certificação')+
 P('O certificado do Oaken Electrical é emitido após aprovação nos <strong>18 exames de módulo</strong>, com nota mínima de 70% em cada um. O certificado menciona:')+
 UL(['Designação completa: <em>Curso Técnico de Instalações Eléctricas Residenciais, Comerciais e Industriais — Edição Angola</em>',
-'Carga horária: <strong>162 horas</strong>',
+'Carga horária: <strong>140 horas</strong> (168 aulas de 50 minutos)',
 'Base normativa: <strong>RTIEBT, IEC 60364 e Lei nº 27/15</strong>',
 'Módulos concluídos e datas de aprovação'])+
 WB('<strong>Nota importante sobre o certificado:</strong> o certificado do Oaken Electrical comprova a <em>formação técnica</em> concluída. A <strong>habilitação legal para exercer a profissão em Angola</strong> depende do registo e licenciamento junto do MINEA, conforme o Decreto nº 40/04. Este curso prepara-o para esse exame, mas não o substitui.')),
@@ -4007,7 +4007,7 @@ function renderHome(){
       <div class="hero-stats">
         <div class="stat-item"><span class="stat-number">18</span><span class="stat-label">Módulos</span></div>
         <div class="stat-item"><span class="stat-number">${TOTAL_AULAS}</span><span class="stat-label">Aulas</span></div>
-        <div class="stat-item"><span class="stat-number">168h</span><span class="stat-label">Carga Horária</span></div>
+        <div class="stat-item"><span class="stat-number">${CERT_HORAS}h</span><span class="stat-label">Carga Horária</span></div>
         <div class="stat-item"><span class="stat-number">18</span><span class="stat-label">Exames</span></div>
         <div class="stat-item"><span class="stat-number">70%</span><span class="stat-label">Aprovação</span></div>
       </div>
@@ -4030,8 +4030,8 @@ function renderHome(){
     <div class="quick-stats-grid">
       <div class="qs-item"><span class="number">18</span><span class="label">Módulos</span></div>
       <div class="qs-item"><span class="number">${TOTAL_AULAS}</span><span class="label">Aulas</span></div>
-      <div class="qs-item"><span class="number">168h</span><span class="label">Carga Horária</span></div>
-      <div class="qs-item"><span class="number">9h</span><span class="label">Por Módulo</span></div>
+      <div class="qs-item"><span class="number">${CERT_HORAS}h</span><span class="label">Carga Horária</span></div>
+      <div class="qs-item"><span class="number">${Math.round(CERT_HORAS/18)}h</span><span class="label">Por Módulo</span></div>
       <div class="qs-item"><span class="number">8-12</span><span class="label">Meses</span></div>
     </div>
   </div>
@@ -4045,7 +4045,7 @@ function renderHome(){
       <div class="d-row"><div class="d-label">Nome</div><div class="d-value">Oaken Electrical — Edição Angola</div></div>
       <div class="d-row"><div class="d-label">Modalidade</div><div class="d-value">100% Online</div></div>
       <div class="d-row"><div class="d-label">Público</div><div class="d-value">Iniciantes e profissionais em Angola</div></div>
-      <div class="d-row"><div class="d-label">Carga horária</div><div class="d-value">162 horas (9h por módulo × 18 módulos)</div></div>
+      <div class="d-row"><div class="d-label">Carga horária</div><div class="d-value">${CERT_HORAS} horas (aulas de 50 minutos)</div></div>
       <div class="d-row"><div class="d-label">Estrutura</div><div class="d-value">18 módulos · ${TOTAL_AULAS} aulas · 3 fases</div></div>
       <div class="d-row"><div class="d-label">Normas</div><div class="d-value">RTIEBT · IEC 60364 · Lei nº 27/15 · Decreto nº 40/04 · Decreto nº 39-04</div></div>
       <div class="d-row"><div class="d-label">Tensão</div><div class="d-value">220/380 V — 50 Hz</div></div>
@@ -4233,7 +4233,7 @@ function renderAluno(){
       <div class="prog-stats">
         <div><b>${done}</b> de <b>18</b> módulos concluídos</div>
         <div><b>${TOTAL_AULAS}</b> aulas no curso</div>
-        <div><b>168h</b> de carga horária</div>
+        <div><b>${CERT_HORAS}h</b> de carga horária</div>
         <div><b>70%</b> mínimo por exame</div>
       </div>
     </div>
@@ -4322,7 +4322,7 @@ function irAula(i){
   document.getElementById('lesson').innerHTML = `
   <div class="lesson">
     <div class="ltitle">Aula ${i+1} — ${a.t}</div>
-    <div class="lsub"><span><i class="fas fa-clock"></i> ~25 min</span><span>Módulo ${m.n} · ${m.titulo}</span>${sw}</div>
+    <div class="lsub"><span><i class="fas fa-clock"></i> ~50 min</span><span>Módulo ${m.n} · ${m.titulo}</span>${sw}</div>
     ${a.html}
     <div class="lnav">
       <button class="nb np" onclick="irAula(${i-1})" ${i===0?'disabled':''}><i class="fas fa-arrow-left"></i> Anterior</button>
@@ -4416,12 +4416,12 @@ document.getElementById('examOverlay').addEventListener('click',e=>{ if(e.target
 
 /* ══════════════════════════════════════════════════════════════
    CERTIFICADO — só depois dos 18 módulos concluídos
-   Estatísticas lidas de COURSE / TOTAL_AULAS (1 hora por aula).
+   Estatísticas lidas de COURSE / TOTAL_AULAS (aulas de 50 minutos).
    NOTA: o desbloqueio sequencial dos módulos está propositadamente
    desligado na Área do Aluno, mas o certificado continua a exigir
    conclusão real — caso contrário qualquer visitante o emitiria.
    ══════════════════════════════════════════════════════════════ */
-const CERT_HORAS = TOTAL_AULAS;              // 1 hora por aula
+const CERT_HORAS = Math.round(TOTAL_AULAS*50/60);  // aulas de 50 minutos
 const CERT_MODULOS = COURSE.length;          // 18
 const CERT_NOME_CURSO = 'Técnico de Instalações Eléctricas Residenciais, Comerciais e Industriais — Edição Angola';
 const CERT_CODE_KEY = 'oaken_electrical_cert_code';

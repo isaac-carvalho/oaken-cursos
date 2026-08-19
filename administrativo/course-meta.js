@@ -1,6 +1,6 @@
 // Fonte unica dos numeros do curso Tecnico Administrativo.
 // Carregar DEPOIS de modulos-data.js.
-// Regra do projecto: 1 hora por aula (m.hours == m.lessons.length).
+// Regra do projecto: aulas de 50 minutos (m.hours = round(m.lessons.length × 50/60)).
 
 function getCourseStats() {
   const hasData = typeof COURSE_DATA !== 'undefined';

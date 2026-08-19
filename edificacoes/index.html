@@ -3794,6 +3794,7 @@ const M3 = {
 const COURSE = [M1, M2, M3];
 const FASES = {1:'Módulo 1 — A Construção Civil em Angola: Sector, Intervenientes e Enquadramento Legal', 2:'Módulo 2 — Matemática e Física Aplicadas à Construção', 3:'Módulo 3 — Desenho Técnico de Construção Civil'};
 const TOTAL_AULAS = COURSE.reduce((s,m)=>s+m.aulas.length,0);
+const TOTAL_HORAS = Math.round(TOTAL_AULAS*50/60); // aulas de 50 minutos
 
 const MODULOS_FUTUROS = [
   {n:4, titulo:'Leitura e Interpretação de Projectos: Arquitectura, Estrutura e Especialidades', aulas:11},
@@ -3873,6 +3874,7 @@ function renderHome(){
       <div class="hero-stats">
         <div class="stat-item"><span class="stat-number">${COURSE.length}/${TOTAL_MODULOS_PLANEADOS}</span><span class="stat-label">Módulos disponíveis</span></div>
         <div class="stat-item"><span class="stat-number">${TOTAL_AULAS}</span><span class="stat-label">Aulas disponíveis</span></div>
+        <div class="stat-item"><span class="stat-number">${TOTAL_HORAS}h</span><span class="stat-label">Horas disponíveis</span></div>
         <div class="stat-item"><span class="stat-number">${TOTAL_AULAS_PLANEADAS}</span><span class="stat-label">Aulas no currículo</span></div>
         <div class="stat-item"><span class="stat-number">${TOTAL_MODULOS_PLANEADOS}</span><span class="stat-label">Certificações no total</span></div>
       </div>
@@ -3895,6 +3897,7 @@ function renderHome(){
     <div class="quick-stats-grid">
       <div class="qs-item"><span class="number">${TOTAL_MODULOS_PLANEADOS}</span><span class="label">Módulos no currículo</span></div>
       <div class="qs-item"><span class="number">${COURSE.length}</span><span class="label">Disponíveis agora</span></div>
+      <div class="qs-item"><span class="number">${TOTAL_HORAS}h</span><span class="label">Carga Horária</span></div>
       <div class="qs-item"><span class="number">${TOTAL_AULAS_PLANEADAS}</span><span class="label">Aulas planeadas</span></div>
       <div class="qs-item"><span class="number">${TOTAL_MODULOS_PLANEADOS}</span><span class="label">Certificações</span></div>
     </div>
@@ -3909,6 +3912,7 @@ function renderHome(){
       <div class="d-row"><div class="d-label">Nome</div><div class="d-value">Técnico em Edificações — Edição Angola</div></div>
       <div class="d-row"><div class="d-label">Modalidade</div><div class="d-value">100% Online — Autodidata</div></div>
       <div class="d-row"><div class="d-label">Público</div><div class="d-value">Iniciantes e profissionais da construção civil em Angola</div></div>
+      <div class="d-row"><div class="d-label">Carga horária</div><div class="d-value">${TOTAL_HORAS} horas disponíveis agora (aulas de 50 minutos)</div></div>
       <div class="d-row"><div class="d-label">Estrutura</div><div class="d-value">${TOTAL_MODULOS_PLANEADOS} módulos no currículo (${COURSE.length} disponíveis) · restantes em preparação</div></div>
       <div class="d-row"><div class="d-label">Foco</div><div class="d-value">Realidade angolana — solos tropicais, materiais e mão-de-obra locais, enquadramento legal do sector</div></div>
       <div class="d-row"><div class="d-label">Avaliação</div><div class="d-value">Quiz por aula · Exame por módulo (mínimo 70%)</div></div>
@@ -4040,7 +4044,7 @@ function renderAluno(){
       <div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div>
       <div class="prog-stats">
         <div><b>${done}</b> de <b>${COURSE.length}</b> módulos disponíveis concluídos</div>
-        <div><b>${TOTAL_AULAS}</b> aulas disponíveis agora · <b>${TOTAL_AULAS_PLANEADAS}</b> no currículo completo</div>
+        <div><b>${TOTAL_AULAS}</b> aulas disponíveis agora (<b>${TOTAL_HORAS}h</b>) · <b>${TOTAL_AULAS_PLANEADAS}</b> no currículo completo</div>
         <div><b>70%</b> mínimo por exame</div>
       </div>
     </div>
@@ -4114,7 +4118,7 @@ function irAula(i){
   document.getElementById('lesson').innerHTML = `
   <div class="lesson">
     <div class="ltitle">Aula ${i+1} — ${a.t}</div>
-    <div class="lsub"><span><i class="fas fa-clock"></i> ~15 min</span><span>Módulo ${m.n} · ${m.titulo}</span></div>
+    <div class="lsub"><span><i class="fas fa-clock"></i> ~50 min</span><span>Módulo ${m.n} · ${m.titulo}</span></div>
     ${a.html}
     <div class="lnav">
       <button class="nb np" onclick="irAula(${i-1})" ${i===0?'disabled':''}><i class="fas fa-arrow-left"></i> Anterior</button>

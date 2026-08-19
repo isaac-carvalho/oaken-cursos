@@ -1382,7 +1382,7 @@ const HTML_HOME = `<section class="hero">
                     <span class="stat-label">Aulas Detalhadas</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">153</span>
+                    <span class="stat-number">442</span>
                     <span class="stat-label">Horas Completas</span>
                 </div>
                 <div class="stat-item">
@@ -1431,7 +1431,7 @@ const HTML_HOME = `<section class="hero">
                 <span class="label">Aulas Detalhadas</span>
             </div>
             <div class="quick-stat-item">
-                <span class="number">153</span>
+                <span class="number">442</span>
                 <span class="label">Horas Completas</span>
             </div>
             <div class="quick-stat-item">
@@ -1858,7 +1858,7 @@ const HTML_FAQ = `<section class="page-hero">
         </div>
         <div class="faq-item">
             <h3>Qual é a duração do curso? <i class="fas fa-chevron-down"></i></h3>
-            <div class="answer">O curso tem <strong>153 horas</strong> de conteúdo distribuídas por 17 módulos. Pode estudar ao seu ritmo: a maioria dos alunos conclui em <strong>3‑6 meses</strong>, mas tem acesso vitalício, por isso não há pressa.</div>
+            <div class="answer">O curso tem <strong>442 horas</strong> de conteúdo (aulas de 50 minutos) distribuídas por 17 módulos. Pode estudar ao seu ritmo: a maioria dos alunos conclui em <strong>3‑6 meses</strong>, mas tem acesso vitalício, por isso não há pressa.</div>
         </div>
         <div class="faq-item">
             <h3>O curso é teórico ou prático? <i class="fas fa-chevron-down"></i></h3>
@@ -2404,7 +2404,7 @@ function renderAluno() {
     lista += `</div>`;
   });
 
-  const stats = (typeof getCourseStats === 'function') ? getCourseStats() : { lessons: 527, hours: 153 };
+  const stats = (typeof getCourseStats === 'function') ? getCourseStats() : { lessons: 527, hours: 442 };
   const corpo = `
     <div class="progress-card">
       <div class="pc-head"><h3><i class="fas fa-chart-line" style="color:var(--secondary)"></i> O seu progresso</h3><span class="pct">${pct}%</span></div>
@@ -2412,7 +2412,7 @@ function renderAluno() {
       <div class="prog-stats">
         <div><b>${aprovados}</b> de <b>${TOTAL_MODULES}</b> módulos aprovados</div>
         <div><b>${stats.lessons || 527}</b> aulas no curso</div>
-        <div><b>${stats.hours || 153}h</b> de carga horária</div>
+        <div><b>${stats.hours || 442}h</b> de carga horária</div>
         <div><b>${PASS_PCT}%</b> mínimo por exame</div>
       </div>
     </div>
@@ -2461,7 +2461,7 @@ function renderModulo(m) {
                 <p id="modHeroDesc">Estude todas as aulas deste módulo e depois faça o exame para desbloquear o seguinte.</p>
                 <div class="mod-meta" id="modMeta">
                     <span class="meta-tag"><i class="fas fa-book-open"></i> ${mod.lessons.length} Aulas</span>
-                    <span class="meta-tag"><i class="fas fa-clock"></i> ${mod.hours || 9} Horas</span>
+                    <span class="meta-tag"><i class="fas fa-clock"></i> ${mod.hours || 26} Horas</span>
                     <span class="meta-tag"><i class="fas fa-percent"></i> 70% para aprovar</span>
                 </div>
             </div>

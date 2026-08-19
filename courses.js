@@ -49,7 +49,7 @@ const COURSES = [
     "stats": {
       "modules": 17,
       "lessons": 527,
-      "hours": 527,
+      "hours": 442,
       "questions": 655
     },
     "featured": true,
@@ -146,7 +146,7 @@ const COURSES = [
     "stats": {
       "modules": 18,
       "lessons": 168,
-      "hours": 168,
+      "hours": 140,
       "questions": 141
     },
     "cover": "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1200&q=80",
@@ -338,7 +338,7 @@ const COURSES = [
       "modulesAvailable": 3,
       "lessons": 33,
       "lessonsPlanned": 198,
-      "hours": 33,
+      "hours": 28,
       "questions": 0
     },
     "pitch": "18 módulos no currículo — 3 disponíveis com aulas na plataforma (Sector e Enquadramento Legal, Matemática e Física Aplicadas, Desenho Técnico), os restantes em preparação.",
@@ -437,7 +437,7 @@ const COURSES = [
     "stats": {
       "modules": 16,
       "lessons": 352,
-      "hours": 352,
+      "hours": 288,
       "questions": 0
     },
     "pitch": "16 dos 18 módulos já com aulas na plataforma. Os módulos 1 e 2 e os exames de módulo estão em produção.",
@@ -538,7 +538,7 @@ const COURSES = [
       "modulesAvailable": 3,
       "lessons": 34,
       "lessonsPlanned": 177,
-      "hours": 34,
+      "hours": 28,
       "questions": 0
     },
     "pitch": "16 módulos no currículo — 3 disponíveis com aulas na plataforma (Fundamentos, Fiscalidade e Aplicação Prática), os restantes em preparação.",

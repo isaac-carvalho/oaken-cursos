@@ -1,6 +1,6 @@
 // Conteudo das aulas do curso Tecnico Administrativo - Edicao Angola.
 // Extraido de "Pagina Laboratorio Oaken Oil.txt" por _import/extrair.js.
-// Regra do projecto: 1 hora por aula (hours = numero de aulas do modulo).
+// Regra do projecto: aulas de 50 minutos (hours = round(aulas do modulo x 50/60)).
 // Modulos 1 e 2 nao existem no material-fonte: ficam com lessons vazio.
 // Regenerar: node _import/extrair.js
 const COURSE_DATA = [
@@ -23,7 +23,7 @@ const COURSE_DATA = [
 {
   id: 3,
   title: "Gestão de Recursos Humanos",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "3.1 Introdução à Gestão de Recursos Humanos",
       content: "<p>A Gestão de Recursos Humanos (GRH) é a área da administração que se ocupa da gestão das pessoas nas organizações, reconhecendo‑as como o ativo mais valioso para o sucesso organizacional. A GRH envolve um conjunto de práticas e políticas que visam atrair, desenvolver, motivar e reter os colaboradores, alinhando os seus objetivos com os da organização. Em Angola, a GRH tem ganhado relevância com a crescente competitividade e a necessidade de profissionais qualificados. Os principais objetivos da GRH incluem: garantir a adequação entre as competências dos colaboradores e as necessidades da organização, promover o desenvolvimento profissional e pessoal, assegurar um ambiente de trabalho seguro e saudável, e fomentar o compromisso e a motivação. A GRH contribui para a eficiência, a inovação e a sustentabilidade das organizações. Em Angola, a GRH enfrenta desafios específicos, como a escassez de mão de obra qualificada, a elevada rotatividade, a informalidade do mercado de trabalho e a necessidade de cumprir a legislação laboral. O técnico administrativo com competências em GRH pode contribuir para a gestão eficaz das pessoas e para o sucesso da organização.</p>" },
@@ -74,7 +74,7 @@ const COURSE_DATA = [
 {
   id: 4,
   title: "Gestão Financeira e Contabilidade",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "4.1 Introdução à Gestão Financeira",
       content: "<p>A gestão financeira é a área da administração que se ocupa da gestão dos recursos financeiros das organizações, visando maximizar o valor para os acionistas e garantir a sustentabilidade financeira. A gestão financeira envolve a análise de investimentos, a gestão de capital de giro, a gestão de riscos financeiros e a captação de financiamento. Os principais objetivos da gestão financeira incluem: a maximização do lucro, a maximização do valor da empresa, a garantia da liquidez, a otimização da estrutura de capital, e a gestão dos riscos financeiros. A gestão financeira é essencial para a sobrevivência e o crescimento das organizações. Em Angola, a gestão financeira é particularmente importante num contexto de volatilidade económica, de flutuações cambiais e de restrições de financiamento. O técnico administrativo com competências em gestão financeira pode contribuir para a saúde financeira da organização.</p>" },
@@ -125,7 +125,7 @@ const COURSE_DATA = [
 {
   id: 5,
   title: "Gestão de Marketing e Vendas",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "5.1 Introdução ao Marketing",
       content: "<p>O marketing é a área da administração que se ocupa da identificação, criação e satisfação das necessidades dos clientes, através do desenvolvimento de produtos, serviços e estratégias de comunicação. O marketing é fundamental para o sucesso das organizações, pois permite compreender o mercado, os concorrentes e as preferências dos consumidores. Os conceitos fundamentais de marketing incluem: as necessidades e desejos dos consumidores, os segmentos de mercado, o posicionamento, o mix de marketing (produto, preço, praça e promoção) e a relação com os clientes. O técnico administrativo com conhecimentos em marketing pode apoiar a gestão na definição de estratégias de marketing, na realização de pesquisas de mercado, no desenvolvimento de campanhas publicitárias e na gestão da relação com os clientes. Em Angola, o marketing tem ganhado relevância com o crescimento do mercado de consumo e a crescente concorrência em diversos setores.</p>" },
@@ -176,7 +176,7 @@ const COURSE_DATA = [
 {
   id: 6,
   title: "Gestão de Logística e Cadeia de Abastecimento",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "6.1 Introdução à Logística e Cadeia de Suprimentos",
       content: "<p>A logística e a gestão da cadeia de suprimentos são áreas da administração que se ocupam do planeamento, execução e controlo do fluxo de materiais, informações e serviços, desde a origem até ao consumo. A logística envolve atividades como o transporte, o armazenamento, a gestão de inventários, a gestão de pedidos e a distribuição. A gestão da cadeia de suprimentos abrange a coordenação de todos os intervenientes na cadeia, incluindo fornecedores, fabricantes, distribuidores e clientes. Os principais objetivos da logística e da cadeia de suprimentos incluem: a redução de custos, a melhoria do serviço ao cliente, a otimização dos níveis de stock, a redução dos prazos de entrega, e a sustentabilidade. Em Angola, a logística e a cadeia de suprimentos enfrentam desafios significativos, como a deficiente infraestrutura de transportes, a burocracia aduaneira, e a insegurança. O técnico administrativo com competências nessa área pode contribuir para a otimização dos processos logísticos.</p>" },
@@ -227,7 +227,7 @@ const COURSE_DATA = [
 {
   id: 7,
   title: "Gestão de Projectos",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "7.1 Introdução à Gestão de Projetos",
       content: "<p>A gestão de projetos é a área da administração que se ocupa do planeamento, execução e controlo de projetos, visando alcançar objetivos específicos dentro de um prazo e orçamento definidos. Um projeto é um esforço temporário para criar um produto, serviço ou resultado único. A gestão de projetos é aplicável a uma vasta gama de atividades, desde o lançamento de um novo produto até à construção de uma infraestrutura. Os principais objetivos da gestão de projetos incluem: a definição clara dos objetivos, a alocação eficiente dos recursos, a gestão dos riscos, a comunicação eficaz, e a entrega do projeto dentro do prazo e do orçamento. Em Angola, a gestão de projetos é cada vez mais importante, com o aumento dos investimentos públicos e privados em infraestruturas e desenvolvimento. O técnico administrativo com competências em gestão de projetos pode contribuir para o sucesso desses investimentos. A gestão de projetos é uma competência valorizada no mercado de trabalho, que exige uma combinação de conhecimentos técnicos, habilidades de liderança e capacidade de trabalhar em equipa.</p>" },
@@ -278,7 +278,7 @@ const COURSE_DATA = [
 {
   id: 8,
   title: "Gestão da Qualidade e Processos",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "8.1 Introdução à Gestão da Qualidade",
       content: "<p>A gestão da qualidade é a área da administração que se ocupa de garantir que os produtos e serviços satisfazem as necessidades e expectativas dos clientes. A gestão da qualidade envolve a definição de padrões de qualidade, o controlo de processos, a melhoria contínua e a certificação de sistemas de gestão da qualidade. Os princípios da gestão da qualidade incluem: o foco no cliente, a liderança, o envolvimento das pessoas, a abordagem por processos, a melhoria contínua, a tomada de decisões baseada em factos e a gestão de relacionamentos. Em Angola, a gestão da qualidade é cada vez mais relevante num mercado competitivo, onde as empresas buscam diferenciar‑se pela excelência. O técnico administrativo com competências em gestão da qualidade pode contribuir para a melhoria do desempenho organizacional. A qualidade é um fator crítico para a satisfação do cliente, a redução de custos e o aumento da competitividade. A gestão da qualidade deve ser integrada em todas as áreas da organização, desde o planeamento até à entrega do produto ou serviço.</p>" },
@@ -329,7 +329,7 @@ const COURSE_DATA = [
 {
   id: 9,
   title: "Gestão de Pessoas e Liderança",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "9.1 Introdução à Liderança e Gestão de Pessoas",
       content: "<p>A liderança e a gestão de pessoas são áreas fundamentais da administração, que se ocupam de influenciar, motivar e orientar os colaboradores para alcançar os objetivos organizacionais. A liderança é a capacidade de influenciar pessoas para que contribuam voluntariamente para os objetivos da organização. A gestão de pessoas envolve o planeamento, a organização, a direção e o controlo dos recursos humanos. Os estilos de liderança incluem o autocrático, o democrático, o liberal, o transformacional, o transacional, e o situacional. O técnico administrativo deve conhecer os diferentes estilos de liderança e adaptar o seu estilo ao contexto e à equipa. Em Angola, a liderança e a gestão de pessoas são particularmente importantes para motivar os colaboradores e promover o desempenho. O técnico administrativo com competências nessa área pode contribuir para o sucesso da organização. A liderança eficaz é um fator crítico para o engajamento, a produtividade e a retenção de talentos.</p>" },
@@ -380,7 +380,7 @@ const COURSE_DATA = [
 {
   id: 10,
   title: "Gestão Financeira Avançada",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "10.1 Análise Financeira Avançada",
       content: "<p>A análise financeira avançada envolve a utilização de técnicas mais sofisticadas para avaliar a saúde financeira e o desempenho da organização. A análise financeira avançada inclui a análise de fluxos de caixa descontados, a análise de sensibilidade, a análise de cenários, e a análise de valor económico acrescentado (EVA). O técnico administrativo deve ser capaz de realizar análises financeiras avançadas, utilizando ferramentas como o Excel e softwares de análise financeira. A capacidade de realizar análises financeiras avançadas é valorizada no mercado de trabalho. Em Angola, a análise financeira avançada é particularmente importante para a tomada de decisões de investimento. O técnico administrativo com competências nessa área pode contribuir para a avaliação de projetos e para a otimização da alocação de recursos. A análise financeira avançada permite uma compreensão mais profunda dos drivers de valor e dos riscos associados às decisões financeiras.</p>" },
@@ -431,7 +431,7 @@ const COURSE_DATA = [
 {
   id: 11,
   title: "Gestão de Marketing e Vendas Avançada",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "11.1 Estratégias de Marketing Avançadas",
       content: "<p>As estratégias de marketing avançadas envolvem a definição de estratégias mais sofisticadas para alcançar os objetivos de marketing. As estratégias de marketing avançadas incluem o marketing de nicho, o marketing de diferenciação, o marketing de liderança de custos, e o marketing de foco. O técnico administrativo deve ser capaz de contribuir para a definição de estratégias de marketing avançadas, analisando o mercado, a concorrência, e as capacidades da organização. A capacidade de definir estratégias de marketing é valorizada no mercado de trabalho. Em Angola, as estratégias de marketing avançadas são cada vez mais importantes para a competitividade. O técnico administrativo com competências nessa área pode contribuir para o sucesso da organização. A definição de estratégias de marketing avançadas exige uma compreensão profunda do mercado, dos consumidores e da concorrência, bem como uma visão de longo prazo e capacidade de inovação.</p>" },
@@ -482,7 +482,7 @@ const COURSE_DATA = [
 {
   id: 12,
   title: "Gestão de Operações e Processos",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "12.1 Introdução à Gestão de Operações",
       content: "<p>A gestão de operações é a área da administração que se ocupa da gestão dos processos de produção e entrega de bens e serviços. A gestão de operações envolve o planeamento, a organização, a direção e o controlo das atividades operacionais. Os principais objetivos da gestão de operações incluem: a eficiência, a eficácia, a qualidade, a flexibilidade, e a inovação. Em Angola, a gestão de operações é particularmente importante para garantir a competitividade das organizações num mercado em crescimento e com desafios logísticos e infraestruturais significativos. O técnico administrativo com competências em gestão de operações pode contribuir para a eficiência operacional, a redução de custos e a melhoria da qualidade dos produtos e serviços. A gestão de operações é uma área que exige uma visão sistémica, capacidade de análise e resolução de problemas, e uma orientação para a melhoria contínua. A compreensão dos princípios e ferramentas da gestão de operações é fundamental para o sucesso de qualquer organização.</p>" },
@@ -533,7 +533,7 @@ const COURSE_DATA = [
 {
   id: 13,
   title: "Gestão de Compras e Fornecimento",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "13.1 Introdução à Gestão de Compras",
       content: "<p>A gestão de compras é uma função estratégica dentro das organizações, responsável por adquirir bens, serviços e materiais necessários para o funcionamento e a produção da empresa. Em Angola, a gestão de compras assume uma relevância particular devido à dependência de importações, às flutuações cambiais e aos desafios logísticos que afetam a cadeia de abastecimento. O técnico administrativo que atua nesta área deve compreender que as compras não são apenas uma atividade administrativa de rotina, mas sim uma alavanca para a redução de custos, a melhoria da qualidade e o aumento da competitividade. A função compras envolve a identificação das necessidades da organização, a pesquisa de fornecedores, a negociação de preços e condições, a emissão de encomendas, o acompanhamento das entregas e a gestão do relacionamento com os fornecedores. Uma gestão de compras eficiente pode representar uma poupança significativa para a organização, especialmente num contexto onde os custos de aquisição podem representar até 70% do orçamento operacional. Em Angola, a gestão de compras é também influenciada pela legislação, como a Lei de Contratação Pública (Lei 41/20), que estabelece regras para as compras públicas, e pelo Código Comercial, que regula as relações entre empresas. O técnico administrativo deve estar familiarizado com estes diplomas legais para garantir a conformidade e a transparência nos processos de aquisição.</p>" },
@@ -584,7 +584,7 @@ const COURSE_DATA = [
 {
   id: 14,
   title: "Gestão de Armazéns e Inventários",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "14.1 Introdução à Gestão de Armazéns e Inventários",
       content: "<p>A gestão de armazéns e inventários é uma área fundamental da logística e da administração de empresas, responsável por garantir a disponibilidade de materiais e produtos no momento certo, nas quantidades adequadas e com a qualidade exigida, ao menor custo possível. Em Angola, a gestão de armazéns e inventários assume uma importância estratégica devido aos desafios logísticos, à dependência de importações e à necessidade de otimizar recursos num contexto de escassez de divisas e de volatilidade económica. O técnico administrativo que atua nesta área deve compreender que os armazéns não são meros espaços de armazenamento, mas sim centros de gestão de fluxos, onde se tomam decisões críticas sobre o que armazenar, quanto armazenar, onde armazenar e como movimentar os materiais. Uma gestão eficiente de armazéns e inventários pode reduzir significativamente os custos operacionais, melhorar o serviço ao cliente e aumentar a competitividade da organização. Em Angola, a gestão de inventários é particularmente desafiante devido à falta de infraestruturas, à burocracia aduaneira e à incerteza nos prazos de entrega. O técnico administrativo deve estar preparado para lidar com estas dificuldades, adotando práticas de gestão que minimizem os riscos e maximizem a eficiência.</p>" },
@@ -635,7 +635,7 @@ const COURSE_DATA = [
 {
   id: 15,
   title: "Gestão de Transportes e Frotas",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "15.1 Introdução à Gestão de Transportes e Frotas",
       content: "<p>A gestão de transportes e frotas é uma área essencial da logística e da administração de empresas, responsável por planear, executar e controlar o movimento de pessoas e mercadorias, garantindo a eficiência, a segurança e a redução de custos. Em Angola, a gestão de transportes assume uma relevância estratégica devido à dimensão do país, à deficiente infraestrutura rodoviária, à dependência do transporte rodoviário para a circulação de bens e pessoas, e aos desafios associados à manutenção de frotas num contexto de escassez de divisas e de peças sobressalentes. O técnico administrativo que atua nesta área deve compreender que a gestão de transportes não se limita à operação de veículos, mas envolve um conjunto integrado de atividades, como o planeamento de rotas, a gestão de motoristas, a manutenção preventiva e corretiva, o controlo de custos, a gestão de combustíveis, a gestão de seguros e o cumprimento da legislação. Uma gestão eficiente de transportes e frotas pode reduzir significativamente os custos operacionais, melhorar a imagem da organização e aumentar a sua competitividade.</p>" },
@@ -686,7 +686,7 @@ const COURSE_DATA = [
 {
   id: 16,
   title: "Gestão da Segurança e Saúde no Trabalho",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "16.1 Introdução à Segurança e Saúde no Trabalho (SST)",
       content: "<p>A Segurança e Saúde no Trabalho (SST) é uma área multidisciplinar que visa proteger a integridade física e mental dos trabalhadores, prevenir acidentes de trabalho e doenças profissionais, e promover um ambiente laboral seguro, saudável e produtivo. Em Angola, a SST tem vindo a ganhar relevância com a crescente consciencialização sobre os direitos dos trabalhadores, a necessidade de cumprir a legislação e a importância de reduzir os custos associados aos acidentes e doenças profissionais. O técnico administrativo que atua nesta área deve compreender que a SST não é apenas uma obrigação legal, mas também um investimento na produtividade, na motivação e na imagem da organização. A SST envolve um conjunto de atividades, como a identificação e avaliação de riscos, a implementação de medidas de prevenção e proteção, a formação e informação dos trabalhadores, a vigilância da saúde, a investigação de acidentes e a promoção de uma cultura de segurança. Em Angola, a SST é regulada pela Lei Geral do Trabalho (Lei n.º 12/23), pelo Regulamento de Segurança e Saúde no Trabalho (Decreto Executivo 166/11) e por outras normas específicas, que estabelecem os direitos e deveres dos trabalhadores e das entidades patronais.</p>" },
@@ -737,7 +737,7 @@ const COURSE_DATA = [
 {
   id: 17,
   title: "Gestão de Tecnologias de Informação",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "17.1 Introdução às Tecnologias de Informação (TI)",
       content: "<p>As Tecnologias de Informação (TI) são o conjunto de recursos tecnológicos e computacionais utilizados para criar, processar, armazenar, transmitir e proteger a informação nas organizações. A TI engloba hardware (computadores, servidores, dispositivos de rede), software (sistemas operativos, aplicações, bases de dados), redes de comunicação (Internet, intranet, extranet) e serviços (suporte técnico, gestão de dados, segurança). Em Angola, a TI tem assumido um papel crescente na modernização das empresas e da administração pública, impulsionada pela expansão do acesso à Internet, pela digitalização dos serviços e pela necessidade de aumentar a eficiência e a competitividade. O técnico administrativo que atua nesta área deve compreender que a TI não é apenas uma ferramenta de apoio, mas um elemento estratégico que pode transformar a forma como as organizações operam, comunicam e criam valor. A gestão de TI envolve o planeamento, a implementação, a operação, a manutenção e a segurança dos sistemas de informação, alinhando‑os com os objetivos e as necessidades da organização. Em Angola, a gestão de TI enfrenta desafios como a falta de infraestruturas, a escassez de recursos humanos qualificados, o custo elevado dos equipamentos e a necessidade de cumprir a legislação sobre proteção de dados.</p>" },
@@ -788,7 +788,7 @@ const COURSE_DATA = [
 {
   id: 18,
   title: "Empreendedorismo e Inovação em Angola",
-  hours: 22,
+  hours: 18,
   lessons: [
     { title: "18.1 Introdução ao Empreendedorismo e Inovação",
       content: "<p>O empreendedorismo é o processo de identificar, criar e aproveitar oportunidades de negócio, mobilizando recursos e assumindo riscos para gerar valor económico, social e ambiental. Em Angola, o empreendedorismo é um motor crucial para o desenvolvimento económico, a criação de emprego e a diversificação da economia, tradicionalmente dependente do petróleo. O técnico administrativo com competências em empreendedorismo pode atuar como fundador de uma startup, como gestor de inovação numa empresa existente, ou como consultor de apoio a empreendedores. A inovação, por sua vez, é a implementação de uma ideia nova (produto, serviço, processo, modelo de negócio) que cria valor. A inovação está intimamente ligada ao empreendedorismo, pois a maioria das startups baseia-se em inovações que as diferenciam da concorrência. Em Angola, o empreendedorismo tem ganhado relevância com o surgimento de incubadoras, aceleradoras e programas públicos de apoio, coordenados sobretudo pelo INAPEM (Instituto Nacional de Apoio às Micro, Pequenas e Médias Empresas). O técnico administrativo deve compreender os fundamentos do empreendedorismo e da inovação para poder identificar oportunidades, desenvolver negócios e contribuir para a transformação do país. A capacidade de empreender é uma competência valorizada no mercado de trabalho, que exige criatividade, resiliência, capacidade de planeamento e uma visão estratégica.</p>" },

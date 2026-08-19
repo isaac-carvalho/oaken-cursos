@@ -240,7 +240,7 @@ function htmlHome() {
 <section class="modules" id="modules">
     <div class="container">
         <h2 class="section-title">O que vai aprender <span>no curso</span></h2>
-        <p class="section-sub">${TOTAL_MODULES} módulos no programa, ${STATS.lessons} aulas já disponíveis na plataforma. Uma hora de formação por aula.</p>
+        <p class="section-sub">${TOTAL_MODULES} módulos no programa, ${STATS.lessons} aulas já disponíveis na plataforma (${STATS.hours}h). Aulas de 50 minutos.</p>
         <div class="modules-grid">${cards.join('')}</div>
         <p style="text-align:center;margin-top:26px;"><a onclick="nav('modulos')" style="cursor:pointer;color:var(--secondary);font-weight:700;">Ver o programa aula a aula &rarr;</a></p>
     </div>
@@ -288,7 +288,7 @@ function htmlHome() {
             </div>
             <div class="faq-item">
                 <h4>Como é contada a carga horária? <i class="fas fa-chevron-down"></i></h4>
-                <div class="answer">Uma hora de formação por aula. Com ${STATS.lessons} aulas disponíveis, são ${STATS.hours} horas.</div>
+                <div class="answer">Cada aula equivale a 50 minutos de formação. Com ${STATS.lessons} aulas disponíveis, são ${STATS.hours} horas.</div>
             </div>
             <div class="faq-item">
                 <h4>Há exames? <i class="fas fa-chevron-down"></i></h4>

@@ -1975,6 +1975,7 @@ const M3 = {
 const COURSE = [M1, M2, M3];
 const FASES = {1:'Módulo 1 — Fundamentos da Contabilidade', 2:'Módulo 2 — Fiscalidade Angolana', 3:'Módulo 3 — Aplicação Prática e Casos Reais'};
 const TOTAL_AULAS = COURSE.reduce((s,m)=>s+m.aulas.length,0);
+const TOTAL_HORAS = Math.round(TOTAL_AULAS*50/60); // aulas de 50 minutos
 
 /* Módulos 4-16: currículo já definido, conteúdo ainda por escrever.
    Aparecem no site como "em preparação" — nunca como disponíveis — até termos
@@ -2056,7 +2057,7 @@ function renderHome(){
       <div class="hero-stats">
         <div class="stat-item"><span class="stat-number">${COURSE.length}/${TOTAL_MODULOS_PLANEADOS}</span><span class="stat-label">Módulos disponíveis</span></div>
         <div class="stat-item"><span class="stat-number">${TOTAL_AULAS}</span><span class="stat-label">Aulas disponíveis</span></div>
-        <div class="stat-item"><span class="stat-number">${TOTAL_AULAS}</span><span class="stat-label">Horas</span></div>
+        <div class="stat-item"><span class="stat-number">${TOTAL_HORAS}h</span><span class="stat-label">Horas</span></div>
         <div class="stat-item"><span class="stat-number">${TOTAL_MODULOS_PLANEADOS}</span><span class="stat-label">Certificações no total</span></div>
       </div>
       <div class="hero-badges">
@@ -2078,7 +2079,7 @@ function renderHome(){
     <div class="quick-stats-grid">
       <div class="qs-item"><span class="number">3</span><span class="label">Módulos</span></div>
       <div class="qs-item"><span class="number">${TOTAL_AULAS}</span><span class="label">Aulas</span></div>
-      <div class="qs-item"><span class="number">${TOTAL_AULAS}h</span><span class="label">Carga Horária</span></div>
+      <div class="qs-item"><span class="number">${TOTAL_HORAS}h</span><span class="label">Carga Horária</span></div>
       <div class="qs-item"><span class="number">3</span><span class="label">Certificações</span></div>
     </div>
   </div>
@@ -2308,7 +2309,7 @@ function irAula(i){
   document.getElementById('lesson').innerHTML = `
   <div class="lesson">
     <div class="ltitle">Aula ${i+1} — ${a.t}</div>
-    <div class="lsub"><span><i class="fas fa-clock"></i> ~15 min</span><span>Módulo ${m.n} · ${m.titulo}</span></div>
+    <div class="lsub"><span><i class="fas fa-clock"></i> ~50 min</span><span>Módulo ${m.n} · ${m.titulo}</span></div>
     ${a.html}
     <div class="lnav">
       <button class="nb np" onclick="irAula(${i-1})" ${i===0?'disabled':''}><i class="fas fa-arrow-left"></i> Anterior</button>
