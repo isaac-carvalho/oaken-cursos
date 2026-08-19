@@ -6,6 +6,8 @@ Uma sessão, um problema, até ao fim. Quando fechar, marca-se ✅ e passa-se ao
 
 ## Em curso agora
 
+- [ ] **Escrever os módulos 4 a 18 do curso de Gastronomia** — 15 módulos, 165 aulas. Currículo completo já definido em `gastronomia/index.html` (`MODULOS_FUTUROS`). Módulos 1–3 (33 aulas) já publicados e validados. Padrão: gerar módulo a módulo com subagentes em paralelo (formato `.cb`/`.hi`/`.ib`/`.wb`/`.quiz`+`cq()`, 1 quiz por aula), imagens Unsplash verificadas por navegação real antes de escrever (banco em `gastro-images.json`, categorias por tema — falta gerar mais para módulos além dos já cobertos: BREAD_BAKERY e ITALIAN_PASTA já prontos para os módulos 4 e 5). **Cada sessão dedica-se só a isto** até fechar os 18 módulos — pedido explícito do dono. Sem adaptação a Angola (curso internacional), sem exame sequencial (todos os módulos publicados ficam desbloqueados).
+
 - [ ] **Escrever os módulos 1 e 2 do Administrativo** — 44 aulas
   **10 de 22 do módulo 1 já escritas** (commits `c2042ed` e `86b0ba7`, em `administrativo/_import/mod01.js`). Retomar a partir da aula 1.11. O agente caiu duas vezes por limite de sessão.
   Perderam-se numa conversa não guardada. O curso anuncia 18 módulos e só 16 têm aulas.
@@ -60,6 +62,7 @@ O conteúdo está escrito (10 capítulos, 1.626–2.376 palavras cada, plano de 
 
 ## Feito
 
+- ✅ **Curso Técnico em Gastronomia** — publicado com 3 dos 18 módulos (33 aulas: Fundamentos da Cozinha Profissional, AirFryer e Cozinha Saudável, Confeitaria e Doçaria). Restantes 15 módulos (165 aulas) no roteiro, marcados "Em preparação". Curso de **padrão internacional, sem adaptação a Angola** (decisão explícita do dono — único curso da plataforma assim) e com **todos os módulos publicados já desbloqueados desde o início** (padrão do `electrical/index.html`, não sequencial como os outros cursos parciais). Imagens Unsplash verificadas uma a uma por navegação real antes de gerar as aulas, para não haver URLs inventados. **Cada sessão futura deve dedicar-se só a este curso** até estarem escritos os 18 módulos — pedido explícito do dono, não é para ser feito de repente.
 - ✅ **Curso Contabilidade e Fiscalidade Angolana** — publicado com 3 dos 16 módulos (34 aulas), login, dashboard, exame por módulo gerado a partir dos quizzes de aula. Restantes 13 módulos (143 aulas) no roteiro, marcados "Em preparação".
 - ✅ **Curso Técnico em Edificações** — publicado com 3 dos 18 módulos (33 aulas: Sector e Enquadramento Legal, Matemática e Física Aplicadas, Desenho Técnico). Restantes 15 módulos (165 aulas) no roteiro, marcados "Em preparação". Diplomas legais não verificados (aulas 4 e 10 do M1) levam aviso visível no site.
 - ✅ **Site Oaken Studio em 4 idiomas** (PT/EN/FR/ES), publicado em `oaken-pitches/studio/` — motor de i18n com detecção do idioma do navegador, persistência em localStorage, formulário que monta a mensagem de WhatsApp no idioma escolhido. O ficheiro original vinha truncado a meio (sem fecho de `</script>`, sem função do formulário, só PT parcial) — reconstruído.

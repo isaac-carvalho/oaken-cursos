@@ -31,6 +31,12 @@ const AREAS = [
     "accent": "#00A3A1",
     "name": "Comércio e Logística",
     "note": "Importação, desalfandegamento e cadeia de abastecimento."
+  },
+  {
+    "key": "hotelaria",
+    "accent": "#D6553E",
+    "name": "Hotelaria e Gastronomia",
+    "note": "Cozinha profissional de padrão internacional, para trabalhar em qualquer país."
   }
 ];
 
@@ -755,6 +761,53 @@ const COURSES = [
       "Técnico de Logística e Transportes",
       "Gestor de Armazém",
       "Técnico de Compras e Importação"
+    ]
+  },
+  {
+    "id": "gastronomia",
+    "area": "hotelaria",
+    "title": "Técnico em Gastronomia",
+    "description": "Cozinha profissional de padrão internacional: higiene e segurança alimentar, técnicas clássicas, confeitaria, panificação e cozinhas do mundo, para trabalhar em qualquer país.",
+    "icon": "fa-solid fa-utensils",
+    "status": "available",
+    "url": "gastronomia/index.html",
+    "stats": {
+      "modules": 18,
+      "modulesAvailable": 3,
+      "lessons": 33,
+      "lessonsPlanned": 198,
+      "hours": 28,
+      "questions": 0
+    },
+    "pitch": "18 módulos no currículo — 3 disponíveis com aulas na plataforma (Fundamentos da Cozinha Profissional, AirFryer e Cozinha Saudável, Confeitaria e Doçaria), os restantes em preparação. Curso de padrão internacional, sem adaptação a um único país.",
+    "cover": "https://images.unsplash.com/photo-1577219492769-b63a779fac28?w=1200&q=80",
+    "accent": "#D6553E",
+    "programa": [
+      { "n": 1, "titulo": "Fundamentos da Cozinha Profissional: Higiene, Segurança Alimentar e Mise en Place" },
+      { "n": 2, "titulo": "AirFryer e Cozinha Saudável: Técnicas e Receitas Práticas" },
+      { "n": 3, "titulo": "Confeitaria e Doçaria: Do Básico ao Fino" },
+      { "n": 4, "titulo": "Panificação: Pães e Massas Fermentadas" },
+      { "n": 5, "titulo": "Cozinha Italiana: Massas, Molhos e Risotos" },
+      { "n": 6, "titulo": "Cozinha Francesa: Técnicas Clássicas e Molhos-Mãe" },
+      { "n": 7, "titulo": "Cozinha Asiática: Sabores e Técnicas do Oriente" },
+      { "n": 8, "titulo": "Cozinha Latino-Americana e Comida de Rua Internacional" },
+      { "n": 9, "titulo": "Carnes, Aves e Caça: Cortes e Técnicas de Cocção" },
+      { "n": 10, "titulo": "Peixes e Marisco: Do Mercado ao Prato" },
+      { "n": 11, "titulo": "Molhos, Caldos e Bases da Cozinha Clássica" },
+      { "n": 12, "titulo": "Conservas, Fermentados e Aproveitamento Integral" },
+      { "n": 13, "titulo": "Sobremesas e Confeitaria Internacional" },
+      { "n": 14, "titulo": "Bebidas Artesanais: Cervejas, Fermentados e Coquetelaria Sem Álcool" },
+      { "n": 15, "titulo": "Buffet, Catering e Cozinha para Eventos" },
+      { "n": 16, "titulo": "Gestão de Cozinha Profissional: Custos, Fichas Técnicas e Fornecedores" },
+      { "n": 17, "titulo": "Carreira Internacional em Gastronomia: Certificações, Estágios e Trabalho no Exterior" },
+      { "n": 18, "titulo": "Projeto Final: Menu Degustação Completo" }
+    ],
+    "saidas": [
+      "Cozinheiro Profissional",
+      "Ajudante de Cozinha / Commis",
+      "Confeiteiro",
+      "Chef de Partie",
+      "Técnico de Cozinha para Hotelaria e Catering Internacional"
     ]
   }
 ];
